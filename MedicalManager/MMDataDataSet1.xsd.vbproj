@@ -1,0 +1,1010 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F784666F-95E7-4CC6-9265-ABF43A321B7C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>MedicalManager.My.MyApplication</StartupObject>
+    <RootNamespace>MedicalManager</RootNamespace>
+    <AssemblyName>MedicalManager</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>MedicalManager.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>MedicalManager.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Ascend, Version=1.0.0.6, Culture=neutral, PublicKeyToken=25c7a393ba3f37cd" />
+    <Reference Include="Ascend.Resources, Version=1.0.0.6, Culture=neutral, PublicKeyToken=9c9aecb37b1e03b6" />
+    <Reference Include="Ascend.Windows.Forms, Version=1.0.0.6, Culture=neutral, PublicKeyToken=ecd86ece2d3eb46d" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Appointents1.Designer.vb">
+      <DependentUpon>Appointents1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Appointents1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AR\ARComments.Designer.vb">
+      <DependentUpon>ARComments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AR\ARComments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AR\ARNotes.Designer.vb">
+      <DependentUpon>ARNotes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AR\ARNotes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AR\ARDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AR\ARDataSet.vb">
+      <DependentUpon>ARDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AR\ARPatientBill.Designer.vb">
+      <DependentUpon>ARPatientBill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AR\ARPatientBill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AR\ARPatientBillSimple.Designer.vb">
+      <DependentUpon>ARPatientBillSimple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AR\ARPatientBillSimple.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AR\MultiBillingReports.Designer.vb">
+      <DependentUpon>MultiBillingReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AR\MultiBillingReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BAL\cUsersBLL.vb" />
+    <Compile Include="BodySketch.Designer.vb">
+      <DependentUpon>BodySketch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BodySketch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DAL\DprofilesDataSet.vb">
+      <DependentUpon>DprofilesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BillingReport.Designer.vb">
+      <DependentUpon>BillingReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BillingReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DAL\MMDataDataSet.Designer.vb">
+      <DependentUpon>MMDataDataSet.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="DAL\MMDataDataSet.vb">
+      <DependentUpon>MMDataDataSet.xsd</DependentUpon>
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="DAL\MMDataDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MMDataDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HealthHistoryQuestions.Designer.vb">
+      <DependentUpon>HealthHistoryQuestions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HealthHistoryQuestions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Immunization.Designer.vb">
+      <DependentUpon>Immunization.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Immunization.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImmunizationMaintenance.Designer.vb">
+      <DependentUpon>ImmunizationMaintenance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImmunizationMaintenance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MMDRUGMaintenance.Designer.vb">
+      <DependentUpon>MMDRUGMaintenance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MMDRUGMaintenance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientPictures.Designer.vb">
+      <DependentUpon>PatientPictures.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PatientPictures.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pharmacy.Designer.vb">
+      <DependentUpon>Pharmacy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pharmacy.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfileDetailData.Designer.vb">
+      <DependentUpon>ProfileDetailData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileDetailData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RVforMultiplePrescriptions.Designer.vb">
+      <DependentUpon>RVforMultiplePrescriptions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RVforMultiplePrescriptions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="ShortVisitTemplate.Designer.vb">
+      <DependentUpon>ShortVisitTemplate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ShortVisitTemplate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Superbill.Designer.vb">
+      <DependentUpon>Superbill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Superbill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users.Designer.vb">
+      <DependentUpon>Users.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Users.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MMChProcedure.Designer.vb">
+      <DependentUpon>MMChProcedure.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MMChProcedure.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PickList.Designer.vb">
+      <DependentUpon>PickList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PickList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AR\PrintMultipleBills.Designer.vb">
+      <DependentUpon>PrintMultipleBills.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AR\PrintMultipleBills.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AR\Transactions.Designer.vb">
+      <DependentUpon>Transactions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AR\Transactions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chart.Designer.vb">
+      <DependentUpon>Chart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Chart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartEvaluation.Designer.vb">
+      <DependentUpon>ChartEvaluation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ChartEvaluation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiefComplaint.Designer.vb">
+      <DependentUpon>ChiefComplaint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ChiefComplaint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BAL\CommonFunction.vb" />
+    <Compile Include="BAL\CurrentPat.vb" />
+    <Compile Include="DAL\DBAccess.vb" />
+    <Compile Include="Letters.Designer.vb">
+      <DependentUpon>Letters.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Letters.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DAL\MMDataDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MMDataDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Diagonosis.Designer.vb">
+      <DependentUpon>Diagonosis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Diagonosis.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisieseProfiles.Designer.vb">
+      <DependentUpon>DisieseProfiles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DisieseProfiles.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DAL\DprofilesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DprofilesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Employer.Designer.vb">
+      <DependentUpon>Employer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Employer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnterChartItems.Designer.vb">
+      <DependentUpon>EnterChartItems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EnterChartItems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EvalMngCoding.Designer.vb">
+      <DependentUpon>EvalMngCoding.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EvalMngCoding.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HPImaintenance.Designer.vb">
+      <DependentUpon>HPImaintenance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HPImaintenance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MailBox.Designer.vb">
+      <DependentUpon>MailBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MailBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinitoringSystem.Designer.vb">
+      <DependentUpon>MinitoringSystem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MinitoringSystem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MMCHRosAndGen.Designer.vb">
+      <DependentUpon>MMCHRosAndGen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MMCHRosAndGen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Physician.Designer.vb">
+      <DependentUpon>Physician.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Physician.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HealthHistory.Designer.vb">
+      <DependentUpon>HealthHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HealthHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HL7.Designer.vb">
+      <DependentUpon>HL7.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HL7.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HPI.Designer.vb">
+      <DependentUpon>HPI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HPI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imaging.Designer.vb">
+      <DependentUpon>Imaging.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Imaging.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Insurence.Designer.vb">
+      <DependentUpon>Insurence.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Insurence.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LabCorpInterFace.Designer.vb">
+      <DependentUpon>LabCorpInterFace.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LabCorpInterFace.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LabReports.Designer.vb">
+      <DependentUpon>LabReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LabReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.vb">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent.Designer.vb">
+      <DependentUpon>MDIParent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDIParent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicalTests.Designer.vb">
+      <DependentUpon>MedicalTests.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalTests.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medications.Designer.vb">
+      <DependentUpon>Medications.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Medications.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageList.Designer.vb">
+      <DependentUpon>MessageList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MessageList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Messaging.Designer.vb">
+      <DependentUpon>Messaging.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Messaging.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DAL\MMDataDataSet1.vb">
+      <DependentUpon>MMDataDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BAL\MMDataSet.TableAdapters.vb" />
+    <Compile Include="PATIENT.Designer.vb">
+      <DependentUpon>PATIENT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PATIENT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PhysicalExamination.Designer.vb">
+      <DependentUpon>PhysicalExamination.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PhysicalExamination.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PostBillingData.Designer.vb">
+      <DependentUpon>PostBillingData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PostBillingData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Practice.Designer.vb">
+      <DependentUpon>Practice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Practice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prescription.Designer.vb">
+      <DependentUpon>Prescription.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Prescription.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procedure.Designer.vb">
+      <DependentUpon>Procedure.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Procedure.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RefPhycician.Designer.vb">
+      <DependentUpon>RefPhycician.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RefPhycician.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DAL\dsReports.Designer.vb" />
+    <Compile Include="MMDRUGS.Designer.vb">
+      <DependentUpon>MMDRUGS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MMDRUGS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RosGeneral.Designer.vb">
+      <DependentUpon>RosGeneral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RosGeneral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RosAndGenCat.Designer.vb">
+      <DependentUpon>RosAndGenCat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RosAndGenCat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RVForPrescription.Designer.vb">
+      <DependentUpon>RVForPrescription.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RVForPrescription.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RV.Designer.vb">
+      <DependentUpon>RV.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.vb">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visit.Designer.vb">
+      <DependentUpon>Visit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Visit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visit2.designer.vb">
+      <DependentUpon>Visit2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Visit2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VitalSigns.Designer.vb">
+      <DependentUpon>VitalSigns.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VitalSigns.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Appointents1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Appointents1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AR\ARComments.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ARComments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AR\ARNotes.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ARNotes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AR\ARPatientBill.resx">
+      <DependentUpon>ARPatientBill.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AR\ARPatientBillSimple.resx">
+      <DependentUpon>ARPatientBillSimple.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AR\BillingInfo.rdlc" />
+    <EmbeddedResource Include="AR\BillingInfo2.rdlc" />
+    <EmbeddedResource Include="AR\MultiBillingReports.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MultiBillingReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AR\PatientBill.rdlc" />
+    <EmbeddedResource Include="AR\PatientBillSimple.rdlc" />
+    <EmbeddedResource Include="BodySketch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BodySketch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HealthHistoryQuestions.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HealthHistoryQuestions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Immunization.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Immunization.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImmunizationMaintenance.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImmunizationMaintenance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMDRUGMaintenance.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MMDRUGMaintenance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientPictures.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PatientPictures.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pharmacy.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Pharmacy.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfileDetailData.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ProfileDetailData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Letter.rdlc" />
+    <EmbeddedResource Include="BillingReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BillingReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMChProcedure.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MMChProcedure.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PickList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PickList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AR\PrintMultipleBills.resx">
+      <DependentUpon>PrintMultipleBills.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AR\Transactions.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Transactions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Chart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartEvaluation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChartEvaluation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiefComplaint.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChiefComplaint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Letters.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisieseProfiles.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DisieseProfiles.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HPImaintenance.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HPImaintenance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MailBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MinitoringSystem.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MinitoringSystem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMCHRosAndGen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MMCHRosAndGen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PostBillingData.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PostBillingData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RefPhycician.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RefPhycician.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ChartSummary.rdlc" />
+    <EmbeddedResource Include="Reports\Demographics.rdlc" />
+    <EmbeddedResource Include="Diagonosis.resx">
+      <DependentUpon>Diagonosis.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Employer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnterChartItems.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EnterChartItems.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EvalMngCoding.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EvalMngCoding.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Physician.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Physician.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HealthHistory.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HealthHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HL7.resx">
+      <DependentUpon>HL7.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HPI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HPI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imaging.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Imaging.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Insurence.resx">
+      <DependentUpon>Insurence.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LabCorpInterFace.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LabCorpInterFace.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LabReports.resx">
+      <DependentUpon>LabReports.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalTests.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MedicalTests.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medications.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Medications.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MessageList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messaging.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Messaging.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PATIENT.resx">
+      <DependentUpon>PATIENT.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MultiplePrescriptions.rdlc" />
+    <EmbeddedResource Include="Reports\PatientReport.rdlc" />
+    <EmbeddedResource Include="PhysicalExamination.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PhysicalExamination.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Practice.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Practice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prescription.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Prescription.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AppointMents.rdlc" />
+    <EmbeddedResource Include="MMDRUGS.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MMDRUGS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Prescriptions.rdlc" />
+    <EmbeddedResource Include="Procedure.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Procedure.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MDIParent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RosGeneral.resx">
+      <DependentUpon>RosGeneral.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RosAndGenCat.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RosAndGenCat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RVforMultiplePrescriptions.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RVforMultiplePrescriptions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RVForPrescription.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RVForPrescription.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\VisitReport.rdlc" />
+    <EmbeddedResource Include="RV.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RV.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShortVisitTemplate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShortVisitTemplate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Superbill.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Superbill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Users.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visit.resx">
+      <DependentUpon>Visit.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visit2.resx">
+      <DependentUpon>Visit2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VitalSigns.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VitalSigns.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="AR\ARDataSet.xsc">
+      <DependentUpon>ARDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AR\ARDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="AR\ARDataSet.xss">
+      <DependentUpon>ARDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bin\Debug\MedicalManager.exe.config" />
+    <None Include="bin\Release\MedicalManager.exe.config" />
+    <None Include="DAL\DprofilesDataSet.xsc">
+      <DependentUpon>DprofilesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\DprofilesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DprofilesDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DAL\DprofilesDataSet.xss">
+      <DependentUpon>DprofilesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\MMDataDataSet.xsc">
+      <DependentUpon>MMDataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\MMDataDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MMDataDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DAL\MMDataDataSet.xss">
+      <DependentUpon>MMDataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\MMDataDataSet1.xsc">
+      <DependentUpon>MMDataDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\MMDataDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>MMDataDataSet1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DAL\MMDataDataSet1.xss">
+      <DependentUpon>MMDataDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\MMDataDataSet2.xsc">
+      <DependentUpon>MMDataDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\MMDataDataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MMDataDataSet2.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DAL\MMDataDataSet2.xss">
+      <DependentUpon>MMDataDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DAL\dsReports.xsc">
+      <DependentUpon>dsReports.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\dsReports.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DAL\dsReports.xss">
+      <DependentUpon>dsReports.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\MedicalManager.exe" />
+    <Content Include="bin\Debug\MedicalManager.pdb" />
+    <Content Include="bin\Release\MedicalManager.exe" />
+    <Content Include="bin\Release\MedicalManager.pdb" />
+    <None Include="Resources\rose.gif" />
+    <None Include="Resources\genericPic.jpg" />
+    <None Include="Resources\genericPic2.jpg" />
+    <Content Include="Resources\untitled.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxMultiTiffViewerLib">
+      <Guid>{09EC0705-1062-48C8-BC03-A29F24C58E97}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="FAXCOMLib">
+      <Guid>{87099223-C7AF-11D0-B225-00C04FB6C2F5}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Outlook">
+      <Guid>{00062FFF-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MultiTiffViewerLib">
+      <Guid>{09EC0705-1062-48C8-BC03-A29F24C58E97}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="TIFFVIEWERLib">
+      <Guid>{F493C2CC-2117-47DA-B779-6610022E1179}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.1.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2005 Express Edition</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

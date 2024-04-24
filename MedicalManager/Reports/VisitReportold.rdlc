@@ -1,0 +1,2760 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="MMDataConnectionString1">
+      <rd:DataSourceID>cb1148e2-c476-4462-8003-1d60b04375c0</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=.\SQLEXPRESS;Initial Catalog=MMData;User ID=sa;Password=abdullah</ConnectString>
+      </ConnectionProperties>
+    </DataSource>
+    <DataSource Name="MMDataConnectionString2">
+      <rd:DataSourceID>e81b3a30-95c4-4e6b-a3ed-67e2cafd644f</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=.\SQLEXPRESS;Initial Catalog=MMData;User ID=sa;Password=abdullah</ConnectString>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <LeftMargin>0.5in</LeftMargin>
+  <PageHeader>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Textbox Name="textbox54">
+        <rd:DefaultName>textbox54</rd:DefaultName>
+        <Width>1.005in</Width>
+        <Style>
+          <TextAlign>Right</TextAlign>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Left>5.25in</Left>
+        <Height>0.125in</Height>
+        <Value>=Globals!PageNumber &amp; " / " &amp; Globals!TotalPages</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>0.25in</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageHeader>
+  <BottomMargin>0.25in</BottomMargin>
+  <rd:ReportID>bf07bbb2-b7cf-4b48-9836-0f8ab6d6d5b5</rd:ReportID>
+  <DataSets>
+    <DataSet Name="MMDataDataSet1_VisitReport">
+      <Fields>
+        <Field Name="ChartNo">
+          <DataField>ChartNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LastName">
+          <DataField>LastName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FirstName">
+          <DataField>FirstName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MiddleInitial">
+          <DataField>MiddleInitial</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SEX">
+          <DataField>SEX</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateofBirth">
+          <DataField>DateofBirth</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Allergies">
+          <DataField>Allergies</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PMHX">
+          <DataField>PMHX</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PHospSurgSeriousIllnesses">
+          <DataField>PHospSurgSeriousIllnesses</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FMHX">
+          <DataField>FMHX</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SHX">
+          <DataField>SHX</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Medications">
+          <DataField>Medications</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UserID">
+          <DataField>UserID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TimeStamp">
+          <DataField>TimeStamp</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="ChartNumber">
+          <DataField>ChartNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CaseNumber">
+          <DataField>CaseNumber</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Date">
+          <DataField>Date</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="VisitType">
+          <DataField>VisitType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Facility">
+          <DataField>Facility</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReferringProvider">
+          <DataField>ReferringProvider</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AssignedProvider">
+          <DataField>AssignedProvider</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReferralSource">
+          <DataField>ReferralSource</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ChronicConditions">
+          <DataField>ChronicConditions</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Temp">
+          <DataField>Temp</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Resp">
+          <DataField>Resp</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Pulse">
+          <DataField>Pulse</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PulseOx">
+          <DataField>PulseOx</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Systolic">
+          <DataField>Systolic</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Distolic">
+          <DataField>Distolic</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Ht">
+          <DataField>Ht</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Wt">
+          <DataField>Wt</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ChiefComplaint">
+          <DataField>ChiefComplaint</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="HPI">
+          <DataField>HPI</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReviewOfSystems">
+          <DataField>ReviewOfSystems</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PhysicalExam">
+          <DataField>PhysicalExam</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Assessment">
+          <DataField>Assessment</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Dx">
+          <DataField>Dx</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Plan">
+          <DataField>Plan</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Rx">
+          <DataField>Rx</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Tests">
+          <DataField>Tests</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Procedures">
+          <DataField>Procedures</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OtherText">
+          <DataField>OtherText</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Miscellaneous">
+          <DataField>Miscellaneous</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Expr1">
+          <DataField>Expr1</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="FollowUp">
+          <DataField>FollowUp</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RefferedTo">
+          <DataField>RefferedTo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Diet">
+          <DataField>Diet</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Counselling">
+          <DataField>Counselling</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Dx1">
+          <DataField>Dx1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Dx2">
+          <DataField>Dx2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Dx3">
+          <DataField>Dx3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Dx4">
+          <DataField>Dx4</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Notes">
+          <DataField>Notes</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SRHX">
+          <DataField>SRHX</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Expr2">
+          <DataField>Expr2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Expr3">
+          <DataField>Expr3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Expr4">
+          <DataField>Expr4</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Street1">
+          <DataField>Street1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Street2">
+          <DataField>Street2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="City">
+          <DataField>City</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="State">
+          <DataField>State</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ZipCode">
+          <DataField>ZipCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Phone">
+          <DataField>Phone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Fax">
+          <DataField>Fax</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Credentials">
+          <DataField>Credentials</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Dx1Description">
+          <DataField>Dx1Description</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Dx2Description">
+          <DataField>Dx2Description</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Dx3Description">
+          <DataField>Dx3Description</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Dx4Description">
+          <DataField>Dx4Description</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Dx5Description">
+          <DataField>Dx5Description</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>MMDataConnectionString2</DataSourceName>
+        <CommandText>SELECT     MMCHHealthHistoryShort.ChartNo, MMCHHealthHistoryShort.LastName, MMCHHealthHistoryShort.FirstName, MMCHHealthHistoryShort.MiddleInitial, 
+                      MMCHHealthHistoryShort.SEX, MMCHHealthHistoryShort.DateofBirth, MMCHHealthHistoryShort.Allergies, MMCHHealthHistoryShort.PMHX, 
+                      MMCHHealthHistoryShort.PHospSurgSeriousIllnesses, MMCHHealthHistoryShort.FMHX, MMCHHealthHistoryShort.SHX, 
+                      MMCHHealthHistoryShort.Medications, MMCHHealthHistoryShort.UserID, MMCHHealthHistoryShort.TimeStamp, MMChartVisit.ChartNumber, 
+                      MMChartVisit.CaseNumber, MMChartVisit.Date, MMChartVisit.VisitType, MMChartVisit.Facility, MMChartVisit.ReferringProvider, 
+                      MMChartVisit.AssignedProvider, MMChartVisit.ReferralSource, MMChartVisit.ChronicConditions, MMChartVisit.Temp, MMChartVisit.Resp, 
+                      MMChartVisit.Pulse, MMChartVisit.PulseOx, MMChartVisit.Systolic, MMChartVisit.Distolic, MMChartVisit.Ht, MMChartVisit.Wt, 
+                      MMChartVisit.ChiefComplaint, MMChartVisit.HPI, MMChartVisit.ReviewOfSystems, MMChartVisit.PhysicalExam, MMChartVisit.Assessment, 
+                      MMChartVisit.Dx, MMChartVisit.[Plan], MMChartVisit.Rx, MMChartVisit.Tests, MMChartVisit.Procedures, MMChartVisit.OtherText, 
+                      MMChartVisit.Miscellaneous, MMChartVisit.TimeStamp AS Expr1, MMChartVisit.FollowUp, MMChartVisit.RefferedTo, MMChartVisit.Diet, 
+                      MMChartVisit.Counselling, MMChartVisit.Dx1, MMChartVisit.Dx2, MMChartVisit.Dx3, MMChartVisit.Dx4, MMChartVisit.Notes, 
+                      MMCHHealthHistoryShort.SRHX, MMChartVisit.Dx1Description, MMChartVisit.Dx2Description, MMChartVisit.Dx3Description, 
+                      MMChartVisit.Dx4Description, MMChartVisit.Dx5Description
+FROM         MMCHHealthHistoryShort INNER JOIN
+                      MMChartVisit ON MMCHHealthHistoryShort.ChartNo = MMChartVisit.ChartNumber
+WHERE     (MMCHHealthHistoryShort.ChartNo = @Param1)</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>MMDataDataSet1</rd:DataSetName>
+        <rd:TableName>VisitReport</rd:TableName>
+        <rd:TableAdapterName>VisitreportTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>FillCh</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="MMDataDataSet1_MMChartRx">
+      <Fields>
+        <Field Name="RX_ID">
+          <DataField>RX ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ChartNumber">
+          <DataField>ChartNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PatientName">
+          <DataField>PatientName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OrderingPhysicianID">
+          <DataField>OrderingPhysicianID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PhysicianName">
+          <DataField>PhysicianName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LicenseNumber">
+          <DataField>LicenseNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Medication">
+          <DataField>Medication</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Dosage">
+          <DataField>Dosage</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NumberOfRefills">
+          <DataField>NumberOfRefills</DataField>
+          <rd:TypeName>System.Int16</rd:TypeName>
+        </Field>
+        <Field Name="StartDate">
+          <DataField>StartDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="EndDate">
+          <DataField>EndDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="SigNature">
+          <DataField>SigNature</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="SignerName">
+          <DataField>SignerName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NeedDEANo">
+          <DataField>NeedDEANo</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="DAENo">
+          <DataField>DAENo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="User">
+          <DataField>User</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TimeStamp">
+          <DataField>TimeStamp</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="SubstituteOk">
+          <DataField>SubstituteOk</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Quantity">
+          <DataField>Quantity</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Instructions">
+          <DataField>Instructions</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CaseNumber">
+          <DataField>CaseNumber</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>MMDataConnectionString1</DataSourceName>
+        <CommandText>SELECT     [RX ID], ChartNumber, PatientName, OrderingPhysicianID, PhysicianName, LicenseNumber, Medication, Dosage, NumberOfRefills, StartDate, EndDate, 
+                      SigNature, SignerName, NeedDEANo, DAENo, [User], TimeStamp, SubstituteOk, Quantity, Instructions, CaseNumber
+FROM         MMChartRx
+WHERE     (ChartNumber = @Param1)</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>MMDataDataSet1</rd:DataSetName>
+        <rd:TableName>MMChartRx</rd:TableName>
+        <rd:TableAdapterName>MMChartRxTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>FillBYCh</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="MMDataDataSet1_MMCHDxRxLtMt">
+      <Fields>
+        <Field Name="ID">
+          <DataField>ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ChartNumber">
+          <DataField>ChartNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Date">
+          <DataField>Date</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Type">
+          <DataField>Type</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Code">
+          <DataField>Code</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UserCode">
+          <DataField>UserCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UserID">
+          <DataField>UserID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TimeStamp">
+          <DataField>TimeStamp</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="PrDx">
+          <DataField>PrDx</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PostedToBilling">
+          <DataField>PostedToBilling</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="CaseNumber">
+          <DataField>CaseNumber</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Amount">
+          <DataField>Amount</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>MMDataConnectionString1</DataSourceName>
+        <CommandText>SELECT     ID, ChartNumber, Date, Type, Code, Description, PrDx, UserCode, UserID, TimeStamp, PostedToBilling, CaseNumber, Amount
+FROM         MMCHDxRxLtMt
+WHERE     (ChartNumber = @Param1)</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>MMDataDataSet1</rd:DataSetName>
+        <rd:TableName>MMCHDxRxLtMt</rd:TableName>
+        <rd:TableAdapterName>MMCHDxRxLtMtTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>FillbyCh</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="MMDataDataSet1_MMChartTVitalSign">
+      <Fields>
+        <Field Name="VID">
+          <DataField>VID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ChartNumber">
+          <DataField>ChartNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CaseNumber">
+          <DataField>CaseNumber</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Date">
+          <DataField>Date</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Time">
+          <DataField>Time</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Temp">
+          <DataField>Temp</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Pulse">
+          <DataField>Pulse</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Resp">
+          <DataField>Resp</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Systolic">
+          <DataField>Systolic</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Diastolic">
+          <DataField>Diastolic</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="HtIn">
+          <DataField>HtIn</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="WtLb">
+          <DataField>WtLb</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Oz">
+          <DataField>Oz</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BMI">
+          <DataField>BMI</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PulseOx">
+          <DataField>PulseOx</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="User">
+          <DataField>User</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TimeStamp">
+          <DataField>TimeStamp</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Signed">
+          <DataField>Signed</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>MMDataConnectionString1</DataSourceName>
+        <CommandText>SELECT VID, ChartNumber, CaseNumber, Name, Date, Time, Temp, Pulse, Resp, Systolic, Diastolic, HtIn, WtLb, Oz, BMI, PulseOx, [User], TimeStamp, Signed FROM dbo.MMChartTVitalSign</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>MMDataDataSet1</rd:DataSetName>
+        <rd:TableName>MMChartTVitalSign</rd:TableName>
+        <rd:TableAdapterName>MMChartTVitalSignTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="MMDataDataSet1_VisitReportPractice">
+      <Fields>
+        <Field Name="PracticeName">
+          <DataField>PracticeName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Street1">
+          <DataField>Street1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Street2">
+          <DataField>Street2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="City">
+          <DataField>City</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="State">
+          <DataField>State</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ZipCode">
+          <DataField>ZipCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Phone">
+          <DataField>Phone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Extension">
+          <DataField>Extension</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Fax">
+          <DataField>Fax</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>MMDataConnectionString2</DataSourceName>
+        <CommandText>SELECT     PracticeName, Street1, Street2, City, State, ZipCode, Phone, Extension, Fax
+FROM         MMPrectice</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>MMDataDataSet1</rd:DataSetName>
+        <rd:TableName>VisitReportPractice</rd:TableName>
+        <rd:TableAdapterName>VisitReportPracticeTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Code />
+  <Width>6.505in</Width>
+  <Body>
+    <ReportItems>
+      <Textbox Name="textbox26">
+        <rd:DefaultName>textbox26</rd:DefaultName>
+        <Top>0.25in</Top>
+        <Width>3in</Width>
+        <Style>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Right</TextAlign>
+        </Style>
+        <ZIndex>42</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>3.25in</Left>
+        <Height>0.125in</Height>
+        <Value>=First(Fields!City.Value, "MMDataDataSet1_VisitReportPractice") &amp; ", " &amp; First(Fields!State.Value, "MMDataDataSet1_VisitReportPractice") &amp; " " &amp; First(Fields!ZipCode.Value, "MMDataDataSet1_VisitReportPractice")</Value>
+      </Textbox>
+      <Textbox Name="Street2">
+        <rd:DefaultName>Street2</rd:DefaultName>
+        <Top>0.125in</Top>
+        <Width>1.375in</Width>
+        <Style>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Right</TextAlign>
+        </Style>
+        <ZIndex>41</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>4.875in</Left>
+        <Height>0.125in</Height>
+        <Value>=First(Fields!Street2.Value, "MMDataDataSet1_VisitReportPractice")</Value>
+      </Textbox>
+      <Textbox Name="Street1">
+        <rd:DefaultName>Street1</rd:DefaultName>
+        <Width>3in</Width>
+        <Style>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Right</TextAlign>
+        </Style>
+        <ZIndex>40</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>3.25in</Left>
+        <Height>0.125in</Height>
+        <Value>=First(Fields!Street1.Value, "MMDataDataSet1_VisitReportPractice")</Value>
+      </Textbox>
+      <Line Name="line2">
+        <Visibility>
+          <Hidden>=iif(First(Fields!Dx1.Value, "MMDataDataSet1_VisitReport")="",True,False)</Hidden>
+        </Visibility>
+        <Top>4.125in</Top>
+        <Width>6.375in</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <ZIndex>39</ZIndex>
+        <Height>0in</Height>
+      </Line>
+      <Textbox Name="textbox17">
+        <Visibility>
+          <Hidden>=iif(First(Fields!Dx5Description.Value, "MMDataDataSet1_VisitReport")="",True,False)</Hidden>
+        </Visibility>
+        <Top>3.75in</Top>
+        <Width>0.75in</Width>
+        <Style>
+          <FontSize>7.8pt</FontSize>
+          <FontWeight>700</FontWeight>
+        </Style>
+        <ZIndex>38</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>5.5in</Left>
+        <Height>0.125in</Height>
+        <Value>Free Text Dx</Value>
+      </Textbox>
+      <Textbox Name="Dx5Description">
+        <rd:DefaultName>Dx5Description</rd:DefaultName>
+        <Top>3.875in</Top>
+        <Style>
+          <FontSize>6.5pt</FontSize>
+          <FontWeight>100</FontWeight>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+        <ZIndex>37</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>5.5in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!Dx5Description.Value, "MMDataDataSet1_VisitReport")</Value>
+      </Textbox>
+      <Textbox Name="Dx4Description">
+        <rd:DefaultName>Dx4Description</rd:DefaultName>
+        <Top>4in</Top>
+        <Width>1.375in</Width>
+        <Style>
+          <FontSize>6.5pt</FontSize>
+          <FontWeight>100</FontWeight>
+        </Style>
+        <ZIndex>36</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>4.125in</Left>
+        <Height>0.125in</Height>
+        <Value>=First(Fields!Dx4Description.Value, "MMDataDataSet1_VisitReport")</Value>
+      </Textbox>
+      <Textbox Name="Dx3Description">
+        <rd:DefaultName>Dx3Description</rd:DefaultName>
+        <Top>4in</Top>
+        <Width>1.375in</Width>
+        <Style>
+          <FontSize>6.5pt</FontSize>
+          <FontWeight>100</FontWeight>
+        </Style>
+        <ZIndex>35</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.75in</Left>
+        <Height>0.125in</Height>
+        <Value>=First(Fields!Dx3Description.Value, "MMDataDataSet1_VisitReport")</Value>
+      </Textbox>
+      <Textbox Name="Dx2Description">
+        <rd:DefaultName>Dx2Description</rd:DefaultName>
+        <Top>4in</Top>
+        <Width>1.375in</Width>
+        <Style>
+          <FontSize>6.5pt</FontSize>
+          <FontWeight>100</FontWeight>
+        </Style>
+        <ZIndex>34</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.375in</Left>
+        <Height>0.125in</Height>
+        <Value>=First(Fields!Dx2Description.Value, "MMDataDataSet1_VisitReport")</Value>
+      </Textbox>
+      <Textbox Name="Dx1Description">
+        <rd:DefaultName>Dx1Description</rd:DefaultName>
+        <Top>4in</Top>
+        <Width>1.375in</Width>
+        <Style>
+          <FontSize>6.5pt</FontSize>
+          <FontWeight>100</FontWeight>
+        </Style>
+        <ZIndex>33</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.125in</Height>
+        <Value>=First(Fields!Dx1Description.Value, "MMDataDataSet1_VisitReport")</Value>
+      </Textbox>
+      <Textbox Name="Fax">
+        <rd:DefaultName>Fax</rd:DefaultName>
+        <Visibility>
+          <Hidden>=iif(First(Fields!Fax.Value, "MMDataDataSet1_VisitReportPractice")="",True,False)</Hidden>
+        </Visibility>
+        <Top>0.25in</Top>
+        <Width>2.125in</Width>
+        <Style>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>32</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.125in</Height>
+        <Value>=First(Fields!Fax.Value, "MMDataDataSet1_VisitReportPractice")</Value>
+      </Textbox>
+      <Textbox Name="Phone">
+        <rd:DefaultName>Phone</rd:DefaultName>
+        <Top>0.125in</Top>
+        <Width>2.125in</Width>
+        <Style>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>31</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.125in</Height>
+        <Value>=First(Fields!Phone.Value, "MMDataDataSet1_VisitReportPractice")</Value>
+      </Textbox>
+      <Textbox Name="PracticeName">
+        <rd:DefaultName>PracticeName</rd:DefaultName>
+        <Width>2.25in</Width>
+        <Style>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Left</TextAlign>
+        </Style>
+        <ZIndex>30</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.125in</Height>
+        <Value>=First(Fields!PracticeName.Value, "MMDataDataSet1_VisitReportPractice")</Value>
+      </Textbox>
+      <Textbox Name="SRHX">
+        <rd:DefaultName>SRHX</rd:DefaultName>
+        <Visibility>
+          <Hidden>=iif(First(Fields!SRHX.Value, "MMDataDataSet1_VisitReport")="",True,False)</Hidden>
+        </Visibility>
+        <Top>1.875in</Top>
+        <Width>6.255in</Width>
+        <ZIndex>29</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.125in</Height>
+        <Value>="SURGICAL HISTORY: " &amp;  ControlChars.CrLf  &amp; First(Fields!SRHX.Value, "MMDataDataSet1_VisitReport")</Value>
+      </Textbox>
+      <Textbox Name="textbox55">
+        <rd:DefaultName>textbox55</rd:DefaultName>
+        <Top>3.48958in</Top>
+        <Width>2.125in</Width>
+        <Style>
+          <FontWeight>600</FontWeight>
+        </Style>
+        <ZIndex>28</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.125in</Height>
+        <Value>ASSESSMENT AND PLAN</Value>
+      </Textbox>
+      <Textbox Name="Notes">
+        <rd:DefaultName>Notes</rd:DefaultName>
+        <Visibility>
+          <Hidden>=iif(First(Fields!Notes.Value, "MMDataDataSet1_VisitReport")="",True,False)</Hidden>
+        </Visibility>
+        <Top>6.75in</Top>
+        <Width>6.255in</Width>
+        <ZIndex>27</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.125in</Height>
+        <Value>="OTHER NOTES: " &amp; "  " &amp; First(Fields!Notes.Value, "MMDataDataSet1_VisitReport")</Value>
+      </Textbox>
+      <Line Name="line3">
+        <Visibility>
+          <Hidden>=iif(First(Fields!Dx1.Value, "MMDataDataSet1_VisitReport")="",True,False)</Hidden>
+        </Visibility>
+        <Top>3.75in</Top>
+        <Width>6.375in</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <ZIndex>26</ZIndex>
+        <Height>0in</Height>
+      </Line>
+      <Textbox Name="textbox53">
+        <Visibility>
+          <Hidden>=iif(First(Fields!Dx1.Value, "MMDataDataSet1_VisitReport")="",True,False)</Hidden>
+        </Visibility>
+        <Top>3.75in</Top>
+        <Width>0.625in</Width>
+        <Style>
+          <FontSize>7.8pt</FontSize>
+          <FontWeight>700</FontWeight>
+        </Style>
+        <ZIndex>25</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>4.125in</Left>
+        <Height>0.125in</Height>
+        <Value>Diag 4</Value>
+      </Textbox>
+      <Textbox Name="textbox48">
+        <Visibility>
+          <Hidden>=iif(First(Fields!Dx1.Value, "MMDataDataSet1_VisitReport")="",True,False)</Hidden>
+        </Visibility>
+        <Top>3.75in</Top>
+        <Width>0.625in</Width>
+        <Style>
+          <FontSize>7.8pt</FontSize>
+          <FontWeight>700</FontWeight>
+        </Style>
+        <ZIndex>24</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.75in</Left>
+        <Height>0.125in</Height>
+        <Value>Diag 3</Value>
+      </Textbox>
+      <Textbox Name="textbox46">
+        <Visibility>
+          <Hidden>=iif(First(Fields!Dx1.Value, "MMDataDataSet1_VisitReport")="",True,False)</Hidden>
+        </Visibility>
+        <Top>3.75in</Top>
+        <Width>0.625in</Width>
+        <Style>
+          <FontSize>7.8pt</FontSize>
+          <FontWeight>700</FontWeight>
+        </Style>
+        <ZIndex>23</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.375in</Left>
+        <Height>0.125in</Height>
+        <Value>Diag 2</Value>
+      </Textbox>
+      <Textbox Name="textbox42">
+        <rd:DefaultName>textbox42</rd:DefaultName>
+        <Visibility>
+          <Hidden>=iif(First(Fields!Dx1.Value, "MMDataDataSet1_VisitReport")="",True,False)</Hidden>
+        </Visibility>
+        <Top>3.75in</Top>
+        <Width>0.625in</Width>
+        <Style>
+          <FontSize>7.8pt</FontSize>
+          <FontWeight>700</FontWeight>
+        </Style>
+        <ZIndex>22</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.125in</Height>
+        <Value>Diag 1</Value>
+      </Textbox>
+      <Textbox Name="Dx4">
+        <rd:DefaultName>Dx4</rd:DefaultName>
+        <Visibility>
+          <Hidden>=iif(First(Fields!Dx1.Value, "MMDataDataSet1_VisitReport")="",True,False)</Hidden>
+        </Visibility>
+        <Top>3.875in</Top>
+        <Width>0.625in</Width>
+        <Style>
+          <FontSize>7.8pt</FontSize>
+          <FontWeight>700</FontWeight>
+        </Style>
+        <ZIndex>21</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>4.125in</Left>
+        <Height>0.125in</Height>
+        <Value>=First(Fields!Dx4.Value, "MMDataDataSet1_VisitReport")</Value>
+      </Textbox>
+      <Textbox Name="Dx3">
+        <rd:DefaultName>Dx3</rd:DefaultName>
+        <Visibility>
+          <Hidden>=iif(First(Fields!Dx1.Value, "MMDataDataSet1_VisitReport")="",True,False)</Hidden>
+        </Visibility>
+        <Top>3.875in</Top>
+        <Width>0.625in</Width>
+        <Style>
+          <FontSize>7.8pt</FontSize>
+          <FontWeight>700</FontWeight>
+        </Style>
+        <ZIndex>20</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.75in</Left>
+        <Height>0.125in</Height>
+        <Value>=First(Fields!Dx3.Value, "MMDataDataSet1_VisitReport")</Value>
+      </Textbox>
+      <Textbox Name="Dx2">
+        <rd:DefaultName>Dx2</rd:DefaultName>
+        <Visibility>
+          <Hidden>=iif(First(Fields!Dx1.Value, "MMDataDataSet1_VisitReport")="",True,False)</Hidden>
+        </Visibility>
+        <Top>3.875in</Top>
+        <Width>0.625in</Width>
+        <Style>
+          <FontSize>7.8pt</FontSize>
+          <FontWeight>700</FontWeight>
+        </Style>
+        <ZIndex>19</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.375in</Left>
+        <Height>0.125in</Height>
+        <Value>=First(Fields!Dx2.Value, "MMDataDataSet1_VisitReport")</Value>
+      </Textbox>
+      <Textbox Name="Dx1">
+        <rd:DefaultName>Dx1</rd:DefaultName>
+        <Visibility>
+          <Hidden>=iif(First(Fields!Dx1.Value, "MMDataDataSet1_VisitReport")="",True,False)</Hidden>
+        </Visibility>
+        <Top>3.875in</Top>
+        <Width>0.625in</Width>
+        <Style>
+          <FontSize>7.8pt</FontSize>
+          <FontWeight>700</FontWeight>
+        </Style>
+        <ZIndex>18</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.125in</Height>
+        <Value>=First(Fields!Dx1.Value, "MMDataDataSet1_VisitReport")</Value>
+      </Textbox>
+      <Textbox Name="ChiefComplaint">
+        <rd:DefaultName>ChiefComplaint</rd:DefaultName>
+        <Visibility>
+          <Hidden>=iif(First(Fields!ChiefComplaint.Value, "MMDataDataSet1_VisitReport")="",True,False)</Hidden>
+        </Visibility>
+        <Top>1in</Top>
+        <Width>6.255in</Width>
+        <ZIndex>17</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.125in</Height>
+        <Value>="CC: " &amp;  ControlChars.CrLf  &amp; First(Fields!ChiefComplaint.Value, "MMDataDataSet1_VisitReport")</Value>
+      </Textbox>
+      <Textbox Name="SHX">
+        <rd:DefaultName>SHX</rd:DefaultName>
+        <Visibility>
+          <Hidden>=iif(First(Fields!SHX.Value, "MMDataDataSet1_VisitReport")="",True,False)</Hidden>
+        </Visibility>
+        <Top>1.58333in</Top>
+        <Width>6.255in</Width>
+        <ZIndex>16</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.125in</Height>
+        <Value>="SOCIAL HISTORY: " &amp;  ControlChars.CrLf  &amp; First(Fields!SHX.Value, "MMDataDataSet1_VisitReport")</Value>
+      </Textbox>
+      <Textbox Name="FMHX">
+        <rd:DefaultName>FMHX</rd:DefaultName>
+        <Visibility>
+          <Hidden>=iif(First(Fields!FMHX.Value, "MMDataDataSet1_VisitReport")="",True,False)</Hidden>
+        </Visibility>
+        <Top>1.4375in</Top>
+        <Width>6.255in</Width>
+        <ZIndex>15</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.125in</Height>
+        <Value>="FAMILY HISTORY: " &amp;  ControlChars.CrLf  &amp; First(Fields!FMHX.Value, "MMDataDataSet1_VisitReport")</Value>
+      </Textbox>
+      <Textbox Name="PMHX_1">
+        <rd:DefaultName>PMHX_1</rd:DefaultName>
+        <Visibility>
+          <Hidden>=iif(First(Fields!PMHX.Value, "MMDataDataSet1_VisitReport")="",True,False)</Hidden>
+        </Visibility>
+        <Top>1.72917in</Top>
+        <Width>6.255in</Width>
+        <ZIndex>14</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.125in</Height>
+        <Value>="PAST MEDICAL HISTORY: " &amp;  ControlChars.CrLf  &amp;First(Fields!PMHX.Value, "MMDataDataSet1_VisitReport")</Value>
+      </Textbox>
+      <Textbox Name="Allergies">
+        <rd:DefaultName>Allergies</rd:DefaultName>
+        <Visibility>
+          <Hidden>=iif(First(Fields!Allergies.Value, "MMDataDataSet1_VisitReport")="",True,False)</Hidden>
+        </Visibility>
+        <Top>1.29167in</Top>
+        <Width>6.255in</Width>
+        <ZIndex>13</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.125in</Height>
+        <Value>="ALLERGIES: " &amp;  ControlChars.CrLf  &amp;  First(Fields!Allergies.Value, "MMDataDataSet1_VisitReport")</Value>
+      </Textbox>
+      <Textbox Name="Miscellaneous">
+        <rd:DefaultName>Miscellaneous</rd:DefaultName>
+        <Top>6.96875in</Top>
+        <Width>6.255in</Width>
+        <ZIndex>12</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.125in</Height>
+        <Value>=First(Fields!Miscellaneous.Value, "MMDataDataSet1_VisitReport")</Value>
+      </Textbox>
+      <Textbox Name="Counselling">
+        <rd:DefaultName>Counselling</rd:DefaultName>
+        <Visibility>
+          <Hidden>=iif(First(Fields!Counselling.Value, "MMDataDataSet1_VisitReport")="",True,False)</Hidden>
+        </Visibility>
+        <Top>6.5in</Top>
+        <Width>6.255in</Width>
+        <ZIndex>11</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.125in</Height>
+        <Value>="COUNSELING : " &amp; "  " &amp;  First(Fields!Counselling.Value, "MMDataDataSet1_VisitReport")</Value>
+      </Textbox>
+      <Textbox Name="Diet">
+        <rd:DefaultName>Diet</rd:DefaultName>
+        <Visibility>
+          <Hidden>=iif(First(Fields!Diet.Value, "MMDataDataSet1_VisitReport")="",True,False)</Hidden>
+        </Visibility>
+        <Top>6.25in</Top>
+        <Width>6.255in</Width>
+        <ZIndex>10</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.125in</Height>
+        <Value>="DIET: " &amp; "  " &amp; First(Fields!Diet.Value, "MMDataDataSet1_VisitReport")</Value>
+      </Textbox>
+      <Textbox Name="RefferedTo">
+        <rd:DefaultName>RefferedTo</rd:DefaultName>
+        <Visibility>
+          <Hidden>=iif(First(Fields!RefferedTo.Value, "MMDataDataSet1_VisitReport")="",True,False)</Hidden>
+        </Visibility>
+        <Top>6in</Top>
+        <Width>6.255in</Width>
+        <ZIndex>9</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.125in</Height>
+        <Value>="REFERRED TO: " &amp; "  " &amp; First(Fields!RefferedTo.Value, "MMDataDataSet1_VisitReport")</Value>
+      </Textbox>
+      <Textbox Name="FollowUp">
+        <rd:DefaultName>FollowUp</rd:DefaultName>
+        <Visibility>
+          <Hidden>=iif(First(Fields!FollowUp.Value, "MMDataDataSet1_VisitReport")="",True,False)</Hidden>
+        </Visibility>
+        <Top>5.77083in</Top>
+        <Width>6.255in</Width>
+        <ZIndex>8</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.125in</Height>
+        <Value>="FOLLOW UP: " &amp; "  " &amp; First(Fields!FollowUp.Value, "MMDataDataSet1_VisitReport")</Value>
+      </Textbox>
+      <Textbox Name="PhysicalExam">
+        <rd:DefaultName>PhysicalExam</rd:DefaultName>
+        <Visibility>
+          <Hidden>=iif(First(Fields!PhysicalExam.Value, "MMDataDataSet1_VisitReport")="",True,False)</Hidden>
+        </Visibility>
+        <Top>2.16666in</Top>
+        <Width>6.255in</Width>
+        <Style>
+          <NumeralVariant>2</NumeralVariant>
+        </Style>
+        <ZIndex>7</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.125in</Height>
+        <Value>="PHYSICAL EXAM: " &amp; "  " &amp; First(Fields!PhysicalExam.Value, "MMDataDataSet1_VisitReport")</Value>
+      </Textbox>
+      <Textbox Name="ReviewOfSystems">
+        <rd:DefaultName>ReviewOfSystems</rd:DefaultName>
+        <Visibility>
+          <Hidden>=iif(First(Fields!ReviewOfSystems.Value, "MMDataDataSet1_VisitReport")="",True,False)</Hidden>
+        </Visibility>
+        <Top>2.02083in</Top>
+        <Width>6.255in</Width>
+        <ZIndex>6</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.125in</Height>
+        <Value>="REVIEW OF SYSTEMS: " &amp; "  " &amp; First(Fields!ReviewOfSystems.Value, "MMDataDataSet1_VisitReport")</Value>
+      </Textbox>
+      <Textbox Name="HPI">
+        <rd:DefaultName>HPI</rd:DefaultName>
+        <Visibility>
+          <Hidden>=iif(First(Fields!HPI.Value, "MMDataDataSet1_VisitReport")="",True,False)</Hidden>
+        </Visibility>
+        <Top>1.14583in</Top>
+        <Width>6.255in</Width>
+        <ZIndex>5</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.125in</Height>
+        <Value>=First(Fields!HPI.Value, "MMDataDataSet1_VisitReport")</Value>
+      </Textbox>
+      <Table Name="table3">
+        <ZIndex>4</ZIndex>
+        <DataSetName>MMDataDataSet1_MMChartTVitalSign</DataSetName>
+        <Visibility>
+          <Hidden>=iif(First(Fields!VID.Value.ToString, "MMDataDataSet1_MMChartTVitalSign")="",True,False)</Hidden>
+        </Visibility>
+        <Top>2.48958in</Top>
+        <Width>6.35615in</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Temp">
+                      <rd:DefaultName>Temp</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>9pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>9</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Temp.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Pulse">
+                      <rd:DefaultName>Pulse</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>9pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>8</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Pulse.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Resp">
+                      <rd:DefaultName>Resp</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>9pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>7</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Resp.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Systolic">
+                      <rd:DefaultName>Systolic</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>9pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>6</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Systolic.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Diastolic">
+                      <rd:DefaultName>Diastolic</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>9pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>5</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Diastolic.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="HtIn">
+                      <rd:DefaultName>HtIn</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>9pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>4</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!HtIn.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="WtLb">
+                      <rd:DefaultName>WtLb</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>9pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!WtLb.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="BMI">
+                      <rd:DefaultName>BMI</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>9pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!BMI.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="PulseOx">
+                      <rd:DefaultName>PulseOx</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>9pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!PulseOx.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox47">
+                      <rd:DefaultName>textbox47</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>9pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!VID.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ColSpan>2</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox12">
+                      <rd:DefaultName>textbox12</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>38</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>VITAL SIGNS</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Date">
+                      <rd:DefaultName>Date</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>37</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox43">
+                      <rd:DefaultName>textbox43</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>36</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox44">
+                      <rd:DefaultName>textbox44</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>35</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox7">
+                      <rd:DefaultName>textbox7</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>34</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox30">
+                      <rd:DefaultName>textbox30</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>33</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox6">
+                      <rd:DefaultName>textbox6</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>32</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox33">
+                      <rd:DefaultName>textbox33</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>31</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox27">
+                      <rd:DefaultName>textbox27</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>30</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox2">
+                      <rd:DefaultName>textbox2</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>WhiteSmoke</BackgroundColor>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>29</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Temp</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox3">
+                      <rd:DefaultName>textbox3</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>WhiteSmoke</BackgroundColor>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>28</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Pulse</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox4">
+                      <rd:DefaultName>textbox4</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>WhiteSmoke</BackgroundColor>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>27</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Resp</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox23">
+                      <rd:DefaultName>textbox23</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>WhiteSmoke</BackgroundColor>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>26</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Systolic</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox5">
+                      <rd:DefaultName>textbox5</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>WhiteSmoke</BackgroundColor>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>25</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Diastolic</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox45">
+                      <Style>
+                        <BackgroundColor>WhiteSmoke</BackgroundColor>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>24</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Ht In</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox21">
+                      <rd:DefaultName>textbox21</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>WhiteSmoke</BackgroundColor>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>23</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Wt Lb</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox24">
+                      <rd:DefaultName>textbox24</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>WhiteSmoke</BackgroundColor>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>22</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>BMI</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox40">
+                      <Style>
+                        <BackgroundColor>WhiteSmoke</BackgroundColor>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>21</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Pulse Ox</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox29">
+                      <rd:DefaultName>textbox29</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>WhiteSmoke</BackgroundColor>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>20</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>0.69564in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.69564in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.69564in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.69564in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.69564in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.69564in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.69564in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.69564in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.66604in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Visibility>
+              <Hidden>true</Hidden>
+            </Visibility>
+            <Width>0.125in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.875in</Height>
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox9">
+                      <rd:DefaultName>textbox9</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>19</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox13">
+                      <rd:DefaultName>textbox13</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>18</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox20">
+                      <rd:DefaultName>textbox20</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>17</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox31">
+                      <rd:DefaultName>textbox31</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>16</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox8">
+                      <rd:DefaultName>textbox8</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>15</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox51">
+                      <rd:DefaultName>textbox51</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>14</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox32">
+                      <rd:DefaultName>textbox32</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>13</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox16">
+                      <rd:DefaultName>textbox16</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>12</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox52">
+                      <rd:DefaultName>textbox52</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>11</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox49">
+                      <rd:DefaultName>textbox49</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>10</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.125in</Height>
+            </TableRow>
+          </TableRows>
+        </Footer>
+      </Table>
+      <Table Name="table2">
+        <ZIndex>3</ZIndex>
+        <DataSetName>MMDataDataSet1_MMCHDxRxLtMt</DataSetName>
+        <Visibility>
+          <Hidden>=iif(Fields!Code.Value="",True,False)</Hidden>
+        </Visibility>
+        <Top>4.25in</Top>
+        <Width>6.25in</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Code">
+                      <rd:DefaultName>Code</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>9pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Code.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Type">
+                      <rd:DefaultName>Type</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>9pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Type.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Description">
+                      <rd:DefaultName>Description</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>9pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Description.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Date_1">
+                      <rd:DefaultName>Date_1</rd:DefaultName>
+                      <CanShrink>true</CanShrink>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>9pt</FontSize>
+                        <Format>d</Format>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Date.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox10">
+                      <rd:DefaultName>textbox10</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>WhiteSmoke</BackgroundColor>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>7</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Code</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox25">
+                      <rd:DefaultName>textbox25</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>WhiteSmoke</BackgroundColor>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>6</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Type</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox28">
+                      <rd:DefaultName>textbox28</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>WhiteSmoke</BackgroundColor>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>5</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Description</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox11">
+                      <rd:DefaultName>textbox11</rd:DefaultName>
+                      <CanShrink>true</CanShrink>
+                      <Style>
+                        <BackgroundColor>WhiteSmoke</BackgroundColor>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>4</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Date</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>0.75in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.875in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>3.875in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.75in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.5in</Height>
+      </Table>
+      <Table Name="table1">
+        <ZIndex>2</ZIndex>
+        <DataSetName>MMDataDataSet1_MMChartRx</DataSetName>
+        <Visibility>
+          <Hidden>=iif(Fields!Medication.Value="",True,False)</Hidden>
+        </Visibility>
+        <Top>4.84375in</Top>
+        <Width>6.25in</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Medication">
+                      <rd:DefaultName>Medication</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>9pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Medication.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Dosage">
+                      <rd:DefaultName>Dosage</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>9pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Dosage.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Instructions">
+                      <rd:DefaultName>Instructions</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>9pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Instructions.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="StartDate">
+                      <rd:DefaultName>StartDate</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>9pt</FontSize>
+                        <Format>d</Format>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!StartDate.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox15">
+                      <rd:DefaultName>textbox15</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>White</Default>
+                        </BorderColor>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>11</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>CURRENT MEDICATIONS</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox18">
+                      <rd:DefaultName>textbox18</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>White</Default>
+                        </BorderColor>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>10</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox35">
+                      <rd:DefaultName>textbox35</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>White</Default>
+                        </BorderColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>9</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox41">
+                      <rd:DefaultName>textbox41</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>White</Default>
+                        </BorderColor>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>8</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox1">
+                      <rd:DefaultName>textbox1</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>WhiteSmoke</BackgroundColor>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>7</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Medication</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox22">
+                      <rd:DefaultName>textbox22</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>WhiteSmoke</BackgroundColor>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>6</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Dosage</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox14">
+                      <rd:DefaultName>textbox14</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>WhiteSmoke</BackgroundColor>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>5</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Instructions</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox19">
+                      <rd:DefaultName>textbox19</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>WhiteSmoke</BackgroundColor>
+                        <BorderColor>
+                          <Default>Gray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>4</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Start Date</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>2.25in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.25in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.75in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.75in</Height>
+      </Table>
+      <Rectangle Name="rectangle1">
+        <ZIndex>1</ZIndex>
+        <ReportItems>
+          <Textbox Name="textbox36">
+            <Width>0.75in</Width>
+            <Style>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+            </Style>
+            <ZIndex>9</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>3.625in</Left>
+            <Height>0.125in</Height>
+            <Value>Date</Value>
+          </Textbox>
+          <Textbox Name="DateofBirth">
+            <rd:DefaultName>DateofBirth</rd:DefaultName>
+            <Top>0.125in</Top>
+            <Width>1.75in</Width>
+            <Style>
+              <Format>d</Format>
+            </Style>
+            <ZIndex>8</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>1in</Left>
+            <Height>0.125in</Height>
+            <Value>=First(Fields!DateofBirth.Value, "MMDataDataSet1_VisitReport")</Value>
+          </Textbox>
+          <Textbox Name="textbox38">
+            <Width>0.875in</Width>
+            <Style>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+            </Style>
+            <ZIndex>7</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Height>0.125in</Height>
+            <Value>Patient</Value>
+          </Textbox>
+          <Textbox Name="textbox39">
+            <rd:DefaultName>textbox39</rd:DefaultName>
+            <Top>0.25in</Top>
+            <Width>0.875in</Width>
+            <Style>
+              <FontWeight>700</FontWeight>
+            </Style>
+            <ZIndex>6</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Value>Gender</Value>
+          </Textbox>
+          <Textbox Name="SEX">
+            <rd:DefaultName>SEX</rd:DefaultName>
+            <Top>0.25in</Top>
+            <Width>0.875in</Width>
+            <ZIndex>5</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>1in</Left>
+            <Value>=First(Fields!SEX.Value,"MMDataDataSet1_VisitReport")</Value>
+          </Textbox>
+          <Textbox Name="LastName">
+            <rd:DefaultName>LastName</rd:DefaultName>
+            <Width>1.75in</Width>
+            <ZIndex>4</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>1in</Left>
+            <Height>0.125in</Height>
+            <Value>=First(Fields!FirstName.Value, "MMDataDataSet1_VisitReport") + " " +  First(Fields!LastName.Value, "MMDataDataSet1_VisitReport")</Value>
+          </Textbox>
+          <Textbox Name="textbox37">
+            <Top>0.125in</Top>
+            <Width>0.875in</Width>
+            <Style>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+              <NumeralVariant>2</NumeralVariant>
+            </Style>
+            <ZIndex>3</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Height>0.125in</Height>
+            <Value>DOB</Value>
+          </Textbox>
+          <Textbox Name="VisitType">
+            <rd:DefaultName>VisitType</rd:DefaultName>
+            <Top>0.125in</Top>
+            <Width>1.5in</Width>
+            <ZIndex>2</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>4.625in</Left>
+            <Height>0.125in</Height>
+            <Value>=First(Fields!VisitType.Value, "MMDataDataSet1_VisitReport")</Value>
+          </Textbox>
+          <Textbox Name="Date_2">
+            <rd:DefaultName>Date_2</rd:DefaultName>
+            <Width>1.5in</Width>
+            <Style>
+              <Format>d</Format>
+              <TextAlign>Left</TextAlign>
+            </Style>
+            <ZIndex>1</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>4.625in</Left>
+            <Height>0.125in</Height>
+            <Value>=First(Fields!Date.Value, "MMDataDataSet1_VisitReport")</Value>
+          </Textbox>
+          <Textbox Name="textbox34">
+            <Top>0.125in</Top>
+            <Width>0.75in</Width>
+            <Style>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Left</TextAlign>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Left>3.625in</Left>
+            <Height>0.125in</Height>
+            <Value>Visit Type</Value>
+          </Textbox>
+        </ReportItems>
+        <Top>0.5in</Top>
+        <Width>6.255in</Width>
+        <Style>
+          <BackgroundColor>WhiteSmoke</BackgroundColor>
+        </Style>
+        <Height>0.375in</Height>
+      </Rectangle>
+      <Line Name="line1">
+        <Top>0.42708in</Top>
+        <Width>6.2in</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+          <BorderWidth>
+            <Default>0.5pt</Default>
+          </BorderWidth>
+        </Style>
+        <Height>0in</Height>
+      </Line>
+    </ReportItems>
+    <Height>7.25in</Height>
+  </Body>
+  <Language>en-US</Language>
+  <TopMargin>0.5in</TopMargin>
+</Report>

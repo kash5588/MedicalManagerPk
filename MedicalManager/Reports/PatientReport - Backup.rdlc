@@ -1,0 +1,1000 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="MMDataConnectionString">
+      <ConnectionProperties>
+        <ConnectString>Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\MMData.mdb</ConnectString>
+        <DataProvider>OLEDB</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>f48f7e1a-cf00-4f69-aa9a-a1da048f5e74</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>1in</BottomMargin>
+  <RightMargin>1in</RightMargin>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ReportItems>
+      <Textbox Name="textbox13">
+        <Left>1.625in</Left>
+        <Top>1.125in</Top>
+        <rd:DefaultName>textbox13</rd:DefaultName>
+        <ZIndex>16</ZIndex>
+        <Width>2.25in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>Serum Basic metabolic panel</Value>
+      </Textbox>
+      <Textbox Name="textbox11">
+        <Left>1.625in</Left>
+        <Top>1.375in</Top>
+        <rd:DefaultName>textbox11</rd:DefaultName>
+        <ZIndex>15</ZIndex>
+        <Width>1.625in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>MM/DD/YYYY</Value>
+      </Textbox>
+      <Textbox Name="textbox5">
+        <Left>0.5in</Left>
+        <Top>1.125in</Top>
+        <rd:DefaultName>textbox5</rd:DefaultName>
+        <ZIndex>14</ZIndex>
+        <Width>1.125in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>700</FontWeight>
+          <FontSize>12pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>PHC</Value>
+      </Textbox>
+      <Textbox Name="textbox9">
+        <Left>4.75in</Left>
+        <Top>0.5in</Top>
+        <rd:DefaultName>textbox9</rd:DefaultName>
+        <ZIndex>13</ZIndex>
+        <Width>1.375in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>Doctor Name</Value>
+      </Textbox>
+      <Textbox Name="PID3PatientIDInt">
+        <Left>6.125in</Left>
+        <rd:DefaultName>PID3PatientIDInt</rd:DefaultName>
+        <ZIndex>12</ZIndex>
+        <Width>1in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!PID3PatientIDInt.Value)</Value>
+      </Textbox>
+      <Textbox Name="PID2PatientIDExt">
+        <Left>1.625in</Left>
+        <Top>0.5in</Top>
+        <rd:DefaultName>PID2PatientIDExt</rd:DefaultName>
+        <ZIndex>11</ZIndex>
+        <Width>1.75in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!PID2PatientIDExt.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox8">
+        <Left>4.75in</Left>
+        <Top>0.25in</Top>
+        <rd:DefaultName>textbox8</rd:DefaultName>
+        <ZIndex>10</ZIndex>
+        <Width>1.375in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>PHC PAN:</Value>
+      </Textbox>
+      <Textbox Name="textbox7">
+        <Left>4.75in</Left>
+        <rd:DefaultName>textbox7</rd:DefaultName>
+        <ZIndex>9</ZIndex>
+        <Width>1.375in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>PHC  MRN:</Value>
+      </Textbox>
+      <Textbox Name="textbox6">
+        <Left>0.5in</Left>
+        <Top>0.5in</Top>
+        <rd:DefaultName>textbox6</rd:DefaultName>
+        <ZIndex>8</ZIndex>
+        <Width>1.125in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>PHC Accession :</Value>
+      </Textbox>
+      <Textbox Name="textbox12">
+        <Left>1.625in</Left>
+        <Top>0.25in</Top>
+        <rd:DefaultName>textbox12</rd:DefaultName>
+        <ZIndex>7</ZIndex>
+        <Width>1.75in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontSize>8pt</FontSize>
+          <Format>d</Format>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>=Fields!PID7DateOfBirth.Value</Value>
+      </Textbox>
+      <Textbox Name="textbox10">
+        <Left>0.5in</Left>
+        <Top>0.25in</Top>
+        <rd:DefaultName>textbox10</rd:DefaultName>
+        <ZIndex>6</ZIndex>
+        <Width>1.125in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontSize>8pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>DOB :</Value>
+      </Textbox>
+      <Line Name="line2">
+        <RepeatWith>table1</RepeatWith>
+        <Left>0.125in</Left>
+        <Top>0.875in</Top>
+        <ZIndex>5</ZIndex>
+        <Width>7.75in</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <Height>0in</Height>
+      </Line>
+      <Textbox Name="textbox26">
+        <RepeatWith>table1</RepeatWith>
+        <Left>0.5in</Left>
+        <rd:DefaultName>textbox26</rd:DefaultName>
+        <ZIndex>4</ZIndex>
+        <Width>1.125in</Width>
+        <Style>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>700</FontWeight>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>Patient Name:</Value>
+      </Textbox>
+      <Textbox Name="textbox25">
+        <RepeatWith>table1</RepeatWith>
+        <Left>0.5in</Left>
+        <Top>1.375in</Top>
+        <rd:DefaultName>textbox25</rd:DefaultName>
+        <ZIndex>3</ZIndex>
+        <Width>1.125in</Width>
+        <Style>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>Collected:</Value>
+      </Textbox>
+      <Textbox Name="Expr4">
+        <RepeatWith>table1</RepeatWith>
+        <Left>1.625in</Left>
+        <rd:DefaultName>Expr4</rd:DefaultName>
+        <ZIndex>2</ZIndex>
+        <Width>1.75in</Width>
+        <Style>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontSize>8pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>=Fields!PID5S2FirstName.Value &amp; "  " &amp; Fields!PID5S1LastName.Value</Value>
+      </Textbox>
+      <Textbox Name="FNAME">
+        <RepeatWith>table1</RepeatWith>
+        <Left>6.125in</Left>
+        <Top>0.5in</Top>
+        <rd:DefaultName>FNAME</rd:DefaultName>
+        <ZIndex>1</ZIndex>
+        <Width>1.75in</Width>
+        <Style>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>=Fields!OBR16S3OPFirstName.Value &amp; "  " &amp; Fields!OBR16S2OPLastName.Value</Value>
+      </Textbox>
+      <Table Name="table1">
+        <Left>0.125in</Left>
+        <DataSetName>MMDataDataSet_HL7Reports</DataSetName>
+        <Top>1.75in</Top>
+        <TableGroups>
+          <TableGroup>
+            <Footer>
+              <TableRows>
+                <TableRow>
+                  <TableCells>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox32">
+                          <rd:DefaultName>textbox32</rd:DefaultName>
+                          <ZIndex>9</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox33">
+                          <rd:DefaultName>textbox33</rd:DefaultName>
+                          <ZIndex>8</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox34">
+                          <rd:DefaultName>textbox34</rd:DefaultName>
+                          <ZIndex>7</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox35">
+                          <rd:DefaultName>textbox35</rd:DefaultName>
+                          <ZIndex>6</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox36">
+                          <rd:DefaultName>textbox36</rd:DefaultName>
+                          <ZIndex>5</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                  <Height>0.125in</Height>
+                </TableRow>
+              </TableRows>
+            </Footer>
+            <Header>
+              <TableRows>
+                <TableRow>
+                  <TableCells>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox18">
+                          <rd:DefaultName>textbox18</rd:DefaultName>
+                          <ZIndex>14</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox27">
+                          <rd:DefaultName>textbox27</rd:DefaultName>
+                          <ZIndex>13</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox28">
+                          <rd:DefaultName>textbox28</rd:DefaultName>
+                          <ZIndex>12</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox30">
+                          <rd:DefaultName>textbox30</rd:DefaultName>
+                          <ZIndex>11</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox31">
+                          <rd:DefaultName>textbox31</rd:DefaultName>
+                          <ZIndex>10</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                  <Height>0.125in</Height>
+                </TableRow>
+              </TableRows>
+            </Header>
+            <Grouping Name="table1_Group1">
+              <GroupExpressions>
+                <GroupExpression>=Fields!OBR4S2TestName.Value</GroupExpression>
+              </GroupExpressions>
+            </Grouping>
+          </TableGroup>
+        </TableGroups>
+        <Width>7.5in</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="OBR4S2TestName">
+                      <rd:DefaultName>OBR4S2TestName</rd:DefaultName>
+                      <ZIndex>4</ZIndex>
+                      <Style>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>20pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!OBX3S2TestName.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="OBX5S7Result">
+                      <rd:DefaultName>OBX5S7Result</rd:DefaultName>
+                      <ZIndex>3</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!OBX5S7Result.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="OBX8Flag">
+                      <rd:DefaultName>OBX8Flag</rd:DefaultName>
+                      <ZIndex>2</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=iif(Fields!OBX8Flag.Value="N","",Fields!OBX8Flag.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="OBX7ReferenceRange">
+                      <rd:DefaultName>OBX7ReferenceRange</rd:DefaultName>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!OBX7ReferenceRange.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="OBX6Units">
+                      <rd:DefaultName>OBX6Units</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!OBX6Units.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.125in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox1">
+                      <rd:DefaultName>textbox1</rd:DefaultName>
+                      <ZIndex>19</ZIndex>
+                      <Style>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BackgroundColor>WhiteSmoke</BackgroundColor>
+                        <PaddingRight>50pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Result</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox2">
+                      <rd:DefaultName>textbox2</rd:DefaultName>
+                      <ZIndex>18</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BackgroundColor>WhiteSmoke</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox3">
+                      <rd:DefaultName>textbox3</rd:DefaultName>
+                      <ZIndex>17</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BackgroundColor>WhiteSmoke</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Flag</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox14">
+                      <rd:DefaultName>textbox14</rd:DefaultName>
+                      <ZIndex>16</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BackgroundColor>WhiteSmoke</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Expected</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox4">
+                      <rd:DefaultName>textbox4</rd:DefaultName>
+                      <ZIndex>15</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BackgroundColor>WhiteSmoke</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Units</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>3.625in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.375in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.75in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.875in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.875in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.625in</Height>
+      </Table>
+    </ReportItems>
+    <Height>3in</Height>
+  </Body>
+  <PageHeader>
+    <Height>0.25in</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+  </PageHeader>
+  <rd:ReportID>aaa6c440-a3ad-4e21-a4b6-f60d35460a8a</rd:ReportID>
+  <LeftMargin>1in</LeftMargin>
+  <DataSets>
+    <DataSet Name="MMDataDataSet_HL7Reports">
+      <rd:DataSetInfo>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:DataSetName>MMDataDataSet</rd:DataSetName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterName>HL7ReportsTableAdapter</rd:TableAdapterName>
+        <rd:TableName>HL7Reports</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText>SELECT     ID, MSH4SendingFacility, MSH7DateTime, PID1SetID, PID2PatientIDExt, PID3PatientIDInt, PID4AltPatientID, PID5S1LastName, PID5S2FirstName, 
+                      PID5S3MiddleInitial, PID5S4Suffix, PID5S5Prefix, PID7DateOfBirth, PID8Sex, PID11S1Address1, PID11S2Address2, PID11S3City, PID11S4State, 
+                      PID11S5Zip, PID11S6County, PID13PhoneNumHome, PID19SSNNumber, OBR1SetID, OBR3FillerOrderNum, OBR4S1TestCode, OBR4S2TestName, 
+                      OBR6RequestedDateTime, OBR7ObservDateTime, OBR14SpecimanRecieveDateTime, OBR15S1SpecimanSource, OBR16S1OPID, 
+                      OBR16S2OPLastName, OBR16S3OPFirstName, OBR16S4OPMI, OBR16S5OPSuffix, OBR16S6OPPrefix, OBR16S7OPDegree, OBX1SetID, 
+                      OBX2ValueType, OBX3S1ObservIdentifier, OBX3S2TestName, OBX4ObservSub, OBX5S1SubSeq, OBX5S2DataType, OBX5S3TestNo, 
+                      OBX5S4TestName, OBX5S7Result, OBX6Units, OBX7ReferenceRange, OBX8Flag, OBX11ObservResultsStatus, OBX14DateTimeObserv, Field28, 
+                      Field29, Field30, Field31, Field32, Field33, Field34, Field35, Field36, Field37, Field38, Field39, Field40, Field41, Field42, Field43, Field44, 
+                      Field45
+FROM         HL7Reports
+WHERE     (PID5S1LastName = 'TESTMOCK')</CommandText>
+        <DataSourceName>MMDataConnectionString</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="ID">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>ID</DataField>
+        </Field>
+        <Field Name="MSH4SendingFacility">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>MSH4SendingFacility</DataField>
+        </Field>
+        <Field Name="MSH7DateTime">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>MSH7DateTime</DataField>
+        </Field>
+        <Field Name="PID1SetID">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PID1SetID</DataField>
+        </Field>
+        <Field Name="PID2PatientIDExt">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PID2PatientIDExt</DataField>
+        </Field>
+        <Field Name="PID3PatientIDInt">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PID3PatientIDInt</DataField>
+        </Field>
+        <Field Name="PID4AltPatientID">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PID4AltPatientID</DataField>
+        </Field>
+        <Field Name="PID5S1LastName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PID5S1LastName</DataField>
+        </Field>
+        <Field Name="PID5S2FirstName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PID5S2FirstName</DataField>
+        </Field>
+        <Field Name="PID5S3MiddleInitial">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PID5S3MiddleInitial</DataField>
+        </Field>
+        <Field Name="PID5S4Suffix">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PID5S4Suffix</DataField>
+        </Field>
+        <Field Name="PID5S5Prefix">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PID5S5Prefix</DataField>
+        </Field>
+        <Field Name="PID7DateOfBirth">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PID7DateOfBirth</DataField>
+        </Field>
+        <Field Name="PID8Sex">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PID8Sex</DataField>
+        </Field>
+        <Field Name="PID11S1Address1">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PID11S1Address1</DataField>
+        </Field>
+        <Field Name="PID11S2Address2">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PID11S2Address2</DataField>
+        </Field>
+        <Field Name="PID11S3City">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PID11S3City</DataField>
+        </Field>
+        <Field Name="PID11S4State">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PID11S4State</DataField>
+        </Field>
+        <Field Name="PID11S5Zip">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PID11S5Zip</DataField>
+        </Field>
+        <Field Name="PID11S6County">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PID11S6County</DataField>
+        </Field>
+        <Field Name="PID13PhoneNumHome">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PID13PhoneNumHome</DataField>
+        </Field>
+        <Field Name="PID19SSNNumber">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PID19SSNNumber</DataField>
+        </Field>
+        <Field Name="OBR1SetID">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBR1SetID</DataField>
+        </Field>
+        <Field Name="OBR3FillerOrderNum">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBR3FillerOrderNum</DataField>
+        </Field>
+        <Field Name="OBR4S1TestCode">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBR4S1TestCode</DataField>
+        </Field>
+        <Field Name="OBR4S2TestName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBR4S2TestName</DataField>
+        </Field>
+        <Field Name="OBR6RequestedDateTime">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBR6RequestedDateTime</DataField>
+        </Field>
+        <Field Name="OBR7ObservDateTime">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBR7ObservDateTime</DataField>
+        </Field>
+        <Field Name="OBR14SpecimanRecieveDateTime">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBR14SpecimanRecieveDateTime</DataField>
+        </Field>
+        <Field Name="OBR15S1SpecimanSource">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBR15S1SpecimanSource</DataField>
+        </Field>
+        <Field Name="OBR16S1OPID">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBR16S1OPID</DataField>
+        </Field>
+        <Field Name="OBR16S2OPLastName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBR16S2OPLastName</DataField>
+        </Field>
+        <Field Name="OBR16S3OPFirstName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBR16S3OPFirstName</DataField>
+        </Field>
+        <Field Name="OBR16S4OPMI">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBR16S4OPMI</DataField>
+        </Field>
+        <Field Name="OBR16S5OPSuffix">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBR16S5OPSuffix</DataField>
+        </Field>
+        <Field Name="OBR16S6OPPrefix">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBR16S6OPPrefix</DataField>
+        </Field>
+        <Field Name="OBR16S7OPDegree">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBR16S7OPDegree</DataField>
+        </Field>
+        <Field Name="OBX1SetID">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBX1SetID</DataField>
+        </Field>
+        <Field Name="OBX2ValueType">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBX2ValueType</DataField>
+        </Field>
+        <Field Name="OBX3S1ObservIdentifier">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBX3S1ObservIdentifier</DataField>
+        </Field>
+        <Field Name="OBX3S2TestName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBX3S2TestName</DataField>
+        </Field>
+        <Field Name="OBX4ObservSub">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBX4ObservSub</DataField>
+        </Field>
+        <Field Name="OBX5S1SubSeq">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBX5S1SubSeq</DataField>
+        </Field>
+        <Field Name="OBX5S2DataType">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBX5S2DataType</DataField>
+        </Field>
+        <Field Name="OBX5S3TestNo">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBX5S3TestNo</DataField>
+        </Field>
+        <Field Name="OBX5S4TestName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBX5S4TestName</DataField>
+        </Field>
+        <Field Name="OBX5S7Result">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBX5S7Result</DataField>
+        </Field>
+        <Field Name="OBX6Units">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBX6Units</DataField>
+        </Field>
+        <Field Name="OBX7ReferenceRange">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBX7ReferenceRange</DataField>
+        </Field>
+        <Field Name="OBX8Flag">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBX8Flag</DataField>
+        </Field>
+        <Field Name="OBX11ObservResultsStatus">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBX11ObservResultsStatus</DataField>
+        </Field>
+        <Field Name="OBX14DateTimeObserv">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OBX14DateTimeObserv</DataField>
+        </Field>
+        <Field Name="Field28">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Field28</DataField>
+        </Field>
+        <Field Name="Field29">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Field29</DataField>
+        </Field>
+        <Field Name="Field30">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Field30</DataField>
+        </Field>
+        <Field Name="Field31">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Field31</DataField>
+        </Field>
+        <Field Name="Field32">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Field32</DataField>
+        </Field>
+        <Field Name="Field33">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Field33</DataField>
+        </Field>
+        <Field Name="Field34">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Field34</DataField>
+        </Field>
+        <Field Name="Field35">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Field35</DataField>
+        </Field>
+        <Field Name="Field36">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Field36</DataField>
+        </Field>
+        <Field Name="Field37">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Field37</DataField>
+        </Field>
+        <Field Name="Field38">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Field38</DataField>
+        </Field>
+        <Field Name="Field39">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Field39</DataField>
+        </Field>
+        <Field Name="Field40">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Field40</DataField>
+        </Field>
+        <Field Name="Field41">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Field41</DataField>
+        </Field>
+        <Field Name="Field42">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Field42</DataField>
+        </Field>
+        <Field Name="Field43">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Field43</DataField>
+        </Field>
+        <Field Name="Field44">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Field44</DataField>
+        </Field>
+        <Field Name="Field45">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Field45</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>8in</Width>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <Language>en-US</Language>
+  <TopMargin>1in</TopMargin>
+</Report>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="MMDataConnectionString1">
+      <ConnectionProperties>
+        <ConnectString>Data Source=ZAHEERR\SQLEXPRESS;AttachDbFilename=|DataDirectory|\MMData.mdf;Integrated Security=True</ConnectString>
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>f2bf6220-e615-472b-ae89-f79a34d822d5</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>1in</BottomMargin>
+  <RightMargin>1in</RightMargin>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ReportItems>
+      <Textbox Name="Document">
+        <Left>0.125in</Left>
+        <rd:DefaultName>Document</rd:DefaultName>
+        <Width>6in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>5.375in</Height>
+        <Value>=First(Fields!Document.Value)</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>5.625in</Height>
+  </Body>
+  <rd:ReportID>7d3d02ac-4df8-4685-b366-dd90d9d4b690</rd:ReportID>
+  <LeftMargin>1in</LeftMargin>
+  <DataSets>
+    <DataSet Name="MMDataDataSet1_MMCHARTViewChart">
+      <rd:DataSetInfo>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:DataSetName>MMDataDataSet1</rd:DataSetName>
+        <rd:TableAdapterFillMethod>FillByChCn</rd:TableAdapterFillMethod>
+        <rd:TableAdapterName>MMCHARTViewChartTableAdapter</rd:TableAdapterName>
+        <rd:TableName>MMCHARTViewChart</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText>SELECT     ChartNumber, CaseNumber, DateCreated, Folder, DocumentType, Description, [Document], Image, [User], TimeStamp
+FROM         MMCHARTContents
+WHERE     (ChartNumber = @Param1) AND (CaseNumber = @Param2)</CommandText>
+        <DataSourceName>MMDataConnectionString1</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="ChartNumber">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ChartNumber</DataField>
+        </Field>
+        <Field Name="CaseNumber">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>CaseNumber</DataField>
+        </Field>
+        <Field Name="DateCreated">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>DateCreated</DataField>
+        </Field>
+        <Field Name="Folder">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Folder</DataField>
+        </Field>
+        <Field Name="DocumentType">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>DocumentType</DataField>
+        </Field>
+        <Field Name="Description">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="Document">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Document</DataField>
+        </Field>
+        <Field Name="Image">
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+          <DataField>Image</DataField>
+        </Field>
+        <Field Name="User">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>User</DataField>
+        </Field>
+        <Field Name="TimeStamp">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>TimeStamp</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>6.5in</Width>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <Language>en-US</Language>
+  <TopMargin>1in</TopMargin>
+</Report>

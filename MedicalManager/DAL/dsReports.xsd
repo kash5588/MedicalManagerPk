@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsReports" targetNamespace="http://tempuri.org/dsReports.xsd" xmlns:mstns="http://tempuri.org/dsReports.xsd" xmlns="http://tempuri.org/dsReports.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="MMDataConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="MMDataConnectionString1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MedicalManager.My.MySettings.GlobalReference.Default.MMDataConnectionString1" Provider="System.Data.SqlClient">
+          </Connection>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="MMDataConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="MMDataConnectionString (MySettings)" PropertyReference="ApplicationSettings.MedicalManager.My.MySettings.GlobalReference.Default.MMDataConnectionString" Provider="System.Data.OleDb">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VisitSummaryTableAdapter" GeneratorDataComponentClassName="VisitSummaryTableAdapter" Name="VisitSummary" UserDataComponentName="VisitSummaryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MMDataConnectionString1 (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT     MMChartVisit.ChartNumber, MMChartVisit.CaseNumber, MMChartVisit.Date, MMChartVisit.FirstName, MMChartVisit.LastName, MMChartVisit.Mi, 
+                      MMChartVisit.DOB, MMChartVisit.VisitType, MMChartVisit.Facility, MMChartVisit.ReferringProvider, MMChartVisit.AssignedProvider, 
+                      MMChartVisit.ReferralSource, MMChartVisit.ChronicConditions, MMChartVisit.ChiefComplaint, MMChartVisit.HPI, MMChartVisit.ReviewOfSystems, 
+                      MMChartVisit.PhysicalExam, MMChartVisit.Assessment, MMChartVisit.OtherText, MMChartVisit.FollowUp, MMChartVisit.RefferedTo, MMChartVisit.Diet, 
+                      MMChartVisit.Counselling, MMChartVisit.Miscellaneous, MMCHDxRxLtMt.ChartNumber AS Expr1, MMCHDxRxLtMt.Date AS Expr2, 
+                      MMCHDxRxLtMt.Code, MMCHDxRxLtMt.Description, MMChartTVitalSign.ChartNumber AS Expr3, MMChartTVitalSign.CaseNumber AS Expr4, 
+                      MMChartTVitalSign.Name, MMChartTVitalSign.Date AS Expr5, MMChartTVitalSign.Time, MMChartTVitalSign.Temp, MMChartTVitalSign.Pulse, 
+                      MMChartTVitalSign.Resp, MMChartTVitalSign.Systolic, MMChartTVitalSign.Diastolic, MMChartTVitalSign.HtIn, MMChartTVitalSign.WtLb, 
+                      MMChartTVitalSign.Oz, MMChartTVitalSign.BMI, MMChartTVitalSign.PulseOx, MMChartRx.[RX ID], MMChartRx.ChartNumber AS Expr6, 
+                      MMChartRx.PatientName, MMChartRx.OrderingPhysicianID, MMChartRx.Medication, MMChartRx.Dosage, MMChartRx.NumberOfRefills, 
+                      MMChartRx.StartDate, MMChartRx.EndDate, MMChartRx.Quantity, MMChartRx.Instructions
+FROM         MMChartTVitalSign INNER JOIN
+                      MMChartVisit ON MMChartTVitalSign.ChartNumber = MMChartVisit.ChartNumber AND MMChartTVitalSign.Date = MMChartVisit.Date INNER JOIN
+                      MMCHDxRxLtMt ON MMChartVisit.ChartNumber = MMCHDxRxLtMt.ChartNumber AND MMChartVisit.Date = MMCHDxRxLtMt.Date INNER JOIN
+                      MMChartRx ON MMChartVisit.ChartNumber = MMChartRx.ChartNumber AND MMChartVisit.Date = MMChartRx.StartDate
+WHERE     (MMChartVisit.ChartNumber = @Param1) AND (MMChartVisit.Date = @Param2)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param1" ColumnName="ChartNumber" DataSourceName="[C:\MEDICALMANAGER\MEDICALMANAGER\MMDATA.MDF].dbo.MMChartVisit" DataTypeServer="nvarchar(8)" DbType="String" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="NVarChar" Scale="0" Size="8" SourceColumn="ChartNumber" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param2" ColumnName="Date" DataSourceName="[C:\MEDICALMANAGER\MEDICALMANAGER\MMDATA.MDF].dbo.MMChartVisit" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="Date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ChartNumber" DataSetColumn="ChartNumber" />
+              <Mapping SourceColumn="CaseNumber" DataSetColumn="CaseNumber" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+              <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
+              <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
+              <Mapping SourceColumn="Mi" DataSetColumn="Mi" />
+              <Mapping SourceColumn="DOB" DataSetColumn="DOB" />
+              <Mapping SourceColumn="VisitType" DataSetColumn="VisitType" />
+              <Mapping SourceColumn="Facility" DataSetColumn="Facility" />
+              <Mapping SourceColumn="ReferringProvider" DataSetColumn="ReferringProvider" />
+              <Mapping SourceColumn="AssignedProvider" DataSetColumn="AssignedProvider" />
+              <Mapping SourceColumn="ReferralSource" DataSetColumn="ReferralSource" />
+              <Mapping SourceColumn="ChronicConditions" DataSetColumn="ChronicConditions" />
+              <Mapping SourceColumn="ChiefComplaint" DataSetColumn="ChiefComplaint" />
+              <Mapping SourceColumn="HPI" DataSetColumn="HPI" />
+              <Mapping SourceColumn="ReviewOfSystems" DataSetColumn="ReviewOfSystems" />
+              <Mapping SourceColumn="PhysicalExam" DataSetColumn="PhysicalExam" />
+              <Mapping SourceColumn="Assessment" DataSetColumn="Assessment" />
+              <Mapping SourceColumn="OtherText" DataSetColumn="OtherText" />
+              <Mapping SourceColumn="FollowUp" DataSetColumn="FollowUp" />
+              <Mapping SourceColumn="RefferedTo" DataSetColumn="RefferedTo" />
+              <Mapping SourceColumn="Diet" DataSetColumn="Diet" />
+              <Mapping SourceColumn="Counselling" DataSetColumn="Counselling" />
+              <Mapping SourceColumn="Miscellaneous" DataSetColumn="Miscellaneous" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+              <Mapping SourceColumn="Expr2" DataSetColumn="Expr2" />
+              <Mapping SourceColumn="Code" DataSetColumn="Code" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="Expr3" DataSetColumn="Expr3" />
+              <Mapping SourceColumn="Expr4" DataSetColumn="Expr4" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Expr5" DataSetColumn="Expr5" />
+              <Mapping SourceColumn="Time" DataSetColumn="Time" />
+              <Mapping SourceColumn="Temp" DataSetColumn="Temp" />
+              <Mapping SourceColumn="Pulse" DataSetColumn="Pulse" />
+              <Mapping SourceColumn="Resp" DataSetColumn="Resp" />
+              <Mapping SourceColumn="Systolic" DataSetColumn="Systolic" />
+              <Mapping SourceColumn="Diastolic" DataSetColumn="Diastolic" />
+              <Mapping SourceColumn="HtIn" DataSetColumn="HtIn" />
+              <Mapping SourceColumn="WtLb" DataSetColumn="WtLb" />
+              <Mapping SourceColumn="Oz" DataSetColumn="Oz" />
+              <Mapping SourceColumn="BMI" DataSetColumn="BMI" />
+              <Mapping SourceColumn="PulseOx" DataSetColumn="PulseOx" />
+              <Mapping SourceColumn="RX ID" DataSetColumn="RX ID" />
+              <Mapping SourceColumn="Expr6" DataSetColumn="Expr6" />
+              <Mapping SourceColumn="PatientName" DataSetColumn="PatientName" />
+              <Mapping SourceColumn="OrderingPhysicianID" DataSetColumn="OrderingPhysicianID" />
+              <Mapping SourceColumn="Medication" DataSetColumn="Medication" />
+              <Mapping SourceColumn="Dosage" DataSetColumn="Dosage" />
+              <Mapping SourceColumn="NumberOfRefills" DataSetColumn="NumberOfRefills" />
+              <Mapping SourceColumn="StartDate" DataSetColumn="StartDate" />
+              <Mapping SourceColumn="EndDate" DataSetColumn="EndDate" />
+              <Mapping SourceColumn="Quantity" DataSetColumn="Quantity" />
+              <Mapping SourceColumn="Instructions" DataSetColumn="Instructions" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MMChartVisitTableAdapter" GeneratorDataComponentClassName="MMChartVisitTableAdapter" Name="MMChartVisit" UserDataComponentName="MMChartVisitTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MMDataConnectionString1 (MySettings)" DbObjectName="dbo.MMChartVisit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>DELETE FROM [MMChartVisit] WHERE (((@IsNull_ChartNumber = 1 AND [ChartNumber] IS NULL) OR ([ChartNumber] = @Original_ChartNumber)) AND ([CaseNumber] = @Original_CaseNumber) AND ((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)) AND ((@IsNull_FirstName = 1 AND [FirstName] IS NULL) OR ([FirstName] = @Original_FirstName)) AND ((@IsNull_LastName = 1 AND [LastName] IS NULL) OR ([LastName] = @Original_LastName)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)) AND ((@IsNull_UserName = 1 AND [UserName] IS NULL) OR ([UserName] = @Original_UserName)) AND ((@IsNull_SignedBy = 1 AND [SignedBy] IS NULL) OR ([SignedBy] = @Original_SignedBy)) AND ((@IsNull_Signes = 1 AND [Signes] IS NULL) OR ([Signes] = @Original_Signes)) AND ((@IsNull_TimeStamp = 1 AND [TimeStamp] IS NULL) OR ([TimeStamp] = @Original_TimeStamp)) AND ((@IsNull_AssignedTo = 1 AND [AssignedTo] IS NULL) OR ([AssignedTo] = @Original_AssignedTo)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ChartNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChartNumber" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ChartNumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ChartNumber" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CaseNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CaseNumber" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Date" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_Date" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FirstName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FirstName" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FirstName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FirstName" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_LastName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LastName" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_LastName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LastName" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Status" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Status" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UserName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_UserName" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SignedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SignedBy" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SignedBy" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SignedBy" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Signes" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Signes" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_Signes" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Signes" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TimeStamp" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TimeStamp" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_TimeStamp" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="TimeStamp" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AssignedTo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AssignedTo" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_AssignedTo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="AssignedTo" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>INSERT INTO [MMChartVisit] ([ChartNumber], [Date], [FirstName], [LastName], [Status], [UserName], [SignedBy], [Signes], [TimeStamp], [AssignedTo]) VALUES (@ChartNumber, @Date, @FirstName, @LastName, @Status, @UserName, @SignedBy, @Signes, @TimeStamp, @AssignedTo);
+SELECT ChartNumber, CaseNumber, Date, FirstName, LastName, Status, UserName, SignedBy, Signes, TimeStamp, AssignedTo FROM MMChartVisit WHERE (CaseNumber = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ChartNumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ChartNumber" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Date" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FirstName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FirstName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@LastName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LastName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Status" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@UserName" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SignedBy" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SignedBy" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Signes" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Signes" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@TimeStamp" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="TimeStamp" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@AssignedTo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="AssignedTo" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT     ChartNumber, CaseNumber, Date, FirstName, LastName, Status, UserName, SignedBy, Signes, TimeStamp, AssignedTo
+FROM         MMChartVisit</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>UPDATE [MMChartVisit] SET [ChartNumber] = @ChartNumber, [Date] = @Date, [FirstName] = @FirstName, [LastName] = @LastName, [Status] = @Status, [UserName] = @UserName, [SignedBy] = @SignedBy, [Signes] = @Signes, [TimeStamp] = @TimeStamp, [AssignedTo] = @AssignedTo WHERE (((@IsNull_ChartNumber = 1 AND [ChartNumber] IS NULL) OR ([ChartNumber] = @Original_ChartNumber)) AND ([CaseNumber] = @Original_CaseNumber) AND ((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)) AND ((@IsNull_FirstName = 1 AND [FirstName] IS NULL) OR ([FirstName] = @Original_FirstName)) AND ((@IsNull_LastName = 1 AND [LastName] IS NULL) OR ([LastName] = @Original_LastName)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)) AND ((@IsNull_UserName = 1 AND [UserName] IS NULL) OR ([UserName] = @Original_UserName)) AND ((@IsNull_SignedBy = 1 AND [SignedBy] IS NULL) OR ([SignedBy] = @Original_SignedBy)) AND ((@IsNull_Signes = 1 AND [Signes] IS NULL) OR ([Signes] = @Original_Signes)) AND ((@IsNull_TimeStamp = 1 AND [TimeStamp] IS NULL) OR ([TimeStamp] = @Original_TimeStamp)) AND ((@IsNull_AssignedTo = 1 AND [AssignedTo] IS NULL) OR ([AssignedTo] = @Original_AssignedTo)));
+SELECT ChartNumber, CaseNumber, Date, FirstName, LastName, Status, UserName, SignedBy, Signes, TimeStamp, AssignedTo FROM MMChartVisit WHERE (CaseNumber = @CaseNumber)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ChartNumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ChartNumber" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Date" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FirstName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FirstName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@LastName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LastName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Status" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@UserName" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SignedBy" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SignedBy" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Signes" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Signes" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@TimeStamp" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="TimeStamp" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@AssignedTo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="AssignedTo" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ChartNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChartNumber" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ChartNumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ChartNumber" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CaseNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CaseNumber" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Date" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_Date" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FirstName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FirstName" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FirstName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FirstName" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_LastName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LastName" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_LastName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LastName" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Status" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Status" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UserName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_UserName" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SignedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SignedBy" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SignedBy" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SignedBy" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Signes" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Signes" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_Signes" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Signes" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TimeStamp" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TimeStamp" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_TimeStamp" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="TimeStamp" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AssignedTo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AssignedTo" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_AssignedTo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="AssignedTo" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="CaseNumber" ColumnName="CaseNumber" DataSourceName="[C:\MEDICALMANAGER\MEDICALMANAGER\MMDATA.MDF].dbo.MMChartVisit" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@CaseNumber" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="CaseNumber" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ChartNumber" DataSetColumn="ChartNumber" />
+              <Mapping SourceColumn="CaseNumber" DataSetColumn="CaseNumber" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+              <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
+              <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
+              <Mapping SourceColumn="TimeStamp" DataSetColumn="TimeStamp" />
+              <Mapping SourceColumn="Signes" DataSetColumn="Signes" />
+              <Mapping SourceColumn="SignedBy" DataSetColumn="SignedBy" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+              <Mapping SourceColumn="AssignedTo" DataSetColumn="AssignedTo" />
+              <Mapping SourceColumn="UserName" DataSetColumn="UserName" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsReports" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsReports" msprop:Generator_DataSetName="dsReports">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VisitSummary" msprop:Generator_UserTableName="VisitSummary" msprop:Generator_RowDeletedName="VisitSummaryRowDeleted" msprop:Generator_RowChangedName="VisitSummaryRowChanged" msprop:Generator_RowClassName="VisitSummaryRow" msprop:Generator_RowChangingName="VisitSummaryRowChanging" msprop:Generator_RowEvArgName="VisitSummaryRowChangeEvent" msprop:Generator_RowEvHandlerName="VisitSummaryRowChangeEventHandler" msprop:Generator_TableClassName="VisitSummaryDataTable" msprop:Generator_TableVarName="tableVisitSummary" msprop:Generator_RowDeletingName="VisitSummaryRowDeleting" msprop:Generator_TablePropName="VisitSummary">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ChartNumber" msprop:Generator_UserColumnName="ChartNumber" msprop:Generator_ColumnVarNameInTable="columnChartNumber" msprop:Generator_ColumnPropNameInRow="ChartNumber" msprop:Generator_ColumnPropNameInTable="ChartNumberColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CaseNumber" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="CaseNumber" msprop:Generator_ColumnVarNameInTable="columnCaseNumber" msprop:Generator_ColumnPropNameInRow="CaseNumber" msprop:Generator_ColumnPropNameInTable="CaseNumberColumn" type="xs:int" />
+              <xs:element name="Date" msprop:Generator_UserColumnName="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="_Date" msprop:Generator_ColumnPropNameInTable="DateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FirstName" msprop:Generator_UserColumnName="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastName" msprop:Generator_UserColumnName="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Mi" msprop:Generator_UserColumnName="Mi" msprop:Generator_ColumnVarNameInTable="columnMi" msprop:Generator_ColumnPropNameInRow="Mi" msprop:Generator_ColumnPropNameInTable="MiColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOB" msprop:Generator_UserColumnName="DOB" msprop:Generator_ColumnVarNameInTable="columnDOB" msprop:Generator_ColumnPropNameInRow="DOB" msprop:Generator_ColumnPropNameInTable="DOBColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VisitType" msprop:Generator_UserColumnName="VisitType" msprop:Generator_ColumnVarNameInTable="columnVisitType" msprop:Generator_ColumnPropNameInRow="VisitType" msprop:Generator_ColumnPropNameInTable="VisitTypeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility" msprop:Generator_UserColumnName="Facility" msprop:Generator_ColumnVarNameInTable="columnFacility" msprop:Generator_ColumnPropNameInRow="Facility" msprop:Generator_ColumnPropNameInTable="FacilityColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReferringProvider" msprop:Generator_UserColumnName="ReferringProvider" msprop:Generator_ColumnVarNameInTable="columnReferringProvider" msprop:Generator_ColumnPropNameInRow="ReferringProvider" msprop:Generator_ColumnPropNameInTable="ReferringProviderColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AssignedProvider" msprop:Generator_UserColumnName="AssignedProvider" msprop:Generator_ColumnVarNameInTable="columnAssignedProvider" msprop:Generator_ColumnPropNameInRow="AssignedProvider" msprop:Generator_ColumnPropNameInTable="AssignedProviderColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReferralSource" msprop:Generator_UserColumnName="ReferralSource" msprop:Generator_ColumnVarNameInTable="columnReferralSource" msprop:Generator_ColumnPropNameInRow="ReferralSource" msprop:Generator_ColumnPropNameInTable="ReferralSourceColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ChronicConditions" msprop:Generator_UserColumnName="ChronicConditions" msprop:Generator_ColumnVarNameInTable="columnChronicConditions" msprop:Generator_ColumnPropNameInRow="ChronicConditions" msprop:Generator_ColumnPropNameInTable="ChronicConditionsColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ChiefComplaint" msprop:Generator_UserColumnName="ChiefComplaint" msprop:Generator_ColumnVarNameInTable="columnChiefComplaint" msprop:Generator_ColumnPropNameInRow="ChiefComplaint" msprop:Generator_ColumnPropNameInTable="ChiefComplaintColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HPI" msprop:Generator_UserColumnName="HPI" msprop:Generator_ColumnVarNameInTable="columnHPI" msprop:Generator_ColumnPropNameInRow="HPI" msprop:Generator_ColumnPropNameInTable="HPIColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReviewOfSystems" msprop:Generator_UserColumnName="ReviewOfSystems" msprop:Generator_ColumnVarNameInTable="columnReviewOfSystems" msprop:Generator_ColumnPropNameInRow="ReviewOfSystems" msprop:Generator_ColumnPropNameInTable="ReviewOfSystemsColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PhysicalExam" msprop:Generator_UserColumnName="PhysicalExam" msprop:Generator_ColumnVarNameInTable="columnPhysicalExam" msprop:Generator_ColumnPropNameInRow="PhysicalExam" msprop:Generator_ColumnPropNameInTable="PhysicalExamColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Assessment" msprop:Generator_UserColumnName="Assessment" msprop:Generator_ColumnVarNameInTable="columnAssessment" msprop:Generator_ColumnPropNameInRow="Assessment" msprop:Generator_ColumnPropNameInTable="AssessmentColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OtherText" msprop:Generator_UserColumnName="OtherText" msprop:Generator_ColumnVarNameInTable="columnOtherText" msprop:Generator_ColumnPropNameInRow="OtherText" msprop:Generator_ColumnPropNameInTable="OtherTextColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FollowUp" msprop:Generator_UserColumnName="FollowUp" msprop:Generator_ColumnVarNameInTable="columnFollowUp" msprop:Generator_ColumnPropNameInRow="FollowUp" msprop:Generator_ColumnPropNameInTable="FollowUpColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RefferedTo" msprop:Generator_UserColumnName="RefferedTo" msprop:Generator_ColumnVarNameInTable="columnRefferedTo" msprop:Generator_ColumnPropNameInRow="RefferedTo" msprop:Generator_ColumnPropNameInTable="RefferedToColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Diet" msprop:Generator_UserColumnName="Diet" msprop:Generator_ColumnVarNameInTable="columnDiet" msprop:Generator_ColumnPropNameInRow="Diet" msprop:Generator_ColumnPropNameInTable="DietColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Counselling" msprop:Generator_UserColumnName="Counselling" msprop:Generator_ColumnVarNameInTable="columnCounselling" msprop:Generator_ColumnPropNameInRow="Counselling" msprop:Generator_ColumnPropNameInTable="CounsellingColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Miscellaneous" msprop:Generator_UserColumnName="Miscellaneous" msprop:Generator_ColumnVarNameInTable="columnMiscellaneous" msprop:Generator_ColumnPropNameInRow="Miscellaneous" msprop:Generator_ColumnPropNameInTable="MiscellaneousColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Expr1" msprop:Generator_UserColumnName="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Expr2" msprop:Generator_UserColumnName="Expr2" msprop:Generator_ColumnVarNameInTable="columnExpr2" msprop:Generator_ColumnPropNameInRow="Expr2" msprop:Generator_ColumnPropNameInTable="Expr2Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Code" msprop:Generator_UserColumnName="Code" msprop:Generator_ColumnVarNameInTable="columnCode" msprop:Generator_ColumnPropNameInRow="Code" msprop:Generator_ColumnPropNameInTable="CodeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Expr3" msprop:Generator_UserColumnName="Expr3" msprop:Generator_ColumnVarNameInTable="columnExpr3" msprop:Generator_ColumnPropNameInRow="Expr3" msprop:Generator_ColumnPropNameInTable="Expr3Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Expr4" msprop:Generator_UserColumnName="Expr4" msprop:Generator_ColumnVarNameInTable="columnExpr4" msprop:Generator_ColumnPropNameInRow="Expr4" msprop:Generator_ColumnPropNameInTable="Expr4Column" type="xs:int" minOccurs="0" />
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Expr5" msprop:Generator_UserColumnName="Expr5" msprop:Generator_ColumnVarNameInTable="columnExpr5" msprop:Generator_ColumnPropNameInRow="Expr5" msprop:Generator_ColumnPropNameInTable="Expr5Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Time" msprop:Generator_UserColumnName="Time" msprop:Generator_ColumnVarNameInTable="columnTime" msprop:Generator_ColumnPropNameInRow="Time" msprop:Generator_ColumnPropNameInTable="TimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Temp" msprop:Generator_UserColumnName="Temp" msprop:Generator_ColumnVarNameInTable="columnTemp" msprop:Generator_ColumnPropNameInRow="Temp" msprop:Generator_ColumnPropNameInTable="TempColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pulse" msprop:Generator_UserColumnName="Pulse" msprop:Generator_ColumnVarNameInTable="columnPulse" msprop:Generator_ColumnPropNameInRow="Pulse" msprop:Generator_ColumnPropNameInTable="PulseColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Resp" msprop:Generator_UserColumnName="Resp" msprop:Generator_ColumnVarNameInTable="columnResp" msprop:Generator_ColumnPropNameInRow="Resp" msprop:Generator_ColumnPropNameInTable="RespColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Systolic" msprop:Generator_UserColumnName="Systolic" msprop:Generator_ColumnVarNameInTable="columnSystolic" msprop:Generator_ColumnPropNameInRow="Systolic" msprop:Generator_ColumnPropNameInTable="SystolicColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Diastolic" msprop:Generator_UserColumnName="Diastolic" msprop:Generator_ColumnVarNameInTable="columnDiastolic" msprop:Generator_ColumnPropNameInRow="Diastolic" msprop:Generator_ColumnPropNameInTable="DiastolicColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HtIn" msprop:Generator_UserColumnName="HtIn" msprop:Generator_ColumnVarNameInTable="columnHtIn" msprop:Generator_ColumnPropNameInRow="HtIn" msprop:Generator_ColumnPropNameInTable="HtInColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WtLb" msprop:Generator_UserColumnName="WtLb" msprop:Generator_ColumnVarNameInTable="columnWtLb" msprop:Generator_ColumnPropNameInRow="WtLb" msprop:Generator_ColumnPropNameInTable="WtLbColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Oz" msprop:Generator_UserColumnName="Oz" msprop:Generator_ColumnVarNameInTable="columnOz" msprop:Generator_ColumnPropNameInRow="Oz" msprop:Generator_ColumnPropNameInTable="OzColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BMI" msprop:Generator_UserColumnName="BMI" msprop:Generator_ColumnVarNameInTable="columnBMI" msprop:Generator_ColumnPropNameInRow="BMI" msprop:Generator_ColumnPropNameInTable="BMIColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PulseOx" msprop:Generator_UserColumnName="PulseOx" msprop:Generator_ColumnVarNameInTable="columnPulseOx" msprop:Generator_ColumnPropNameInRow="PulseOx" msprop:Generator_ColumnPropNameInTable="PulseOxColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RX_x0020_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="RX ID" msprop:Generator_ColumnVarNameInTable="columnRX_ID" msprop:Generator_ColumnPropNameInRow="RX_ID" msprop:Generator_ColumnPropNameInTable="RX_IDColumn" type="xs:int" />
+              <xs:element name="Expr6" msprop:Generator_UserColumnName="Expr6" msprop:Generator_ColumnVarNameInTable="columnExpr6" msprop:Generator_ColumnPropNameInRow="Expr6" msprop:Generator_ColumnPropNameInTable="Expr6Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientName" msprop:Generator_UserColumnName="PatientName" msprop:Generator_ColumnVarNameInTable="columnPatientName" msprop:Generator_ColumnPropNameInRow="PatientName" msprop:Generator_ColumnPropNameInTable="PatientNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderingPhysicianID" msprop:Generator_UserColumnName="OrderingPhysicianID" msprop:Generator_ColumnVarNameInTable="columnOrderingPhysicianID" msprop:Generator_ColumnPropNameInRow="OrderingPhysicianID" msprop:Generator_ColumnPropNameInTable="OrderingPhysicianIDColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Medication" msprop:Generator_UserColumnName="Medication" msprop:Generator_ColumnVarNameInTable="columnMedication" msprop:Generator_ColumnPropNameInRow="Medication" msprop:Generator_ColumnPropNameInTable="MedicationColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dosage" msprop:Generator_UserColumnName="Dosage" msprop:Generator_ColumnVarNameInTable="columnDosage" msprop:Generator_ColumnPropNameInRow="Dosage" msprop:Generator_ColumnPropNameInTable="DosageColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NumberOfRefills" msprop:Generator_UserColumnName="NumberOfRefills" msprop:Generator_ColumnVarNameInTable="columnNumberOfRefills" msprop:Generator_ColumnPropNameInRow="NumberOfRefills" msprop:Generator_ColumnPropNameInTable="NumberOfRefillsColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="StartDate" msprop:Generator_UserColumnName="StartDate" msprop:Generator_ColumnVarNameInTable="columnStartDate" msprop:Generator_ColumnPropNameInRow="StartDate" msprop:Generator_ColumnPropNameInTable="StartDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EndDate" msprop:Generator_UserColumnName="EndDate" msprop:Generator_ColumnVarNameInTable="columnEndDate" msprop:Generator_ColumnPropNameInRow="EndDate" msprop:Generator_ColumnPropNameInTable="EndDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Quantity" msprop:Generator_UserColumnName="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Instructions" msprop:Generator_UserColumnName="Instructions" msprop:Generator_ColumnVarNameInTable="columnInstructions" msprop:Generator_ColumnPropNameInRow="Instructions" msprop:Generator_ColumnPropNameInTable="InstructionsColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MMChartVisit" msprop:Generator_UserTableName="MMChartVisit" msprop:Generator_RowDeletedName="MMChartVisitRowDeleted" msprop:Generator_TableClassName="MMChartVisitDataTable" msprop:Generator_RowChangedName="MMChartVisitRowChanged" msprop:Generator_RowClassName="MMChartVisitRow" msprop:Generator_RowChangingName="MMChartVisitRowChanging" msprop:Generator_RowEvArgName="MMChartVisitRowChangeEvent" msprop:Generator_RowEvHandlerName="MMChartVisitRowChangeEventHandler" msprop:Generator_TablePropName="MMChartVisit" msprop:Generator_TableVarName="tableMMChartVisit" msprop:Generator_RowDeletingName="MMChartVisitRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ChartNumber" msprop:Generator_UserColumnName="ChartNumber" msprop:Generator_ColumnPropNameInRow="ChartNumber" msprop:Generator_ColumnVarNameInTable="columnChartNumber" msprop:Generator_ColumnPropNameInTable="ChartNumberColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CaseNumber" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="CaseNumber" msprop:Generator_ColumnPropNameInRow="CaseNumber" msprop:Generator_ColumnVarNameInTable="columnCaseNumber" msprop:Generator_ColumnPropNameInTable="CaseNumberColumn" type="xs:int" />
+              <xs:element name="Date" msprop:Generator_UserColumnName="Date" msprop:Generator_ColumnPropNameInRow="_Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInTable="DateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FirstName" msprop:Generator_UserColumnName="FirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastName" msprop:Generator_UserColumnName="LastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TimeStamp" msprop:Generator_UserColumnName="TimeStamp" msprop:Generator_ColumnPropNameInRow="TimeStamp" msprop:Generator_ColumnVarNameInTable="columnTimeStamp" msprop:Generator_ColumnPropNameInTable="TimeStampColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Signes" msprop:Generator_UserColumnName="Signes" msprop:Generator_ColumnPropNameInRow="Signes" msprop:Generator_ColumnVarNameInTable="columnSignes" msprop:Generator_ColumnPropNameInTable="SignesColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SignedBy" msprop:Generator_UserColumnName="SignedBy" msprop:Generator_ColumnPropNameInRow="SignedBy" msprop:Generator_ColumnVarNameInTable="columnSignedBy" msprop:Generator_ColumnPropNameInTable="SignedByColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Status" msprop:Generator_UserColumnName="Status" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInTable="StatusColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AssignedTo" msprop:Generator_UserColumnName="AssignedTo" msprop:Generator_ColumnPropNameInRow="AssignedTo" msprop:Generator_ColumnVarNameInTable="columnAssignedTo" msprop:Generator_ColumnPropNameInTable="AssignedToColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UserName" msprop:Generator_UserColumnName="UserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:MMChartVisit" />
+      <xs:field xpath="mstns:CaseNumber" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
