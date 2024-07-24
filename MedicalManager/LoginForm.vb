@@ -7,6 +7,8 @@ Public Class LoginForm
     Private Sub LoginForm_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         LoadPracticeName()
+        UsernameTextBox.Text = "a"
+        PasswordTextBox.Text = "a"
     End Sub
 
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
@@ -16,6 +18,7 @@ Public Class LoginForm
             'Permissions = Users.GetPermissions()
             Permissions = Users.GetPermissionsforApp(UsernameTextBox.Text, PasswordTextBox.Text)
             globalUser = UsernameTextBox.Text
+
 
             If Permissions = "N" Or Permissions = "" Then
                 Me.Close()

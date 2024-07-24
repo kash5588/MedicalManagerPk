@@ -54,7 +54,7 @@ Public Class PATIENT
         ChartNumber = ChNo
         Me.Show()
     End Function
-    Private Sub cmdIns1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdIns1.Click
+    Private Sub cmdIns1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
         Dim Insurence As New Insurence
         aRet = Insurence.ShowPicklist
@@ -64,7 +64,7 @@ Public Class PATIENT
 
         End If
     End Sub
-    Private Sub cmdIns2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdIns2.Click
+    Private Sub cmdIns2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim Insurence As New Insurence
 
         aRet = Insurence.ShowPicklist
@@ -178,7 +178,7 @@ Public Class PATIENT
 
     End Sub
 
-    Private Sub cmdEmployer_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdEmployer.Click
+    Private Sub cmdEmployer_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
         Dim Employer As New Employer
         aRet = Employer.ShowPicklist
@@ -373,11 +373,11 @@ Public Class PATIENT
             End If
         Next
 
-        For Each dr In dt.Rows
-            If dr("Race") <> "N/A" Then
-                RaceComboBox.Items.Add(dr("Race"))
-            End If
-        Next
+        'For Each dr In dt.Rows
+        '    If dr("Race") <> "N/A" Then
+        '        RaceComboBox.Items.Add(dr("Race"))
+        '    End If
+        'Next
 
         For Each dr In dt.Rows
             If dr("PatientType") <> "N/A" Then
@@ -420,7 +420,7 @@ Public Class PATIENT
     End Sub
 
 
-    
+
 
     Private Sub btnBrowse_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBrowse.Click
         Dim objOpenFileDialog As New OpenFileDialog

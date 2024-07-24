@@ -20,247 +20,247 @@ Partial Class MDIParent
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MDIParent))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
-        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.MultiAppointmentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1
+        Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1()
         Me.ACalendardayBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MenuStrip = New System.Windows.Forms.MenuStrip
-        Me.FileMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator
-        Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.SaveAsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator
-        Me.PrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.PrintPreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.PrintSetupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator
-        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.EditMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.UndoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.RedoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator
-        Me.CutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.CopyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.PasteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator
-        Me.SelectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ViewMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolBarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.StatusBarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.PatientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.PatientToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.EnterNewChartItemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.LettersToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem
-        Me.MessagesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.LabToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ShortVisitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.MedicalRecordsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ChartToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.PrescriptionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.DocumentImagingToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.HealthHistoryQuestionireToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem
-        Me.MyDxMyPrToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.CheifComplaintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.CategoriesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.CategoryContentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ProfileDetailToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.HPIMaintenanceToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.ChartEvaluationToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.TestSysToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.TestPEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.TemplateAndRelatedCCToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.TemplateMaintenanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.FileMaintenanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.PracticeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.PhysionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.RefringPhysionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.DiagonosisToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.InsurenceCoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.EmployerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.PharmacyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.MedicalTestsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ImagingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.DrugMaintenanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ImmunizationMaintenanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.EAndMCodingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.MessageListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.DiseaseProfileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.PatientPicturesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.Form1ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.MessageNoteMaintenanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ShortVisitToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.ComboboxMaintenanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.BackupDatabasesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.CheckForUpdatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ZipCodesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.AppointmentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.AddEditAppointmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.AppointmentInOutlookToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.CalculatorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.FormulasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem
-        Me.InboxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.BillingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ExportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ExportToHL7ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.TransactionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.BillingReportToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.ARCommentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.MultiBillingReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.SuperBillToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.TransactionsDetailToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.WindowsMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.NewWindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.CascadeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.TileVerticalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.TileHorizontalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.CloseAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ArrangeIconsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.HelpMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.ContentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.IndexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.SearchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator
-        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.HL7ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.HL7ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.LabCorpInterFaceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.LabReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.AdminToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.UsersToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.LogOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStrip = New System.Windows.Forms.ToolStrip
-        Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton
-        Me.OpenToolStripButton = New System.Windows.Forms.ToolStripButton
-        Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator
-        Me.PrintToolStripButton = New System.Windows.Forms.ToolStripButton
-        Me.PrintPreviewToolStripButton = New System.Windows.Forms.ToolStripButton
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator
-        Me.HelpToolStripButton = New System.Windows.Forms.ToolStripButton
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel
-        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel
-        Me.txtFind = New System.Windows.Forms.ToolStripTextBox
-        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel
-        Me.cmbFilter = New System.Windows.Forms.ToolStripComboBox
-        Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel
-        Me.ToolStripLabel5 = New System.Windows.Forms.ToolStripLabel
-        Me.cmbPhysicianOffices = New System.Windows.Forms.ToolStripComboBox
+        Me.MenuStrip = New System.Windows.Forms.MenuStrip()
+        Me.FileMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaveAsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.PrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PrintPreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PrintSetupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UndoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RedoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
+        Me.CutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CopyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PasteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
+        Me.SelectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ViewMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolBarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StatusBarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PatientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PatientToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EnterNewChartItemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LettersToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MessagesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LabToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ShortVisitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MedicalRecordsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ChartToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PrescriptionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DocumentImagingToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HealthHistoryQuestionireToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MyDxMyPrToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CheifComplaintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CategoriesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CategoryContentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProfileDetailToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HPIMaintenanceToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ChartEvaluationToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TestSysToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TestPEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TemplateAndRelatedCCToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TemplateMaintenanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FileMaintenanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PracticeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PhysionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RefringPhysionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DiagonosisToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InsurenceCoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EmployerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PharmacyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MedicalTestsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ImagingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DrugMaintenanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ImmunizationMaintenanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EAndMCodingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MessageListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DiseaseProfileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PatientPicturesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Form1ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MessageNoteMaintenanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ShortVisitToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ComboboxMaintenanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BackupDatabasesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CheckForUpdatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ZipCodesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AppointmentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddEditAppointmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AppointmentInOutlookToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CalculatorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FormulasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InboxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BillingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExportToHL7ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TransactionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BillingReportToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ARCommentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MultiBillingReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SuperBillToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TransactionsDetailToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WindowsMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewWindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CascadeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TileVerticalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TileHorizontalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CloseAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ArrangeIconsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IndexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SearchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
+        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HL7ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HL7ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LabCorpInterFaceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LabReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AdminToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UsersToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LogOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.OpenToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.PrintToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.PrintPreviewToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.HelpToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
+        Me.txtFind = New System.Windows.Forms.ToolStripTextBox()
+        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
+        Me.cmbFilter = New System.Windows.Forms.ToolStripComboBox()
+        Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripLabel5 = New System.Windows.Forms.ToolStripLabel()
+        Me.cmbPhysicianOffices = New System.Windows.Forms.ToolStripComboBox()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.LinkLabel5 = New System.Windows.Forms.LinkLabel
-        Me.LinkLabel4 = New System.Windows.Forms.LinkLabel
-        Me.LinkLabel3 = New System.Windows.Forms.LinkLabel
-        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel
-        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer
-        Me.GradientNavigationButton7 = New Ascend.Windows.Forms.GradientNavigationButton
-        Me.GradientNavigationButton4 = New Ascend.Windows.Forms.GradientNavigationButton
-        Me.GradientNavigationButton3 = New Ascend.Windows.Forms.GradientNavigationButton
-        Me.GradientNavigationRefresh = New Ascend.Windows.Forms.GradientNavigationButton
-        Me.GradientNavigationButton10 = New Ascend.Windows.Forms.GradientNavigationButton
-        Me.GradientNavigationButton2 = New Ascend.Windows.Forms.GradientNavigationButton
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar
-        Me.GradientNavigationButton14 = New Ascend.Windows.Forms.GradientNavigationButton
-        Me.GradientNavigationButton12 = New Ascend.Windows.Forms.GradientNavigationButton
-        Me.GradientNavigationButton13 = New Ascend.Windows.Forms.GradientNavigationButton
-        Me.GradientNavigationButton1 = New Ascend.Windows.Forms.GradientNavigationButton
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.txtLastVisitDate = New System.Windows.Forms.TextBox
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.txtSEX = New System.Windows.Forms.TextBox
-        Me.txtDOB = New System.Windows.Forms.TextBox
-        Me.txtPhone = New System.Windows.Forms.TextBox
-        Me.txtName = New System.Windows.Forms.TextBox
-        Me.ChartNo = New System.Windows.Forms.TextBox
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.GradientNavigationButton6 = New Ascend.Windows.Forms.GradientNavigationButton
-        Me.GradientNavigationButton5 = New Ascend.Windows.Forms.GradientNavigationButton
-        Me.GradientNavigationButton8 = New Ascend.Windows.Forms.GradientNavigationButton
-        Me.SplitContainer2 = New System.Windows.Forms.SplitContainer
-        Me.TabControl1 = New System.Windows.Forms.TabControl
-        Me.TabPage1 = New System.Windows.Forms.TabPage
-        Me.dgPatient = New System.Windows.Forms.DataGridView
-        Me.GradientAnimation1 = New Ascend.Windows.Forms.GradientAnimation
-        Me.GradientCaption2 = New Ascend.Windows.Forms.GradientCaption
-        Me.AppointmentsTab = New System.Windows.Forms.TabPage
-        Me.MultiAppointmentDataGridView = New System.Windows.Forms.DataGridView
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ChartNumber2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Visittype = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ApptStatus = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ReasonforNotCheckIn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Resource2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.CheckIn = New System.Windows.Forms.DataGridViewCheckBoxColumn
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Color2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.LinkLabel5 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel4 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.GradientNavigationButton7 = New Ascend.Windows.Forms.GradientNavigationButton()
+        Me.GradientNavigationButton4 = New Ascend.Windows.Forms.GradientNavigationButton()
+        Me.GradientNavigationButton3 = New Ascend.Windows.Forms.GradientNavigationButton()
+        Me.GradientNavigationRefresh = New Ascend.Windows.Forms.GradientNavigationButton()
+        Me.GradientNavigationButton10 = New Ascend.Windows.Forms.GradientNavigationButton()
+        Me.GradientNavigationButton2 = New Ascend.Windows.Forms.GradientNavigationButton()
+        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
+        Me.GradientNavigationButton14 = New Ascend.Windows.Forms.GradientNavigationButton()
+        Me.GradientNavigationButton12 = New Ascend.Windows.Forms.GradientNavigationButton()
+        Me.GradientNavigationButton13 = New Ascend.Windows.Forms.GradientNavigationButton()
+        Me.GradientNavigationButton1 = New Ascend.Windows.Forms.GradientNavigationButton()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtLastVisitDate = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtSEX = New System.Windows.Forms.TextBox()
+        Me.txtDOB = New System.Windows.Forms.TextBox()
+        Me.txtPhone = New System.Windows.Forms.TextBox()
+        Me.txtName = New System.Windows.Forms.TextBox()
+        Me.ChartNo = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.GradientNavigationButton6 = New Ascend.Windows.Forms.GradientNavigationButton()
+        Me.GradientNavigationButton5 = New Ascend.Windows.Forms.GradientNavigationButton()
+        Me.GradientNavigationButton8 = New Ascend.Windows.Forms.GradientNavigationButton()
+        Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.dgPatient = New System.Windows.Forms.DataGridView()
+        Me.GradientAnimation1 = New Ascend.Windows.Forms.GradientAnimation()
+        Me.GradientCaption2 = New Ascend.Windows.Forms.GradientCaption()
+        Me.AppointmentsTab = New System.Windows.Forms.TabPage()
+        Me.MultiAppointmentDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ChartNumber2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Visittype = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApptStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ReasonforNotCheckIn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Resource2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CheckIn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Color2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.CancelAppointmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.RescheduleAppointmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.RescheduleOneWeekToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.RescheduleTwoWeeksToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.RescheduleThreeWeeksToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.RescheduleOneMonthToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.AppStatusToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.PENDINGToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.COMPLETEDToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.CheckInToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.SuperBillToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.PrintAppointmentsTab = New System.Windows.Forms.TabPage
-        Me.ReportViewer2 = New Microsoft.Reporting.WinForms.ReportViewer
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox
-        Me.lblDate = New System.Windows.Forms.Label
-        Me.ReschedulingTable = New System.Windows.Forms.DataGridView
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker
-        Me.btnDayBefore = New System.Windows.Forms.Button
-        Me.btnDayAfter = New System.Windows.Forms.Button
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox
-        Me.Label11 = New System.Windows.Forms.Label
-        Me.Label10 = New System.Windows.Forms.Label
-        Me.Label9 = New System.Windows.Forms.Label
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.StatusStrip = New System.Windows.Forms.StatusStrip
-        Me.lblUsername = New System.Windows.Forms.Label
-        Me.MMDataDataSet = New MedicalManager.MMDataDataSet
+        Me.CancelAppointmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RescheduleAppointmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RescheduleOneWeekToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RescheduleTwoWeeksToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RescheduleThreeWeeksToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RescheduleOneMonthToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AppStatusToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PENDINGToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.COMPLETEDToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CheckInToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SuperBillToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PrintAppointmentsTab = New System.Windows.Forms.TabPage()
+        Me.ReportViewer2 = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.lblDate = New System.Windows.Forms.Label()
+        Me.ReschedulingTable = New System.Windows.Forms.DataGridView()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.btnDayBefore = New System.Windows.Forms.Button()
+        Me.btnDayAfter = New System.Windows.Forms.Button()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.StatusStrip = New System.Windows.Forms.StatusStrip()
+        Me.lblUsername = New System.Windows.Forms.Label()
+        Me.MMDataDataSet = New MedicalManager.MMDataDataSet()
         Me.OAPpointmentsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.OAPpointmentsTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.OAPpointmentsTableAdapter
-        Me.ACalendardayTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.ACalendardayTableAdapter
-        Me.MmpatientTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMPATIENTTableAdapter
+        Me.OAPpointmentsTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.OAPpointmentsTableAdapter()
+        Me.ACalendardayTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.ACalendardayTableAdapter()
+        Me.MmpatientTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMPATIENTTableAdapter()
         Me.MmpatientBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ACalendardayTableAdapter1 = New MedicalManager.MMDataDataSet1TableAdapters.ACalendardayTableAdapter
-        Me.HpiAssosiatedSymptomsTableAdapter1 = New MedicalManager.MMDataDataSet1TableAdapters.HPIAssosiatedSymptomsTableAdapter
-        Me.MultiAppointmentTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MultiAppointmentTableAdapter
-        Me.MMComboTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMComboTableAdapter
+        Me.ACalendardayTableAdapter1 = New MedicalManager.MMDataDataSet1TableAdapters.ACalendardayTableAdapter()
+        Me.HpiAssosiatedSymptomsTableAdapter1 = New MedicalManager.MMDataDataSet1TableAdapters.HPIAssosiatedSymptomsTableAdapter()
+        Me.MultiAppointmentTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MultiAppointmentTableAdapter()
+        Me.MMComboTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMComboTableAdapter()
         Me.MMComboBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.MultiAppointmentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -268,10 +268,12 @@ Partial Class MDIParent
         CType(Me.ACalendardayBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer2.Panel1.SuspendLayout()
         Me.SplitContainer2.Panel2.SuspendLayout()
         Me.SplitContainer2.SuspendLayout()
@@ -586,70 +588,70 @@ Partial Class MDIParent
         'MyDxMyPrToolStripMenuItem
         '
         Me.MyDxMyPrToolStripMenuItem.Name = "MyDxMyPrToolStripMenuItem"
-        Me.MyDxMyPrToolStripMenuItem.Size = New System.Drawing.Size(207, 22)
+        Me.MyDxMyPrToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
         Me.MyDxMyPrToolStripMenuItem.Text = "MyDx MyPr"
         '
         'CheifComplaintToolStripMenuItem
         '
         Me.CheifComplaintToolStripMenuItem.Name = "CheifComplaintToolStripMenuItem"
-        Me.CheifComplaintToolStripMenuItem.Size = New System.Drawing.Size(207, 22)
+        Me.CheifComplaintToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
         Me.CheifComplaintToolStripMenuItem.Text = "Cheif Complaint"
         '
         'CategoriesToolStripMenuItem
         '
         Me.CategoriesToolStripMenuItem.Name = "CategoriesToolStripMenuItem"
-        Me.CategoriesToolStripMenuItem.Size = New System.Drawing.Size(207, 22)
+        Me.CategoriesToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
         Me.CategoriesToolStripMenuItem.Text = "Categories"
         '
         'CategoryContentsToolStripMenuItem
         '
         Me.CategoryContentsToolStripMenuItem.Name = "CategoryContentsToolStripMenuItem"
-        Me.CategoryContentsToolStripMenuItem.Size = New System.Drawing.Size(207, 22)
+        Me.CategoryContentsToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
         Me.CategoryContentsToolStripMenuItem.Text = "Category Contents"
         '
         'ProfileDetailToolStripMenuItem1
         '
         Me.ProfileDetailToolStripMenuItem1.Name = "ProfileDetailToolStripMenuItem1"
-        Me.ProfileDetailToolStripMenuItem1.Size = New System.Drawing.Size(207, 22)
+        Me.ProfileDetailToolStripMenuItem1.Size = New System.Drawing.Size(206, 22)
         Me.ProfileDetailToolStripMenuItem1.Text = "Profile Detail"
         '
         'HPIMaintenanceToolStripMenuItem1
         '
         Me.HPIMaintenanceToolStripMenuItem1.Name = "HPIMaintenanceToolStripMenuItem1"
-        Me.HPIMaintenanceToolStripMenuItem1.Size = New System.Drawing.Size(207, 22)
+        Me.HPIMaintenanceToolStripMenuItem1.Size = New System.Drawing.Size(206, 22)
         Me.HPIMaintenanceToolStripMenuItem1.Text = "HPI Maintenance"
         '
         'ChartEvaluationToolStripMenuItem1
         '
         Me.ChartEvaluationToolStripMenuItem1.Name = "ChartEvaluationToolStripMenuItem1"
-        Me.ChartEvaluationToolStripMenuItem1.Size = New System.Drawing.Size(207, 22)
+        Me.ChartEvaluationToolStripMenuItem1.Size = New System.Drawing.Size(206, 22)
         Me.ChartEvaluationToolStripMenuItem1.Text = "Chart Evaluation"
         '
         'TestSysToolStripMenuItem
         '
         Me.TestSysToolStripMenuItem.Name = "TestSysToolStripMenuItem"
-        Me.TestSysToolStripMenuItem.Size = New System.Drawing.Size(207, 22)
+        Me.TestSysToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
         Me.TestSysToolStripMenuItem.Text = "Test ROS"
         Me.TestSysToolStripMenuItem.Visible = False
         '
         'TestPEToolStripMenuItem
         '
         Me.TestPEToolStripMenuItem.Name = "TestPEToolStripMenuItem"
-        Me.TestPEToolStripMenuItem.Size = New System.Drawing.Size(207, 22)
+        Me.TestPEToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
         Me.TestPEToolStripMenuItem.Text = "Test PE"
         Me.TestPEToolStripMenuItem.Visible = False
         '
         'TemplateAndRelatedCCToolStripMenuItem
         '
         Me.TemplateAndRelatedCCToolStripMenuItem.Name = "TemplateAndRelatedCCToolStripMenuItem"
-        Me.TemplateAndRelatedCCToolStripMenuItem.Size = New System.Drawing.Size(207, 22)
+        Me.TemplateAndRelatedCCToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
         Me.TemplateAndRelatedCCToolStripMenuItem.Text = "Template and Related CC"
         Me.TemplateAndRelatedCCToolStripMenuItem.Visible = False
         '
         'TemplateMaintenanceToolStripMenuItem
         '
         Me.TemplateMaintenanceToolStripMenuItem.Name = "TemplateMaintenanceToolStripMenuItem"
-        Me.TemplateMaintenanceToolStripMenuItem.Size = New System.Drawing.Size(207, 22)
+        Me.TemplateMaintenanceToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
         Me.TemplateMaintenanceToolStripMenuItem.Text = "Template Maintenance"
         '
         'FileMaintenanceToolStripMenuItem
@@ -823,7 +825,7 @@ Partial Class MDIParent
         '
         Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CalculatorToolStripMenuItem, Me.FormulasToolStripMenuItem})
         Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
-        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(47, 20)
+        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(46, 20)
         Me.ToolsToolStripMenuItem.Text = "Tools"
         '
         'CalculatorToolStripMenuItem
@@ -848,7 +850,7 @@ Partial Class MDIParent
         'InboxToolStripMenuItem
         '
         Me.InboxToolStripMenuItem.Name = "InboxToolStripMenuItem"
-        Me.InboxToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
+        Me.InboxToolStripMenuItem.Size = New System.Drawing.Size(104, 22)
         Me.InboxToolStripMenuItem.Text = "Inbox"
         '
         'BillingToolStripMenuItem
@@ -919,37 +921,37 @@ Partial Class MDIParent
         'NewWindowToolStripMenuItem
         '
         Me.NewWindowToolStripMenuItem.Name = "NewWindowToolStripMenuItem"
-        Me.NewWindowToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.NewWindowToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.NewWindowToolStripMenuItem.Text = "&New Window"
         '
         'CascadeToolStripMenuItem
         '
         Me.CascadeToolStripMenuItem.Name = "CascadeToolStripMenuItem"
-        Me.CascadeToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.CascadeToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.CascadeToolStripMenuItem.Text = "&Cascade"
         '
         'TileVerticalToolStripMenuItem
         '
         Me.TileVerticalToolStripMenuItem.Name = "TileVerticalToolStripMenuItem"
-        Me.TileVerticalToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.TileVerticalToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.TileVerticalToolStripMenuItem.Text = "Tile &Vertical"
         '
         'TileHorizontalToolStripMenuItem
         '
         Me.TileHorizontalToolStripMenuItem.Name = "TileHorizontalToolStripMenuItem"
-        Me.TileHorizontalToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.TileHorizontalToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.TileHorizontalToolStripMenuItem.Text = "Tile &Horizontal"
         '
         'CloseAllToolStripMenuItem
         '
         Me.CloseAllToolStripMenuItem.Name = "CloseAllToolStripMenuItem"
-        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.CloseAllToolStripMenuItem.Text = "C&lose All"
         '
         'ArrangeIconsToolStripMenuItem
         '
         Me.ArrangeIconsToolStripMenuItem.Name = "ArrangeIconsToolStripMenuItem"
-        Me.ArrangeIconsToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.ArrangeIconsToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.ArrangeIconsToolStripMenuItem.Text = "&Arrange Icons"
         '
         'HelpMenu
@@ -1127,6 +1129,7 @@ Partial Class MDIParent
         '
         'txtFind
         '
+        Me.txtFind.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtFind.Name = "txtFind"
         Me.txtFind.Size = New System.Drawing.Size(100, 25)
         '
@@ -1241,6 +1244,7 @@ Partial Class MDIParent
         'GradientNavigationButton7
         '
         Me.GradientNavigationButton7.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GradientNavigationButton7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.GradientNavigationButton7.GradientLowColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.GradientNavigationButton7.Location = New System.Drawing.Point(4, 336)
         Me.GradientNavigationButton7.Name = "GradientNavigationButton7"
@@ -1251,6 +1255,7 @@ Partial Class MDIParent
         'GradientNavigationButton4
         '
         Me.GradientNavigationButton4.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GradientNavigationButton4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.GradientNavigationButton4.GradientLowColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.GradientNavigationButton4.Location = New System.Drawing.Point(4, 304)
         Me.GradientNavigationButton4.Name = "GradientNavigationButton4"
@@ -1261,6 +1266,7 @@ Partial Class MDIParent
         'GradientNavigationButton3
         '
         Me.GradientNavigationButton3.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GradientNavigationButton3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.GradientNavigationButton3.GradientLowColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.GradientNavigationButton3.Location = New System.Drawing.Point(94, 240)
         Me.GradientNavigationButton3.Name = "GradientNavigationButton3"
@@ -1271,6 +1277,7 @@ Partial Class MDIParent
         'GradientNavigationRefresh
         '
         Me.GradientNavigationRefresh.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GradientNavigationRefresh.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.GradientNavigationRefresh.GradientLowColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.GradientNavigationRefresh.Location = New System.Drawing.Point(4, 208)
         Me.GradientNavigationRefresh.Name = "GradientNavigationRefresh"
@@ -1280,6 +1287,7 @@ Partial Class MDIParent
         '
         'GradientNavigationButton10
         '
+        Me.GradientNavigationButton10.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.GradientNavigationButton10.Location = New System.Drawing.Point(12, 549)
         Me.GradientNavigationButton10.Name = "GradientNavigationButton10"
         Me.GradientNavigationButton10.Size = New System.Drawing.Size(177, 26)
@@ -1290,6 +1298,7 @@ Partial Class MDIParent
         'GradientNavigationButton2
         '
         Me.GradientNavigationButton2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GradientNavigationButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.GradientNavigationButton2.GradientLowColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.GradientNavigationButton2.Location = New System.Drawing.Point(94, 336)
         Me.GradientNavigationButton2.Name = "GradientNavigationButton2"
@@ -1307,6 +1316,7 @@ Partial Class MDIParent
         'GradientNavigationButton14
         '
         Me.GradientNavigationButton14.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GradientNavigationButton14.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.GradientNavigationButton14.GradientLowColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.GradientNavigationButton14.Location = New System.Drawing.Point(94, 208)
         Me.GradientNavigationButton14.Name = "GradientNavigationButton14"
@@ -1317,6 +1327,7 @@ Partial Class MDIParent
         'GradientNavigationButton12
         '
         Me.GradientNavigationButton12.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GradientNavigationButton12.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.GradientNavigationButton12.GradientLowColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.GradientNavigationButton12.HighlightGradientLowColor = System.Drawing.SystemColors.ActiveCaption
         Me.GradientNavigationButton12.Location = New System.Drawing.Point(94, 176)
@@ -1328,6 +1339,7 @@ Partial Class MDIParent
         'GradientNavigationButton13
         '
         Me.GradientNavigationButton13.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GradientNavigationButton13.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.GradientNavigationButton13.GradientLowColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.GradientNavigationButton13.Location = New System.Drawing.Point(4, 176)
         Me.GradientNavigationButton13.Name = "GradientNavigationButton13"
@@ -1338,6 +1350,7 @@ Partial Class MDIParent
         'GradientNavigationButton1
         '
         Me.GradientNavigationButton1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GradientNavigationButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.GradientNavigationButton1.GradientLowColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.GradientNavigationButton1.Location = New System.Drawing.Point(93, 304)
         Me.GradientNavigationButton1.Name = "GradientNavigationButton1"
@@ -1479,6 +1492,7 @@ Partial Class MDIParent
         'GradientNavigationButton6
         '
         Me.GradientNavigationButton6.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GradientNavigationButton6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.GradientNavigationButton6.GradientLowColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.GradientNavigationButton6.Location = New System.Drawing.Point(4, 272)
         Me.GradientNavigationButton6.Name = "GradientNavigationButton6"
@@ -1489,6 +1503,7 @@ Partial Class MDIParent
         'GradientNavigationButton5
         '
         Me.GradientNavigationButton5.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GradientNavigationButton5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.GradientNavigationButton5.GradientLowColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.GradientNavigationButton5.Location = New System.Drawing.Point(4, 240)
         Me.GradientNavigationButton5.Name = "GradientNavigationButton5"
@@ -1499,6 +1514,7 @@ Partial Class MDIParent
         'GradientNavigationButton8
         '
         Me.GradientNavigationButton8.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GradientNavigationButton8.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.GradientNavigationButton8.GradientLowColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.GradientNavigationButton8.Location = New System.Drawing.Point(94, 272)
         Me.GradientNavigationButton8.Name = "GradientNavigationButton8"
@@ -1592,6 +1608,7 @@ Partial Class MDIParent
         'GradientCaption2
         '
         Me.GradientCaption2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GradientCaption2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.GradientCaption2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GradientCaption2.ForeColor = System.Drawing.Color.White
         Me.GradientCaption2.GradientHighColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(239, Byte), Integer))
@@ -1911,6 +1928,7 @@ Partial Class MDIParent
         Me.ReportViewer2.Location = New System.Drawing.Point(3, 3)
         Me.ReportViewer2.Margin = New System.Windows.Forms.Padding(3, 1, 3, 2)
         Me.ReportViewer2.Name = "ReportViewer2"
+        Me.ReportViewer2.ServerReport.BearerToken = Nothing
         Me.ReportViewer2.Size = New System.Drawing.Size(846, 638)
         Me.ReportViewer2.TabIndex = 1
         '
@@ -1922,6 +1940,7 @@ Partial Class MDIParent
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "MedicalManager.AppointMents.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(3, 3)
         Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.ServerReport.BearerToken = Nothing
         Me.ReportViewer1.Size = New System.Drawing.Size(689, 323)
         Me.ReportViewer1.TabIndex = 0
         Me.ReportViewer1.Visible = False
@@ -1929,7 +1948,7 @@ Partial Class MDIParent
         'GroupBox2
         '
         Me.GroupBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.GroupBox2.BackColor = System.Drawing.Color.DarkSlateGray
         Me.GroupBox2.Controls.Add(Me.lblDate)
         Me.GroupBox2.Controls.Add(Me.ReschedulingTable)
@@ -1961,7 +1980,7 @@ Partial Class MDIParent
         Me.ReschedulingTable.AllowUserToResizeColumns = False
         Me.ReschedulingTable.AllowUserToResizeRows = False
         Me.ReschedulingTable.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.ReschedulingTable.BackgroundColor = System.Drawing.Color.White
         Me.ReschedulingTable.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.ReschedulingTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
@@ -2198,11 +2217,13 @@ Partial Class MDIParent
         Me.ToolStrip.PerformLayout()
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.SplitContainer2.Panel1.ResumeLayout(False)
         Me.SplitContainer2.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer2.ResumeLayout(False)
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)

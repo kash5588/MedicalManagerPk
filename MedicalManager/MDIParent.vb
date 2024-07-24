@@ -96,7 +96,7 @@ Public Class MDIParent
 
         Try
             cn.Open()
-            cmd = New SqlCommand("SELECT [PatientID],[ChartNumber],[LastName],[FirstName],[MiddleInitial],[HomeePhone],[CellPhone],[SocialSecurityNumber],[PatientID#2],[Sex],[DateofBirth],[InsCoId],[InsCoId2],[EmploymentStatus],[RelToSub],[PhysicianOffice],[AssignedProvider] FROM [MMPATIENT]", cn)
+            cmd = New SqlCommand("SELECT [PatientID],[ChartNumber],[LastName],[FirstName],[HomeePhone],[CellPhone],[CNICNO] as CNIC,[Sex],[DateofBirth],[RelToSub],[PhysicianOffice],[AssignedProvider] FROM [MMPATIENT]", cn)
 
             Dim da As New SqlDataAdapter
             Dim tbl As New DataTable
@@ -108,33 +108,34 @@ Public Class MDIParent
             myBindingSource.DataSource = ds
             myBindingSource.DataMember = ds.Tables(0).TableName
             dgPatient.DataSource = myBindingSource
+            dgPatient.Sort(dgPatient.Columns("PatientID"), System.ComponentModel.ListSortDirection.Descending)
 
             ds.Dispose()
             cn.Close()
-            dgPatient.Columns("PatientID").Width = 40
-            dgPatient.Columns("ChartNumber").Width = 65
-            dgPatient.Columns("LastName").Width = 70
-            dgPatient.Columns("FirstName").Width = 70
-            dgPatient.Columns("MiddleInitial").Width = 25
-            dgPatient.Columns("DateOfBirth").Width = 68
-            dgPatient.Columns("HomeePhone").Width = 85
-            dgPatient.Columns("SEX").Width = 35
-            dgPatient.Columns("CellPhone").Width = 85
-            dgPatient.Columns("SocialSecurityNumber").Width = 70
-            dgPatient.Columns("AssignedProvider").Width = 65
-            dgPatient.Columns("InsCoID").Width = 60
-            dgPatient.Columns("InsCoID2").Width = 60
-            ' dgPatient.Columns("DateCreated").Width = 65
-            dgPatient.Columns("EmploymentStatus").Width = 50
-            dgPatient.Columns("RelToSub").Width = 55
+            'dgPatient.Columns("PatientID").Width = 60
+            'dgPatient.Columns("ChartNumber").Width = 75
+            'dgPatient.Columns("LastName").Width = 120
+            'dgPatient.Columns("FirstName").Width = 120
 
-            dgPatient.Columns("PhysicianOffice").Width = 60
-            dgPatient.Columns("PatientID#2").Width = 60
-            dgPatient.Columns("EmploymentStatus").Width = 60
-            dgPatient.Columns("PhysicianOffice").Width = 60
-            dgPatient.Columns("AssignedProvider").Width = 60
-            dgPatient.Columns("LastName").DefaultCellStyle.BackColor = Color.FromArgb(230, 234, 252)
-            dgPatient.Columns("FirstName").DefaultCellStyle.BackColor = Color.FromArgb(230, 234, 252)
+            'dgPatient.Columns("DateOfBirth").Width = 68
+            'dgPatient.Columns("HomeePhone").Width = 85
+            'dgPatient.Columns("SEX").Width = 65
+            'dgPatient.Columns("CellPhone").Width = 85
+            'dgPatient.Columns("CNIC").Width = 120
+            'dgPatient.Columns("AssignedProvider").Width = 65
+            '' dgPatient.Columns("InsCoID").Width = 60
+            ''dgPatient.Columns("InsCoID2").Width = 60
+            '' dgPatient.Columns("DateCreated").Width = 65
+            '' dgPatient.Columns("EmploymentStatus").Width = 50
+            'dgPatient.Columns("RelToSub").Width = 55
+
+            ''  dgPatient.Columns("PhysicianOffice").Width = 60
+
+            ''dgPatient.Columns("EmploymentStatus").Width = 60
+            'dgPatient.Columns("PhysicianOffice").Width = 80
+            'dgPatient.Columns("AssignedProvider").Width = 80
+            'dgPatient.Columns("LastName").DefaultCellStyle.BackColor = Color.FromArgb(230, 234, 252)
+            'dgPatient.Columns("FirstName").DefaultCellStyle.BackColor = Color.FromArgb(230, 234, 252)
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
@@ -735,7 +736,7 @@ Public Class MDIParent
                 Exit Sub
             End If
 
-            'PATIENT.Show()
+            PATIENT.Show()
             PATIENT.BindingNavigatorAddNewItem.PerformClick()
         Catch ex As System.Exception
             System.Windows.Forms.MessageBox.Show(ex.Message)
@@ -2060,4 +2061,6 @@ Public Class MDIParent
     Private Sub ZipCodesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ZipCodesToolStripMenuItem.Click
         ZipCode.Show()
     End Sub
+
+
 End Class
