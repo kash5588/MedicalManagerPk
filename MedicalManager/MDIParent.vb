@@ -19,7 +19,7 @@ Public Class MDIParent
         LoginForm.ShowDialog()
         Me.ACalendardayTableAdapter.Fill(Me.MMDataDataSet1.ACalendarday)
         Dim x As Object
-        x = "12/30/2024"
+        x = "12/30/2025"
         If CDate(x) < Today() Then
             End
         End If
@@ -47,7 +47,7 @@ Public Class MDIParent
         ApplyColorToGrid()
         LoadUser()
         Me.MMComboTableAdapter.Fill(Me.MMDataDataSet1.MMCombo)
-        LoadComboBoxes2()
+        LoadcmbPhysion()
 
         '  Timer1.Interval = 5000
         '    Timer1.Start()
@@ -66,11 +66,8 @@ Public Class MDIParent
         Dim ii As Integer = MultiAppointmentDataGridView.CurrentCell.RowIndex
 
         LoadAppointments()
+
         ' LoadDgpatientgrid()
-
-
-
-
 
         'If cmbFilter.Text <> "" Then
         '    If cmbFilter.Text = "SocialSecurityNumber" Then
@@ -85,6 +82,7 @@ Public Class MDIParent
         'dgPatient.DataSource = Me.myBindingSource
 
         'dgPatient.CurrentCell = dgPatient.Rows(i).Cells(0)
+
         MultiAppointmentDataGridView.CurrentCell = MultiAppointmentDataGridView.Rows(ii).Cells(0)
 
     End Sub
@@ -96,7 +94,7 @@ Public Class MDIParent
 
         Try
             cn.Open()
-            cmd = New SqlCommand("SELECT [PatientID],[ChartNumber],[LastName],[FirstName],[HomeePhone],[CellPhone],[CNICNO] as CNIC,[Sex],[DateofBirth],[RelToSub],[PhysicianOffice],[AssignedProvider] FROM [MMPATIENT]", cn)
+            cmd = New SqlCommand("SELECT [PatientID],[ChartNumber],[FirstName],[LastName],[HomeePhone],[CellPhone],[CNICNO] as CNIC,[Sex],[DateofBirth],[RelToSub],[AssignedProvider] as Physician FROM [MMPATIENT]", cn)
 
             Dim da As New SqlDataAdapter
             Dim tbl As New DataTable
@@ -112,6 +110,7 @@ Public Class MDIParent
 
             ds.Dispose()
             cn.Close()
+
             'dgPatient.Columns("PatientID").Width = 60
             'dgPatient.Columns("ChartNumber").Width = 75
             'dgPatient.Columns("LastName").Width = 120
@@ -486,16 +485,16 @@ Public Class MDIParent
                 aRet(1) = dgPatient.SelectedRows(0).Cells("ChartNumber").Value & "" 'chartnumber
                 aRet(2) = dgPatient.SelectedRows(0).Cells("LastName").Value & ""  'last name
                 aRet(3) = dgPatient.SelectedRows(0).Cells("FirstName").Value & ""   'first name
-                aRet(4) = dgPatient.SelectedRows(0).Cells("MiddleInitial").Value & ""    'middle initial
-                aRet(5) = dgPatient.SelectedRows(0).Cells("HomeePhone").Value & ""    'phone
+                'aRet(4) = dgPatient.SelectedRows(0).Cells("MiddleInitial").Value & ""    'middle initial
+                aRet(5) = dgPatient.SelectedRows(0).Cells("CellPhone").Value & ""    'phone
                 aRet(6) = dgPatient.SelectedRows(0).Cells("DateofBirth").Value & ""     'DOB
                 aRet(7) = dgPatient.SelectedRows(0).Cells("Sex").Value & ""     'Sex
-                arrayAssignedProvider(0) = dgPatient.SelectedRows(0).Cells("AssignedProvider").Value & ""
+                arrayAssignedProvider(0) = dgPatient.SelectedRows(0).Cells("Physician").Value & ""
                 GetLastVisitDate()
 
                 ChartNo.Text = Me.dgPatient.SelectedRows(0).Cells("ChartNumber").Value
-                txtName.Text = Me.dgPatient.SelectedRows(0).Cells("LastName").Value & " " & Me.dgPatient.SelectedRows(0).Cells("FirstName").Value & " " & Me.dgPatient.SelectedRows(0).Cells("MiddleInitial").Value
-                txtPhone.Text = Me.dgPatient.SelectedRows(0).Cells("HomeePhone").Value & ""
+                txtName.Text = Me.dgPatient.SelectedRows(0).Cells("FirstName").Value & " " & Me.dgPatient.SelectedRows(0).Cells("LastName").Value
+                txtPhone.Text = Me.dgPatient.SelectedRows(0).Cells("CellPhone").Value & ""
                 txtDOB.Text = Me.dgPatient.SelectedRows(0).Cells("DateofBirth").Value & ""
                 txtSEX.Text = Me.dgPatient.SelectedRows(0).Cells("Sex").Value & ""
             End If
@@ -1374,30 +1373,98 @@ Public Class MDIParent
         Return MACAddress
     End Function
 
-    Private Function LoadComboBoxes2()
+    Private Function LoadcmbPhysion()
 
         Dim dr As DataRow
-        Dim dt As DataTable
-        Try
-            dt = Me.MMDataDataSet1.Tables("MMCombo")
+        Dim dt As New DataTable()
+        Dim sqlQuery As String = "SELECT FirstName, LastName FROM MMPhysion"
+        Dim connectionString As String = connString2
 
-            For Each dr In dt.Rows
-                If dr("PhysicianOffice") <> "N/A" Then
-                    cmbPhysicianOffices.Items.Add(dr("PhysicianOffice"))
-                End If
-            Next
+        Try
+            ' Establish a connection to the database
+            Using conn As New SqlConnection(connectionString)
+                ' Create a SQL command
+                Using cmd As New SqlCommand(sqlQuery, conn)
+                    ' Create a DataAdapter to execute the query and fill the DataTable
+                    Using adapter As New SqlDataAdapter(cmd)
+                        conn.Open()
+
+                        ' Check if connection is open
+                        If conn.State = ConnectionState.Open Then
+                            ' Fill the DataTable
+                            adapter.Fill(dt)
+
+                            ' Check if the DataTable has data
+                            If dt IsNot Nothing AndAlso dt.Rows.Count > 0 Then
+                                ' Iterate through the DataTable rows and populate the combo box
+                                For Each dr In dt.Rows
+                                    Dim firstName As String = dr("FirstName").ToString()
+                                    Dim lastName As String = dr("LastName").ToString()
+
+                                    If firstName <> "N/A" AndAlso lastName <> "N/A" Then
+                                        cmbPhysion.Items.Add($"{firstName} {lastName}")
+                                    ElseIf firstName <> "N/A" Then
+                                        cmbPhysion.Items.Add(firstName)
+                                    ElseIf lastName <> "N/A" Then
+                                        cmbPhysion.Items.Add(lastName)
+                                    End If
+                                Next
+                            Else
+                                MessageBox.Show("No data found in the DataTable.", "Info")
+                            End If
+                        Else
+                            MessageBox.Show("Failed to open connection to the database.", "Connection Error")
+                        End If
+                    End Using
+                End Using
+            End Using
+        Catch ex As SqlException
+            MessageBox.Show($"SQL Error: {ex.Message}", "Database Error")
+        Catch ex As ArgumentNullException
+            MessageBox.Show($"Argument Null Error: {ex.Message}", "Argument Error")
         Catch ex As Exception
-            MessageBox.Show(ex.ToString, "Error Loading Comboboxes")
+            MessageBox.Show(ex.Message, "Error Loading Comboboxes")
         End Try
     End Function
 
-    Private Sub cmbPhysicianOffices_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbPhysicianOffices.SelectedIndexChanged
-        If cmbPhysicianOffices.SelectedItem.ToString = "" Then
-            Me.MmpatientTableAdapter.Fill(Me.MMDataDataSet1.MMPATIENT)
+    Private Sub cmbPhysicianOffices_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbPhysion.SelectedIndexChanged
+        Dim connString As String = connString2
+        Dim cn As New SqlConnection(connString)
+        Dim cmd As New SqlCommand
+
+        cn.Open()
+        If cmbPhysion.SelectedItem.ToString = "" Then
+            cmd = New SqlCommand("SELECT [PatientID],[ChartNumber],[FirstName],[LastName],[HomeePhone],[CellPhone],[CNICNO] as CNIC,[Sex],[DateofBirth],[RelToSub],[AssignedProvider] as Physician as Physician FROM [MMPATIENT]", cn)
+
         Else
-            Me.MmpatientTableAdapter.FillByPhysicianOffice(Me.MMDataDataSet1.MMPATIENT, cmbPhysicianOffices.Text)
+            cmd = New SqlCommand("SELECT [PatientID],[ChartNumber],[FirstName],[LastName],[HomeePhone],[CellPhone],[CNICNO] as CNIC,[Sex],[DateofBirth],[RelToSub],[AssignedProvider] as Physician FROM [MMPATIENT] where AssignedProvider = '" + cmbPhysion.Text + "' ", cn)
+
         End If
-        dgPatient.DataSource = MmpatientBindingSource
+
+        Dim da As New SqlDataAdapter
+        Dim tbl As New DataTable
+        Dim ds As New DataSet
+        da.SelectCommand = cmd
+        da.Fill(ds, "MMDX")
+
+        myBindingSource = New BindingSource()
+        myBindingSource.DataSource = ds
+        myBindingSource.DataMember = ds.Tables(0).TableName
+        dgPatient.DataSource = myBindingSource
+        dgPatient.Sort(dgPatient.Columns("PatientID"), System.ComponentModel.ListSortDirection.Descending)
+
+        ds.Dispose()
+        cn.Close()
+
+
+
+
+        'If cmbPhysicianOffices.SelectedItem.ToString = "" Then
+        '    Me.MmpatientTableAdapter.Fill(Me.MMDataDataSet1.MMPATIENT)
+        'Else
+        '    Me.MmpatientTableAdapter.FillByPhysicianOffice(Me.MMDataDataSet1.MMPATIENT, cmbPhysicianOffices.Text)
+        'End If
+        'dgPatient.DataSource = MmpatientBindingSource
         dgPatient.Refresh()
     End Sub
 
@@ -1412,7 +1479,7 @@ Public Class MDIParent
         Dim localdr As SqlClient.SqlDataReader
         Dim dt As New DataTable()
 
-   
+
 
         Try
 
@@ -2039,7 +2106,7 @@ Public Class MDIParent
             Dim connString As String = connString2
             Dim cn As New SqlConnection(connString)
             cn.Open()
-            Dim cmd As New SqlCommand("insert into oappointments (date, starttime, duration, provider, chartnumber, name, phone, note, resource, procedurecode, color, visittype, cellphone, creatuser, creatdate)" & _
+            Dim cmd As New SqlCommand("insert into oappointments (date, starttime, duration, provider, chartnumber, name, phone, note, resource, procedurecode, color, visittype, cellphone, creatuser, creatdate)" &
                            "VALUES ('" & dtReschedule & "', '" & strTime.Trim & "', '" & strDuration & "', '" & strProvider & "', '" & strChartNumber & "', '" & strname & "', '" & strPhone & "', '" & strNotes & "', '" & strResource & "', '" & strProcedureCode & "', '" & strColor & "',  '" & strVisitType & "', '" & strCell & "', '" & globalUser & "', '" & Date.Now & "')", cn)
             cmd.ExecuteNonQuery()
             TabControl1.SelectedTab = AppointmentsTab
@@ -2062,5 +2129,15 @@ Public Class MDIParent
         ZipCode.Show()
     End Sub
 
+    Private Sub cmbFilterByDate_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbFilterByDate.SelectedIndexChanged
+        'If cmbFilterByDate.SelectedItem.ToString = "All" Then
+        '    Me.MmpatientTableAdapter.Fill(Me.MMDataDataSet1.MMPATIENT)
+        'Else
+        '    Dim dateAsInteger As Integer = Convert.ToInt32(DateTime.Now.ToString("yyyyMMdd"))
+        '    Me.MmpatientTableAdapter.FillByDateCreated(Me.MMDataDataSet1.MMPATIENT)
 
+        'End If
+        'dgPatient.DataSource = MmpatientBindingSource
+        'dgPatient.Refresh()
+    End Sub
 End Class

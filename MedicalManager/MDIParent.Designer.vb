@@ -161,7 +161,9 @@ Partial Class MDIParent
         Me.cmbFilter = New System.Windows.Forms.ToolStripComboBox()
         Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripLabel5 = New System.Windows.Forms.ToolStripLabel()
-        Me.cmbPhysicianOffices = New System.Windows.Forms.ToolStripComboBox()
+        Me.cmbPhysion = New System.Windows.Forms.ToolStripComboBox()
+        Me.ToolStripLabel6 = New System.Windows.Forms.ToolStripLabel()
+        Me.cmbFilterByDate = New System.Windows.Forms.ToolStripComboBox()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.LinkLabel5 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel4 = New System.Windows.Forms.LinkLabel()
@@ -1043,7 +1045,7 @@ Partial Class MDIParent
         'ToolStrip
         '
         Me.ToolStrip.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.PrintToolStripButton, Me.PrintPreviewToolStripButton, Me.ToolStripSeparator2, Me.HelpToolStripButton, Me.ToolStripLabel1, Me.ToolStripLabel2, Me.txtFind, Me.ToolStripLabel3, Me.cmbFilter, Me.ToolStripLabel4, Me.ToolStripLabel5, Me.cmbPhysicianOffices})
+        Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.PrintToolStripButton, Me.PrintPreviewToolStripButton, Me.ToolStripSeparator2, Me.HelpToolStripButton, Me.ToolStripLabel1, Me.ToolStripLabel2, Me.txtFind, Me.ToolStripLabel3, Me.cmbFilter, Me.ToolStripLabel4, Me.ToolStripLabel5, Me.cmbPhysion, Me.ToolStripLabel6, Me.cmbFilterByDate})
         Me.ToolStrip.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip.Name = "ToolStrip"
         Me.ToolStrip.Size = New System.Drawing.Size(1198, 25)
@@ -1131,7 +1133,7 @@ Partial Class MDIParent
         '
         Me.txtFind.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtFind.Name = "txtFind"
-        Me.txtFind.Size = New System.Drawing.Size(100, 25)
+        Me.txtFind.Size = New System.Drawing.Size(120, 25)
         '
         'ToolStripLabel3
         '
@@ -1141,7 +1143,7 @@ Partial Class MDIParent
         '
         'cmbFilter
         '
-        Me.cmbFilter.Items.AddRange(New Object() {"ChartNumber", "LastName", "FirstName", "DateOfBirth", "SocialSecurityNumber", "PhysicianOffice", "PatientID#2"})
+        Me.cmbFilter.Items.AddRange(New Object() {"FirstName", "LastName", "ChartNumber", "DateOfBirth", "PhysicianOffice", "PatientID#2"})
         Me.cmbFilter.Name = "cmbFilter"
         Me.cmbFilter.Size = New System.Drawing.Size(121, 25)
         '
@@ -1155,12 +1157,25 @@ Partial Class MDIParent
         '
         Me.ToolStripLabel5.Name = "ToolStripLabel5"
         Me.ToolStripLabel5.Size = New System.Drawing.Size(92, 22)
-        Me.ToolStripLabel5.Text = "Physician Office"
+        Me.ToolStripLabel5.Text = "Physician Name"
         '
-        'cmbPhysicianOffices
+        'cmbPhysion
         '
-        Me.cmbPhysicianOffices.Name = "cmbPhysicianOffices"
-        Me.cmbPhysicianOffices.Size = New System.Drawing.Size(121, 25)
+        Me.cmbPhysion.Name = "cmbPhysion"
+        Me.cmbPhysion.Size = New System.Drawing.Size(121, 25)
+        '
+        'ToolStripLabel6
+        '
+        Me.ToolStripLabel6.Name = "ToolStripLabel6"
+        Me.ToolStripLabel6.Size = New System.Drawing.Size(70, 22)
+        Me.ToolStripLabel6.Text = "FilterByDate"
+        '
+        'cmbFilterByDate
+        '
+        Me.cmbFilterByDate.Items.AddRange(New Object() {"Today", "All"})
+        Me.cmbFilterByDate.Name = "cmbFilterByDate"
+        Me.cmbFilterByDate.Size = New System.Drawing.Size(121, 25)
+        Me.cmbFilterByDate.Text = "Today"
         '
         'LinkLabel5
         '
@@ -2427,7 +2442,7 @@ Partial Class MDIParent
     Friend WithEvents MMComboTableAdapter As MedicalManager.MMDataDataSet1TableAdapters.MMComboTableAdapter
     Friend WithEvents MMComboBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents ToolStripLabel5 As System.Windows.Forms.ToolStripLabel
-    Friend WithEvents cmbPhysicianOffices As System.Windows.Forms.ToolStripComboBox
+    Friend WithEvents cmbFilterByDate As System.Windows.Forms.ToolStripComboBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents txtLastVisitDate As System.Windows.Forms.TextBox
     Friend WithEvents TransactionsDetailToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -2477,5 +2492,6 @@ Partial Class MDIParent
     Friend WithEvents ZipCodesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Private WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Private WithEvents ReportViewer2 As Microsoft.Reporting.WinForms.ReportViewer
-
+    Friend WithEvents cmbPhysion As ToolStripComboBox
+    Friend WithEvents ToolStripLabel6 As ToolStripLabel
 End Class

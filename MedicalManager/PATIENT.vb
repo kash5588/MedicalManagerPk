@@ -5,6 +5,7 @@ Public Class PATIENT
     Public mbPicklistmode As Boolean
     Private mbSelected As Boolean
     Dim aRet(8) As String
+    Dim arrayAssignedProvider(0) As String
     Dim ChartNumber As String
     Dim FromShowPickList As Boolean = False
 
@@ -153,6 +154,8 @@ Public Class PATIENT
         Me.PatientPicturesTableAdapter.Fill(Me.MMDataDataSet2.PatientPictures)
         'TODO: This line of code loads data into the 'MMDataDataSet1.MMCombo' table. You can move, or remove it, as needed.
         Me.MMComboTableAdapter.Fill(Me.MMDataDataSet1.MMCombo)
+        Dim hiddenTab As TabPage = TabControl1.TabPages(3)
+        TabControl1.TabPages.Remove(hiddenTab)
         'Try
         If ChartNumber <> "" Then
             Me.MMPATIENTTableAdapter.FillByChartNumber(Me.MMDataDataSet1.MMPATIENT, ChartNumber)
@@ -162,7 +165,7 @@ Public Class PATIENT
             Me.MMPATIENTTableAdapter.Fill(Me.MMDataDataSet1.MMPATIENT)
         End If
         cmbFilter.SelectedIndex = 0
-
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         If PatientID_2TextBox.Text <> "" Then
             PatientID_2TextBox.Enabled = False
         Else
@@ -409,7 +412,9 @@ Public Class PATIENT
         ' frmCustomers.ShowDialog()
         aRet = PriPhysician.ShowPicklist
         If aRet(0) = "Y" Then       ' they picked a lab
-            AssignedProviderTextBox.Text = aRet(1)
+            'AssignedProviderTextBox.Text = aRet(1) 'Pick Code Of Physician
+
+            AssignedProviderTextBox.Text = aRet(3) + " " + aRet(2) 'Pick Name Of Physician
 
             'RefPhysicianTextBox.Text = aRet(3) + " " + aRet(2)
             '  LastNameTextBox.Text = aRet(3) + " " + aRet(2)
@@ -423,33 +428,64 @@ Public Class PATIENT
 
 
     Private Sub btnBrowse_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBrowse.Click
-        Dim objOpenFileDialog As New OpenFileDialog
 
-        With objOpenFileDialog
-            .Filter = "Image files (.jpg, .jpeg, .bmp, .gif)|*.jpg;*.jpeg;*.bmp;*.gif;*.png"
-            .FilterIndex = 1
-            .Title = "Open File Dialog"
-            .InitialDirectory = "C:\"
-        End With
+        Dim imagePath As String
 
-        If objOpenFileDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
-            Dim allText As String
-            Try
-                'Read the contents of the file
-                allText = objOpenFileDialog.FileName
-                'Display the file contents in the TextBox
-                System.Console.WriteLine(allText)
-                Dim originalimage As System.Drawing.Image
-                originalimage = Image.FromFile(allText)
-                Me.PictureBox1.Image = originalimage
-                SaveToDatabase(allText)
-            Catch fileException As Exception
-                Throw fileException
-            End Try
-        End If
+        Using objOpenFileDialog As New OpenFileDialog()
+            With objOpenFileDialog
+                .Filter = "Image files (.jpg, .jpeg, .bmp, .gif, .png)|*.jpg;*.jpeg;*.bmp;*.gif;*.png"
+                .FilterIndex = 1
+                .Title = "Open File Dialog"
+                .InitialDirectory = "C:\"
+            End With
 
-        objOpenFileDialog.Dispose()
-        objOpenFileDialog = Nothing
+            If objOpenFileDialog.ShowDialog() = DialogResult.OK Then
+                imagePath = objOpenFileDialog.FileName
+                Try
+                    ' Load the image and display it in the PictureBox
+                    Dim originalImage As Image = Image.FromFile(imagePath)
+                    Me.PictureBox1.Image = originalImage
+                    PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+                    ' Save the image path to the database
+                    SaveToDatabase(imagePath)
+                Catch fileException As Exception
+                    MessageBox.Show("An error occurred while loading the image: " & fileException.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End Try
+            End If
+        End Using
+
+
+
+
+
+
+        'Dim objOpenFileDialog As New OpenFileDialog
+
+        'With objOpenFileDialog
+        '    .Filter = "Image files (.jpg, .jpeg, .bmp, .gif)|*.jpg;*.jpeg;*.bmp;*.gif;*.png"
+        '    .FilterIndex = 1
+        '    .Title = "Open File Dialog"
+        '    .InitialDirectory = "C:\"
+        'End With
+
+        'If objOpenFileDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
+        '    Dim allText As String
+        '    Try
+        '        'Read the contents of the file
+        '        allText = objOpenFileDialog.FileName
+        '        'Display the file contents in the TextBox
+        '        System.Console.WriteLine(allText)
+        '        Dim originalimage As System.Drawing.Image
+        '        originalimage = Image.FromFile(allText)
+        '        Me.PictureBox1.Image = originalimage
+        '        SaveToDatabase(allText)
+        '    Catch fileException As Exception
+        '        Throw fileException
+        '    End Try
+        'End If
+
+        'objOpenFileDialog.Dispose()
+        'objOpenFileDialog = Nothing
     End Sub
 
     Private Function SaveToDatabase(ByVal allText As String)
@@ -487,7 +523,7 @@ Public Class PATIENT
         'MsgBox("Image saved to database")
     End Function
 
-    Private Sub btnDeletePatient_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDeletePatient.Click
+    Private Sub btnDeletePatient_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim pieces() As String
         Dim IndexOf As Integer
         Dim sAction As String
@@ -509,14 +545,14 @@ Public Class PATIENT
                 Exit Sub
             End If
 
-            connstring = connString2
+            connString = connString2
             cn = New SqlConnection(connString)
             cn.Open()
 
             Dim cmd As New SqlCommand("Delete from MMPATIENT where PatientID = '" & PatientIDTextBox.Text & "'", cn)
-            
+
             cmd.ExecuteNonQuery()
-           
+
             cn.Close()
 
         Catch ex As System.Exception
@@ -573,7 +609,7 @@ Public Class PATIENT
 
     End Function
 
-    Private Sub ZipCodeTextBox_KeyUp(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles ZipCodeTextBox.KeyUp
+    Private Sub ZipCodeTextBox_KeyUp(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs)
 
         Try
             If ZipCodeTextBox.Text.Length = 5 Then
@@ -604,6 +640,107 @@ Public Class PATIENT
 
     Private Sub dgPatient_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgPatient.CellContentClick
 
+    End Sub
+
+    Private Sub BtnSaveAndVisit_Click(sender As Object, e As EventArgs) Handles BtnSaveAndVisit.Click
+        If FirstNameTextBox.Text <> "" Then
+
+
+
+            Me.Cursor = Cursors.WaitCursor
+            DateChangedTextBox.Text = System.DateTime.Now()
+
+
+            Me.Validate()
+            Me.MMDataDataSet1.MMPATIENT.DateofBirthColumn.DefaultValue = System.DBNull.Value
+            Me.MMPATIENTBindingSource.EndEdit()
+            If Me.Validate Then
+                Me.MMPATIENTTableAdapter.Update(Me.MMDataDataSet1.MMPATIENT)
+            End If
+            Me.Cursor = Cursors.Default
+
+            Dim pieces() As String
+            Dim IndexOf As Integer
+            Dim sAction As String
+            Try
+                sAction = "FormHealthHistory"
+                pieces = Permissions.Split(",")
+                IndexOf = Array.IndexOf(pieces, sAction)
+
+                If IndexOf <> -1 Then
+                Else
+                    MessageBox.Show("User is not authorized for this procedure.", "Authorization Denied", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Exit Sub
+                End If
+
+                arrayAssignedProvider(0) = AssignedProviderTextBox.Text
+                Me.Hide()
+                HealthHistory.ShowHistory(aRet, arrayAssignedProvider)
+                Me.Close() ' Close after history is shown if needed
+
+            Catch ex As System.Exception
+                System.Windows.Forms.MessageBox.Show(ex.Message)
+            End Try
+
+        End If
+    End Sub
+
+    Private Sub BtnSaveAndHistory_Click(sender As Object, e As EventArgs) Handles BtnSaveAndHistory.Click
+        If FirstNameTextBox.Text <> "" Then
+
+
+
+            Me.Cursor = Cursors.WaitCursor
+            DateChangedTextBox.Text = System.DateTime.Now()
+
+            Try
+                GenerateChartNumber()
+                Me.Validate()
+                Me.MMDataDataSet1.MMPATIENT.DateofBirthColumn.DefaultValue = System.DBNull.Value
+                Me.MMPATIENTBindingSource.EndEdit()
+                If Me.Validate Then
+                    Me.MMPATIENTTableAdapter.Update(Me.MMDataDataSet1.MMPATIENT)
+                End If
+                Me.Cursor = Cursors.Default
+                aRet(0) = "Y"
+                aRet(1) = ChartNumberTextBox.Text.Trim()  'chartnumber
+                aRet(2) = LastNameTextBox.Text.Trim() 'last name
+                aRet(3) = FirstNameTextBox.Text.Trim()  'first name
+                'aRet(4) = dgPatient.SelectedRows(0).Cells("MiddleInitial").Value & ""    'middle initial
+                If CellPhoneMaskedTextBox.Text = "    -" Then
+                    aRet(5) = ""
+                Else
+                    aRet(5) = CellPhoneMaskedTextBox.Text.Trim()   'phone
+                End If
+
+                aRet(6) = MaskedTextBoxDob.Text.Trim()    'DOB
+                aRet(7) = CBSex.Text.Trim()
+
+                Dim pieces() As String
+                Dim IndexOf As Integer
+                Dim sAction As String
+
+                sAction = "FormHealthHistory"
+                pieces = Permissions.Split(",")
+                IndexOf = Array.IndexOf(pieces, sAction)
+
+                If IndexOf <> -1 Then
+                Else
+                    MessageBox.Show("User is not authorized for this procedure.", "Authorization Denied", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Exit Sub
+                End If
+
+                arrayAssignedProvider(0) = AssignedProviderTextBox.Text
+
+                Me.Hide()
+                HealthHistory.ShowHistory(aRet, arrayAssignedProvider)
+                Me.Close() ' Close after history is shown if needed
+
+            Catch ex As System.Exception
+                System.Windows.Forms.MessageBox.Show(ex.Message)
+            End Try
+
+        End If
     End Sub
 End Class
 

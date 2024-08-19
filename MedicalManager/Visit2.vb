@@ -6,6 +6,7 @@ Imports System.Data.OleDb
 Imports Microsoft.VisualBasic
 Imports System.Configuration
 Imports System.Text
+Imports System.Globalization
 
 Public Class Visit2
     Public data As DataSet
@@ -93,7 +94,7 @@ Public Class Visit2
         Me.Dispose()
     End Sub
 
- 
+
     '  Dim strTemplate As String
 
     Private Sub Visit_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -403,7 +404,9 @@ Public Class Visit2
                 CounterTests += 1
                 Dim newRow As DataRow = Me.MMDataDataSet1.MMCHDxRxLtMt.NewRow
                 newRow("CHARTNUMBER") = ChartNumberTextBox.Text
-                newRow("Date") = DateMaskedTextBox.Text 'System.DateTime.Now.Date
+                'DateMaskedTB date formate changed
+                Dim DateMaskedTB As DateTime = DateTime.ParseExact(DateMaskedTextBox.Text, "MM/dd/yyyy", CultureInfo.InvariantCulture)
+                newRow("Date") = DateMaskedTB
                 newRow("CaseNumber") = CaseNumberTextBox.Text
                 newRow("Code") = DataGridViewPr.SelectedRows(0).Cells(0).Value
                 newRow("Description") = DataGridViewPr.SelectedRows(0).Cells("Description").Value
@@ -3883,7 +3886,7 @@ Public Class Visit2
         txtCopyCaseNumber.Text = CaseNumberTextBox.Text
     End Sub
 
-    Public Function GetAge(ByVal Birthdate As System.DateTime, _
+    Public Function GetAge(ByVal Birthdate As System.DateTime,
         Optional ByVal AsOf As System.DateTime = #1/1/1700#) _
         As String
 
@@ -5180,11 +5183,11 @@ Public Class Visit2
         RV.ShowVisit(txtCopyChartNumber.Text, txtCopyDate.Text, txtCopyCaseNumber.Text, "active")
     End Sub
 
-    
-   
+
+
     Private Sub btnPickupCC_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPickupCC.Click
         Try
-           
+
             RadioButtonDx.Checked = False
             radProcedureNotes.Checked = False
             radPlan.Checked = False
@@ -5207,9 +5210,9 @@ Public Class Visit2
             DataGridViewPr.DataSource = ds.Tables("MMCHRosAndGen")
             ds.Dispose()
             cn.Close()
-            
 
-         
+
+
             Me.DataGridViewPr.Columns(0).Width = 250
 
 
@@ -5226,8 +5229,8 @@ Public Class Visit2
         End Try
     End Sub
 
-   
-    
+
+
     Private Sub btnCopyToNewVisit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCopyToNewVisit.Click
         Try
             MessageBox.Show("Select items from this visit will be added to a new visit.", "", MessageBoxButtons.OK)
@@ -5239,7 +5242,7 @@ Public Class Visit2
         End Try
     End Sub
 
-   
+
     Private Sub btnDeleteVisit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDeleteVisit.Click
         Dim pieces() As String
         Dim IndexOf As Integer
@@ -5304,7 +5307,7 @@ Public Class Visit2
 
     End Function
 
- 
+
     Private Sub btnPickupChronic_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPickupChronic.Click
         Try
 
@@ -5423,7 +5426,7 @@ Public Class Visit2
         Next node
     End Function
 
-   
+
     Private Sub MMCHDxRxLtMtDataGridView_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles MMCHDxRxLtMtDataGridView.CellContentClick
 
     End Sub
@@ -5464,7 +5467,7 @@ End Class
 
 '    End Sub
 
-  
+
 
 'Private Sub txtFind_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtFind.KeyUp
 

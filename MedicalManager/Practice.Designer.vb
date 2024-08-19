@@ -19,7 +19,7 @@ Partial Class Practice
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim PracticeNameLabel As System.Windows.Forms.Label
         Dim Street1Label As System.Windows.Forms.Label
         Dim Street2Label As System.Windows.Forms.Label
@@ -35,74 +35,74 @@ Partial Class Practice
         Dim Extra2Label As System.Windows.Forms.Label
         Dim IDLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Practice))
-        Me.TabControl1 = New System.Windows.Forms.TabControl
-        Me.TabPage1 = New System.Windows.Forms.TabPage
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView
-        Me.PracticeNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Street1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Street2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.CityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.StateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ZipCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.PhoneDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ExtensionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.FaxDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.PracticeTypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.FederalTaxIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Extra1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Extra2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.PracticeNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Street1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Street2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.StateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ZipCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PhoneDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ExtensionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FaxDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PracticeTypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FederalTaxIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Extra1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Extra2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MMPrecticeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1
-        Me.TabPage2 = New System.Windows.Forms.TabPage
-        Me.MaskedTextBox2 = New System.Windows.Forms.MaskedTextBox
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox
-        Me.IDTextBox = New System.Windows.Forms.TextBox
-        Me.PracticeNameTextBox = New System.Windows.Forms.TextBox
-        Me.Street1TextBox = New System.Windows.Forms.TextBox
-        Me.Street2TextBox = New System.Windows.Forms.TextBox
-        Me.CityTextBox = New System.Windows.Forms.TextBox
-        Me.StateTextBox = New System.Windows.Forms.TextBox
-        Me.ZipCodeTextBox = New System.Windows.Forms.TextBox
-        Me.ExtensionTextBox = New System.Windows.Forms.TextBox
-        Me.PracticeTypeTextBox = New System.Windows.Forms.TextBox
-        Me.FederalTaxIDTextBox = New System.Windows.Forms.TextBox
-        Me.Extra1TextBox = New System.Windows.Forms.TextBox
-        Me.Extra2TextBox = New System.Windows.Forms.TextBox
+        Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.MaskedTextBox2 = New System.Windows.Forms.MaskedTextBox()
+        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
+        Me.IDTextBox = New System.Windows.Forms.TextBox()
+        Me.PracticeNameTextBox = New System.Windows.Forms.TextBox()
+        Me.Street1TextBox = New System.Windows.Forms.TextBox()
+        Me.Street2TextBox = New System.Windows.Forms.TextBox()
+        Me.CityTextBox = New System.Windows.Forms.TextBox()
+        Me.StateTextBox = New System.Windows.Forms.TextBox()
+        Me.ZipCodeTextBox = New System.Windows.Forms.TextBox()
+        Me.ExtensionTextBox = New System.Windows.Forms.TextBox()
+        Me.PracticeTypeTextBox = New System.Windows.Forms.TextBox()
+        Me.FederalTaxIDTextBox = New System.Windows.Forms.TextBox()
+        Me.Extra1TextBox = New System.Windows.Forms.TextBox()
+        Me.Extra2TextBox = New System.Windows.Forms.TextBox()
         Me.MMPrecticeBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
-        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel
-        Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel
-        Me.MMPrecticeBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
-        Me.ToolStripLabel5 = New System.Windows.Forms.ToolStripLabel
-        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel
-        Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel
-        Me.ToolStripComboBox1 = New System.Windows.Forms.ToolStripComboBox
-        Me.MMPrecticeTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMPrecticeTableAdapter
-        PracticeNameLabel = New System.Windows.Forms.Label
-        Street1Label = New System.Windows.Forms.Label
-        Street2Label = New System.Windows.Forms.Label
-        CityLabel = New System.Windows.Forms.Label
-        StateLabel = New System.Windows.Forms.Label
-        ZipCodeLabel = New System.Windows.Forms.Label
-        PhoneLabel = New System.Windows.Forms.Label
-        ExtensionLabel = New System.Windows.Forms.Label
-        FaxLabel = New System.Windows.Forms.Label
-        PracticeTypeLabel = New System.Windows.Forms.Label
-        FederalTaxIDLabel = New System.Windows.Forms.Label
-        Extra1Label = New System.Windows.Forms.Label
-        Extra2Label = New System.Windows.Forms.Label
-        IDLabel = New System.Windows.Forms.Label
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel()
+        Me.MMPrecticeBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripLabel5 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripComboBox1 = New System.Windows.Forms.ToolStripComboBox()
+        Me.MMPrecticeTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMPrecticeTableAdapter()
+        PracticeNameLabel = New System.Windows.Forms.Label()
+        Street1Label = New System.Windows.Forms.Label()
+        Street2Label = New System.Windows.Forms.Label()
+        CityLabel = New System.Windows.Forms.Label()
+        StateLabel = New System.Windows.Forms.Label()
+        ZipCodeLabel = New System.Windows.Forms.Label()
+        PhoneLabel = New System.Windows.Forms.Label()
+        ExtensionLabel = New System.Windows.Forms.Label()
+        FaxLabel = New System.Windows.Forms.Label()
+        PracticeTypeLabel = New System.Windows.Forms.Label()
+        FederalTaxIDLabel = New System.Windows.Forms.Label()
+        Extra1Label = New System.Windows.Forms.Label()
+        Extra2Label = New System.Windows.Forms.Label()
+        IDLabel = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -412,7 +412,6 @@ Partial Class Practice
         '
         Me.MaskedTextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPrecticeBindingSource, "Fax", True))
         Me.MaskedTextBox2.Location = New System.Drawing.Point(512, 107)
-        Me.MaskedTextBox2.Mask = "(999) 000-0000"
         Me.MaskedTextBox2.Name = "MaskedTextBox2"
         Me.MaskedTextBox2.Size = New System.Drawing.Size(100, 20)
         Me.MaskedTextBox2.TabIndex = 9
@@ -421,7 +420,6 @@ Partial Class Practice
         '
         Me.MaskedTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPrecticeBindingSource, "Phone", True))
         Me.MaskedTextBox1.Location = New System.Drawing.Point(185, 211)
-        Me.MaskedTextBox1.Mask = "(999) 000-0000"
         Me.MaskedTextBox1.Name = "MaskedTextBox1"
         Me.MaskedTextBox1.Size = New System.Drawing.Size(100, 20)
         Me.MaskedTextBox1.TabIndex = 7
@@ -604,6 +602,7 @@ Partial Class Practice
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Position"
         Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 21)
         Me.BindingNavigatorPositionItem.Text = "0"
@@ -671,6 +670,7 @@ Partial Class Practice
         '
         'ToolStripTextBox1
         '
+        Me.ToolStripTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
         Me.ToolStripTextBox1.Size = New System.Drawing.Size(100, 25)
         '

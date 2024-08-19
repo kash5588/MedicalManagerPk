@@ -19,7 +19,7 @@ Partial Class VisitTemplate
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim VisitTypeLabel As System.Windows.Forms.Label
         Dim FacilityLabel As System.Windows.Forms.Label
         Dim ChronicConditionsLabel As System.Windows.Forms.Label
@@ -41,281 +41,281 @@ Partial Class VisitTemplate
         Dim UserNameLabel As System.Windows.Forms.Label
         Dim PlanLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VisitTemplate))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.lblRelievedBy = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.MMChartVisitBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
-        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel
-        Me.MMChartVisitBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
-        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel
-        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel
-        Me.ToolStripButton4 = New System.Windows.Forms.ToolStripButton
-        Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel
-        Me.btnSuperBill = New System.Windows.Forms.ToolStripButton
-        Me.ChartNumberToolStripLabel = New System.Windows.Forms.ToolStripLabel
-        Me.ChartNumberToolStripTextBox = New System.Windows.Forms.ToolStripTextBox
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton
-        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton
-        Me.TabControl1 = New System.Windows.Forms.TabControl
-        Me.CCTab = New System.Windows.Forms.TabPage
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox
-        Me.DataReviewedTextBox = New System.Windows.Forms.TextBox
-        Me.btnRefreshVitalSigns = New System.Windows.Forms.Button
-        Me.Label10 = New System.Windows.Forms.Label
-        Me.btnVitalSigns = New System.Windows.Forms.Button
-        Me.Panel3 = New System.Windows.Forms.Panel
-        Me.dgvHealthMonitor = New System.Windows.Forms.DataGridView
-        Me.lstHealthMonitor = New System.Windows.Forms.ListBox
-        Me.Button2 = New System.Windows.Forms.Button
-        Me.MMChartTVitalSignDataGridView = New System.Windows.Forms.DataGridView
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn20 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn21 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn23 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn24 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn27 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn26 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn25 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1()
+        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
+        Me.MMChartVisitBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripButton4 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel()
+        Me.btnSuperBill = New System.Windows.Forms.ToolStripButton()
+        Me.ChartNumberToolStripLabel = New System.Windows.Forms.ToolStripLabel()
+        Me.ChartNumberToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.CCTab = New System.Windows.Forms.TabPage()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.DataReviewedTextBox = New System.Windows.Forms.TextBox()
+        Me.btnRefreshVitalSigns = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.btnVitalSigns = New System.Windows.Forms.Button()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.dgvHealthMonitor = New System.Windows.Forms.DataGridView()
+        Me.lstHealthMonitor = New System.Windows.Forms.ListBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.MMChartTVitalSignDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn24 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn26 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MMChartTVitalSignBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.GroupBox7 = New System.Windows.Forms.GroupBox
-        Me.AssPr = New System.Windows.Forms.Button
-        Me.RrfPr = New System.Windows.Forms.Button
-        Me.AssignedProviderTextBox = New System.Windows.Forms.TextBox
-        Me.ReferringProviderTextBox = New System.Windows.Forms.TextBox
-        Me.grpPatient = New System.Windows.Forms.GroupBox
-        Me.txtMode = New System.Windows.Forms.Label
-        Me.LabelMode = New System.Windows.Forms.Label
-        Me.cmdRefresh = New System.Windows.Forms.Button
-        Me.DateMaskedTextBox = New System.Windows.Forms.MaskedTextBox
-        Me.txtAge = New System.Windows.Forms.TextBox
-        Me.lblAge = New System.Windows.Forms.Label
-        Me.FacilityTextBox = New System.Windows.Forms.TextBox
-        Me.cmdPatient = New System.Windows.Forms.Button
-        Me.ChartNumberTextBox = New System.Windows.Forms.TextBox
-        Me.VisitTypeComboBox = New System.Windows.Forms.ComboBox
-        Me.DOBTextBox = New System.Windows.Forms.TextBox
-        Me.CaseNumberTextBox = New System.Windows.Forms.TextBox
-        Me.FirstNameTextBox = New System.Windows.Forms.TextBox
-        Me.LastNameTextBox = New System.Windows.Forms.TextBox
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox
-        Me.ChronicConditionsTextBox = New System.Windows.Forms.TextBox
-        Me.ChiefComplaintTextBox = New System.Windows.Forms.TextBox
-        Me.DxPrTestsTab = New System.Windows.Forms.TabPage
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox
-        Me.ImpressionTextBox = New System.Windows.Forms.TextBox
-        Me.Button10 = New System.Windows.Forms.Button
-        Me.Label15 = New System.Windows.Forms.Label
-        Me.btnImpressions = New System.Windows.Forms.Button
-        Me.LblDX = New System.Windows.Forms.Label
-        Me.lblProcedures = New System.Windows.Forms.Label
-        Me.MMCHDxRxLtMtDataGridView = New System.Windows.Forms.DataGridView
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn31 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Amount = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn29 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.InHouse = New System.Windows.Forms.DataGridViewCheckBoxColumn
-        Me.InHouseBilling = New System.Windows.Forms.DataGridViewCheckBoxColumn
+        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.AssPr = New System.Windows.Forms.Button()
+        Me.RrfPr = New System.Windows.Forms.Button()
+        Me.AssignedProviderTextBox = New System.Windows.Forms.TextBox()
+        Me.ReferringProviderTextBox = New System.Windows.Forms.TextBox()
+        Me.grpPatient = New System.Windows.Forms.GroupBox()
+        Me.txtMode = New System.Windows.Forms.Label()
+        Me.LabelMode = New System.Windows.Forms.Label()
+        Me.cmdRefresh = New System.Windows.Forms.Button()
+        Me.DateMaskedTextBox = New System.Windows.Forms.MaskedTextBox()
+        Me.txtAge = New System.Windows.Forms.TextBox()
+        Me.lblAge = New System.Windows.Forms.Label()
+        Me.FacilityTextBox = New System.Windows.Forms.TextBox()
+        Me.cmdPatient = New System.Windows.Forms.Button()
+        Me.ChartNumberTextBox = New System.Windows.Forms.TextBox()
+        Me.VisitTypeComboBox = New System.Windows.Forms.ComboBox()
+        Me.DOBTextBox = New System.Windows.Forms.TextBox()
+        Me.CaseNumberTextBox = New System.Windows.Forms.TextBox()
+        Me.FirstNameTextBox = New System.Windows.Forms.TextBox()
+        Me.LastNameTextBox = New System.Windows.Forms.TextBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.ChronicConditionsTextBox = New System.Windows.Forms.TextBox()
+        Me.ChiefComplaintTextBox = New System.Windows.Forms.TextBox()
+        Me.DxPrTestsTab = New System.Windows.Forms.TabPage()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.ImpressionTextBox = New System.Windows.Forms.TextBox()
+        Me.Button10 = New System.Windows.Forms.Button()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.btnImpressions = New System.Windows.Forms.Button()
+        Me.LblDX = New System.Windows.Forms.Label()
+        Me.lblProcedures = New System.Windows.Forms.Label()
+        Me.MMCHDxRxLtMtDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn31 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Amount = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn29 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.InHouse = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.InHouseBilling = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.MMCHDxRxLtMtBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Dx5DescriptionTextBox = New System.Windows.Forms.TextBox
-        Me.Label9 = New System.Windows.Forms.Label
-        Me.Dx4DescriptionTextBox = New System.Windows.Forms.TextBox
-        Me.Dx3DescriptionTextBox = New System.Windows.Forms.TextBox
-        Me.Dx2DescriptionTextBox = New System.Windows.Forms.TextBox
-        Me.Dx1DescriptionTextBox = New System.Windows.Forms.TextBox
-        Me.TextBoxDx4 = New System.Windows.Forms.TextBox
-        Me.TextBoxDx3 = New System.Windows.Forms.TextBox
-        Me.TextBoxDx2 = New System.Windows.Forms.TextBox
-        Me.TextBoxDx1 = New System.Windows.Forms.TextBox
-        Me.RxTab = New System.Windows.Forms.TabPage
-        Me.SplitContainerInsideRx = New System.Windows.Forms.SplitContainer
-        Me.TabControl2 = New System.Windows.Forms.TabControl
-        Me.TabPage8 = New System.Windows.Forms.TabPage
-        Me.MMChartRxDataGridView = New System.Windows.Forms.DataGridView
-        Me.RXIDDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.MedicationDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DosageDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.NumberOfRefillsDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.QuantityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.StartDateDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.EndDateDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.InstructionsDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.SubstituteOkDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn28 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.SigNatureDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn
-        Me.SignerNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.NeedDEANoDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn
-        Me.ChartNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.OrderingPhysicianIDDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.Dx5DescriptionTextBox = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Dx4DescriptionTextBox = New System.Windows.Forms.TextBox()
+        Me.Dx3DescriptionTextBox = New System.Windows.Forms.TextBox()
+        Me.Dx2DescriptionTextBox = New System.Windows.Forms.TextBox()
+        Me.Dx1DescriptionTextBox = New System.Windows.Forms.TextBox()
+        Me.TextBoxDx4 = New System.Windows.Forms.TextBox()
+        Me.TextBoxDx3 = New System.Windows.Forms.TextBox()
+        Me.TextBoxDx2 = New System.Windows.Forms.TextBox()
+        Me.TextBoxDx1 = New System.Windows.Forms.TextBox()
+        Me.RxTab = New System.Windows.Forms.TabPage()
+        Me.SplitContainerInsideRx = New System.Windows.Forms.SplitContainer()
+        Me.TabControl2 = New System.Windows.Forms.TabControl()
+        Me.TabPage8 = New System.Windows.Forms.TabPage()
+        Me.MMChartRxDataGridView = New System.Windows.Forms.DataGridView()
+        Me.RXIDDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MedicationDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DosageDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NumberOfRefillsDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QuantityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.StartDateDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EndDateDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.InstructionsDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SubstituteOkDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn28 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SigNatureDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.SignerNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NeedDEANoDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.ChartNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.OrderingPhysicianIDDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MMChartRxBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TabPage9 = New System.Windows.Forms.TabPage
-        Me.dgvPreviousMedications = New System.Windows.Forms.DataGridView
-        Me.btnRefreshRX = New System.Windows.Forms.Button
-        Me.NoMedicationsCheckBox = New System.Windows.Forms.CheckBox
-        Me.cmdMedications = New System.Windows.Forms.Button
-        Me.SketchTab = New System.Windows.Forms.TabPage
-        Me.PictureBoxBodySketch = New System.Windows.Forms.PictureBox
-        Me.btnSketch = New System.Windows.Forms.Button
-        Me.VisitDetailsTab = New System.Windows.Forms.TabPage
-        Me.SplitContainerVisitDetails = New System.Windows.Forms.SplitContainer
-        Me.btnRemoveUnusedBrackets = New System.Windows.Forms.Button
-        Me.btnPrintRTB = New System.Windows.Forms.Button
-        Me.Button4 = New System.Windows.Forms.Button
-        Me.Label11 = New System.Windows.Forms.Label
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.cmbSubBracketTemplates = New System.Windows.Forms.ComboBox
-        Me.cmbTemplateNames = New System.Windows.Forms.ComboBox
-        Me.Label16 = New System.Windows.Forms.Label
-        Me.cmdPE = New System.Windows.Forms.Button
-        Me.btnUndo = New System.Windows.Forms.Button
-        Me.btnLoadBrackets = New System.Windows.Forms.Button
-        Me.SplitContainerInsideVisitDetails = New System.Windows.Forms.SplitContainer
-        Me.dgvBrackets = New System.Windows.Forms.DataGridView
-        Me.RichTextBoxFR1 = New ExtendedRichTextBox.RichTextBoxPrintCtrl
-        Me.Button3 = New System.Windows.Forms.Button
-        Me.SignesCheckBox = New System.Windows.Forms.CheckBox
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox
-        Me.RadioButtonTestImaging = New System.Windows.Forms.RadioButton
-        Me.RadioButtonMT = New System.Windows.Forms.RadioButton
-        Me.RadioButtonLT = New System.Windows.Forms.RadioButton
-        Me.RadioButtonPr = New System.Windows.Forms.RadioButton
-        Me.RadioButtonDx = New System.Windows.Forms.RadioButton
-        Me.DataGridViewPr = New System.Windows.Forms.DataGridView
-        Me.TabControl3 = New System.Windows.Forms.TabControl
-        Me.DxPrTestsPickTab = New System.Windows.Forms.TabPage
-        Me.SplitContainer2 = New System.Windows.Forms.SplitContainer
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.radTemplateDX = New System.Windows.Forms.RadioButton
-        Me.txtFind = New System.Windows.Forms.TextBox
-        Me.radMyDx = New System.Windows.Forms.RadioButton
-        Me.cmbFilter = New System.Windows.Forms.ComboBox
-        Me.radAll = New System.Windows.Forms.RadioButton
-        Me.DetailsPickListTab = New System.Windows.Forms.TabPage
-        Me.lblTemplateName = New System.Windows.Forms.Label
-        Me.dgvNewTemplate = New System.Windows.Forms.DataGridView
+        Me.TabPage9 = New System.Windows.Forms.TabPage()
+        Me.dgvPreviousMedications = New System.Windows.Forms.DataGridView()
+        Me.btnRefreshRX = New System.Windows.Forms.Button()
+        Me.NoMedicationsCheckBox = New System.Windows.Forms.CheckBox()
+        Me.cmdMedications = New System.Windows.Forms.Button()
+        Me.SketchTab = New System.Windows.Forms.TabPage()
+        Me.PictureBoxBodySketch = New System.Windows.Forms.PictureBox()
+        Me.btnSketch = New System.Windows.Forms.Button()
+        Me.VisitDetailsTab = New System.Windows.Forms.TabPage()
+        Me.SplitContainerVisitDetails = New System.Windows.Forms.SplitContainer()
+        Me.btnRemoveUnusedBrackets = New System.Windows.Forms.Button()
+        Me.btnPrintRTB = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.cmbSubBracketTemplates = New System.Windows.Forms.ComboBox()
+        Me.cmbTemplateNames = New System.Windows.Forms.ComboBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.cmdPE = New System.Windows.Forms.Button()
+        Me.btnUndo = New System.Windows.Forms.Button()
+        Me.btnLoadBrackets = New System.Windows.Forms.Button()
+        Me.SplitContainerInsideVisitDetails = New System.Windows.Forms.SplitContainer()
+        Me.dgvBrackets = New System.Windows.Forms.DataGridView()
+        Me.RichTextBoxFR1 = New ExtendedRichTextBox.RichTextBoxPrintCtrl()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.SignesCheckBox = New System.Windows.Forms.CheckBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.RadioButtonTestImaging = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonMT = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonLT = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonPr = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonDx = New System.Windows.Forms.RadioButton()
+        Me.DataGridViewPr = New System.Windows.Forms.DataGridView()
+        Me.TabControl3 = New System.Windows.Forms.TabControl()
+        Me.DxPrTestsPickTab = New System.Windows.Forms.TabPage()
+        Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.radTemplateDX = New System.Windows.Forms.RadioButton()
+        Me.txtFind = New System.Windows.Forms.TextBox()
+        Me.radMyDx = New System.Windows.Forms.RadioButton()
+        Me.cmbFilter = New System.Windows.Forms.ComboBox()
+        Me.radAll = New System.Windows.Forms.RadioButton()
+        Me.DetailsPickListTab = New System.Windows.Forms.TabPage()
+        Me.lblTemplateName = New System.Windows.Forms.Label()
+        Me.dgvNewTemplate = New System.Windows.Forms.DataGridView()
         Me.CCProfilesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DprofilesDataSet = New MedicalManager.DprofilesDataSet
-        Me.radCounseling = New System.Windows.Forms.RadioButton
-        Me.radDiet = New System.Windows.Forms.RadioButton
-        Me.radFollowUp = New System.Windows.Forms.RadioButton
-        Me.radOther = New System.Windows.Forms.RadioButton
-        Me.txtCopyDate = New System.Windows.Forms.TextBox
-        Me.txtCopyChartNumber = New System.Windows.Forms.TextBox
-        Me.txtCopyCaseNumber = New System.Windows.Forms.TextBox
-        Me.txtCopyFirstName = New System.Windows.Forms.TextBox
-        Me.txtCopyLastName = New System.Windows.Forms.TextBox
-        Me.radPlan = New System.Windows.Forms.RadioButton
-        Me.radProcedureNotes = New System.Windows.Forms.RadioButton
-        Me.radImpressions = New System.Windows.Forms.RadioButton
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton
-        Me.RadioButton4 = New System.Windows.Forms.RadioButton
-        Me.RadioButton5 = New System.Windows.Forms.RadioButton
-        Me.MMDataDataSet = New MedicalManager.MMDataDataSet
-        Me.CCProfilesTableAdapter = New MedicalManager.DprofilesDataSetTableAdapters.CCProfilesTableAdapter
+        Me.DprofilesDataSet = New MedicalManager.DprofilesDataSet()
+        Me.radCounseling = New System.Windows.Forms.RadioButton()
+        Me.radDiet = New System.Windows.Forms.RadioButton()
+        Me.radFollowUp = New System.Windows.Forms.RadioButton()
+        Me.radOther = New System.Windows.Forms.RadioButton()
+        Me.txtCopyDate = New System.Windows.Forms.TextBox()
+        Me.txtCopyChartNumber = New System.Windows.Forms.TextBox()
+        Me.txtCopyCaseNumber = New System.Windows.Forms.TextBox()
+        Me.txtCopyFirstName = New System.Windows.Forms.TextBox()
+        Me.txtCopyLastName = New System.Windows.Forms.TextBox()
+        Me.radPlan = New System.Windows.Forms.RadioButton()
+        Me.radProcedureNotes = New System.Windows.Forms.RadioButton()
+        Me.radImpressions = New System.Windows.Forms.RadioButton()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton5 = New System.Windows.Forms.RadioButton()
+        Me.MMDataDataSet = New MedicalManager.MMDataDataSet()
+        Me.CCProfilesTableAdapter = New MedicalManager.DprofilesDataSetTableAdapters.CCProfilesTableAdapter()
         Me.CCProfilesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BillingTableAdapter1 = New MedicalManager.ARDataSetTableAdapters.BillingTableAdapter
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.TextBoxReferedTo = New System.Windows.Forms.TextBox
-        Me.TextBoxDiet = New System.Windows.Forms.TextBox
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.TextBoxfollowUp = New System.Windows.Forms.TextBox
-        Me.TextBoxCounselingEducation = New System.Windows.Forms.TextBox
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.btnFollowUp = New System.Windows.Forms.Button
-        Me.btnRefTo = New System.Windows.Forms.Button
-        Me.btnDiet = New System.Windows.Forms.Button
-        Me.SignedByComboBox = New System.Windows.Forms.ComboBox
-        Me.StatusComboBox = New System.Windows.Forms.ComboBox
-        Me.AssignedToComboBox = New System.Windows.Forms.ComboBox
-        Me.UserNameTextBox = New System.Windows.Forms.TextBox
-        Me.btnCounseling = New System.Windows.Forms.Button
-        Me.NotesTestBox = New System.Windows.Forms.TextBox
-        Me.PlanTextBox = New System.Windows.Forms.TextBox
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.btnOtherTxPanel = New System.Windows.Forms.Button
-        Me.btnPlan = New System.Windows.Forms.Button
-        Me.btnProcedureNotes = New System.Windows.Forms.Button
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer
-        Me.SplitContainer3 = New System.Windows.Forms.SplitContainer
+        Me.BillingTableAdapter1 = New MedicalManager.ARDataSetTableAdapters.BillingTableAdapter()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TextBoxReferedTo = New System.Windows.Forms.TextBox()
+        Me.TextBoxDiet = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TextBoxfollowUp = New System.Windows.Forms.TextBox()
+        Me.TextBoxCounselingEducation = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.btnFollowUp = New System.Windows.Forms.Button()
+        Me.btnRefTo = New System.Windows.Forms.Button()
+        Me.btnDiet = New System.Windows.Forms.Button()
+        Me.SignedByComboBox = New System.Windows.Forms.ComboBox()
+        Me.StatusComboBox = New System.Windows.Forms.ComboBox()
+        Me.AssignedToComboBox = New System.Windows.Forms.ComboBox()
+        Me.UserNameTextBox = New System.Windows.Forms.TextBox()
+        Me.btnCounseling = New System.Windows.Forms.Button()
+        Me.NotesTestBox = New System.Windows.Forms.TextBox()
+        Me.PlanTextBox = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.btnOtherTxPanel = New System.Windows.Forms.Button()
+        Me.btnPlan = New System.Windows.Forms.Button()
+        Me.btnProcedureNotes = New System.Windows.Forms.Button()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.SplitContainer3 = New System.Windows.Forms.SplitContainer()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
-        Me.PageSetupDialog1 = New System.Windows.Forms.PageSetupDialog
-        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog
-        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument
+        Me.PageSetupDialog1 = New System.Windows.Forms.PageSetupDialog()
+        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
+        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.MMCHRosAndGenBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MMCHROSandGenCatBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MMChartVisitTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMChartVisitTableAdapter
-        Me.MMCHRosAndGenTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMCHRosAndGenTableAdapter
-        Me.MMCHROSandGenCatTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMCHROSandGenCatTableAdapter
-        Me.MMCHDxRxLtMtTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMCHDxRxLtMtTableAdapter
-        Me.MMChartRxTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMChartRxTableAdapter
-        Me.MMChartTVitalSignTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMChartTVitalSignTableAdapter
+        Me.MMChartVisitTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMChartVisitTableAdapter()
+        Me.MMCHRosAndGenTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMCHRosAndGenTableAdapter()
+        Me.MMCHROSandGenCatTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMCHROSandGenCatTableAdapter()
+        Me.MMCHDxRxLtMtTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMCHDxRxLtMtTableAdapter()
+        Me.MMChartRxTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMChartRxTableAdapter()
+        Me.MMChartTVitalSignTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMChartTVitalSignTableAdapter()
         Me.MMDataDataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MMDataDataSet1BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.MMComboBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MMComboTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMComboTableAdapter
-        VisitTypeLabel = New System.Windows.Forms.Label
-        FacilityLabel = New System.Windows.Forms.Label
-        ChronicConditionsLabel = New System.Windows.Forms.Label
-        ChiefComplaintLabel = New System.Windows.Forms.Label
-        ReferringProviderLabel = New System.Windows.Forms.Label
-        AssignedProviderLabel = New System.Windows.Forms.Label
-        LastNameLabel = New System.Windows.Forms.Label
-        CaseNumberLabel = New System.Windows.Forms.Label
-        DateLabel = New System.Windows.Forms.Label
-        ChartNumberLabel = New System.Windows.Forms.Label
-        DOBLabel = New System.Windows.Forms.Label
-        FirstNameLabel = New System.Windows.Forms.Label
-        TemplateNameLabel = New System.Windows.Forms.Label
-        SignesLabel = New System.Windows.Forms.Label
-        NoMedicationsLabel = New System.Windows.Forms.Label
-        SignedByLabel = New System.Windows.Forms.Label
-        StatusLabel = New System.Windows.Forms.Label
-        AssignedToLabel = New System.Windows.Forms.Label
-        UserNameLabel = New System.Windows.Forms.Label
-        PlanLabel = New System.Windows.Forms.Label
+        Me.MMComboTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMComboTableAdapter()
+        VisitTypeLabel = New System.Windows.Forms.Label()
+        FacilityLabel = New System.Windows.Forms.Label()
+        ChronicConditionsLabel = New System.Windows.Forms.Label()
+        ChiefComplaintLabel = New System.Windows.Forms.Label()
+        ReferringProviderLabel = New System.Windows.Forms.Label()
+        AssignedProviderLabel = New System.Windows.Forms.Label()
+        LastNameLabel = New System.Windows.Forms.Label()
+        CaseNumberLabel = New System.Windows.Forms.Label()
+        DateLabel = New System.Windows.Forms.Label()
+        ChartNumberLabel = New System.Windows.Forms.Label()
+        DOBLabel = New System.Windows.Forms.Label()
+        FirstNameLabel = New System.Windows.Forms.Label()
+        TemplateNameLabel = New System.Windows.Forms.Label()
+        SignesLabel = New System.Windows.Forms.Label()
+        NoMedicationsLabel = New System.Windows.Forms.Label()
+        SignedByLabel = New System.Windows.Forms.Label()
+        StatusLabel = New System.Windows.Forms.Label()
+        AssignedToLabel = New System.Windows.Forms.Label()
+        UserNameLabel = New System.Windows.Forms.Label()
+        PlanLabel = New System.Windows.Forms.Label()
         CType(Me.lblRelievedBy, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.lblRelievedBy.SuspendLayout()
         CType(Me.MMChartVisitBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -335,6 +335,7 @@ Partial Class VisitTemplate
         CType(Me.MMCHDxRxLtMtDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMCHDxRxLtMtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RxTab.SuspendLayout()
+        CType(Me.SplitContainerInsideRx, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainerInsideRx.Panel1.SuspendLayout()
         Me.SplitContainerInsideRx.Panel2.SuspendLayout()
         Me.SplitContainerInsideRx.SuspendLayout()
@@ -347,9 +348,11 @@ Partial Class VisitTemplate
         Me.SketchTab.SuspendLayout()
         CType(Me.PictureBoxBodySketch, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.VisitDetailsTab.SuspendLayout()
+        CType(Me.SplitContainerVisitDetails, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainerVisitDetails.Panel1.SuspendLayout()
         Me.SplitContainerVisitDetails.Panel2.SuspendLayout()
         Me.SplitContainerVisitDetails.SuspendLayout()
+        CType(Me.SplitContainerInsideVisitDetails, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainerInsideVisitDetails.Panel1.SuspendLayout()
         Me.SplitContainerInsideVisitDetails.Panel2.SuspendLayout()
         Me.SplitContainerInsideVisitDetails.SuspendLayout()
@@ -357,6 +360,7 @@ Partial Class VisitTemplate
         CType(Me.DataGridViewPr, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl3.SuspendLayout()
         Me.DxPrTestsPickTab.SuspendLayout()
+        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer2.Panel1.SuspendLayout()
         Me.SplitContainer2.Panel2.SuspendLayout()
         Me.SplitContainer2.SuspendLayout()
@@ -366,9 +370,11 @@ Partial Class VisitTemplate
         CType(Me.DprofilesDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMDataDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CCProfilesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
+        CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer3.Panel1.SuspendLayout()
         Me.SplitContainer3.Panel2.SuspendLayout()
         Me.SplitContainer3.SuspendLayout()
@@ -594,7 +600,7 @@ Partial Class VisitTemplate
         Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(69, 22)
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(74, 22)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
         '
         'MMChartVisitBindingSource
@@ -634,6 +640,7 @@ Partial Class VisitTemplate
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Position"
         Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 21)
         Me.BindingNavigatorPositionItem.Text = "0"
@@ -677,7 +684,7 @@ Partial Class VisitTemplate
         '
         Me.MMChartVisitBindingNavigatorSaveItem.Image = CType(resources.GetObject("MMChartVisitBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.MMChartVisitBindingNavigatorSaveItem.Name = "MMChartVisitBindingNavigatorSaveItem"
-        Me.MMChartVisitBindingNavigatorSaveItem.Size = New System.Drawing.Size(77, 22)
+        Me.MMChartVisitBindingNavigatorSaveItem.Size = New System.Drawing.Size(78, 22)
         Me.MMChartVisitBindingNavigatorSaveItem.Text = "Save Data"
         '
         'ToolStripLabel3
@@ -692,7 +699,7 @@ Partial Class VisitTemplate
         Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
         Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(66, 22)
+        Me.ToolStripButton2.Size = New System.Drawing.Size(71, 22)
         Me.ToolStripButton2.Text = "Visit Report"
         Me.ToolStripButton2.ToolTipText = "Visit Report"
         '
@@ -708,7 +715,7 @@ Partial Class VisitTemplate
         Me.ToolStripButton4.Image = CType(resources.GetObject("ToolStripButton4.Image"), System.Drawing.Image)
         Me.ToolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton4.Name = "ToolStripButton4"
-        Me.ToolStripButton4.Size = New System.Drawing.Size(93, 22)
+        Me.ToolStripButton4.Size = New System.Drawing.Size(98, 22)
         Me.ToolStripButton4.Text = "Active Rx Report"
         Me.ToolStripButton4.ToolTipText = "Report with all Active Meds"
         '
@@ -724,18 +731,19 @@ Partial Class VisitTemplate
         Me.btnSuperBill.Image = CType(resources.GetObject("btnSuperBill.Image"), System.Drawing.Image)
         Me.btnSuperBill.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnSuperBill.Name = "btnSuperBill"
-        Me.btnSuperBill.Size = New System.Drawing.Size(51, 22)
+        Me.btnSuperBill.Size = New System.Drawing.Size(57, 22)
         Me.btnSuperBill.Text = "Superbill"
         '
         'ChartNumberToolStripLabel
         '
         Me.ChartNumberToolStripLabel.Name = "ChartNumberToolStripLabel"
-        Me.ChartNumberToolStripLabel.Size = New System.Drawing.Size(75, 22)
+        Me.ChartNumberToolStripLabel.Size = New System.Drawing.Size(83, 22)
         Me.ChartNumberToolStripLabel.Text = "ChartNumber:"
         Me.ChartNumberToolStripLabel.Visible = False
         '
         'ChartNumberToolStripTextBox
         '
+        Me.ChartNumberToolStripTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ChartNumberToolStripTextBox.Name = "ChartNumberToolStripTextBox"
         Me.ChartNumberToolStripTextBox.Size = New System.Drawing.Size(100, 25)
         Me.ChartNumberToolStripTextBox.Visible = False
@@ -1169,7 +1177,7 @@ Partial Class VisitTemplate
         Me.LabelMode.ForeColor = System.Drawing.SystemColors.Highlight
         Me.LabelMode.Location = New System.Drawing.Point(175, 8)
         Me.LabelMode.Name = "LabelMode"
-        Me.LabelMode.Size = New System.Drawing.Size(47, 16)
+        Me.LabelMode.Size = New System.Drawing.Size(46, 16)
         Me.LabelMode.TabIndex = 132
         Me.LabelMode.Text = "Mode"
         '
@@ -1245,11 +1253,13 @@ Partial Class VisitTemplate
         Me.VisitTypeComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMChartVisitBindingSource, "VisitType", True))
         Me.VisitTypeComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.VisitTypeComboBox.FormattingEnabled = True
+        Me.VisitTypeComboBox.Items.AddRange(New Object() {"OPD", "Admission"})
         Me.VisitTypeComboBox.Location = New System.Drawing.Point(13, 137)
         Me.VisitTypeComboBox.MaxLength = 30
         Me.VisitTypeComboBox.Name = "VisitTypeComboBox"
         Me.VisitTypeComboBox.Size = New System.Drawing.Size(202, 21)
         Me.VisitTypeComboBox.TabIndex = 1
+        Me.VisitTypeComboBox.Text = "OPD"
         '
         'DOBTextBox
         '
@@ -1391,7 +1401,7 @@ Partial Class VisitTemplate
         Me.Label15.ForeColor = System.Drawing.SystemColors.Desktop
         Me.Label15.Location = New System.Drawing.Point(3, 81)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(129, 16)
+        Me.Label15.Size = New System.Drawing.Size(128, 16)
         Me.Label15.TabIndex = 133
         Me.Label15.Text = "Free Text Diagnosis"
         '
@@ -1411,7 +1421,7 @@ Partial Class VisitTemplate
         Me.LblDX.ForeColor = System.Drawing.SystemColors.Desktop
         Me.LblDX.Location = New System.Drawing.Point(1, 13)
         Me.LblDX.Name = "LblDX"
-        Me.LblDX.Size = New System.Drawing.Size(69, 16)
+        Me.LblDX.Size = New System.Drawing.Size(68, 16)
         Me.LblDX.TabIndex = 131
         Me.LblDX.Text = "Diagnosis"
         '
@@ -1423,7 +1433,7 @@ Partial Class VisitTemplate
         Me.lblProcedures.ForeColor = System.Drawing.SystemColors.Desktop
         Me.lblProcedures.Location = New System.Drawing.Point(6, 328)
         Me.lblProcedures.Name = "lblProcedures"
-        Me.lblProcedures.Size = New System.Drawing.Size(78, 16)
+        Me.lblProcedures.Size = New System.Drawing.Size(77, 16)
         Me.lblProcedures.TabIndex = 130
         Me.lblProcedures.Text = "Procedures"
         '
@@ -1587,7 +1597,7 @@ Partial Class VisitTemplate
         Me.Label9.ForeColor = System.Drawing.SystemColors.Desktop
         Me.Label9.Location = New System.Drawing.Point(3, 146)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(81, 16)
+        Me.Label9.Size = New System.Drawing.Size(80, 16)
         Me.Label9.TabIndex = 129
         Me.Label9.Text = "Impressions"
         '
@@ -2140,7 +2150,7 @@ Partial Class VisitTemplate
         Me.RichTextBoxFR1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RichTextBoxFR1.Location = New System.Drawing.Point(0, 0)
         Me.RichTextBoxFR1.Name = "RichTextBoxFR1"
-        Me.RichTextBoxFR1.Size = New System.Drawing.Size(594, 552)
+        Me.RichTextBoxFR1.Size = New System.Drawing.Size(594, 551)
         Me.RichTextBoxFR1.TabIndex = 21
         Me.RichTextBoxFR1.Text = ""
         '
@@ -3051,6 +3061,7 @@ Partial Class VisitTemplate
         Me.SplitContainerInsideRx.Panel1.ResumeLayout(False)
         Me.SplitContainerInsideRx.Panel2.ResumeLayout(False)
         Me.SplitContainerInsideRx.Panel2.PerformLayout()
+        CType(Me.SplitContainerInsideRx, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainerInsideRx.ResumeLayout(False)
         Me.TabControl2.ResumeLayout(False)
         Me.TabPage8.ResumeLayout(False)
@@ -3064,9 +3075,11 @@ Partial Class VisitTemplate
         Me.SplitContainerVisitDetails.Panel1.ResumeLayout(False)
         Me.SplitContainerVisitDetails.Panel1.PerformLayout()
         Me.SplitContainerVisitDetails.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainerVisitDetails, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainerVisitDetails.ResumeLayout(False)
         Me.SplitContainerInsideVisitDetails.Panel1.ResumeLayout(False)
         Me.SplitContainerInsideVisitDetails.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainerInsideVisitDetails, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainerInsideVisitDetails.ResumeLayout(False)
         CType(Me.dgvBrackets, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridViewPr, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3076,6 +3089,7 @@ Partial Class VisitTemplate
         Me.SplitContainer2.Panel1.PerformLayout()
         Me.SplitContainer2.Panel2.ResumeLayout(False)
         Me.SplitContainer2.Panel2.PerformLayout()
+        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer2.ResumeLayout(False)
         Me.DetailsPickListTab.ResumeLayout(False)
         Me.DetailsPickListTab.PerformLayout()
@@ -3086,10 +3100,12 @@ Partial Class VisitTemplate
         CType(Me.CCProfilesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         Me.SplitContainer3.Panel1.ResumeLayout(False)
         Me.SplitContainer3.Panel1.PerformLayout()
         Me.SplitContainer3.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer3.ResumeLayout(False)
         CType(Me.MMCHRosAndGenBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MMCHROSandGenCatBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

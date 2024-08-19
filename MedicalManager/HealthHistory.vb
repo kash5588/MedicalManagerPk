@@ -71,8 +71,10 @@ Public Class HealthHistory
         Me.ReportViewer1.Clear()
         Me.MMCHDxRxLtMtTableAdapter.FillbyCh(Me.MMDataDataSet1.MMCHDxRxLtMt, HChartNumber)
         Me.MMChartRxTableAdapter.FillByChOrderbyStatus(Me.MMDataDataSet1.MMChartRx, HChartNumber)
+        If HChartNumber <> "" Then
+            Me.MMCHHealthHistoryShortTableAdapter.FillbyCh(Me.MMDataDataSet1.MMCHHealthHistoryShort, HChartNumber)
+        End If
 
-        Me.MMCHHealthHistoryShortTableAdapter.FillbyCh(Me.MMDataDataSet1.MMCHHealthHistoryShort, HChartNumber)
 
         If Me.MMCHHealthHistoryShortBindingSource.Count > 0 Then
             BindingNavigatorAddNewItem.Enabled = False

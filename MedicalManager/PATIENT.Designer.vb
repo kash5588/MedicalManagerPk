@@ -20,35 +20,6 @@ Partial Class PATIENT
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim PatientIDLabel As System.Windows.Forms.Label
-        Dim ChartNumberLabel As System.Windows.Forms.Label
-        Dim LastNameLabel As System.Windows.Forms.Label
-        Dim FirstNameLabel As System.Windows.Forms.Label
-        Dim MiddleInitialLabel As System.Windows.Forms.Label
-        Dim Street1Label As System.Windows.Forms.Label
-        Dim Street2Label As System.Windows.Forms.Label
-        Dim CityLabel As System.Windows.Forms.Label
-        Dim StateLabel As System.Windows.Forms.Label
-        Dim ZipCodeLabel As System.Windows.Forms.Label
-        Dim HomeePhoneLabel As System.Windows.Forms.Label
-        Dim CellPhoneLabel As System.Windows.Forms.Label
-        Dim EMailAddressLabel As System.Windows.Forms.Label
-        Dim SocialSecurityNumberLabel As System.Windows.Forms.Label
-        Dim SignatureonFileLabel As System.Windows.Forms.Label
-        Dim PatientTypeLabel As System.Windows.Forms.Label
-        Dim PatientID_2Label As System.Windows.Forms.Label
-        Dim SexLabel As System.Windows.Forms.Label
-        Dim DateofBirthLabel As System.Windows.Forms.Label
-        Dim CountryLabel As System.Windows.Forms.Label
-        Dim WorkPhoneLabel As System.Windows.Forms.Label
-        Dim WorkExtensionLabel As System.Windows.Forms.Label
-        Dim DateCreatedLabel As System.Windows.Forms.Label
-        Dim MstatusLabel As System.Windows.Forms.Label
-        Dim AssignedProviderLabel As System.Windows.Forms.Label
-        Dim NameOfFriendOrRelativeLabel As System.Windows.Forms.Label
-        Dim PhoneLabel As System.Windows.Forms.Label
-        Dim DateChangedLabel As System.Windows.Forms.Label
-        Dim PhysicianOfficeLabel As System.Windows.Forms.Label
         Dim CopaySpecialistLabel As System.Windows.Forms.Label
         Dim CopayOfficeVisitLabel As System.Windows.Forms.Label
         Dim PatInsGP2Label As System.Windows.Forms.Label
@@ -67,7 +38,6 @@ Partial Class PATIENT
         Dim EmployerLabel As System.Windows.Forms.Label
         Dim EmployeeLocationLabel As System.Windows.Forms.Label
         Dim EmployeeRetirementDateLabel As System.Windows.Forms.Label
-        Dim PictureImageLabel As System.Windows.Forms.Label
         Dim SubCellLabel1 As System.Windows.Forms.Label
         Dim SubHomePhoneLabel1 As System.Windows.Forms.Label
         Dim SubZipCodeLabel As System.Windows.Forms.Label
@@ -82,17 +52,46 @@ Partial Class PATIENT
         Dim SubGroupNoLabel As System.Windows.Forms.Label
         Dim SubInsIDLabel As System.Windows.Forms.Label
         Dim RelToSubLabel As System.Windows.Forms.Label
-        Dim UserIdLabel As System.Windows.Forms.Label
-        Dim PatientIndicatorLabel As System.Windows.Forms.Label
-        Dim UserField5Label As System.Windows.Forms.Label
-        Dim BillingCodeLabel As System.Windows.Forms.Label
-        Dim UserField4Label As System.Windows.Forms.Label
-        Dim UserField3Label As System.Windows.Forms.Label
-        Dim PatientReferenceBalanceLabel As System.Windows.Forms.Label
-        Dim LastPaymentAmountLabel As System.Windows.Forms.Label
-        Dim UserField1Label As System.Windows.Forms.Label
-        Dim DateLabel As System.Windows.Forms.Label
         Dim DateofLastPaymentLabel As System.Windows.Forms.Label
+        Dim DateLabel As System.Windows.Forms.Label
+        Dim UserField1Label As System.Windows.Forms.Label
+        Dim LastPaymentAmountLabel As System.Windows.Forms.Label
+        Dim PatientReferenceBalanceLabel As System.Windows.Forms.Label
+        Dim UserField3Label As System.Windows.Forms.Label
+        Dim UserField4Label As System.Windows.Forms.Label
+        Dim BillingCodeLabel As System.Windows.Forms.Label
+        Dim UserField5Label As System.Windows.Forms.Label
+        Dim PatientIndicatorLabel As System.Windows.Forms.Label
+        Dim UserIdLabel As System.Windows.Forms.Label
+        Dim PatientID_2Label As System.Windows.Forms.Label
+        Dim CellPhoneLabel As System.Windows.Forms.Label
+        Dim SocialSecurityNumberLabel As System.Windows.Forms.Label
+        Dim DateofBirthLabel As System.Windows.Forms.Label
+        Dim SexLabel As System.Windows.Forms.Label
+        Dim CityLabel As System.Windows.Forms.Label
+        Dim Street2Label As System.Windows.Forms.Label
+        Dim LastNameLabel As System.Windows.Forms.Label
+        Dim Street1Label As System.Windows.Forms.Label
+        Dim ChartNumberLabel As System.Windows.Forms.Label
+        Dim MiddleInitialLabel As System.Windows.Forms.Label
+        Dim PatientIDLabel As System.Windows.Forms.Label
+        Dim FirstNameLabel As System.Windows.Forms.Label
+        Dim AssignedProviderLabel As System.Windows.Forms.Label
+        Dim DateCreatedLabel As System.Windows.Forms.Label
+        Dim DateChangedLabel As System.Windows.Forms.Label
+        Dim StateLabel As System.Windows.Forms.Label
+        Dim ZipCodeLabel As System.Windows.Forms.Label
+        Dim MstatusLabel As System.Windows.Forms.Label
+        Dim PhysicianOfficeLabel As System.Windows.Forms.Label
+        Dim PhoneLabel As System.Windows.Forms.Label
+        Dim NameOfFriendOrRelativeLabel As System.Windows.Forms.Label
+        Dim SignatureonFileLabel As System.Windows.Forms.Label
+        Dim HomeePhoneLabel As System.Windows.Forms.Label
+        Dim WorkPhoneLabel As System.Windows.Forms.Label
+        Dim EMailAddressLabel As System.Windows.Forms.Label
+        Dim PatientTypeLabel As System.Windows.Forms.Label
+        Dim WorkExtensionLabel As System.Windows.Forms.Label
+        Dim PictureImageLabel As System.Windows.Forms.Label
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -104,61 +103,25 @@ Partial Class PATIENT
         Me.ChartNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MiddleInitialDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Street1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Street2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.StateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ZipCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.HomeePhoneDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CellPhoneDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EMailAddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SocialSecurityNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SignatureonFileDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.PatientTypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PatientID2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SexDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateofBirthDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AssignedProviderDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CountryDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DateofLastPaymentDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LastPaymentAmountDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PatientReferenceBalanceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateCreatedDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmploymentStatusDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmployerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmployeeLocationDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmployeeRetirementDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.WorkPhoneDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.WorkExtensionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SOFDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BillingCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PatientIndicatorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UserField1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UserField2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UserField3DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UserField4DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UserField5DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UserIdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TimeStampDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MMPATIENTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.PhysicianOfficeComboBox = New System.Windows.Forms.ComboBox()
+        Me.BtnSaveAndHistory = New System.Windows.Forms.Button()
+        Me.BtnSaveAndVisit = New System.Windows.Forms.Button()
         Me.DateCreatedDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.DateChangedTextBox = New System.Windows.Forms.TextBox()
         Me.btnPhysician = New System.Windows.Forms.Button()
         Me.MaskedTextBoxDob = New System.Windows.Forms.MaskedTextBox()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
-        Me.NameOfFriendOrRelativeTextBox = New System.Windows.Forms.TextBox()
-        Me.MstatusComboBox = New System.Windows.Forms.ComboBox()
         Me.AssignedProviderTextBox = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.PatientTypeComboBox = New System.Windows.Forms.ComboBox()
+        Me.CBSex = New System.Windows.Forms.ComboBox()
         Me.CellPhoneMaskedTextBox = New System.Windows.Forms.MaskedTextBox()
-        Me.WorkPhoneMaskedTextBox = New System.Windows.Forms.MaskedTextBox()
-        Me.HomeePhoneMaskedTextBox = New System.Windows.Forms.MaskedTextBox()
         Me.CNICTextBox = New System.Windows.Forms.MaskedTextBox()
         Me.FirstNameTextBox = New System.Windows.Forms.TextBox()
         Me.PatientIDTextBox = New System.Windows.Forms.TextBox()
@@ -166,22 +129,29 @@ Partial Class PATIENT
         Me.ChartNumberTextBox = New System.Windows.Forms.TextBox()
         Me.Street1TextBox = New System.Windows.Forms.TextBox()
         Me.LastNameTextBox = New System.Windows.Forms.TextBox()
-        Me.PatientID_2TextBox = New System.Windows.Forms.TextBox()
         Me.Street2TextBox = New System.Windows.Forms.TextBox()
         Me.CityTextBox = New System.Windows.Forms.TextBox()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.WorkPhoneMaskedTextBox = New System.Windows.Forms.MaskedTextBox()
         Me.StateTextBox = New System.Windows.Forms.TextBox()
         Me.ZipCodeTextBox = New System.Windows.Forms.TextBox()
-        Me.CountryTextBox = New System.Windows.Forms.TextBox()
+        Me.MstatusComboBox = New System.Windows.Forms.ComboBox()
+        Me.PhysicianOfficeComboBox = New System.Windows.Forms.ComboBox()
+        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
+        Me.NameOfFriendOrRelativeTextBox = New System.Windows.Forms.TextBox()
+        Me.PatientTypeComboBox = New System.Windows.Forms.ComboBox()
+        Me.HomeePhoneMaskedTextBox = New System.Windows.Forms.MaskedTextBox()
         Me.EMailAddressTextBox = New System.Windows.Forms.TextBox()
         Me.SignatureonFileCheckBox = New System.Windows.Forms.CheckBox()
         Me.WorkExtensionTextBox = New System.Windows.Forms.TextBox()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PatientPicturesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.MMDataDataSet2 = New MedicalManager.MMDataDataSet2()
         Me.btnBrowse = New System.Windows.Forms.Button()
         Me.btnDeletePatient = New System.Windows.Forms.Button()
+        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.TimeStampDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.UserField1TextBox = New System.Windows.Forms.TextBox()
@@ -194,8 +164,8 @@ Partial Class PATIENT
         Me.UserField5TextBox = New System.Windows.Forms.TextBox()
         Me.PatientIndicatorTextBox = New System.Windows.Forms.TextBox()
         Me.UserIdTextBox = New System.Windows.Forms.TextBox()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.PatientID_2TextBox = New System.Windows.Forms.TextBox()
         Me.SubCellMaskedTextBox = New System.Windows.Forms.MaskedTextBox()
         Me.SubHomePhoneMaskedTextBox = New System.Windows.Forms.MaskedTextBox()
         Me.SubZipCodeTextBox = New System.Windows.Forms.TextBox()
@@ -267,35 +237,6 @@ Partial Class PATIENT
         Me.MMPATIENTTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMPATIENTTableAdapter()
         Me.MMComboBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MMComboTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMComboTableAdapter()
-        PatientIDLabel = New System.Windows.Forms.Label()
-        ChartNumberLabel = New System.Windows.Forms.Label()
-        LastNameLabel = New System.Windows.Forms.Label()
-        FirstNameLabel = New System.Windows.Forms.Label()
-        MiddleInitialLabel = New System.Windows.Forms.Label()
-        Street1Label = New System.Windows.Forms.Label()
-        Street2Label = New System.Windows.Forms.Label()
-        CityLabel = New System.Windows.Forms.Label()
-        StateLabel = New System.Windows.Forms.Label()
-        ZipCodeLabel = New System.Windows.Forms.Label()
-        HomeePhoneLabel = New System.Windows.Forms.Label()
-        CellPhoneLabel = New System.Windows.Forms.Label()
-        EMailAddressLabel = New System.Windows.Forms.Label()
-        SocialSecurityNumberLabel = New System.Windows.Forms.Label()
-        SignatureonFileLabel = New System.Windows.Forms.Label()
-        PatientTypeLabel = New System.Windows.Forms.Label()
-        PatientID_2Label = New System.Windows.Forms.Label()
-        SexLabel = New System.Windows.Forms.Label()
-        DateofBirthLabel = New System.Windows.Forms.Label()
-        CountryLabel = New System.Windows.Forms.Label()
-        WorkPhoneLabel = New System.Windows.Forms.Label()
-        WorkExtensionLabel = New System.Windows.Forms.Label()
-        DateCreatedLabel = New System.Windows.Forms.Label()
-        MstatusLabel = New System.Windows.Forms.Label()
-        AssignedProviderLabel = New System.Windows.Forms.Label()
-        NameOfFriendOrRelativeLabel = New System.Windows.Forms.Label()
-        PhoneLabel = New System.Windows.Forms.Label()
-        DateChangedLabel = New System.Windows.Forms.Label()
-        PhysicianOfficeLabel = New System.Windows.Forms.Label()
         CopaySpecialistLabel = New System.Windows.Forms.Label()
         CopayOfficeVisitLabel = New System.Windows.Forms.Label()
         PatInsGP2Label = New System.Windows.Forms.Label()
@@ -314,7 +255,6 @@ Partial Class PATIENT
         EmployerLabel = New System.Windows.Forms.Label()
         EmployeeLocationLabel = New System.Windows.Forms.Label()
         EmployeeRetirementDateLabel = New System.Windows.Forms.Label()
-        PictureImageLabel = New System.Windows.Forms.Label()
         SubCellLabel1 = New System.Windows.Forms.Label()
         SubHomePhoneLabel1 = New System.Windows.Forms.Label()
         SubZipCodeLabel = New System.Windows.Forms.Label()
@@ -329,17 +269,46 @@ Partial Class PATIENT
         SubGroupNoLabel = New System.Windows.Forms.Label()
         SubInsIDLabel = New System.Windows.Forms.Label()
         RelToSubLabel = New System.Windows.Forms.Label()
-        UserIdLabel = New System.Windows.Forms.Label()
-        PatientIndicatorLabel = New System.Windows.Forms.Label()
-        UserField5Label = New System.Windows.Forms.Label()
-        BillingCodeLabel = New System.Windows.Forms.Label()
-        UserField4Label = New System.Windows.Forms.Label()
-        UserField3Label = New System.Windows.Forms.Label()
-        PatientReferenceBalanceLabel = New System.Windows.Forms.Label()
-        LastPaymentAmountLabel = New System.Windows.Forms.Label()
-        UserField1Label = New System.Windows.Forms.Label()
-        DateLabel = New System.Windows.Forms.Label()
         DateofLastPaymentLabel = New System.Windows.Forms.Label()
+        DateLabel = New System.Windows.Forms.Label()
+        UserField1Label = New System.Windows.Forms.Label()
+        LastPaymentAmountLabel = New System.Windows.Forms.Label()
+        PatientReferenceBalanceLabel = New System.Windows.Forms.Label()
+        UserField3Label = New System.Windows.Forms.Label()
+        UserField4Label = New System.Windows.Forms.Label()
+        BillingCodeLabel = New System.Windows.Forms.Label()
+        UserField5Label = New System.Windows.Forms.Label()
+        PatientIndicatorLabel = New System.Windows.Forms.Label()
+        UserIdLabel = New System.Windows.Forms.Label()
+        PatientID_2Label = New System.Windows.Forms.Label()
+        CellPhoneLabel = New System.Windows.Forms.Label()
+        SocialSecurityNumberLabel = New System.Windows.Forms.Label()
+        DateofBirthLabel = New System.Windows.Forms.Label()
+        SexLabel = New System.Windows.Forms.Label()
+        CityLabel = New System.Windows.Forms.Label()
+        Street2Label = New System.Windows.Forms.Label()
+        LastNameLabel = New System.Windows.Forms.Label()
+        Street1Label = New System.Windows.Forms.Label()
+        ChartNumberLabel = New System.Windows.Forms.Label()
+        MiddleInitialLabel = New System.Windows.Forms.Label()
+        PatientIDLabel = New System.Windows.Forms.Label()
+        FirstNameLabel = New System.Windows.Forms.Label()
+        AssignedProviderLabel = New System.Windows.Forms.Label()
+        DateCreatedLabel = New System.Windows.Forms.Label()
+        DateChangedLabel = New System.Windows.Forms.Label()
+        StateLabel = New System.Windows.Forms.Label()
+        ZipCodeLabel = New System.Windows.Forms.Label()
+        MstatusLabel = New System.Windows.Forms.Label()
+        PhysicianOfficeLabel = New System.Windows.Forms.Label()
+        PhoneLabel = New System.Windows.Forms.Label()
+        NameOfFriendOrRelativeLabel = New System.Windows.Forms.Label()
+        SignatureonFileLabel = New System.Windows.Forms.Label()
+        HomeePhoneLabel = New System.Windows.Forms.Label()
+        WorkPhoneLabel = New System.Windows.Forms.Label()
+        EMailAddressLabel = New System.Windows.Forms.Label()
+        PatientTypeLabel = New System.Windows.Forms.Label()
+        WorkExtensionLabel = New System.Windows.Forms.Label()
+        PictureImageLabel = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.dgPatient, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -352,8 +321,8 @@ Partial Class PATIENT
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PatientPicturesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMDataDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox5.SuspendLayout()
         Me.TabPage4.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -364,267 +333,6 @@ Partial Class PATIENT
         CType(Me.PatientPicturesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMComboBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'PatientIDLabel
-        '
-        PatientIDLabel.AutoSize = True
-        PatientIDLabel.Location = New System.Drawing.Point(47, 49)
-        PatientIDLabel.Name = "PatientIDLabel"
-        PatientIDLabel.Size = New System.Drawing.Size(57, 13)
-        PatientIDLabel.TabIndex = 0
-        PatientIDLabel.Text = "Patient ID:"
-        '
-        'ChartNumberLabel
-        '
-        ChartNumberLabel.AutoSize = True
-        ChartNumberLabel.Location = New System.Drawing.Point(29, 80)
-        ChartNumberLabel.Name = "ChartNumberLabel"
-        ChartNumberLabel.Size = New System.Drawing.Size(75, 13)
-        ChartNumberLabel.TabIndex = 2
-        ChartNumberLabel.Text = "Chart Number:"
-        '
-        'LastNameLabel
-        '
-        LastNameLabel.AutoSize = True
-        LastNameLabel.Location = New System.Drawing.Point(43, 142)
-        LastNameLabel.Name = "LastNameLabel"
-        LastNameLabel.Size = New System.Drawing.Size(61, 13)
-        LastNameLabel.TabIndex = 4
-        LastNameLabel.Text = "Last Name:"
-        '
-        'FirstNameLabel
-        '
-        FirstNameLabel.AutoSize = True
-        FirstNameLabel.Location = New System.Drawing.Point(44, 111)
-        FirstNameLabel.Name = "FirstNameLabel"
-        FirstNameLabel.Size = New System.Drawing.Size(60, 13)
-        FirstNameLabel.TabIndex = 6
-        FirstNameLabel.Text = "First Name:"
-        '
-        'MiddleInitialLabel
-        '
-        MiddleInitialLabel.AutoSize = True
-        MiddleInitialLabel.Location = New System.Drawing.Point(286, 146)
-        MiddleInitialLabel.Name = "MiddleInitialLabel"
-        MiddleInitialLabel.Size = New System.Drawing.Size(22, 13)
-        MiddleInitialLabel.TabIndex = 8
-        MiddleInitialLabel.Text = "MI:"
-        '
-        'Street1Label
-        '
-        Street1Label.AutoSize = True
-        Street1Label.Location = New System.Drawing.Point(47, 266)
-        Street1Label.Name = "Street1Label"
-        Street1Label.Size = New System.Drawing.Size(57, 13)
-        Street1Label.TabIndex = 10
-        Street1Label.Text = "Address 1:"
-        '
-        'Street2Label
-        '
-        Street2Label.AutoSize = True
-        Street2Label.Location = New System.Drawing.Point(47, 297)
-        Street2Label.Name = "Street2Label"
-        Street2Label.Size = New System.Drawing.Size(57, 13)
-        Street2Label.TabIndex = 12
-        Street2Label.Text = "Address 2:"
-        '
-        'CityLabel
-        '
-        CityLabel.AutoSize = True
-        CityLabel.Location = New System.Drawing.Point(77, 328)
-        CityLabel.Name = "CityLabel"
-        CityLabel.Size = New System.Drawing.Size(27, 13)
-        CityLabel.TabIndex = 14
-        CityLabel.Text = "City:"
-        '
-        'StateLabel
-        '
-        StateLabel.AutoSize = True
-        StateLabel.Location = New System.Drawing.Point(69, 359)
-        StateLabel.Name = "StateLabel"
-        StateLabel.Size = New System.Drawing.Size(35, 13)
-        StateLabel.TabIndex = 16
-        StateLabel.Text = "State:"
-        '
-        'ZipCodeLabel
-        '
-        ZipCodeLabel.AutoSize = True
-        ZipCodeLabel.Location = New System.Drawing.Point(205, 360)
-        ZipCodeLabel.Name = "ZipCodeLabel"
-        ZipCodeLabel.Size = New System.Drawing.Size(53, 13)
-        ZipCodeLabel.TabIndex = 18
-        ZipCodeLabel.Text = "Zip Code:"
-        '
-        'HomeePhoneLabel
-        '
-        HomeePhoneLabel.AutoSize = True
-        HomeePhoneLabel.Location = New System.Drawing.Point(454, 109)
-        HomeePhoneLabel.Name = "HomeePhoneLabel"
-        HomeePhoneLabel.Size = New System.Drawing.Size(72, 13)
-        HomeePhoneLabel.TabIndex = 20
-        HomeePhoneLabel.Text = "Home Phone:"
-        '
-        'CellPhoneLabel
-        '
-        CellPhoneLabel.AutoSize = True
-        CellPhoneLabel.Location = New System.Drawing.Point(465, 202)
-        CellPhoneLabel.Name = "CellPhoneLabel"
-        CellPhoneLabel.Size = New System.Drawing.Size(61, 13)
-        CellPhoneLabel.TabIndex = 22
-        CellPhoneLabel.Text = "Cell Phone:"
-        '
-        'EMailAddressLabel
-        '
-        EMailAddressLabel.AutoSize = True
-        EMailAddressLabel.Location = New System.Drawing.Point(449, 233)
-        EMailAddressLabel.Name = "EMailAddressLabel"
-        EMailAddressLabel.Size = New System.Drawing.Size(77, 13)
-        EMailAddressLabel.TabIndex = 24
-        EMailAddressLabel.Text = "EMail Address:"
-        '
-        'SocialSecurityNumberLabel
-        '
-        SocialSecurityNumberLabel.AutoSize = True
-        SocialSecurityNumberLabel.Location = New System.Drawing.Point(70, 235)
-        SocialSecurityNumberLabel.Name = "SocialSecurityNumberLabel"
-        SocialSecurityNumberLabel.Size = New System.Drawing.Size(35, 13)
-        SocialSecurityNumberLabel.TabIndex = 26
-        SocialSecurityNumberLabel.Text = "CNIC:"
-        '
-        'SignatureonFileLabel
-        '
-        SignatureonFileLabel.AutoSize = True
-        SignatureonFileLabel.Location = New System.Drawing.Point(437, 267)
-        SignatureonFileLabel.Name = "SignatureonFileLabel"
-        SignatureonFileLabel.Size = New System.Drawing.Size(89, 13)
-        SignatureonFileLabel.TabIndex = 28
-        SignatureonFileLabel.Text = "Signature on File:"
-        '
-        'PatientTypeLabel
-        '
-        PatientTypeLabel.AutoSize = True
-        PatientTypeLabel.Location = New System.Drawing.Point(456, 298)
-        PatientTypeLabel.Name = "PatientTypeLabel"
-        PatientTypeLabel.Size = New System.Drawing.Size(70, 13)
-        PatientTypeLabel.TabIndex = 30
-        PatientTypeLabel.Text = "Patient Type:"
-        '
-        'PatientID_2Label
-        '
-        PatientID_2Label.AutoSize = True
-        PatientID_2Label.Location = New System.Drawing.Point(204, 84)
-        PatientID_2Label.Name = "PatientID_2Label"
-        PatientID_2Label.Size = New System.Drawing.Size(63, 13)
-        PatientID_2Label.TabIndex = 32
-        PatientID_2Label.Text = "Patient ID2:"
-        '
-        'SexLabel
-        '
-        SexLabel.AutoSize = True
-        SexLabel.Location = New System.Drawing.Point(225, 177)
-        SexLabel.Name = "SexLabel"
-        SexLabel.Size = New System.Drawing.Size(28, 13)
-        SexLabel.TabIndex = 34
-        SexLabel.Text = "Sex:"
-        '
-        'DateofBirthLabel
-        '
-        DateofBirthLabel.AutoSize = True
-        DateofBirthLabel.Location = New System.Drawing.Point(35, 173)
-        DateofBirthLabel.Name = "DateofBirthLabel"
-        DateofBirthLabel.Size = New System.Drawing.Size(69, 13)
-        DateofBirthLabel.TabIndex = 36
-        DateofBirthLabel.Text = "Date of Birth:"
-        '
-        'CountryLabel
-        '
-        CountryLabel.AutoSize = True
-        CountryLabel.Location = New System.Drawing.Point(483, 78)
-        CountryLabel.Name = "CountryLabel"
-        CountryLabel.Size = New System.Drawing.Size(43, 13)
-        CountryLabel.TabIndex = 40
-        CountryLabel.Text = "County:"
-        '
-        'WorkPhoneLabel
-        '
-        WorkPhoneLabel.AutoSize = True
-        WorkPhoneLabel.Location = New System.Drawing.Point(456, 140)
-        WorkPhoneLabel.Name = "WorkPhoneLabel"
-        WorkPhoneLabel.Size = New System.Drawing.Size(70, 13)
-        WorkPhoneLabel.TabIndex = 58
-        WorkPhoneLabel.Text = "Work Phone:"
-        '
-        'WorkExtensionLabel
-        '
-        WorkExtensionLabel.AutoSize = True
-        WorkExtensionLabel.Location = New System.Drawing.Point(501, 171)
-        WorkExtensionLabel.Name = "WorkExtensionLabel"
-        WorkExtensionLabel.Size = New System.Drawing.Size(25, 13)
-        WorkExtensionLabel.TabIndex = 60
-        WorkExtensionLabel.Text = "Ext:"
-        '
-        'DateCreatedLabel
-        '
-        DateCreatedLabel.AutoSize = True
-        DateCreatedLabel.Location = New System.Drawing.Point(31, 392)
-        DateCreatedLabel.Name = "DateCreatedLabel"
-        DateCreatedLabel.Size = New System.Drawing.Size(73, 13)
-        DateCreatedLabel.TabIndex = 48
-        DateCreatedLabel.Text = "Date Created:"
-        '
-        'MstatusLabel
-        '
-        MstatusLabel.AutoSize = True
-        MstatusLabel.Location = New System.Drawing.Point(54, 204)
-        MstatusLabel.Name = "MstatusLabel"
-        MstatusLabel.Size = New System.Drawing.Size(50, 13)
-        MstatusLabel.TabIndex = 60
-        MstatusLabel.Text = "M status:"
-        '
-        'AssignedProviderLabel
-        '
-        AssignedProviderLabel.AutoSize = True
-        AssignedProviderLabel.Location = New System.Drawing.Point(431, 47)
-        AssignedProviderLabel.Name = "AssignedProviderLabel"
-        AssignedProviderLabel.Size = New System.Drawing.Size(95, 13)
-        AssignedProviderLabel.TabIndex = 82
-        AssignedProviderLabel.Text = "Assigned Provider:"
-        '
-        'NameOfFriendOrRelativeLabel
-        '
-        NameOfFriendOrRelativeLabel.AutoSize = True
-        NameOfFriendOrRelativeLabel.Location = New System.Drawing.Point(386, 331)
-        NameOfFriendOrRelativeLabel.Name = "NameOfFriendOrRelativeLabel"
-        NameOfFriendOrRelativeLabel.Size = New System.Drawing.Size(140, 13)
-        NameOfFriendOrRelativeLabel.TabIndex = 87
-        NameOfFriendOrRelativeLabel.Text = "Name Of Friend Or Relative:"
-        '
-        'PhoneLabel
-        '
-        PhoneLabel.AutoSize = True
-        PhoneLabel.Location = New System.Drawing.Point(443, 362)
-        PhoneLabel.Name = "PhoneLabel"
-        PhoneLabel.Size = New System.Drawing.Size(83, 13)
-        PhoneLabel.TabIndex = 88
-        PhoneLabel.Text = "Relative Phone:"
-        '
-        'DateChangedLabel
-        '
-        DateChangedLabel.AutoSize = True
-        DateChangedLabel.Location = New System.Drawing.Point(26, 423)
-        DateChangedLabel.Name = "DateChangedLabel"
-        DateChangedLabel.Size = New System.Drawing.Size(79, 13)
-        DateChangedLabel.TabIndex = 26
-        DateChangedLabel.Text = "Date Changed:"
-        '
-        'PhysicianOfficeLabel
-        '
-        PhysicianOfficeLabel.AutoSize = True
-        PhysicianOfficeLabel.Location = New System.Drawing.Point(442, 395)
-        PhysicianOfficeLabel.Name = "PhysicianOfficeLabel"
-        PhysicianOfficeLabel.Size = New System.Drawing.Size(86, 13)
-        PhysicianOfficeLabel.TabIndex = 89
-        PhysicianOfficeLabel.Text = "Physician Office:"
         '
         'CopaySpecialistLabel
         '
@@ -788,15 +496,6 @@ Partial Class PATIENT
         EmployeeRetirementDateLabel.TabIndex = 56
         EmployeeRetirementDateLabel.Text = "Employee Retirement Date:"
         '
-        'PictureImageLabel
-        '
-        PictureImageLabel.AutoSize = True
-        PictureImageLabel.Location = New System.Drawing.Point(62, 11)
-        PictureImageLabel.Name = "PictureImageLabel"
-        PictureImageLabel.Size = New System.Drawing.Size(43, 26)
-        PictureImageLabel.TabIndex = 94
-        PictureImageLabel.Text = "Patient" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Picture:"
-        '
         'SubCellLabel1
         '
         SubCellLabel1.AutoSize = True
@@ -923,81 +622,23 @@ Partial Class PATIENT
         RelToSubLabel.TabIndex = 0
         RelToSubLabel.Text = "Rel To Sub:"
         '
-        'UserIdLabel
+        'DateofLastPaymentLabel
         '
-        UserIdLabel.AutoSize = True
-        UserIdLabel.Location = New System.Drawing.Point(333, 152)
-        UserIdLabel.Name = "UserIdLabel"
-        UserIdLabel.Size = New System.Drawing.Size(44, 13)
-        UserIdLabel.TabIndex = 90
-        UserIdLabel.Text = "User Id:"
-        UserIdLabel.Visible = False
+        DateofLastPaymentLabel.AutoSize = True
+        DateofLastPaymentLabel.Location = New System.Drawing.Point(29, 75)
+        DateofLastPaymentLabel.Name = "DateofLastPaymentLabel"
+        DateofLastPaymentLabel.Size = New System.Drawing.Size(112, 13)
+        DateofLastPaymentLabel.TabIndex = 42
+        DateofLastPaymentLabel.Text = "Date of Last Payment:"
         '
-        'PatientIndicatorLabel
+        'DateLabel
         '
-        PatientIndicatorLabel.AutoSize = True
-        PatientIndicatorLabel.Location = New System.Drawing.Point(54, 47)
-        PatientIndicatorLabel.Name = "PatientIndicatorLabel"
-        PatientIndicatorLabel.Size = New System.Drawing.Size(87, 13)
-        PatientIndicatorLabel.TabIndex = 66
-        PatientIndicatorLabel.Text = "Patient Indicator:"
-        '
-        'UserField5Label
-        '
-        UserField5Label.AutoSize = True
-        UserField5Label.Location = New System.Drawing.Point(314, 126)
-        UserField5Label.Name = "UserField5Label"
-        UserField5Label.Size = New System.Drawing.Size(63, 13)
-        UserField5Label.TabIndex = 88
-        UserField5Label.Text = "User Field5:"
-        UserField5Label.Visible = False
-        '
-        'BillingCodeLabel
-        '
-        BillingCodeLabel.AutoSize = True
-        BillingCodeLabel.Location = New System.Drawing.Point(76, 22)
-        BillingCodeLabel.Name = "BillingCodeLabel"
-        BillingCodeLabel.Size = New System.Drawing.Size(65, 13)
-        BillingCodeLabel.TabIndex = 64
-        BillingCodeLabel.Text = "Billing Code:"
-        '
-        'UserField4Label
-        '
-        UserField4Label.AutoSize = True
-        UserField4Label.Location = New System.Drawing.Point(314, 100)
-        UserField4Label.Name = "UserField4Label"
-        UserField4Label.Size = New System.Drawing.Size(63, 13)
-        UserField4Label.TabIndex = 86
-        UserField4Label.Text = "User Field4:"
-        UserField4Label.Visible = False
-        '
-        'UserField3Label
-        '
-        UserField3Label.AutoSize = True
-        UserField3Label.Location = New System.Drawing.Point(314, 74)
-        UserField3Label.Name = "UserField3Label"
-        UserField3Label.Size = New System.Drawing.Size(63, 13)
-        UserField3Label.TabIndex = 84
-        UserField3Label.Text = "User Field3:"
-        UserField3Label.Visible = False
-        '
-        'PatientReferenceBalanceLabel
-        '
-        PatientReferenceBalanceLabel.AutoSize = True
-        PatientReferenceBalanceLabel.Location = New System.Drawing.Point(26, 127)
-        PatientReferenceBalanceLabel.Name = "PatientReferenceBalanceLabel"
-        PatientReferenceBalanceLabel.Size = New System.Drawing.Size(115, 13)
-        PatientReferenceBalanceLabel.TabIndex = 46
-        PatientReferenceBalanceLabel.Text = "Pt Reference Balance:"
-        '
-        'LastPaymentAmountLabel
-        '
-        LastPaymentAmountLabel.AutoSize = True
-        LastPaymentAmountLabel.Location = New System.Drawing.Point(28, 100)
-        LastPaymentAmountLabel.Name = "LastPaymentAmountLabel"
-        LastPaymentAmountLabel.Size = New System.Drawing.Size(113, 13)
-        LastPaymentAmountLabel.TabIndex = 44
-        LastPaymentAmountLabel.Text = "Last Payment Amount:"
+        DateLabel.AutoSize = True
+        DateLabel.Location = New System.Drawing.Point(109, 149)
+        DateLabel.Name = "DateLabel"
+        DateLabel.Size = New System.Drawing.Size(33, 13)
+        DateLabel.TabIndex = 89
+        DateLabel.Text = "Date:"
         '
         'UserField1Label
         '
@@ -1009,23 +650,342 @@ Partial Class PATIENT
         UserField1Label.Text = "UserField1"
         UserField1Label.Visible = False
         '
-        'DateLabel
+        'LastPaymentAmountLabel
         '
-        DateLabel.AutoSize = True
-        DateLabel.Location = New System.Drawing.Point(109, 149)
-        DateLabel.Name = "DateLabel"
-        DateLabel.Size = New System.Drawing.Size(33, 13)
-        DateLabel.TabIndex = 89
-        DateLabel.Text = "Date:"
+        LastPaymentAmountLabel.AutoSize = True
+        LastPaymentAmountLabel.Location = New System.Drawing.Point(28, 100)
+        LastPaymentAmountLabel.Name = "LastPaymentAmountLabel"
+        LastPaymentAmountLabel.Size = New System.Drawing.Size(113, 13)
+        LastPaymentAmountLabel.TabIndex = 44
+        LastPaymentAmountLabel.Text = "Last Payment Amount:"
         '
-        'DateofLastPaymentLabel
+        'PatientReferenceBalanceLabel
         '
-        DateofLastPaymentLabel.AutoSize = True
-        DateofLastPaymentLabel.Location = New System.Drawing.Point(29, 75)
-        DateofLastPaymentLabel.Name = "DateofLastPaymentLabel"
-        DateofLastPaymentLabel.Size = New System.Drawing.Size(112, 13)
-        DateofLastPaymentLabel.TabIndex = 42
-        DateofLastPaymentLabel.Text = "Date of Last Payment:"
+        PatientReferenceBalanceLabel.AutoSize = True
+        PatientReferenceBalanceLabel.Location = New System.Drawing.Point(26, 127)
+        PatientReferenceBalanceLabel.Name = "PatientReferenceBalanceLabel"
+        PatientReferenceBalanceLabel.Size = New System.Drawing.Size(115, 13)
+        PatientReferenceBalanceLabel.TabIndex = 46
+        PatientReferenceBalanceLabel.Text = "Pt Reference Balance:"
+        '
+        'UserField3Label
+        '
+        UserField3Label.AutoSize = True
+        UserField3Label.Location = New System.Drawing.Point(314, 74)
+        UserField3Label.Name = "UserField3Label"
+        UserField3Label.Size = New System.Drawing.Size(63, 13)
+        UserField3Label.TabIndex = 84
+        UserField3Label.Text = "User Field3:"
+        UserField3Label.Visible = False
+        '
+        'UserField4Label
+        '
+        UserField4Label.AutoSize = True
+        UserField4Label.Location = New System.Drawing.Point(314, 100)
+        UserField4Label.Name = "UserField4Label"
+        UserField4Label.Size = New System.Drawing.Size(63, 13)
+        UserField4Label.TabIndex = 86
+        UserField4Label.Text = "User Field4:"
+        UserField4Label.Visible = False
+        '
+        'BillingCodeLabel
+        '
+        BillingCodeLabel.AutoSize = True
+        BillingCodeLabel.Location = New System.Drawing.Point(76, 22)
+        BillingCodeLabel.Name = "BillingCodeLabel"
+        BillingCodeLabel.Size = New System.Drawing.Size(65, 13)
+        BillingCodeLabel.TabIndex = 64
+        BillingCodeLabel.Text = "Billing Code:"
+        '
+        'UserField5Label
+        '
+        UserField5Label.AutoSize = True
+        UserField5Label.Location = New System.Drawing.Point(314, 126)
+        UserField5Label.Name = "UserField5Label"
+        UserField5Label.Size = New System.Drawing.Size(63, 13)
+        UserField5Label.TabIndex = 88
+        UserField5Label.Text = "User Field5:"
+        UserField5Label.Visible = False
+        '
+        'PatientIndicatorLabel
+        '
+        PatientIndicatorLabel.AutoSize = True
+        PatientIndicatorLabel.Location = New System.Drawing.Point(54, 47)
+        PatientIndicatorLabel.Name = "PatientIndicatorLabel"
+        PatientIndicatorLabel.Size = New System.Drawing.Size(87, 13)
+        PatientIndicatorLabel.TabIndex = 66
+        PatientIndicatorLabel.Text = "Patient Indicator:"
+        '
+        'UserIdLabel
+        '
+        UserIdLabel.AutoSize = True
+        UserIdLabel.Location = New System.Drawing.Point(333, 152)
+        UserIdLabel.Name = "UserIdLabel"
+        UserIdLabel.Size = New System.Drawing.Size(44, 13)
+        UserIdLabel.TabIndex = 90
+        UserIdLabel.Text = "User Id:"
+        UserIdLabel.Visible = False
+        '
+        'PatientID_2Label
+        '
+        PatientID_2Label.AutoSize = True
+        PatientID_2Label.Location = New System.Drawing.Point(692, 72)
+        PatientID_2Label.Name = "PatientID_2Label"
+        PatientID_2Label.Size = New System.Drawing.Size(63, 13)
+        PatientID_2Label.TabIndex = 85
+        PatientID_2Label.Text = "Patient ID2:"
+        '
+        'CellPhoneLabel
+        '
+        CellPhoneLabel.AutoSize = True
+        CellPhoneLabel.Location = New System.Drawing.Point(209, 208)
+        CellPhoneLabel.Name = "CellPhoneLabel"
+        CellPhoneLabel.Size = New System.Drawing.Size(70, 15)
+        CellPhoneLabel.TabIndex = 22
+        CellPhoneLabel.Text = "Cell Phone:"
+        '
+        'SocialSecurityNumberLabel
+        '
+        SocialSecurityNumberLabel.AutoSize = True
+        SocialSecurityNumberLabel.Location = New System.Drawing.Point(238, 249)
+        SocialSecurityNumberLabel.Name = "SocialSecurityNumberLabel"
+        SocialSecurityNumberLabel.Size = New System.Drawing.Size(38, 15)
+        SocialSecurityNumberLabel.TabIndex = 26
+        SocialSecurityNumberLabel.Text = "CNIC:"
+        '
+        'DateofBirthLabel
+        '
+        DateofBirthLabel.AutoSize = True
+        DateofBirthLabel.Location = New System.Drawing.Point(203, 171)
+        DateofBirthLabel.Name = "DateofBirthLabel"
+        DateofBirthLabel.Size = New System.Drawing.Size(77, 15)
+        DateofBirthLabel.TabIndex = 36
+        DateofBirthLabel.Text = "Date of Birth:"
+        '
+        'SexLabel
+        '
+        SexLabel.AutoSize = True
+        SexLabel.Location = New System.Drawing.Point(398, 171)
+        SexLabel.Name = "SexLabel"
+        SexLabel.Size = New System.Drawing.Size(31, 15)
+        SexLabel.TabIndex = 34
+        SexLabel.Text = "Sex:"
+        '
+        'CityLabel
+        '
+        CityLabel.AutoSize = True
+        CityLabel.Location = New System.Drawing.Point(245, 368)
+        CityLabel.Name = "CityLabel"
+        CityLabel.Size = New System.Drawing.Size(29, 15)
+        CityLabel.TabIndex = 14
+        CityLabel.Text = "City:"
+        '
+        'Street2Label
+        '
+        Street2Label.AutoSize = True
+        Street2Label.Location = New System.Drawing.Point(215, 327)
+        Street2Label.Name = "Street2Label"
+        Street2Label.Size = New System.Drawing.Size(64, 15)
+        Street2Label.TabIndex = 12
+        Street2Label.Text = "Address 2:"
+        '
+        'LastNameLabel
+        '
+        LastNameLabel.AutoSize = True
+        LastNameLabel.Location = New System.Drawing.Point(211, 132)
+        LastNameLabel.Name = "LastNameLabel"
+        LastNameLabel.Size = New System.Drawing.Size(70, 15)
+        LastNameLabel.TabIndex = 4
+        LastNameLabel.Text = "Last Name:"
+        '
+        'Street1Label
+        '
+        Street1Label.AutoSize = True
+        Street1Label.Location = New System.Drawing.Point(215, 288)
+        Street1Label.Name = "Street1Label"
+        Street1Label.Size = New System.Drawing.Size(64, 15)
+        Street1Label.TabIndex = 10
+        Street1Label.Text = "Address 1:"
+        '
+        'ChartNumberLabel
+        '
+        ChartNumberLabel.AutoSize = True
+        ChartNumberLabel.Location = New System.Drawing.Point(372, 49)
+        ChartNumberLabel.Name = "ChartNumberLabel"
+        ChartNumberLabel.Size = New System.Drawing.Size(60, 15)
+        ChartNumberLabel.TabIndex = 2
+        ChartNumberLabel.Text = "Chart NO:"
+        '
+        'MiddleInitialLabel
+        '
+        MiddleInitialLabel.AutoSize = True
+        MiddleInitialLabel.Location = New System.Drawing.Point(459, 134)
+        MiddleInitialLabel.Name = "MiddleInitialLabel"
+        MiddleInitialLabel.Size = New System.Drawing.Size(24, 15)
+        MiddleInitialLabel.TabIndex = 8
+        MiddleInitialLabel.Text = "MI:"
+        '
+        'PatientIDLabel
+        '
+        PatientIDLabel.AutoSize = True
+        PatientIDLabel.Location = New System.Drawing.Point(215, 49)
+        PatientIDLabel.Name = "PatientIDLabel"
+        PatientIDLabel.Size = New System.Drawing.Size(63, 15)
+        PatientIDLabel.TabIndex = 0
+        PatientIDLabel.Text = "Patient ID:"
+        '
+        'FirstNameLabel
+        '
+        FirstNameLabel.AutoSize = True
+        FirstNameLabel.Location = New System.Drawing.Point(212, 93)
+        FirstNameLabel.Name = "FirstNameLabel"
+        FirstNameLabel.Size = New System.Drawing.Size(70, 15)
+        FirstNameLabel.TabIndex = 6
+        FirstNameLabel.Text = "First Name:"
+        '
+        'AssignedProviderLabel
+        '
+        AssignedProviderLabel.AutoSize = True
+        AssignedProviderLabel.Location = New System.Drawing.Point(175, 404)
+        AssignedProviderLabel.Name = "AssignedProviderLabel"
+        AssignedProviderLabel.Size = New System.Drawing.Size(108, 15)
+        AssignedProviderLabel.TabIndex = 82
+        AssignedProviderLabel.Text = "Assigned Provider:"
+        '
+        'DateCreatedLabel
+        '
+        DateCreatedLabel.AutoSize = True
+        DateCreatedLabel.Location = New System.Drawing.Point(199, 446)
+        DateCreatedLabel.Name = "DateCreatedLabel"
+        DateCreatedLabel.Size = New System.Drawing.Size(82, 15)
+        DateCreatedLabel.TabIndex = 48
+        DateCreatedLabel.Text = "Date Created:"
+        '
+        'DateChangedLabel
+        '
+        DateChangedLabel.AutoSize = True
+        DateChangedLabel.Location = New System.Drawing.Point(194, 485)
+        DateChangedLabel.Name = "DateChangedLabel"
+        DateChangedLabel.Size = New System.Drawing.Size(89, 15)
+        DateChangedLabel.TabIndex = 26
+        DateChangedLabel.Text = "Date Changed:"
+        '
+        'StateLabel
+        '
+        StateLabel.AutoSize = True
+        StateLabel.Location = New System.Drawing.Point(90, 97)
+        StateLabel.Name = "StateLabel"
+        StateLabel.Size = New System.Drawing.Size(35, 13)
+        StateLabel.TabIndex = 144
+        StateLabel.Text = "State:"
+        '
+        'ZipCodeLabel
+        '
+        ZipCodeLabel.AutoSize = True
+        ZipCodeLabel.Location = New System.Drawing.Point(224, 97)
+        ZipCodeLabel.Name = "ZipCodeLabel"
+        ZipCodeLabel.Size = New System.Drawing.Size(53, 13)
+        ZipCodeLabel.TabIndex = 145
+        ZipCodeLabel.Text = "Zip Code:"
+        '
+        'MstatusLabel
+        '
+        MstatusLabel.AutoSize = True
+        MstatusLabel.Location = New System.Drawing.Point(75, 52)
+        MstatusLabel.Name = "MstatusLabel"
+        MstatusLabel.Size = New System.Drawing.Size(50, 13)
+        MstatusLabel.TabIndex = 141
+        MstatusLabel.Text = "M status:"
+        '
+        'PhysicianOfficeLabel
+        '
+        PhysicianOfficeLabel.AutoSize = True
+        PhysicianOfficeLabel.Location = New System.Drawing.Point(39, 404)
+        PhysicianOfficeLabel.Name = "PhysicianOfficeLabel"
+        PhysicianOfficeLabel.Size = New System.Drawing.Size(86, 13)
+        PhysicianOfficeLabel.TabIndex = 139
+        PhysicianOfficeLabel.Text = "Physician Office:"
+        '
+        'PhoneLabel
+        '
+        PhoneLabel.AutoSize = True
+        PhoneLabel.Location = New System.Drawing.Point(527, 95)
+        PhoneLabel.Name = "PhoneLabel"
+        PhoneLabel.Size = New System.Drawing.Size(83, 13)
+        PhoneLabel.TabIndex = 138
+        PhoneLabel.Text = "Relative Phone:"
+        '
+        'NameOfFriendOrRelativeLabel
+        '
+        NameOfFriendOrRelativeLabel.AutoSize = True
+        NameOfFriendOrRelativeLabel.Location = New System.Drawing.Point(470, 53)
+        NameOfFriendOrRelativeLabel.Name = "NameOfFriendOrRelativeLabel"
+        NameOfFriendOrRelativeLabel.Size = New System.Drawing.Size(140, 13)
+        NameOfFriendOrRelativeLabel.TabIndex = 137
+        NameOfFriendOrRelativeLabel.Text = "Name Of Friend Or Relative:"
+        '
+        'SignatureonFileLabel
+        '
+        SignatureonFileLabel.AutoSize = True
+        SignatureonFileLabel.Location = New System.Drawing.Point(34, 356)
+        SignatureonFileLabel.Name = "SignatureonFileLabel"
+        SignatureonFileLabel.Size = New System.Drawing.Size(89, 13)
+        SignatureonFileLabel.TabIndex = 133
+        SignatureonFileLabel.Text = "Signature on File:"
+        '
+        'HomeePhoneLabel
+        '
+        HomeePhoneLabel.AutoSize = True
+        HomeePhoneLabel.Location = New System.Drawing.Point(51, 140)
+        HomeePhoneLabel.Name = "HomeePhoneLabel"
+        HomeePhoneLabel.Size = New System.Drawing.Size(72, 13)
+        HomeePhoneLabel.TabIndex = 125
+        HomeePhoneLabel.Text = "Home Phone:"
+        '
+        'WorkPhoneLabel
+        '
+        WorkPhoneLabel.AutoSize = True
+        WorkPhoneLabel.Location = New System.Drawing.Point(53, 183)
+        WorkPhoneLabel.Name = "WorkPhoneLabel"
+        WorkPhoneLabel.Size = New System.Drawing.Size(70, 13)
+        WorkPhoneLabel.TabIndex = 135
+        WorkPhoneLabel.Text = "Work Phone:"
+        '
+        'EMailAddressLabel
+        '
+        EMailAddressLabel.AutoSize = True
+        EMailAddressLabel.Location = New System.Drawing.Point(46, 313)
+        EMailAddressLabel.Name = "EMailAddressLabel"
+        EMailAddressLabel.Size = New System.Drawing.Size(77, 13)
+        EMailAddressLabel.TabIndex = 130
+        EMailAddressLabel.Text = "EMail Address:"
+        '
+        'PatientTypeLabel
+        '
+        PatientTypeLabel.AutoSize = True
+        PatientTypeLabel.Location = New System.Drawing.Point(53, 270)
+        PatientTypeLabel.Name = "PatientTypeLabel"
+        PatientTypeLabel.Size = New System.Drawing.Size(70, 13)
+        PatientTypeLabel.TabIndex = 134
+        PatientTypeLabel.Text = "Patient Type:"
+        '
+        'WorkExtensionLabel
+        '
+        WorkExtensionLabel.AutoSize = True
+        WorkExtensionLabel.Location = New System.Drawing.Point(98, 226)
+        WorkExtensionLabel.Name = "WorkExtensionLabel"
+        WorkExtensionLabel.Size = New System.Drawing.Size(25, 13)
+        WorkExtensionLabel.TabIndex = 136
+        WorkExtensionLabel.Text = "Ext:"
+        '
+        'PictureImageLabel
+        '
+        PictureImageLabel.AutoSize = True
+        PictureImageLabel.Location = New System.Drawing.Point(11, 11)
+        PictureImageLabel.Name = "PictureImageLabel"
+        PictureImageLabel.Size = New System.Drawing.Size(43, 26)
+        PictureImageLabel.TabIndex = 94
+        PictureImageLabel.Text = "Patient" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Picture:"
         '
         'TabControl1
         '
@@ -1065,7 +1025,7 @@ Partial Class PATIENT
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgPatient.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgPatient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgPatient.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PatientIDDataGridViewTextBoxColumn, Me.ChartNumberDataGridViewTextBoxColumn, Me.LastNameDataGridViewTextBoxColumn, Me.FirstNameDataGridViewTextBoxColumn, Me.MiddleInitialDataGridViewTextBoxColumn, Me.Street1DataGridViewTextBoxColumn, Me.Street2DataGridViewTextBoxColumn, Me.CityDataGridViewTextBoxColumn, Me.StateDataGridViewTextBoxColumn, Me.ZipCodeDataGridViewTextBoxColumn, Me.HomeePhoneDataGridViewTextBoxColumn, Me.CellPhoneDataGridViewTextBoxColumn, Me.EMailAddressDataGridViewTextBoxColumn, Me.SocialSecurityNumberDataGridViewTextBoxColumn, Me.SignatureonFileDataGridViewCheckBoxColumn, Me.PatientTypeDataGridViewTextBoxColumn, Me.PatientID2DataGridViewTextBoxColumn, Me.SexDataGridViewTextBoxColumn, Me.DateofBirthDataGridViewTextBoxColumn, Me.AssignedProviderDataGridViewTextBoxColumn, Me.CountryDataGridViewTextBoxColumn, Me.DateofLastPaymentDataGridViewTextBoxColumn, Me.LastPaymentAmountDataGridViewTextBoxColumn, Me.PatientReferenceBalanceDataGridViewTextBoxColumn, Me.DateCreatedDataGridViewTextBoxColumn, Me.EmploymentStatusDataGridViewTextBoxColumn, Me.EmployerDataGridViewTextBoxColumn, Me.EmployeeLocationDataGridViewTextBoxColumn, Me.EmployeeRetirementDateDataGridViewTextBoxColumn, Me.WorkPhoneDataGridViewTextBoxColumn, Me.WorkExtensionDataGridViewTextBoxColumn, Me.SOFDateDataGridViewTextBoxColumn, Me.BillingCodeDataGridViewTextBoxColumn, Me.PatientIndicatorDataGridViewTextBoxColumn, Me.UserField1DataGridViewTextBoxColumn, Me.UserField2DataGridViewTextBoxColumn, Me.UserField3DataGridViewTextBoxColumn, Me.UserField4DataGridViewTextBoxColumn, Me.UserField5DataGridViewTextBoxColumn, Me.UserIdDataGridViewTextBoxColumn, Me.TimeStampDataGridViewTextBoxColumn})
+        Me.dgPatient.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PatientIDDataGridViewTextBoxColumn, Me.ChartNumberDataGridViewTextBoxColumn, Me.LastNameDataGridViewTextBoxColumn, Me.FirstNameDataGridViewTextBoxColumn, Me.SignatureonFileDataGridViewCheckBoxColumn, Me.PatientTypeDataGridViewTextBoxColumn, Me.SexDataGridViewTextBoxColumn, Me.DateofBirthDataGridViewTextBoxColumn, Me.AssignedProviderDataGridViewTextBoxColumn, Me.DateCreatedDataGridViewTextBoxColumn})
         Me.dgPatient.DataSource = Me.MMPATIENTBindingSource
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
@@ -1118,76 +1078,6 @@ Partial Class PATIENT
         Me.FirstNameDataGridViewTextBoxColumn.MaxInputLength = 20
         Me.FirstNameDataGridViewTextBoxColumn.Name = "FirstNameDataGridViewTextBoxColumn"
         '
-        'MiddleInitialDataGridViewTextBoxColumn
-        '
-        Me.MiddleInitialDataGridViewTextBoxColumn.DataPropertyName = "MiddleInitial"
-        Me.MiddleInitialDataGridViewTextBoxColumn.HeaderText = "Middle Initial"
-        Me.MiddleInitialDataGridViewTextBoxColumn.MaxInputLength = 1
-        Me.MiddleInitialDataGridViewTextBoxColumn.Name = "MiddleInitialDataGridViewTextBoxColumn"
-        '
-        'Street1DataGridViewTextBoxColumn
-        '
-        Me.Street1DataGridViewTextBoxColumn.DataPropertyName = "Street1"
-        Me.Street1DataGridViewTextBoxColumn.HeaderText = "Address 1"
-        Me.Street1DataGridViewTextBoxColumn.MaxInputLength = 30
-        Me.Street1DataGridViewTextBoxColumn.Name = "Street1DataGridViewTextBoxColumn"
-        '
-        'Street2DataGridViewTextBoxColumn
-        '
-        Me.Street2DataGridViewTextBoxColumn.DataPropertyName = "Street2"
-        Me.Street2DataGridViewTextBoxColumn.HeaderText = "Address 2"
-        Me.Street2DataGridViewTextBoxColumn.MaxInputLength = 30
-        Me.Street2DataGridViewTextBoxColumn.Name = "Street2DataGridViewTextBoxColumn"
-        '
-        'CityDataGridViewTextBoxColumn
-        '
-        Me.CityDataGridViewTextBoxColumn.DataPropertyName = "City"
-        Me.CityDataGridViewTextBoxColumn.HeaderText = "City"
-        Me.CityDataGridViewTextBoxColumn.MaxInputLength = 20
-        Me.CityDataGridViewTextBoxColumn.Name = "CityDataGridViewTextBoxColumn"
-        '
-        'StateDataGridViewTextBoxColumn
-        '
-        Me.StateDataGridViewTextBoxColumn.DataPropertyName = "State"
-        Me.StateDataGridViewTextBoxColumn.HeaderText = "State"
-        Me.StateDataGridViewTextBoxColumn.MaxInputLength = 2
-        Me.StateDataGridViewTextBoxColumn.Name = "StateDataGridViewTextBoxColumn"
-        '
-        'ZipCodeDataGridViewTextBoxColumn
-        '
-        Me.ZipCodeDataGridViewTextBoxColumn.DataPropertyName = "ZipCode"
-        Me.ZipCodeDataGridViewTextBoxColumn.HeaderText = "Zip Code"
-        Me.ZipCodeDataGridViewTextBoxColumn.MaxInputLength = 10
-        Me.ZipCodeDataGridViewTextBoxColumn.Name = "ZipCodeDataGridViewTextBoxColumn"
-        '
-        'HomeePhoneDataGridViewTextBoxColumn
-        '
-        Me.HomeePhoneDataGridViewTextBoxColumn.DataPropertyName = "HomeePhone"
-        Me.HomeePhoneDataGridViewTextBoxColumn.HeaderText = "Home Phone"
-        Me.HomeePhoneDataGridViewTextBoxColumn.MaxInputLength = 14
-        Me.HomeePhoneDataGridViewTextBoxColumn.Name = "HomeePhoneDataGridViewTextBoxColumn"
-        '
-        'CellPhoneDataGridViewTextBoxColumn
-        '
-        Me.CellPhoneDataGridViewTextBoxColumn.DataPropertyName = "CellPhone"
-        Me.CellPhoneDataGridViewTextBoxColumn.HeaderText = "Cell Phone"
-        Me.CellPhoneDataGridViewTextBoxColumn.MaxInputLength = 14
-        Me.CellPhoneDataGridViewTextBoxColumn.Name = "CellPhoneDataGridViewTextBoxColumn"
-        '
-        'EMailAddressDataGridViewTextBoxColumn
-        '
-        Me.EMailAddressDataGridViewTextBoxColumn.DataPropertyName = "EMailAddress"
-        Me.EMailAddressDataGridViewTextBoxColumn.HeaderText = "EMail Address"
-        Me.EMailAddressDataGridViewTextBoxColumn.MaxInputLength = 30
-        Me.EMailAddressDataGridViewTextBoxColumn.Name = "EMailAddressDataGridViewTextBoxColumn"
-        '
-        'SocialSecurityNumberDataGridViewTextBoxColumn
-        '
-        Me.SocialSecurityNumberDataGridViewTextBoxColumn.DataPropertyName = "SocialSecurityNumber"
-        Me.SocialSecurityNumberDataGridViewTextBoxColumn.HeaderText = "Social Security Number"
-        Me.SocialSecurityNumberDataGridViewTextBoxColumn.MaxInputLength = 11
-        Me.SocialSecurityNumberDataGridViewTextBoxColumn.Name = "SocialSecurityNumberDataGridViewTextBoxColumn"
-        '
         'SignatureonFileDataGridViewCheckBoxColumn
         '
         Me.SignatureonFileDataGridViewCheckBoxColumn.DataPropertyName = "SignatureonFile"
@@ -1200,13 +1090,6 @@ Partial Class PATIENT
         Me.PatientTypeDataGridViewTextBoxColumn.HeaderText = "Patient Type"
         Me.PatientTypeDataGridViewTextBoxColumn.MaxInputLength = 9
         Me.PatientTypeDataGridViewTextBoxColumn.Name = "PatientTypeDataGridViewTextBoxColumn"
-        '
-        'PatientID2DataGridViewTextBoxColumn
-        '
-        Me.PatientID2DataGridViewTextBoxColumn.DataPropertyName = "PatientID#2"
-        Me.PatientID2DataGridViewTextBoxColumn.HeaderText = "Patient ID #2"
-        Me.PatientID2DataGridViewTextBoxColumn.MaxInputLength = 15
-        Me.PatientID2DataGridViewTextBoxColumn.Name = "PatientID2DataGridViewTextBoxColumn"
         '
         'SexDataGridViewTextBoxColumn
         '
@@ -1228,145 +1111,11 @@ Partial Class PATIENT
         Me.AssignedProviderDataGridViewTextBoxColumn.MaxInputLength = 5
         Me.AssignedProviderDataGridViewTextBoxColumn.Name = "AssignedProviderDataGridViewTextBoxColumn"
         '
-        'CountryDataGridViewTextBoxColumn
-        '
-        Me.CountryDataGridViewTextBoxColumn.DataPropertyName = "Country"
-        Me.CountryDataGridViewTextBoxColumn.HeaderText = "Country"
-        Me.CountryDataGridViewTextBoxColumn.MaxInputLength = 10
-        Me.CountryDataGridViewTextBoxColumn.Name = "CountryDataGridViewTextBoxColumn"
-        '
-        'DateofLastPaymentDataGridViewTextBoxColumn
-        '
-        Me.DateofLastPaymentDataGridViewTextBoxColumn.DataPropertyName = "DateofLastPayment"
-        Me.DateofLastPaymentDataGridViewTextBoxColumn.HeaderText = "Date of Last Payment"
-        Me.DateofLastPaymentDataGridViewTextBoxColumn.Name = "DateofLastPaymentDataGridViewTextBoxColumn"
-        '
-        'LastPaymentAmountDataGridViewTextBoxColumn
-        '
-        Me.LastPaymentAmountDataGridViewTextBoxColumn.DataPropertyName = "LastPaymentAmount"
-        Me.LastPaymentAmountDataGridViewTextBoxColumn.HeaderText = "Last Payment Amount"
-        Me.LastPaymentAmountDataGridViewTextBoxColumn.Name = "LastPaymentAmountDataGridViewTextBoxColumn"
-        '
-        'PatientReferenceBalanceDataGridViewTextBoxColumn
-        '
-        Me.PatientReferenceBalanceDataGridViewTextBoxColumn.DataPropertyName = "PatientReferenceBalance"
-        Me.PatientReferenceBalanceDataGridViewTextBoxColumn.HeaderText = "Patient Reference Balance"
-        Me.PatientReferenceBalanceDataGridViewTextBoxColumn.Name = "PatientReferenceBalanceDataGridViewTextBoxColumn"
-        '
         'DateCreatedDataGridViewTextBoxColumn
         '
         Me.DateCreatedDataGridViewTextBoxColumn.DataPropertyName = "DateCreated"
         Me.DateCreatedDataGridViewTextBoxColumn.HeaderText = "Date Created"
         Me.DateCreatedDataGridViewTextBoxColumn.Name = "DateCreatedDataGridViewTextBoxColumn"
-        '
-        'EmploymentStatusDataGridViewTextBoxColumn
-        '
-        Me.EmploymentStatusDataGridViewTextBoxColumn.DataPropertyName = "EmploymentStatus"
-        Me.EmploymentStatusDataGridViewTextBoxColumn.HeaderText = "Employment Status"
-        Me.EmploymentStatusDataGridViewTextBoxColumn.MaxInputLength = 12
-        Me.EmploymentStatusDataGridViewTextBoxColumn.Name = "EmploymentStatusDataGridViewTextBoxColumn"
-        '
-        'EmployerDataGridViewTextBoxColumn
-        '
-        Me.EmployerDataGridViewTextBoxColumn.DataPropertyName = "Employer"
-        Me.EmployerDataGridViewTextBoxColumn.HeaderText = "Employer"
-        Me.EmployerDataGridViewTextBoxColumn.MaxInputLength = 40
-        Me.EmployerDataGridViewTextBoxColumn.Name = "EmployerDataGridViewTextBoxColumn"
-        '
-        'EmployeeLocationDataGridViewTextBoxColumn
-        '
-        Me.EmployeeLocationDataGridViewTextBoxColumn.DataPropertyName = "EmployeeLocation"
-        Me.EmployeeLocationDataGridViewTextBoxColumn.HeaderText = "Employee Location"
-        Me.EmployeeLocationDataGridViewTextBoxColumn.MaxInputLength = 20
-        Me.EmployeeLocationDataGridViewTextBoxColumn.Name = "EmployeeLocationDataGridViewTextBoxColumn"
-        '
-        'EmployeeRetirementDateDataGridViewTextBoxColumn
-        '
-        Me.EmployeeRetirementDateDataGridViewTextBoxColumn.DataPropertyName = "EmployeeRetirementDate"
-        Me.EmployeeRetirementDateDataGridViewTextBoxColumn.HeaderText = "Employee RetirementDate"
-        Me.EmployeeRetirementDateDataGridViewTextBoxColumn.Name = "EmployeeRetirementDateDataGridViewTextBoxColumn"
-        '
-        'WorkPhoneDataGridViewTextBoxColumn
-        '
-        Me.WorkPhoneDataGridViewTextBoxColumn.DataPropertyName = "WorkPhone"
-        Me.WorkPhoneDataGridViewTextBoxColumn.HeaderText = "Work Phone"
-        Me.WorkPhoneDataGridViewTextBoxColumn.MaxInputLength = 14
-        Me.WorkPhoneDataGridViewTextBoxColumn.Name = "WorkPhoneDataGridViewTextBoxColumn"
-        '
-        'WorkExtensionDataGridViewTextBoxColumn
-        '
-        Me.WorkExtensionDataGridViewTextBoxColumn.DataPropertyName = "WorkExtension"
-        Me.WorkExtensionDataGridViewTextBoxColumn.HeaderText = "Work Extension"
-        Me.WorkExtensionDataGridViewTextBoxColumn.MaxInputLength = 6
-        Me.WorkExtensionDataGridViewTextBoxColumn.Name = "WorkExtensionDataGridViewTextBoxColumn"
-        '
-        'SOFDateDataGridViewTextBoxColumn
-        '
-        Me.SOFDateDataGridViewTextBoxColumn.DataPropertyName = "SOFDate"
-        Me.SOFDateDataGridViewTextBoxColumn.HeaderText = "SOF Date"
-        Me.SOFDateDataGridViewTextBoxColumn.Name = "SOFDateDataGridViewTextBoxColumn"
-        '
-        'BillingCodeDataGridViewTextBoxColumn
-        '
-        Me.BillingCodeDataGridViewTextBoxColumn.DataPropertyName = "BillingCode"
-        Me.BillingCodeDataGridViewTextBoxColumn.HeaderText = "Billing Code"
-        Me.BillingCodeDataGridViewTextBoxColumn.MaxInputLength = 2
-        Me.BillingCodeDataGridViewTextBoxColumn.Name = "BillingCodeDataGridViewTextBoxColumn"
-        '
-        'PatientIndicatorDataGridViewTextBoxColumn
-        '
-        Me.PatientIndicatorDataGridViewTextBoxColumn.DataPropertyName = "PatientIndicator"
-        Me.PatientIndicatorDataGridViewTextBoxColumn.HeaderText = "Patient Indicator"
-        Me.PatientIndicatorDataGridViewTextBoxColumn.MaxInputLength = 10
-        Me.PatientIndicatorDataGridViewTextBoxColumn.Name = "PatientIndicatorDataGridViewTextBoxColumn"
-        '
-        'UserField1DataGridViewTextBoxColumn
-        '
-        Me.UserField1DataGridViewTextBoxColumn.DataPropertyName = "UserField1"
-        Me.UserField1DataGridViewTextBoxColumn.HeaderText = "User Field 1"
-        Me.UserField1DataGridViewTextBoxColumn.MaxInputLength = 50
-        Me.UserField1DataGridViewTextBoxColumn.Name = "UserField1DataGridViewTextBoxColumn"
-        '
-        'UserField2DataGridViewTextBoxColumn
-        '
-        Me.UserField2DataGridViewTextBoxColumn.DataPropertyName = "UserField2"
-        Me.UserField2DataGridViewTextBoxColumn.HeaderText = "User Field 2"
-        Me.UserField2DataGridViewTextBoxColumn.MaxInputLength = 50
-        Me.UserField2DataGridViewTextBoxColumn.Name = "UserField2DataGridViewTextBoxColumn"
-        '
-        'UserField3DataGridViewTextBoxColumn
-        '
-        Me.UserField3DataGridViewTextBoxColumn.DataPropertyName = "UserField3"
-        Me.UserField3DataGridViewTextBoxColumn.HeaderText = "User Field 3"
-        Me.UserField3DataGridViewTextBoxColumn.MaxInputLength = 50
-        Me.UserField3DataGridViewTextBoxColumn.Name = "UserField3DataGridViewTextBoxColumn"
-        '
-        'UserField4DataGridViewTextBoxColumn
-        '
-        Me.UserField4DataGridViewTextBoxColumn.DataPropertyName = "UserField4"
-        Me.UserField4DataGridViewTextBoxColumn.HeaderText = "User Field 4"
-        Me.UserField4DataGridViewTextBoxColumn.MaxInputLength = 50
-        Me.UserField4DataGridViewTextBoxColumn.Name = "UserField4DataGridViewTextBoxColumn"
-        '
-        'UserField5DataGridViewTextBoxColumn
-        '
-        Me.UserField5DataGridViewTextBoxColumn.DataPropertyName = "UserField5"
-        Me.UserField5DataGridViewTextBoxColumn.HeaderText = "User Field 5"
-        Me.UserField5DataGridViewTextBoxColumn.MaxInputLength = 50
-        Me.UserField5DataGridViewTextBoxColumn.Name = "UserField5DataGridViewTextBoxColumn"
-        '
-        'UserIdDataGridViewTextBoxColumn
-        '
-        Me.UserIdDataGridViewTextBoxColumn.DataPropertyName = "UserId"
-        Me.UserIdDataGridViewTextBoxColumn.HeaderText = "User Id"
-        Me.UserIdDataGridViewTextBoxColumn.MaxInputLength = 50
-        Me.UserIdDataGridViewTextBoxColumn.Name = "UserIdDataGridViewTextBoxColumn"
-        '
-        'TimeStampDataGridViewTextBoxColumn
-        '
-        Me.TimeStampDataGridViewTextBoxColumn.DataPropertyName = "TimeStamp"
-        Me.TimeStampDataGridViewTextBoxColumn.HeaderText = "Time Stamp"
-        Me.TimeStampDataGridViewTextBoxColumn.Name = "TimeStampDataGridViewTextBoxColumn"
         '
         'MMPATIENTBindingSource
         '
@@ -1392,27 +1141,18 @@ Partial Class PATIENT
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(PhysicianOfficeLabel)
-        Me.GroupBox1.Controls.Add(Me.PhysicianOfficeComboBox)
+        Me.GroupBox1.Controls.Add(Me.BtnSaveAndHistory)
+        Me.GroupBox1.Controls.Add(Me.BtnSaveAndVisit)
         Me.GroupBox1.Controls.Add(DateChangedLabel)
         Me.GroupBox1.Controls.Add(Me.DateCreatedDateTimePicker)
         Me.GroupBox1.Controls.Add(Me.DateChangedTextBox)
         Me.GroupBox1.Controls.Add(DateCreatedLabel)
         Me.GroupBox1.Controls.Add(Me.btnPhysician)
         Me.GroupBox1.Controls.Add(Me.MaskedTextBoxDob)
-        Me.GroupBox1.Controls.Add(Me.MaskedTextBox1)
-        Me.GroupBox1.Controls.Add(PhoneLabel)
-        Me.GroupBox1.Controls.Add(NameOfFriendOrRelativeLabel)
-        Me.GroupBox1.Controls.Add(Me.NameOfFriendOrRelativeTextBox)
-        Me.GroupBox1.Controls.Add(Me.MstatusComboBox)
         Me.GroupBox1.Controls.Add(AssignedProviderLabel)
         Me.GroupBox1.Controls.Add(Me.AssignedProviderTextBox)
-        Me.GroupBox1.Controls.Add(MstatusLabel)
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
-        Me.GroupBox1.Controls.Add(Me.PatientTypeComboBox)
+        Me.GroupBox1.Controls.Add(Me.CBSex)
         Me.GroupBox1.Controls.Add(Me.CellPhoneMaskedTextBox)
-        Me.GroupBox1.Controls.Add(Me.WorkPhoneMaskedTextBox)
-        Me.GroupBox1.Controls.Add(Me.HomeePhoneMaskedTextBox)
         Me.GroupBox1.Controls.Add(Me.CNICTextBox)
         Me.GroupBox1.Controls.Add(FirstNameLabel)
         Me.GroupBox1.Controls.Add(Me.FirstNameTextBox)
@@ -1427,56 +1167,48 @@ Partial Class PATIENT
         Me.GroupBox1.Controls.Add(Me.Street1TextBox)
         Me.GroupBox1.Controls.Add(Me.LastNameTextBox)
         Me.GroupBox1.Controls.Add(Street2Label)
-        Me.GroupBox1.Controls.Add(PatientID_2Label)
-        Me.GroupBox1.Controls.Add(SignatureonFileLabel)
-        Me.GroupBox1.Controls.Add(Me.PatientID_2TextBox)
         Me.GroupBox1.Controls.Add(Me.Street2TextBox)
         Me.GroupBox1.Controls.Add(CityLabel)
         Me.GroupBox1.Controls.Add(Me.CityTextBox)
-        Me.GroupBox1.Controls.Add(StateLabel)
-        Me.GroupBox1.Controls.Add(Me.StateTextBox)
-        Me.GroupBox1.Controls.Add(ZipCodeLabel)
-        Me.GroupBox1.Controls.Add(Me.ZipCodeTextBox)
         Me.GroupBox1.Controls.Add(SexLabel)
-        Me.GroupBox1.Controls.Add(HomeePhoneLabel)
         Me.GroupBox1.Controls.Add(DateofBirthLabel)
         Me.GroupBox1.Controls.Add(SocialSecurityNumberLabel)
         Me.GroupBox1.Controls.Add(CellPhoneLabel)
-        Me.GroupBox1.Controls.Add(CountryLabel)
-        Me.GroupBox1.Controls.Add(Me.CountryTextBox)
-        Me.GroupBox1.Controls.Add(WorkPhoneLabel)
-        Me.GroupBox1.Controls.Add(EMailAddressLabel)
-        Me.GroupBox1.Controls.Add(PatientTypeLabel)
-        Me.GroupBox1.Controls.Add(Me.EMailAddressTextBox)
-        Me.GroupBox1.Controls.Add(Me.SignatureonFileCheckBox)
-        Me.GroupBox1.Controls.Add(WorkExtensionLabel)
-        Me.GroupBox1.Controls.Add(Me.WorkExtensionTextBox)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 6)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(772, 542)
+        Me.GroupBox1.Size = New System.Drawing.Size(832, 542)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Patient Information"
         '
-        'PhysicianOfficeComboBox
+        'BtnSaveAndHistory
         '
-        Me.PhysicianOfficeComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.PhysicianOfficeComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.PhysicianOfficeComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "PhysicianOffice", True))
-        Me.PhysicianOfficeComboBox.FormattingEnabled = True
-        Me.PhysicianOfficeComboBox.Location = New System.Drawing.Point(534, 390)
-        Me.PhysicianOfficeComboBox.MaxLength = 25
-        Me.PhysicianOfficeComboBox.Name = "PhysicianOfficeComboBox"
-        Me.PhysicianOfficeComboBox.Size = New System.Drawing.Size(117, 21)
-        Me.PhysicianOfficeComboBox.TabIndex = 26
+        Me.BtnSaveAndHistory.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.BtnSaveAndHistory.Location = New System.Drawing.Point(692, 330)
+        Me.BtnSaveAndHistory.Name = "BtnSaveAndHistory"
+        Me.BtnSaveAndHistory.Size = New System.Drawing.Size(118, 40)
+        Me.BtnSaveAndHistory.TabIndex = 83
+        Me.BtnSaveAndHistory.Text = "Save && View History"
+        Me.BtnSaveAndHistory.UseVisualStyleBackColor = False
+        '
+        'BtnSaveAndVisit
+        '
+        Me.BtnSaveAndVisit.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.BtnSaveAndVisit.Location = New System.Drawing.Point(692, 240)
+        Me.BtnSaveAndVisit.Name = "BtnSaveAndVisit"
+        Me.BtnSaveAndVisit.Size = New System.Drawing.Size(118, 44)
+        Me.BtnSaveAndVisit.TabIndex = 83
+        Me.BtnSaveAndVisit.Text = "Save && Add Visit"
+        Me.BtnSaveAndVisit.UseVisualStyleBackColor = False
         '
         'DateCreatedDateTimePicker
         '
         Me.DateCreatedDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.MMPATIENTBindingSource, "DateCreated", True))
         Me.DateCreatedDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateCreatedDateTimePicker.Location = New System.Drawing.Point(110, 390)
+        Me.DateCreatedDateTimePicker.Location = New System.Drawing.Point(283, 443)
         Me.DateCreatedDateTimePicker.Name = "DateCreatedDateTimePicker"
-        Me.DateCreatedDateTimePicker.Size = New System.Drawing.Size(110, 20)
+        Me.DateCreatedDateTimePicker.Size = New System.Drawing.Size(110, 21)
         Me.DateCreatedDateTimePicker.TabIndex = 49
         Me.DateCreatedDateTimePicker.TabStop = False
         '
@@ -1484,14 +1216,14 @@ Partial Class PATIENT
         '
         Me.DateChangedTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "DateChanged", True))
         Me.DateChangedTextBox.Enabled = False
-        Me.DateChangedTextBox.Location = New System.Drawing.Point(110, 421)
+        Me.DateChangedTextBox.Location = New System.Drawing.Point(283, 482)
         Me.DateChangedTextBox.Name = "DateChangedTextBox"
-        Me.DateChangedTextBox.Size = New System.Drawing.Size(110, 20)
+        Me.DateChangedTextBox.Size = New System.Drawing.Size(110, 21)
         Me.DateChangedTextBox.TabIndex = 27
         '
         'btnPhysician
         '
-        Me.btnPhysician.Location = New System.Drawing.Point(657, 43)
+        Me.btnPhysician.Location = New System.Drawing.Point(406, 400)
         Me.btnPhysician.Name = "btnPhysician"
         Me.btnPhysician.Size = New System.Drawing.Size(75, 23)
         Me.btnPhysician.TabIndex = 14
@@ -1501,30 +1233,202 @@ Partial Class PATIENT
         'MaskedTextBoxDob
         '
         Me.MaskedTextBoxDob.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "DateofBirth", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "MM/dd/yyyy"))
-        Me.MaskedTextBoxDob.Location = New System.Drawing.Point(110, 171)
+        Me.MaskedTextBoxDob.Location = New System.Drawing.Point(283, 168)
         Me.MaskedTextBoxDob.Mask = "00/00/0000"
         Me.MaskedTextBoxDob.Name = "MaskedTextBoxDob"
-        Me.MaskedTextBoxDob.Size = New System.Drawing.Size(100, 20)
+        Me.MaskedTextBoxDob.Size = New System.Drawing.Size(100, 21)
         Me.MaskedTextBoxDob.TabIndex = 5
         Me.MaskedTextBoxDob.ValidatingType = GetType(Date)
         '
-        'MaskedTextBox1
+        'AssignedProviderTextBox
         '
-        Me.MaskedTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "Phone", True))
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(534, 357)
-        Me.MaskedTextBox1.Mask = "(999) 000-0000"
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(117, 20)
-        Me.MaskedTextBox1.TabIndex = 25
+        Me.AssignedProviderTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "AssignedProvider", True))
+        Me.AssignedProviderTextBox.Location = New System.Drawing.Point(283, 402)
+        Me.AssignedProviderTextBox.MaxLength = 6
+        Me.AssignedProviderTextBox.Name = "AssignedProviderTextBox"
+        Me.AssignedProviderTextBox.Size = New System.Drawing.Size(117, 21)
+        Me.AssignedProviderTextBox.TabIndex = 14
+        Me.AssignedProviderTextBox.TabStop = False
         '
-        'NameOfFriendOrRelativeTextBox
+        'CBSex
         '
-        Me.NameOfFriendOrRelativeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "NameOfFriendOrRelative", True))
-        Me.NameOfFriendOrRelativeTextBox.Location = New System.Drawing.Point(534, 325)
-        Me.NameOfFriendOrRelativeTextBox.MaxLength = 40
-        Me.NameOfFriendOrRelativeTextBox.Name = "NameOfFriendOrRelativeTextBox"
-        Me.NameOfFriendOrRelativeTextBox.Size = New System.Drawing.Size(201, 20)
-        Me.NameOfFriendOrRelativeTextBox.TabIndex = 24
+        Me.CBSex.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.CBSex.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.CBSex.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "Sex", True))
+        Me.CBSex.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.CBSex.FormattingEnabled = True
+        Me.CBSex.Items.AddRange(New Object() {"MALE", "FEMALE"})
+        Me.CBSex.Location = New System.Drawing.Point(432, 167)
+        Me.CBSex.MaxLength = 6
+        Me.CBSex.Name = "CBSex"
+        Me.CBSex.Size = New System.Drawing.Size(86, 23)
+        Me.CBSex.TabIndex = 6
+        '
+        'CellPhoneMaskedTextBox
+        '
+        Me.CellPhoneMaskedTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "CellPhone", True))
+        Me.CellPhoneMaskedTextBox.Location = New System.Drawing.Point(283, 206)
+        Me.CellPhoneMaskedTextBox.Mask = "9999-9999999"
+        Me.CellPhoneMaskedTextBox.Name = "CellPhoneMaskedTextBox"
+        Me.CellPhoneMaskedTextBox.Size = New System.Drawing.Size(234, 21)
+        Me.CellPhoneMaskedTextBox.TabIndex = 7
+        '
+        'CNICTextBox
+        '
+        Me.CNICTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "CNICNO", True))
+        Me.CNICTextBox.Location = New System.Drawing.Point(283, 246)
+        Me.CNICTextBox.Mask = "99999-0000000-0"
+        Me.CNICTextBox.Name = "CNICTextBox"
+        Me.CNICTextBox.Size = New System.Drawing.Size(234, 21)
+        Me.CNICTextBox.TabIndex = 8
+        '
+        'FirstNameTextBox
+        '
+        Me.FirstNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "FirstName", True))
+        Me.FirstNameTextBox.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.FirstNameTextBox.Location = New System.Drawing.Point(283, 90)
+        Me.FirstNameTextBox.MaxLength = 20
+        Me.FirstNameTextBox.Name = "FirstNameTextBox"
+        Me.FirstNameTextBox.Size = New System.Drawing.Size(235, 21)
+        Me.FirstNameTextBox.TabIndex = 2
+        '
+        'PatientIDTextBox
+        '
+        Me.PatientIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "PatientID", True))
+        Me.PatientIDTextBox.Enabled = False
+        Me.PatientIDTextBox.ForeColor = System.Drawing.Color.Blue
+        Me.PatientIDTextBox.Location = New System.Drawing.Point(283, 46)
+        Me.PatientIDTextBox.MaxLength = 15
+        Me.PatientIDTextBox.Name = "PatientIDTextBox"
+        Me.PatientIDTextBox.Size = New System.Drawing.Size(87, 21)
+        Me.PatientIDTextBox.TabIndex = 0
+        '
+        'MiddleInitialTextBox
+        '
+        Me.MiddleInitialTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "MiddleInitial", True))
+        Me.MiddleInitialTextBox.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.MiddleInitialTextBox.Location = New System.Drawing.Point(483, 131)
+        Me.MiddleInitialTextBox.MaxLength = 1
+        Me.MiddleInitialTextBox.Name = "MiddleInitialTextBox"
+        Me.MiddleInitialTextBox.Size = New System.Drawing.Size(35, 21)
+        Me.MiddleInitialTextBox.TabIndex = 4
+        '
+        'ChartNumberTextBox
+        '
+        Me.ChartNumberTextBox.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.ChartNumberTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "ChartNumber", True))
+        Me.ChartNumberTextBox.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.ChartNumberTextBox.Location = New System.Drawing.Point(432, 46)
+        Me.ChartNumberTextBox.MaxLength = 8
+        Me.ChartNumberTextBox.Name = "ChartNumberTextBox"
+        Me.ChartNumberTextBox.Size = New System.Drawing.Size(87, 21)
+        Me.ChartNumberTextBox.TabIndex = 1
+        '
+        'Street1TextBox
+        '
+        Me.Street1TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "Street1", True))
+        Me.Street1TextBox.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Street1TextBox.Location = New System.Drawing.Point(283, 287)
+        Me.Street1TextBox.MaxLength = 30
+        Me.Street1TextBox.Name = "Street1TextBox"
+        Me.Street1TextBox.Size = New System.Drawing.Size(234, 21)
+        Me.Street1TextBox.TabIndex = 9
+        '
+        'LastNameTextBox
+        '
+        Me.LastNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "LastName", True))
+        Me.LastNameTextBox.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.LastNameTextBox.Location = New System.Drawing.Point(283, 130)
+        Me.LastNameTextBox.MaxLength = 20
+        Me.LastNameTextBox.Name = "LastNameTextBox"
+        Me.LastNameTextBox.Size = New System.Drawing.Size(168, 21)
+        Me.LastNameTextBox.TabIndex = 3
+        '
+        'Street2TextBox
+        '
+        Me.Street2TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "Street2", True))
+        Me.Street2TextBox.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Street2TextBox.Location = New System.Drawing.Point(283, 326)
+        Me.Street2TextBox.MaxLength = 30
+        Me.Street2TextBox.Name = "Street2TextBox"
+        Me.Street2TextBox.Size = New System.Drawing.Size(234, 21)
+        Me.Street2TextBox.TabIndex = 10
+        '
+        'CityTextBox
+        '
+        Me.CityTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "City", True))
+        Me.CityTextBox.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.CityTextBox.Location = New System.Drawing.Point(283, 365)
+        Me.CityTextBox.MaxLength = 20
+        Me.CityTextBox.Name = "CityTextBox"
+        Me.CityTextBox.Size = New System.Drawing.Size(234, 21)
+        Me.CityTextBox.TabIndex = 12
+        '
+        'TabPage3
+        '
+        Me.TabPage3.AutoScroll = True
+        Me.TabPage3.Controls.Add(Me.WorkPhoneMaskedTextBox)
+        Me.TabPage3.Controls.Add(StateLabel)
+        Me.TabPage3.Controls.Add(Me.StateTextBox)
+        Me.TabPage3.Controls.Add(ZipCodeLabel)
+        Me.TabPage3.Controls.Add(Me.ZipCodeTextBox)
+        Me.TabPage3.Controls.Add(Me.MstatusComboBox)
+        Me.TabPage3.Controls.Add(MstatusLabel)
+        Me.TabPage3.Controls.Add(PhysicianOfficeLabel)
+        Me.TabPage3.Controls.Add(Me.PhysicianOfficeComboBox)
+        Me.TabPage3.Controls.Add(Me.MaskedTextBox1)
+        Me.TabPage3.Controls.Add(PhoneLabel)
+        Me.TabPage3.Controls.Add(NameOfFriendOrRelativeLabel)
+        Me.TabPage3.Controls.Add(Me.NameOfFriendOrRelativeTextBox)
+        Me.TabPage3.Controls.Add(Me.PatientTypeComboBox)
+        Me.TabPage3.Controls.Add(Me.HomeePhoneMaskedTextBox)
+        Me.TabPage3.Controls.Add(SignatureonFileLabel)
+        Me.TabPage3.Controls.Add(HomeePhoneLabel)
+        Me.TabPage3.Controls.Add(WorkPhoneLabel)
+        Me.TabPage3.Controls.Add(EMailAddressLabel)
+        Me.TabPage3.Controls.Add(PatientTypeLabel)
+        Me.TabPage3.Controls.Add(Me.EMailAddressTextBox)
+        Me.TabPage3.Controls.Add(Me.SignatureonFileCheckBox)
+        Me.TabPage3.Controls.Add(WorkExtensionLabel)
+        Me.TabPage3.Controls.Add(Me.WorkExtensionTextBox)
+        Me.TabPage3.Controls.Add(Me.GroupBox6)
+        Me.TabPage3.Controls.Add(Me.btnDeletePatient)
+        Me.TabPage3.Controls.Add(Me.GroupBox7)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(862, 575)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "Other Info/Picture"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'WorkPhoneMaskedTextBox
+        '
+        Me.WorkPhoneMaskedTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "WorkPhone", True))
+        Me.WorkPhoneMaskedTextBox.Location = New System.Drawing.Point(131, 180)
+        Me.WorkPhoneMaskedTextBox.Name = "WorkPhoneMaskedTextBox"
+        Me.WorkPhoneMaskedTextBox.Size = New System.Drawing.Size(201, 20)
+        Me.WorkPhoneMaskedTextBox.TabIndex = 123
+        '
+        'StateTextBox
+        '
+        Me.StateTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "State", True))
+        Me.StateTextBox.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.StateTextBox.Location = New System.Drawing.Point(131, 94)
+        Me.StateTextBox.MaxLength = 2
+        Me.StateTextBox.Name = "StateTextBox"
+        Me.StateTextBox.Size = New System.Drawing.Size(72, 20)
+        Me.StateTextBox.TabIndex = 143
+        '
+        'ZipCodeTextBox
+        '
+        Me.ZipCodeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "ZipCode", True))
+        Me.ZipCodeTextBox.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.ZipCodeTextBox.Location = New System.Drawing.Point(280, 94)
+        Me.ZipCodeTextBox.MaxLength = 10
+        Me.ZipCodeTextBox.Name = "ZipCodeTextBox"
+        Me.ZipCodeTextBox.Size = New System.Drawing.Size(85, 20)
+        Me.ZipCodeTextBox.TabIndex = 142
         '
         'MstatusComboBox
         '
@@ -1533,35 +1437,40 @@ Partial Class PATIENT
         Me.MstatusComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "Mstatus", True))
         Me.MstatusComboBox.ForeColor = System.Drawing.SystemColors.WindowText
         Me.MstatusComboBox.FormattingEnabled = True
-        Me.MstatusComboBox.Location = New System.Drawing.Point(110, 202)
+        Me.MstatusComboBox.Location = New System.Drawing.Point(131, 50)
         Me.MstatusComboBox.MaxLength = 17
         Me.MstatusComboBox.Name = "MstatusComboBox"
         Me.MstatusComboBox.Size = New System.Drawing.Size(234, 21)
-        Me.MstatusComboBox.TabIndex = 7
+        Me.MstatusComboBox.TabIndex = 140
         '
-        'AssignedProviderTextBox
+        'PhysicianOfficeComboBox
         '
-        Me.AssignedProviderTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "AssignedProvider", True))
-        Me.AssignedProviderTextBox.Location = New System.Drawing.Point(534, 46)
-        Me.AssignedProviderTextBox.MaxLength = 6
-        Me.AssignedProviderTextBox.Name = "AssignedProviderTextBox"
-        Me.AssignedProviderTextBox.Size = New System.Drawing.Size(117, 20)
-        Me.AssignedProviderTextBox.TabIndex = 14
-        Me.AssignedProviderTextBox.TabStop = False
+        Me.PhysicianOfficeComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.PhysicianOfficeComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.PhysicianOfficeComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "PhysicianOffice", True))
+        Me.PhysicianOfficeComboBox.FormattingEnabled = True
+        Me.PhysicianOfficeComboBox.Location = New System.Drawing.Point(131, 400)
+        Me.PhysicianOfficeComboBox.MaxLength = 25
+        Me.PhysicianOfficeComboBox.Name = "PhysicianOfficeComboBox"
+        Me.PhysicianOfficeComboBox.Size = New System.Drawing.Size(117, 21)
+        Me.PhysicianOfficeComboBox.TabIndex = 132
         '
-        'ComboBox1
+        'MaskedTextBox1
         '
-        Me.ComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.ComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.ComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "Sex", True))
-        Me.ComboBox1.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"MALE", "FEMALE"})
-        Me.ComboBox1.Location = New System.Drawing.Point(259, 171)
-        Me.ComboBox1.MaxLength = 6
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(86, 21)
-        Me.ComboBox1.TabIndex = 6
+        Me.MaskedTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "Phone", True))
+        Me.MaskedTextBox1.Location = New System.Drawing.Point(618, 90)
+        Me.MaskedTextBox1.Name = "MaskedTextBox1"
+        Me.MaskedTextBox1.Size = New System.Drawing.Size(117, 20)
+        Me.MaskedTextBox1.TabIndex = 131
+        '
+        'NameOfFriendOrRelativeTextBox
+        '
+        Me.NameOfFriendOrRelativeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "NameOfFriendOrRelative", True))
+        Me.NameOfFriendOrRelativeTextBox.Location = New System.Drawing.Point(618, 47)
+        Me.NameOfFriendOrRelativeTextBox.MaxLength = 40
+        Me.NameOfFriendOrRelativeTextBox.Name = "NameOfFriendOrRelativeTextBox"
+        Me.NameOfFriendOrRelativeTextBox.Size = New System.Drawing.Size(201, 20)
+        Me.NameOfFriendOrRelativeTextBox.TabIndex = 129
         '
         'PatientTypeComboBox
         '
@@ -1569,224 +1478,61 @@ Partial Class PATIENT
         Me.PatientTypeComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.PatientTypeComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "PatientType", True))
         Me.PatientTypeComboBox.FormattingEnabled = True
-        Me.PatientTypeComboBox.Location = New System.Drawing.Point(534, 291)
+        Me.PatientTypeComboBox.Location = New System.Drawing.Point(131, 266)
         Me.PatientTypeComboBox.MaxLength = 9
         Me.PatientTypeComboBox.Name = "PatientTypeComboBox"
         Me.PatientTypeComboBox.Size = New System.Drawing.Size(201, 21)
-        Me.PatientTypeComboBox.TabIndex = 23
-        '
-        'CellPhoneMaskedTextBox
-        '
-        Me.CellPhoneMaskedTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "CellPhone", True))
-        Me.CellPhoneMaskedTextBox.Location = New System.Drawing.Point(534, 201)
-        Me.CellPhoneMaskedTextBox.Mask = "9999-9999999"
-        Me.CellPhoneMaskedTextBox.Name = "CellPhoneMaskedTextBox"
-        Me.CellPhoneMaskedTextBox.Size = New System.Drawing.Size(201, 20)
-        Me.CellPhoneMaskedTextBox.TabIndex = 19
-        '
-        'WorkPhoneMaskedTextBox
-        '
-        Me.WorkPhoneMaskedTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "WorkPhone", True))
-        Me.WorkPhoneMaskedTextBox.Location = New System.Drawing.Point(534, 139)
-        Me.WorkPhoneMaskedTextBox.Mask = "9999-9999999"
-        Me.WorkPhoneMaskedTextBox.Name = "WorkPhoneMaskedTextBox"
-        Me.WorkPhoneMaskedTextBox.Size = New System.Drawing.Size(201, 20)
-        Me.WorkPhoneMaskedTextBox.TabIndex = 17
+        Me.PatientTypeComboBox.TabIndex = 128
         '
         'HomeePhoneMaskedTextBox
         '
         Me.HomeePhoneMaskedTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "HomeePhone", True))
-        Me.HomeePhoneMaskedTextBox.Location = New System.Drawing.Point(534, 108)
-        Me.HomeePhoneMaskedTextBox.Mask = "9999-9999999"
+        Me.HomeePhoneMaskedTextBox.Location = New System.Drawing.Point(131, 137)
         Me.HomeePhoneMaskedTextBox.Name = "HomeePhoneMaskedTextBox"
         Me.HomeePhoneMaskedTextBox.Size = New System.Drawing.Size(201, 20)
-        Me.HomeePhoneMaskedTextBox.TabIndex = 16
-        '
-        'CNICTextBox
-        '
-        Me.CNICTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "CNICNO", True))
-        Me.CNICTextBox.Location = New System.Drawing.Point(110, 233)
-        Me.CNICTextBox.Mask = "99999-0000000-0"
-        Me.CNICTextBox.Name = "CNICTextBox"
-        Me.CNICTextBox.Size = New System.Drawing.Size(148, 20)
-        Me.CNICTextBox.TabIndex = 21
-        '
-        'FirstNameTextBox
-        '
-        Me.FirstNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "FirstName", True))
-        Me.FirstNameTextBox.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.FirstNameTextBox.Location = New System.Drawing.Point(110, 109)
-        Me.FirstNameTextBox.MaxLength = 20
-        Me.FirstNameTextBox.Name = "FirstNameTextBox"
-        Me.FirstNameTextBox.Size = New System.Drawing.Size(235, 20)
-        Me.FirstNameTextBox.TabIndex = 2
-        '
-        'PatientIDTextBox
-        '
-        Me.PatientIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "PatientID", True))
-        Me.PatientIDTextBox.Enabled = False
-        Me.PatientIDTextBox.ForeColor = System.Drawing.Color.Blue
-        Me.PatientIDTextBox.Location = New System.Drawing.Point(110, 46)
-        Me.PatientIDTextBox.MaxLength = 15
-        Me.PatientIDTextBox.Name = "PatientIDTextBox"
-        Me.PatientIDTextBox.Size = New System.Drawing.Size(87, 20)
-        Me.PatientIDTextBox.TabIndex = 0
-        '
-        'MiddleInitialTextBox
-        '
-        Me.MiddleInitialTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "MiddleInitial", True))
-        Me.MiddleInitialTextBox.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.MiddleInitialTextBox.Location = New System.Drawing.Point(310, 142)
-        Me.MiddleInitialTextBox.MaxLength = 1
-        Me.MiddleInitialTextBox.Name = "MiddleInitialTextBox"
-        Me.MiddleInitialTextBox.Size = New System.Drawing.Size(35, 20)
-        Me.MiddleInitialTextBox.TabIndex = 4
-        '
-        'ChartNumberTextBox
-        '
-        Me.ChartNumberTextBox.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ChartNumberTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "ChartNumber", True))
-        Me.ChartNumberTextBox.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.ChartNumberTextBox.Location = New System.Drawing.Point(110, 78)
-        Me.ChartNumberTextBox.MaxLength = 8
-        Me.ChartNumberTextBox.Name = "ChartNumberTextBox"
-        Me.ChartNumberTextBox.Size = New System.Drawing.Size(87, 20)
-        Me.ChartNumberTextBox.TabIndex = 1
-        '
-        'Street1TextBox
-        '
-        Me.Street1TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "Street1", True))
-        Me.Street1TextBox.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Street1TextBox.Location = New System.Drawing.Point(110, 266)
-        Me.Street1TextBox.MaxLength = 30
-        Me.Street1TextBox.Name = "Street1TextBox"
-        Me.Street1TextBox.Size = New System.Drawing.Size(234, 20)
-        Me.Street1TextBox.TabIndex = 9
-        '
-        'LastNameTextBox
-        '
-        Me.LastNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "LastName", True))
-        Me.LastNameTextBox.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.LastNameTextBox.Location = New System.Drawing.Point(110, 141)
-        Me.LastNameTextBox.MaxLength = 20
-        Me.LastNameTextBox.Name = "LastNameTextBox"
-        Me.LastNameTextBox.Size = New System.Drawing.Size(168, 20)
-        Me.LastNameTextBox.TabIndex = 3
-        '
-        'PatientID_2TextBox
-        '
-        Me.PatientID_2TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "PatientID#2", True))
-        Me.PatientID_2TextBox.ForeColor = System.Drawing.Color.Blue
-        Me.PatientID_2TextBox.Location = New System.Drawing.Point(269, 80)
-        Me.PatientID_2TextBox.MaxLength = 15
-        Me.PatientID_2TextBox.Name = "PatientID_2TextBox"
-        Me.PatientID_2TextBox.Size = New System.Drawing.Size(76, 20)
-        Me.PatientID_2TextBox.TabIndex = 1
-        '
-        'Street2TextBox
-        '
-        Me.Street2TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "Street2", True))
-        Me.Street2TextBox.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Street2TextBox.Location = New System.Drawing.Point(110, 297)
-        Me.Street2TextBox.MaxLength = 30
-        Me.Street2TextBox.Name = "Street2TextBox"
-        Me.Street2TextBox.Size = New System.Drawing.Size(234, 20)
-        Me.Street2TextBox.TabIndex = 10
-        '
-        'CityTextBox
-        '
-        Me.CityTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "City", True))
-        Me.CityTextBox.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.CityTextBox.Location = New System.Drawing.Point(110, 328)
-        Me.CityTextBox.MaxLength = 20
-        Me.CityTextBox.Name = "CityTextBox"
-        Me.CityTextBox.Size = New System.Drawing.Size(234, 20)
-        Me.CityTextBox.TabIndex = 12
-        '
-        'StateTextBox
-        '
-        Me.StateTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "State", True))
-        Me.StateTextBox.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.StateTextBox.Location = New System.Drawing.Point(110, 359)
-        Me.StateTextBox.MaxLength = 2
-        Me.StateTextBox.Name = "StateTextBox"
-        Me.StateTextBox.Size = New System.Drawing.Size(72, 20)
-        Me.StateTextBox.TabIndex = 13
-        '
-        'ZipCodeTextBox
-        '
-        Me.ZipCodeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "ZipCode", True))
-        Me.ZipCodeTextBox.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.ZipCodeTextBox.Location = New System.Drawing.Point(259, 356)
-        Me.ZipCodeTextBox.MaxLength = 10
-        Me.ZipCodeTextBox.Name = "ZipCodeTextBox"
-        Me.ZipCodeTextBox.Size = New System.Drawing.Size(85, 20)
-        Me.ZipCodeTextBox.TabIndex = 11
-        '
-        'CountryTextBox
-        '
-        Me.CountryTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "Country", True))
-        Me.CountryTextBox.Location = New System.Drawing.Point(534, 77)
-        Me.CountryTextBox.MaxLength = 10
-        Me.CountryTextBox.Name = "CountryTextBox"
-        Me.CountryTextBox.Size = New System.Drawing.Size(201, 20)
-        Me.CountryTextBox.TabIndex = 15
+        Me.HomeePhoneMaskedTextBox.TabIndex = 122
         '
         'EMailAddressTextBox
         '
         Me.EMailAddressTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "EMailAddress", True))
-        Me.EMailAddressTextBox.Location = New System.Drawing.Point(534, 231)
+        Me.EMailAddressTextBox.Location = New System.Drawing.Point(131, 310)
         Me.EMailAddressTextBox.MaxLength = 30
         Me.EMailAddressTextBox.Name = "EMailAddressTextBox"
         Me.EMailAddressTextBox.Size = New System.Drawing.Size(201, 20)
-        Me.EMailAddressTextBox.TabIndex = 20
+        Me.EMailAddressTextBox.TabIndex = 126
         '
         'SignatureonFileCheckBox
         '
         Me.SignatureonFileCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.MMPATIENTBindingSource, "SignatureonFile", True))
-        Me.SignatureonFileCheckBox.Location = New System.Drawing.Point(534, 262)
+        Me.SignatureonFileCheckBox.Location = New System.Drawing.Point(131, 353)
         Me.SignatureonFileCheckBox.Name = "SignatureonFileCheckBox"
         Me.SignatureonFileCheckBox.Size = New System.Drawing.Size(20, 24)
-        Me.SignatureonFileCheckBox.TabIndex = 22
+        Me.SignatureonFileCheckBox.TabIndex = 127
         '
         'WorkExtensionTextBox
         '
         Me.WorkExtensionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "WorkExtension", True))
-        Me.WorkExtensionTextBox.Location = New System.Drawing.Point(534, 170)
+        Me.WorkExtensionTextBox.Location = New System.Drawing.Point(131, 223)
         Me.WorkExtensionTextBox.MaxLength = 6
         Me.WorkExtensionTextBox.Name = "WorkExtensionTextBox"
         Me.WorkExtensionTextBox.Size = New System.Drawing.Size(80, 20)
-        Me.WorkExtensionTextBox.TabIndex = 18
-        '
-        'TabPage3
-        '
-        Me.TabPage3.AutoScroll = True
-        Me.TabPage3.Controls.Add(Me.GroupBox6)
-        Me.TabPage3.Controls.Add(Me.btnDeletePatient)
-        Me.TabPage3.Controls.Add(Me.GroupBox5)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(862, 575)
-        Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "Subscriber/Picture"
-        Me.TabPage3.UseVisualStyleBackColor = True
+        Me.WorkExtensionTextBox.TabIndex = 124
         '
         'GroupBox6
         '
         Me.GroupBox6.Controls.Add(Me.PictureBox1)
         Me.GroupBox6.Controls.Add(PictureImageLabel)
         Me.GroupBox6.Controls.Add(Me.btnBrowse)
-        Me.GroupBox6.Location = New System.Drawing.Point(223, 120)
+        Me.GroupBox6.Location = New System.Drawing.Point(507, 146)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(429, 188)
-        Me.GroupBox6.TabIndex = 95
+        Me.GroupBox6.Size = New System.Drawing.Size(312, 188)
+        Me.GroupBox6.TabIndex = 121
         Me.GroupBox6.TabStop = False
         '
         'PictureBox1
         '
         Me.PictureBox1.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.PatientPicturesBindingSource1, "PictureImage", True))
-        Me.PictureBox1.Location = New System.Drawing.Point(111, 11)
+        Me.PictureBox1.Location = New System.Drawing.Point(60, 11)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(159, 171)
         Me.PictureBox1.TabIndex = 95
@@ -1804,7 +1550,7 @@ Partial Class PATIENT
         '
         'btnBrowse
         '
-        Me.btnBrowse.Location = New System.Drawing.Point(276, 159)
+        Me.btnBrowse.Location = New System.Drawing.Point(225, 159)
         Me.btnBrowse.Name = "btnBrowse"
         Me.btnBrowse.Size = New System.Drawing.Size(75, 23)
         Me.btnBrowse.TabIndex = 2
@@ -1816,12 +1562,34 @@ Partial Class PATIENT
         Me.btnDeletePatient.BackColor = System.Drawing.Color.Transparent
         Me.btnDeletePatient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.btnDeletePatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDeletePatient.Location = New System.Drawing.Point(717, 544)
+        Me.btnDeletePatient.Location = New System.Drawing.Point(739, 521)
         Me.btnDeletePatient.Name = "btnDeletePatient"
         Me.btnDeletePatient.Size = New System.Drawing.Size(90, 23)
-        Me.btnDeletePatient.TabIndex = 94
+        Me.btnDeletePatient.TabIndex = 120
         Me.btnDeletePatient.Text = "Delete Patient"
         Me.btnDeletePatient.UseVisualStyleBackColor = False
+        '
+        'GroupBox7
+        '
+        Me.GroupBox7.Location = New System.Drawing.Point(3, 17)
+        Me.GroupBox7.Name = "GroupBox7"
+        Me.GroupBox7.Size = New System.Drawing.Size(851, 549)
+        Me.GroupBox7.TabIndex = 146
+        Me.GroupBox7.TabStop = False
+        Me.GroupBox7.Text = "Other Information"
+        '
+        'TabPage4
+        '
+        Me.TabPage4.Controls.Add(Me.GroupBox5)
+        Me.TabPage4.Controls.Add(Me.GroupBox3)
+        Me.TabPage4.Controls.Add(Me.GroupBox4)
+        Me.TabPage4.Controls.Add(Me.GroupBox2)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Size = New System.Drawing.Size(862, 575)
+        Me.TabPage4.TabIndex = 3
+        Me.TabPage4.Text = "More"
+        Me.TabPage4.UseVisualStyleBackColor = True
         '
         'GroupBox5
         '
@@ -1847,10 +1615,10 @@ Partial Class PATIENT
         Me.GroupBox5.Controls.Add(Me.PatientIndicatorTextBox)
         Me.GroupBox5.Controls.Add(UserIdLabel)
         Me.GroupBox5.Controls.Add(Me.UserIdTextBox)
-        Me.GroupBox5.Location = New System.Drawing.Point(45, 352)
+        Me.GroupBox5.Location = New System.Drawing.Point(400, 379)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Size = New System.Drawing.Size(411, 188)
-        Me.GroupBox5.TabIndex = 93
+        Me.GroupBox5.TabIndex = 94
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Visible = False
         '
@@ -1961,20 +1729,10 @@ Partial Class PATIENT
         Me.UserIdTextBox.TabIndex = 91
         Me.UserIdTextBox.Visible = False
         '
-        'TabPage4
-        '
-        Me.TabPage4.Controls.Add(Me.GroupBox3)
-        Me.TabPage4.Controls.Add(Me.GroupBox4)
-        Me.TabPage4.Controls.Add(Me.GroupBox2)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Size = New System.Drawing.Size(862, 575)
-        Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "More"
-        Me.TabPage4.UseVisualStyleBackColor = True
-        '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(PatientID_2Label)
+        Me.GroupBox3.Controls.Add(Me.PatientID_2TextBox)
         Me.GroupBox3.Controls.Add(SubCellLabel1)
         Me.GroupBox3.Controls.Add(Me.SubCellMaskedTextBox)
         Me.GroupBox3.Controls.Add(SubHomePhoneLabel1)
@@ -2003,12 +1761,22 @@ Partial Class PATIENT
         Me.GroupBox3.Controls.Add(Me.SubInsIDTextBox)
         Me.GroupBox3.Controls.Add(RelToSubLabel)
         Me.GroupBox3.Controls.Add(Me.RelToSubComboBox)
-        Me.GroupBox3.Location = New System.Drawing.Point(8, 19)
+        Me.GroupBox3.Location = New System.Drawing.Point(8, 4)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(846, 203)
         Me.GroupBox3.TabIndex = 93
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Subscriber's Information"
+        '
+        'PatientID_2TextBox
+        '
+        Me.PatientID_2TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "PatientID#2", True))
+        Me.PatientID_2TextBox.ForeColor = System.Drawing.Color.Blue
+        Me.PatientID_2TextBox.Location = New System.Drawing.Point(757, 68)
+        Me.PatientID_2TextBox.MaxLength = 15
+        Me.PatientID_2TextBox.Name = "PatientID_2TextBox"
+        Me.PatientID_2TextBox.Size = New System.Drawing.Size(76, 20)
+        Me.PatientID_2TextBox.TabIndex = 84
         '
         'SubCellMaskedTextBox
         '
@@ -2162,7 +1930,7 @@ Partial Class PATIENT
         Me.GroupBox4.Controls.Add(Me.InsCoNameTextBox)
         Me.GroupBox4.Controls.Add(InsCoIdLabel)
         Me.GroupBox4.Controls.Add(Me.InsCoIdTextBox)
-        Me.GroupBox4.Location = New System.Drawing.Point(25, 228)
+        Me.GroupBox4.Location = New System.Drawing.Point(25, 206)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(369, 224)
         Me.GroupBox4.TabIndex = 86
@@ -2296,7 +2064,7 @@ Partial Class PATIENT
         Me.GroupBox2.Controls.Add(EmployeeLocationLabel)
         Me.GroupBox2.Controls.Add(Me.EmployeeLocationTextBox)
         Me.GroupBox2.Controls.Add(EmployeeRetirementDateLabel)
-        Me.GroupBox2.Location = New System.Drawing.Point(409, 230)
+        Me.GroupBox2.Location = New System.Drawing.Point(409, 210)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(388, 222)
         Me.GroupBox2.TabIndex = 85
@@ -2630,14 +2398,15 @@ Partial Class PATIENT
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
+        Me.TabPage3.PerformLayout()
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox6.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PatientPicturesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MMDataDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage4.ResumeLayout(False)
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
-        Me.TabPage4.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
@@ -2673,31 +2442,9 @@ Partial Class PATIENT
     Friend WithEvents BindingNavigatorMoveLastItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents MMPATIENTBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents PatientIDTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents ChartNumberTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents LastNameTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents FirstNameTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents MiddleInitialTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Street1TextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Street2TextBox As System.Windows.Forms.TextBox
-    Friend WithEvents CityTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents StateTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents ZipCodeTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents EMailAddressTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents SignatureonFileCheckBox As System.Windows.Forms.CheckBox
-    Friend WithEvents PatientID_2TextBox As System.Windows.Forms.TextBox
-    Friend WithEvents CountryTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents WorkExtensionTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
-    Friend WithEvents DateCreatedDateTimePicker As System.Windows.Forms.DateTimePicker
     Friend WithEvents MMDataDataSet1 As MedicalManager.MMDataDataSet1
     Friend WithEvents MMPATIENTTableAdapter As MedicalManager.MMDataDataSet1TableAdapters.MMPATIENTTableAdapter
-    Friend WithEvents CNICTextBox As System.Windows.Forms.MaskedTextBox
-    Friend WithEvents WorkPhoneMaskedTextBox As System.Windows.Forms.MaskedTextBox
-    Friend WithEvents HomeePhoneMaskedTextBox As System.Windows.Forms.MaskedTextBox
-    Friend WithEvents CellPhoneMaskedTextBox As System.Windows.Forms.MaskedTextBox
-    Friend WithEvents PatientTypeComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents txtFind As System.Windows.Forms.ToolStripTextBox
     Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
@@ -2705,13 +2452,7 @@ Partial Class PATIENT
     Friend WithEvents ToolStripLabel2 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents ToolStripLabel3 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents cmbFilter As System.Windows.Forms.ToolStripComboBox
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents AssignedProviderTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents MstatusComboBox As System.Windows.Forms.ComboBox
-    Friend WithEvents NameOfFriendOrRelativeTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents MaskedTextBox1 As System.Windows.Forms.MaskedTextBox
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
-    Friend WithEvents MaskedTextBoxDob As System.Windows.Forms.MaskedTextBox
     Friend WithEvents PatientIDDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ChartNumberDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents LastNameDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -2755,8 +2496,6 @@ Partial Class PATIENT
     Friend WithEvents TimeStampDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents MMComboBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents MMComboTableAdapter As MedicalManager.MMDataDataSet1TableAdapters.MMComboTableAdapter
-    Friend WithEvents btnPhysician As System.Windows.Forms.Button
-    Friend WithEvents DateChangedTextBox As System.Windows.Forms.TextBox
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
     Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
@@ -2767,10 +2506,8 @@ Partial Class PATIENT
     Friend WithEvents PatientPicturesTableAdapter As MedicalManager.MMDataDataSet2TableAdapters.PatientPicturesTableAdapter
     Friend WithEvents MMDataDataSet2 As MedicalManager.MMDataDataSet2
     Friend WithEvents PatientPicturesBindingSource1 As System.Windows.Forms.BindingSource
-    Friend WithEvents btnDeletePatient As System.Windows.Forms.Button
     Friend WithEvents ToolStripButtonCancel As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
-    Friend WithEvents PhysicianOfficeComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents TabPage4 As TabPage
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents cmdIns2 As Button
@@ -2795,21 +2532,6 @@ Partial Class PATIENT
     Friend WithEvents EmployeeRetirementMaskedTextBox As MaskedTextBox
     Friend WithEvents EmployerTextBox As TextBox
     Friend WithEvents EmployeeLocationTextBox As TextBox
-    Friend WithEvents GroupBox6 As GroupBox
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents btnBrowse As Button
-    Friend WithEvents GroupBox5 As GroupBox
-    Friend WithEvents TimeStampDateTimePicker As DateTimePicker
-    Friend WithEvents UserField1TextBox As TextBox
-    Friend WithEvents DateofLastPaymentDateTimePicker As DateTimePicker
-    Friend WithEvents LastPaymentAmountTextBox As TextBox
-    Friend WithEvents PatientReferenceBalanceTextBox As TextBox
-    Friend WithEvents UserField3TextBox As TextBox
-    Friend WithEvents UserField4TextBox As TextBox
-    Friend WithEvents BillingCodeTextBox As TextBox
-    Friend WithEvents UserField5TextBox As TextBox
-    Friend WithEvents PatientIndicatorTextBox As TextBox
-    Friend WithEvents UserIdTextBox As TextBox
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents SubCellMaskedTextBox As MaskedTextBox
     Friend WithEvents SubHomePhoneMaskedTextBox As MaskedTextBox
@@ -2825,4 +2547,53 @@ Partial Class PATIENT
     Friend WithEvents SubGroupNoTextBox As TextBox
     Friend WithEvents SubInsIDTextBox As TextBox
     Friend WithEvents RelToSubComboBox As ComboBox
+    Friend WithEvents GroupBox5 As GroupBox
+    Friend WithEvents TimeStampDateTimePicker As DateTimePicker
+    Friend WithEvents UserField1TextBox As TextBox
+    Friend WithEvents DateofLastPaymentDateTimePicker As DateTimePicker
+    Friend WithEvents LastPaymentAmountTextBox As TextBox
+    Friend WithEvents PatientReferenceBalanceTextBox As TextBox
+    Friend WithEvents UserField3TextBox As TextBox
+    Friend WithEvents UserField4TextBox As TextBox
+    Friend WithEvents BillingCodeTextBox As TextBox
+    Friend WithEvents UserField5TextBox As TextBox
+    Friend WithEvents PatientIndicatorTextBox As TextBox
+    Friend WithEvents UserIdTextBox As TextBox
+    Friend WithEvents PatientID_2TextBox As TextBox
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents DateCreatedDateTimePicker As DateTimePicker
+    Friend WithEvents DateChangedTextBox As TextBox
+    Friend WithEvents btnPhysician As Button
+    Friend WithEvents MaskedTextBoxDob As MaskedTextBox
+    Friend WithEvents AssignedProviderTextBox As TextBox
+    Friend WithEvents CBSex As ComboBox
+    Friend WithEvents CellPhoneMaskedTextBox As MaskedTextBox
+    Friend WithEvents CNICTextBox As MaskedTextBox
+    Friend WithEvents FirstNameTextBox As TextBox
+    Friend WithEvents PatientIDTextBox As TextBox
+    Friend WithEvents MiddleInitialTextBox As TextBox
+    Friend WithEvents ChartNumberTextBox As TextBox
+    Friend WithEvents Street1TextBox As TextBox
+    Friend WithEvents LastNameTextBox As TextBox
+    Friend WithEvents Street2TextBox As TextBox
+    Friend WithEvents CityTextBox As TextBox
+    Friend WithEvents StateTextBox As TextBox
+    Friend WithEvents ZipCodeTextBox As TextBox
+    Friend WithEvents MstatusComboBox As ComboBox
+    Friend WithEvents PhysicianOfficeComboBox As ComboBox
+    Friend WithEvents MaskedTextBox1 As MaskedTextBox
+    Friend WithEvents NameOfFriendOrRelativeTextBox As TextBox
+    Friend WithEvents PatientTypeComboBox As ComboBox
+    Friend WithEvents WorkPhoneMaskedTextBox As MaskedTextBox
+    Friend WithEvents HomeePhoneMaskedTextBox As MaskedTextBox
+    Friend WithEvents EMailAddressTextBox As TextBox
+    Friend WithEvents SignatureonFileCheckBox As CheckBox
+    Friend WithEvents WorkExtensionTextBox As TextBox
+    Friend WithEvents GroupBox6 As GroupBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnBrowse As Button
+    Friend WithEvents btnDeletePatient As Button
+    Friend WithEvents GroupBox7 As GroupBox
+    Friend WithEvents BtnSaveAndHistory As Button
+    Friend WithEvents BtnSaveAndVisit As Button
 End Class
