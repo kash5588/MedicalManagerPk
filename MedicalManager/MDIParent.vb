@@ -4,6 +4,7 @@ Imports System.Windows.Forms
 Imports System.Data.SqlClient
 Imports System.Data.OleDb
 Imports System.Management
+Imports System.IO
 
 
 Public Class MDIParent
@@ -474,13 +475,7 @@ Public Class MDIParent
 
         Try
             If dgPatient.SelectedRows.Count Then
-                ' aRet = CurrentPatient()
-                ' MsgBox(aRet(1))
-                'Dim row As MMDataDataSet1.MMPATIENTRow
-                'row = CType(CType(Me.MmpatientBindingSource.Current, DataRowView).Row, MMDataDataSet1.MMPATIENTRow)
 
-                'Dim objCurrentPat As New CurrentPat
-                'objCurrentPat.ChartNumber = row.ChartNumber
                 aRet(0) = "Y"
                 aRet(1) = dgPatient.SelectedRows(0).Cells("ChartNumber").Value & "" 'chartnumber
                 aRet(2) = dgPatient.SelectedRows(0).Cells("LastName").Value & ""  'last name
@@ -497,11 +492,71 @@ Public Class MDIParent
                 txtPhone.Text = Me.dgPatient.SelectedRows(0).Cells("CellPhone").Value & ""
                 txtDOB.Text = Me.dgPatient.SelectedRows(0).Cells("DateofBirth").Value & ""
                 txtSEX.Text = Me.dgPatient.SelectedRows(0).Cells("Sex").Value & ""
+                LoadPicture()
             End If
+            If dgPatient.SelectedRows.Count = 0 Then
+                clearTextBox()
+            End If
+
+
+
+
         Catch
         End Try
     End Sub
 
+    Private Sub clearTextBox()
+        PBoxPatient.Image = Nothing
+        ChartNo.Text = ""
+        txtName.Text = ""
+        txtPhone.Text = ""
+        txtSEX.Text = ""
+        txtDOB.Text = ""
+        txtLastVisitDate.Text = ""
+
+    End Sub
+
+    Private Sub LoadPicture()
+        Try
+            Dim connString As String = CommonFunction.connString2
+            Using cn As New SqlConnection(connString)
+                cn.Open()
+                Dim strValue As String = ""
+                PBoxPatient.Image = Nothing
+                If ChartNo.Text <> "" Then
+                    Using cmd As New SqlCommand("SELECT ChartNumber, PictureImage FROM PatientPictures WHERE ChartNumber = @ChartNumber", cn)
+                        cmd.Parameters.AddWithValue("@ChartNumber", ChartNo.Text)
+
+                        Using reader As SqlDataReader = cmd.ExecuteReader()
+                            While reader.Read()
+                                strValue = reader("PictureImage").ToString()
+                                If strValue = "System.Byte[]" Then
+                                    Dim byteBLOBData() As Byte = CType(reader("PictureImage"), Byte())
+                                    PBoxPatient.Image = ToImage(byteBLOBData)
+                                    PBoxPatient.SizeMode = PictureBoxSizeMode.StretchImage
+                                    PBoxPatient.BorderStyle = BorderStyle.FixedSingle
+                                Else
+                                    PBoxPatient.Image = Nothing
+                                    PBoxPatient.BorderStyle = BorderStyle.None
+                                End If
+                            End While
+                        End Using
+                    End Using
+
+                End If
+
+                cn.Close()
+            End Using
+
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString(), "Error")
+        End Try
+    End Sub
+    Private Function ToImage(byteArray As Byte()) As Image
+        Using ms As New MemoryStream(byteArray)
+            Return Image.FromStream(ms)
+        End Using
+    End Function
     Public Function CurrentPatient() As String()
         CurrentPatient = aRet
         Exit Function
@@ -2130,14 +2185,33 @@ Public Class MDIParent
     End Sub
 
     Private Sub cmbFilterByDate_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbFilterByDate.SelectedIndexChanged
-        'If cmbFilterByDate.SelectedItem.ToString = "All" Then
-        '    Me.MmpatientTableAdapter.Fill(Me.MMDataDataSet1.MMPATIENT)
-        'Else
-        '    Dim dateAsInteger As Integer = Convert.ToInt32(DateTime.Now.ToString("yyyyMMdd"))
-        '    Me.MmpatientTableAdapter.FillByDateCreated(Me.MMDataDataSet1.MMPATIENT)
+        Dim connString As String = connString2
+        Dim cn As New SqlConnection(connString)
+        Dim cmd As New SqlCommand
 
-        'End If
-        'dgPatient.DataSource = MmpatientBindingSource
-        'dgPatient.Refresh()
+        cn.Open()
+        If cmbFilterByDate.SelectedItem.ToString = "All" Then
+            cmd = New SqlCommand("SELECT [PatientID],[ChartNumber],[FirstName],[LastName],[HomeePhone],[CellPhone],[CNICNO] as CNIC,[Sex],[DateofBirth],[RelToSub],[PhysicianOffice],[AssignedProvider] as Physician  FROM [MMPATIENT]", cn)
+
+        Else
+            cmd = New SqlCommand("SELECT [PatientID],[ChartNumber],[FirstName],[LastName],[HomeePhone],[CellPhone],[CNICNO] as CNIC,[Sex],[DateofBirth],[RelToSub],[PhysicianOffice],[AssignedProvider] as Physician FROM [MMPATIENT] where CONVERT(date, DateCreated) = '" + DateTime.Now.ToString("MM/dd/yyyy") + "' ", cn)
+
+        End If
+
+        Dim da As New SqlDataAdapter
+        Dim tbl As New DataTable
+        Dim ds As New DataSet
+        da.SelectCommand = cmd
+        da.Fill(ds, "MMDX")
+
+        myBindingSource = New BindingSource()
+        myBindingSource.DataSource = ds
+        myBindingSource.DataMember = ds.Tables(0).TableName
+        dgPatient.DataSource = myBindingSource
+        'dgPatient.Sort(dgPatient.Columns("PatientID"), System.ComponentModel.ListSortDirection.Descending)
+
+        ds.Dispose()
+        cn.Close()
+        LoadPicture()
     End Sub
 End Class
