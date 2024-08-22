@@ -1244,7 +1244,7 @@ Partial Class Visit2
         Me.LabelMode.ForeColor = System.Drawing.SystemColors.Highlight
         Me.LabelMode.Location = New System.Drawing.Point(175, 8)
         Me.LabelMode.Name = "LabelMode"
-        Me.LabelMode.Size = New System.Drawing.Size(46, 16)
+        Me.LabelMode.Size = New System.Drawing.Size(47, 16)
         Me.LabelMode.TabIndex = 132
         Me.LabelMode.Text = "Mode"
         '
@@ -1886,7 +1886,7 @@ Partial Class Visit2
         Me.LblDX.ForeColor = System.Drawing.Color.DarkSlateBlue
         Me.LblDX.Location = New System.Drawing.Point(1, 13)
         Me.LblDX.Name = "LblDX"
-        Me.LblDX.Size = New System.Drawing.Size(77, 16)
+        Me.LblDX.Size = New System.Drawing.Size(78, 16)
         Me.LblDX.TabIndex = 131
         Me.LblDX.Text = "Diagnosis"
         '
@@ -1898,7 +1898,7 @@ Partial Class Visit2
         Me.lblProcedures.ForeColor = System.Drawing.Color.DarkSlateBlue
         Me.lblProcedures.Location = New System.Drawing.Point(5, 355)
         Me.lblProcedures.Name = "lblProcedures"
-        Me.lblProcedures.Size = New System.Drawing.Size(87, 16)
+        Me.lblProcedures.Size = New System.Drawing.Size(88, 16)
         Me.lblProcedures.TabIndex = 130
         Me.lblProcedures.Text = "Procedures"
         '
@@ -2062,7 +2062,7 @@ Partial Class Visit2
         Me.Label9.ForeColor = System.Drawing.Color.DarkSlateBlue
         Me.Label9.Location = New System.Drawing.Point(3, 177)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(91, 16)
+        Me.Label9.Size = New System.Drawing.Size(92, 16)
         Me.Label9.TabIndex = 129
         Me.Label9.Text = "Impressions"
         '
@@ -2190,7 +2190,7 @@ Partial Class Visit2
         Me.Label1.ForeColor = System.Drawing.Color.Indigo
         Me.Label1.Location = New System.Drawing.Point(7, 4)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(136, 16)
+        Me.Label1.Size = New System.Drawing.Size(150, 16)
         Me.Label1.TabIndex = 138
         Me.Label1.Text = "MEDICATION LIST"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft

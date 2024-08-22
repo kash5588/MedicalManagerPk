@@ -55,12 +55,20 @@ Public Class VitalSigns
       Private Sub MMChartTVitalSignBindingSource_AddingNew(ByVal sender As Object, ByVal e As System.ComponentModel.AddingNewEventArgs) Handles MMChartTVitalSignBindingSource.AddingNew
         Me.MMDataDataSet1.MMChartTVitalSign.ChartNumberColumn.DefaultValue = aRet(1)
         Me.MMDataDataSet1.MMChartTVitalSign.NameColumn.DefaultValue = aRet(2) + ", " + aRet(3)
-     
-        If aRet(10) <> "" Then
+
+        If aRet(10) <> "" Then ' when we come from visit list and Visit page
             Me.MMDataDataSet1.MMChartTVitalSign.CaseNumberColumn.DefaultValue = aRet(10)
-            Me.MMDataDataSet1.MMChartTVitalSign.DateColumn.DefaultValue = aRet(9)
-            Me.MMDataDataSet1.MMChartTVitalSign.TimeColumn.DefaultValue = aRet(9)
-            Me.MMDataDataSet1.MMChartTVitalSign.UserColumn.DefaultValue = globalUser
+            If aRet(9) <> "" Then  ' when u come from visit list
+                Me.MMDataDataSet1.MMChartTVitalSign.DateColumn.DefaultValue = aRet(9)
+                Me.MMDataDataSet1.MMChartTVitalSign.TimeColumn.DefaultValue = aRet(9)
+                Me.MMDataDataSet1.MMChartTVitalSign.UserColumn.DefaultValue = globalUser
+            Else
+                Me.MMDataDataSet1.MMChartTVitalSign.DateColumn.DefaultValue = System.DateTime.Now.Date
+                Me.MMDataDataSet1.MMChartTVitalSign.TimeColumn.DefaultValue = System.DateTime.Now.Date
+                Me.MMDataDataSet1.MMChartTVitalSign.UserColumn.DefaultValue = globalUser
+            End If
+
+
         Else
             Me.MMDataDataSet1.MMChartTVitalSign.CaseNumberColumn.DefaultValue = 0
             Me.MMDataDataSet1.MMChartTVitalSign.DateColumn.DefaultValue = System.DateTime.Now.Date

@@ -1,4 +1,9 @@
-﻿Public Class VisitsList
+﻿Imports Ascend.Windows.Forms
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox
+
+Public Class VisitsList
+    Public aRet(10) As String
+
     Private Sub MMChartVisitBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.MMChartVisitBindingSource.EndEdit()
@@ -16,7 +21,11 @@
         Try
             If MMChartVisitDataGridView.SelectedRows.Count Then
 
-
+                aRet(0) = "Y"
+                aRet(1) = MMChartVisitDataGridView.SelectedRows(0).Cells("ChartNumber").Value & "" 'chartnumber
+                aRet(2) = MMChartVisitDataGridView.SelectedRows(0).Cells("LastName").Value & ""  'last name
+                aRet(3) = MMChartVisitDataGridView.SelectedRows(0).Cells("FirstName").Value & ""   'first name
+                aRet(10) = MMChartVisitDataGridView.SelectedRows(0).Cells("CaseNumber").Value & ""   'CaseNumber
 
                 ChartNo.Text = Me.MMChartVisitDataGridView.SelectedRows(0).Cells("ChartNumber").Value
                 txtName.Text = Me.MMChartVisitDataGridView.SelectedRows(0).Cells("FirstName").Value & " " & Me.MMChartVisitDataGridView.SelectedRows(0).Cells("LastName").Value
@@ -42,5 +51,23 @@
         TBTokenNo.Text = ""
         TBPhysicianName.Text = ""
         txtCaseNo.Text = ""
+    End Sub
+
+    Private Sub btnVitals_Click(sender As Object, e As EventArgs) Handles btnVitals.Click
+
+
+        If MMChartVisitDataGridView.SelectedRows.Count Then
+
+            VitalSigns.ShowVitalSigns(aRet)
+        End If
+
+
+
+    End Sub
+
+    Private Sub BtnMedication_Click(sender As Object, e As EventArgs) Handles BtnMedication.Click
+        If MMChartVisitDataGridView.SelectedRows.Count Then
+            Prescription.ShowPrescriptions(aRet)
+        End If
     End Sub
 End Class
