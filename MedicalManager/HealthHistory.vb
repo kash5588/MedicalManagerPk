@@ -87,7 +87,7 @@ Public Class HealthHistory
         TabControl1.SelectedIndex = 0
         Me.Text = "Health History"
         Me.Text = Me.Text + "   " + HChartNumber
-
+        PictureImagePictureBox.SizeMode = PictureBoxSizeMode.StretchImage
         If DOBTextBox.Text <> "" Then
             txtAge.Text = GetAge(DOBTextBox.Text)
         End If

@@ -506,45 +506,45 @@ Public Class PATIENT
         Dim connString As String = connString2
 
         Try
-                Using con As New SqlConnection(connString)
-                    Dim da As New SqlDataAdapter("SELECT ChartNumber, PictureImage FROM PatientPictures WHERE ChartNumber = @ChartNumber", con)
-                    da.SelectCommand.Parameters.AddWithValue("@ChartNumber", ChartNumberTextBox.Text)
-                    da.MissingSchemaAction = MissingSchemaAction.AddWithKey
+            Using con As New SqlConnection(connString)
+                Dim da As New SqlDataAdapter("SELECT ChartNumber, PictureImage FROM PatientPictures WHERE ChartNumber = @ChartNumber", con)
+                da.SelectCommand.Parameters.AddWithValue("@ChartNumber", ChartNumberTextBox.Text)
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey
 
-                    ' Define the UpdateCommand
-                    da.UpdateCommand = New SqlCommand("UPDATE PatientPictures SET PictureImage = @PictureImage WHERE ChartNumber = @ChartNumber", con)
-                    da.UpdateCommand.Parameters.Add("@PictureImage", SqlDbType.VarBinary, -1, "PictureImage")
-                    da.UpdateCommand.Parameters.Add("@ChartNumber", SqlDbType.NVarChar, 50, "ChartNumber")
+                ' Define the UpdateCommand
+                da.UpdateCommand = New SqlCommand("UPDATE PatientPictures SET PictureImage = @PictureImage WHERE ChartNumber = @ChartNumber", con)
+                da.UpdateCommand.Parameters.Add("@PictureImage", SqlDbType.VarBinary, -1, "PictureImage")
+                da.UpdateCommand.Parameters.Add("@ChartNumber", SqlDbType.NVarChar, 50, "ChartNumber")
 
-                    ' Define the InsertCommand
-                    da.InsertCommand = New SqlCommand("INSERT INTO PatientPictures (ChartNumber, PictureImage) VALUES (@ChartNumber, @PictureImage)", con)
-                    da.InsertCommand.Parameters.Add("@ChartNumber", SqlDbType.NVarChar, 50, "ChartNumber")
-                    da.InsertCommand.Parameters.Add("@PictureImage", SqlDbType.VarBinary, -1, "PictureImage")
+                ' Define the InsertCommand
+                da.InsertCommand = New SqlCommand("INSERT INTO PatientPictures (ChartNumber, PictureImage) VALUES (@ChartNumber, @PictureImage)", con)
+                da.InsertCommand.Parameters.Add("@ChartNumber", SqlDbType.NVarChar, 50, "ChartNumber")
+                da.InsertCommand.Parameters.Add("@PictureImage", SqlDbType.VarBinary, -1, "PictureImage")
 
-                    Dim ds As New DataSet()
-                    Dim MyData() As Byte = File.ReadAllBytes(allText)
+                Dim ds As New DataSet()
+                Dim MyData() As Byte = File.ReadAllBytes(allText)
 
-                    con.Open()
-                    da.Fill(ds, "PatientPictures")
+                con.Open()
+                da.Fill(ds, "PatientPictures")
 
-                    Dim myRow As DataRow
-                    If ds.Tables("PatientPictures").Rows.Count > 0 Then
-                        ' Update existing record
-                        myRow = ds.Tables("PatientPictures").Rows(0)
-                    Else
-                        ' Insert new record
-                        myRow = ds.Tables("PatientPictures").NewRow()
-                        myRow("ChartNumber") = ChartNumberTextBox.Text
-                        ds.Tables("PatientPictures").Rows.Add(myRow)
-                    End If
+                Dim myRow As DataRow
+                If ds.Tables("PatientPictures").Rows.Count > 0 Then
+                    ' Update existing record
+                    myRow = ds.Tables("PatientPictures").Rows(0)
+                Else
+                    ' Insert new record
+                    myRow = ds.Tables("PatientPictures").NewRow()
+                    myRow("ChartNumber") = ChartNumberTextBox.Text
+                    ds.Tables("PatientPictures").Rows.Add(myRow)
+                End If
 
-                    myRow("PictureImage") = MyData
-                    da.Update(ds, "PatientPictures")
-                End Using
+                myRow("PictureImage") = MyData
+                da.Update(ds, "PatientPictures")
+            End Using
 
         Catch ex As Exception
-                Console.WriteLine("Error: " & ex.Message)
-            End Try
+            Console.WriteLine("Error: " & ex.Message)
+        End Try
     End Function
 
     Private Sub btnDeletePatient_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)

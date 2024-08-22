@@ -669,7 +669,7 @@ Public Class MDIParent
         End If
     End Sub
 
-    Private Sub dgpatient_CellFormatting(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellFormattingEventArgs) Handles dgPatient.CellFormatting
+    Private Sub dgpatient_CellFormatting(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellFormattingEventArgs)
         If GradientCaption2.Text = "Appointment" Then
 
             If e.ColumnIndex = 1 Then
@@ -2190,13 +2190,25 @@ Public Class MDIParent
         Dim cmd As New SqlCommand
 
         cn.Open()
-        If cmbFilterByDate.SelectedItem.ToString = "All" Then
-            cmd = New SqlCommand("SELECT [PatientID],[ChartNumber],[FirstName],[LastName],[HomeePhone],[CellPhone],[CNICNO] as CNIC,[Sex],[DateofBirth],[RelToSub],[PhysicianOffice],[AssignedProvider] as Physician  FROM [MMPATIENT]", cn)
+        If cmbPhysion.SelectedItem IsNot Nothing AndAlso Not String.IsNullOrEmpty(cmbPhysion.SelectedItem.ToString()) Then
+            If cmbFilterByDate.SelectedItem.ToString = "All" Then
+                cmd = New SqlCommand("SELECT [PatientID],[ChartNumber],[FirstName],[LastName],[HomeePhone],[CellPhone],[CNICNO] as CNIC,[Sex],[DateofBirth],[RelToSub],[PhysicianOffice],[AssignedProvider] as Physician  FROM [MMPATIENT] where AssignedProvider = '" + cmbPhysion.SelectedItem.ToString() + "'", cn)
 
+            Else
+                cmd = New SqlCommand("SELECT [PatientID],[ChartNumber],[FirstName],[LastName],[HomeePhone],[CellPhone],[CNICNO] as CNIC,[Sex],[DateofBirth],[RelToSub],[PhysicianOffice],[AssignedProvider] as Physician FROM [MMPATIENT] where  AssignedProvider = '" + cmbPhysion.SelectedItem.ToString() + "' and CONVERT(date, DateCreated) = '" + DateTime.Now.ToString("MM/dd/yyyy") + "' ", cn)
+
+            End If
         Else
-            cmd = New SqlCommand("SELECT [PatientID],[ChartNumber],[FirstName],[LastName],[HomeePhone],[CellPhone],[CNICNO] as CNIC,[Sex],[DateofBirth],[RelToSub],[PhysicianOffice],[AssignedProvider] as Physician FROM [MMPATIENT] where CONVERT(date, DateCreated) = '" + DateTime.Now.ToString("MM/dd/yyyy") + "' ", cn)
+            If cmbFilterByDate.SelectedItem.ToString = "All" Then
+                cmd = New SqlCommand("SELECT [PatientID],[ChartNumber],[FirstName],[LastName],[HomeePhone],[CellPhone],[CNICNO] as CNIC,[Sex],[DateofBirth],[RelToSub],[PhysicianOffice],[AssignedProvider] as Physician  FROM [MMPATIENT]", cn)
 
+            Else
+                cmd = New SqlCommand("SELECT [PatientID],[ChartNumber],[FirstName],[LastName],[HomeePhone],[CellPhone],[CNICNO] as CNIC,[Sex],[DateofBirth],[RelToSub],[PhysicianOffice],[AssignedProvider] as Physician FROM [MMPATIENT] where CONVERT(date, DateCreated) = '" + DateTime.Now.ToString("MM/dd/yyyy") + "' ", cn)
+
+            End If
         End If
+
+
 
         Dim da As New SqlDataAdapter
         Dim tbl As New DataTable
@@ -2213,5 +2225,9 @@ Public Class MDIParent
         ds.Dispose()
         cn.Close()
         LoadPicture()
+    End Sub
+
+    Private Sub BtnVisitList_Click(sender As Object, e As EventArgs) Handles BtnVisitList.Click
+        VisitsList.Show()
     End Sub
 End Class
