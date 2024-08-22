@@ -149,6 +149,7 @@ Public Class PATIENT
     'End Sub
 
     Private Sub MMPATIENT_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
         On Error Resume Next
         'TODO: This line of code loads data into the 'MMDataDataSet2.PatientPictures' table. You can move, or remove it, as needed.
         Me.PatientPicturesTableAdapter.Fill(Me.MMDataDataSet2.PatientPictures)
@@ -416,11 +417,24 @@ Public Class PATIENT
 
             AssignedProviderTextBox.Text = aRet(3) + " " + aRet(2) 'Pick Name Of Physician
 
-            'RefPhysicianTextBox.Text = aRet(3) + " " + aRet(2)
-            '  LastNameTextBox.Text = aRet(3) + " " + aRet(2)
-            '  FirstNameTextBox.Text = aRet(3)
-            ' DOBTextBox.Text = aRet(6)
-            'DOBTextBox.Text = aRet(6)
+            If AssignedProviderTextBox.Text <> "" Then
+                DGFeeList.Visible = True
+                LabelFee.Visible = True
+                Me.MMPRocedureTableAdapter.FillByCode1(Me.MMDataDataSet1.MMPRocedure, aRet(1))
+                If DGFeeList.SelectedRows.Count > 0 Then
+                    PhysicianFeeTextBox.Text = CInt(Math.Round(Convert.ToDouble(DGFeeList.SelectedRows(0).Cells("Fee").Value)))
+                    TbIdProcedure.Text = DGFeeList.SelectedRows(0).Cells("Id").Value.ToString()
+
+
+                Else
+                    PhysicianFeeTextBox.Text = ""
+                    DGFeeList.Visible = False
+                    LabelFee.Visible = True
+                    LabelFee.Text = "No available FEE for '" + AssignedProviderTextBox.Text + "'"
+                End If
+            End If
+
+
         End If
     End Sub
 
@@ -653,47 +667,140 @@ Public Class PATIENT
     End Sub
 
     Private Sub BtnSaveAndVisit_Click(sender As Object, e As EventArgs) Handles BtnSaveAndVisit.Click
-        If FirstNameTextBox.Text <> "" Then
+        Dim pieces() As String
+        Dim IndexOf As Integer
+        Dim sAction As String
+        Try
+            If PhysicianFeeTextBox.Text <> "" Then
+                GenerateChartNumber()
+                Me.Validate()
+                Me.MMDataDataSet1.MMPATIENT.DateofBirthColumn.DefaultValue = System.DBNull.Value
+                Me.MMPATIENTBindingSource.EndEdit()
+                If Me.Validate Then
+                    Me.MMPATIENTTableAdapter.Update(Me.MMDataDataSet1.MMPATIENT)
+                End If
+                Me.Cursor = Cursors.Default
+                aRet(0) = "Y"
+                aRet(1) = ChartNumberTextBox.Text.Trim()  'chartnumber
+                aRet(2) = LastNameTextBox.Text.Trim() 'last name
+                aRet(3) = FirstNameTextBox.Text.Trim()  'first name
+                'aRet(4) = dgPatient.SelectedRows(0).Cells("MiddleInitial").Value & ""    'middle initial
+                If CellPhoneMaskedTextBox.Text = "    -" Then
+                    aRet(5) = ""
+                Else
+                    aRet(5) = CellPhoneMaskedTextBox.Text.Trim()   'phone
+                End If
+
+                aRet(6) = MaskedTextBoxDob.Text.Trim()    'DOB
+                aRet(7) = CBSex.Text.Trim()
 
 
-
-            Me.Cursor = Cursors.WaitCursor
-            DateChangedTextBox.Text = System.DateTime.Now()
-
-
-            Me.Validate()
-            Me.MMDataDataSet1.MMPATIENT.DateofBirthColumn.DefaultValue = System.DBNull.Value
-            Me.MMPATIENTBindingSource.EndEdit()
-            If Me.Validate Then
-                Me.MMPATIENTTableAdapter.Update(Me.MMDataDataSet1.MMPATIENT)
-            End If
-            Me.Cursor = Cursors.Default
-
-            Dim pieces() As String
-            Dim IndexOf As Integer
-            Dim sAction As String
-            Try
-                sAction = "FormHealthHistory"
+                sAction = "VisitTemplate"
                 pieces = Permissions.Split(",")
                 IndexOf = Array.IndexOf(pieces, sAction)
 
                 If IndexOf <> -1 Then
                 Else
-                    MessageBox.Show("User is not authorized for this procedure.", "Authorization Denied", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Exit Sub
                 End If
-
                 arrayAssignedProvider(0) = AssignedProviderTextBox.Text
-                Me.Hide()
-                HealthHistory.ShowHistory(aRet, arrayAssignedProvider)
-                Me.Close() ' Close after history is shown if needed
 
-            Catch ex As System.Exception
-                System.Windows.Forms.MessageBox.Show(ex.Message)
-            End Try
+                If ChartNumberTextBox.Text.Trim = "" Then
+                    MessageBox.Show("You may not add a Visit without a Chart.")
+                Else
 
-        End If
+                    Dim CaseNo As Integer = InsertVisit(aRet, arrayAssignedProvider)
+                    InsertFeeProcedure(aRet, arrayAssignedProvider, TbIdProcedure.Text, CaseNo)
+
+                    Dim result As DialogResult = MessageBox.Show("You added a visit successfully." & vbCrLf & "Do you want to Print Slip?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+                    If result = DialogResult.Yes Then
+                        ' Call the new function if the user clicks Yes
+                        Me.Close()
+                    Else
+                        Me.Close()
+                    End If
+                End If
+
+            Else
+                MessageBox.Show("You may not add a Visit without a Fee.")
+
+            End If
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
     End Sub
+
+    Private Sub InsertFeeProcedure(aRet() As String, arrayAssignedProvider() As String, ProcedureID As String, CaseNo As Integer)
+        Dim connectionString As String = connString2
+
+        ' Create the SQL connection
+        Using connection As New SqlConnection(connectionString)
+            ' Define your SQL command with the INSERT...SELECT statement using parameters
+            Dim sql As String = "INSERT INTO MMCHDxRxLtMt (ChartNumber, CaseNumber, Date, Type, Code, Description, UserID, TimeStamp, Amount) " &
+                         "SELECT @ChartNumber, @CaseNumber, @Date, Type, Code1, Description, @UserID, @Date, AmountA FROM MMProcedure WHERE Id = @ProcedureID"
+
+            ' Create the SQL command
+            Using command As New SqlCommand(sql, connection)
+                ' Add the parameters and their values
+                command.Parameters.AddWithValue("@ChartNumber", aRet(1))
+                command.Parameters.AddWithValue("@CaseNumber", CaseNo)
+                command.Parameters.AddWithValue("@ProcedureID", Convert.ToInt32(ProcedureID))
+                command.Parameters.AddWithValue("@UserID", globalUser)
+                command.Parameters.AddWithValue("@Date", System.DateTime.Now.Date)
+
+                ' Open the connection
+                connection.Open()
+
+                ' Execute the command
+                command.ExecuteNonQuery()
+
+                ' Close the connection
+                connection.Close()
+            End Using
+        End Using
+    End Sub
+
+    Function InsertVisit(aRet() As String, arrayAssignedProvider() As String) As Integer
+        Dim connectionString As String = connString2
+
+        ' Create the SQL connection
+        Using connection As New SqlConnection(connectionString)
+            ' Define your SQL command with placeholders for the parameters
+            Dim sql As String = "INSERT INTO MMData.dbo.MMChartVisit (ChartNumber, Date, FirstName, LastName, DOB, AssignedProvider, TimeStamp, UserName) " &
+                         "VALUES (@ChartNumber, @Date, @FirstName, @LastName, @DOB, @AssignedProvider, @TimeStamp, @UserName); " &
+                         "SELECT SCOPE_IDENTITY();"
+
+            ' Create the SQL command
+            Using command As New SqlCommand(sql, connection)
+                ' Define the parameters and their values
+                command.Parameters.AddWithValue("@ChartNumber", aRet(1))
+                command.Parameters.AddWithValue("@Date", DateTime.Now.Date)
+                command.Parameters.AddWithValue("@FirstName", aRet(3))
+                command.Parameters.AddWithValue("@LastName", aRet(2))
+
+                Dim dobString As String = aRet(6).ToString()  ' Convert the object to string
+                Dim dob As DateTime = DateTime.ParseExact(dobString, "MM/dd/yyyy", System.Globalization.CultureInfo.InvariantCulture)
+
+                command.Parameters.AddWithValue("@DOB", dob.ToString("MM/dd/yyyy"))
+                command.Parameters.AddWithValue("@AssignedProvider", arrayAssignedProvider(0))
+                command.Parameters.AddWithValue("@TimeStamp", DateTime.Now.Date)
+                command.Parameters.AddWithValue("@UserName", globalUser)
+
+                ' Open the connection
+                connection.Open()
+
+                ' Execute the command and retrieve the auto-incremented CaseNumber
+                Dim caseNumber As Integer = Convert.ToInt32(command.ExecuteScalar())
+
+                ' Close the connection
+                connection.Close()
+
+                ' Return the auto-incremented CaseNumber
+                Return caseNumber
+            End Using
+        End Using
+    End Function
 
     Private Sub BtnSaveAndHistory_Click(sender As Object, e As EventArgs) Handles BtnSaveAndHistory.Click
         If FirstNameTextBox.Text <> "" Then
@@ -750,6 +857,16 @@ Public Class PATIENT
                 System.Windows.Forms.MessageBox.Show(ex.Message)
             End Try
 
+        End If
+    End Sub
+
+    Private Sub DGFeeList_DoubleClick(sender As Object, e As EventArgs) Handles DGFeeList.DoubleClick
+        If AssignedProviderTextBox.Text <> "" Then
+            If DGFeeList.SelectedRows.Count > 0 Then
+                PhysicianFeeTextBox.Text = CInt(Math.Round(Convert.ToDouble(DGFeeList.CurrentRow.Cells("Fee").Value)))
+                TbIdProcedure.Text = DGFeeList.CurrentRow.Cells("Id").Value.ToString()
+
+            End If
         End If
     End Sub
 End Class

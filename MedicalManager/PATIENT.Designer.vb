@@ -92,25 +92,15 @@ Partial Class PATIENT
         Dim PatientTypeLabel As System.Windows.Forms.Label
         Dim WorkExtensionLabel As System.Windows.Forms.Label
         Dim PictureImageLabel As System.Windows.Forms.Label
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PATIENT))
+        Dim Label1 As System.Windows.Forms.Label
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.dgPatient = New System.Windows.Forms.DataGridView()
-        Me.PatientIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ChartNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SignatureonFileDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.PatientTypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SexDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DateofBirthDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AssignedProviderDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DateCreatedDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MMPATIENTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.BtnSaveAndHistory = New System.Windows.Forms.Button()
@@ -234,9 +224,31 @@ Partial Class PATIENT
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.PatientPicturesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PatientPicturesTableAdapter = New MedicalManager.MMDataDataSet2TableAdapters.PatientPicturesTableAdapter()
+        Me.PhysicianFeeTextBox = New System.Windows.Forms.TextBox()
+        Me.LabelFee = New System.Windows.Forms.Label()
+        Me.DGFeeList = New System.Windows.Forms.DataGridView()
+        Me.TbIdProcedure = New System.Windows.Forms.TextBox()
+        Me.MMPATIENTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1()
+        Me.PatientIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ChartNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SignatureonFileDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.PatientTypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SexDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DateofBirthDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AssignedProviderDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DateCreatedDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MMPRocedureBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MMPATIENTTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMPATIENTTableAdapter()
         Me.MMComboBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MMComboTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMComboTableAdapter()
+        Me.MMPRocedureTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMPRocedureTableAdapter()
+        Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Description = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Type = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Fee = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CopaySpecialistLabel = New System.Windows.Forms.Label()
         CopayOfficeVisitLabel = New System.Windows.Forms.Label()
         PatInsGP2Label = New System.Windows.Forms.Label()
@@ -309,11 +321,10 @@ Partial Class PATIENT
         PatientTypeLabel = New System.Windows.Forms.Label()
         WorkExtensionLabel = New System.Windows.Forms.Label()
         PictureImageLabel = New System.Windows.Forms.Label()
+        Label1 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.dgPatient, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MMPATIENTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MMDataDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
@@ -331,6 +342,10 @@ Partial Class PATIENT
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMDataDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PatientPicturesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGFeeList, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MMPATIENTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MMDataDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MMPRocedureBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMComboBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -855,7 +870,7 @@ Partial Class PATIENT
         'DateCreatedLabel
         '
         DateCreatedLabel.AutoSize = True
-        DateCreatedLabel.Location = New System.Drawing.Point(199, 446)
+        DateCreatedLabel.Location = New System.Drawing.Point(199, 475)
         DateCreatedLabel.Name = "DateCreatedLabel"
         DateCreatedLabel.Size = New System.Drawing.Size(82, 15)
         DateCreatedLabel.TabIndex = 48
@@ -864,7 +879,7 @@ Partial Class PATIENT
         'DateChangedLabel
         '
         DateChangedLabel.AutoSize = True
-        DateChangedLabel.Location = New System.Drawing.Point(194, 485)
+        DateChangedLabel.Location = New System.Drawing.Point(194, 514)
         DateChangedLabel.Name = "DateChangedLabel"
         DateChangedLabel.Size = New System.Drawing.Size(89, 15)
         DateChangedLabel.TabIndex = 26
@@ -1016,116 +1031,39 @@ Partial Class PATIENT
         Me.dgPatient.AllowUserToDeleteRows = False
         Me.dgPatient.AllowUserToResizeRows = False
         Me.dgPatient.AutoGenerateColumns = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgPatient.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgPatient.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.dgPatient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgPatient.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PatientIDDataGridViewTextBoxColumn, Me.ChartNumberDataGridViewTextBoxColumn, Me.LastNameDataGridViewTextBoxColumn, Me.FirstNameDataGridViewTextBoxColumn, Me.SignatureonFileDataGridViewCheckBoxColumn, Me.PatientTypeDataGridViewTextBoxColumn, Me.SexDataGridViewTextBoxColumn, Me.DateofBirthDataGridViewTextBoxColumn, Me.AssignedProviderDataGridViewTextBoxColumn, Me.DateCreatedDataGridViewTextBoxColumn})
         Me.dgPatient.DataSource = Me.MMPATIENTBindingSource
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgPatient.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgPatient.DefaultCellStyle = DataGridViewCellStyle6
         Me.dgPatient.Location = New System.Drawing.Point(3, 6)
         Me.dgPatient.Name = "dgPatient"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgPatient.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgPatient.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.dgPatient.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.dgPatient.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgPatient.Size = New System.Drawing.Size(856, 566)
         Me.dgPatient.TabIndex = 0
-        '
-        'PatientIDDataGridViewTextBoxColumn
-        '
-        Me.PatientIDDataGridViewTextBoxColumn.DataPropertyName = "PatientID"
-        Me.PatientIDDataGridViewTextBoxColumn.HeaderText = "Patient ID"
-        Me.PatientIDDataGridViewTextBoxColumn.Name = "PatientIDDataGridViewTextBoxColumn"
-        Me.PatientIDDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ChartNumberDataGridViewTextBoxColumn
-        '
-        Me.ChartNumberDataGridViewTextBoxColumn.DataPropertyName = "ChartNumber"
-        Me.ChartNumberDataGridViewTextBoxColumn.HeaderText = "Chart Number"
-        Me.ChartNumberDataGridViewTextBoxColumn.MaxInputLength = 8
-        Me.ChartNumberDataGridViewTextBoxColumn.Name = "ChartNumberDataGridViewTextBoxColumn"
-        '
-        'LastNameDataGridViewTextBoxColumn
-        '
-        Me.LastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName"
-        Me.LastNameDataGridViewTextBoxColumn.HeaderText = "Last Name"
-        Me.LastNameDataGridViewTextBoxColumn.MaxInputLength = 20
-        Me.LastNameDataGridViewTextBoxColumn.Name = "LastNameDataGridViewTextBoxColumn"
-        '
-        'FirstNameDataGridViewTextBoxColumn
-        '
-        Me.FirstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName"
-        Me.FirstNameDataGridViewTextBoxColumn.HeaderText = "First Name"
-        Me.FirstNameDataGridViewTextBoxColumn.MaxInputLength = 20
-        Me.FirstNameDataGridViewTextBoxColumn.Name = "FirstNameDataGridViewTextBoxColumn"
-        '
-        'SignatureonFileDataGridViewCheckBoxColumn
-        '
-        Me.SignatureonFileDataGridViewCheckBoxColumn.DataPropertyName = "SignatureonFile"
-        Me.SignatureonFileDataGridViewCheckBoxColumn.HeaderText = "Signature on File"
-        Me.SignatureonFileDataGridViewCheckBoxColumn.Name = "SignatureonFileDataGridViewCheckBoxColumn"
-        '
-        'PatientTypeDataGridViewTextBoxColumn
-        '
-        Me.PatientTypeDataGridViewTextBoxColumn.DataPropertyName = "PatientType"
-        Me.PatientTypeDataGridViewTextBoxColumn.HeaderText = "Patient Type"
-        Me.PatientTypeDataGridViewTextBoxColumn.MaxInputLength = 9
-        Me.PatientTypeDataGridViewTextBoxColumn.Name = "PatientTypeDataGridViewTextBoxColumn"
-        '
-        'SexDataGridViewTextBoxColumn
-        '
-        Me.SexDataGridViewTextBoxColumn.DataPropertyName = "Sex"
-        Me.SexDataGridViewTextBoxColumn.HeaderText = "Sex"
-        Me.SexDataGridViewTextBoxColumn.MaxInputLength = 6
-        Me.SexDataGridViewTextBoxColumn.Name = "SexDataGridViewTextBoxColumn"
-        '
-        'DateofBirthDataGridViewTextBoxColumn
-        '
-        Me.DateofBirthDataGridViewTextBoxColumn.DataPropertyName = "DateofBirth"
-        Me.DateofBirthDataGridViewTextBoxColumn.HeaderText = "Date of Birth"
-        Me.DateofBirthDataGridViewTextBoxColumn.Name = "DateofBirthDataGridViewTextBoxColumn"
-        '
-        'AssignedProviderDataGridViewTextBoxColumn
-        '
-        Me.AssignedProviderDataGridViewTextBoxColumn.DataPropertyName = "AssignedProvider"
-        Me.AssignedProviderDataGridViewTextBoxColumn.HeaderText = "Assigned Provider"
-        Me.AssignedProviderDataGridViewTextBoxColumn.MaxInputLength = 5
-        Me.AssignedProviderDataGridViewTextBoxColumn.Name = "AssignedProviderDataGridViewTextBoxColumn"
-        '
-        'DateCreatedDataGridViewTextBoxColumn
-        '
-        Me.DateCreatedDataGridViewTextBoxColumn.DataPropertyName = "DateCreated"
-        Me.DateCreatedDataGridViewTextBoxColumn.HeaderText = "Date Created"
-        Me.DateCreatedDataGridViewTextBoxColumn.Name = "DateCreatedDataGridViewTextBoxColumn"
-        '
-        'MMPATIENTBindingSource
-        '
-        Me.MMPATIENTBindingSource.DataMember = "MMPATIENT"
-        Me.MMPATIENTBindingSource.DataSource = Me.MMDataDataSet1
-        '
-        'MMDataDataSet1
-        '
-        Me.MMDataDataSet1.DataSetName = "MMDataDataSet1"
-        Me.MMDataDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'TabPage2
         '
@@ -1141,6 +1079,8 @@ Partial Class PATIENT
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.LabelFee)
+        Me.GroupBox1.Controls.Add(Me.DGFeeList)
         Me.GroupBox1.Controls.Add(Me.BtnSaveAndHistory)
         Me.GroupBox1.Controls.Add(Me.BtnSaveAndVisit)
         Me.GroupBox1.Controls.Add(DateChangedLabel)
@@ -1149,7 +1089,10 @@ Partial Class PATIENT
         Me.GroupBox1.Controls.Add(DateCreatedLabel)
         Me.GroupBox1.Controls.Add(Me.btnPhysician)
         Me.GroupBox1.Controls.Add(Me.MaskedTextBoxDob)
+        Me.GroupBox1.Controls.Add(Label1)
         Me.GroupBox1.Controls.Add(AssignedProviderLabel)
+        Me.GroupBox1.Controls.Add(Me.TbIdProcedure)
+        Me.GroupBox1.Controls.Add(Me.PhysicianFeeTextBox)
         Me.GroupBox1.Controls.Add(Me.AssignedProviderTextBox)
         Me.GroupBox1.Controls.Add(Me.CBSex)
         Me.GroupBox1.Controls.Add(Me.CellPhoneMaskedTextBox)
@@ -1185,7 +1128,7 @@ Partial Class PATIENT
         'BtnSaveAndHistory
         '
         Me.BtnSaveAndHistory.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.BtnSaveAndHistory.Location = New System.Drawing.Point(692, 330)
+        Me.BtnSaveAndHistory.Location = New System.Drawing.Point(690, 220)
         Me.BtnSaveAndHistory.Name = "BtnSaveAndHistory"
         Me.BtnSaveAndHistory.Size = New System.Drawing.Size(118, 40)
         Me.BtnSaveAndHistory.TabIndex = 83
@@ -1195,7 +1138,7 @@ Partial Class PATIENT
         'BtnSaveAndVisit
         '
         Me.BtnSaveAndVisit.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.BtnSaveAndVisit.Location = New System.Drawing.Point(692, 240)
+        Me.BtnSaveAndVisit.Location = New System.Drawing.Point(690, 130)
         Me.BtnSaveAndVisit.Name = "BtnSaveAndVisit"
         Me.BtnSaveAndVisit.Size = New System.Drawing.Size(118, 44)
         Me.BtnSaveAndVisit.TabIndex = 83
@@ -1206,7 +1149,7 @@ Partial Class PATIENT
         '
         Me.DateCreatedDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.MMPATIENTBindingSource, "DateCreated", True))
         Me.DateCreatedDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateCreatedDateTimePicker.Location = New System.Drawing.Point(283, 443)
+        Me.DateCreatedDateTimePicker.Location = New System.Drawing.Point(283, 472)
         Me.DateCreatedDateTimePicker.Name = "DateCreatedDateTimePicker"
         Me.DateCreatedDateTimePicker.Size = New System.Drawing.Size(110, 21)
         Me.DateCreatedDateTimePicker.TabIndex = 49
@@ -1216,14 +1159,14 @@ Partial Class PATIENT
         '
         Me.DateChangedTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "DateChanged", True))
         Me.DateChangedTextBox.Enabled = False
-        Me.DateChangedTextBox.Location = New System.Drawing.Point(283, 482)
+        Me.DateChangedTextBox.Location = New System.Drawing.Point(283, 511)
         Me.DateChangedTextBox.Name = "DateChangedTextBox"
         Me.DateChangedTextBox.Size = New System.Drawing.Size(110, 21)
         Me.DateChangedTextBox.TabIndex = 27
         '
         'btnPhysician
         '
-        Me.btnPhysician.Location = New System.Drawing.Point(406, 400)
+        Me.btnPhysician.Location = New System.Drawing.Point(442, 400)
         Me.btnPhysician.Name = "btnPhysician"
         Me.btnPhysician.Size = New System.Drawing.Size(75, 23)
         Me.btnPhysician.TabIndex = 14
@@ -1246,7 +1189,7 @@ Partial Class PATIENT
         Me.AssignedProviderTextBox.Location = New System.Drawing.Point(283, 402)
         Me.AssignedProviderTextBox.MaxLength = 6
         Me.AssignedProviderTextBox.Name = "AssignedProviderTextBox"
-        Me.AssignedProviderTextBox.Size = New System.Drawing.Size(117, 21)
+        Me.AssignedProviderTextBox.Size = New System.Drawing.Size(153, 21)
         Me.AssignedProviderTextBox.TabIndex = 14
         Me.AssignedProviderTextBox.TabStop = False
         '
@@ -2365,6 +2308,152 @@ Partial Class PATIENT
         '
         Me.PatientPicturesTableAdapter.ClearBeforeFill = True
         '
+        'PhysicianFeeTextBox
+        '
+        Me.PhysicianFeeTextBox.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.PhysicianFeeTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PhysicianFeeTextBox.Location = New System.Drawing.Point(283, 438)
+        Me.PhysicianFeeTextBox.MaxLength = 6
+        Me.PhysicianFeeTextBox.Name = "PhysicianFeeTextBox"
+        Me.PhysicianFeeTextBox.ReadOnly = True
+        Me.PhysicianFeeTextBox.Size = New System.Drawing.Size(234, 21)
+        Me.PhysicianFeeTextBox.TabIndex = 14
+        Me.PhysicianFeeTextBox.TabStop = False
+        '
+        'Label1
+        '
+        Label1.AutoSize = True
+        Label1.Location = New System.Drawing.Point(252, 440)
+        Label1.Name = "Label1"
+        Label1.Size = New System.Drawing.Size(31, 15)
+        Label1.TabIndex = 82
+        Label1.Text = "Fee:"
+        '
+        'LabelFee
+        '
+        Me.LabelFee.AutoSize = True
+        Me.LabelFee.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelFee.ForeColor = System.Drawing.Color.Red
+        Me.LabelFee.Location = New System.Drawing.Point(599, 517)
+        Me.LabelFee.Name = "LabelFee"
+        Me.LabelFee.Size = New System.Drawing.Size(138, 13)
+        Me.LabelFee.TabIndex = 276
+        Me.LabelFee.Text = "Double Click to Add in FEE "
+        Me.LabelFee.Visible = False
+        '
+        'DGFeeList
+        '
+        Me.DGFeeList.AllowUserToAddRows = False
+        Me.DGFeeList.AllowUserToDeleteRows = False
+        Me.DGFeeList.AutoGenerateColumns = False
+        Me.DGFeeList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DGFeeList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DGFeeList.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.DGFeeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGFeeList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id, Me.Description, Me.Type, Me.Fee})
+        Me.DGFeeList.DataSource = Me.MMPRocedureBindingSource
+        Me.DGFeeList.Location = New System.Drawing.Point(598, 343)
+        Me.DGFeeList.Name = "DGFeeList"
+        Me.DGFeeList.ReadOnly = True
+        Me.DGFeeList.RowHeadersVisible = False
+        Me.DGFeeList.RowHeadersWidth = 30
+        Me.DGFeeList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DGFeeList.Size = New System.Drawing.Size(228, 170)
+        Me.DGFeeList.TabIndex = 275
+        Me.DGFeeList.Visible = False
+        '
+        'TbIdProcedure
+        '
+        Me.TbIdProcedure.Location = New System.Drawing.Point(65, 438)
+        Me.TbIdProcedure.MaxLength = 6
+        Me.TbIdProcedure.Name = "TbIdProcedure"
+        Me.TbIdProcedure.Size = New System.Drawing.Size(110, 21)
+        Me.TbIdProcedure.TabIndex = 14
+        Me.TbIdProcedure.TabStop = False
+        Me.TbIdProcedure.Visible = False
+        '
+        'MMPATIENTBindingSource
+        '
+        Me.MMPATIENTBindingSource.DataMember = "MMPATIENT"
+        Me.MMPATIENTBindingSource.DataSource = Me.MMDataDataSet1
+        '
+        'MMDataDataSet1
+        '
+        Me.MMDataDataSet1.DataSetName = "MMDataDataSet1"
+        Me.MMDataDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'PatientIDDataGridViewTextBoxColumn
+        '
+        Me.PatientIDDataGridViewTextBoxColumn.DataPropertyName = "PatientID"
+        Me.PatientIDDataGridViewTextBoxColumn.HeaderText = "Patient ID"
+        Me.PatientIDDataGridViewTextBoxColumn.Name = "PatientIDDataGridViewTextBoxColumn"
+        Me.PatientIDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ChartNumberDataGridViewTextBoxColumn
+        '
+        Me.ChartNumberDataGridViewTextBoxColumn.DataPropertyName = "ChartNumber"
+        Me.ChartNumberDataGridViewTextBoxColumn.HeaderText = "Chart Number"
+        Me.ChartNumberDataGridViewTextBoxColumn.MaxInputLength = 8
+        Me.ChartNumberDataGridViewTextBoxColumn.Name = "ChartNumberDataGridViewTextBoxColumn"
+        '
+        'LastNameDataGridViewTextBoxColumn
+        '
+        Me.LastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName"
+        Me.LastNameDataGridViewTextBoxColumn.HeaderText = "Last Name"
+        Me.LastNameDataGridViewTextBoxColumn.MaxInputLength = 20
+        Me.LastNameDataGridViewTextBoxColumn.Name = "LastNameDataGridViewTextBoxColumn"
+        '
+        'FirstNameDataGridViewTextBoxColumn
+        '
+        Me.FirstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName"
+        Me.FirstNameDataGridViewTextBoxColumn.HeaderText = "First Name"
+        Me.FirstNameDataGridViewTextBoxColumn.MaxInputLength = 20
+        Me.FirstNameDataGridViewTextBoxColumn.Name = "FirstNameDataGridViewTextBoxColumn"
+        '
+        'SignatureonFileDataGridViewCheckBoxColumn
+        '
+        Me.SignatureonFileDataGridViewCheckBoxColumn.DataPropertyName = "SignatureonFile"
+        Me.SignatureonFileDataGridViewCheckBoxColumn.HeaderText = "Signature on File"
+        Me.SignatureonFileDataGridViewCheckBoxColumn.Name = "SignatureonFileDataGridViewCheckBoxColumn"
+        '
+        'PatientTypeDataGridViewTextBoxColumn
+        '
+        Me.PatientTypeDataGridViewTextBoxColumn.DataPropertyName = "PatientType"
+        Me.PatientTypeDataGridViewTextBoxColumn.HeaderText = "Patient Type"
+        Me.PatientTypeDataGridViewTextBoxColumn.MaxInputLength = 9
+        Me.PatientTypeDataGridViewTextBoxColumn.Name = "PatientTypeDataGridViewTextBoxColumn"
+        '
+        'SexDataGridViewTextBoxColumn
+        '
+        Me.SexDataGridViewTextBoxColumn.DataPropertyName = "Sex"
+        Me.SexDataGridViewTextBoxColumn.HeaderText = "Sex"
+        Me.SexDataGridViewTextBoxColumn.MaxInputLength = 6
+        Me.SexDataGridViewTextBoxColumn.Name = "SexDataGridViewTextBoxColumn"
+        '
+        'DateofBirthDataGridViewTextBoxColumn
+        '
+        Me.DateofBirthDataGridViewTextBoxColumn.DataPropertyName = "DateofBirth"
+        Me.DateofBirthDataGridViewTextBoxColumn.HeaderText = "Date of Birth"
+        Me.DateofBirthDataGridViewTextBoxColumn.Name = "DateofBirthDataGridViewTextBoxColumn"
+        '
+        'AssignedProviderDataGridViewTextBoxColumn
+        '
+        Me.AssignedProviderDataGridViewTextBoxColumn.DataPropertyName = "AssignedProvider"
+        Me.AssignedProviderDataGridViewTextBoxColumn.HeaderText = "Assigned Provider"
+        Me.AssignedProviderDataGridViewTextBoxColumn.MaxInputLength = 5
+        Me.AssignedProviderDataGridViewTextBoxColumn.Name = "AssignedProviderDataGridViewTextBoxColumn"
+        '
+        'DateCreatedDataGridViewTextBoxColumn
+        '
+        Me.DateCreatedDataGridViewTextBoxColumn.DataPropertyName = "DateCreated"
+        Me.DateCreatedDataGridViewTextBoxColumn.HeaderText = "Date Created"
+        Me.DateCreatedDataGridViewTextBoxColumn.Name = "DateCreatedDataGridViewTextBoxColumn"
+        '
+        'MMPRocedureBindingSource
+        '
+        Me.MMPRocedureBindingSource.DataMember = "MMPRocedure"
+        Me.MMPRocedureBindingSource.DataSource = Me.MMDataDataSet1
+        '
         'MMPATIENTTableAdapter
         '
         Me.MMPATIENTTableAdapter.ClearBeforeFill = True
@@ -2377,6 +2466,45 @@ Partial Class PATIENT
         'MMComboTableAdapter
         '
         Me.MMComboTableAdapter.ClearBeforeFill = True
+        '
+        'MMPRocedureTableAdapter
+        '
+        Me.MMPRocedureTableAdapter.ClearBeforeFill = True
+        '
+        'Id
+        '
+        Me.Id.DataPropertyName = "Id"
+        Me.Id.HeaderText = "Id"
+        Me.Id.Name = "Id"
+        Me.Id.ReadOnly = True
+        Me.Id.Visible = False
+        '
+        'Description
+        '
+        Me.Description.DataPropertyName = "Description"
+        Me.Description.FillWeight = 123.8579!
+        Me.Description.HeaderText = "Description"
+        Me.Description.Name = "Description"
+        Me.Description.ReadOnly = True
+        '
+        'Type
+        '
+        Me.Type.DataPropertyName = "Type"
+        Me.Type.HeaderText = "Type"
+        Me.Type.Name = "Type"
+        Me.Type.ReadOnly = True
+        Me.Type.Visible = False
+        '
+        'Fee
+        '
+        Me.Fee.DataPropertyName = "AmountA"
+        DataGridViewCellStyle8.Format = "N0"
+        DataGridViewCellStyle8.NullValue = Nothing
+        Me.Fee.DefaultCellStyle = DataGridViewCellStyle8
+        Me.Fee.FillWeight = 76.14214!
+        Me.Fee.HeaderText = "Fee"
+        Me.Fee.Name = "Fee"
+        Me.Fee.ReadOnly = True
         '
         'PATIENT
         '
@@ -2392,8 +2520,6 @@ Partial Class PATIENT
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         CType(Me.dgPatient, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MMPATIENTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MMDataDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -2419,6 +2545,10 @@ Partial Class PATIENT
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MMDataDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PatientPicturesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGFeeList, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MMPATIENTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MMDataDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MMPRocedureBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MMComboBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -2596,4 +2726,14 @@ Partial Class PATIENT
     Friend WithEvents GroupBox7 As GroupBox
     Friend WithEvents BtnSaveAndHistory As Button
     Friend WithEvents BtnSaveAndVisit As Button
+    Private WithEvents LabelFee As Label
+    Private WithEvents DGFeeList As DataGridView
+    Friend WithEvents PhysicianFeeTextBox As TextBox
+    Friend WithEvents MMPRocedureBindingSource As BindingSource
+    Friend WithEvents MMPRocedureTableAdapter As MMDataDataSet1TableAdapters.MMPRocedureTableAdapter
+    Friend WithEvents TbIdProcedure As TextBox
+    Friend WithEvents Id As DataGridViewTextBoxColumn
+    Friend WithEvents Description As DataGridViewTextBoxColumn
+    Friend WithEvents Type As DataGridViewTextBoxColumn
+    Friend WithEvents Fee As DataGridViewTextBoxColumn
 End Class
