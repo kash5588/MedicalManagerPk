@@ -9,7 +9,7 @@ Public Class VisitsList
 
     Private Sub VisitsList_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'MMDataDataSet1.MMPRocedure' table. You can move, or remove it, as needed.
-        Me.MMPRocedureTableAdapter.Fill(Me.MMDataDataSet1.MMPRocedure)
+
 
         LoadcmbPhysion()
         GetFilteredChartVisits(CBPhysician.Text, CBDate.Text)
@@ -47,6 +47,12 @@ Public Class VisitsList
                     PanelMadication.Visible = True
                 Else
                     PanelMadication.Visible = False
+                End If
+                Me.MMCHDxRxLtMtTableAdapter.FillByChNoAndDate(Me.MMDataDataSet1.MMCHDxRxLtMt, aRet(1), System.DateTime.Now.Date())
+                If DgProcedure.Rows.Count > 0 Then
+                    PanelProcedure.Visible = True
+                Else
+                    PanelProcedure.Visible = False
                 End If
             End If
             If MMChartVisitDataGridView.SelectedRows.Count = 0 Then
@@ -220,4 +226,6 @@ Public Class VisitsList
         txtFind.Focus()
         txtFind.Clear()
     End Sub
+
+
 End Class

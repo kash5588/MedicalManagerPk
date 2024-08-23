@@ -91,6 +91,55 @@ Partial Class VisitsList
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtFind = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.PanelProcedure = New System.Windows.Forms.Panel()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.MMPRocedureDataGridView = New System.Windows.Forms.DataGridView()
+        Me.Code1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Code2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Code3DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DescriptionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TypeofServiceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ScreenLocationDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DefaultPlaceService1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DefaultPlaceService2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DefaultPlaceService3DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TimeToDoProcedureDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.InsuranceCategoryDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PatientOnlyResponsibleDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DontPrintonInsuranceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.OnlyPrintonInsuranceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CostofServiceProductDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MedicareAllowedAmountDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AmountADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AmountBDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AmountCDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AccountCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TaxableDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.InactiveDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.AdjustmentAmountNegativDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DefaultModifiersDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PrePaymentDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DefaultModifier1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DefaultModifier2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DefaultModifier3DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DefaultModifier4DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MyProceduresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TimeStampDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.InHouseDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.InHouseBillingDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.ChartEntryDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MMCHDxRxLtMtBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MMCHDxRxLtMtTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMCHDxRxLtMtTableAdapter()
+        Me.DgProcedure = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.MMChartVisitDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMChartVisitBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -106,6 +155,12 @@ Partial Class VisitsList
         CType(Me.DgMedicine, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMChartRxBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
+        Me.PanelProcedure.SuspendLayout()
+        Me.Panel8.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MMPRocedureDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MMCHDxRxLtMtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DgProcedure, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -117,7 +172,7 @@ Partial Class VisitsList
         Me.Panel1.Controls.Add(Me.MMChartVisitDataGridView)
         Me.Panel1.Location = New System.Drawing.Point(211, 97)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(649, 603)
+        Me.Panel1.Size = New System.Drawing.Size(695, 603)
         Me.Panel1.TabIndex = 0
         '
         'MMChartVisitDataGridView
@@ -134,7 +189,7 @@ Partial Class VisitsList
         Me.MMChartVisitDataGridView.Name = "MMChartVisitDataGridView"
         Me.MMChartVisitDataGridView.ReadOnly = True
         Me.MMChartVisitDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.MMChartVisitDataGridView.Size = New System.Drawing.Size(649, 603)
+        Me.MMChartVisitDataGridView.Size = New System.Drawing.Size(695, 603)
         Me.MMChartVisitDataGridView.TabIndex = 0
         '
         'CaseNumber
@@ -222,7 +277,7 @@ Partial Class VisitsList
         Me.Panel2.Controls.Add(Me.lblPracticeName)
         Me.Panel2.Location = New System.Drawing.Point(1, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1223, 95)
+        Me.Panel2.Size = New System.Drawing.Size(1269, 95)
         Me.Panel2.TabIndex = 1
         '
         'lblPracticeName
@@ -234,7 +289,7 @@ Partial Class VisitsList
         Me.lblPracticeName.ForeColor = System.Drawing.Color.White
         Me.lblPracticeName.Location = New System.Drawing.Point(0, 0)
         Me.lblPracticeName.Name = "lblPracticeName"
-        Me.lblPracticeName.Size = New System.Drawing.Size(1223, 41)
+        Me.lblPracticeName.Size = New System.Drawing.Size(1269, 41)
         Me.lblPracticeName.TabIndex = 13
         Me.lblPracticeName.Text = "Visit List of Patients"
         Me.lblPracticeName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -630,8 +685,9 @@ Partial Class VisitsList
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel4.BackColor = System.Drawing.Color.GhostWhite
         Me.Panel4.Controls.Add(Me.PanelVitals)
+        Me.Panel4.Controls.Add(Me.PanelProcedure)
         Me.Panel4.Controls.Add(Me.PanelMadication)
-        Me.Panel4.Location = New System.Drawing.Point(862, 97)
+        Me.Panel4.Location = New System.Drawing.Point(908, 97)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(362, 603)
         Me.Panel4.TabIndex = 196
@@ -718,12 +774,360 @@ Partial Class VisitsList
         Me.Label9.TabIndex = 15
         Me.Label9.Text = "Find"
         '
+        'PanelProcedure
+        '
+        Me.PanelProcedure.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PanelProcedure.Controls.Add(Me.Panel8)
+        Me.PanelProcedure.Controls.Add(Me.Label10)
+        Me.PanelProcedure.Location = New System.Drawing.Point(0, 305)
+        Me.PanelProcedure.Name = "PanelProcedure"
+        Me.PanelProcedure.Size = New System.Drawing.Size(361, 156)
+        Me.PanelProcedure.TabIndex = 195
+        Me.PanelProcedure.Visible = False
+        '
+        'Panel8
+        '
+        Me.Panel8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel8.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel8.Controls.Add(Me.DgProcedure)
+        Me.Panel8.Controls.Add(Me.MMPRocedureDataGridView)
+        Me.Panel8.Controls.Add(Me.DataGridView1)
+        Me.Panel8.Location = New System.Drawing.Point(0, 31)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(359, 124)
+        Me.Panel8.TabIndex = 15
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RowHeadersVisible = False
+        Me.DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView1.Size = New System.Drawing.Size(359, 124)
+        Me.DataGridView1.TabIndex = 197
+        '
+        'Label10
+        '
+        Me.Label10.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label10.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.Label10.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.Black
+        Me.Label10.Location = New System.Drawing.Point(1, 1)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(357, 30)
+        Me.Label10.TabIndex = 14
+        Me.Label10.Text = "Procedures"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'MMPRocedureDataGridView
+        '
+        Me.MMPRocedureDataGridView.AllowUserToAddRows = False
+        Me.MMPRocedureDataGridView.AllowUserToDeleteRows = False
+        Me.MMPRocedureDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.MMPRocedureDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.MMPRocedureDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.MMPRocedureDataGridView.Location = New System.Drawing.Point(0, 0)
+        Me.MMPRocedureDataGridView.Name = "MMPRocedureDataGridView"
+        Me.MMPRocedureDataGridView.ReadOnly = True
+        Me.MMPRocedureDataGridView.RowHeadersVisible = False
+        Me.MMPRocedureDataGridView.Size = New System.Drawing.Size(359, 124)
+        Me.MMPRocedureDataGridView.TabIndex = 196
+        '
+        'Code1DataGridViewTextBoxColumn
+        '
+        Me.Code1DataGridViewTextBoxColumn.DataPropertyName = "Code1"
+        Me.Code1DataGridViewTextBoxColumn.HeaderText = "Code1"
+        Me.Code1DataGridViewTextBoxColumn.Name = "Code1DataGridViewTextBoxColumn"
+        '
+        'Code2DataGridViewTextBoxColumn
+        '
+        Me.Code2DataGridViewTextBoxColumn.DataPropertyName = "Code2"
+        Me.Code2DataGridViewTextBoxColumn.HeaderText = "Code2"
+        Me.Code2DataGridViewTextBoxColumn.Name = "Code2DataGridViewTextBoxColumn"
+        '
+        'Code3DataGridViewTextBoxColumn
+        '
+        Me.Code3DataGridViewTextBoxColumn.DataPropertyName = "Code3"
+        Me.Code3DataGridViewTextBoxColumn.HeaderText = "Code3"
+        Me.Code3DataGridViewTextBoxColumn.Name = "Code3DataGridViewTextBoxColumn"
+        '
+        'DescriptionDataGridViewTextBoxColumn
+        '
+        Me.DescriptionDataGridViewTextBoxColumn.DataPropertyName = "Description"
+        Me.DescriptionDataGridViewTextBoxColumn.HeaderText = "Description"
+        Me.DescriptionDataGridViewTextBoxColumn.Name = "DescriptionDataGridViewTextBoxColumn"
+        '
+        'TypeDataGridViewTextBoxColumn
+        '
+        Me.TypeDataGridViewTextBoxColumn.DataPropertyName = "Type"
+        Me.TypeDataGridViewTextBoxColumn.HeaderText = "Type"
+        Me.TypeDataGridViewTextBoxColumn.Name = "TypeDataGridViewTextBoxColumn"
+        '
+        'TypeofServiceDataGridViewTextBoxColumn
+        '
+        Me.TypeofServiceDataGridViewTextBoxColumn.DataPropertyName = "TypeofService"
+        Me.TypeofServiceDataGridViewTextBoxColumn.HeaderText = "TypeofService"
+        Me.TypeofServiceDataGridViewTextBoxColumn.Name = "TypeofServiceDataGridViewTextBoxColumn"
+        '
+        'ScreenLocationDataGridViewTextBoxColumn
+        '
+        Me.ScreenLocationDataGridViewTextBoxColumn.DataPropertyName = "ScreenLocation"
+        Me.ScreenLocationDataGridViewTextBoxColumn.HeaderText = "ScreenLocation"
+        Me.ScreenLocationDataGridViewTextBoxColumn.Name = "ScreenLocationDataGridViewTextBoxColumn"
+        '
+        'DefaultPlaceService1DataGridViewTextBoxColumn
+        '
+        Me.DefaultPlaceService1DataGridViewTextBoxColumn.DataPropertyName = "DefaultPlaceService1"
+        Me.DefaultPlaceService1DataGridViewTextBoxColumn.HeaderText = "DefaultPlaceService1"
+        Me.DefaultPlaceService1DataGridViewTextBoxColumn.Name = "DefaultPlaceService1DataGridViewTextBoxColumn"
+        '
+        'DefaultPlaceService2DataGridViewTextBoxColumn
+        '
+        Me.DefaultPlaceService2DataGridViewTextBoxColumn.DataPropertyName = "DefaultPlaceService2"
+        Me.DefaultPlaceService2DataGridViewTextBoxColumn.HeaderText = "DefaultPlaceService2"
+        Me.DefaultPlaceService2DataGridViewTextBoxColumn.Name = "DefaultPlaceService2DataGridViewTextBoxColumn"
+        '
+        'DefaultPlaceService3DataGridViewTextBoxColumn
+        '
+        Me.DefaultPlaceService3DataGridViewTextBoxColumn.DataPropertyName = "DefaultPlaceService3"
+        Me.DefaultPlaceService3DataGridViewTextBoxColumn.HeaderText = "DefaultPlaceService3"
+        Me.DefaultPlaceService3DataGridViewTextBoxColumn.Name = "DefaultPlaceService3DataGridViewTextBoxColumn"
+        '
+        'TimeToDoProcedureDataGridViewTextBoxColumn
+        '
+        Me.TimeToDoProcedureDataGridViewTextBoxColumn.DataPropertyName = "TimeToDoProcedure"
+        Me.TimeToDoProcedureDataGridViewTextBoxColumn.HeaderText = "TimeToDoProcedure"
+        Me.TimeToDoProcedureDataGridViewTextBoxColumn.Name = "TimeToDoProcedureDataGridViewTextBoxColumn"
+        '
+        'InsuranceCategoryDataGridViewTextBoxColumn
+        '
+        Me.InsuranceCategoryDataGridViewTextBoxColumn.DataPropertyName = "InsuranceCategory"
+        Me.InsuranceCategoryDataGridViewTextBoxColumn.HeaderText = "InsuranceCategory"
+        Me.InsuranceCategoryDataGridViewTextBoxColumn.Name = "InsuranceCategoryDataGridViewTextBoxColumn"
+        '
+        'PatientOnlyResponsibleDataGridViewCheckBoxColumn
+        '
+        Me.PatientOnlyResponsibleDataGridViewCheckBoxColumn.DataPropertyName = "PatientOnlyResponsible"
+        Me.PatientOnlyResponsibleDataGridViewCheckBoxColumn.HeaderText = "PatientOnlyResponsible"
+        Me.PatientOnlyResponsibleDataGridViewCheckBoxColumn.Name = "PatientOnlyResponsibleDataGridViewCheckBoxColumn"
+        '
+        'DontPrintonInsuranceDataGridViewTextBoxColumn
+        '
+        Me.DontPrintonInsuranceDataGridViewTextBoxColumn.DataPropertyName = "DontPrintonInsurance"
+        Me.DontPrintonInsuranceDataGridViewTextBoxColumn.HeaderText = "DontPrintonInsurance"
+        Me.DontPrintonInsuranceDataGridViewTextBoxColumn.Name = "DontPrintonInsuranceDataGridViewTextBoxColumn"
+        '
+        'OnlyPrintonInsuranceDataGridViewTextBoxColumn
+        '
+        Me.OnlyPrintonInsuranceDataGridViewTextBoxColumn.DataPropertyName = "OnlyPrintonInsurance"
+        Me.OnlyPrintonInsuranceDataGridViewTextBoxColumn.HeaderText = "OnlyPrintonInsurance"
+        Me.OnlyPrintonInsuranceDataGridViewTextBoxColumn.Name = "OnlyPrintonInsuranceDataGridViewTextBoxColumn"
+        '
+        'CostofServiceProductDataGridViewTextBoxColumn
+        '
+        Me.CostofServiceProductDataGridViewTextBoxColumn.DataPropertyName = "CostofServiceProduct"
+        Me.CostofServiceProductDataGridViewTextBoxColumn.HeaderText = "CostofServiceProduct"
+        Me.CostofServiceProductDataGridViewTextBoxColumn.Name = "CostofServiceProductDataGridViewTextBoxColumn"
+        '
+        'MedicareAllowedAmountDataGridViewTextBoxColumn
+        '
+        Me.MedicareAllowedAmountDataGridViewTextBoxColumn.DataPropertyName = "MedicareAllowedAmount"
+        Me.MedicareAllowedAmountDataGridViewTextBoxColumn.HeaderText = "MedicareAllowedAmount"
+        Me.MedicareAllowedAmountDataGridViewTextBoxColumn.Name = "MedicareAllowedAmountDataGridViewTextBoxColumn"
+        '
+        'AmountADataGridViewTextBoxColumn
+        '
+        Me.AmountADataGridViewTextBoxColumn.DataPropertyName = "AmountA"
+        Me.AmountADataGridViewTextBoxColumn.HeaderText = "AmountA"
+        Me.AmountADataGridViewTextBoxColumn.Name = "AmountADataGridViewTextBoxColumn"
+        '
+        'AmountBDataGridViewTextBoxColumn
+        '
+        Me.AmountBDataGridViewTextBoxColumn.DataPropertyName = "AmountB"
+        Me.AmountBDataGridViewTextBoxColumn.HeaderText = "AmountB"
+        Me.AmountBDataGridViewTextBoxColumn.Name = "AmountBDataGridViewTextBoxColumn"
+        '
+        'AmountCDataGridViewTextBoxColumn
+        '
+        Me.AmountCDataGridViewTextBoxColumn.DataPropertyName = "AmountC"
+        Me.AmountCDataGridViewTextBoxColumn.HeaderText = "AmountC"
+        Me.AmountCDataGridViewTextBoxColumn.Name = "AmountCDataGridViewTextBoxColumn"
+        '
+        'AccountCodeDataGridViewTextBoxColumn
+        '
+        Me.AccountCodeDataGridViewTextBoxColumn.DataPropertyName = "AccountCode"
+        Me.AccountCodeDataGridViewTextBoxColumn.HeaderText = "AccountCode"
+        Me.AccountCodeDataGridViewTextBoxColumn.Name = "AccountCodeDataGridViewTextBoxColumn"
+        '
+        'TaxableDataGridViewCheckBoxColumn
+        '
+        Me.TaxableDataGridViewCheckBoxColumn.DataPropertyName = "Taxable"
+        Me.TaxableDataGridViewCheckBoxColumn.HeaderText = "Taxable"
+        Me.TaxableDataGridViewCheckBoxColumn.Name = "TaxableDataGridViewCheckBoxColumn"
+        '
+        'InactiveDataGridViewCheckBoxColumn
+        '
+        Me.InactiveDataGridViewCheckBoxColumn.DataPropertyName = "Inactive"
+        Me.InactiveDataGridViewCheckBoxColumn.HeaderText = "Inactive"
+        Me.InactiveDataGridViewCheckBoxColumn.Name = "InactiveDataGridViewCheckBoxColumn"
+        '
+        'AdjustmentAmountNegativDataGridViewCheckBoxColumn
+        '
+        Me.AdjustmentAmountNegativDataGridViewCheckBoxColumn.DataPropertyName = "AdjustmentAmountNegativ"
+        Me.AdjustmentAmountNegativDataGridViewCheckBoxColumn.HeaderText = "AdjustmentAmountNegativ"
+        Me.AdjustmentAmountNegativDataGridViewCheckBoxColumn.Name = "AdjustmentAmountNegativDataGridViewCheckBoxColumn"
+        '
+        'DefaultModifiersDataGridViewTextBoxColumn
+        '
+        Me.DefaultModifiersDataGridViewTextBoxColumn.DataPropertyName = "DefaultModifiers"
+        Me.DefaultModifiersDataGridViewTextBoxColumn.HeaderText = "DefaultModifiers"
+        Me.DefaultModifiersDataGridViewTextBoxColumn.Name = "DefaultModifiersDataGridViewTextBoxColumn"
+        '
+        'PrePaymentDataGridViewCheckBoxColumn
+        '
+        Me.PrePaymentDataGridViewCheckBoxColumn.DataPropertyName = "PrePayment"
+        Me.PrePaymentDataGridViewCheckBoxColumn.HeaderText = "PrePayment"
+        Me.PrePaymentDataGridViewCheckBoxColumn.Name = "PrePaymentDataGridViewCheckBoxColumn"
+        '
+        'DefaultModifier1DataGridViewTextBoxColumn
+        '
+        Me.DefaultModifier1DataGridViewTextBoxColumn.DataPropertyName = "DefaultModifier1"
+        Me.DefaultModifier1DataGridViewTextBoxColumn.HeaderText = "DefaultModifier1"
+        Me.DefaultModifier1DataGridViewTextBoxColumn.Name = "DefaultModifier1DataGridViewTextBoxColumn"
+        '
+        'DefaultModifier2DataGridViewTextBoxColumn
+        '
+        Me.DefaultModifier2DataGridViewTextBoxColumn.DataPropertyName = "DefaultModifier2"
+        Me.DefaultModifier2DataGridViewTextBoxColumn.HeaderText = "DefaultModifier2"
+        Me.DefaultModifier2DataGridViewTextBoxColumn.Name = "DefaultModifier2DataGridViewTextBoxColumn"
+        '
+        'DefaultModifier3DataGridViewTextBoxColumn
+        '
+        Me.DefaultModifier3DataGridViewTextBoxColumn.DataPropertyName = "DefaultModifier3"
+        Me.DefaultModifier3DataGridViewTextBoxColumn.HeaderText = "DefaultModifier3"
+        Me.DefaultModifier3DataGridViewTextBoxColumn.Name = "DefaultModifier3DataGridViewTextBoxColumn"
+        '
+        'DefaultModifier4DataGridViewTextBoxColumn
+        '
+        Me.DefaultModifier4DataGridViewTextBoxColumn.DataPropertyName = "DefaultModifier4"
+        Me.DefaultModifier4DataGridViewTextBoxColumn.HeaderText = "DefaultModifier4"
+        Me.DefaultModifier4DataGridViewTextBoxColumn.Name = "DefaultModifier4DataGridViewTextBoxColumn"
+        '
+        'MyProceduresDataGridViewTextBoxColumn
+        '
+        Me.MyProceduresDataGridViewTextBoxColumn.DataPropertyName = "MyProcedures"
+        Me.MyProceduresDataGridViewTextBoxColumn.HeaderText = "MyProcedures"
+        Me.MyProceduresDataGridViewTextBoxColumn.Name = "MyProceduresDataGridViewTextBoxColumn"
+        '
+        'TimeStampDataGridViewTextBoxColumn1
+        '
+        Me.TimeStampDataGridViewTextBoxColumn1.DataPropertyName = "TimeStamp"
+        Me.TimeStampDataGridViewTextBoxColumn1.HeaderText = "TimeStamp"
+        Me.TimeStampDataGridViewTextBoxColumn1.Name = "TimeStampDataGridViewTextBoxColumn1"
+        '
+        'InHouseDataGridViewCheckBoxColumn
+        '
+        Me.InHouseDataGridViewCheckBoxColumn.DataPropertyName = "InHouse"
+        Me.InHouseDataGridViewCheckBoxColumn.HeaderText = "InHouse"
+        Me.InHouseDataGridViewCheckBoxColumn.Name = "InHouseDataGridViewCheckBoxColumn"
+        '
+        'InHouseBillingDataGridViewCheckBoxColumn
+        '
+        Me.InHouseBillingDataGridViewCheckBoxColumn.DataPropertyName = "InHouseBilling"
+        Me.InHouseBillingDataGridViewCheckBoxColumn.HeaderText = "InHouseBilling"
+        Me.InHouseBillingDataGridViewCheckBoxColumn.Name = "InHouseBillingDataGridViewCheckBoxColumn"
+        '
+        'ChartEntryDataGridViewCheckBoxColumn
+        '
+        Me.ChartEntryDataGridViewCheckBoxColumn.DataPropertyName = "ChartEntry"
+        Me.ChartEntryDataGridViewCheckBoxColumn.HeaderText = "ChartEntry"
+        Me.ChartEntryDataGridViewCheckBoxColumn.Name = "ChartEntryDataGridViewCheckBoxColumn"
+        '
+        'IdDataGridViewTextBoxColumn
+        '
+        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
+        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
+        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
+        Me.IdDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'MMCHDxRxLtMtBindingSource
+        '
+        Me.MMCHDxRxLtMtBindingSource.DataMember = "MMCHDxRxLtMt"
+        Me.MMCHDxRxLtMtBindingSource.DataSource = Me.MMDataDataSet1
+        '
+        'MMCHDxRxLtMtTableAdapter
+        '
+        Me.MMCHDxRxLtMtTableAdapter.ClearBeforeFill = True
+        '
+        'DgProcedure
+        '
+        Me.DgProcedure.AllowUserToAddRows = False
+        Me.DgProcedure.AllowUserToDeleteRows = False
+        Me.DgProcedure.AutoGenerateColumns = False
+        Me.DgProcedure.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.DgProcedure.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgProcedure.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn1})
+        Me.DgProcedure.DataSource = Me.MMCHDxRxLtMtBindingSource
+        Me.DgProcedure.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DgProcedure.Location = New System.Drawing.Point(0, 0)
+        Me.DgProcedure.Name = "DgProcedure"
+        Me.DgProcedure.ReadOnly = True
+        Me.DgProcedure.RowHeadersVisible = False
+        Me.DgProcedure.Size = New System.Drawing.Size(359, 124)
+        Me.DgProcedure.TabIndex = 197
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "Description"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Description"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        Me.DataGridViewTextBoxColumn6.Width = 160
+        '
+        'DataGridViewTextBoxColumn16
+        '
+        Me.DataGridViewTextBoxColumn16.DataPropertyName = "Amount"
+        Me.DataGridViewTextBoxColumn16.HeaderText = "Amount"
+        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
+        Me.DataGridViewTextBoxColumn16.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Date"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Date"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn12
+        '
+        Me.DataGridViewTextBoxColumn12.DataPropertyName = "UserID"
+        Me.DataGridViewTextBoxColumn12.HeaderText = "User"
+        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        Me.DataGridViewTextBoxColumn12.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "ID"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "ID"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Visible = False
+        '
         'VisitsList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.GhostWhite
-        Me.ClientSize = New System.Drawing.Size(1221, 741)
+        Me.ClientSize = New System.Drawing.Size(1267, 741)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.BtnMedication)
         Me.Controls.Add(Me.btnVitals)
@@ -753,6 +1157,12 @@ Partial Class VisitsList
         CType(Me.DgMedicine, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MMChartRxBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
+        Me.PanelProcedure.ResumeLayout(False)
+        Me.Panel8.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MMPRocedureDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MMCHDxRxLtMtBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgProcedure, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -825,4 +1235,53 @@ Partial Class VisitsList
     Friend WithEvents CBPhysician As ComboBox
     Friend WithEvents txtFind As TextBox
     Friend WithEvents Label9 As Label
+    Friend WithEvents PanelProcedure As Panel
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents MMPRocedureDataGridView As DataGridView
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Code1DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Code2DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Code3DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DescriptionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TypeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TypeofServiceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ScreenLocationDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DefaultPlaceService1DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DefaultPlaceService2DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DefaultPlaceService3DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TimeToDoProcedureDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents InsuranceCategoryDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PatientOnlyResponsibleDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents DontPrintonInsuranceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents OnlyPrintonInsuranceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CostofServiceProductDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MedicareAllowedAmountDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents AmountADataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents AmountBDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents AmountCDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents AccountCodeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TaxableDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents InactiveDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents AdjustmentAmountNegativDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents DefaultModifiersDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PrePaymentDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents DefaultModifier1DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DefaultModifier2DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DefaultModifier3DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DefaultModifier4DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MyProceduresDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TimeStampDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents InHouseDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents InHouseBillingDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents ChartEntryDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MMCHDxRxLtMtBindingSource As BindingSource
+    Friend WithEvents MMCHDxRxLtMtTableAdapter As MMDataDataSet1TableAdapters.MMCHDxRxLtMtTableAdapter
+    Friend WithEvents DgProcedure As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn16 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
 End Class
