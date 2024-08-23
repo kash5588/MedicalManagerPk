@@ -22,7 +22,7 @@ Partial Class Prescription
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim RX_IDLabel As System.Windows.Forms.Label
         Dim ChartNumberLabel As System.Windows.Forms.Label
         Dim PatientNameLabel As System.Windows.Forms.Label
@@ -45,139 +45,139 @@ Partial Class Prescription
         Dim CaseNumberLabel As System.Windows.Forms.Label
         Dim MedicationStatusLabel As System.Windows.Forms.Label
         Dim SignesLabel As System.Windows.Forms.Label
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Prescription))
-        Me.TabControl1 = New System.Windows.Forms.TabControl
-        Me.TabPage1 = New System.Windows.Forms.TabPage
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView
-        Me.RXIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.PatientNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Tag = New System.Windows.Forms.DataGridViewCheckBoxColumn
-        Me.MedicationDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DosageDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Quantity = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.NumberOfRefillsDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.SubstituteOk = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Instructions = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.StartDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.EndDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.CaseNumber = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.MedicationStatus = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ChartNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.OrderingPhysicianIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.PhysicianNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.LicenseNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DAENoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.NeedDEANoDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn
-        Me.UserDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.SignerNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.SigNatureDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.TimeStampDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.RXIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PatientNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Tag = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.MedicationDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DosageDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Quantity = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NumberOfRefillsDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SubstituteOk = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Instructions = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.StartDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EndDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CaseNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MedicationStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ChartNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.OrderingPhysicianIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PhysicianNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LicenseNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DAENoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NeedDEANoDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.UserDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SignerNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SigNatureDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TimeStampDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MMChartRxBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1
-        Me.TabPage2 = New System.Windows.Forms.TabPage
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox
-        Me.MMDRUGDataGridView = New System.Windows.Forms.DataGridView
-        Me.dgvDRGNAME = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.dgvSTRONG = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.dgvFORM = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.MMDRUGDataGridView = New System.Windows.Forms.DataGridView()
+        Me.dgvDRGNAME = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dgvSTRONG = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dgvFORM = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MMDRUGBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.ListBox4 = New System.Windows.Forms.ListBox
-        Me.ListBox1 = New System.Windows.Forms.ListBox
-        Me.ListBox3 = New System.Windows.Forms.ListBox
-        Me.btnFax = New System.Windows.Forms.Button
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.MedicationStatusComboBox = New System.Windows.Forms.ComboBox
-        Me.ListBox2 = New System.Windows.Forms.ListBox
-        Me.NumberOfRefillsComboBox = New System.Windows.Forms.ComboBox
-        Me.CaseNumberTextBox = New System.Windows.Forms.TextBox
-        Me.SigNatureCheckBox = New System.Windows.Forms.CheckBox
-        Me.EndDateMaskedTextBox = New System.Windows.Forms.MaskedTextBox
-        Me.StartDateMaskedTextBox = New System.Windows.Forms.MaskedTextBox
-        Me.InstructionsTextBox = New System.Windows.Forms.TextBox
-        Me.QuantityTextBox = New System.Windows.Forms.TextBox
-        Me.cmdDrug = New System.Windows.Forms.Button
-        Me.SubstituteOkComboBox = New System.Windows.Forms.ComboBox
-        Me.cmdOrdPhy = New System.Windows.Forms.Button
-        Me.cmdPatient = New System.Windows.Forms.Button
-        Me.RX_IDTextBox = New System.Windows.Forms.TextBox
-        Me.ChartNumberTextBox = New System.Windows.Forms.TextBox
-        Me.PatientNameTextBox = New System.Windows.Forms.TextBox
-        Me.OrderingPhysicianIDTextBox = New System.Windows.Forms.TextBox
-        Me.PhysicianNameTextBox = New System.Windows.Forms.TextBox
-        Me.LicenseNumberTextBox = New System.Windows.Forms.TextBox
-        Me.MedicationTextBox = New System.Windows.Forms.TextBox
-        Me.DosageTextBox = New System.Windows.Forms.TextBox
-        Me.NeedDEANoCheckBox = New System.Windows.Forms.CheckBox
-        Me.DAENoTextBox = New System.Windows.Forms.TextBox
-        Me.SignerNameTextBox = New System.Windows.Forms.TextBox
-        Me.UserTextBox = New System.Windows.Forms.TextBox
-        Me.TimeStampDateTimePicker = New System.Windows.Forms.DateTimePicker
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ListBox4 = New System.Windows.Forms.ListBox()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.ListBox3 = New System.Windows.Forms.ListBox()
+        Me.btnFax = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.MedicationStatusComboBox = New System.Windows.Forms.ComboBox()
+        Me.ListBox2 = New System.Windows.Forms.ListBox()
+        Me.NumberOfRefillsComboBox = New System.Windows.Forms.ComboBox()
+        Me.CaseNumberTextBox = New System.Windows.Forms.TextBox()
+        Me.SigNatureCheckBox = New System.Windows.Forms.CheckBox()
+        Me.EndDateMaskedTextBox = New System.Windows.Forms.MaskedTextBox()
+        Me.StartDateMaskedTextBox = New System.Windows.Forms.MaskedTextBox()
+        Me.InstructionsTextBox = New System.Windows.Forms.TextBox()
+        Me.QuantityTextBox = New System.Windows.Forms.TextBox()
+        Me.cmdDrug = New System.Windows.Forms.Button()
+        Me.SubstituteOkComboBox = New System.Windows.Forms.ComboBox()
+        Me.cmdOrdPhy = New System.Windows.Forms.Button()
+        Me.cmdPatient = New System.Windows.Forms.Button()
+        Me.RX_IDTextBox = New System.Windows.Forms.TextBox()
+        Me.ChartNumberTextBox = New System.Windows.Forms.TextBox()
+        Me.PatientNameTextBox = New System.Windows.Forms.TextBox()
+        Me.OrderingPhysicianIDTextBox = New System.Windows.Forms.TextBox()
+        Me.PhysicianNameTextBox = New System.Windows.Forms.TextBox()
+        Me.LicenseNumberTextBox = New System.Windows.Forms.TextBox()
+        Me.MedicationTextBox = New System.Windows.Forms.TextBox()
+        Me.DosageTextBox = New System.Windows.Forms.TextBox()
+        Me.NeedDEANoCheckBox = New System.Windows.Forms.CheckBox()
+        Me.DAENoTextBox = New System.Windows.Forms.TextBox()
+        Me.SignerNameTextBox = New System.Windows.Forms.TextBox()
+        Me.UserTextBox = New System.Windows.Forms.TextBox()
+        Me.TimeStampDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.MMChartRxBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
-        Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator
-        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator
-        Me.MMChartRxBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
-        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator
-        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel
-        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator
-        Me.txtFind = New System.Windows.Forms.ToolStripTextBox
-        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator
-        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel
-        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator
-        Me.cmbFilter = New System.Windows.Forms.ToolStripComboBox
-        Me.MMDataDataSet = New MedicalManager.MMDataDataSet
-        Me.btnPrintMultiple = New System.Windows.Forms.Button
-        Me.btnRefill = New System.Windows.Forms.Button
-        Me.txtFaxNumber = New System.Windows.Forms.TextBox
-        Me.btnFaxMultiple = New System.Windows.Forms.Button
-        Me.btnSelectPharm = New System.Windows.Forms.Button
-        Me.MMChartRxTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMChartRxTableAdapter
-        Me.MMComboTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMComboTableAdapter
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.MMChartRxBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.txtFind = New System.Windows.Forms.ToolStripTextBox()
+        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
+        Me.cmbFilter = New System.Windows.Forms.ToolStripComboBox()
+        Me.MMDataDataSet = New MedicalManager.MMDataDataSet()
+        Me.btnPrintMultiple = New System.Windows.Forms.Button()
+        Me.btnRefill = New System.Windows.Forms.Button()
+        Me.txtFaxNumber = New System.Windows.Forms.TextBox()
+        Me.btnFaxMultiple = New System.Windows.Forms.Button()
+        Me.btnSelectPharm = New System.Windows.Forms.Button()
+        Me.MMChartRxTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMChartRxTableAdapter()
+        Me.MMComboTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMComboTableAdapter()
         Me.MMComboBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PrescriptionWritingBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PrescriptionWritingTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.PrescriptionWritingTableAdapter
-        Me.MMDRUGTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMDRUGTableAdapter
+        Me.PrescriptionWritingTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.PrescriptionWritingTableAdapter()
+        Me.MMDRUGTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMDRUGTableAdapter()
         Me.MMPrecticeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MMPrecticeTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMPrecticeTableAdapter
-        RX_IDLabel = New System.Windows.Forms.Label
-        ChartNumberLabel = New System.Windows.Forms.Label
-        PatientNameLabel = New System.Windows.Forms.Label
-        OrderingPhysicianIDLabel = New System.Windows.Forms.Label
-        PhysicianNameLabel = New System.Windows.Forms.Label
-        LicenseNumberLabel = New System.Windows.Forms.Label
-        MedicationLabel = New System.Windows.Forms.Label
-        DosageLabel = New System.Windows.Forms.Label
-        NumberOfRefillsLabel = New System.Windows.Forms.Label
-        StartDateLabel = New System.Windows.Forms.Label
-        EndDateLabel = New System.Windows.Forms.Label
-        SignerNameLabel = New System.Windows.Forms.Label
-        NeedDEANoLabel = New System.Windows.Forms.Label
-        DAENoLabel = New System.Windows.Forms.Label
-        UserLabel = New System.Windows.Forms.Label
-        TimeStampLabel = New System.Windows.Forms.Label
-        SubstituteOkLabel = New System.Windows.Forms.Label
-        QuantityLabel = New System.Windows.Forms.Label
-        InstructionsLabel = New System.Windows.Forms.Label
-        CaseNumberLabel = New System.Windows.Forms.Label
-        MedicationStatusLabel = New System.Windows.Forms.Label
-        SignesLabel = New System.Windows.Forms.Label
+        Me.MMPrecticeTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMPrecticeTableAdapter()
+        RX_IDLabel = New System.Windows.Forms.Label()
+        ChartNumberLabel = New System.Windows.Forms.Label()
+        PatientNameLabel = New System.Windows.Forms.Label()
+        OrderingPhysicianIDLabel = New System.Windows.Forms.Label()
+        PhysicianNameLabel = New System.Windows.Forms.Label()
+        LicenseNumberLabel = New System.Windows.Forms.Label()
+        MedicationLabel = New System.Windows.Forms.Label()
+        DosageLabel = New System.Windows.Forms.Label()
+        NumberOfRefillsLabel = New System.Windows.Forms.Label()
+        StartDateLabel = New System.Windows.Forms.Label()
+        EndDateLabel = New System.Windows.Forms.Label()
+        SignerNameLabel = New System.Windows.Forms.Label()
+        NeedDEANoLabel = New System.Windows.Forms.Label()
+        DAENoLabel = New System.Windows.Forms.Label()
+        UserLabel = New System.Windows.Forms.Label()
+        TimeStampLabel = New System.Windows.Forms.Label()
+        SubstituteOkLabel = New System.Windows.Forms.Label()
+        QuantityLabel = New System.Windows.Forms.Label()
+        InstructionsLabel = New System.Windows.Forms.Label()
+        CaseNumberLabel = New System.Windows.Forms.Label()
+        MedicationStatusLabel = New System.Windows.Forms.Label()
+        SignesLabel = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -497,8 +497,8 @@ Partial Class Prescription
         'StartDateDataGridViewTextBoxColumn
         '
         Me.StartDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate"
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.StartDateDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.StartDateDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
         Me.StartDateDataGridViewTextBoxColumn.HeaderText = "StartDate"
         Me.StartDateDataGridViewTextBoxColumn.Name = "StartDateDataGridViewTextBoxColumn"
         Me.StartDateDataGridViewTextBoxColumn.Width = 69
@@ -506,8 +506,8 @@ Partial Class Prescription
         'EndDateDataGridViewTextBoxColumn
         '
         Me.EndDateDataGridViewTextBoxColumn.DataPropertyName = "EndDate"
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.EndDateDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.EndDateDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle2
         Me.EndDateDataGridViewTextBoxColumn.HeaderText = "EndDate"
         Me.EndDateDataGridViewTextBoxColumn.Name = "EndDateDataGridViewTextBoxColumn"
         Me.EndDateDataGridViewTextBoxColumn.Width = 65
@@ -680,24 +680,24 @@ Partial Class Prescription
         Me.MMDRUGDataGridView.AutoGenerateColumns = False
         Me.MMDRUGDataGridView.BackgroundColor = System.Drawing.Color.White
         Me.MMDRUGDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.25!)
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.MMDRUGDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.25!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.MMDRUGDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.MMDRUGDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dgvDRGNAME, Me.dgvSTRONG, Me.dgvFORM})
         Me.MMDRUGDataGridView.DataSource = Me.MMDRUGBindingSource
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.25!)
-        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.MMDRUGDataGridView.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.25!)
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.MMDRUGDataGridView.DefaultCellStyle = DataGridViewCellStyle4
         Me.MMDRUGDataGridView.Location = New System.Drawing.Point(9, 21)
         Me.MMDRUGDataGridView.Name = "MMDRUGDataGridView"
         Me.MMDRUGDataGridView.Size = New System.Drawing.Size(265, 459)
@@ -1062,7 +1062,7 @@ Partial Class Prescription
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -1102,6 +1102,7 @@ Partial Class Prescription
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Position"
         Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 21)
         Me.BindingNavigatorPositionItem.Text = "0"
@@ -1171,7 +1172,7 @@ Partial Class Prescription
         'ToolStripLabel2
         '
         Me.ToolStripLabel2.Name = "ToolStripLabel2"
-        Me.ToolStripLabel2.Size = New System.Drawing.Size(27, 22)
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(30, 22)
         Me.ToolStripLabel2.Text = "Find"
         '
         'ToolStripSeparator4
@@ -1181,6 +1182,7 @@ Partial Class Prescription
         '
         'txtFind
         '
+        Me.txtFind.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtFind.Name = "txtFind"
         Me.txtFind.Size = New System.Drawing.Size(100, 25)
         '
@@ -1192,7 +1194,7 @@ Partial Class Prescription
         'ToolStripLabel3
         '
         Me.ToolStripLabel3.Name = "ToolStripLabel3"
-        Me.ToolStripLabel3.Size = New System.Drawing.Size(42, 22)
+        Me.ToolStripLabel3.Size = New System.Drawing.Size(45, 22)
         Me.ToolStripLabel3.Text = "Criteria"
         '
         'ToolStripSeparator6

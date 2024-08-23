@@ -19,7 +19,7 @@ Partial Class VitalSigns
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim TimeStampLabel As System.Windows.Forms.Label
         Dim NameLabel As System.Windows.Forms.Label
         Dim VIDLabel As System.Windows.Forms.Label
@@ -34,95 +34,95 @@ Partial Class VitalSigns
         Dim BloodSugarLabel As System.Windows.Forms.Label
         Dim LMPLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VitalSigns))
-        Me.TabControl1 = New System.Windows.Forms.TabControl
-        Me.TabPage1 = New System.Windows.Forms.TabPage
-        Me.MMChartTVitalSignDataGridView = New System.Windows.Forms.DataGridView
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Signed = New System.Windows.Forms.DataGridViewCheckBoxColumn
-        Me.FLName = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.MMChartTVitalSignDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Signed = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.FLName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MMChartTVitalSignBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1
-        Me.TabPage2 = New System.Windows.Forms.TabPage
-        Me.DateDateTimePicker = New System.Windows.Forms.DateTimePicker
-        Me.UserTextBox1 = New System.Windows.Forms.TextBox
-        Me.TimeTextBox = New System.Windows.Forms.TextBox
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.btnCalender = New System.Windows.Forms.Button
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar
-        Me.LMPTextBox = New System.Windows.Forms.TextBox
-        Me.BloodSugarTextBox = New System.Windows.Forms.TextBox
-        Me.ListBox1 = New System.Windows.Forms.ListBox
-        Me.DistolicR = New System.Windows.Forms.RadioButton
-        Me.WTR = New System.Windows.Forms.RadioButton
-        Me.HTR = New System.Windows.Forms.RadioButton
-        Me.PulseOxR = New System.Windows.Forms.RadioButton
-        Me.PulseR = New System.Windows.Forms.RadioButton
-        Me.RespR = New System.Windows.Forms.RadioButton
-        Me.TempR = New System.Windows.Forms.RadioButton
-        Me.Button28 = New System.Windows.Forms.Button
-        Me.TempTextBox = New System.Windows.Forms.TextBox
-        Me.PulseTextBox = New System.Windows.Forms.TextBox
-        Me.SystolicR = New System.Windows.Forms.RadioButton
-        Me.HtTextBox = New System.Windows.Forms.TextBox
-        Me.WtTextBox = New System.Windows.Forms.TextBox
-        Me.RespTextBox = New System.Windows.Forms.TextBox
-        Me.PulseOxTextBox = New System.Windows.Forms.TextBox
-        Me.BMITextBox = New System.Windows.Forms.TextBox
-        Me.SystolicTextBox = New System.Windows.Forms.TextBox
-        Me.DistolicTextBox = New System.Windows.Forms.TextBox
-        Me.SignedCheckBox = New System.Windows.Forms.CheckBox
-        Me.NameTextBox = New System.Windows.Forms.TextBox
-        Me.cmdPatient = New System.Windows.Forms.Button
-        Me.VIDTextBox = New System.Windows.Forms.TextBox
-        Me.ChartNumberTextBox = New System.Windows.Forms.TextBox
-        Me.CaseNumberTextBox = New System.Windows.Forms.TextBox
-        Me.TimeStampTextBox = New System.Windows.Forms.TextBox
-        Me.UserTextBox = New System.Windows.Forms.TextBox
+        Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.DateDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.UserTextBox1 = New System.Windows.Forms.TextBox()
+        Me.TimeTextBox = New System.Windows.Forms.TextBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnCalender = New System.Windows.Forms.Button()
+        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
+        Me.LMPTextBox = New System.Windows.Forms.TextBox()
+        Me.BloodSugarTextBox = New System.Windows.Forms.TextBox()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.DistolicR = New System.Windows.Forms.RadioButton()
+        Me.WTR = New System.Windows.Forms.RadioButton()
+        Me.HTR = New System.Windows.Forms.RadioButton()
+        Me.PulseOxR = New System.Windows.Forms.RadioButton()
+        Me.PulseR = New System.Windows.Forms.RadioButton()
+        Me.RespR = New System.Windows.Forms.RadioButton()
+        Me.TempR = New System.Windows.Forms.RadioButton()
+        Me.Button28 = New System.Windows.Forms.Button()
+        Me.TempTextBox = New System.Windows.Forms.TextBox()
+        Me.PulseTextBox = New System.Windows.Forms.TextBox()
+        Me.SystolicR = New System.Windows.Forms.RadioButton()
+        Me.HtTextBox = New System.Windows.Forms.TextBox()
+        Me.WtTextBox = New System.Windows.Forms.TextBox()
+        Me.RespTextBox = New System.Windows.Forms.TextBox()
+        Me.PulseOxTextBox = New System.Windows.Forms.TextBox()
+        Me.BMITextBox = New System.Windows.Forms.TextBox()
+        Me.SystolicTextBox = New System.Windows.Forms.TextBox()
+        Me.DistolicTextBox = New System.Windows.Forms.TextBox()
+        Me.SignedCheckBox = New System.Windows.Forms.CheckBox()
+        Me.NameTextBox = New System.Windows.Forms.TextBox()
+        Me.cmdPatient = New System.Windows.Forms.Button()
+        Me.VIDTextBox = New System.Windows.Forms.TextBox()
+        Me.ChartNumberTextBox = New System.Windows.Forms.TextBox()
+        Me.CaseNumberTextBox = New System.Windows.Forms.TextBox()
+        Me.TimeStampTextBox = New System.Windows.Forms.TextBox()
+        Me.UserTextBox = New System.Windows.Forms.TextBox()
         Me.MMChartTVitalSignBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
-        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel
-        Me.MMChartTVitalSignBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
-        Me.MMChartTVitalSignTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMChartTVitalSignTableAdapter
-        TimeStampLabel = New System.Windows.Forms.Label
-        NameLabel = New System.Windows.Forms.Label
-        VIDLabel = New System.Windows.Forms.Label
-        ChartNumberLabel = New System.Windows.Forms.Label
-        CaseNumberLabel = New System.Windows.Forms.Label
-        UserLabel = New System.Windows.Forms.Label
-        SignedLabel = New System.Windows.Forms.Label
-        TimeLabel = New System.Windows.Forms.Label
-        BMILabel = New System.Windows.Forms.Label
-        UserLabel1 = New System.Windows.Forms.Label
-        DateLabel1 = New System.Windows.Forms.Label
-        BloodSugarLabel = New System.Windows.Forms.Label
-        LMPLabel = New System.Windows.Forms.Label
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.MMChartTVitalSignBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.MMChartTVitalSignTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMChartTVitalSignTableAdapter()
+        TimeStampLabel = New System.Windows.Forms.Label()
+        NameLabel = New System.Windows.Forms.Label()
+        VIDLabel = New System.Windows.Forms.Label()
+        ChartNumberLabel = New System.Windows.Forms.Label()
+        CaseNumberLabel = New System.Windows.Forms.Label()
+        UserLabel = New System.Windows.Forms.Label()
+        SignedLabel = New System.Windows.Forms.Label()
+        TimeLabel = New System.Windows.Forms.Label()
+        BMILabel = New System.Windows.Forms.Label()
+        UserLabel1 = New System.Windows.Forms.Label()
+        DateLabel1 = New System.Windows.Forms.Label()
+        BloodSugarLabel = New System.Windows.Forms.Label()
+        LMPLabel = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.MMChartTVitalSignDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -852,13 +852,13 @@ Partial Class VitalSigns
         Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(69, 22)
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(74, 22)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
         '
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -867,7 +867,7 @@ Partial Class VitalSigns
         Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
         Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(58, 22)
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(60, 22)
         Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'BindingNavigatorMoveFirstItem
@@ -897,6 +897,7 @@ Partial Class VitalSigns
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Position"
         Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 21)
         Me.BindingNavigatorPositionItem.Text = "0"
@@ -946,7 +947,7 @@ Partial Class VitalSigns
         '
         Me.MMChartTVitalSignBindingNavigatorSaveItem.Image = CType(resources.GetObject("MMChartTVitalSignBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.MMChartTVitalSignBindingNavigatorSaveItem.Name = "MMChartTVitalSignBindingNavigatorSaveItem"
-        Me.MMChartTVitalSignBindingNavigatorSaveItem.Size = New System.Drawing.Size(77, 22)
+        Me.MMChartTVitalSignBindingNavigatorSaveItem.Size = New System.Drawing.Size(78, 22)
         Me.MMChartTVitalSignBindingNavigatorSaveItem.Text = "Save Data"
         '
         'MMChartTVitalSignTableAdapter

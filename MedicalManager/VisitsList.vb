@@ -12,7 +12,8 @@ Public Class VisitsList
     End Sub
 
     Private Sub VisitsList_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'MMDataDataSet1.MMChartVisit' table. You can move, or remove it, as needed.
+
+
         Me.MMChartVisitTableAdapter.Fill(Me.MMDataDataSet1.MMChartVisit)
 
     End Sub
@@ -33,6 +34,19 @@ Public Class VisitsList
                 TBTokenNo.Text = Me.MMChartVisitDataGridView.SelectedRows(0).Cells("TokenNo").Value & ""
                 TBPhysicianName.Text = Me.MMChartVisitDataGridView.SelectedRows(0).Cells("PhysicianName").Value & ""
                 'LoadPicture()
+
+                Me.MMChartTVitalSignTableAdapter.FillByChNoAndDate(Me.MMDataDataSet1.MMChartTVitalSign, aRet(1), System.DateTime.Now.Date())
+                If DgVitals.Rows.Count > 0 Then
+                    PanelVitals.Visible = True
+                Else
+                    PanelVitals.Visible = False
+                End If
+                Me.MMChartRxTableAdapter.FillByChNoAndDate(Me.MMDataDataSet1.MMChartRx, aRet(1), System.DateTime.Now.Date())
+                If DgMedicine.Rows.Count > 0 Then
+                    PanelMadication.Visible = True
+                Else
+                    PanelMadication.Visible = False
+                End If
             End If
             If MMChartVisitDataGridView.SelectedRows.Count = 0 Then
                 clearTextBox()
@@ -70,4 +84,6 @@ Public Class VisitsList
             Prescription.ShowPrescriptions(aRet)
         End If
     End Sub
+
+
 End Class
