@@ -25,6 +25,16 @@ Partial Class VisitsList
         Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MMChartVisitDataGridView = New System.Windows.Forms.DataGridView()
+        Me.CaseNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FirstName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LastName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ChartNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DateVisit = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VisitType = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PhysicianName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TokenNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MMChartVisitBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lblPracticeName = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -41,12 +51,7 @@ Partial Class VisitsList
         Me.btnVitals = New System.Windows.Forms.Button()
         Me.BtnMedication = New System.Windows.Forms.Button()
         Me.PanelVitals = New System.Windows.Forms.Panel()
-        Me.PanelMadication = New System.Windows.Forms.Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Panel6 = New System.Windows.Forms.Panel()
         Me.DgVitals = New System.Windows.Forms.DataGridView()
         Me.TimeStampDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TempDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -63,41 +68,44 @@ Partial Class VisitsList
         Me.BloodSugarDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LMPDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MMChartTVitalSignBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1()
-        Me.CaseNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FirstName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LastName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ChartNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DateVisit = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VisitType = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PhysicianName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TokenNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MMChartVisitBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MMChartVisitTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMChartVisitTableAdapter()
-        Me.MMChartTVitalSignTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMChartTVitalSignTableAdapter()
-        Me.MMChartRxBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MMChartRxTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMChartRxTableAdapter()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.PanelMadication = New System.Windows.Forms.Panel()
+        Me.Panel6 = New System.Windows.Forms.Panel()
         Me.DgMedicine = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MMChartRxBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.MMChartVisitTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMChartVisitTableAdapter()
+        Me.MMChartTVitalSignTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMChartTVitalSignTableAdapter()
+        Me.MMChartRxTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMChartRxTableAdapter()
+        Me.cmbFilter = New System.Windows.Forms.ComboBox()
+        Me.C = New System.Windows.Forms.Label()
+        Me.CBPhysician = New System.Windows.Forms.ComboBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.CBDate = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtFind = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.MMChartVisitDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MMChartVisitBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MMDataDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.PanelVitals.SuspendLayout()
-        Me.PanelMadication.SuspendLayout()
-        Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
-        Me.Panel6.SuspendLayout()
         CType(Me.DgVitals, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMChartTVitalSignBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MMDataDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MMChartVisitBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MMChartRxBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelMadication.SuspendLayout()
+        Me.Panel6.SuspendLayout()
         CType(Me.DgMedicine, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MMChartRxBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -129,11 +137,88 @@ Partial Class VisitsList
         Me.MMChartVisitDataGridView.Size = New System.Drawing.Size(649, 603)
         Me.MMChartVisitDataGridView.TabIndex = 0
         '
+        'CaseNumber
+        '
+        Me.CaseNumber.DataPropertyName = "CaseNumber"
+        Me.CaseNumber.HeaderText = "CaseNumber"
+        Me.CaseNumber.Name = "CaseNumber"
+        Me.CaseNumber.ReadOnly = True
+        '
+        'FirstName
+        '
+        Me.FirstName.DataPropertyName = "FirstName"
+        Me.FirstName.HeaderText = "FirstName"
+        Me.FirstName.Name = "FirstName"
+        Me.FirstName.ReadOnly = True
+        Me.FirstName.Width = 120
+        '
+        'LastName
+        '
+        Me.LastName.DataPropertyName = "LastName"
+        Me.LastName.HeaderText = "LastName"
+        Me.LastName.Name = "LastName"
+        Me.LastName.ReadOnly = True
+        Me.LastName.Width = 120
+        '
+        'ChartNumber
+        '
+        Me.ChartNumber.DataPropertyName = "ChartNumber"
+        Me.ChartNumber.HeaderText = "ChartNumber"
+        Me.ChartNumber.Name = "ChartNumber"
+        Me.ChartNumber.ReadOnly = True
+        '
+        'DateVisit
+        '
+        Me.DateVisit.DataPropertyName = "Date"
+        Me.DateVisit.HeaderText = "Date"
+        Me.DateVisit.Name = "DateVisit"
+        Me.DateVisit.ReadOnly = True
+        '
+        'VisitType
+        '
+        Me.VisitType.DataPropertyName = "VisitType"
+        Me.VisitType.HeaderText = "VisitType"
+        Me.VisitType.Name = "VisitType"
+        Me.VisitType.ReadOnly = True
+        '
+        'PhysicianName
+        '
+        Me.PhysicianName.DataPropertyName = "AssignedProvider"
+        Me.PhysicianName.HeaderText = "Physician"
+        Me.PhysicianName.Name = "PhysicianName"
+        Me.PhysicianName.ReadOnly = True
+        Me.PhysicianName.Width = 150
+        '
+        'TokenNo
+        '
+        Me.TokenNo.DataPropertyName = "Extra1"
+        Me.TokenNo.HeaderText = "TokenNo"
+        Me.TokenNo.Name = "TokenNo"
+        Me.TokenNo.ReadOnly = True
+        '
+        'MMChartVisitBindingSource
+        '
+        Me.MMChartVisitBindingSource.DataMember = "MMChartVisit"
+        Me.MMChartVisitBindingSource.DataSource = Me.MMDataDataSet1
+        '
+        'MMDataDataSet1
+        '
+        Me.MMDataDataSet1.DataSetName = "MMDataDataSet1"
+        Me.MMDataDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'Panel2
         '
         Me.Panel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel2.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Panel2.BackColor = System.Drawing.Color.GhostWhite
+        Me.Panel2.Controls.Add(Me.txtFind)
+        Me.Panel2.Controls.Add(Me.Label8)
+        Me.Panel2.Controls.Add(Me.Label7)
+        Me.Panel2.Controls.Add(Me.Label9)
+        Me.Panel2.Controls.Add(Me.C)
+        Me.Panel2.Controls.Add(Me.CBDate)
+        Me.Panel2.Controls.Add(Me.CBPhysician)
+        Me.Panel2.Controls.Add(Me.cmbFilter)
         Me.Panel2.Controls.Add(Me.lblPracticeName)
         Me.Panel2.Location = New System.Drawing.Point(1, 0)
         Me.Panel2.Name = "Panel2"
@@ -295,57 +380,6 @@ Partial Class VisitsList
         Me.PanelVitals.TabIndex = 195
         Me.PanelVitals.Visible = False
         '
-        'PanelMadication
-        '
-        Me.PanelMadication.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PanelMadication.Controls.Add(Me.Panel6)
-        Me.PanelMadication.Controls.Add(Me.Label6)
-        Me.PanelMadication.Location = New System.Drawing.Point(0, 122)
-        Me.PanelMadication.Name = "PanelMadication"
-        Me.PanelMadication.Size = New System.Drawing.Size(361, 156)
-        Me.PanelMadication.TabIndex = 195
-        Me.PanelMadication.Visible = False
-        '
-        'Label5
-        '
-        Me.Label5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label5.BackColor = System.Drawing.Color.DodgerBlue
-        Me.Label5.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(1, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(357, 30)
-        Me.Label5.TabIndex = 14
-        Me.Label5.Text = "Vital Signs"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label6
-        '
-        Me.Label6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label6.BackColor = System.Drawing.Color.DodgerBlue
-        Me.Label6.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(1, 1)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(357, 30)
-        Me.Label6.TabIndex = 14
-        Me.Label6.Text = "Medications"
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Panel4
-        '
-        Me.Panel4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel4.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Panel4.Controls.Add(Me.PanelVitals)
-        Me.Panel4.Controls.Add(Me.PanelMadication)
-        Me.Panel4.Location = New System.Drawing.Point(862, 97)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(362, 603)
-        Me.Panel4.TabIndex = 196
-        '
         'Panel5
         '
         Me.Panel5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -355,16 +389,6 @@ Partial Class VisitsList
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(359, 92)
         Me.Panel5.TabIndex = 15
-        '
-        'Panel6
-        '
-        Me.Panel6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel6.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel6.Controls.Add(Me.DgMedicine)
-        Me.Panel6.Location = New System.Drawing.Point(0, 31)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(359, 124)
-        Me.Panel6.TabIndex = 15
         '
         'DgVitals
         '
@@ -379,7 +403,7 @@ Partial Class VisitsList
         Me.DgVitals.Name = "DgVitals"
         Me.DgVitals.ReadOnly = True
         Me.DgVitals.RowHeadersVisible = False
-        Me.DgVitals.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Azure
+        Me.DgVitals.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.DgVitals.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.DgVitals.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgVitals.Size = New System.Drawing.Size(359, 89)
@@ -490,97 +514,47 @@ Partial Class VisitsList
         Me.MMChartTVitalSignBindingSource.DataMember = "MMChartTVitalSign"
         Me.MMChartTVitalSignBindingSource.DataSource = Me.MMDataDataSet1
         '
-        'MMDataDataSet1
+        'Label5
         '
-        Me.MMDataDataSet1.DataSetName = "MMDataDataSet1"
-        Me.MMDataDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Label5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.Label5.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Black
+        Me.Label5.Location = New System.Drawing.Point(1, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(357, 30)
+        Me.Label5.TabIndex = 14
+        Me.Label5.Text = "Vital Signs"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'CaseNumber
+        'PanelMadication
         '
-        Me.CaseNumber.DataPropertyName = "CaseNumber"
-        Me.CaseNumber.HeaderText = "CaseNumber"
-        Me.CaseNumber.Name = "CaseNumber"
-        Me.CaseNumber.ReadOnly = True
+        Me.PanelMadication.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PanelMadication.Controls.Add(Me.Panel6)
+        Me.PanelMadication.Controls.Add(Me.Label6)
+        Me.PanelMadication.Location = New System.Drawing.Point(0, 136)
+        Me.PanelMadication.Name = "PanelMadication"
+        Me.PanelMadication.Size = New System.Drawing.Size(361, 156)
+        Me.PanelMadication.TabIndex = 195
+        Me.PanelMadication.Visible = False
         '
-        'FirstName
+        'Panel6
         '
-        Me.FirstName.DataPropertyName = "FirstName"
-        Me.FirstName.HeaderText = "FirstName"
-        Me.FirstName.Name = "FirstName"
-        Me.FirstName.ReadOnly = True
-        Me.FirstName.Width = 120
-        '
-        'LastName
-        '
-        Me.LastName.DataPropertyName = "LastName"
-        Me.LastName.HeaderText = "LastName"
-        Me.LastName.Name = "LastName"
-        Me.LastName.ReadOnly = True
-        Me.LastName.Width = 120
-        '
-        'ChartNumber
-        '
-        Me.ChartNumber.DataPropertyName = "ChartNumber"
-        Me.ChartNumber.HeaderText = "ChartNumber"
-        Me.ChartNumber.Name = "ChartNumber"
-        Me.ChartNumber.ReadOnly = True
-        '
-        'DateVisit
-        '
-        Me.DateVisit.DataPropertyName = "Date"
-        Me.DateVisit.HeaderText = "Date"
-        Me.DateVisit.Name = "DateVisit"
-        Me.DateVisit.ReadOnly = True
-        '
-        'VisitType
-        '
-        Me.VisitType.DataPropertyName = "VisitType"
-        Me.VisitType.HeaderText = "VisitType"
-        Me.VisitType.Name = "VisitType"
-        Me.VisitType.ReadOnly = True
-        '
-        'PhysicianName
-        '
-        Me.PhysicianName.DataPropertyName = "AssignedProvider"
-        Me.PhysicianName.HeaderText = "Physician"
-        Me.PhysicianName.Name = "PhysicianName"
-        Me.PhysicianName.ReadOnly = True
-        Me.PhysicianName.Width = 150
-        '
-        'TokenNo
-        '
-        Me.TokenNo.DataPropertyName = "Extra1"
-        Me.TokenNo.HeaderText = "TokenNo"
-        Me.TokenNo.Name = "TokenNo"
-        Me.TokenNo.ReadOnly = True
-        '
-        'MMChartVisitBindingSource
-        '
-        Me.MMChartVisitBindingSource.DataMember = "MMChartVisit"
-        Me.MMChartVisitBindingSource.DataSource = Me.MMDataDataSet1
-        '
-        'MMChartVisitTableAdapter
-        '
-        Me.MMChartVisitTableAdapter.ClearBeforeFill = True
-        '
-        'MMChartTVitalSignTableAdapter
-        '
-        Me.MMChartTVitalSignTableAdapter.ClearBeforeFill = True
-        '
-        'MMChartRxBindingSource
-        '
-        Me.MMChartRxBindingSource.DataMember = "MMChartRx"
-        Me.MMChartRxBindingSource.DataSource = Me.MMDataDataSet1
-        '
-        'MMChartRxTableAdapter
-        '
-        Me.MMChartRxTableAdapter.ClearBeforeFill = True
+        Me.Panel6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel6.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel6.Controls.Add(Me.DgMedicine)
+        Me.Panel6.Location = New System.Drawing.Point(0, 31)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(359, 124)
+        Me.Panel6.TabIndex = 15
         '
         'DgMedicine
         '
         Me.DgMedicine.AllowUserToAddRows = False
         Me.DgMedicine.AllowUserToDeleteRows = False
         Me.DgMedicine.AutoGenerateColumns = False
+        Me.DgMedicine.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DgMedicine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgMedicine.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn17})
         Me.DgMedicine.DataSource = Me.MMChartRxBindingSource
@@ -589,7 +563,7 @@ Partial Class VisitsList
         Me.DgMedicine.Name = "DgMedicine"
         Me.DgMedicine.ReadOnly = True
         Me.DgMedicine.RowHeadersVisible = False
-        Me.DgMedicine.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Azure
+        Me.DgMedicine.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.DgMedicine.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black
         Me.DgMedicine.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgMedicine.Size = New System.Drawing.Size(359, 124)
@@ -631,10 +605,124 @@ Partial Class VisitsList
         Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
         Me.DataGridViewTextBoxColumn17.ReadOnly = True
         '
+        'MMChartRxBindingSource
+        '
+        Me.MMChartRxBindingSource.DataMember = "MMChartRx"
+        Me.MMChartRxBindingSource.DataSource = Me.MMDataDataSet1
+        '
+        'Label6
+        '
+        Me.Label6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.Label6.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Black
+        Me.Label6.Location = New System.Drawing.Point(1, 1)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(357, 30)
+        Me.Label6.TabIndex = 14
+        Me.Label6.Text = "Medications"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Panel4
+        '
+        Me.Panel4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel4.BackColor = System.Drawing.Color.GhostWhite
+        Me.Panel4.Controls.Add(Me.PanelVitals)
+        Me.Panel4.Controls.Add(Me.PanelMadication)
+        Me.Panel4.Location = New System.Drawing.Point(862, 97)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(362, 603)
+        Me.Panel4.TabIndex = 196
+        '
+        'MMChartVisitTableAdapter
+        '
+        Me.MMChartVisitTableAdapter.ClearBeforeFill = True
+        '
+        'MMChartTVitalSignTableAdapter
+        '
+        Me.MMChartTVitalSignTableAdapter.ClearBeforeFill = True
+        '
+        'MMChartRxTableAdapter
+        '
+        Me.MMChartRxTableAdapter.ClearBeforeFill = True
+        '
+        'cmbFilter
+        '
+        Me.cmbFilter.FormattingEnabled = True
+        Me.cmbFilter.Items.AddRange(New Object() {"FirstName", "LastName", "ChartNumber", "CaseNumber"})
+        Me.cmbFilter.Location = New System.Drawing.Point(402, 59)
+        Me.cmbFilter.Name = "cmbFilter"
+        Me.cmbFilter.Size = New System.Drawing.Size(121, 23)
+        Me.cmbFilter.TabIndex = 14
+        '
+        'C
+        '
+        Me.C.AutoSize = True
+        Me.C.Location = New System.Drawing.Point(354, 62)
+        Me.C.Name = "C"
+        Me.C.Size = New System.Drawing.Size(46, 15)
+        Me.C.TabIndex = 15
+        Me.C.Text = "Criteria"
+        '
+        'CBPhysician
+        '
+        Me.CBPhysician.FormattingEnabled = True
+        Me.CBPhysician.Location = New System.Drawing.Point(638, 59)
+        Me.CBPhysician.Name = "CBPhysician"
+        Me.CBPhysician.Size = New System.Drawing.Size(121, 23)
+        Me.CBPhysician.TabIndex = 14
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(539, 62)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(96, 15)
+        Me.Label7.TabIndex = 15
+        Me.Label7.Text = "Physician Name"
+        '
+        'CBDate
+        '
+        Me.CBDate.FormattingEnabled = True
+        Me.CBDate.Items.AddRange(New Object() {"Today", "Yesterday", "LastWeek", "LastMonth", "All"})
+        Me.CBDate.Location = New System.Drawing.Point(855, 59)
+        Me.CBDate.Name = "CBDate"
+        Me.CBDate.Size = New System.Drawing.Size(121, 23)
+        Me.CBDate.TabIndex = 14
+        Me.CBDate.Text = "Today"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(776, 62)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(73, 15)
+        Me.Label8.TabIndex = 15
+        Me.Label8.Text = "FilterByDate"
+        '
+        'txtFind
+        '
+        Me.txtFind.Location = New System.Drawing.Point(248, 59)
+        Me.txtFind.Name = "txtFind"
+        Me.txtFind.Size = New System.Drawing.Size(100, 21)
+        Me.txtFind.TabIndex = 16
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(214, 62)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(31, 15)
+        Me.Label9.TabIndex = 15
+        Me.Label9.Text = "Find"
+        '
         'VisitsList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.GhostWhite
         Me.ClientSize = New System.Drawing.Size(1221, 741)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.BtnMedication)
@@ -650,20 +738,21 @@ Partial Class VisitsList
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         CType(Me.MMChartVisitDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MMChartVisitBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MMDataDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.PanelVitals.ResumeLayout(False)
-        Me.PanelMadication.ResumeLayout(False)
-        Me.Panel4.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
-        Me.Panel6.ResumeLayout(False)
         CType(Me.DgVitals, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MMChartTVitalSignBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MMDataDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MMChartVisitBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MMChartRxBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelMadication.ResumeLayout(False)
+        Me.Panel6.ResumeLayout(False)
         CType(Me.DgMedicine, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MMChartRxBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel4.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -728,4 +817,12 @@ Partial Class VisitsList
     Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn17 As DataGridViewTextBoxColumn
+    Friend WithEvents C As Label
+    Friend WithEvents cmbFilter As ComboBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents CBDate As ComboBox
+    Friend WithEvents CBPhysician As ComboBox
+    Friend WithEvents txtFind As TextBox
+    Friend WithEvents Label9 As Label
 End Class

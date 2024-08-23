@@ -1,20 +1,21 @@
 ﻿Imports Ascend.Windows.Forms
+Imports System.Data.SqlClient
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox
 
 Public Class VisitsList
     Public aRet(10) As String
 
-    Private Sub MMChartVisitBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
-        Me.Validate()
-        Me.MMChartVisitBindingSource.EndEdit()
-        Me.MMChartVisitTableAdapter.Update(Me.MMDataDataSet1.MMChartVisit)
 
-    End Sub
 
     Private Sub VisitsList_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'MMDataDataSet1.MMPRocedure' table. You can move, or remove it, as needed.
+        Me.MMPRocedureTableAdapter.Fill(Me.MMDataDataSet1.MMPRocedure)
+
+        LoadcmbPhysion()
+        GetFilteredChartVisits(CBPhysician.Text, CBDate.Text)
+        '  Me.MMChartVisitTableAdapter.Fill(Me.MMDataDataSet1.MMChartVisit)
 
 
-        Me.MMChartVisitTableAdapter.Fill(Me.MMDataDataSet1.MMChartVisit)
 
     End Sub
 
@@ -52,9 +53,6 @@ Public Class VisitsList
                 clearTextBox()
             End If
 
-
-
-
         Catch
         End Try
     End Sub
@@ -78,12 +76,148 @@ Public Class VisitsList
 
 
     End Sub
+    Public Function GetFilteredChartVisits(ByVal physicianName As String, ByVal dateFilter As String) As DataTable
 
+        ' Create a new DataTable to hold the results
+        Dim resultTable As New DataTable()
+
+        Try
+            ' Create a new SQL connection using the connection string
+            Using connection As New SqlConnection(connString2)
+                ' Open the connection
+                connection.Open()
+
+                ' Create a new SQL command using the stored procedure
+                Using command As New SqlCommand("FilterChartVisits", connection)
+                    command.CommandType = CommandType.StoredProcedure
+
+                    ' Add the parameters to the SQL command
+                    command.Parameters.Add(New SqlParameter("@PhysicianName", SqlDbType.NVarChar, 50))
+                    If String.IsNullOrEmpty(physicianName) Then
+                        command.Parameters("@PhysicianName").Value = DBNull.Value
+                    Else
+                        command.Parameters("@PhysicianName").Value = physicianName
+                    End If
+
+                    command.Parameters.Add(New SqlParameter("@DateFilter", SqlDbType.NVarChar, 10))
+                    command.Parameters("@DateFilter").Value = dateFilter
+
+                    ' Create a new SqlDataAdapter to fill the DataTable
+                    Using adapter As New SqlDataAdapter(command)
+                        adapter.Fill(resultTable)
+                    End Using
+                End Using
+            End Using
+
+            MMChartVisitBindingSource = New BindingSource()
+
+            MMChartVisitBindingSource.DataSource = resultTable
+
+            MMChartVisitDataGridView.DataSource = MMChartVisitBindingSource
+
+        Catch ex As Exception
+            ' Handle exceptions
+            Console.WriteLine("Error: " & ex.Message)
+        End Try
+
+        ' Return the result set
+        Return resultTable
+    End Function
+    Private Function LoadcmbPhysion()
+
+        Dim dr As DataRow
+        Dim dt As New DataTable()
+        Dim sqlQuery As String = "SELECT FirstName, LastName FROM MMPhysion"
+        Dim connectionString As String = connString2
+
+        Try
+            ' Establish a connection to the database
+            Using conn As New SqlConnection(connectionString)
+                ' Create a SQL command
+                Using cmd As New SqlCommand(sqlQuery, conn)
+                    ' Create a DataAdapter to execute the query and fill the DataTable
+                    Using adapter As New SqlDataAdapter(cmd)
+                        conn.Open()
+
+                        ' Check if connection is open
+                        If conn.State = ConnectionState.Open Then
+                            ' Fill the DataTable
+                            adapter.Fill(dt)
+
+                            ' Check if the DataTable has data
+                            If dt IsNot Nothing AndAlso dt.Rows.Count > 0 Then
+                                ' Iterate through the DataTable rows and populate the combo box
+                                For Each dr In dt.Rows
+                                    Dim firstName As String = dr("FirstName").ToString()
+                                    Dim lastName As String = dr("LastName").ToString()
+
+                                    If firstName <> "N/A" AndAlso lastName <> "N/A" Then
+                                        CBPhysician.Items.Add($"{firstName} {lastName}")
+                                    ElseIf firstName <> "N/A" Then
+                                        CBPhysician.Items.Add(firstName)
+                                    ElseIf lastName <> "N/A" Then
+                                        CBPhysician.Items.Add(lastName)
+                                    End If
+                                Next
+                            Else
+                                MessageBox.Show("No data found in the DataTable.", "Info")
+                            End If
+                        Else
+                            MessageBox.Show("Failed to open connection to the database.", "Connection Error")
+                        End If
+                    End Using
+                End Using
+            End Using
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error Loading name of Physicians")
+        End Try
+    End Function
     Private Sub BtnMedication_Click(sender As Object, e As EventArgs) Handles BtnMedication.Click
         If MMChartVisitDataGridView.SelectedRows.Count Then
             Prescription.ShowPrescriptions(aRet)
         End If
     End Sub
 
+    Private Sub cmbFilterByDate_SelectedValueChanged(sender As Object, e As EventArgs) Handles CBDate.SelectedValueChanged
+        GetFilteredChartVisits(CBPhysician.Text, CBDate.Text)
+    End Sub
 
+    Private Sub CBPhysician_SelectedValueChanged(sender As Object, e As EventArgs) Handles CBPhysician.SelectedValueChanged
+        GetFilteredChartVisits(CBPhysician.Text, CBDate.Text)
+    End Sub
+
+    Private Sub txtFind_KeyUp(sender As Object, e As KeyEventArgs) Handles txtFind.KeyUp
+        Try
+
+            If cmbFilter.Text <> "" Then
+
+                If cmbFilter.Text = "CaseNumber" Then
+
+                    If txtFind.Text <> "" Then
+                        Me.MMChartVisitBindingSource.Filter = cmbFilter.Text & " = " & txtFind.Text
+                        Me.MMChartVisitBindingSource.Sort = "CaseNumber DESC"
+                        MMChartVisitDataGridView.DataSource = Me.MMChartVisitBindingSource
+                    Else
+                        GetFilteredChartVisits(CBPhysician.Text, CBDate.Text)
+                    End If
+
+                Else
+                    ' For string columns, use Like
+                    Me.MMChartVisitBindingSource.Filter = cmbFilter.Text & " LIKE '" & txtFind.Text & "%'"
+                    Me.MMChartVisitBindingSource.Sort = "CaseNumber DESC"
+                    MMChartVisitDataGridView.DataSource = Me.MMChartVisitBindingSource
+
+                End If
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub cmbFilter_SelectedValueChanged(sender As Object, e As EventArgs) Handles cmbFilter.SelectedValueChanged
+        txtFind.Focus()
+        txtFind.Clear()
+    End Sub
 End Class
