@@ -76,7 +76,7 @@ Public Class Physician
             Dim codenumber As String = ""
 
             Do Until blnExists = False
-                codenumber = LastNameTextBox.Text.Substring(0, 3) + FirstNameTextBox.Text.Substring(0, 2) & i.ToString.PadLeft(3, "0")
+                codenumber = FirstNameTextBox.Text.Substring(0, 3) + LastNameTextBox.Text.Substring(0, 2) & i.ToString.PadLeft(2, "0")
                 i += 1
                 cmd = New SqlCommand("SELECT ChartNumber FROM MMPatient where chartnumber = '" & codenumber & "'", cn)
                 Dim dr As SqlDataReader = cmd.ExecuteReader()
@@ -103,6 +103,11 @@ Public Class Physician
     End Sub
 
     Private Sub TabControl1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabControl1.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub BindingNavigatorAddNewItem_Click(sender As Object, e As EventArgs) Handles BindingNavigatorAddNewItem.Click
+        TabControl1.SelectedTab = TabControl1.TabPages(1)
 
     End Sub
 End Class

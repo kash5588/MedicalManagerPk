@@ -91,36 +91,14 @@ Public Class PATIENT
         Me.MMDataDataSet1.MMPATIENT.SignatureonFileColumn.DefaultValue = True
         Me.MMDataDataSet1.MMPATIENT.PatientTypeColumn.DefaultValue = "PATIENT"
         Me.MMDataDataSet1.MMPATIENT.DateCreatedColumn.DefaultValue = System.DateTime.Now()
-        Me.MMDataDataSet1.MMPATIENT.AssignedProviderColumn.DefaultValue = GetGeneralInfo("DefaultDoctorCode")
+        'Me.MMDataDataSet1.MMPATIENT.AssignedProviderColumn.DefaultValue = GetGeneralInfo("DefaultDoctorCode")
     End Sub
 
     Private Sub MMPATIENTBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MMPATIENTBindingNavigatorSaveItem.Click
         Me.Cursor = Cursors.WaitCursor
         DateChangedTextBox.Text = System.DateTime.Now()
-        'If FirstNameTextBox.Text.Trim.Length = 0 Or LastNameTextBox.Text.Trim.Length = 0 Then
-        '    MessageBox.Show("Enter both First and Last Nammes")
-        'End If
 
-        'If LastNameTextBox.Text.Trim.Length > 0 And FirstNameTextBox.Text.Trim.Length > 0 And ChartNumberTextBox.Text.Trim.Length = 0 Then
-        '    ChartNumberTextBox.Text = LastNameTextBox.Text.Substring(0, 3) + FirstNameTextBox.Text.Substring(0, 2) + "000"
-        'End If
         GenerateChartNumber()
-        'If LastNameTextBox.Text.Trim.Length > 0 And FirstNameTextBox.Text.Trim.Length > 0 And ChartNumberTextBox.Text.Trim.Length > 0 Then
-        '    If LastNameTextBox.Text.Substring(0, 3) + FirstNameTextBox.Text.Substring(0, 2) <> ChartNumberTextBox.Text.Trim.Substring(0, 5) Then
-        '        MsgBox("Chart Number should be first 3 Characters of Last Name and First 2 Characters of first name + 3 dig seq")
-        '    End If
-        'End If
-        'If ChartNumberTextBox.Text.Trim.Length < 8 Then
-        '    ErrorProvider1.SetError(ChartNumberTextBox, "Chart Number Must be 8 Characters")
-        '    MsgBox("Chart Number Must be 8 Characters")
-        'End If
-
-        'If LastNameTextBox.Text.Trim.Length = 0 Then
-        '    ErrorProvider1.SetError(LastNameTextBox, "Please enter the Last Name")
-        'Else
-        '    ErrorProvider1.SetError(LastNameTextBox, "")
-        'End If
-
 
 
         Try
@@ -221,11 +199,11 @@ Public Class PATIENT
 
     Private Sub LastNameTextBox_Validating(ByVal sender As System.Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles LastNameTextBox.Validating
 
-        If LastNameTextBox.Text.Trim.Length < 3 Then
-            ErrorProvider1.SetError(LastNameTextBox, "Please enter the Last Name")
-        Else
-            ErrorProvider1.SetError(LastNameTextBox, "")
-        End If
+        'If LastNameTextBox.Text.Trim.Length < 3 Then
+        '    ErrorProvider1.SetError(LastNameTextBox, "Please enter the Last Name")
+        'Else
+        '    ErrorProvider1.SetError(LastNameTextBox, "")
+        'End If
     End Sub
 
     'Private Sub PATIENT_Validating(ByVal sender As System.Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MyBase.Validating
@@ -315,54 +293,7 @@ Public Class PATIENT
 
     End Sub
 
-    'Private Function LoadComboBoxes()
-    '    Dim db As DBAccess = New DBAccess()
-    '    Dim localdr As SqlClient.SqlDataReader
-    '    Try
-    '        localdr = db.ExecuteReader("SELECT MaritalStatus from MMCombo")
-    '        If localdr.HasRows = True Then
-    '            While localdr.Read
-    '                If localdr.Item(0).ToString <> "N/A" Then
-    '                    MstatusComboBox.Items.Add(localdr.Item(0))
-    '                End If
-    '            End While
-    '        End If
-    '        localdr.Close()
 
-
-    '        localdr = db.ExecuteReader("SELECT PatientType from MMCombo")
-    '        If localdr.HasRows = True Then
-    '            While localdr.Read
-    '                If localdr.Item(0).ToString <> "N/A" Then
-    '                    PatientTypeComboBox.Items.Add(localdr.Item(0))
-    '                End If
-    '            End While
-    '        End If
-    '        localdr.Close()
-
-    '        localdr = db.ExecuteReader("SELECT EmploymentStatus from MMCombo")
-    '        If localdr.HasRows = True Then
-    '            While localdr.Read
-    '                If localdr.Item(0).ToString <> "N/A" Then
-    '                    EmploymentStatusComboBox.Items.Add(localdr.Item(0))
-    '                End If
-    '            End While
-    '        End If
-    '        localdr.Close()
-
-    '        localdr = db.ExecuteReader("SELECT Race from MMCombo")
-    '        If localdr.HasRows = True Then
-    '            While localdr.Read
-    '                If localdr.Item(0).ToString <> "N/A" Then
-    '                    RaceComboBox.Items.Add(localdr.Item(0))
-    '                End If
-    '            End While
-    '        End If
-    '        localdr.Close()
-    '    Catch ex As Exception
-    '        MessageBox.Show(ex.ToString)
-    '    End Try
-    'End Function
 
     Private Function LoadComboBoxes2()
 
@@ -472,34 +403,6 @@ Public Class PATIENT
 
 
 
-
-        'Dim objOpenFileDialog As New OpenFileDialog
-
-        'With objOpenFileDialog
-        '    .Filter = "Image files (.jpg, .jpeg, .bmp, .gif)|*.jpg;*.jpeg;*.bmp;*.gif;*.png"
-        '    .FilterIndex = 1
-        '    .Title = "Open File Dialog"
-        '    .InitialDirectory = "C:\"
-        'End With
-
-        'If objOpenFileDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
-        '    Dim allText As String
-        '    Try
-        '        'Read the contents of the file
-        '        allText = objOpenFileDialog.FileName
-        '        'Display the file contents in the TextBox
-        '        System.Console.WriteLine(allText)
-        '        Dim originalimage As System.Drawing.Image
-        '        originalimage = Image.FromFile(allText)
-        '        Me.PictureBox1.Image = originalimage
-        '        SaveToDatabase(allText)
-        '    Catch fileException As Exception
-        '        Throw fileException
-        '    End Try
-        'End If
-
-        'objOpenFileDialog.Dispose()
-        'objOpenFileDialog = Nothing
     End Sub
 
     Private Function SaveToDatabase(ByVal allText As String)
@@ -606,7 +509,8 @@ Public Class PATIENT
 
     Private Function GenerateChartNumber() As String
 
-        If LastNameTextBox.Text.Trim.Length > 0 And FirstNameTextBox.Text.Trim.Length > 0 And ChartNumberTextBox.Text.Trim.Length = 0 Then
+        'If LastNameTextBox.Text.Trim.Length > 0 And FirstNameTextBox.Text.Trim.Length > 0 And ChartNumberTextBox.Text.Trim.Length = 0 Then '
+        If FirstNameTextBox.Text.Trim.Length > 0 And ChartNumberTextBox.Text.Trim.Length = 0 Then
             Dim i As Integer
             Dim connString As String = connString2
             Dim cn As New SqlConnection(connString)
@@ -617,7 +521,12 @@ Public Class PATIENT
             Dim chartnumber As String = ""
 
             Do Until blnExists = False
-                chartnumber = LastNameTextBox.Text.Substring(0, 3) + FirstNameTextBox.Text.Substring(0, 2) & i.ToString.PadLeft(3, "0")
+                If LastNameTextBox.Text <> "" Then
+                    chartnumber = FirstNameTextBox.Text.Substring(0, 3) + LastNameTextBox.Text.Substring(0, 2) & i.ToString.PadLeft(3, "0")
+                Else
+                    chartnumber = FirstNameTextBox.Text.Substring(0, 5) & i.ToString.PadLeft(3, "0")
+                End If
+
                 i += 1
                 cmd = New SqlCommand("SELECT ChartNumber FROM MMPatient where chartnumber = '" & chartnumber & "'", cn)
                 Dim dr As SqlDataReader = cmd.ExecuteReader()
@@ -670,6 +579,7 @@ Public Class PATIENT
         Dim pieces() As String
         Dim IndexOf As Integer
         Dim sAction As String
+        Dim TokenNo As Integer = 0
         Try
             If PhysicianFeeTextBox.Text <> "" Then
                 GenerateChartNumber()
@@ -690,8 +600,12 @@ Public Class PATIENT
                 Else
                     aRet(5) = CellPhoneMaskedTextBox.Text.Trim()   'phone
                 End If
-
-                aRet(6) = MaskedTextBoxDob.Text.Trim()    'DOB
+                If MaskedTextBoxDob.Text = "  /  /" Then
+                    aRet(6) = ""
+                Else
+                    aRet(6) = MaskedTextBoxDob.Text.Trim()     'DOB
+                End If
+                'DOB
                 aRet(7) = CBSex.Text.Trim()
 
 
@@ -709,13 +623,14 @@ Public Class PATIENT
                     MessageBox.Show("You may not add a Visit without a Chart.")
                 Else
 
-                    Dim CaseNo As Integer = InsertVisit(aRet, arrayAssignedProvider)
+                    TokenNo = CountTotalResults(arrayAssignedProvider(0)) + 1
+                    Dim CaseNo As Integer = InsertVisit(aRet, arrayAssignedProvider, TokenNo)
                     InsertFeeProcedure(aRet, arrayAssignedProvider, TbIdProcedure.Text, CaseNo)
 
                     Dim result As DialogResult = MessageBox.Show("You added a visit successfully." & vbCrLf & "Do you want to Print Slip?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
                     If result = DialogResult.Yes Then
-                        ' Call the new function if the user clicks Yes
+                        VisitsList.Show()
                         Me.Close()
                     Else
                         Me.Close()
@@ -761,14 +676,14 @@ Public Class PATIENT
         End Using
     End Sub
 
-    Function InsertVisit(aRet() As String, arrayAssignedProvider() As String) As Integer
+    Function InsertVisit(aRet() As String, arrayAssignedProvider() As String, TokenNo As Integer) As Integer
         Dim connectionString As String = connString2
 
         ' Create the SQL connection
         Using connection As New SqlConnection(connectionString)
             ' Define your SQL command with placeholders for the parameters
-            Dim sql As String = "INSERT INTO MMData.dbo.MMChartVisit (ChartNumber, Date, FirstName, LastName, DOB, AssignedProvider, TimeStamp, UserName) " &
-                         "VALUES (@ChartNumber, @Date, @FirstName, @LastName, @DOB, @AssignedProvider, @TimeStamp, @UserName); " &
+            Dim sql As String = "INSERT INTO MMData.dbo.MMChartVisit (ChartNumber, Date, FirstName, LastName, DOB, AssignedProvider, TimeStamp, UserName, Extra1) " &
+                         "VALUES (@ChartNumber, @Date, @FirstName, @LastName, @DOB, @AssignedProvider, @TimeStamp, @UserName,@Extra1); " &
                          "SELECT SCOPE_IDENTITY();"
 
             ' Create the SQL command
@@ -778,11 +693,16 @@ Public Class PATIENT
                 command.Parameters.AddWithValue("@Date", DateTime.Now.Date)
                 command.Parameters.AddWithValue("@FirstName", aRet(3))
                 command.Parameters.AddWithValue("@LastName", aRet(2))
+                command.Parameters.AddWithValue("@Extra1", TokenNo.ToString())
+                If aRet(6) <> "" Then
+                    Dim dobString As String = aRet(6).ToString()  ' Convert the object to string
+                    Dim dob As DateTime = DateTime.ParseExact(dobString, "MM/dd/yyyy", System.Globalization.CultureInfo.InvariantCulture)
 
-                Dim dobString As String = aRet(6).ToString()  ' Convert the object to string
-                Dim dob As DateTime = DateTime.ParseExact(dobString, "MM/dd/yyyy", System.Globalization.CultureInfo.InvariantCulture)
+                    command.Parameters.AddWithValue("@DOB", dob.ToString("MM/dd/yyyy"))
+                Else
+                    command.Parameters.AddWithValue("@DOB", DBNull.Value)
+                End If
 
-                command.Parameters.AddWithValue("@DOB", dob.ToString("MM/dd/yyyy"))
                 command.Parameters.AddWithValue("@AssignedProvider", arrayAssignedProvider(0))
                 command.Parameters.AddWithValue("@TimeStamp", DateTime.Now.Date)
                 command.Parameters.AddWithValue("@UserName", globalUser)
@@ -869,6 +789,27 @@ Public Class PATIENT
             End If
         End If
     End Sub
+    Public Function CountTotalResults(Physician As String) As Integer
+        Dim totalResults As Integer = 0
+        Dim connectionString As String = connString2
+        Dim query As String = "SELECT COUNT(*) FROM MMData.dbo.MMChartVisit WHERE AssignedProvider = @Physician and CAST(Date AS DATE) = @CurrentDate"
+
+        Using connection As New SqlConnection(connectionString)
+            Using command As New SqlCommand(query, connection)
+                ' Add the current date as a parameter to avoid SQL injection
+                command.Parameters.AddWithValue("@CurrentDate", DateTime.Now.Date)
+                command.Parameters.AddWithValue("@Physician", Physician)
+
+                ' Open the connection
+                connection.Open()
+
+                ' Execute the query and get the total result count
+                totalResults = Convert.ToInt32(command.ExecuteScalar())
+            End Using
+        End Using
+
+        Return totalResults
+    End Function
 End Class
 
 
