@@ -15,13 +15,14 @@ Public Class Orders
         ChartNo.Text = aRet(1)
         txtName.Text = (aRet(3) + " " + aRet(2)).Trim()
         txtCaseNo.Text = aRet(10)
+        TBPhysician.Text = AssignedProvider
 
     End Sub
 
     Public Function ShowProcedures(ByVal dRet() As String, ByVal AssignedProviderName As String) As String()
         AssignedProvider = AssignedProviderName
         AssignedProviderCode = GetPhysicianCode(AssignedProviderName)
-
+        RadioButtonPr.Checked = True
         aRet = dRet
         ChartNumber = dRet(1)
         Me.Show()
@@ -58,7 +59,7 @@ Public Class Orders
         Return code
     End Function
 
-    Private Sub radTemplateDX_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub radTemplateDX_CheckedChanged(sender As Object, e As EventArgs) Handles radTemplateDX.CheckedChanged
         LoadTemplateSpecificDxPrTests()
     End Sub
 
@@ -115,13 +116,67 @@ Public Class Orders
 
 
     Private Sub radAll_CheckedChanged(sender As Object, e As EventArgs) Handles radAll.CheckedChanged
+        If radAll.Checked = True Then
 
+            Dim connString As String = connString2
+            Dim cn As New SqlConnection(connString)
+            cn.Open()
+            Dim cmd As New SqlCommand
+
+            Try
+
+                radTemplateDX.BackColor = Color.Transparent
+                radMyDx.BackColor = Color.Transparent
+                radAll.BackColor = Color.FromArgb(148, 183, 233)
+
+
+                If RadioButtonPr.Checked Then
+                    cmd = New SqlCommand("SELECT Code1 As Code, Description, AmountA, MyProcedures, ScreenLocation, Type, InHouse, InHouseBilling  from  MMProcedure order by Description", cn)
+
+                ElseIf RadioButtonLT.Checked Then
+                    cmd = New SqlCommand("SELECT TestNo, Description, Amount, MyTest, Type, InHouse, InHouseBilling FROM MMChartTestLab order by Description", cn)
+
+                ElseIf RadioButtonMT.Checked Then
+                    cmd = New SqlCommand("SELECT ID, Description, Amount, MyTest, Type, InHouse, InHouseBilling FROM MMCHARTTESTMEDICAL order by Description", cn)
+
+                ElseIf RadioButtonTestImaging.Checked Then
+                    cmd = New SqlCommand("SELECT ID, Description, Amount, MyTest, Type, InHouse, InHouseBilling FROM MMChartTestImaging order by Description", cn)
+
+                Else
+                    DataGridViewPr.DataSource = Nothing
+                    Exit Sub
+                End If
+
+                Dim da As New SqlDataAdapter
+                Dim tbl As New DataTable
+                Dim ds As New DataSet
+                da.SelectCommand = cmd
+                da.Fill(ds, "MMDX")
+
+                myBindingSource = New BindingSource()
+                myBindingSource.DataSource = ds
+                myBindingSource.DataMember = ds.Tables(0).TableName
+                DataGridViewPr.DataSource = myBindingSource
+
+                ds.Dispose()
+                cn.Close()
+                Me.DataGridViewPr.Columns(0).Width = 70
+                Me.DataGridViewPr.Columns("Description").Width = 347
+
+
+            Catch ex As System.Exception
+                System.Windows.Forms.MessageBox.Show(ex.Message)
+            End Try
+        End If
     End Sub
 
 
 
     Private Sub txtFind_KeyUp(sender As Object, e As KeyEventArgs) Handles txtFind.KeyUp
-
+        Try
+            myBindingSource.Filter = cmbFilter.Text & " like " & "'" & txtFind.Text & "%'"
+        Catch
+        End Try
     End Sub
 
     Private Sub cmbFilter_SelectedValueChanged(sender As Object, e As EventArgs) Handles cmbFilter.SelectedValueChanged
@@ -152,7 +207,7 @@ Public Class Orders
                 cn.Close()
                 Me.DataGridViewPr.Columns(0).Width = 70
                 Me.DataGridViewPr.Columns(1).Width = 355
-                Me.DataGridViewPr.Columns(2).Width = 50
+                Me.DataGridViewPr.Columns(2).Width = 70
 
                 If globalTemplate <> "" Then
                     radTemplateDX.Checked = True
@@ -449,7 +504,7 @@ Public Class Orders
                 cn.Close()
                 Me.DataGridViewPr.Columns(0).Width = 70
                 Me.DataGridViewPr.Columns(1).Width = 355
-                Me.DataGridViewPr.Columns(2).Width = 50
+                Me.DataGridViewPr.Columns(2).Width = 70
                 If globalTemplate <> "" Then
                     radTemplateDX.Checked = True
                     LoadTemplateSpecificDxPrTests()
@@ -495,7 +550,7 @@ Public Class Orders
 
                 Me.DataGridViewPr.Columns(0).Width = 70
                 Me.DataGridViewPr.Columns(1).Width = 350
-                Me.DataGridViewPr.Columns(2).Width = 0
+                Me.DataGridViewPr.Columns(2).Width = 70
                 If globalTemplate <> "" Then
                     radTemplateDX.Checked = True
                     LoadTemplateSpecificDxPrTests()

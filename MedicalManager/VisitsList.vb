@@ -34,6 +34,7 @@ Public Class VisitsList
                 txtCaseNo.Text = Me.MMChartVisitDataGridView.SelectedRows(0).Cells("CaseNumber").Value & ""
                 TBTokenNo.Text = Me.MMChartVisitDataGridView.SelectedRows(0).Cells("TokenNo").Value & ""
                 TBPhysicianName.Text = Me.MMChartVisitDataGridView.SelectedRows(0).Cells("PhysicianName").Value & ""
+                TBDate.Text = Me.MMChartVisitDataGridView.SelectedRows(0).Cells("DateVisit").Value & ""
                 'LoadPicture()
 
                 Me.MMChartTVitalSignTableAdapter.FillByChNoAndDate(Me.MMDataDataSet1.MMChartTVitalSign, aRet(1), System.DateTime.Now.Date())
@@ -231,5 +232,9 @@ Public Class VisitsList
         If MMChartVisitDataGridView.SelectedRows.Count Then
             Orders.ShowProcedures(aRet, TBPhysicianName.Text)
         End If
+    End Sub
+
+    Private Sub BtnVisitReport_Click(sender As Object, e As EventArgs) Handles BtnVisitReport.Click
+        RV.ShowVisit(ChartNo.Text, TBDate.Text, txtCaseNo.Text, "visit")
     End Sub
 End Class

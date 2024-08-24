@@ -30,7 +30,10 @@ Partial Class Orders
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.ChartNo = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.lblPracticeName = New System.Windows.Forms.Label()
+        Me.RadioButtonTestImaging = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonPr = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonMT = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonLT = New System.Windows.Forms.RadioButton()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.DataGridViewPr = New System.Windows.Forms.DataGridView()
@@ -43,27 +46,25 @@ Partial Class Orders
         Me.radAll = New System.Windows.Forms.RadioButton()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.MMCHDxRxLtMtDataGridView = New System.Windows.Forms.DataGridView()
+        Me.Code = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Description = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Amount = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Type = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CaseNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DatePro = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ChartNumberPro = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UserID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TimeStamp = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.InHouse = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.InHouseBilling = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.MMCHDxRxLtMtBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1()
-        Me.Panel6 = New System.Windows.Forms.Panel()
         Me.MMCHDxRxLtMtTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMCHDxRxLtMtTableAdapter()
-        Me.InHouseBilling = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.InHouse = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.TimeStamp = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UserID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ChartNumberPro = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DatePro = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CaseNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Type = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Amount = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Description = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Code = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MMCHDxRxLtMtDataGridView = New System.Windows.Forms.DataGridView()
-        Me.RadioButtonLT = New System.Windows.Forms.RadioButton()
-        Me.RadioButtonMT = New System.Windows.Forms.RadioButton()
-        Me.RadioButtonPr = New System.Windows.Forms.RadioButton()
-        Me.RadioButtonTestImaging = New System.Windows.Forms.RadioButton()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TBPhysician = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -71,29 +72,30 @@ Partial Class Orders
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel7.SuspendLayout()
+        CType(Me.MMCHDxRxLtMtDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMCHDxRxLtMtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMDataDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MMCHDxRxLtMtDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.Controls.Add(Me.TBPhysician)
+        Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.txtCaseNo)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.txtName)
         Me.Panel1.Controls.Add(Me.ChartNo)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.lblPracticeName)
         Me.Panel1.Controls.Add(Me.RadioButtonTestImaging)
         Me.Panel1.Controls.Add(Me.RadioButtonPr)
         Me.Panel1.Controls.Add(Me.RadioButtonMT)
         Me.Panel1.Controls.Add(Me.RadioButtonLT)
         Me.Panel1.Location = New System.Drawing.Point(1, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1240, 87)
+        Me.Panel1.Size = New System.Drawing.Size(1240, 55)
         Me.Panel1.TabIndex = 0
         '
         'txtCaseNo
@@ -101,15 +103,15 @@ Partial Class Orders
         Me.txtCaseNo.AcceptsReturn = True
         Me.txtCaseNo.BackColor = System.Drawing.Color.White
         Me.txtCaseNo.Enabled = False
-        Me.txtCaseNo.Location = New System.Drawing.Point(432, 55)
+        Me.txtCaseNo.Location = New System.Drawing.Point(382, 18)
         Me.txtCaseNo.Name = "txtCaseNo"
-        Me.txtCaseNo.Size = New System.Drawing.Size(109, 21)
+        Me.txtCaseNo.Size = New System.Drawing.Size(84, 21)
         Me.txtCaseNo.TabIndex = 19
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(377, 58)
+        Me.Label4.Location = New System.Drawing.Point(327, 21)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(54, 15)
         Me.Label4.TabIndex = 20
@@ -118,7 +120,7 @@ Partial Class Orders
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(196, 58)
+        Me.Label3.Location = New System.Drawing.Point(159, 21)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(41, 15)
         Me.Label3.TabIndex = 18
@@ -129,7 +131,7 @@ Partial Class Orders
         Me.txtName.AcceptsReturn = True
         Me.txtName.BackColor = System.Drawing.Color.White
         Me.txtName.Enabled = False
-        Me.txtName.Location = New System.Drawing.Point(238, 55)
+        Me.txtName.Location = New System.Drawing.Point(201, 18)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(122, 21)
         Me.txtName.TabIndex = 17
@@ -138,33 +140,67 @@ Partial Class Orders
         '
         Me.ChartNo.BackColor = System.Drawing.Color.White
         Me.ChartNo.Enabled = False
-        Me.ChartNo.Location = New System.Drawing.Point(52, 55)
+        Me.ChartNo.Location = New System.Drawing.Point(52, 18)
         Me.ChartNo.Name = "ChartNo"
-        Me.ChartNo.Size = New System.Drawing.Size(122, 21)
+        Me.ChartNo.Size = New System.Drawing.Size(103, 21)
         Me.ChartNo.TabIndex = 15
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(10, 58)
+        Me.Label2.Location = New System.Drawing.Point(10, 21)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(41, 15)
         Me.Label2.TabIndex = 16
         Me.Label2.Text = "Ch No"
         '
-        'lblPracticeName
+        'RadioButtonTestImaging
         '
-        Me.lblPracticeName.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblPracticeName.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.lblPracticeName.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPracticeName.ForeColor = System.Drawing.Color.Black
-        Me.lblPracticeName.Location = New System.Drawing.Point(1, 0)
-        Me.lblPracticeName.Name = "lblPracticeName"
-        Me.lblPracticeName.Size = New System.Drawing.Size(1239, 41)
-        Me.lblPracticeName.TabIndex = 14
-        Me.lblPracticeName.Text = "Procedures List "
-        Me.lblPracticeName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.RadioButtonTestImaging.AutoSize = True
+        Me.RadioButtonTestImaging.BackColor = System.Drawing.SystemColors.Control
+        Me.RadioButtonTestImaging.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonTestImaging.Location = New System.Drawing.Point(1025, 17)
+        Me.RadioButtonTestImaging.Name = "RadioButtonTestImaging"
+        Me.RadioButtonTestImaging.Size = New System.Drawing.Size(103, 20)
+        Me.RadioButtonTestImaging.TabIndex = 8
+        Me.RadioButtonTestImaging.Text = "Test Imaging"
+        Me.RadioButtonTestImaging.UseVisualStyleBackColor = False
+        '
+        'RadioButtonPr
+        '
+        Me.RadioButtonPr.AutoSize = True
+        Me.RadioButtonPr.BackColor = System.Drawing.SystemColors.Control
+        Me.RadioButtonPr.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonPr.Location = New System.Drawing.Point(778, 17)
+        Me.RadioButtonPr.Name = "RadioButtonPr"
+        Me.RadioButtonPr.Size = New System.Drawing.Size(53, 20)
+        Me.RadioButtonPr.TabIndex = 5
+        Me.RadioButtonPr.Text = "Proc"
+        Me.RadioButtonPr.UseVisualStyleBackColor = False
+        '
+        'RadioButtonMT
+        '
+        Me.RadioButtonMT.AutoSize = True
+        Me.RadioButtonMT.BackColor = System.Drawing.SystemColors.Control
+        Me.RadioButtonMT.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonMT.Location = New System.Drawing.Point(922, 17)
+        Me.RadioButtonMT.Name = "RadioButtonMT"
+        Me.RadioButtonMT.Size = New System.Drawing.Size(106, 20)
+        Me.RadioButtonMT.TabIndex = 7
+        Me.RadioButtonMT.Text = "Test Medical "
+        Me.RadioButtonMT.UseVisualStyleBackColor = False
+        '
+        'RadioButtonLT
+        '
+        Me.RadioButtonLT.AutoSize = True
+        Me.RadioButtonLT.BackColor = System.Drawing.SystemColors.Control
+        Me.RadioButtonLT.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonLT.Location = New System.Drawing.Point(837, 17)
+        Me.RadioButtonLT.Name = "RadioButtonLT"
+        Me.RadioButtonLT.Size = New System.Drawing.Size(78, 20)
+        Me.RadioButtonLT.TabIndex = 6
+        Me.RadioButtonLT.Text = "Lab Test"
+        Me.RadioButtonLT.UseVisualStyleBackColor = False
         '
         'Panel2
         '
@@ -174,9 +210,9 @@ Partial Class Orders
         Me.Panel2.BackColor = System.Drawing.Color.White
         Me.Panel2.Controls.Add(Me.Panel5)
         Me.Panel2.Controls.Add(Me.Panel4)
-        Me.Panel2.Location = New System.Drawing.Point(626, 87)
+        Me.Panel2.Location = New System.Drawing.Point(626, 55)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(615, 590)
+        Me.Panel2.Size = New System.Drawing.Size(615, 616)
         Me.Panel2.TabIndex = 9
         '
         'Panel5
@@ -187,7 +223,7 @@ Partial Class Orders
         Me.Panel5.Controls.Add(Me.DataGridViewPr)
         Me.Panel5.Location = New System.Drawing.Point(0, 52)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(615, 535)
+        Me.Panel5.Size = New System.Drawing.Size(615, 561)
         Me.Panel5.TabIndex = 163
         '
         'DataGridViewPr
@@ -206,7 +242,7 @@ Partial Class Orders
         Me.DataGridViewPr.RowHeadersVisible = False
         Me.DataGridViewPr.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.DataGridViewPr.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridViewPr.Size = New System.Drawing.Size(615, 535)
+        Me.DataGridViewPr.Size = New System.Drawing.Size(615, 561)
         Me.DataGridViewPr.TabIndex = 142
         '
         'Panel4
@@ -222,7 +258,7 @@ Partial Class Orders
         Me.Panel4.Controls.Add(Me.radAll)
         Me.Panel4.Location = New System.Drawing.Point(3, 1)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(612, 50)
+        Me.Panel4.Size = New System.Drawing.Size(612, 76)
         Me.Panel4.TabIndex = 162
         '
         'cmbFilter
@@ -273,11 +309,11 @@ Partial Class Orders
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(60, 18)
+        Me.Label6.Location = New System.Drawing.Point(90, 18)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(62, 15)
+        Me.Label6.Size = New System.Drawing.Size(34, 15)
         Me.Label6.TabIndex = 161
-        Me.Label6.Text = "Find Proc:"
+        Me.Label6.Text = "Find:"
         '
         'radAll
         '
@@ -297,10 +333,11 @@ Partial Class Orders
         Me.Panel3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel3.Controls.Add(Me.Label1)
         Me.Panel3.Controls.Add(Me.Panel7)
-        Me.Panel3.Location = New System.Drawing.Point(1, 87)
+        Me.Panel3.Location = New System.Drawing.Point(1, 55)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(627, 590)
+        Me.Panel3.Size = New System.Drawing.Size(627, 622)
         Me.Panel3.TabIndex = 10
         '
         'Panel7
@@ -310,118 +347,8 @@ Partial Class Orders
         Me.Panel7.Controls.Add(Me.MMCHDxRxLtMtDataGridView)
         Me.Panel7.Location = New System.Drawing.Point(0, 52)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(625, 535)
+        Me.Panel7.Size = New System.Drawing.Size(625, 567)
         Me.Panel7.TabIndex = 125
-        '
-        'MMCHDxRxLtMtBindingSource
-        '
-        Me.MMCHDxRxLtMtBindingSource.DataMember = "MMCHDxRxLtMt"
-        Me.MMCHDxRxLtMtBindingSource.DataSource = Me.MMDataDataSet1
-        '
-        'MMDataDataSet1
-        '
-        Me.MMDataDataSet1.DataSetName = "MMDataDataSet1"
-        Me.MMDataDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Panel6
-        '
-        Me.Panel6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Panel6.BackColor = System.Drawing.Color.White
-        Me.Panel6.Location = New System.Drawing.Point(1, 87)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(625, 51)
-        Me.Panel6.TabIndex = 125
-        '
-        'MMCHDxRxLtMtTableAdapter
-        '
-        Me.MMCHDxRxLtMtTableAdapter.ClearBeforeFill = True
-        '
-        'InHouseBilling
-        '
-        Me.InHouseBilling.DataPropertyName = "InHouseBilling"
-        Me.InHouseBilling.HeaderText = "InHouseBilling"
-        Me.InHouseBilling.Name = "InHouseBilling"
-        Me.InHouseBilling.ReadOnly = True
-        '
-        'InHouse
-        '
-        Me.InHouse.DataPropertyName = "InHouse"
-        Me.InHouse.HeaderText = "InHouse"
-        Me.InHouse.Name = "InHouse"
-        Me.InHouse.ReadOnly = True
-        '
-        'TimeStamp
-        '
-        Me.TimeStamp.DataPropertyName = "TimeStamp"
-        Me.TimeStamp.HeaderText = "TimeStamp"
-        Me.TimeStamp.Name = "TimeStamp"
-        Me.TimeStamp.ReadOnly = True
-        '
-        'UserID
-        '
-        Me.UserID.DataPropertyName = "UserID"
-        Me.UserID.HeaderText = "UserID"
-        Me.UserID.Name = "UserID"
-        Me.UserID.ReadOnly = True
-        '
-        'IDDataGridViewTextBoxColumn
-        '
-        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
-        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
-        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
-        Me.IDDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ChartNumberPro
-        '
-        Me.ChartNumberPro.DataPropertyName = "ChartNumber"
-        Me.ChartNumberPro.HeaderText = "ChartNumber"
-        Me.ChartNumberPro.Name = "ChartNumberPro"
-        Me.ChartNumberPro.ReadOnly = True
-        '
-        'DatePro
-        '
-        Me.DatePro.DataPropertyName = "Date"
-        Me.DatePro.HeaderText = "Date"
-        Me.DatePro.Name = "DatePro"
-        Me.DatePro.ReadOnly = True
-        '
-        'CaseNo
-        '
-        Me.CaseNo.DataPropertyName = "CaseNumber"
-        Me.CaseNo.HeaderText = "CaseNumber"
-        Me.CaseNo.Name = "CaseNo"
-        Me.CaseNo.ReadOnly = True
-        '
-        'Type
-        '
-        Me.Type.DataPropertyName = "Type"
-        Me.Type.HeaderText = "Type"
-        Me.Type.Name = "Type"
-        Me.Type.ReadOnly = True
-        '
-        'Amount
-        '
-        Me.Amount.DataPropertyName = "Amount"
-        Me.Amount.HeaderText = "Amount"
-        Me.Amount.Name = "Amount"
-        Me.Amount.ReadOnly = True
-        Me.Amount.Width = 60
-        '
-        'Description
-        '
-        Me.Description.DataPropertyName = "Description"
-        Me.Description.HeaderText = "Description"
-        Me.Description.Name = "Description"
-        Me.Description.ReadOnly = True
-        Me.Description.Width = 180
-        '
-        'Code
-        '
-        Me.Code.DataPropertyName = "Code"
-        Me.Code.HeaderText = "Code"
-        Me.Code.Name = "Code"
-        Me.Code.ReadOnly = True
         '
         'MMCHDxRxLtMtDataGridView
         '
@@ -435,59 +362,148 @@ Partial Class Orders
         Me.MMCHDxRxLtMtDataGridView.Location = New System.Drawing.Point(0, 0)
         Me.MMCHDxRxLtMtDataGridView.Name = "MMCHDxRxLtMtDataGridView"
         Me.MMCHDxRxLtMtDataGridView.ReadOnly = True
-        Me.MMCHDxRxLtMtDataGridView.Size = New System.Drawing.Size(625, 535)
+        Me.MMCHDxRxLtMtDataGridView.Size = New System.Drawing.Size(625, 567)
         Me.MMCHDxRxLtMtDataGridView.TabIndex = 124
         '
-        'RadioButtonLT
+        'Code
         '
-        Me.RadioButtonLT.AutoSize = True
-        Me.RadioButtonLT.BackColor = System.Drawing.SystemColors.Control
-        Me.RadioButtonLT.Location = New System.Drawing.Point(829, 54)
-        Me.RadioButtonLT.Name = "RadioButtonLT"
-        Me.RadioButtonLT.Size = New System.Drawing.Size(72, 19)
-        Me.RadioButtonLT.TabIndex = 6
-        Me.RadioButtonLT.Text = "Lab Test"
-        Me.RadioButtonLT.UseVisualStyleBackColor = False
+        Me.Code.DataPropertyName = "Code"
+        Me.Code.HeaderText = "Code"
+        Me.Code.Name = "Code"
+        Me.Code.ReadOnly = True
         '
-        'RadioButtonMT
+        'Description
         '
-        Me.RadioButtonMT.AutoSize = True
-        Me.RadioButtonMT.BackColor = System.Drawing.SystemColors.Control
-        Me.RadioButtonMT.Location = New System.Drawing.Point(906, 54)
-        Me.RadioButtonMT.Name = "RadioButtonMT"
-        Me.RadioButtonMT.Size = New System.Drawing.Size(95, 19)
-        Me.RadioButtonMT.TabIndex = 7
-        Me.RadioButtonMT.Text = "TestMedical "
-        Me.RadioButtonMT.UseVisualStyleBackColor = False
+        Me.Description.DataPropertyName = "Description"
+        Me.Description.HeaderText = "Description"
+        Me.Description.Name = "Description"
+        Me.Description.ReadOnly = True
+        Me.Description.Width = 180
         '
-        'RadioButtonPr
+        'Amount
         '
-        Me.RadioButtonPr.AutoSize = True
-        Me.RadioButtonPr.BackColor = System.Drawing.SystemColors.Control
-        Me.RadioButtonPr.Location = New System.Drawing.Point(775, 54)
-        Me.RadioButtonPr.Name = "RadioButtonPr"
-        Me.RadioButtonPr.Size = New System.Drawing.Size(50, 19)
-        Me.RadioButtonPr.TabIndex = 5
-        Me.RadioButtonPr.Text = "Proc"
-        Me.RadioButtonPr.UseVisualStyleBackColor = False
+        Me.Amount.DataPropertyName = "Amount"
+        Me.Amount.HeaderText = "Amount"
+        Me.Amount.Name = "Amount"
+        Me.Amount.ReadOnly = True
+        Me.Amount.Width = 60
         '
-        'RadioButtonTestImaging
+        'Type
         '
-        Me.RadioButtonTestImaging.AutoSize = True
-        Me.RadioButtonTestImaging.BackColor = System.Drawing.SystemColors.Control
-        Me.RadioButtonTestImaging.Location = New System.Drawing.Point(1001, 54)
-        Me.RadioButtonTestImaging.Name = "RadioButtonTestImaging"
-        Me.RadioButtonTestImaging.Size = New System.Drawing.Size(93, 19)
-        Me.RadioButtonTestImaging.TabIndex = 8
-        Me.RadioButtonTestImaging.Text = "TestImaging"
-        Me.RadioButtonTestImaging.UseVisualStyleBackColor = False
+        Me.Type.DataPropertyName = "Type"
+        Me.Type.HeaderText = "Type"
+        Me.Type.Name = "Type"
+        Me.Type.ReadOnly = True
+        '
+        'CaseNo
+        '
+        Me.CaseNo.DataPropertyName = "CaseNumber"
+        Me.CaseNo.HeaderText = "CaseNumber"
+        Me.CaseNo.Name = "CaseNo"
+        Me.CaseNo.ReadOnly = True
+        '
+        'DatePro
+        '
+        Me.DatePro.DataPropertyName = "Date"
+        Me.DatePro.HeaderText = "Date"
+        Me.DatePro.Name = "DatePro"
+        Me.DatePro.ReadOnly = True
+        '
+        'ChartNumberPro
+        '
+        Me.ChartNumberPro.DataPropertyName = "ChartNumber"
+        Me.ChartNumberPro.HeaderText = "ChartNumber"
+        Me.ChartNumberPro.Name = "ChartNumberPro"
+        Me.ChartNumberPro.ReadOnly = True
+        '
+        'IDDataGridViewTextBoxColumn
+        '
+        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
+        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
+        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
+        Me.IDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'UserID
+        '
+        Me.UserID.DataPropertyName = "UserID"
+        Me.UserID.HeaderText = "UserID"
+        Me.UserID.Name = "UserID"
+        Me.UserID.ReadOnly = True
+        '
+        'TimeStamp
+        '
+        Me.TimeStamp.DataPropertyName = "TimeStamp"
+        Me.TimeStamp.HeaderText = "TimeStamp"
+        Me.TimeStamp.Name = "TimeStamp"
+        Me.TimeStamp.ReadOnly = True
+        '
+        'InHouse
+        '
+        Me.InHouse.DataPropertyName = "InHouse"
+        Me.InHouse.HeaderText = "InHouse"
+        Me.InHouse.Name = "InHouse"
+        Me.InHouse.ReadOnly = True
+        '
+        'InHouseBilling
+        '
+        Me.InHouseBilling.DataPropertyName = "InHouseBilling"
+        Me.InHouseBilling.HeaderText = "InHouseBilling"
+        Me.InHouseBilling.Name = "InHouseBilling"
+        Me.InHouseBilling.ReadOnly = True
+        '
+        'MMCHDxRxLtMtBindingSource
+        '
+        Me.MMCHDxRxLtMtBindingSource.DataMember = "MMCHDxRxLtMt"
+        Me.MMCHDxRxLtMtBindingSource.DataSource = Me.MMDataDataSet1
+        '
+        'MMDataDataSet1
+        '
+        Me.MMDataDataSet1.DataSetName = "MMDataDataSet1"
+        Me.MMDataDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'MMCHDxRxLtMtTableAdapter
+        '
+        Me.MMCHDxRxLtMtTableAdapter.ClearBeforeFill = True
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label1.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(0, 1)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(627, 51)
+        Me.Label1.TabIndex = 14
+        Me.Label1.Text = "Procedures"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(470, 21)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(62, 15)
+        Me.Label5.TabIndex = 20
+        Me.Label5.Text = "Physician:"
+        '
+        'TBPhysician
+        '
+        Me.TBPhysician.AcceptsReturn = True
+        Me.TBPhysician.BackColor = System.Drawing.Color.White
+        Me.TBPhysician.Enabled = False
+        Me.TBPhysician.Location = New System.Drawing.Point(534, 18)
+        Me.TBPhysician.Name = "TBPhysician"
+        Me.TBPhysician.Size = New System.Drawing.Size(109, 21)
+        Me.TBPhysician.TabIndex = 19
         '
         'Orders
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1241, 703)
-        Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -504,15 +520,14 @@ Partial Class Orders
         Me.Panel4.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel7.ResumeLayout(False)
+        CType(Me.MMCHDxRxLtMtDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MMCHDxRxLtMtBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MMDataDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MMCHDxRxLtMtDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents lblPracticeName As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents radTemplateDX As RadioButton
@@ -525,7 +540,6 @@ Partial Class Orders
     Friend WithEvents Panel5 As Panel
     Friend WithEvents DataGridViewPr As DataGridView
     Friend WithEvents Panel7 As Panel
-    Friend WithEvents Panel6 As Panel
     Friend WithEvents MMCHDxRxLtMtBindingSource As BindingSource
     Friend WithEvents MMDataDataSet1 As MMDataDataSet1
     Friend WithEvents MMCHDxRxLtMtTableAdapter As MMDataDataSet1TableAdapters.MMCHDxRxLtMtTableAdapter
@@ -552,4 +566,7 @@ Partial Class Orders
     Friend WithEvents RadioButtonPr As RadioButton
     Friend WithEvents RadioButtonMT As RadioButton
     Friend WithEvents RadioButtonLT As RadioButton
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TBPhysician As TextBox
+    Friend WithEvents Label5 As Label
 End Class

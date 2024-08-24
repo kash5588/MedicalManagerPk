@@ -141,6 +141,9 @@ Partial Class VisitsList
         Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MMCHDxRxLtMtTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMCHDxRxLtMtTableAdapter()
         Me.BtnProcedures = New System.Windows.Forms.Button()
+        Me.BtnVisitReport = New System.Windows.Forms.Button()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.TBDate = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.MMChartVisitDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMChartVisitBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -370,6 +373,8 @@ Partial Class VisitsList
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel3.Controls.Add(Me.TBTokenNo)
         Me.Panel3.Controls.Add(Me.Label1)
+        Me.Panel3.Controls.Add(Me.TBDate)
+        Me.Panel3.Controls.Add(Me.Label11)
         Me.Panel3.Controls.Add(Me.TBPhysicianName)
         Me.Panel3.Controls.Add(Me.LBPhysicianName)
         Me.Panel3.Controls.Add(Me.ChartNo)
@@ -380,7 +385,7 @@ Partial Class VisitsList
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Location = New System.Drawing.Point(1, 97)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(209, 175)
+        Me.Panel3.Size = New System.Drawing.Size(209, 192)
         Me.Panel3.TabIndex = 1
         '
         'TBTokenNo
@@ -1128,12 +1133,40 @@ Partial Class VisitsList
         Me.BtnProcedures.BackColor = System.Drawing.Color.DodgerBlue
         Me.BtnProcedures.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnProcedures.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnProcedures.Location = New System.Drawing.Point(12, 424)
+        Me.BtnProcedures.Location = New System.Drawing.Point(12, 419)
         Me.BtnProcedures.Name = "BtnProcedures"
         Me.BtnProcedures.Size = New System.Drawing.Size(179, 37)
         Me.BtnProcedures.TabIndex = 194
         Me.BtnProcedures.Text = "Procedures"
         Me.BtnProcedures.UseVisualStyleBackColor = False
+        '
+        'BtnVisitReport
+        '
+        Me.BtnVisitReport.BackColor = System.Drawing.Color.DodgerBlue
+        Me.BtnVisitReport.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnVisitReport.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnVisitReport.Location = New System.Drawing.Point(12, 475)
+        Me.BtnVisitReport.Name = "BtnVisitReport"
+        Me.BtnVisitReport.Size = New System.Drawing.Size(179, 37)
+        Me.BtnVisitReport.TabIndex = 194
+        Me.BtnVisitReport.Text = "Visit Report"
+        Me.BtnVisitReport.UseVisualStyleBackColor = False
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(34, 163)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(33, 15)
+        Me.Label11.TabIndex = 13
+        Me.Label11.Text = "Date"
+        '
+        'TBDate
+        '
+        Me.TBDate.Location = New System.Drawing.Point(67, 160)
+        Me.TBDate.Name = "TBDate"
+        Me.TBDate.Size = New System.Drawing.Size(122, 21)
+        Me.TBDate.TabIndex = 14
         '
         'VisitsList
         '
@@ -1142,6 +1175,7 @@ Partial Class VisitsList
         Me.BackColor = System.Drawing.Color.GhostWhite
         Me.ClientSize = New System.Drawing.Size(1267, 741)
         Me.Controls.Add(Me.Panel4)
+        Me.Controls.Add(Me.BtnVisitReport)
         Me.Controls.Add(Me.BtnProcedures)
         Me.Controls.Add(Me.BtnMedication)
         Me.Controls.Add(Me.btnVitals)
@@ -1299,4 +1333,7 @@ Partial Class VisitsList
     Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Private WithEvents BtnProcedures As Button
+    Private WithEvents BtnVisitReport As Button
+    Friend WithEvents TBDate As TextBox
+    Friend WithEvents Label11 As Label
 End Class
