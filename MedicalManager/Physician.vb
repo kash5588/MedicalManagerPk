@@ -65,7 +65,8 @@ Public Class Physician
     End Sub
     Private Function GenerateChartNumber() As String
 
-        If LastNameTextBox.Text.Trim.Length > 0 And FirstNameTextBox.Text.Trim.Length > 0 And CodeTextBox.Text.Trim.Length = 0 Then
+        'If LastNameTextBox.Text.Trim.Length > 0 And FirstNameTextBox.Text.Trim.Length > 0 And CodeTextBox.Text.Trim.Length = 0 Then
+        If FirstNameTextBox.Text.Trim.Length > 0 And CodeTextBox.Text.Trim.Length = 0 Then
             Dim i As Integer
             Dim connString As String = connString2
             Dim cn As New SqlConnection(connString)
@@ -76,7 +77,12 @@ Public Class Physician
             Dim codenumber As String = ""
 
             Do Until blnExists = False
-                codenumber = FirstNameTextBox.Text.Substring(0, 3) + LastNameTextBox.Text.Substring(0, 2) & i.ToString.PadLeft(2, "0")
+                If LastNameTextBox.Text <> "" Then
+                    ChartNumber = FirstNameTextBox.Text.Substring(0, 3) + LastNameTextBox.Text.Substring(0, 2) & i.ToString.PadLeft(2, "0")
+                Else
+                    ChartNumber = FirstNameTextBox.Text.Substring(0, 5) & i.ToString.PadLeft(2, "0")
+                End If
+
                 i += 1
                 cmd = New SqlCommand("SELECT ChartNumber FROM MMPatient where chartnumber = '" & codenumber & "'", cn)
                 Dim dr As SqlDataReader = cmd.ExecuteReader()
