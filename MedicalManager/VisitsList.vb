@@ -227,5 +227,9 @@ Public Class VisitsList
         txtFind.Clear()
     End Sub
 
-
+    Private Sub BtnProcedures_Click(sender As Object, e As EventArgs) Handles BtnProcedures.Click
+        If MMChartVisitDataGridView.SelectedRows.Count Then
+            Orders.ShowProcedures(aRet, TBPhysicianName.Text)
+        End If
+    End Sub
 End Class

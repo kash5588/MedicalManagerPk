@@ -36,6 +36,14 @@ Partial Class VisitsList
         Me.MMChartVisitBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.txtFind = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.C = New System.Windows.Forms.Label()
+        Me.CBDate = New System.Windows.Forms.ComboBox()
+        Me.CBPhysician = New System.Windows.Forms.ComboBox()
+        Me.cmbFilter = New System.Windows.Forms.ComboBox()
         Me.lblPracticeName = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.TBTokenNo = New System.Windows.Forms.TextBox()
@@ -80,22 +88,21 @@ Partial Class VisitsList
         Me.MMChartRxBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.PanelProcedure = New System.Windows.Forms.Panel()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.DgProcedure = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MMCHDxRxLtMtBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MMPRocedureDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.MMChartVisitTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMChartVisitTableAdapter()
         Me.MMChartTVitalSignTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMChartTVitalSignTableAdapter()
         Me.MMChartRxTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMChartRxTableAdapter()
-        Me.cmbFilter = New System.Windows.Forms.ComboBox()
-        Me.C = New System.Windows.Forms.Label()
-        Me.CBPhysician = New System.Windows.Forms.ComboBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.CBDate = New System.Windows.Forms.ComboBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtFind = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.PanelProcedure = New System.Windows.Forms.Panel()
-        Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.MMPRocedureDataGridView = New System.Windows.Forms.DataGridView()
         Me.Code1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Code2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Code3DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -132,14 +139,8 @@ Partial Class VisitsList
         Me.InHouseBillingDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.ChartEntryDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MMCHDxRxLtMtBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MMCHDxRxLtMtTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMCHDxRxLtMtTableAdapter()
-        Me.DgProcedure = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BtnProcedures = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.MMChartVisitDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMChartVisitBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -157,10 +158,10 @@ Partial Class VisitsList
         Me.Panel4.SuspendLayout()
         Me.PanelProcedure.SuspendLayout()
         Me.Panel8.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MMPRocedureDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MMCHDxRxLtMtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgProcedure, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MMCHDxRxLtMtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MMPRocedureDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -279,6 +280,76 @@ Partial Class VisitsList
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1269, 95)
         Me.Panel2.TabIndex = 1
+        '
+        'txtFind
+        '
+        Me.txtFind.Location = New System.Drawing.Point(248, 59)
+        Me.txtFind.Name = "txtFind"
+        Me.txtFind.Size = New System.Drawing.Size(100, 21)
+        Me.txtFind.TabIndex = 16
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(776, 62)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(73, 15)
+        Me.Label8.TabIndex = 15
+        Me.Label8.Text = "FilterByDate"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(539, 62)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(96, 15)
+        Me.Label7.TabIndex = 15
+        Me.Label7.Text = "Physician Name"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(214, 62)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(31, 15)
+        Me.Label9.TabIndex = 15
+        Me.Label9.Text = "Find"
+        '
+        'C
+        '
+        Me.C.AutoSize = True
+        Me.C.Location = New System.Drawing.Point(354, 62)
+        Me.C.Name = "C"
+        Me.C.Size = New System.Drawing.Size(46, 15)
+        Me.C.TabIndex = 15
+        Me.C.Text = "Criteria"
+        '
+        'CBDate
+        '
+        Me.CBDate.FormattingEnabled = True
+        Me.CBDate.Items.AddRange(New Object() {"Today", "Yesterday", "LastWeek", "LastMonth", "All"})
+        Me.CBDate.Location = New System.Drawing.Point(855, 59)
+        Me.CBDate.Name = "CBDate"
+        Me.CBDate.Size = New System.Drawing.Size(121, 23)
+        Me.CBDate.TabIndex = 14
+        Me.CBDate.Text = "Today"
+        '
+        'CBPhysician
+        '
+        Me.CBPhysician.FormattingEnabled = True
+        Me.CBPhysician.Location = New System.Drawing.Point(638, 59)
+        Me.CBPhysician.Name = "CBPhysician"
+        Me.CBPhysician.Size = New System.Drawing.Size(121, 23)
+        Me.CBPhysician.TabIndex = 14
+        '
+        'cmbFilter
+        '
+        Me.cmbFilter.FormattingEnabled = True
+        Me.cmbFilter.Items.AddRange(New Object() {"FirstName", "LastName", "ChartNumber", "CaseNumber"})
+        Me.cmbFilter.Location = New System.Drawing.Point(402, 59)
+        Me.cmbFilter.Name = "cmbFilter"
+        Me.cmbFilter.Size = New System.Drawing.Size(121, 23)
+        Me.cmbFilter.TabIndex = 14
         '
         'lblPracticeName
         '
@@ -692,88 +763,6 @@ Partial Class VisitsList
         Me.Panel4.Size = New System.Drawing.Size(362, 603)
         Me.Panel4.TabIndex = 196
         '
-        'MMChartVisitTableAdapter
-        '
-        Me.MMChartVisitTableAdapter.ClearBeforeFill = True
-        '
-        'MMChartTVitalSignTableAdapter
-        '
-        Me.MMChartTVitalSignTableAdapter.ClearBeforeFill = True
-        '
-        'MMChartRxTableAdapter
-        '
-        Me.MMChartRxTableAdapter.ClearBeforeFill = True
-        '
-        'cmbFilter
-        '
-        Me.cmbFilter.FormattingEnabled = True
-        Me.cmbFilter.Items.AddRange(New Object() {"FirstName", "LastName", "ChartNumber", "CaseNumber"})
-        Me.cmbFilter.Location = New System.Drawing.Point(402, 59)
-        Me.cmbFilter.Name = "cmbFilter"
-        Me.cmbFilter.Size = New System.Drawing.Size(121, 23)
-        Me.cmbFilter.TabIndex = 14
-        '
-        'C
-        '
-        Me.C.AutoSize = True
-        Me.C.Location = New System.Drawing.Point(354, 62)
-        Me.C.Name = "C"
-        Me.C.Size = New System.Drawing.Size(46, 15)
-        Me.C.TabIndex = 15
-        Me.C.Text = "Criteria"
-        '
-        'CBPhysician
-        '
-        Me.CBPhysician.FormattingEnabled = True
-        Me.CBPhysician.Location = New System.Drawing.Point(638, 59)
-        Me.CBPhysician.Name = "CBPhysician"
-        Me.CBPhysician.Size = New System.Drawing.Size(121, 23)
-        Me.CBPhysician.TabIndex = 14
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(539, 62)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(96, 15)
-        Me.Label7.TabIndex = 15
-        Me.Label7.Text = "Physician Name"
-        '
-        'CBDate
-        '
-        Me.CBDate.FormattingEnabled = True
-        Me.CBDate.Items.AddRange(New Object() {"Today", "Yesterday", "LastWeek", "LastMonth", "All"})
-        Me.CBDate.Location = New System.Drawing.Point(855, 59)
-        Me.CBDate.Name = "CBDate"
-        Me.CBDate.Size = New System.Drawing.Size(121, 23)
-        Me.CBDate.TabIndex = 14
-        Me.CBDate.Text = "Today"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(776, 62)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(73, 15)
-        Me.Label8.TabIndex = 15
-        Me.Label8.Text = "FilterByDate"
-        '
-        'txtFind
-        '
-        Me.txtFind.Location = New System.Drawing.Point(248, 59)
-        Me.txtFind.Name = "txtFind"
-        Me.txtFind.Size = New System.Drawing.Size(100, 21)
-        Me.txtFind.TabIndex = 16
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(214, 62)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(31, 15)
-        Me.Label9.TabIndex = 15
-        Me.Label9.Text = "Find"
-        '
         'PanelProcedure
         '
         Me.PanelProcedure.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -796,6 +785,79 @@ Partial Class VisitsList
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(359, 124)
         Me.Panel8.TabIndex = 15
+        '
+        'DgProcedure
+        '
+        Me.DgProcedure.AllowUserToAddRows = False
+        Me.DgProcedure.AllowUserToDeleteRows = False
+        Me.DgProcedure.AutoGenerateColumns = False
+        Me.DgProcedure.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.DgProcedure.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgProcedure.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn1})
+        Me.DgProcedure.DataSource = Me.MMCHDxRxLtMtBindingSource
+        Me.DgProcedure.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DgProcedure.Location = New System.Drawing.Point(0, 0)
+        Me.DgProcedure.Name = "DgProcedure"
+        Me.DgProcedure.ReadOnly = True
+        Me.DgProcedure.RowHeadersVisible = False
+        Me.DgProcedure.Size = New System.Drawing.Size(359, 124)
+        Me.DgProcedure.TabIndex = 197
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "Description"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Description"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        Me.DataGridViewTextBoxColumn6.Width = 160
+        '
+        'DataGridViewTextBoxColumn16
+        '
+        Me.DataGridViewTextBoxColumn16.DataPropertyName = "Amount"
+        Me.DataGridViewTextBoxColumn16.HeaderText = "Amount"
+        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
+        Me.DataGridViewTextBoxColumn16.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Date"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Date"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn12
+        '
+        Me.DataGridViewTextBoxColumn12.DataPropertyName = "UserID"
+        Me.DataGridViewTextBoxColumn12.HeaderText = "User"
+        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        Me.DataGridViewTextBoxColumn12.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "ID"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "ID"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Visible = False
+        '
+        'MMCHDxRxLtMtBindingSource
+        '
+        Me.MMCHDxRxLtMtBindingSource.DataMember = "MMCHDxRxLtMt"
+        Me.MMCHDxRxLtMtBindingSource.DataSource = Me.MMDataDataSet1
+        '
+        'MMPRocedureDataGridView
+        '
+        Me.MMPRocedureDataGridView.AllowUserToAddRows = False
+        Me.MMPRocedureDataGridView.AllowUserToDeleteRows = False
+        Me.MMPRocedureDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.MMPRocedureDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.MMPRocedureDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.MMPRocedureDataGridView.Location = New System.Drawing.Point(0, 0)
+        Me.MMPRocedureDataGridView.Name = "MMPRocedureDataGridView"
+        Me.MMPRocedureDataGridView.ReadOnly = True
+        Me.MMPRocedureDataGridView.RowHeadersVisible = False
+        Me.MMPRocedureDataGridView.Size = New System.Drawing.Size(359, 124)
+        Me.MMPRocedureDataGridView.TabIndex = 196
         '
         'DataGridView1
         '
@@ -828,19 +890,17 @@ Partial Class VisitsList
         Me.Label10.Text = "Procedures"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'MMPRocedureDataGridView
+        'MMChartVisitTableAdapter
         '
-        Me.MMPRocedureDataGridView.AllowUserToAddRows = False
-        Me.MMPRocedureDataGridView.AllowUserToDeleteRows = False
-        Me.MMPRocedureDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.MMPRocedureDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.MMPRocedureDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MMPRocedureDataGridView.Location = New System.Drawing.Point(0, 0)
-        Me.MMPRocedureDataGridView.Name = "MMPRocedureDataGridView"
-        Me.MMPRocedureDataGridView.ReadOnly = True
-        Me.MMPRocedureDataGridView.RowHeadersVisible = False
-        Me.MMPRocedureDataGridView.Size = New System.Drawing.Size(359, 124)
-        Me.MMPRocedureDataGridView.TabIndex = 196
+        Me.MMChartVisitTableAdapter.ClearBeforeFill = True
+        '
+        'MMChartTVitalSignTableAdapter
+        '
+        Me.MMChartTVitalSignTableAdapter.ClearBeforeFill = True
+        '
+        'MMChartRxTableAdapter
+        '
+        Me.MMChartRxTableAdapter.ClearBeforeFill = True
         '
         'Code1DataGridViewTextBoxColumn
         '
@@ -1059,68 +1119,21 @@ Partial Class VisitsList
         Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
         Me.IdDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'MMCHDxRxLtMtBindingSource
-        '
-        Me.MMCHDxRxLtMtBindingSource.DataMember = "MMCHDxRxLtMt"
-        Me.MMCHDxRxLtMtBindingSource.DataSource = Me.MMDataDataSet1
-        '
         'MMCHDxRxLtMtTableAdapter
         '
         Me.MMCHDxRxLtMtTableAdapter.ClearBeforeFill = True
         '
-        'DgProcedure
+        'BtnProcedures
         '
-        Me.DgProcedure.AllowUserToAddRows = False
-        Me.DgProcedure.AllowUserToDeleteRows = False
-        Me.DgProcedure.AutoGenerateColumns = False
-        Me.DgProcedure.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.DgProcedure.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgProcedure.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn1})
-        Me.DgProcedure.DataSource = Me.MMCHDxRxLtMtBindingSource
-        Me.DgProcedure.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DgProcedure.Location = New System.Drawing.Point(0, 0)
-        Me.DgProcedure.Name = "DgProcedure"
-        Me.DgProcedure.ReadOnly = True
-        Me.DgProcedure.RowHeadersVisible = False
-        Me.DgProcedure.Size = New System.Drawing.Size(359, 124)
-        Me.DgProcedure.TabIndex = 197
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "Description"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "Description"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        Me.DataGridViewTextBoxColumn6.Width = 160
-        '
-        'DataGridViewTextBoxColumn16
-        '
-        Me.DataGridViewTextBoxColumn16.DataPropertyName = "Amount"
-        Me.DataGridViewTextBoxColumn16.HeaderText = "Amount"
-        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
-        Me.DataGridViewTextBoxColumn16.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Date"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Date"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn12
-        '
-        Me.DataGridViewTextBoxColumn12.DataPropertyName = "UserID"
-        Me.DataGridViewTextBoxColumn12.HeaderText = "User"
-        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
-        Me.DataGridViewTextBoxColumn12.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "ID"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "ID"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Visible = False
+        Me.BtnProcedures.BackColor = System.Drawing.Color.DodgerBlue
+        Me.BtnProcedures.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnProcedures.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnProcedures.Location = New System.Drawing.Point(12, 424)
+        Me.BtnProcedures.Name = "BtnProcedures"
+        Me.BtnProcedures.Size = New System.Drawing.Size(179, 37)
+        Me.BtnProcedures.TabIndex = 194
+        Me.BtnProcedures.Text = "Procedures"
+        Me.BtnProcedures.UseVisualStyleBackColor = False
         '
         'VisitsList
         '
@@ -1129,6 +1142,7 @@ Partial Class VisitsList
         Me.BackColor = System.Drawing.Color.GhostWhite
         Me.ClientSize = New System.Drawing.Size(1267, 741)
         Me.Controls.Add(Me.Panel4)
+        Me.Controls.Add(Me.BtnProcedures)
         Me.Controls.Add(Me.BtnMedication)
         Me.Controls.Add(Me.btnVitals)
         Me.Controls.Add(Me.Panel3)
@@ -1159,10 +1173,10 @@ Partial Class VisitsList
         Me.Panel4.ResumeLayout(False)
         Me.PanelProcedure.ResumeLayout(False)
         Me.Panel8.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MMPRocedureDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MMCHDxRxLtMtBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgProcedure, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MMCHDxRxLtMtBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MMPRocedureDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1284,4 +1298,5 @@ Partial Class VisitsList
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Private WithEvents BtnProcedures As Button
 End Class
