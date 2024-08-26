@@ -33,7 +33,6 @@ Partial Class Physician
         Dim CityLabel As System.Windows.Forms.Label
         Dim PhoneLabel As System.Windows.Forms.Label
         Dim FaxLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Physician))
         Dim BlueCross_ShieldPINLabel As System.Windows.Forms.Label
         Dim CommercialPINLabel As System.Windows.Forms.Label
         Dim GroupPINLabel As System.Windows.Forms.Label
@@ -60,6 +59,7 @@ Partial Class Physician
         Dim ChampusPINLabel As System.Windows.Forms.Label
         Dim StateLabel As System.Windows.Forms.Label
         Dim ZipCodeLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Physician))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.dgPhysician = New System.Windows.Forms.DataGridView()
@@ -111,24 +111,18 @@ Partial Class Physician
         Me.CredentialsTextBox = New System.Windows.Forms.TextBox()
         Me.Street1TextBox = New System.Windows.Forms.TextBox()
         Me.Street2TextBox = New System.Windows.Forms.TextBox()
+        Me.TBPhone = New System.Windows.Forms.TextBox()
         Me.CityTextBox = New System.Windows.Forms.TextBox()
-        Me.MMPhysionTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMPhysionTableAdapter()
-        Me.MMPhysionBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
-        Me.MMPhysionBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.StateTextBox = New System.Windows.Forms.TextBox()
+        Me.ZipCodeTextBox = New System.Windows.Forms.TextBox()
+        Me.SSNorFedTaxIDTextBox = New System.Windows.Forms.TextBox()
+        Me.FTIDCheckBox = New System.Windows.Forms.CheckBox()
+        Me.LicenseNumberTextBox = New System.Windows.Forms.TextBox()
+        Me.SignatureonFileCheckBox = New System.Windows.Forms.CheckBox()
+        Me.MedicarePINTextBox = New System.Windows.Forms.TextBox()
+        Me.MedicaidPINTextBox = New System.Windows.Forms.TextBox()
+        Me.ChampusPINTextBox = New System.Windows.Forms.TextBox()
         Me.BlueCross_ShieldPINTextBox = New System.Windows.Forms.TextBox()
         Me.CommercialPINTextBox = New System.Windows.Forms.TextBox()
         Me.GroupPINTextBox = New System.Windows.Forms.TextBox()
@@ -146,16 +140,22 @@ Partial Class Physician
         Me.SpecialtyTextBox = New System.Windows.Forms.TextBox()
         Me.SecurityLevelTextBox = New System.Windows.Forms.TextBox()
         Me.SBNumberTextBox = New System.Windows.Forms.TextBox()
-        Me.SSNorFedTaxIDTextBox = New System.Windows.Forms.TextBox()
-        Me.FTIDCheckBox = New System.Windows.Forms.CheckBox()
-        Me.LicenseNumberTextBox = New System.Windows.Forms.TextBox()
-        Me.SignatureonFileCheckBox = New System.Windows.Forms.CheckBox()
-        Me.MedicarePINTextBox = New System.Windows.Forms.TextBox()
-        Me.MedicaidPINTextBox = New System.Windows.Forms.TextBox()
-        Me.ChampusPINTextBox = New System.Windows.Forms.TextBox()
-        Me.StateTextBox = New System.Windows.Forms.TextBox()
-        Me.ZipCodeTextBox = New System.Windows.Forms.TextBox()
-        Me.TBPhone = New System.Windows.Forms.TextBox()
+        Me.MMPhysionTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMPhysionTableAdapter()
+        Me.MMPhysionBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.MMPhysionBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         CodeLabel = New System.Windows.Forms.Label()
         LastNameLabel = New System.Windows.Forms.Label()
         FirstNameLabel = New System.Windows.Forms.Label()
@@ -198,9 +198,9 @@ Partial Class Physician
         CType(Me.MMPhysionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMDataDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
         CType(Me.MMPhysionBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MMPhysionBindingNavigator.SuspendLayout()
-        Me.TabPage3.SuspendLayout()
         Me.SuspendLayout()
         '
         'CodeLabel
@@ -304,6 +304,240 @@ Partial Class Physician
         FaxLabel.TabIndex = 95
         FaxLabel.Text = "Fax:"
         '
+        'BlueCross_ShieldPINLabel
+        '
+        BlueCross_ShieldPINLabel.AutoSize = True
+        BlueCross_ShieldPINLabel.Location = New System.Drawing.Point(345, 36)
+        BlueCross_ShieldPINLabel.Name = "BlueCross_ShieldPINLabel"
+        BlueCross_ShieldPINLabel.Size = New System.Drawing.Size(115, 13)
+        BlueCross_ShieldPINLabel.TabIndex = 145
+        BlueCross_ShieldPINLabel.Text = "Blue Cross/Shield PIN:"
+        '
+        'CommercialPINLabel
+        '
+        CommercialPINLabel.AutoSize = True
+        CommercialPINLabel.Location = New System.Drawing.Point(375, 62)
+        CommercialPINLabel.Name = "CommercialPINLabel"
+        CommercialPINLabel.Size = New System.Drawing.Size(85, 13)
+        CommercialPINLabel.TabIndex = 147
+        CommercialPINLabel.Text = "Commercial PIN:"
+        '
+        'GroupPINLabel
+        '
+        GroupPINLabel.AutoSize = True
+        GroupPINLabel.Location = New System.Drawing.Point(400, 88)
+        GroupPINLabel.Name = "GroupPINLabel"
+        GroupPINLabel.Size = New System.Drawing.Size(60, 13)
+        GroupPINLabel.TabIndex = 149
+        GroupPINLabel.Text = "Group PIN:"
+        '
+        'HMOPINLabel
+        '
+        HMOPINLabel.AutoSize = True
+        HMOPINLabel.Location = New System.Drawing.Point(404, 114)
+        HMOPINLabel.Name = "HMOPINLabel"
+        HMOPINLabel.Size = New System.Drawing.Size(56, 13)
+        HMOPINLabel.TabIndex = 151
+        HMOPINLabel.Text = "HMO PIN:"
+        '
+        'PPOPINLabel
+        '
+        PPOPINLabel.AutoSize = True
+        PPOPINLabel.Location = New System.Drawing.Point(407, 140)
+        PPOPINLabel.Name = "PPOPINLabel"
+        PPOPINLabel.Size = New System.Drawing.Size(53, 13)
+        PPOPINLabel.TabIndex = 153
+        PPOPINLabel.Text = "PPO PIN:"
+        '
+        'MedicareGroupIDLabel
+        '
+        MedicareGroupIDLabel.AutoSize = True
+        MedicareGroupIDLabel.Location = New System.Drawing.Point(360, 166)
+        MedicareGroupIDLabel.Name = "MedicareGroupIDLabel"
+        MedicareGroupIDLabel.Size = New System.Drawing.Size(100, 13)
+        MedicareGroupIDLabel.TabIndex = 155
+        MedicareGroupIDLabel.Text = "Medicare Group ID:"
+        '
+        'MedicaidGroupIDLabel
+        '
+        MedicaidGroupIDLabel.AutoSize = True
+        MedicaidGroupIDLabel.Location = New System.Drawing.Point(361, 192)
+        MedicaidGroupIDLabel.Name = "MedicaidGroupIDLabel"
+        MedicaidGroupIDLabel.Size = New System.Drawing.Size(99, 13)
+        MedicaidGroupIDLabel.TabIndex = 157
+        MedicaidGroupIDLabel.Text = "Medicaid Group ID:"
+        '
+        'BC_BSGroupIDLabel
+        '
+        BC_BSGroupIDLabel.AutoSize = True
+        BC_BSGroupIDLabel.Location = New System.Drawing.Point(371, 218)
+        BC_BSGroupIDLabel.Name = "BC_BSGroupIDLabel"
+        BC_BSGroupIDLabel.Size = New System.Drawing.Size(89, 13)
+        BC_BSGroupIDLabel.TabIndex = 159
+        BC_BSGroupIDLabel.Text = "BC/BS Group ID:"
+        '
+        'OtherGroupIDLabel
+        '
+        OtherGroupIDLabel.AutoSize = True
+        OtherGroupIDLabel.Location = New System.Drawing.Point(378, 244)
+        OtherGroupIDLabel.Name = "OtherGroupIDLabel"
+        OtherGroupIDLabel.Size = New System.Drawing.Size(82, 13)
+        OtherGroupIDLabel.TabIndex = 161
+        OtherGroupIDLabel.Text = "Other Group ID:"
+        '
+        'EMCIDLabel
+        '
+        EMCIDLabel.AutoSize = True
+        EMCIDLabel.Location = New System.Drawing.Point(413, 270)
+        EMCIDLabel.Name = "EMCIDLabel"
+        EMCIDLabel.Size = New System.Drawing.Size(47, 13)
+        EMCIDLabel.TabIndex = 163
+        EMCIDLabel.Text = "EMC ID:"
+        '
+        'MedicareParticpProviderLabel
+        '
+        MedicareParticpProviderLabel.AutoSize = True
+        MedicareParticpProviderLabel.Location = New System.Drawing.Point(487, 298)
+        MedicareParticpProviderLabel.Name = "MedicareParticpProviderLabel"
+        MedicareParticpProviderLabel.Size = New System.Drawing.Size(132, 13)
+        MedicareParticpProviderLabel.TabIndex = 165
+        MedicareParticpProviderLabel.Text = "Medicare Particp Provider:"
+        '
+        'UPINLabel
+        '
+        UPINLabel.AutoSize = True
+        UPINLabel.Location = New System.Drawing.Point(424, 326)
+        UPINLabel.Name = "UPINLabel"
+        UPINLabel.Size = New System.Drawing.Size(36, 13)
+        UPINLabel.TabIndex = 167
+        UPINLabel.Text = "UPIN:"
+        '
+        'Extra1Label
+        '
+        Extra1Label.AutoSize = True
+        Extra1Label.Location = New System.Drawing.Point(420, 352)
+        Extra1Label.Name = "Extra1Label"
+        Extra1Label.Size = New System.Drawing.Size(40, 13)
+        Extra1Label.TabIndex = 169
+        Extra1Label.Text = "Extra1:"
+        '
+        'Extra2Label
+        '
+        Extra2Label.AutoSize = True
+        Extra2Label.Location = New System.Drawing.Point(420, 378)
+        Extra2Label.Name = "Extra2Label"
+        Extra2Label.Size = New System.Drawing.Size(40, 13)
+        Extra2Label.TabIndex = 171
+        Extra2Label.Text = "Extra2:"
+        '
+        'SpecialtyLabel
+        '
+        SpecialtyLabel.AutoSize = True
+        SpecialtyLabel.Location = New System.Drawing.Point(407, 404)
+        SpecialtyLabel.Name = "SpecialtyLabel"
+        SpecialtyLabel.Size = New System.Drawing.Size(53, 13)
+        SpecialtyLabel.TabIndex = 173
+        SpecialtyLabel.Text = "Specialty:"
+        '
+        'SecurityLevelLabel
+        '
+        SecurityLevelLabel.AutoSize = True
+        SecurityLevelLabel.Location = New System.Drawing.Point(383, 430)
+        SecurityLevelLabel.Name = "SecurityLevelLabel"
+        SecurityLevelLabel.Size = New System.Drawing.Size(77, 13)
+        SecurityLevelLabel.TabIndex = 175
+        SecurityLevelLabel.Text = "Security Level:"
+        '
+        'SBNumberLabel
+        '
+        SBNumberLabel.AutoSize = True
+        SBNumberLabel.Location = New System.Drawing.Point(396, 456)
+        SBNumberLabel.Name = "SBNumberLabel"
+        SBNumberLabel.Size = New System.Drawing.Size(64, 13)
+        SBNumberLabel.TabIndex = 177
+        SBNumberLabel.Text = "SB Number:"
+        '
+        'SSNorFedTaxIDLabel
+        '
+        SSNorFedTaxIDLabel.AutoSize = True
+        SSNorFedTaxIDLabel.Location = New System.Drawing.Point(16, 36)
+        SSNorFedTaxIDLabel.Name = "SSNorFedTaxIDLabel"
+        SSNorFedTaxIDLabel.Size = New System.Drawing.Size(97, 13)
+        SSNorFedTaxIDLabel.TabIndex = 179
+        SSNorFedTaxIDLabel.Text = "SSNor Fed Tax ID:"
+        '
+        'FTIDLabel
+        '
+        FTIDLabel.AutoSize = True
+        FTIDLabel.Location = New System.Drawing.Point(79, 73)
+        FTIDLabel.Name = "FTIDLabel"
+        FTIDLabel.Size = New System.Drawing.Size(34, 13)
+        FTIDLabel.TabIndex = 181
+        FTIDLabel.Text = "FTID:"
+        '
+        'LicenseNumberLabel
+        '
+        LicenseNumberLabel.AutoSize = True
+        LicenseNumberLabel.Location = New System.Drawing.Point(26, 101)
+        LicenseNumberLabel.Name = "LicenseNumberLabel"
+        LicenseNumberLabel.Size = New System.Drawing.Size(87, 13)
+        LicenseNumberLabel.TabIndex = 183
+        LicenseNumberLabel.Text = "License Number:"
+        '
+        'SignatureonFileLabel
+        '
+        SignatureonFileLabel.AutoSize = True
+        SignatureonFileLabel.Location = New System.Drawing.Point(24, 129)
+        SignatureonFileLabel.Name = "SignatureonFileLabel"
+        SignatureonFileLabel.Size = New System.Drawing.Size(89, 13)
+        SignatureonFileLabel.TabIndex = 185
+        SignatureonFileLabel.Text = "Signature on File:"
+        '
+        'MedicarePINLabel
+        '
+        MedicarePINLabel.AutoSize = True
+        MedicarePINLabel.Location = New System.Drawing.Point(38, 153)
+        MedicarePINLabel.Name = "MedicarePINLabel"
+        MedicarePINLabel.Size = New System.Drawing.Size(75, 13)
+        MedicarePINLabel.TabIndex = 187
+        MedicarePINLabel.Text = "Medicare PIN:"
+        '
+        'MedicaidPINLabel
+        '
+        MedicaidPINLabel.AutoSize = True
+        MedicaidPINLabel.Location = New System.Drawing.Point(39, 179)
+        MedicaidPINLabel.Name = "MedicaidPINLabel"
+        MedicaidPINLabel.Size = New System.Drawing.Size(74, 13)
+        MedicaidPINLabel.TabIndex = 189
+        MedicaidPINLabel.Text = "Medicaid PIN:"
+        '
+        'ChampusPINLabel
+        '
+        ChampusPINLabel.AutoSize = True
+        ChampusPINLabel.Location = New System.Drawing.Point(38, 205)
+        ChampusPINLabel.Name = "ChampusPINLabel"
+        ChampusPINLabel.Size = New System.Drawing.Size(75, 13)
+        ChampusPINLabel.TabIndex = 191
+        ChampusPINLabel.Text = "Champus PIN:"
+        '
+        'StateLabel
+        '
+        StateLabel.AutoSize = True
+        StateLabel.Location = New System.Drawing.Point(77, 245)
+        StateLabel.Name = "StateLabel"
+        StateLabel.Size = New System.Drawing.Size(35, 13)
+        StateLabel.TabIndex = 193
+        StateLabel.Text = "State:"
+        '
+        'ZipCodeLabel
+        '
+        ZipCodeLabel.AutoSize = True
+        ZipCodeLabel.Location = New System.Drawing.Point(166, 247)
+        ZipCodeLabel.Name = "ZipCodeLabel"
+        ZipCodeLabel.Size = New System.Drawing.Size(53, 13)
+        ZipCodeLabel.TabIndex = 195
+        ZipCodeLabel.Text = "Zip Code:"
+        '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
@@ -328,14 +562,17 @@ Partial Class Physician
         '
         'dgPhysician
         '
+        Me.dgPhysician.AllowDrop = True
         Me.dgPhysician.AllowUserToAddRows = False
         Me.dgPhysician.AllowUserToDeleteRows = False
+        Me.dgPhysician.AllowUserToResizeColumns = False
         Me.dgPhysician.AllowUserToResizeRows = False
         Me.dgPhysician.AutoGenerateColumns = False
         Me.dgPhysician.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13, Me.DataGridViewCheckBoxColumn1, Me.DataGridViewTextBoxColumn14, Me.DataGridViewCheckBoxColumn2, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.DataGridViewTextBoxColumn24, Me.DataGridViewTextBoxColumn25, Me.DataGridViewTextBoxColumn26, Me.DataGridViewTextBoxColumn27, Me.DataGridViewCheckBoxColumn3, Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn30, Me.DataGridViewTextBoxColumn31, Me.DataGridViewTextBoxColumn32, Me.DataGridViewTextBoxColumn33, Me.DataGridViewTextBoxColumn34})
         Me.dgPhysician.DataSource = Me.MMPhysionBindingSource
         Me.dgPhysician.Location = New System.Drawing.Point(5, 7)
         Me.dgPhysician.Name = "dgPhysician"
+        Me.dgPhysician.ReadOnly = True
         Me.dgPhysician.Size = New System.Drawing.Size(746, 529)
         Me.dgPhysician.TabIndex = 0
         '
@@ -682,6 +919,16 @@ Partial Class Physician
         Me.Street2TextBox.Size = New System.Drawing.Size(199, 21)
         Me.Street2TextBox.TabIndex = 86
         '
+        'TBPhone
+        '
+        Me.TBPhone.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "Phone", True))
+        Me.TBPhone.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TBPhone.Location = New System.Drawing.Point(312, 349)
+        Me.TBPhone.MaxLength = 14
+        Me.TBPhone.Name = "TBPhone"
+        Me.TBPhone.Size = New System.Drawing.Size(114, 21)
+        Me.TBPhone.TabIndex = 88
+        '
         'CityTextBox
         '
         Me.CityTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "City", True))
@@ -691,6 +938,296 @@ Partial Class Physician
         Me.CityTextBox.Name = "CityTextBox"
         Me.CityTextBox.Size = New System.Drawing.Size(199, 21)
         Me.CityTextBox.TabIndex = 87
+        '
+        'TabPage3
+        '
+        Me.TabPage3.Controls.Add(StateLabel)
+        Me.TabPage3.Controls.Add(Me.StateTextBox)
+        Me.TabPage3.Controls.Add(ZipCodeLabel)
+        Me.TabPage3.Controls.Add(Me.ZipCodeTextBox)
+        Me.TabPage3.Controls.Add(SSNorFedTaxIDLabel)
+        Me.TabPage3.Controls.Add(Me.SSNorFedTaxIDTextBox)
+        Me.TabPage3.Controls.Add(FTIDLabel)
+        Me.TabPage3.Controls.Add(Me.FTIDCheckBox)
+        Me.TabPage3.Controls.Add(LicenseNumberLabel)
+        Me.TabPage3.Controls.Add(Me.LicenseNumberTextBox)
+        Me.TabPage3.Controls.Add(SignatureonFileLabel)
+        Me.TabPage3.Controls.Add(Me.SignatureonFileCheckBox)
+        Me.TabPage3.Controls.Add(MedicarePINLabel)
+        Me.TabPage3.Controls.Add(Me.MedicarePINTextBox)
+        Me.TabPage3.Controls.Add(MedicaidPINLabel)
+        Me.TabPage3.Controls.Add(Me.MedicaidPINTextBox)
+        Me.TabPage3.Controls.Add(ChampusPINLabel)
+        Me.TabPage3.Controls.Add(Me.ChampusPINTextBox)
+        Me.TabPage3.Controls.Add(BlueCross_ShieldPINLabel)
+        Me.TabPage3.Controls.Add(Me.BlueCross_ShieldPINTextBox)
+        Me.TabPage3.Controls.Add(CommercialPINLabel)
+        Me.TabPage3.Controls.Add(Me.CommercialPINTextBox)
+        Me.TabPage3.Controls.Add(GroupPINLabel)
+        Me.TabPage3.Controls.Add(Me.GroupPINTextBox)
+        Me.TabPage3.Controls.Add(HMOPINLabel)
+        Me.TabPage3.Controls.Add(Me.HMOPINTextBox)
+        Me.TabPage3.Controls.Add(PPOPINLabel)
+        Me.TabPage3.Controls.Add(Me.PPOPINTextBox)
+        Me.TabPage3.Controls.Add(MedicareGroupIDLabel)
+        Me.TabPage3.Controls.Add(Me.MedicareGroupIDTextBox)
+        Me.TabPage3.Controls.Add(MedicaidGroupIDLabel)
+        Me.TabPage3.Controls.Add(Me.MedicaidGroupIDTextBox)
+        Me.TabPage3.Controls.Add(BC_BSGroupIDLabel)
+        Me.TabPage3.Controls.Add(Me.BC_BSGroupIDTextBox)
+        Me.TabPage3.Controls.Add(OtherGroupIDLabel)
+        Me.TabPage3.Controls.Add(Me.OtherGroupIDTextBox)
+        Me.TabPage3.Controls.Add(EMCIDLabel)
+        Me.TabPage3.Controls.Add(Me.EMCIDTextBox)
+        Me.TabPage3.Controls.Add(MedicareParticpProviderLabel)
+        Me.TabPage3.Controls.Add(Me.MedicareParticpProviderCheckBox)
+        Me.TabPage3.Controls.Add(UPINLabel)
+        Me.TabPage3.Controls.Add(Me.UPINTextBox)
+        Me.TabPage3.Controls.Add(Extra1Label)
+        Me.TabPage3.Controls.Add(Me.Extra1TextBox)
+        Me.TabPage3.Controls.Add(Extra2Label)
+        Me.TabPage3.Controls.Add(Me.Extra2TextBox)
+        Me.TabPage3.Controls.Add(SpecialtyLabel)
+        Me.TabPage3.Controls.Add(Me.SpecialtyTextBox)
+        Me.TabPage3.Controls.Add(SecurityLevelLabel)
+        Me.TabPage3.Controls.Add(Me.SecurityLevelTextBox)
+        Me.TabPage3.Controls.Add(SBNumberLabel)
+        Me.TabPage3.Controls.Add(Me.SBNumberTextBox)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Size = New System.Drawing.Size(755, 544)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "Other"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'StateTextBox
+        '
+        Me.StateTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "State", True))
+        Me.StateTextBox.Location = New System.Drawing.Point(118, 243)
+        Me.StateTextBox.MaxLength = 2
+        Me.StateTextBox.Name = "StateTextBox"
+        Me.StateTextBox.Size = New System.Drawing.Size(42, 20)
+        Me.StateTextBox.TabIndex = 194
+        '
+        'ZipCodeTextBox
+        '
+        Me.ZipCodeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "ZipCode", True))
+        Me.ZipCodeTextBox.Location = New System.Drawing.Point(225, 244)
+        Me.ZipCodeTextBox.MaxLength = 10
+        Me.ZipCodeTextBox.Name = "ZipCodeTextBox"
+        Me.ZipCodeTextBox.Size = New System.Drawing.Size(93, 20)
+        Me.ZipCodeTextBox.TabIndex = 196
+        '
+        'SSNorFedTaxIDTextBox
+        '
+        Me.SSNorFedTaxIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "SSNorFedTaxID", True))
+        Me.SSNorFedTaxIDTextBox.Location = New System.Drawing.Point(119, 33)
+        Me.SSNorFedTaxIDTextBox.MaxLength = 11
+        Me.SSNorFedTaxIDTextBox.Name = "SSNorFedTaxIDTextBox"
+        Me.SSNorFedTaxIDTextBox.Size = New System.Drawing.Size(199, 20)
+        Me.SSNorFedTaxIDTextBox.TabIndex = 180
+        '
+        'FTIDCheckBox
+        '
+        Me.FTIDCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "FTID", True))
+        Me.FTIDCheckBox.Location = New System.Drawing.Point(119, 68)
+        Me.FTIDCheckBox.Name = "FTIDCheckBox"
+        Me.FTIDCheckBox.Size = New System.Drawing.Size(200, 24)
+        Me.FTIDCheckBox.TabIndex = 182
+        '
+        'LicenseNumberTextBox
+        '
+        Me.LicenseNumberTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "LicenseNumber", True))
+        Me.LicenseNumberTextBox.Location = New System.Drawing.Point(119, 98)
+        Me.LicenseNumberTextBox.MaxLength = 15
+        Me.LicenseNumberTextBox.Name = "LicenseNumberTextBox"
+        Me.LicenseNumberTextBox.Size = New System.Drawing.Size(199, 20)
+        Me.LicenseNumberTextBox.TabIndex = 184
+        '
+        'SignatureonFileCheckBox
+        '
+        Me.SignatureonFileCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "SignatureonFile", True))
+        Me.SignatureonFileCheckBox.Location = New System.Drawing.Point(119, 124)
+        Me.SignatureonFileCheckBox.Name = "SignatureonFileCheckBox"
+        Me.SignatureonFileCheckBox.Size = New System.Drawing.Size(200, 24)
+        Me.SignatureonFileCheckBox.TabIndex = 186
+        '
+        'MedicarePINTextBox
+        '
+        Me.MedicarePINTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "MedicarePIN", True))
+        Me.MedicarePINTextBox.Location = New System.Drawing.Point(119, 149)
+        Me.MedicarePINTextBox.MaxLength = 20
+        Me.MedicarePINTextBox.Name = "MedicarePINTextBox"
+        Me.MedicarePINTextBox.Size = New System.Drawing.Size(199, 20)
+        Me.MedicarePINTextBox.TabIndex = 188
+        '
+        'MedicaidPINTextBox
+        '
+        Me.MedicaidPINTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "MedicaidPIN", True))
+        Me.MedicaidPINTextBox.Location = New System.Drawing.Point(119, 176)
+        Me.MedicaidPINTextBox.MaxLength = 20
+        Me.MedicaidPINTextBox.Name = "MedicaidPINTextBox"
+        Me.MedicaidPINTextBox.Size = New System.Drawing.Size(199, 20)
+        Me.MedicaidPINTextBox.TabIndex = 190
+        '
+        'ChampusPINTextBox
+        '
+        Me.ChampusPINTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "ChampusPIN", True))
+        Me.ChampusPINTextBox.Location = New System.Drawing.Point(119, 202)
+        Me.ChampusPINTextBox.MaxLength = 20
+        Me.ChampusPINTextBox.Name = "ChampusPINTextBox"
+        Me.ChampusPINTextBox.Size = New System.Drawing.Size(199, 20)
+        Me.ChampusPINTextBox.TabIndex = 192
+        '
+        'BlueCross_ShieldPINTextBox
+        '
+        Me.BlueCross_ShieldPINTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "BlueCross/ShieldPIN", True))
+        Me.BlueCross_ShieldPINTextBox.Location = New System.Drawing.Point(468, 33)
+        Me.BlueCross_ShieldPINTextBox.MaxLength = 20
+        Me.BlueCross_ShieldPINTextBox.Name = "BlueCross_ShieldPINTextBox"
+        Me.BlueCross_ShieldPINTextBox.Size = New System.Drawing.Size(199, 20)
+        Me.BlueCross_ShieldPINTextBox.TabIndex = 146
+        '
+        'CommercialPINTextBox
+        '
+        Me.CommercialPINTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "CommercialPIN", True))
+        Me.CommercialPINTextBox.Location = New System.Drawing.Point(467, 59)
+        Me.CommercialPINTextBox.MaxLength = 20
+        Me.CommercialPINTextBox.Name = "CommercialPINTextBox"
+        Me.CommercialPINTextBox.Size = New System.Drawing.Size(199, 20)
+        Me.CommercialPINTextBox.TabIndex = 148
+        '
+        'GroupPINTextBox
+        '
+        Me.GroupPINTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "GroupPIN", True))
+        Me.GroupPINTextBox.Location = New System.Drawing.Point(467, 85)
+        Me.GroupPINTextBox.MaxLength = 20
+        Me.GroupPINTextBox.Name = "GroupPINTextBox"
+        Me.GroupPINTextBox.Size = New System.Drawing.Size(199, 20)
+        Me.GroupPINTextBox.TabIndex = 150
+        '
+        'HMOPINTextBox
+        '
+        Me.HMOPINTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "HMOPIN", True))
+        Me.HMOPINTextBox.Location = New System.Drawing.Point(467, 111)
+        Me.HMOPINTextBox.MaxLength = 20
+        Me.HMOPINTextBox.Name = "HMOPINTextBox"
+        Me.HMOPINTextBox.Size = New System.Drawing.Size(199, 20)
+        Me.HMOPINTextBox.TabIndex = 152
+        '
+        'PPOPINTextBox
+        '
+        Me.PPOPINTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "PPOPIN", True))
+        Me.PPOPINTextBox.Location = New System.Drawing.Point(467, 137)
+        Me.PPOPINTextBox.MaxLength = 20
+        Me.PPOPINTextBox.Name = "PPOPINTextBox"
+        Me.PPOPINTextBox.Size = New System.Drawing.Size(199, 20)
+        Me.PPOPINTextBox.TabIndex = 154
+        '
+        'MedicareGroupIDTextBox
+        '
+        Me.MedicareGroupIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "MedicareGroupID", True))
+        Me.MedicareGroupIDTextBox.Location = New System.Drawing.Point(467, 163)
+        Me.MedicareGroupIDTextBox.MaxLength = 20
+        Me.MedicareGroupIDTextBox.Name = "MedicareGroupIDTextBox"
+        Me.MedicareGroupIDTextBox.Size = New System.Drawing.Size(199, 20)
+        Me.MedicareGroupIDTextBox.TabIndex = 156
+        '
+        'MedicaidGroupIDTextBox
+        '
+        Me.MedicaidGroupIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "MedicaidGroupID", True))
+        Me.MedicaidGroupIDTextBox.Location = New System.Drawing.Point(467, 189)
+        Me.MedicaidGroupIDTextBox.MaxLength = 20
+        Me.MedicaidGroupIDTextBox.Name = "MedicaidGroupIDTextBox"
+        Me.MedicaidGroupIDTextBox.Size = New System.Drawing.Size(199, 20)
+        Me.MedicaidGroupIDTextBox.TabIndex = 158
+        '
+        'BC_BSGroupIDTextBox
+        '
+        Me.BC_BSGroupIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "BC/BSGroupID", True))
+        Me.BC_BSGroupIDTextBox.Location = New System.Drawing.Point(467, 215)
+        Me.BC_BSGroupIDTextBox.MaxLength = 20
+        Me.BC_BSGroupIDTextBox.Name = "BC_BSGroupIDTextBox"
+        Me.BC_BSGroupIDTextBox.Size = New System.Drawing.Size(199, 20)
+        Me.BC_BSGroupIDTextBox.TabIndex = 160
+        '
+        'OtherGroupIDTextBox
+        '
+        Me.OtherGroupIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "OtherGroupID", True))
+        Me.OtherGroupIDTextBox.Location = New System.Drawing.Point(467, 241)
+        Me.OtherGroupIDTextBox.MaxLength = 20
+        Me.OtherGroupIDTextBox.Name = "OtherGroupIDTextBox"
+        Me.OtherGroupIDTextBox.Size = New System.Drawing.Size(199, 20)
+        Me.OtherGroupIDTextBox.TabIndex = 162
+        '
+        'EMCIDTextBox
+        '
+        Me.EMCIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "EMCID", True))
+        Me.EMCIDTextBox.Location = New System.Drawing.Point(467, 267)
+        Me.EMCIDTextBox.Name = "EMCIDTextBox"
+        Me.EMCIDTextBox.Size = New System.Drawing.Size(199, 20)
+        Me.EMCIDTextBox.TabIndex = 164
+        '
+        'MedicareParticpProviderCheckBox
+        '
+        Me.MedicareParticpProviderCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "MedicareParticpProvider", True))
+        Me.MedicareParticpProviderCheckBox.Location = New System.Drawing.Point(467, 293)
+        Me.MedicareParticpProviderCheckBox.Name = "MedicareParticpProviderCheckBox"
+        Me.MedicareParticpProviderCheckBox.Size = New System.Drawing.Size(20, 24)
+        Me.MedicareParticpProviderCheckBox.TabIndex = 166
+        '
+        'UPINTextBox
+        '
+        Me.UPINTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "UPIN", True))
+        Me.UPINTextBox.Location = New System.Drawing.Point(467, 323)
+        Me.UPINTextBox.MaxLength = 20
+        Me.UPINTextBox.Name = "UPINTextBox"
+        Me.UPINTextBox.Size = New System.Drawing.Size(199, 20)
+        Me.UPINTextBox.TabIndex = 168
+        '
+        'Extra1TextBox
+        '
+        Me.Extra1TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "Extra1", True))
+        Me.Extra1TextBox.Location = New System.Drawing.Point(467, 349)
+        Me.Extra1TextBox.MaxLength = 10
+        Me.Extra1TextBox.Name = "Extra1TextBox"
+        Me.Extra1TextBox.Size = New System.Drawing.Size(199, 20)
+        Me.Extra1TextBox.TabIndex = 170
+        '
+        'Extra2TextBox
+        '
+        Me.Extra2TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "Extra2", True))
+        Me.Extra2TextBox.Location = New System.Drawing.Point(467, 375)
+        Me.Extra2TextBox.MaxLength = 10
+        Me.Extra2TextBox.Name = "Extra2TextBox"
+        Me.Extra2TextBox.Size = New System.Drawing.Size(199, 20)
+        Me.Extra2TextBox.TabIndex = 172
+        '
+        'SpecialtyTextBox
+        '
+        Me.SpecialtyTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "Specialty", True))
+        Me.SpecialtyTextBox.Location = New System.Drawing.Point(467, 401)
+        Me.SpecialtyTextBox.MaxLength = 3
+        Me.SpecialtyTextBox.Name = "SpecialtyTextBox"
+        Me.SpecialtyTextBox.Size = New System.Drawing.Size(199, 20)
+        Me.SpecialtyTextBox.TabIndex = 174
+        '
+        'SecurityLevelTextBox
+        '
+        Me.SecurityLevelTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "SecurityLevel", True))
+        Me.SecurityLevelTextBox.Location = New System.Drawing.Point(467, 427)
+        Me.SecurityLevelTextBox.Name = "SecurityLevelTextBox"
+        Me.SecurityLevelTextBox.Size = New System.Drawing.Size(199, 20)
+        Me.SecurityLevelTextBox.TabIndex = 176
+        '
+        'SBNumberTextBox
+        '
+        Me.SBNumberTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "SBNumber", True))
+        Me.SBNumberTextBox.Location = New System.Drawing.Point(467, 453)
+        Me.SBNumberTextBox.MaxLength = 2
+        Me.SBNumberTextBox.Name = "SBNumberTextBox"
+        Me.SBNumberTextBox.Size = New System.Drawing.Size(199, 20)
+        Me.SBNumberTextBox.TabIndex = 178
         '
         'MMPhysionTableAdapter
         '
@@ -817,540 +1354,6 @@ Partial Class Physician
         Me.MMPhysionBindingNavigatorSaveItem.Size = New System.Drawing.Size(78, 22)
         Me.MMPhysionBindingNavigatorSaveItem.Text = "Save Data"
         '
-        'TabPage3
-        '
-        Me.TabPage3.Controls.Add(StateLabel)
-        Me.TabPage3.Controls.Add(Me.StateTextBox)
-        Me.TabPage3.Controls.Add(ZipCodeLabel)
-        Me.TabPage3.Controls.Add(Me.ZipCodeTextBox)
-        Me.TabPage3.Controls.Add(SSNorFedTaxIDLabel)
-        Me.TabPage3.Controls.Add(Me.SSNorFedTaxIDTextBox)
-        Me.TabPage3.Controls.Add(FTIDLabel)
-        Me.TabPage3.Controls.Add(Me.FTIDCheckBox)
-        Me.TabPage3.Controls.Add(LicenseNumberLabel)
-        Me.TabPage3.Controls.Add(Me.LicenseNumberTextBox)
-        Me.TabPage3.Controls.Add(SignatureonFileLabel)
-        Me.TabPage3.Controls.Add(Me.SignatureonFileCheckBox)
-        Me.TabPage3.Controls.Add(MedicarePINLabel)
-        Me.TabPage3.Controls.Add(Me.MedicarePINTextBox)
-        Me.TabPage3.Controls.Add(MedicaidPINLabel)
-        Me.TabPage3.Controls.Add(Me.MedicaidPINTextBox)
-        Me.TabPage3.Controls.Add(ChampusPINLabel)
-        Me.TabPage3.Controls.Add(Me.ChampusPINTextBox)
-        Me.TabPage3.Controls.Add(BlueCross_ShieldPINLabel)
-        Me.TabPage3.Controls.Add(Me.BlueCross_ShieldPINTextBox)
-        Me.TabPage3.Controls.Add(CommercialPINLabel)
-        Me.TabPage3.Controls.Add(Me.CommercialPINTextBox)
-        Me.TabPage3.Controls.Add(GroupPINLabel)
-        Me.TabPage3.Controls.Add(Me.GroupPINTextBox)
-        Me.TabPage3.Controls.Add(HMOPINLabel)
-        Me.TabPage3.Controls.Add(Me.HMOPINTextBox)
-        Me.TabPage3.Controls.Add(PPOPINLabel)
-        Me.TabPage3.Controls.Add(Me.PPOPINTextBox)
-        Me.TabPage3.Controls.Add(MedicareGroupIDLabel)
-        Me.TabPage3.Controls.Add(Me.MedicareGroupIDTextBox)
-        Me.TabPage3.Controls.Add(MedicaidGroupIDLabel)
-        Me.TabPage3.Controls.Add(Me.MedicaidGroupIDTextBox)
-        Me.TabPage3.Controls.Add(BC_BSGroupIDLabel)
-        Me.TabPage3.Controls.Add(Me.BC_BSGroupIDTextBox)
-        Me.TabPage3.Controls.Add(OtherGroupIDLabel)
-        Me.TabPage3.Controls.Add(Me.OtherGroupIDTextBox)
-        Me.TabPage3.Controls.Add(EMCIDLabel)
-        Me.TabPage3.Controls.Add(Me.EMCIDTextBox)
-        Me.TabPage3.Controls.Add(MedicareParticpProviderLabel)
-        Me.TabPage3.Controls.Add(Me.MedicareParticpProviderCheckBox)
-        Me.TabPage3.Controls.Add(UPINLabel)
-        Me.TabPage3.Controls.Add(Me.UPINTextBox)
-        Me.TabPage3.Controls.Add(Extra1Label)
-        Me.TabPage3.Controls.Add(Me.Extra1TextBox)
-        Me.TabPage3.Controls.Add(Extra2Label)
-        Me.TabPage3.Controls.Add(Me.Extra2TextBox)
-        Me.TabPage3.Controls.Add(SpecialtyLabel)
-        Me.TabPage3.Controls.Add(Me.SpecialtyTextBox)
-        Me.TabPage3.Controls.Add(SecurityLevelLabel)
-        Me.TabPage3.Controls.Add(Me.SecurityLevelTextBox)
-        Me.TabPage3.Controls.Add(SBNumberLabel)
-        Me.TabPage3.Controls.Add(Me.SBNumberTextBox)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(755, 544)
-        Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "Other"
-        Me.TabPage3.UseVisualStyleBackColor = True
-        '
-        'BlueCross_ShieldPINLabel
-        '
-        BlueCross_ShieldPINLabel.AutoSize = True
-        BlueCross_ShieldPINLabel.Location = New System.Drawing.Point(345, 36)
-        BlueCross_ShieldPINLabel.Name = "BlueCross_ShieldPINLabel"
-        BlueCross_ShieldPINLabel.Size = New System.Drawing.Size(115, 13)
-        BlueCross_ShieldPINLabel.TabIndex = 145
-        BlueCross_ShieldPINLabel.Text = "Blue Cross/Shield PIN:"
-        '
-        'BlueCross_ShieldPINTextBox
-        '
-        Me.BlueCross_ShieldPINTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "BlueCross/ShieldPIN", True))
-        Me.BlueCross_ShieldPINTextBox.Location = New System.Drawing.Point(468, 33)
-        Me.BlueCross_ShieldPINTextBox.MaxLength = 20
-        Me.BlueCross_ShieldPINTextBox.Name = "BlueCross_ShieldPINTextBox"
-        Me.BlueCross_ShieldPINTextBox.Size = New System.Drawing.Size(199, 20)
-        Me.BlueCross_ShieldPINTextBox.TabIndex = 146
-        '
-        'CommercialPINLabel
-        '
-        CommercialPINLabel.AutoSize = True
-        CommercialPINLabel.Location = New System.Drawing.Point(375, 62)
-        CommercialPINLabel.Name = "CommercialPINLabel"
-        CommercialPINLabel.Size = New System.Drawing.Size(85, 13)
-        CommercialPINLabel.TabIndex = 147
-        CommercialPINLabel.Text = "Commercial PIN:"
-        '
-        'CommercialPINTextBox
-        '
-        Me.CommercialPINTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "CommercialPIN", True))
-        Me.CommercialPINTextBox.Location = New System.Drawing.Point(467, 59)
-        Me.CommercialPINTextBox.MaxLength = 20
-        Me.CommercialPINTextBox.Name = "CommercialPINTextBox"
-        Me.CommercialPINTextBox.Size = New System.Drawing.Size(199, 20)
-        Me.CommercialPINTextBox.TabIndex = 148
-        '
-        'GroupPINLabel
-        '
-        GroupPINLabel.AutoSize = True
-        GroupPINLabel.Location = New System.Drawing.Point(400, 88)
-        GroupPINLabel.Name = "GroupPINLabel"
-        GroupPINLabel.Size = New System.Drawing.Size(60, 13)
-        GroupPINLabel.TabIndex = 149
-        GroupPINLabel.Text = "Group PIN:"
-        '
-        'GroupPINTextBox
-        '
-        Me.GroupPINTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "GroupPIN", True))
-        Me.GroupPINTextBox.Location = New System.Drawing.Point(467, 85)
-        Me.GroupPINTextBox.MaxLength = 20
-        Me.GroupPINTextBox.Name = "GroupPINTextBox"
-        Me.GroupPINTextBox.Size = New System.Drawing.Size(199, 20)
-        Me.GroupPINTextBox.TabIndex = 150
-        '
-        'HMOPINLabel
-        '
-        HMOPINLabel.AutoSize = True
-        HMOPINLabel.Location = New System.Drawing.Point(404, 114)
-        HMOPINLabel.Name = "HMOPINLabel"
-        HMOPINLabel.Size = New System.Drawing.Size(56, 13)
-        HMOPINLabel.TabIndex = 151
-        HMOPINLabel.Text = "HMO PIN:"
-        '
-        'HMOPINTextBox
-        '
-        Me.HMOPINTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "HMOPIN", True))
-        Me.HMOPINTextBox.Location = New System.Drawing.Point(467, 111)
-        Me.HMOPINTextBox.MaxLength = 20
-        Me.HMOPINTextBox.Name = "HMOPINTextBox"
-        Me.HMOPINTextBox.Size = New System.Drawing.Size(199, 20)
-        Me.HMOPINTextBox.TabIndex = 152
-        '
-        'PPOPINLabel
-        '
-        PPOPINLabel.AutoSize = True
-        PPOPINLabel.Location = New System.Drawing.Point(407, 140)
-        PPOPINLabel.Name = "PPOPINLabel"
-        PPOPINLabel.Size = New System.Drawing.Size(53, 13)
-        PPOPINLabel.TabIndex = 153
-        PPOPINLabel.Text = "PPO PIN:"
-        '
-        'PPOPINTextBox
-        '
-        Me.PPOPINTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "PPOPIN", True))
-        Me.PPOPINTextBox.Location = New System.Drawing.Point(467, 137)
-        Me.PPOPINTextBox.MaxLength = 20
-        Me.PPOPINTextBox.Name = "PPOPINTextBox"
-        Me.PPOPINTextBox.Size = New System.Drawing.Size(199, 20)
-        Me.PPOPINTextBox.TabIndex = 154
-        '
-        'MedicareGroupIDLabel
-        '
-        MedicareGroupIDLabel.AutoSize = True
-        MedicareGroupIDLabel.Location = New System.Drawing.Point(360, 166)
-        MedicareGroupIDLabel.Name = "MedicareGroupIDLabel"
-        MedicareGroupIDLabel.Size = New System.Drawing.Size(100, 13)
-        MedicareGroupIDLabel.TabIndex = 155
-        MedicareGroupIDLabel.Text = "Medicare Group ID:"
-        '
-        'MedicareGroupIDTextBox
-        '
-        Me.MedicareGroupIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "MedicareGroupID", True))
-        Me.MedicareGroupIDTextBox.Location = New System.Drawing.Point(467, 163)
-        Me.MedicareGroupIDTextBox.MaxLength = 20
-        Me.MedicareGroupIDTextBox.Name = "MedicareGroupIDTextBox"
-        Me.MedicareGroupIDTextBox.Size = New System.Drawing.Size(199, 20)
-        Me.MedicareGroupIDTextBox.TabIndex = 156
-        '
-        'MedicaidGroupIDLabel
-        '
-        MedicaidGroupIDLabel.AutoSize = True
-        MedicaidGroupIDLabel.Location = New System.Drawing.Point(361, 192)
-        MedicaidGroupIDLabel.Name = "MedicaidGroupIDLabel"
-        MedicaidGroupIDLabel.Size = New System.Drawing.Size(99, 13)
-        MedicaidGroupIDLabel.TabIndex = 157
-        MedicaidGroupIDLabel.Text = "Medicaid Group ID:"
-        '
-        'MedicaidGroupIDTextBox
-        '
-        Me.MedicaidGroupIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "MedicaidGroupID", True))
-        Me.MedicaidGroupIDTextBox.Location = New System.Drawing.Point(467, 189)
-        Me.MedicaidGroupIDTextBox.MaxLength = 20
-        Me.MedicaidGroupIDTextBox.Name = "MedicaidGroupIDTextBox"
-        Me.MedicaidGroupIDTextBox.Size = New System.Drawing.Size(199, 20)
-        Me.MedicaidGroupIDTextBox.TabIndex = 158
-        '
-        'BC_BSGroupIDLabel
-        '
-        BC_BSGroupIDLabel.AutoSize = True
-        BC_BSGroupIDLabel.Location = New System.Drawing.Point(371, 218)
-        BC_BSGroupIDLabel.Name = "BC_BSGroupIDLabel"
-        BC_BSGroupIDLabel.Size = New System.Drawing.Size(89, 13)
-        BC_BSGroupIDLabel.TabIndex = 159
-        BC_BSGroupIDLabel.Text = "BC/BS Group ID:"
-        '
-        'BC_BSGroupIDTextBox
-        '
-        Me.BC_BSGroupIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "BC/BSGroupID", True))
-        Me.BC_BSGroupIDTextBox.Location = New System.Drawing.Point(467, 215)
-        Me.BC_BSGroupIDTextBox.MaxLength = 20
-        Me.BC_BSGroupIDTextBox.Name = "BC_BSGroupIDTextBox"
-        Me.BC_BSGroupIDTextBox.Size = New System.Drawing.Size(199, 20)
-        Me.BC_BSGroupIDTextBox.TabIndex = 160
-        '
-        'OtherGroupIDLabel
-        '
-        OtherGroupIDLabel.AutoSize = True
-        OtherGroupIDLabel.Location = New System.Drawing.Point(378, 244)
-        OtherGroupIDLabel.Name = "OtherGroupIDLabel"
-        OtherGroupIDLabel.Size = New System.Drawing.Size(82, 13)
-        OtherGroupIDLabel.TabIndex = 161
-        OtherGroupIDLabel.Text = "Other Group ID:"
-        '
-        'OtherGroupIDTextBox
-        '
-        Me.OtherGroupIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "OtherGroupID", True))
-        Me.OtherGroupIDTextBox.Location = New System.Drawing.Point(467, 241)
-        Me.OtherGroupIDTextBox.MaxLength = 20
-        Me.OtherGroupIDTextBox.Name = "OtherGroupIDTextBox"
-        Me.OtherGroupIDTextBox.Size = New System.Drawing.Size(199, 20)
-        Me.OtherGroupIDTextBox.TabIndex = 162
-        '
-        'EMCIDLabel
-        '
-        EMCIDLabel.AutoSize = True
-        EMCIDLabel.Location = New System.Drawing.Point(413, 270)
-        EMCIDLabel.Name = "EMCIDLabel"
-        EMCIDLabel.Size = New System.Drawing.Size(47, 13)
-        EMCIDLabel.TabIndex = 163
-        EMCIDLabel.Text = "EMC ID:"
-        '
-        'EMCIDTextBox
-        '
-        Me.EMCIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "EMCID", True))
-        Me.EMCIDTextBox.Location = New System.Drawing.Point(467, 267)
-        Me.EMCIDTextBox.Name = "EMCIDTextBox"
-        Me.EMCIDTextBox.Size = New System.Drawing.Size(199, 20)
-        Me.EMCIDTextBox.TabIndex = 164
-        '
-        'MedicareParticpProviderLabel
-        '
-        MedicareParticpProviderLabel.AutoSize = True
-        MedicareParticpProviderLabel.Location = New System.Drawing.Point(487, 298)
-        MedicareParticpProviderLabel.Name = "MedicareParticpProviderLabel"
-        MedicareParticpProviderLabel.Size = New System.Drawing.Size(132, 13)
-        MedicareParticpProviderLabel.TabIndex = 165
-        MedicareParticpProviderLabel.Text = "Medicare Particp Provider:"
-        '
-        'MedicareParticpProviderCheckBox
-        '
-        Me.MedicareParticpProviderCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "MedicareParticpProvider", True))
-        Me.MedicareParticpProviderCheckBox.Location = New System.Drawing.Point(467, 293)
-        Me.MedicareParticpProviderCheckBox.Name = "MedicareParticpProviderCheckBox"
-        Me.MedicareParticpProviderCheckBox.Size = New System.Drawing.Size(20, 24)
-        Me.MedicareParticpProviderCheckBox.TabIndex = 166
-        '
-        'UPINLabel
-        '
-        UPINLabel.AutoSize = True
-        UPINLabel.Location = New System.Drawing.Point(424, 326)
-        UPINLabel.Name = "UPINLabel"
-        UPINLabel.Size = New System.Drawing.Size(36, 13)
-        UPINLabel.TabIndex = 167
-        UPINLabel.Text = "UPIN:"
-        '
-        'UPINTextBox
-        '
-        Me.UPINTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "UPIN", True))
-        Me.UPINTextBox.Location = New System.Drawing.Point(467, 323)
-        Me.UPINTextBox.MaxLength = 20
-        Me.UPINTextBox.Name = "UPINTextBox"
-        Me.UPINTextBox.Size = New System.Drawing.Size(199, 20)
-        Me.UPINTextBox.TabIndex = 168
-        '
-        'Extra1Label
-        '
-        Extra1Label.AutoSize = True
-        Extra1Label.Location = New System.Drawing.Point(420, 352)
-        Extra1Label.Name = "Extra1Label"
-        Extra1Label.Size = New System.Drawing.Size(40, 13)
-        Extra1Label.TabIndex = 169
-        Extra1Label.Text = "Extra1:"
-        '
-        'Extra1TextBox
-        '
-        Me.Extra1TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "Extra1", True))
-        Me.Extra1TextBox.Location = New System.Drawing.Point(467, 349)
-        Me.Extra1TextBox.MaxLength = 10
-        Me.Extra1TextBox.Name = "Extra1TextBox"
-        Me.Extra1TextBox.Size = New System.Drawing.Size(199, 20)
-        Me.Extra1TextBox.TabIndex = 170
-        '
-        'Extra2Label
-        '
-        Extra2Label.AutoSize = True
-        Extra2Label.Location = New System.Drawing.Point(420, 378)
-        Extra2Label.Name = "Extra2Label"
-        Extra2Label.Size = New System.Drawing.Size(40, 13)
-        Extra2Label.TabIndex = 171
-        Extra2Label.Text = "Extra2:"
-        '
-        'Extra2TextBox
-        '
-        Me.Extra2TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "Extra2", True))
-        Me.Extra2TextBox.Location = New System.Drawing.Point(467, 375)
-        Me.Extra2TextBox.MaxLength = 10
-        Me.Extra2TextBox.Name = "Extra2TextBox"
-        Me.Extra2TextBox.Size = New System.Drawing.Size(199, 20)
-        Me.Extra2TextBox.TabIndex = 172
-        '
-        'SpecialtyLabel
-        '
-        SpecialtyLabel.AutoSize = True
-        SpecialtyLabel.Location = New System.Drawing.Point(407, 404)
-        SpecialtyLabel.Name = "SpecialtyLabel"
-        SpecialtyLabel.Size = New System.Drawing.Size(53, 13)
-        SpecialtyLabel.TabIndex = 173
-        SpecialtyLabel.Text = "Specialty:"
-        '
-        'SpecialtyTextBox
-        '
-        Me.SpecialtyTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "Specialty", True))
-        Me.SpecialtyTextBox.Location = New System.Drawing.Point(467, 401)
-        Me.SpecialtyTextBox.MaxLength = 3
-        Me.SpecialtyTextBox.Name = "SpecialtyTextBox"
-        Me.SpecialtyTextBox.Size = New System.Drawing.Size(199, 20)
-        Me.SpecialtyTextBox.TabIndex = 174
-        '
-        'SecurityLevelLabel
-        '
-        SecurityLevelLabel.AutoSize = True
-        SecurityLevelLabel.Location = New System.Drawing.Point(383, 430)
-        SecurityLevelLabel.Name = "SecurityLevelLabel"
-        SecurityLevelLabel.Size = New System.Drawing.Size(77, 13)
-        SecurityLevelLabel.TabIndex = 175
-        SecurityLevelLabel.Text = "Security Level:"
-        '
-        'SecurityLevelTextBox
-        '
-        Me.SecurityLevelTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "SecurityLevel", True))
-        Me.SecurityLevelTextBox.Location = New System.Drawing.Point(467, 427)
-        Me.SecurityLevelTextBox.Name = "SecurityLevelTextBox"
-        Me.SecurityLevelTextBox.Size = New System.Drawing.Size(199, 20)
-        Me.SecurityLevelTextBox.TabIndex = 176
-        '
-        'SBNumberLabel
-        '
-        SBNumberLabel.AutoSize = True
-        SBNumberLabel.Location = New System.Drawing.Point(396, 456)
-        SBNumberLabel.Name = "SBNumberLabel"
-        SBNumberLabel.Size = New System.Drawing.Size(64, 13)
-        SBNumberLabel.TabIndex = 177
-        SBNumberLabel.Text = "SB Number:"
-        '
-        'SBNumberTextBox
-        '
-        Me.SBNumberTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "SBNumber", True))
-        Me.SBNumberTextBox.Location = New System.Drawing.Point(467, 453)
-        Me.SBNumberTextBox.MaxLength = 2
-        Me.SBNumberTextBox.Name = "SBNumberTextBox"
-        Me.SBNumberTextBox.Size = New System.Drawing.Size(199, 20)
-        Me.SBNumberTextBox.TabIndex = 178
-        '
-        'SSNorFedTaxIDLabel
-        '
-        SSNorFedTaxIDLabel.AutoSize = True
-        SSNorFedTaxIDLabel.Location = New System.Drawing.Point(16, 36)
-        SSNorFedTaxIDLabel.Name = "SSNorFedTaxIDLabel"
-        SSNorFedTaxIDLabel.Size = New System.Drawing.Size(97, 13)
-        SSNorFedTaxIDLabel.TabIndex = 179
-        SSNorFedTaxIDLabel.Text = "SSNor Fed Tax ID:"
-        '
-        'SSNorFedTaxIDTextBox
-        '
-        Me.SSNorFedTaxIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "SSNorFedTaxID", True))
-        Me.SSNorFedTaxIDTextBox.Location = New System.Drawing.Point(119, 33)
-        Me.SSNorFedTaxIDTextBox.MaxLength = 11
-        Me.SSNorFedTaxIDTextBox.Name = "SSNorFedTaxIDTextBox"
-        Me.SSNorFedTaxIDTextBox.Size = New System.Drawing.Size(199, 20)
-        Me.SSNorFedTaxIDTextBox.TabIndex = 180
-        '
-        'FTIDLabel
-        '
-        FTIDLabel.AutoSize = True
-        FTIDLabel.Location = New System.Drawing.Point(79, 73)
-        FTIDLabel.Name = "FTIDLabel"
-        FTIDLabel.Size = New System.Drawing.Size(34, 13)
-        FTIDLabel.TabIndex = 181
-        FTIDLabel.Text = "FTID:"
-        '
-        'FTIDCheckBox
-        '
-        Me.FTIDCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "FTID", True))
-        Me.FTIDCheckBox.Location = New System.Drawing.Point(119, 68)
-        Me.FTIDCheckBox.Name = "FTIDCheckBox"
-        Me.FTIDCheckBox.Size = New System.Drawing.Size(200, 24)
-        Me.FTIDCheckBox.TabIndex = 182
-        '
-        'LicenseNumberLabel
-        '
-        LicenseNumberLabel.AutoSize = True
-        LicenseNumberLabel.Location = New System.Drawing.Point(26, 101)
-        LicenseNumberLabel.Name = "LicenseNumberLabel"
-        LicenseNumberLabel.Size = New System.Drawing.Size(87, 13)
-        LicenseNumberLabel.TabIndex = 183
-        LicenseNumberLabel.Text = "License Number:"
-        '
-        'LicenseNumberTextBox
-        '
-        Me.LicenseNumberTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "LicenseNumber", True))
-        Me.LicenseNumberTextBox.Location = New System.Drawing.Point(119, 98)
-        Me.LicenseNumberTextBox.MaxLength = 15
-        Me.LicenseNumberTextBox.Name = "LicenseNumberTextBox"
-        Me.LicenseNumberTextBox.Size = New System.Drawing.Size(199, 20)
-        Me.LicenseNumberTextBox.TabIndex = 184
-        '
-        'SignatureonFileLabel
-        '
-        SignatureonFileLabel.AutoSize = True
-        SignatureonFileLabel.Location = New System.Drawing.Point(24, 129)
-        SignatureonFileLabel.Name = "SignatureonFileLabel"
-        SignatureonFileLabel.Size = New System.Drawing.Size(89, 13)
-        SignatureonFileLabel.TabIndex = 185
-        SignatureonFileLabel.Text = "Signature on File:"
-        '
-        'SignatureonFileCheckBox
-        '
-        Me.SignatureonFileCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "SignatureonFile", True))
-        Me.SignatureonFileCheckBox.Location = New System.Drawing.Point(119, 124)
-        Me.SignatureonFileCheckBox.Name = "SignatureonFileCheckBox"
-        Me.SignatureonFileCheckBox.Size = New System.Drawing.Size(200, 24)
-        Me.SignatureonFileCheckBox.TabIndex = 186
-        '
-        'MedicarePINLabel
-        '
-        MedicarePINLabel.AutoSize = True
-        MedicarePINLabel.Location = New System.Drawing.Point(38, 153)
-        MedicarePINLabel.Name = "MedicarePINLabel"
-        MedicarePINLabel.Size = New System.Drawing.Size(75, 13)
-        MedicarePINLabel.TabIndex = 187
-        MedicarePINLabel.Text = "Medicare PIN:"
-        '
-        'MedicarePINTextBox
-        '
-        Me.MedicarePINTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "MedicarePIN", True))
-        Me.MedicarePINTextBox.Location = New System.Drawing.Point(119, 149)
-        Me.MedicarePINTextBox.MaxLength = 20
-        Me.MedicarePINTextBox.Name = "MedicarePINTextBox"
-        Me.MedicarePINTextBox.Size = New System.Drawing.Size(199, 20)
-        Me.MedicarePINTextBox.TabIndex = 188
-        '
-        'MedicaidPINLabel
-        '
-        MedicaidPINLabel.AutoSize = True
-        MedicaidPINLabel.Location = New System.Drawing.Point(39, 179)
-        MedicaidPINLabel.Name = "MedicaidPINLabel"
-        MedicaidPINLabel.Size = New System.Drawing.Size(74, 13)
-        MedicaidPINLabel.TabIndex = 189
-        MedicaidPINLabel.Text = "Medicaid PIN:"
-        '
-        'MedicaidPINTextBox
-        '
-        Me.MedicaidPINTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "MedicaidPIN", True))
-        Me.MedicaidPINTextBox.Location = New System.Drawing.Point(119, 176)
-        Me.MedicaidPINTextBox.MaxLength = 20
-        Me.MedicaidPINTextBox.Name = "MedicaidPINTextBox"
-        Me.MedicaidPINTextBox.Size = New System.Drawing.Size(199, 20)
-        Me.MedicaidPINTextBox.TabIndex = 190
-        '
-        'ChampusPINLabel
-        '
-        ChampusPINLabel.AutoSize = True
-        ChampusPINLabel.Location = New System.Drawing.Point(38, 205)
-        ChampusPINLabel.Name = "ChampusPINLabel"
-        ChampusPINLabel.Size = New System.Drawing.Size(75, 13)
-        ChampusPINLabel.TabIndex = 191
-        ChampusPINLabel.Text = "Champus PIN:"
-        '
-        'ChampusPINTextBox
-        '
-        Me.ChampusPINTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "ChampusPIN", True))
-        Me.ChampusPINTextBox.Location = New System.Drawing.Point(119, 202)
-        Me.ChampusPINTextBox.MaxLength = 20
-        Me.ChampusPINTextBox.Name = "ChampusPINTextBox"
-        Me.ChampusPINTextBox.Size = New System.Drawing.Size(199, 20)
-        Me.ChampusPINTextBox.TabIndex = 192
-        '
-        'StateLabel
-        '
-        StateLabel.AutoSize = True
-        StateLabel.Location = New System.Drawing.Point(77, 245)
-        StateLabel.Name = "StateLabel"
-        StateLabel.Size = New System.Drawing.Size(35, 13)
-        StateLabel.TabIndex = 193
-        StateLabel.Text = "State:"
-        '
-        'StateTextBox
-        '
-        Me.StateTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "State", True))
-        Me.StateTextBox.Location = New System.Drawing.Point(118, 243)
-        Me.StateTextBox.MaxLength = 2
-        Me.StateTextBox.Name = "StateTextBox"
-        Me.StateTextBox.Size = New System.Drawing.Size(42, 20)
-        Me.StateTextBox.TabIndex = 194
-        '
-        'ZipCodeLabel
-        '
-        ZipCodeLabel.AutoSize = True
-        ZipCodeLabel.Location = New System.Drawing.Point(166, 247)
-        ZipCodeLabel.Name = "ZipCodeLabel"
-        ZipCodeLabel.Size = New System.Drawing.Size(53, 13)
-        ZipCodeLabel.TabIndex = 195
-        ZipCodeLabel.Text = "Zip Code:"
-        '
-        'ZipCodeTextBox
-        '
-        Me.ZipCodeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "ZipCode", True))
-        Me.ZipCodeTextBox.Location = New System.Drawing.Point(225, 244)
-        Me.ZipCodeTextBox.MaxLength = 10
-        Me.ZipCodeTextBox.Name = "ZipCodeTextBox"
-        Me.ZipCodeTextBox.Size = New System.Drawing.Size(93, 20)
-        Me.ZipCodeTextBox.TabIndex = 196
-        '
-        'TBPhone
-        '
-        Me.TBPhone.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "Phone", True))
-        Me.TBPhone.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TBPhone.Location = New System.Drawing.Point(312, 349)
-        Me.TBPhone.MaxLength = 14
-        Me.TBPhone.Name = "TBPhone"
-        Me.TBPhone.Size = New System.Drawing.Size(114, 21)
-        Me.TBPhone.TabIndex = 88
-        '
         'Physician
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1369,11 +1372,11 @@ Partial Class Physician
         CType(Me.MMDataDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        Me.TabPage3.ResumeLayout(False)
+        Me.TabPage3.PerformLayout()
         CType(Me.MMPhysionBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MMPhysionBindingNavigator.ResumeLayout(False)
         Me.MMPhysionBindingNavigator.PerformLayout()
-        Me.TabPage3.ResumeLayout(False)
-        Me.TabPage3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

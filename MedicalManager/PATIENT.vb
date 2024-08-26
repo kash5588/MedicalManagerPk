@@ -156,7 +156,8 @@ Public Class PATIENT
         'End Try
 
         LoadComboBoxes2()
-        Me.Text = ChartNumberTextBox.Text + " " + LastNameTextBox.Text + ", " + FirstNameTextBox.Text
+        LoadComboBoxesV2()
+        Me.Text = ChartNumberTextBox.Text + " , " + FirstNameTextBox.Text + " " + LastNameTextBox.Text
 
     End Sub
 
@@ -292,7 +293,38 @@ Public Class PATIENT
         End Try
 
     End Sub
+    Private Function LoadComboBoxesV2()
+        Try
 
+            Dim db As DBAccess = New DBAccess()
+            Dim dt As New DataTable()
+
+            dt.Load(db.ExecuteReader("SELECT * FROM MMComboV2"))
+
+            ' Loop through each row in the DataTable
+
+            For Each dtRow As DataRow In dt.Rows
+                ' Check if the Property value is "VisitType"
+                If dtRow("Property").ToString() = "VisitType" Then
+                    ' Add the Text value to the ComboBox
+                    CBVisitType.Items.Add(dtRow("Text").ToString())
+                End If
+            Next
+
+            dt.Dispose()
+
+            ' Select the first item in the ComboBox if there are any items
+            If CBVisitType.Items.Count > 0 Then
+                CBVisitType.SelectedIndex = 0
+            End If
+        Catch ex As Exception
+            ' Show a message box if there is an error
+            MessageBox.Show(ex.ToString(), "Error loading comboboxes.")
+        End Try
+
+
+
+    End Function
 
 
     Private Function LoadComboBoxes2()
@@ -622,19 +654,29 @@ Public Class PATIENT
                 If ChartNumberTextBox.Text.Trim = "" Then
                     MessageBox.Show("You may not add a Visit without a Chart.")
                 Else
-
+                    Dim CaseNo As Integer = 0
                     TokenNo = CountTotalResults(arrayAssignedProvider(0)) + 1
-                    Dim CaseNo As Integer = InsertVisit(aRet, arrayAssignedProvider, TokenNo)
-                    InsertFeeProcedure(aRet, arrayAssignedProvider, TbIdProcedure.Text, CaseNo)
 
-                    Dim result As DialogResult = MessageBox.Show("You added a visit successfully." & vbCrLf & "Do you want to Print Slip?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                    CaseNo = InsertVisit(aRet, arrayAssignedProvider, TokenNo, CBVisitType.Text)
 
-                    If result = DialogResult.Yes Then
-                        VisitsList.Show()
-                        Me.Close()
+                    If CaseNo > 0 Then
+                        InsertFeeProcedure(aRet, arrayAssignedProvider, TbIdProcedure.Text, CaseNo, CBVisitType.Text)
+
+                        If TBDiscount.Text.Trim() <> "0" And TBDiscount.Text.Trim() <> "" Then
+                            InsertDiscountProcedure(aRet, arrayAssignedProvider, TbIdProcedure.Text, CaseNo, CBVisitType.Text, TBDiscount.Text)
+                        End If
+                        Dim result As DialogResult = MessageBox.Show("You added a visit successfully." & vbCrLf & "Do you want to Print Slip?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+                        If result = DialogResult.Yes Then
+                            VisitsList.Show()
+                            Me.Close()
+                        Else
+                            Me.Close()
+                        End If
                     Else
                         Me.Close()
                     End If
+
                 End If
 
             Else
@@ -646,23 +688,25 @@ Public Class PATIENT
         End Try
     End Sub
 
-    Private Sub InsertFeeProcedure(aRet() As String, arrayAssignedProvider() As String, ProcedureID As String, CaseNo As Integer)
+    Private Sub InsertDiscountProcedure(aRet() As String, arrayAssignedProvider() As String, ProcedureID As String, caseNo As Integer, VType As String, Discount As String)
         Dim connectionString As String = connString2
 
         ' Create the SQL connection
         Using connection As New SqlConnection(connectionString)
             ' Define your SQL command with the INSERT...SELECT statement using parameters
-            Dim sql As String = "INSERT INTO MMCHDxRxLtMt (ChartNumber, CaseNumber, Date, Type, Code, Description, UserID, TimeStamp, Amount) " &
-                         "SELECT @ChartNumber, @CaseNumber, @Date, Type, Code1, Description, @UserID, @Date, AmountA FROM MMProcedure WHERE Id = @ProcedureID"
+            Dim sql As String = "INSERT INTO MMDiscountPro (ChartNumber, CaseNumber, Date, Type, Code, Description, UserID, TimeStamp, Amount, VisitType) " &
+                         "SELECT @ChartNumber, @CaseNumber, @Date, Type, Code1, Description, @UserID, @Date, @Discount, @VisitType FROM MMProcedure WHERE Id = @ProcedureID"
 
             ' Create the SQL command
             Using command As New SqlCommand(sql, connection)
                 ' Add the parameters and their values
                 command.Parameters.AddWithValue("@ChartNumber", aRet(1))
-                command.Parameters.AddWithValue("@CaseNumber", CaseNo)
+                command.Parameters.AddWithValue("@CaseNumber", caseNo)
                 command.Parameters.AddWithValue("@ProcedureID", Convert.ToInt32(ProcedureID))
                 command.Parameters.AddWithValue("@UserID", globalUser)
                 command.Parameters.AddWithValue("@Date", System.DateTime.Now.Date)
+                command.Parameters.AddWithValue("@VisitType", VType)
+                command.Parameters.AddWithValue("@Discount", Convert.ToInt32(Discount))
 
                 ' Open the connection
                 connection.Open()
@@ -676,18 +720,85 @@ Public Class PATIENT
         End Using
     End Sub
 
-    Function InsertVisit(aRet() As String, arrayAssignedProvider() As String, TokenNo As Integer) As Integer
+    Private Sub InsertFeeProcedure(aRet() As String, arrayAssignedProvider() As String, ProcedureID As String, CaseNo As Integer, VType As String)
         Dim connectionString As String = connString2
 
         ' Create the SQL connection
         Using connection As New SqlConnection(connectionString)
-            ' Define your SQL command with placeholders for the parameters
-            Dim sql As String = "INSERT INTO MMData.dbo.MMChartVisit (ChartNumber, Date, FirstName, LastName, DOB, AssignedProvider, TimeStamp, UserName, Extra1) " &
-                         "VALUES (@ChartNumber, @Date, @FirstName, @LastName, @DOB, @AssignedProvider, @TimeStamp, @UserName,@Extra1); " &
-                         "SELECT SCOPE_IDENTITY();"
+            ' Define your SQL command with the INSERT...SELECT statement using parameters
+            Dim sql As String = "INSERT INTO MMCHDxRxLtMt (ChartNumber, CaseNumber, Date, Type, Code, Description, UserID, TimeStamp, Amount, VisitType) " &
+                         "SELECT @ChartNumber, @CaseNumber, @Date, Type, Code1, Description, @UserID, @Date, AmountA, @VisitType FROM MMProcedure WHERE Id = @ProcedureID"
 
             ' Create the SQL command
             Using command As New SqlCommand(sql, connection)
+                ' Add the parameters and their values
+                command.Parameters.AddWithValue("@ChartNumber", aRet(1))
+                command.Parameters.AddWithValue("@CaseNumber", CaseNo)
+                command.Parameters.AddWithValue("@ProcedureID", Convert.ToInt32(ProcedureID))
+                command.Parameters.AddWithValue("@UserID", globalUser)
+                command.Parameters.AddWithValue("@Date", System.DateTime.Now.Date)
+                command.Parameters.AddWithValue("@VisitType", VType)
+
+                ' Open the connection
+                connection.Open()
+
+                ' Execute the command
+                command.ExecuteNonQuery()
+
+                ' Close the connection
+                connection.Close()
+            End Using
+        End Using
+    End Sub
+
+    Function InsertVisit(aRet() As String, arrayAssignedProvider() As String, TokenNo As Integer, VisitType As String) As Integer
+        Dim connectionString As String = connString2
+        Dim caseNumber As Integer = 0
+
+        ' Create the SQL connection
+        Using connection As New SqlConnection(connectionString)
+            ' SQL query to check if the data already exists
+            Dim checkSql As String = "SELECT COUNT(*) FROM MMData.dbo.MMChartVisit " &
+                                 "WHERE ChartNumber = @ChartNumber AND CONVERT(DATE, Date) = @Date " &
+                                  " AND AssignedProvider = @AssignedProvider"
+
+            ' Create the SQL command to check for existing data
+            Using checkCommand As New SqlCommand(checkSql, connection)
+                ' Define the parameters and their values
+                checkCommand.Parameters.AddWithValue("@ChartNumber", aRet(1))
+                checkCommand.Parameters.AddWithValue("@Date", DateTime.Now.Date)
+
+
+                ' Handle the DOB parameter
+
+
+                checkCommand.Parameters.AddWithValue("@AssignedProvider", arrayAssignedProvider(0))
+
+                ' Open the connection
+                connection.Open()
+
+                ' Execute the command and get the count of existing rows
+                Dim existingCount As Integer = Convert.ToInt32(checkCommand.ExecuteScalar())
+
+                ' If the data already exists, prompt the user
+                If existingCount > 0 Then
+                    Dim result As DialogResult = MessageBox.Show("Data already exists. Do you want to add this as a new visit?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+                    ' If the user selects 'No', cancel the operation
+                    If result = DialogResult.No Then
+                        connection.Close()
+                        Return -1 ' or another appropriate value to indicate cancellation
+                    End If
+                End If
+            End Using
+
+            ' Define your SQL command with placeholders for the parameters
+            Dim insertSql As String = "INSERT INTO MMData.dbo.MMChartVisit (ChartNumber, Date, FirstName, LastName, DOB, AssignedProvider, TimeStamp, UserName, Extra1, VisitType) " &
+                                  "VALUES (@ChartNumber, @Date, @FirstName, @LastName, @DOB, @AssignedProvider, @TimeStamp, @UserName, @Extra1 , @VisitType); " &
+                                  "SELECT SCOPE_IDENTITY();"
+
+            ' Create the SQL command
+            Using command As New SqlCommand(insertSql, connection)
                 ' Define the parameters and their values
                 command.Parameters.AddWithValue("@ChartNumber", aRet(1))
                 command.Parameters.AddWithValue("@Date", DateTime.Now.Date)
@@ -697,7 +808,6 @@ Public Class PATIENT
                 If aRet(6) <> "" Then
                     Dim dobString As String = aRet(6).ToString()  ' Convert the object to string
                     Dim dob As DateTime = DateTime.ParseExact(dobString, "MM/dd/yyyy", System.Globalization.CultureInfo.InvariantCulture)
-
                     command.Parameters.AddWithValue("@DOB", dob.ToString("MM/dd/yyyy"))
                 Else
                     command.Parameters.AddWithValue("@DOB", DBNull.Value)
@@ -706,12 +816,10 @@ Public Class PATIENT
                 command.Parameters.AddWithValue("@AssignedProvider", arrayAssignedProvider(0))
                 command.Parameters.AddWithValue("@TimeStamp", DateTime.Now.Date)
                 command.Parameters.AddWithValue("@UserName", globalUser)
-
-                ' Open the connection
-                connection.Open()
+                command.Parameters.AddWithValue("@VisitType", VisitType)
 
                 ' Execute the command and retrieve the auto-incremented CaseNumber
-                Dim caseNumber As Integer = Convert.ToInt32(command.ExecuteScalar())
+                caseNumber = Convert.ToInt32(command.ExecuteScalar())
 
                 ' Close the connection
                 connection.Close()

@@ -48,6 +48,8 @@ Partial Class VisitsList
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.TBTokenNo = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.TBDate = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.TBPhysicianName = New System.Windows.Forms.TextBox()
         Me.LBPhysicianName = New System.Windows.Forms.Label()
         Me.ChartNo = New System.Windows.Forms.TextBox()
@@ -58,25 +60,7 @@ Partial Class VisitsList
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnVitals = New System.Windows.Forms.Button()
         Me.BtnMedication = New System.Windows.Forms.Button()
-        Me.PanelVitals = New System.Windows.Forms.Panel()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.DgVitals = New System.Windows.Forms.DataGridView()
-        Me.TimeStampDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TempDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PulseDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RespDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SystolicDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DiastolicDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.HtInDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.WtLbDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.OzDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BMIDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PulseOxDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UserDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BloodSugarDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LMPDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MMChartTVitalSignBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.PanelMadication = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.DgMedicine = New System.Windows.Forms.DataGridView()
@@ -142,17 +126,30 @@ Partial Class VisitsList
         Me.MMCHDxRxLtMtTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMCHDxRxLtMtTableAdapter()
         Me.BtnProcedures = New System.Windows.Forms.Button()
         Me.BtnVisitReport = New System.Windows.Forms.Button()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.TBDate = New System.Windows.Forms.TextBox()
+        Me.PanelVitals = New System.Windows.Forms.Panel()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.DgVitals = New System.Windows.Forms.DataGridView()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TimeStampDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TempDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PulseDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RespDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SystolicDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DiastolicDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.HtInDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.WtLbDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.OzDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BMIDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PulseOxDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BloodSugarDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LMPDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UserDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.MMChartVisitDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMChartVisitBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMDataDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        Me.PanelVitals.SuspendLayout()
-        Me.Panel5.SuspendLayout()
-        CType(Me.DgVitals, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMChartTVitalSignBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelMadication.SuspendLayout()
         Me.Panel6.SuspendLayout()
@@ -165,6 +162,9 @@ Partial Class VisitsList
         CType(Me.MMCHDxRxLtMtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMPRocedureDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelVitals.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        CType(Me.DgVitals, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -176,7 +176,7 @@ Partial Class VisitsList
         Me.Panel1.Controls.Add(Me.MMChartVisitDataGridView)
         Me.Panel1.Location = New System.Drawing.Point(211, 97)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(695, 603)
+        Me.Panel1.Size = New System.Drawing.Size(695, 557)
         Me.Panel1.TabIndex = 0
         '
         'MMChartVisitDataGridView
@@ -193,7 +193,7 @@ Partial Class VisitsList
         Me.MMChartVisitDataGridView.Name = "MMChartVisitDataGridView"
         Me.MMChartVisitDataGridView.ReadOnly = True
         Me.MMChartVisitDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.MMChartVisitDataGridView.Size = New System.Drawing.Size(695, 603)
+        Me.MMChartVisitDataGridView.Size = New System.Drawing.Size(695, 557)
         Me.MMChartVisitDataGridView.TabIndex = 0
         '
         'CaseNumber
@@ -404,6 +404,22 @@ Partial Class VisitsList
         Me.Label1.TabIndex = 13
         Me.Label1.Text = "TokenNo"
         '
+        'TBDate
+        '
+        Me.TBDate.Location = New System.Drawing.Point(67, 160)
+        Me.TBDate.Name = "TBDate"
+        Me.TBDate.Size = New System.Drawing.Size(122, 21)
+        Me.TBDate.TabIndex = 14
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(34, 163)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(33, 15)
+        Me.Label11.TabIndex = 13
+        Me.Label11.Text = "Date"
+        '
         'TBPhysicianName
         '
         Me.TBPhysicianName.Location = New System.Drawing.Point(68, 129)
@@ -500,171 +516,17 @@ Partial Class VisitsList
         Me.BtnMedication.Text = "Medications"
         Me.BtnMedication.UseVisualStyleBackColor = False
         '
-        'PanelVitals
-        '
-        Me.PanelVitals.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PanelVitals.Controls.Add(Me.Panel5)
-        Me.PanelVitals.Controls.Add(Me.Label5)
-        Me.PanelVitals.Location = New System.Drawing.Point(0, 0)
-        Me.PanelVitals.Name = "PanelVitals"
-        Me.PanelVitals.Size = New System.Drawing.Size(361, 122)
-        Me.PanelVitals.TabIndex = 195
-        Me.PanelVitals.Visible = False
-        '
-        'Panel5
-        '
-        Me.Panel5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel5.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel5.Controls.Add(Me.DgVitals)
-        Me.Panel5.Location = New System.Drawing.Point(0, 30)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(359, 92)
-        Me.Panel5.TabIndex = 15
-        '
-        'DgVitals
-        '
-        Me.DgVitals.AllowUserToAddRows = False
-        Me.DgVitals.AllowUserToDeleteRows = False
-        Me.DgVitals.AutoGenerateColumns = False
-        Me.DgVitals.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.DgVitals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgVitals.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.TimeStampDataGridViewTextBoxColumn, Me.TempDataGridViewTextBoxColumn, Me.PulseDataGridViewTextBoxColumn, Me.RespDataGridViewTextBoxColumn, Me.SystolicDataGridViewTextBoxColumn, Me.DiastolicDataGridViewTextBoxColumn, Me.HtInDataGridViewTextBoxColumn, Me.WtLbDataGridViewTextBoxColumn, Me.OzDataGridViewTextBoxColumn, Me.BMIDataGridViewTextBoxColumn, Me.PulseOxDataGridViewTextBoxColumn, Me.UserDataGridViewTextBoxColumn, Me.BloodSugarDataGridViewTextBoxColumn, Me.LMPDataGridViewTextBoxColumn})
-        Me.DgVitals.DataSource = Me.MMChartTVitalSignBindingSource
-        Me.DgVitals.Location = New System.Drawing.Point(2, 3)
-        Me.DgVitals.Name = "DgVitals"
-        Me.DgVitals.ReadOnly = True
-        Me.DgVitals.RowHeadersVisible = False
-        Me.DgVitals.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.DgVitals.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DgVitals.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgVitals.Size = New System.Drawing.Size(359, 89)
-        Me.DgVitals.TabIndex = 198
-        '
-        'TimeStampDataGridViewTextBoxColumn
-        '
-        Me.TimeStampDataGridViewTextBoxColumn.DataPropertyName = "TimeStamp"
-        Me.TimeStampDataGridViewTextBoxColumn.HeaderText = "TimeStamp"
-        Me.TimeStampDataGridViewTextBoxColumn.Name = "TimeStampDataGridViewTextBoxColumn"
-        Me.TimeStampDataGridViewTextBoxColumn.ReadOnly = True
-        Me.TimeStampDataGridViewTextBoxColumn.Width = 115
-        '
-        'TempDataGridViewTextBoxColumn
-        '
-        Me.TempDataGridViewTextBoxColumn.DataPropertyName = "Temp"
-        Me.TempDataGridViewTextBoxColumn.HeaderText = "Temp"
-        Me.TempDataGridViewTextBoxColumn.Name = "TempDataGridViewTextBoxColumn"
-        Me.TempDataGridViewTextBoxColumn.ReadOnly = True
-        Me.TempDataGridViewTextBoxColumn.Width = 120
-        '
-        'PulseDataGridViewTextBoxColumn
-        '
-        Me.PulseDataGridViewTextBoxColumn.DataPropertyName = "Pulse"
-        Me.PulseDataGridViewTextBoxColumn.HeaderText = "Pulse"
-        Me.PulseDataGridViewTextBoxColumn.Name = "PulseDataGridViewTextBoxColumn"
-        Me.PulseDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'RespDataGridViewTextBoxColumn
-        '
-        Me.RespDataGridViewTextBoxColumn.DataPropertyName = "Resp"
-        Me.RespDataGridViewTextBoxColumn.HeaderText = "Resp"
-        Me.RespDataGridViewTextBoxColumn.Name = "RespDataGridViewTextBoxColumn"
-        Me.RespDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SystolicDataGridViewTextBoxColumn
-        '
-        Me.SystolicDataGridViewTextBoxColumn.DataPropertyName = "Systolic"
-        Me.SystolicDataGridViewTextBoxColumn.HeaderText = "Systolic"
-        Me.SystolicDataGridViewTextBoxColumn.Name = "SystolicDataGridViewTextBoxColumn"
-        Me.SystolicDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'DiastolicDataGridViewTextBoxColumn
-        '
-        Me.DiastolicDataGridViewTextBoxColumn.DataPropertyName = "Diastolic"
-        Me.DiastolicDataGridViewTextBoxColumn.HeaderText = "Diastolic"
-        Me.DiastolicDataGridViewTextBoxColumn.Name = "DiastolicDataGridViewTextBoxColumn"
-        Me.DiastolicDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'HtInDataGridViewTextBoxColumn
-        '
-        Me.HtInDataGridViewTextBoxColumn.DataPropertyName = "HtIn"
-        Me.HtInDataGridViewTextBoxColumn.HeaderText = "HtIn"
-        Me.HtInDataGridViewTextBoxColumn.Name = "HtInDataGridViewTextBoxColumn"
-        Me.HtInDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'WtLbDataGridViewTextBoxColumn
-        '
-        Me.WtLbDataGridViewTextBoxColumn.DataPropertyName = "WtLb"
-        Me.WtLbDataGridViewTextBoxColumn.HeaderText = "WtLb"
-        Me.WtLbDataGridViewTextBoxColumn.Name = "WtLbDataGridViewTextBoxColumn"
-        Me.WtLbDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'OzDataGridViewTextBoxColumn
-        '
-        Me.OzDataGridViewTextBoxColumn.DataPropertyName = "Oz"
-        Me.OzDataGridViewTextBoxColumn.HeaderText = "Oz"
-        Me.OzDataGridViewTextBoxColumn.Name = "OzDataGridViewTextBoxColumn"
-        Me.OzDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'BMIDataGridViewTextBoxColumn
-        '
-        Me.BMIDataGridViewTextBoxColumn.DataPropertyName = "BMI"
-        Me.BMIDataGridViewTextBoxColumn.HeaderText = "BMI"
-        Me.BMIDataGridViewTextBoxColumn.Name = "BMIDataGridViewTextBoxColumn"
-        Me.BMIDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'PulseOxDataGridViewTextBoxColumn
-        '
-        Me.PulseOxDataGridViewTextBoxColumn.DataPropertyName = "PulseOx"
-        Me.PulseOxDataGridViewTextBoxColumn.HeaderText = "PulseOx"
-        Me.PulseOxDataGridViewTextBoxColumn.Name = "PulseOxDataGridViewTextBoxColumn"
-        Me.PulseOxDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'UserDataGridViewTextBoxColumn
-        '
-        Me.UserDataGridViewTextBoxColumn.DataPropertyName = "User"
-        Me.UserDataGridViewTextBoxColumn.HeaderText = "User"
-        Me.UserDataGridViewTextBoxColumn.Name = "UserDataGridViewTextBoxColumn"
-        Me.UserDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'BloodSugarDataGridViewTextBoxColumn
-        '
-        Me.BloodSugarDataGridViewTextBoxColumn.DataPropertyName = "BloodSugar"
-        Me.BloodSugarDataGridViewTextBoxColumn.HeaderText = "BloodSugar"
-        Me.BloodSugarDataGridViewTextBoxColumn.Name = "BloodSugarDataGridViewTextBoxColumn"
-        Me.BloodSugarDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'LMPDataGridViewTextBoxColumn
-        '
-        Me.LMPDataGridViewTextBoxColumn.DataPropertyName = "LMP"
-        Me.LMPDataGridViewTextBoxColumn.HeaderText = "LMP"
-        Me.LMPDataGridViewTextBoxColumn.Name = "LMPDataGridViewTextBoxColumn"
-        Me.LMPDataGridViewTextBoxColumn.ReadOnly = True
-        '
         'MMChartTVitalSignBindingSource
         '
         Me.MMChartTVitalSignBindingSource.DataMember = "MMChartTVitalSign"
         Me.MMChartTVitalSignBindingSource.DataSource = Me.MMDataDataSet1
-        '
-        'Label5
-        '
-        Me.Label5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.Label5.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(1, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(357, 30)
-        Me.Label5.TabIndex = 14
-        Me.Label5.Text = "Vital Signs"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'PanelMadication
         '
         Me.PanelMadication.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelMadication.Controls.Add(Me.Panel6)
         Me.PanelMadication.Controls.Add(Me.Label6)
-        Me.PanelMadication.Location = New System.Drawing.Point(0, 136)
+        Me.PanelMadication.Location = New System.Drawing.Point(-1, -1)
         Me.PanelMadication.Name = "PanelMadication"
         Me.PanelMadication.Size = New System.Drawing.Size(361, 156)
         Me.PanelMadication.TabIndex = 195
@@ -760,12 +622,11 @@ Partial Class VisitsList
         Me.Panel4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel4.BackColor = System.Drawing.Color.GhostWhite
-        Me.Panel4.Controls.Add(Me.PanelVitals)
         Me.Panel4.Controls.Add(Me.PanelProcedure)
         Me.Panel4.Controls.Add(Me.PanelMadication)
         Me.Panel4.Location = New System.Drawing.Point(908, 97)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(362, 603)
+        Me.Panel4.Size = New System.Drawing.Size(362, 557)
         Me.Panel4.TabIndex = 196
         '
         'PanelProcedure
@@ -773,7 +634,7 @@ Partial Class VisitsList
         Me.PanelProcedure.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelProcedure.Controls.Add(Me.Panel8)
         Me.PanelProcedure.Controls.Add(Me.Label10)
-        Me.PanelProcedure.Location = New System.Drawing.Point(0, 305)
+        Me.PanelProcedure.Location = New System.Drawing.Point(-1, 168)
         Me.PanelProcedure.Name = "PanelProcedure"
         Me.PanelProcedure.Size = New System.Drawing.Size(361, 156)
         Me.PanelProcedure.TabIndex = 195
@@ -1152,21 +1013,160 @@ Partial Class VisitsList
         Me.BtnVisitReport.Text = "Visit Report"
         Me.BtnVisitReport.UseVisualStyleBackColor = False
         '
-        'Label11
+        'PanelVitals
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(34, 163)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(33, 15)
-        Me.Label11.TabIndex = 13
-        Me.Label11.Text = "Date"
+        Me.PanelVitals.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PanelVitals.Controls.Add(Me.Panel5)
+        Me.PanelVitals.Location = New System.Drawing.Point(211, 651)
+        Me.PanelVitals.Name = "PanelVitals"
+        Me.PanelVitals.Size = New System.Drawing.Size(1058, 90)
+        Me.PanelVitals.TabIndex = 197
+        Me.PanelVitals.Visible = False
         '
-        'TBDate
+        'Panel5
         '
-        Me.TBDate.Location = New System.Drawing.Point(67, 160)
-        Me.TBDate.Name = "TBDate"
-        Me.TBDate.Size = New System.Drawing.Size(122, 21)
-        Me.TBDate.TabIndex = 14
+        Me.Panel5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel5.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel5.Controls.Add(Me.DgVitals)
+        Me.Panel5.Location = New System.Drawing.Point(2, 0)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(1053, 92)
+        Me.Panel5.TabIndex = 15
+        '
+        'DgVitals
+        '
+        Me.DgVitals.AllowUserToAddRows = False
+        Me.DgVitals.AllowUserToDeleteRows = False
+        Me.DgVitals.AutoGenerateColumns = False
+        Me.DgVitals.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.DgVitals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgVitals.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.TimeStampDataGridViewTextBoxColumn, Me.TempDataGridViewTextBoxColumn, Me.PulseDataGridViewTextBoxColumn, Me.RespDataGridViewTextBoxColumn, Me.SystolicDataGridViewTextBoxColumn, Me.DiastolicDataGridViewTextBoxColumn, Me.HtInDataGridViewTextBoxColumn, Me.WtLbDataGridViewTextBoxColumn, Me.OzDataGridViewTextBoxColumn, Me.BMIDataGridViewTextBoxColumn, Me.PulseOxDataGridViewTextBoxColumn, Me.BloodSugarDataGridViewTextBoxColumn, Me.LMPDataGridViewTextBoxColumn, Me.UserDataGridViewTextBoxColumn})
+        Me.DgVitals.DataSource = Me.MMChartTVitalSignBindingSource
+        Me.DgVitals.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DgVitals.Location = New System.Drawing.Point(0, 0)
+        Me.DgVitals.Name = "DgVitals"
+        Me.DgVitals.ReadOnly = True
+        Me.DgVitals.RowHeadersVisible = False
+        Me.DgVitals.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.DgVitals.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DgVitals.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgVitals.Size = New System.Drawing.Size(1053, 92)
+        Me.DgVitals.TabIndex = 198
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.Label5.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Black
+        Me.Label5.Location = New System.Drawing.Point(1, 650)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(209, 90)
+        Me.Label5.TabIndex = 14
+        Me.Label5.Text = "Vital Signs"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TimeStampDataGridViewTextBoxColumn
+        '
+        Me.TimeStampDataGridViewTextBoxColumn.DataPropertyName = "TimeStamp"
+        Me.TimeStampDataGridViewTextBoxColumn.HeaderText = "TimeStamp"
+        Me.TimeStampDataGridViewTextBoxColumn.Name = "TimeStampDataGridViewTextBoxColumn"
+        Me.TimeStampDataGridViewTextBoxColumn.ReadOnly = True
+        Me.TimeStampDataGridViewTextBoxColumn.Width = 125
+        '
+        'TempDataGridViewTextBoxColumn
+        '
+        Me.TempDataGridViewTextBoxColumn.DataPropertyName = "Temp"
+        Me.TempDataGridViewTextBoxColumn.HeaderText = "Temp"
+        Me.TempDataGridViewTextBoxColumn.Name = "TempDataGridViewTextBoxColumn"
+        Me.TempDataGridViewTextBoxColumn.ReadOnly = True
+        Me.TempDataGridViewTextBoxColumn.Width = 120
+        '
+        'PulseDataGridViewTextBoxColumn
+        '
+        Me.PulseDataGridViewTextBoxColumn.DataPropertyName = "Pulse"
+        Me.PulseDataGridViewTextBoxColumn.HeaderText = "Pulse"
+        Me.PulseDataGridViewTextBoxColumn.Name = "PulseDataGridViewTextBoxColumn"
+        Me.PulseDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'RespDataGridViewTextBoxColumn
+        '
+        Me.RespDataGridViewTextBoxColumn.DataPropertyName = "Resp"
+        Me.RespDataGridViewTextBoxColumn.HeaderText = "Resp"
+        Me.RespDataGridViewTextBoxColumn.Name = "RespDataGridViewTextBoxColumn"
+        Me.RespDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SystolicDataGridViewTextBoxColumn
+        '
+        Me.SystolicDataGridViewTextBoxColumn.DataPropertyName = "Systolic"
+        Me.SystolicDataGridViewTextBoxColumn.HeaderText = "Systolic"
+        Me.SystolicDataGridViewTextBoxColumn.Name = "SystolicDataGridViewTextBoxColumn"
+        Me.SystolicDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DiastolicDataGridViewTextBoxColumn
+        '
+        Me.DiastolicDataGridViewTextBoxColumn.DataPropertyName = "Diastolic"
+        Me.DiastolicDataGridViewTextBoxColumn.HeaderText = "Diastolic"
+        Me.DiastolicDataGridViewTextBoxColumn.Name = "DiastolicDataGridViewTextBoxColumn"
+        Me.DiastolicDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'HtInDataGridViewTextBoxColumn
+        '
+        Me.HtInDataGridViewTextBoxColumn.DataPropertyName = "HtIn"
+        Me.HtInDataGridViewTextBoxColumn.HeaderText = "HtIn"
+        Me.HtInDataGridViewTextBoxColumn.Name = "HtInDataGridViewTextBoxColumn"
+        Me.HtInDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'WtLbDataGridViewTextBoxColumn
+        '
+        Me.WtLbDataGridViewTextBoxColumn.DataPropertyName = "WtLb"
+        Me.WtLbDataGridViewTextBoxColumn.HeaderText = "WtLb"
+        Me.WtLbDataGridViewTextBoxColumn.Name = "WtLbDataGridViewTextBoxColumn"
+        Me.WtLbDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'OzDataGridViewTextBoxColumn
+        '
+        Me.OzDataGridViewTextBoxColumn.DataPropertyName = "Oz"
+        Me.OzDataGridViewTextBoxColumn.HeaderText = "Oz"
+        Me.OzDataGridViewTextBoxColumn.Name = "OzDataGridViewTextBoxColumn"
+        Me.OzDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'BMIDataGridViewTextBoxColumn
+        '
+        Me.BMIDataGridViewTextBoxColumn.DataPropertyName = "BMI"
+        Me.BMIDataGridViewTextBoxColumn.HeaderText = "BMI"
+        Me.BMIDataGridViewTextBoxColumn.Name = "BMIDataGridViewTextBoxColumn"
+        Me.BMIDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PulseOxDataGridViewTextBoxColumn
+        '
+        Me.PulseOxDataGridViewTextBoxColumn.DataPropertyName = "PulseOx"
+        Me.PulseOxDataGridViewTextBoxColumn.HeaderText = "PulseOx"
+        Me.PulseOxDataGridViewTextBoxColumn.Name = "PulseOxDataGridViewTextBoxColumn"
+        Me.PulseOxDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'BloodSugarDataGridViewTextBoxColumn
+        '
+        Me.BloodSugarDataGridViewTextBoxColumn.DataPropertyName = "BloodSugar"
+        Me.BloodSugarDataGridViewTextBoxColumn.HeaderText = "BloodSugar"
+        Me.BloodSugarDataGridViewTextBoxColumn.Name = "BloodSugarDataGridViewTextBoxColumn"
+        Me.BloodSugarDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'LMPDataGridViewTextBoxColumn
+        '
+        Me.LMPDataGridViewTextBoxColumn.DataPropertyName = "LMP"
+        Me.LMPDataGridViewTextBoxColumn.HeaderText = "LMP"
+        Me.LMPDataGridViewTextBoxColumn.Name = "LMPDataGridViewTextBoxColumn"
+        Me.LMPDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'UserDataGridViewTextBoxColumn
+        '
+        Me.UserDataGridViewTextBoxColumn.DataPropertyName = "User"
+        Me.UserDataGridViewTextBoxColumn.HeaderText = "User"
+        Me.UserDataGridViewTextBoxColumn.Name = "UserDataGridViewTextBoxColumn"
+        Me.UserDataGridViewTextBoxColumn.ReadOnly = True
         '
         'VisitsList
         '
@@ -1174,6 +1174,8 @@ Partial Class VisitsList
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.GhostWhite
         Me.ClientSize = New System.Drawing.Size(1267, 741)
+        Me.Controls.Add(Me.PanelVitals)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.BtnVisitReport)
         Me.Controls.Add(Me.BtnProcedures)
@@ -1196,9 +1198,6 @@ Partial Class VisitsList
         Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        Me.PanelVitals.ResumeLayout(False)
-        Me.Panel5.ResumeLayout(False)
-        CType(Me.DgVitals, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MMChartTVitalSignBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelMadication.ResumeLayout(False)
         Me.Panel6.ResumeLayout(False)
@@ -1211,6 +1210,9 @@ Partial Class VisitsList
         CType(Me.MMCHDxRxLtMtBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MMPRocedureDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelVitals.ResumeLayout(False)
+        Me.Panel5.ResumeLayout(False)
+        CType(Me.DgVitals, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1235,12 +1237,9 @@ Partial Class VisitsList
     Friend WithEvents lblPracticeName As Label
     Private WithEvents btnVitals As Button
     Private WithEvents BtnMedication As Button
-    Friend WithEvents PanelVitals As Panel
     Friend WithEvents PanelMadication As Panel
-    Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel6 As Panel
     Friend WithEvents CaseNumber As DataGridViewTextBoxColumn
     Friend WithEvents FirstName As DataGridViewTextBoxColumn
@@ -1250,23 +1249,8 @@ Partial Class VisitsList
     Friend WithEvents VisitType As DataGridViewTextBoxColumn
     Friend WithEvents PhysicianName As DataGridViewTextBoxColumn
     Friend WithEvents TokenNo As DataGridViewTextBoxColumn
-    Friend WithEvents DgVitals As DataGridView
     Friend WithEvents MMChartTVitalSignBindingSource As BindingSource
     Friend WithEvents MMChartTVitalSignTableAdapter As MMDataDataSet1TableAdapters.MMChartTVitalSignTableAdapter
-    Friend WithEvents TimeStampDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TempDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents PulseDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents RespDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents SystolicDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents DiastolicDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents HtInDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents WtLbDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents OzDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents BMIDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents PulseOxDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents UserDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents BloodSugarDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents LMPDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents MMChartRxBindingSource As BindingSource
     Friend WithEvents MMChartRxTableAdapter As MMDataDataSet1TableAdapters.MMChartRxTableAdapter
     Friend WithEvents DgMedicine As DataGridView
@@ -1336,4 +1320,22 @@ Partial Class VisitsList
     Private WithEvents BtnVisitReport As Button
     Friend WithEvents TBDate As TextBox
     Friend WithEvents Label11 As Label
+    Friend WithEvents PanelVitals As Panel
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents DgVitals As DataGridView
+    Friend WithEvents Label5 As Label
+    Friend WithEvents TimeStampDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TempDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PulseDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents RespDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SystolicDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DiastolicDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents HtInDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents WtLbDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents OzDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents BMIDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PulseOxDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents BloodSugarDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents LMPDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents UserDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
