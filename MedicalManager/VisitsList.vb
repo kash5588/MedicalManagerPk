@@ -37,19 +37,19 @@ Public Class VisitsList
                 TBDate.Text = Me.MMChartVisitDataGridView.SelectedRows(0).Cells("DateVisit").Value & ""
                 'LoadPicture()
 
-                Me.MMChartTVitalSignTableAdapter.FillByChNoAndDate(Me.MMDataDataSet1.MMChartTVitalSign, aRet(1), System.DateTime.Now.Date())
+                Me.MMChartTVitalSignTableAdapter.FillByCaseNumber(Me.MMDataDataSet1.MMChartTVitalSign, aRet(10))
                 If DgVitals.Rows.Count > 0 Then
                     PanelVitals.Visible = True
                 Else
                     PanelVitals.Visible = False
                 End If
-                Me.MMChartRxTableAdapter.FillByChNoAndDate(Me.MMDataDataSet1.MMChartRx, aRet(1), System.DateTime.Now.Date())
+                Me.MMChartRxTableAdapter.FillByCaseNumber(Me.MMDataDataSet1.MMChartRx, aRet(10))
                 If DgMedicine.Rows.Count > 0 Then
                     PanelMadication.Visible = True
                 Else
                     PanelMadication.Visible = False
                 End If
-                Me.MMCHDxRxLtMtTableAdapter.FillByChNoAndDate(Me.MMDataDataSet1.MMCHDxRxLtMt, aRet(1), System.DateTime.Now.Date())
+                Me.MMCHDxRxLtMtTableAdapter.FillByCaseNumber(Me.MMDataDataSet1.MMCHDxRxLtMt, aRet(10))
                 If DgProcedure.Rows.Count > 0 Then
                     PanelProcedure.Visible = True
                 Else
