@@ -1,5 +1,7 @@
 ﻿Imports Ascend.Windows.Forms
 Imports System.Data.SqlClient
+Imports System.Globalization
+Imports System.IO
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox
 
 Public Class VisitsList
@@ -21,13 +23,15 @@ Public Class VisitsList
 
     Private Sub MMChartVisitDataGridView_SelectionChanged(sender As Object, e As EventArgs) Handles MMChartVisitDataGridView.SelectionChanged
         Try
-            If MMChartVisitDataGridView.SelectedRows.Count Then
+            Dim originalDate As String = ""
+            If MMChartVisitDataGridView.SelectedRows.Count > 0 Then
 
                 aRet(0) = "Y"
                 aRet(1) = MMChartVisitDataGridView.SelectedRows(0).Cells("ChartNumber").Value & "" 'chartnumber
                 aRet(2) = MMChartVisitDataGridView.SelectedRows(0).Cells("LastName").Value & ""  'last name
                 aRet(3) = MMChartVisitDataGridView.SelectedRows(0).Cells("FirstName").Value & ""   'first name
                 aRet(10) = MMChartVisitDataGridView.SelectedRows(0).Cells("CaseNumber").Value & ""   'CaseNumber
+                aRet(6) = MMChartVisitDataGridView.SelectedRows(0).Cells("DOB").Value & ""   'DOB
 
                 ChartNo.Text = Me.MMChartVisitDataGridView.SelectedRows(0).Cells("ChartNumber").Value
                 txtName.Text = Me.MMChartVisitDataGridView.SelectedRows(0).Cells("FirstName").Value & " " & Me.MMChartVisitDataGridView.SelectedRows(0).Cells("LastName").Value
@@ -35,7 +39,22 @@ Public Class VisitsList
                 TBTokenNo.Text = Me.MMChartVisitDataGridView.SelectedRows(0).Cells("TokenNo").Value & ""
                 TBPhysicianName.Text = Me.MMChartVisitDataGridView.SelectedRows(0).Cells("PhysicianName").Value & ""
                 TBDate.Text = Me.MMChartVisitDataGridView.SelectedRows(0).Cells("DateVisit").Value & ""
-                'LoadPicture()
+
+                originalDate = MMChartVisitDataGridView.SelectedRows(0).Cells("DOB").Value.ToString()
+
+                If originalDate <> "" Then
+                    Dim parsedDate As DateTime
+                    If DateTime.TryParseExact(originalDate, "MM/dd/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, parsedDate) Then
+                        ' Format the date to dd/MM/yyyy and display it in the TextBoxDOB
+                        tbDOB.Text = parsedDate.ToString("dd/MM/yyyy")
+                    End If
+                Else
+                    tbDOB.Text = ""
+                End If
+                ' Try to parse the original date string using the MM/dd/yyyy format
+
+
+                LoadPicture()
 
                 Me.MMChartTVitalSignTableAdapter.FillByCaseNumber(Me.MMDataDataSet1.MMChartTVitalSign, aRet(10))
                 If DgVitals.Rows.Count > 0 Then
@@ -63,6 +82,48 @@ Public Class VisitsList
         Catch
         End Try
     End Sub
+    Private Sub LoadPicture()
+        Try
+            Dim connString As String = CommonFunction.connString2
+            Using cn As New SqlConnection(connString)
+                cn.Open()
+                Dim strValue As String = ""
+                PBoxPatient.Image = Nothing
+                If ChartNo.Text <> "" Then
+                    Using cmd As New SqlCommand("SELECT ChartNumber, PictureImage FROM PatientPictures WHERE ChartNumber = @ChartNumber", cn)
+                        cmd.Parameters.AddWithValue("@ChartNumber", ChartNo.Text)
+
+                        Using reader As SqlDataReader = cmd.ExecuteReader()
+                            While reader.Read()
+                                strValue = reader("PictureImage").ToString()
+                                If strValue = "System.Byte[]" Then
+                                    Dim byteBLOBData() As Byte = CType(reader("PictureImage"), Byte())
+                                    PBoxPatient.Image = ToImage(byteBLOBData)
+                                    PBoxPatient.SizeMode = PictureBoxSizeMode.StretchImage
+                                    PBoxPatient.BorderStyle = BorderStyle.FixedSingle
+                                Else
+                                    PBoxPatient.Image = Nothing
+                                    PBoxPatient.BorderStyle = BorderStyle.None
+                                End If
+                            End While
+                        End Using
+                    End Using
+
+                End If
+
+                cn.Close()
+            End Using
+
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString(), "Error")
+        End Try
+    End Sub
+
+    Private Function ToImage(byteArray As Byte()) As Image
+        Using ms As New MemoryStream(byteArray)
+            Return Image.FromStream(ms)
+        End Using
+    End Function
 
     Private Sub clearTextBox()
         ChartNo.Text = ""
@@ -236,5 +297,22 @@ Public Class VisitsList
 
     Private Sub BtnVisitReport_Click(sender As Object, e As EventArgs) Handles BtnVisitReport.Click
         RV.ShowVisit(ChartNo.Text, TBDate.Text, txtCaseNo.Text, "visit")
+    End Sub
+
+    Private Sub MMChartVisitDataGridView_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles MMChartVisitDataGridView.CellFormatting
+        If MMChartVisitDataGridView.Columns(e.ColumnIndex).Name = "DOB" Then
+            ' Check if the cell value is not null or empty
+            If e.Value IsNot Nothing AndAlso Not String.IsNullOrEmpty(e.Value.ToString()) Then
+                Dim originalDate As String = e.Value.ToString()
+                ' Parse the original date string using the MM/dd/yyyy format
+                Dim parsedDate As DateTime
+                If DateTime.TryParseExact(originalDate, "MM/dd/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, parsedDate) Then
+                    ' Format the date to dd/MM/yyyy
+                    e.Value = parsedDate.ToString("dd/MM/yyyy")
+                    ' Set the Formatting Applied flag to true
+                    e.FormattingApplied = True
+                End If
+            End If
+        End If
     End Sub
 End Class

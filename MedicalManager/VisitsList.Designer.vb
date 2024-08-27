@@ -23,16 +23,8 @@ Partial Class VisitsList
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.MMChartVisitDataGridView = New System.Windows.Forms.DataGridView()
-        Me.CaseNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FirstName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LastName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ChartNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DateVisit = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VisitType = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PhysicianName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TokenNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MMChartVisitBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -129,7 +121,6 @@ Partial Class VisitsList
         Me.PanelVitals = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.DgVitals = New System.Windows.Forms.DataGridView()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.TimeStampDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TempDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PulseDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -144,8 +135,21 @@ Partial Class VisitsList
         Me.BloodSugarDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LMPDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UserDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.tbDOB = New System.Windows.Forms.TextBox()
+        Me.MMChartVisitDataGridView = New System.Windows.Forms.DataGridView()
+        Me.CaseNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DOB = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FirstName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LastName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ChartNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DateVisit = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VisitType = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PhysicianName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TokenNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PBoxPatient = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.MMChartVisitDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMChartVisitBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMDataDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -165,6 +169,8 @@ Partial Class VisitsList
         Me.PanelVitals.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.DgVitals, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MMChartVisitDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PBoxPatient, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -176,84 +182,8 @@ Partial Class VisitsList
         Me.Panel1.Controls.Add(Me.MMChartVisitDataGridView)
         Me.Panel1.Location = New System.Drawing.Point(211, 97)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(695, 557)
+        Me.Panel1.Size = New System.Drawing.Size(713, 557)
         Me.Panel1.TabIndex = 0
-        '
-        'MMChartVisitDataGridView
-        '
-        Me.MMChartVisitDataGridView.AllowUserToAddRows = False
-        Me.MMChartVisitDataGridView.AllowUserToDeleteRows = False
-        Me.MMChartVisitDataGridView.AutoGenerateColumns = False
-        Me.MMChartVisitDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.MMChartVisitDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.MMChartVisitDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CaseNumber, Me.FirstName, Me.LastName, Me.ChartNumber, Me.DateVisit, Me.VisitType, Me.PhysicianName, Me.TokenNo})
-        Me.MMChartVisitDataGridView.DataSource = Me.MMChartVisitBindingSource
-        Me.MMChartVisitDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MMChartVisitDataGridView.Location = New System.Drawing.Point(0, 0)
-        Me.MMChartVisitDataGridView.Name = "MMChartVisitDataGridView"
-        Me.MMChartVisitDataGridView.ReadOnly = True
-        Me.MMChartVisitDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.MMChartVisitDataGridView.Size = New System.Drawing.Size(695, 557)
-        Me.MMChartVisitDataGridView.TabIndex = 0
-        '
-        'CaseNumber
-        '
-        Me.CaseNumber.DataPropertyName = "CaseNumber"
-        Me.CaseNumber.HeaderText = "CaseNumber"
-        Me.CaseNumber.Name = "CaseNumber"
-        Me.CaseNumber.ReadOnly = True
-        '
-        'FirstName
-        '
-        Me.FirstName.DataPropertyName = "FirstName"
-        Me.FirstName.HeaderText = "FirstName"
-        Me.FirstName.Name = "FirstName"
-        Me.FirstName.ReadOnly = True
-        Me.FirstName.Width = 120
-        '
-        'LastName
-        '
-        Me.LastName.DataPropertyName = "LastName"
-        Me.LastName.HeaderText = "LastName"
-        Me.LastName.Name = "LastName"
-        Me.LastName.ReadOnly = True
-        Me.LastName.Width = 120
-        '
-        'ChartNumber
-        '
-        Me.ChartNumber.DataPropertyName = "ChartNumber"
-        Me.ChartNumber.HeaderText = "ChartNumber"
-        Me.ChartNumber.Name = "ChartNumber"
-        Me.ChartNumber.ReadOnly = True
-        '
-        'DateVisit
-        '
-        Me.DateVisit.DataPropertyName = "Date"
-        Me.DateVisit.HeaderText = "Date"
-        Me.DateVisit.Name = "DateVisit"
-        Me.DateVisit.ReadOnly = True
-        '
-        'VisitType
-        '
-        Me.VisitType.DataPropertyName = "VisitType"
-        Me.VisitType.HeaderText = "VisitType"
-        Me.VisitType.Name = "VisitType"
-        Me.VisitType.ReadOnly = True
-        '
-        'PhysicianName
-        '
-        Me.PhysicianName.DataPropertyName = "AssignedProvider"
-        Me.PhysicianName.HeaderText = "Physician"
-        Me.PhysicianName.Name = "PhysicianName"
-        Me.PhysicianName.ReadOnly = True
-        Me.PhysicianName.Width = 150
-        '
-        'TokenNo
-        '
-        Me.TokenNo.DataPropertyName = "Extra1"
-        Me.TokenNo.HeaderText = "TokenNo"
-        Me.TokenNo.Name = "TokenNo"
-        Me.TokenNo.ReadOnly = True
         '
         'MMChartVisitBindingSource
         '
@@ -281,7 +211,7 @@ Partial Class VisitsList
         Me.Panel2.Controls.Add(Me.lblPracticeName)
         Me.Panel2.Location = New System.Drawing.Point(1, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1269, 95)
+        Me.Panel2.Size = New System.Drawing.Size(1287, 95)
         Me.Panel2.TabIndex = 1
         '
         'txtFind
@@ -363,7 +293,7 @@ Partial Class VisitsList
         Me.lblPracticeName.ForeColor = System.Drawing.Color.White
         Me.lblPracticeName.Location = New System.Drawing.Point(0, 0)
         Me.lblPracticeName.Name = "lblPracticeName"
-        Me.lblPracticeName.Size = New System.Drawing.Size(1269, 41)
+        Me.lblPracticeName.Size = New System.Drawing.Size(1287, 41)
         Me.lblPracticeName.TabIndex = 13
         Me.lblPracticeName.Text = "Visit List of Patients"
         Me.lblPracticeName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -375,6 +305,8 @@ Partial Class VisitsList
         Me.Panel3.Controls.Add(Me.Label1)
         Me.Panel3.Controls.Add(Me.TBDate)
         Me.Panel3.Controls.Add(Me.Label11)
+        Me.Panel3.Controls.Add(Me.tbDOB)
+        Me.Panel3.Controls.Add(Me.Label12)
         Me.Panel3.Controls.Add(Me.TBPhysicianName)
         Me.Panel3.Controls.Add(Me.LBPhysicianName)
         Me.Panel3.Controls.Add(Me.ChartNo)
@@ -385,7 +317,7 @@ Partial Class VisitsList
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Location = New System.Drawing.Point(1, 97)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(209, 192)
+        Me.Panel3.Size = New System.Drawing.Size(209, 229)
         Me.Panel3.TabIndex = 1
         '
         'TBTokenNo
@@ -400,13 +332,13 @@ Partial Class VisitsList
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(8, 103)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(57, 15)
+        Me.Label1.Size = New System.Drawing.Size(60, 15)
         Me.Label1.TabIndex = 13
-        Me.Label1.Text = "TokenNo"
+        Me.Label1.Text = "TokenNo:"
         '
         'TBDate
         '
-        Me.TBDate.Location = New System.Drawing.Point(67, 160)
+        Me.TBDate.Location = New System.Drawing.Point(67, 196)
         Me.TBDate.Name = "TBDate"
         Me.TBDate.Size = New System.Drawing.Size(122, 21)
         Me.TBDate.TabIndex = 14
@@ -414,15 +346,15 @@ Partial Class VisitsList
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(34, 163)
+        Me.Label11.Location = New System.Drawing.Point(31, 199)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(33, 15)
+        Me.Label11.Size = New System.Drawing.Size(36, 15)
         Me.Label11.TabIndex = 13
-        Me.Label11.Text = "Date"
+        Me.Label11.Text = "Date:"
         '
         'TBPhysicianName
         '
-        Me.TBPhysicianName.Location = New System.Drawing.Point(68, 129)
+        Me.TBPhysicianName.Location = New System.Drawing.Point(68, 165)
         Me.TBPhysicianName.Name = "TBPhysicianName"
         Me.TBPhysicianName.Size = New System.Drawing.Size(122, 21)
         Me.TBPhysicianName.TabIndex = 14
@@ -430,11 +362,11 @@ Partial Class VisitsList
         'LBPhysicianName
         '
         Me.LBPhysicianName.AutoSize = True
-        Me.LBPhysicianName.Location = New System.Drawing.Point(8, 132)
+        Me.LBPhysicianName.Location = New System.Drawing.Point(8, 168)
         Me.LBPhysicianName.Name = "LBPhysicianName"
-        Me.LBPhysicianName.Size = New System.Drawing.Size(59, 15)
+        Me.LBPhysicianName.Size = New System.Drawing.Size(62, 15)
         Me.LBPhysicianName.TabIndex = 13
-        Me.LBPhysicianName.Text = "Physician"
+        Me.LBPhysicianName.Text = "Physician:"
         '
         'ChartNo
         '
@@ -497,7 +429,7 @@ Partial Class VisitsList
         Me.btnVitals.BackColor = System.Drawing.Color.DodgerBlue
         Me.btnVitals.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnVitals.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnVitals.Location = New System.Drawing.Point(12, 313)
+        Me.btnVitals.Location = New System.Drawing.Point(12, 332)
         Me.btnVitals.Name = "btnVitals"
         Me.btnVitals.Size = New System.Drawing.Size(179, 37)
         Me.btnVitals.TabIndex = 194
@@ -509,7 +441,7 @@ Partial Class VisitsList
         Me.BtnMedication.BackColor = System.Drawing.Color.DodgerBlue
         Me.BtnMedication.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnMedication.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnMedication.Location = New System.Drawing.Point(12, 365)
+        Me.BtnMedication.Location = New System.Drawing.Point(12, 384)
         Me.BtnMedication.Name = "BtnMedication"
         Me.BtnMedication.Size = New System.Drawing.Size(179, 37)
         Me.BtnMedication.TabIndex = 194
@@ -526,7 +458,7 @@ Partial Class VisitsList
         Me.PanelMadication.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelMadication.Controls.Add(Me.Panel6)
         Me.PanelMadication.Controls.Add(Me.Label6)
-        Me.PanelMadication.Location = New System.Drawing.Point(-1, -1)
+        Me.PanelMadication.Location = New System.Drawing.Point(4, -1)
         Me.PanelMadication.Name = "PanelMadication"
         Me.PanelMadication.Size = New System.Drawing.Size(361, 156)
         Me.PanelMadication.TabIndex = 195
@@ -624,9 +556,9 @@ Partial Class VisitsList
         Me.Panel4.BackColor = System.Drawing.Color.GhostWhite
         Me.Panel4.Controls.Add(Me.PanelProcedure)
         Me.Panel4.Controls.Add(Me.PanelMadication)
-        Me.Panel4.Location = New System.Drawing.Point(908, 97)
+        Me.Panel4.Location = New System.Drawing.Point(921, 172)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(362, 557)
+        Me.Panel4.Size = New System.Drawing.Size(367, 482)
         Me.Panel4.TabIndex = 196
         '
         'PanelProcedure
@@ -634,7 +566,7 @@ Partial Class VisitsList
         Me.PanelProcedure.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelProcedure.Controls.Add(Me.Panel8)
         Me.PanelProcedure.Controls.Add(Me.Label10)
-        Me.PanelProcedure.Location = New System.Drawing.Point(-1, 168)
+        Me.PanelProcedure.Location = New System.Drawing.Point(4, 168)
         Me.PanelProcedure.Name = "PanelProcedure"
         Me.PanelProcedure.Size = New System.Drawing.Size(361, 156)
         Me.PanelProcedure.TabIndex = 195
@@ -994,7 +926,7 @@ Partial Class VisitsList
         Me.BtnProcedures.BackColor = System.Drawing.Color.DodgerBlue
         Me.BtnProcedures.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnProcedures.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnProcedures.Location = New System.Drawing.Point(12, 419)
+        Me.BtnProcedures.Location = New System.Drawing.Point(12, 438)
         Me.BtnProcedures.Name = "BtnProcedures"
         Me.BtnProcedures.Size = New System.Drawing.Size(179, 37)
         Me.BtnProcedures.TabIndex = 194
@@ -1006,7 +938,7 @@ Partial Class VisitsList
         Me.BtnVisitReport.BackColor = System.Drawing.Color.DodgerBlue
         Me.BtnVisitReport.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnVisitReport.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnVisitReport.Location = New System.Drawing.Point(12, 475)
+        Me.BtnVisitReport.Location = New System.Drawing.Point(12, 494)
         Me.BtnVisitReport.Name = "BtnVisitReport"
         Me.BtnVisitReport.Size = New System.Drawing.Size(179, 37)
         Me.BtnVisitReport.TabIndex = 194
@@ -1020,7 +952,7 @@ Partial Class VisitsList
         Me.PanelVitals.Controls.Add(Me.Panel5)
         Me.PanelVitals.Location = New System.Drawing.Point(211, 651)
         Me.PanelVitals.Name = "PanelVitals"
-        Me.PanelVitals.Size = New System.Drawing.Size(1058, 90)
+        Me.PanelVitals.Size = New System.Drawing.Size(1076, 90)
         Me.PanelVitals.TabIndex = 197
         Me.PanelVitals.Visible = False
         '
@@ -1032,7 +964,7 @@ Partial Class VisitsList
         Me.Panel5.Controls.Add(Me.DgVitals)
         Me.Panel5.Location = New System.Drawing.Point(2, 0)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(1053, 92)
+        Me.Panel5.Size = New System.Drawing.Size(1071, 92)
         Me.Panel5.TabIndex = 15
         '
         'DgVitals
@@ -1052,21 +984,8 @@ Partial Class VisitsList
         Me.DgVitals.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.DgVitals.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.DgVitals.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgVitals.Size = New System.Drawing.Size(1053, 92)
+        Me.DgVitals.Size = New System.Drawing.Size(1071, 92)
         Me.DgVitals.TabIndex = 198
-        '
-        'Label5
-        '
-        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.Label5.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(1, 650)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(209, 90)
-        Me.Label5.TabIndex = 14
-        Me.Label5.Text = "Vital Signs"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'TimeStampDataGridViewTextBoxColumn
         '
@@ -1168,12 +1087,139 @@ Partial Class VisitsList
         Me.UserDataGridViewTextBoxColumn.Name = "UserDataGridViewTextBoxColumn"
         Me.UserDataGridViewTextBoxColumn.ReadOnly = True
         '
+        'Label5
+        '
+        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.Label5.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Black
+        Me.Label5.Location = New System.Drawing.Point(1, 650)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(209, 90)
+        Me.Label5.TabIndex = 14
+        Me.Label5.Text = "Vital Signs"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(26, 136)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(36, 15)
+        Me.Label12.TabIndex = 13
+        Me.Label12.Text = "DOB:"
+        '
+        'tbDOB
+        '
+        Me.tbDOB.Location = New System.Drawing.Point(67, 133)
+        Me.tbDOB.Name = "tbDOB"
+        Me.tbDOB.Size = New System.Drawing.Size(122, 21)
+        Me.tbDOB.TabIndex = 14
+        '
+        'MMChartVisitDataGridView
+        '
+        Me.MMChartVisitDataGridView.AllowUserToAddRows = False
+        Me.MMChartVisitDataGridView.AllowUserToDeleteRows = False
+        Me.MMChartVisitDataGridView.AutoGenerateColumns = False
+        Me.MMChartVisitDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.MMChartVisitDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.MMChartVisitDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CaseNumber, Me.DOB, Me.FirstName, Me.LastName, Me.ChartNumber, Me.DateVisit, Me.VisitType, Me.PhysicianName, Me.TokenNo})
+        Me.MMChartVisitDataGridView.DataSource = Me.MMChartVisitBindingSource
+        Me.MMChartVisitDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.MMChartVisitDataGridView.Location = New System.Drawing.Point(0, 0)
+        Me.MMChartVisitDataGridView.Name = "MMChartVisitDataGridView"
+        Me.MMChartVisitDataGridView.ReadOnly = True
+        Me.MMChartVisitDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.MMChartVisitDataGridView.Size = New System.Drawing.Size(713, 557)
+        Me.MMChartVisitDataGridView.TabIndex = 0
+        '
+        'CaseNumber
+        '
+        Me.CaseNumber.DataPropertyName = "CaseNumber"
+        Me.CaseNumber.HeaderText = "CaseNo"
+        Me.CaseNumber.Name = "CaseNumber"
+        Me.CaseNumber.ReadOnly = True
+        Me.CaseNumber.Width = 70
+        '
+        'DOB
+        '
+        Me.DOB.DataPropertyName = "DOB"
+        DataGridViewCellStyle7.Format = "d"
+        DataGridViewCellStyle7.NullValue = Nothing
+        Me.DOB.DefaultCellStyle = DataGridViewCellStyle7
+        Me.DOB.HeaderText = "DOB"
+        Me.DOB.Name = "DOB"
+        Me.DOB.ReadOnly = True
+        '
+        'FirstName
+        '
+        Me.FirstName.DataPropertyName = "FirstName"
+        Me.FirstName.HeaderText = "FirstName"
+        Me.FirstName.Name = "FirstName"
+        Me.FirstName.ReadOnly = True
+        Me.FirstName.Width = 130
+        '
+        'LastName
+        '
+        Me.LastName.DataPropertyName = "LastName"
+        Me.LastName.HeaderText = "LastName"
+        Me.LastName.Name = "LastName"
+        Me.LastName.ReadOnly = True
+        Me.LastName.Width = 130
+        '
+        'ChartNumber
+        '
+        Me.ChartNumber.DataPropertyName = "ChartNumber"
+        Me.ChartNumber.HeaderText = "ChartNumber"
+        Me.ChartNumber.Name = "ChartNumber"
+        Me.ChartNumber.ReadOnly = True
+        '
+        'DateVisit
+        '
+        Me.DateVisit.DataPropertyName = "Date"
+        Me.DateVisit.HeaderText = "Date"
+        Me.DateVisit.Name = "DateVisit"
+        Me.DateVisit.ReadOnly = True
+        '
+        'VisitType
+        '
+        Me.VisitType.DataPropertyName = "VisitType"
+        Me.VisitType.HeaderText = "VisitType"
+        Me.VisitType.Name = "VisitType"
+        Me.VisitType.ReadOnly = True
+        '
+        'PhysicianName
+        '
+        Me.PhysicianName.DataPropertyName = "AssignedProvider"
+        Me.PhysicianName.HeaderText = "Physician"
+        Me.PhysicianName.Name = "PhysicianName"
+        Me.PhysicianName.ReadOnly = True
+        Me.PhysicianName.Width = 150
+        '
+        'TokenNo
+        '
+        Me.TokenNo.DataPropertyName = "Extra1"
+        Me.TokenNo.HeaderText = "TokenNo"
+        Me.TokenNo.Name = "TokenNo"
+        Me.TokenNo.ReadOnly = True
+        '
+        'PBoxPatient
+        '
+        Me.PBoxPatient.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PBoxPatient.BackColor = System.Drawing.Color.Transparent
+        Me.PBoxPatient.Location = New System.Drawing.Point(928, 97)
+        Me.PBoxPatient.Name = "PBoxPatient"
+        Me.PBoxPatient.Size = New System.Drawing.Size(75, 70)
+        Me.PBoxPatient.TabIndex = 17
+        Me.PBoxPatient.TabStop = False
+        '
         'VisitsList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.GhostWhite
-        Me.ClientSize = New System.Drawing.Size(1267, 741)
+        Me.ClientSize = New System.Drawing.Size(1285, 741)
+        Me.Controls.Add(Me.PBoxPatient)
         Me.Controls.Add(Me.PanelVitals)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Panel4)
@@ -1191,7 +1237,6 @@ Partial Class VisitsList
         Me.Text = "VisitsList"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
-        CType(Me.MMChartVisitDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MMChartVisitBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MMDataDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
@@ -1213,6 +1258,8 @@ Partial Class VisitsList
         Me.PanelVitals.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
         CType(Me.DgVitals, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MMChartVisitDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PBoxPatient, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1221,7 +1268,6 @@ Partial Class VisitsList
     Friend WithEvents MMDataDataSet1 As MMDataDataSet1
     Friend WithEvents MMChartVisitBindingSource As BindingSource
     Friend WithEvents MMChartVisitTableAdapter As MMDataDataSet1TableAdapters.MMChartVisitTableAdapter
-    Friend WithEvents MMChartVisitDataGridView As DataGridView
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents TBPhysicianName As TextBox
@@ -1241,14 +1287,6 @@ Partial Class VisitsList
     Friend WithEvents Label6 As Label
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Panel6 As Panel
-    Friend WithEvents CaseNumber As DataGridViewTextBoxColumn
-    Friend WithEvents FirstName As DataGridViewTextBoxColumn
-    Friend WithEvents LastName As DataGridViewTextBoxColumn
-    Friend WithEvents ChartNumber As DataGridViewTextBoxColumn
-    Friend WithEvents DateVisit As DataGridViewTextBoxColumn
-    Friend WithEvents VisitType As DataGridViewTextBoxColumn
-    Friend WithEvents PhysicianName As DataGridViewTextBoxColumn
-    Friend WithEvents TokenNo As DataGridViewTextBoxColumn
     Friend WithEvents MMChartTVitalSignBindingSource As BindingSource
     Friend WithEvents MMChartTVitalSignTableAdapter As MMDataDataSet1TableAdapters.MMChartTVitalSignTableAdapter
     Friend WithEvents MMChartRxBindingSource As BindingSource
@@ -1338,4 +1376,17 @@ Partial Class VisitsList
     Friend WithEvents BloodSugarDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents LMPDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents UserDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents tbDOB As TextBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents MMChartVisitDataGridView As DataGridView
+    Friend WithEvents CaseNumber As DataGridViewTextBoxColumn
+    Friend WithEvents DOB As DataGridViewTextBoxColumn
+    Friend WithEvents FirstName As DataGridViewTextBoxColumn
+    Friend WithEvents LastName As DataGridViewTextBoxColumn
+    Friend WithEvents ChartNumber As DataGridViewTextBoxColumn
+    Friend WithEvents DateVisit As DataGridViewTextBoxColumn
+    Friend WithEvents VisitType As DataGridViewTextBoxColumn
+    Friend WithEvents PhysicianName As DataGridViewTextBoxColumn
+    Friend WithEvents TokenNo As DataGridViewTextBoxColumn
+    Private WithEvents PBoxPatient As PictureBox
 End Class
