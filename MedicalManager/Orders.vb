@@ -209,6 +209,7 @@ Public Class Orders
                 Me.DataGridViewPr.Columns(1).Width = 355
                 Me.DataGridViewPr.Columns(2).Width = 70
 
+                DataGridViewPr.DefaultCellStyle.BackColor = Color.AliceBlue
                 If globalTemplate <> "" Then
                     radTemplateDX.Checked = True
                     LoadTemplateSpecificDxPrTests()
@@ -505,6 +506,7 @@ Public Class Orders
                 Me.DataGridViewPr.Columns(0).Width = 70
                 Me.DataGridViewPr.Columns(1).Width = 355
                 Me.DataGridViewPr.Columns(2).Width = 70
+                DataGridViewPr.DefaultCellStyle.BackColor = Color.WhiteSmoke
                 If globalTemplate <> "" Then
                     radTemplateDX.Checked = True
                     LoadTemplateSpecificDxPrTests()
@@ -541,9 +543,6 @@ Public Class Orders
                 myBindingSource.DataMember = ds.Tables(0).TableName
                 DataGridViewPr.DataSource = myBindingSource
 
-
-
-
                 '  DataGridViewPr.DataSource = ds.Tables("MMChartTestMedical")
                 ds.Dispose()
                 cn.Close()
@@ -551,6 +550,7 @@ Public Class Orders
                 Me.DataGridViewPr.Columns(0).Width = 70
                 Me.DataGridViewPr.Columns(1).Width = 350
                 Me.DataGridViewPr.Columns(2).Width = 70
+                DataGridViewPr.DefaultCellStyle.BackColor = Color.Snow
                 If globalTemplate <> "" Then
                     radTemplateDX.Checked = True
                     LoadTemplateSpecificDxPrTests()
@@ -584,7 +584,7 @@ Public Class Orders
                 myBindingSource.DataSource = ds
                 myBindingSource.DataMember = ds.Tables(0).TableName
                 DataGridViewPr.DataSource = myBindingSource
-
+                DataGridViewPr.DefaultCellStyle.BackColor = Color.White
                 ' DataGridViewPr.DataSource = ds.Tables("MMChartTestImaging")
                 ds.Dispose()
                 cn.Close()

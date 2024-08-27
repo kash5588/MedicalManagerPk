@@ -24,6 +24,8 @@ Partial Class Orders
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TBPhysician = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.txtCaseNo = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -45,6 +47,7 @@ Partial Class Orders
         Me.Label6 = New System.Windows.Forms.Label()
         Me.radAll = New System.Windows.Forms.RadioButton()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.MMCHDxRxLtMtDataGridView = New System.Windows.Forms.DataGridView()
         Me.Code = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -62,9 +65,6 @@ Partial Class Orders
         Me.MMCHDxRxLtMtBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1()
         Me.MMCHDxRxLtMtTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMCHDxRxLtMtTableAdapter()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TBPhysician = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -97,6 +97,25 @@ Partial Class Orders
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1240, 55)
         Me.Panel1.TabIndex = 0
+        '
+        'TBPhysician
+        '
+        Me.TBPhysician.AcceptsReturn = True
+        Me.TBPhysician.BackColor = System.Drawing.Color.White
+        Me.TBPhysician.Enabled = False
+        Me.TBPhysician.Location = New System.Drawing.Point(534, 18)
+        Me.TBPhysician.Name = "TBPhysician"
+        Me.TBPhysician.Size = New System.Drawing.Size(109, 21)
+        Me.TBPhysician.TabIndex = 19
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(470, 21)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(62, 15)
+        Me.Label5.TabIndex = 20
+        Me.Label5.Text = "Physician:"
         '
         'txtCaseNo
         '
@@ -340,6 +359,21 @@ Partial Class Orders
         Me.Panel3.Size = New System.Drawing.Size(627, 622)
         Me.Panel3.TabIndex = 10
         '
+        'Label1
+        '
+        Me.Label1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label1.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(0, 1)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(627, 51)
+        Me.Label1.TabIndex = 14
+        Me.Label1.Text = "Procedures"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Panel7
         '
         Me.Panel7.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -464,40 +498,6 @@ Partial Class Orders
         'MMCHDxRxLtMtTableAdapter
         '
         Me.MMCHDxRxLtMtTableAdapter.ClearBeforeFill = True
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label1.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.Label1.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(0, 1)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(627, 51)
-        Me.Label1.TabIndex = 14
-        Me.Label1.Text = "Procedures"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(470, 21)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(62, 15)
-        Me.Label5.TabIndex = 20
-        Me.Label5.Text = "Physician:"
-        '
-        'TBPhysician
-        '
-        Me.TBPhysician.AcceptsReturn = True
-        Me.TBPhysician.BackColor = System.Drawing.Color.White
-        Me.TBPhysician.Enabled = False
-        Me.TBPhysician.Location = New System.Drawing.Point(534, 18)
-        Me.TBPhysician.Name = "TBPhysician"
-        Me.TBPhysician.Size = New System.Drawing.Size(109, 21)
-        Me.TBPhysician.TabIndex = 19
         '
         'Orders
         '
