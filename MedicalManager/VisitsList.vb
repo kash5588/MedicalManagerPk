@@ -315,4 +315,8 @@ Public Class VisitsList
             End If
         End If
     End Sub
+
+    Private Sub BtnRefresh_Click(sender As Object, e As EventArgs) Handles BtnRefresh.Click
+        GetFilteredChartVisits(CBPhysician.Text, CBDate.Text)
+    End Sub
 End Class

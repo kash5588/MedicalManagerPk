@@ -107,6 +107,14 @@ Public Class Prescription
         Me.MMDataDataSet1.MMChartRx.PatientNameColumn.DefaultValue = aRet(2) + ", " + aRet(3)
         If aRet(10) <> "" Then
             Me.MMDataDataSet1.MMChartRx.CaseNumberColumn.DefaultValue = aRet(10)
+            Dim aPhy() As String = LoadPhysicianData(aRet(10))
+
+            If aPhy IsNot Nothing AndAlso aPhy.Length > 0 Then
+                OrderingPhysicianIDTextBox.Text = aPhy(0)
+                PhyCode = aPhy(0)
+                Me.MMDataDataSet1.MMChartRx.PhysicianNameColumn.DefaultValue = aPhy(1)
+                Me.MMDataDataSet1.MMChartRx.LicenseNumberColumn.DefaultValue = aPhy(2)
+            End If
         Else
             Me.MMDataDataSet1.MMChartRx.CaseNumberColumn.DefaultValue = 0
         End If
@@ -120,7 +128,44 @@ Public Class Prescription
         Me.MMDataDataSet1.MMChartRx.UserColumn.DefaultValue = globalUser.ToString
         Me.MMDataDataSet1.MMChartRx.TimeStampColumn.DefaultValue = System.DateTime.Now
     End Sub
+    Private Function LoadPhysicianData(caseNo As String) As String()
+        Dim aPhy(5) As String
 
+        ' Define your connection string (replace with your actual connection details)
+        Dim connectionString As String = connString2
+
+        ' Define the SQL query to retrieve the necessary data
+        Dim query As String = " SELECT  MMPhysion.Code, MMPhysion.FirstName + ' ' + MMPhysion.LastName AS FullName, MMPhysion.LicenseNumber
+                             FROM   MMPhysion  INNER JOIN  MMChartVisit  ON  MMPhysion.FirstName + ' ' + MMPhysion.LastName = MMChartVisit.AssignedProvider
+                             WHERE MMChartVisit.CaseNumber = @CaseNo;"
+
+        ' Use a Using statement to ensure the connection is closed and disposed properly
+        Using connection As New SqlConnection(connectionString)
+            ' Open the connection
+            connection.Open()
+
+            ' Create a command to execute the SQL query
+            Using command As New SqlCommand(query, connection)
+                ' Add the parameter to the command to prevent SQL injection
+                command.Parameters.AddWithValue("@CaseNo", caseNo)
+
+                ' Execute the command and read the results
+                Using reader As SqlDataReader = command.ExecuteReader()
+                    If reader.Read() Then
+                        ' Populate the array with the retrieved data
+                        aPhy(0) = reader("Code").ToString()
+                        aPhy(1) = reader("FullName").ToString()
+                        aPhy(2) = reader("LicenseNumber").ToString()
+                    End If
+                End Using
+            End Using
+        End Using
+
+        ' Return the array with the physician data
+        Return aPhy
+
+
+    End Function
     Private Sub cmdDrug_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdDrug.Click
         Try
             Dim FrmDrugs As New DRUGs
