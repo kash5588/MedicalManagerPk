@@ -2228,6 +2228,24 @@ Public Class MDIParent
     End Sub
 
     Private Sub BtnVisitList_Click(sender As Object, e As EventArgs) Handles BtnVisitList.Click
-        VisitsList.Show()
+        Dim pieces() As String
+        Dim IndexOf As Integer
+        Dim sAction As String
+        Try
+            sAction = "ShowVistList"
+            pieces = Permissions.Split(",")
+            IndexOf = Array.IndexOf(pieces, sAction)
+            If IndexOf <> -1 Then
+            Else
+                MessageBox.Show("User not authorized to Show VistList", "Authorization Denied", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Exit Sub
+            End If
+
+            VisitsList.Show()
+
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+
     End Sub
 End Class

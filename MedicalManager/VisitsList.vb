@@ -134,12 +134,30 @@ Public Class VisitsList
     End Sub
 
     Private Sub btnVitals_Click(sender As Object, e As EventArgs) Handles btnVitals.Click
+        Dim pieces() As String
+        Dim IndexOf As Integer
+        Dim sAction As String
+        Try
+            sAction = "VistListVitals"
+            pieces = Permissions.Split(",")
+            IndexOf = Array.IndexOf(pieces, sAction)
+            If IndexOf <> -1 Then
+            Else
+                MessageBox.Show("User not authorized to Add Vitals", "Authorization Denied", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Exit Sub
+            End If
 
 
-        If MMChartVisitDataGridView.SelectedRows.Count Then
+            If MMChartVisitDataGridView.SelectedRows.Count > 0 Then
 
-            VitalSigns.ShowVitalSigns(aRet)
-        End If
+                VitalSigns.ShowVitalSigns(aRet)
+            End If
+
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+
+
 
 
 
@@ -242,9 +260,29 @@ Public Class VisitsList
         End Try
     End Function
     Private Sub BtnMedication_Click(sender As Object, e As EventArgs) Handles BtnMedication.Click
-        If MMChartVisitDataGridView.SelectedRows.Count Then
-            Prescription.ShowPrescriptions(aRet)
-        End If
+        Dim pieces() As String
+        Dim IndexOf As Integer
+        Dim sAction As String
+        Try
+            sAction = "VistListMedication"
+            pieces = Permissions.Split(",")
+            IndexOf = Array.IndexOf(pieces, sAction)
+            If IndexOf <> -1 Then
+            Else
+                MessageBox.Show("User not authorized to Add Medication", "Authorization Denied", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Exit Sub
+            End If
+
+            If MMChartVisitDataGridView.SelectedRows.Count > 0 Then
+                Prescription.ShowPrescriptions(aRet)
+            End If
+
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+
+
+
     End Sub
 
     Private Sub cmbFilterByDate_SelectedValueChanged(sender As Object, e As EventArgs) Handles CBDate.SelectedValueChanged
@@ -290,13 +328,55 @@ Public Class VisitsList
     End Sub
 
     Private Sub BtnProcedures_Click(sender As Object, e As EventArgs) Handles BtnProcedures.Click
-        If MMChartVisitDataGridView.SelectedRows.Count Then
-            Orders.ShowProcedures(aRet, TBPhysicianName.Text)
-        End If
+        Dim pieces() As String
+        Dim IndexOf As Integer
+        Dim sAction As String
+        Try
+            sAction = "VistListProcedures"
+            pieces = Permissions.Split(",")
+            IndexOf = Array.IndexOf(pieces, sAction)
+            If IndexOf <> -1 Then
+            Else
+                MessageBox.Show("User not authorized to Add Procedures", "Authorization Denied", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Exit Sub
+            End If
+
+            If MMChartVisitDataGridView.SelectedRows.Count > 0 Then
+                Orders.ShowProcedures(aRet, TBPhysicianName.Text)
+            End If
+
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+
+
+
+
+
     End Sub
 
     Private Sub BtnVisitReport_Click(sender As Object, e As EventArgs) Handles BtnVisitReport.Click
-        RV.ShowVisit(ChartNo.Text, TBDate.Text, txtCaseNo.Text, "visit")
+        Dim pieces() As String
+        Dim IndexOf As Integer
+        Dim sAction As String
+        Try
+            sAction = "VistListProcedures"
+            pieces = Permissions.Split(",")
+            IndexOf = Array.IndexOf(pieces, sAction)
+            If IndexOf <> -1 Then
+            Else
+                MessageBox.Show("User not authorized to Add Procedures", "Authorization Denied", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Exit Sub
+            End If
+
+            If MMChartVisitDataGridView.SelectedRows.Count > 0 Then
+                RV.ShowVisit(ChartNo.Text, TBDate.Text, txtCaseNo.Text, "visit")
+            End If
+
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+
     End Sub
 
     Private Sub MMChartVisitDataGridView_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles MMChartVisitDataGridView.CellFormatting

@@ -23,7 +23,7 @@ Partial Class VisitsList
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MMChartVisitDataGridView = New System.Windows.Forms.DataGridView()
         Me.CaseNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -216,9 +216,9 @@ Partial Class VisitsList
         'DOB
         '
         Me.DOB.DataPropertyName = "DOB"
-        DataGridViewCellStyle1.Format = "d"
-        DataGridViewCellStyle1.NullValue = Nothing
-        Me.DOB.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Format = "d"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.DOB.DefaultCellStyle = DataGridViewCellStyle2
         Me.DOB.HeaderText = "DOB"
         Me.DOB.Name = "DOB"
         Me.DOB.ReadOnly = True
@@ -371,7 +371,7 @@ Partial Class VisitsList
         Me.BtnRefresh.BackColor = System.Drawing.Color.DodgerBlue
         Me.BtnRefresh.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnRefresh.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnRefresh.Location = New System.Drawing.Point(54, 49)
+        Me.BtnRefresh.Location = New System.Drawing.Point(66, 49)
         Me.BtnRefresh.Name = "BtnRefresh"
         Me.BtnRefresh.Size = New System.Drawing.Size(78, 37)
         Me.BtnRefresh.TabIndex = 194
@@ -687,7 +687,7 @@ Partial Class VisitsList
         Me.PanelProcedure.Controls.Add(Me.Label10)
         Me.PanelProcedure.Location = New System.Drawing.Point(4, 168)
         Me.PanelProcedure.Name = "PanelProcedure"
-        Me.PanelProcedure.Size = New System.Drawing.Size(361, 156)
+        Me.PanelProcedure.Size = New System.Drawing.Size(361, 200)
         Me.PanelProcedure.TabIndex = 195
         Me.PanelProcedure.Visible = False
         '
@@ -700,7 +700,7 @@ Partial Class VisitsList
         Me.Panel8.Controls.Add(Me.DataGridView1)
         Me.Panel8.Location = New System.Drawing.Point(0, 31)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(359, 124)
+        Me.Panel8.Size = New System.Drawing.Size(359, 166)
         Me.Panel8.TabIndex = 15
         '
         'DgProcedure
@@ -717,7 +717,7 @@ Partial Class VisitsList
         Me.DgProcedure.Name = "DgProcedure"
         Me.DgProcedure.ReadOnly = True
         Me.DgProcedure.RowHeadersVisible = False
-        Me.DgProcedure.Size = New System.Drawing.Size(359, 124)
+        Me.DgProcedure.Size = New System.Drawing.Size(359, 166)
         Me.DgProcedure.TabIndex = 197
         '
         'DataGridViewTextBoxColumn6
@@ -780,7 +780,7 @@ Partial Class VisitsList
         Me.MMPRocedureDataGridView.Name = "MMPRocedureDataGridView"
         Me.MMPRocedureDataGridView.ReadOnly = True
         Me.MMPRocedureDataGridView.RowHeadersVisible = False
-        Me.MMPRocedureDataGridView.Size = New System.Drawing.Size(359, 124)
+        Me.MMPRocedureDataGridView.Size = New System.Drawing.Size(359, 166)
         Me.MMPRocedureDataGridView.TabIndex = 196
         '
         'DataGridView1
@@ -797,7 +797,7 @@ Partial Class VisitsList
         Me.DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(359, 124)
+        Me.DataGridView1.Size = New System.Drawing.Size(359, 166)
         Me.DataGridView1.TabIndex = 197
         '
         'Label10
