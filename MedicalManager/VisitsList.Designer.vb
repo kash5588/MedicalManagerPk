@@ -23,7 +23,7 @@ Partial Class VisitsList
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MMChartVisitDataGridView = New System.Windows.Forms.DataGridView()
         Me.CaseNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -45,6 +45,7 @@ Partial Class VisitsList
         Me.C = New System.Windows.Forms.Label()
         Me.CBDate = New System.Windows.Forms.ComboBox()
         Me.CBPhysician = New System.Windows.Forms.ComboBox()
+        Me.BtnRefresh = New System.Windows.Forms.Button()
         Me.cmbFilter = New System.Windows.Forms.ComboBox()
         Me.lblPracticeName = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -79,6 +80,12 @@ Partial Class VisitsList
         Me.PanelProcedure = New System.Windows.Forms.Panel()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.DgProcedure = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Type = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MMCHDxRxLtMtBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MMPRocedureDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -144,13 +151,7 @@ Partial Class VisitsList
         Me.UserDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.PBoxPatient = New System.Windows.Forms.PictureBox()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Type = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BtnRefresh = New System.Windows.Forms.Button()
+        Me.BtnToken = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.MMChartVisitDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMChartVisitBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -215,9 +216,9 @@ Partial Class VisitsList
         'DOB
         '
         Me.DOB.DataPropertyName = "DOB"
-        DataGridViewCellStyle2.Format = "d"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.DOB.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Format = "d"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.DOB.DefaultCellStyle = DataGridViewCellStyle1
         Me.DOB.HeaderText = "DOB"
         Me.DOB.Name = "DOB"
         Me.DOB.ReadOnly = True
@@ -364,6 +365,18 @@ Partial Class VisitsList
         Me.CBPhysician.Name = "CBPhysician"
         Me.CBPhysician.Size = New System.Drawing.Size(121, 23)
         Me.CBPhysician.TabIndex = 14
+        '
+        'BtnRefresh
+        '
+        Me.BtnRefresh.BackColor = System.Drawing.Color.DodgerBlue
+        Me.BtnRefresh.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnRefresh.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnRefresh.Location = New System.Drawing.Point(54, 49)
+        Me.BtnRefresh.Name = "BtnRefresh"
+        Me.BtnRefresh.Size = New System.Drawing.Size(78, 37)
+        Me.BtnRefresh.TabIndex = 194
+        Me.BtnRefresh.Text = "Refresh"
+        Me.BtnRefresh.UseVisualStyleBackColor = False
         '
         'cmbFilter
         '
@@ -535,7 +548,7 @@ Partial Class VisitsList
         Me.btnVitals.BackColor = System.Drawing.Color.DodgerBlue
         Me.btnVitals.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnVitals.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnVitals.Location = New System.Drawing.Point(12, 345)
+        Me.btnVitals.Location = New System.Drawing.Point(12, 395)
         Me.btnVitals.Name = "btnVitals"
         Me.btnVitals.Size = New System.Drawing.Size(179, 37)
         Me.btnVitals.TabIndex = 194
@@ -547,7 +560,7 @@ Partial Class VisitsList
         Me.BtnMedication.BackColor = System.Drawing.Color.DodgerBlue
         Me.BtnMedication.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnMedication.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnMedication.Location = New System.Drawing.Point(12, 397)
+        Me.BtnMedication.Location = New System.Drawing.Point(12, 449)
         Me.BtnMedication.Name = "BtnMedication"
         Me.BtnMedication.Size = New System.Drawing.Size(179, 37)
         Me.BtnMedication.TabIndex = 194
@@ -706,6 +719,50 @@ Partial Class VisitsList
         Me.DgProcedure.RowHeadersVisible = False
         Me.DgProcedure.Size = New System.Drawing.Size(359, 124)
         Me.DgProcedure.TabIndex = 197
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "Description"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Description"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        Me.DataGridViewTextBoxColumn6.Width = 160
+        '
+        'DataGridViewTextBoxColumn16
+        '
+        Me.DataGridViewTextBoxColumn16.DataPropertyName = "Amount"
+        Me.DataGridViewTextBoxColumn16.HeaderText = "Amount"
+        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
+        Me.DataGridViewTextBoxColumn16.ReadOnly = True
+        '
+        'Type
+        '
+        Me.Type.DataPropertyName = "Type"
+        Me.Type.HeaderText = "Type"
+        Me.Type.Name = "Type"
+        Me.Type.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn12
+        '
+        Me.DataGridViewTextBoxColumn12.DataPropertyName = "UserID"
+        Me.DataGridViewTextBoxColumn12.HeaderText = "User"
+        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        Me.DataGridViewTextBoxColumn12.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Date"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Date"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "ID"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "ID"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Visible = False
         '
         'MMCHDxRxLtMtBindingSource
         '
@@ -995,7 +1052,7 @@ Partial Class VisitsList
         Me.BtnProcedures.BackColor = System.Drawing.Color.DodgerBlue
         Me.BtnProcedures.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnProcedures.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnProcedures.Location = New System.Drawing.Point(12, 451)
+        Me.BtnProcedures.Location = New System.Drawing.Point(12, 503)
         Me.BtnProcedures.Name = "BtnProcedures"
         Me.BtnProcedures.Size = New System.Drawing.Size(179, 37)
         Me.BtnProcedures.TabIndex = 194
@@ -1007,7 +1064,7 @@ Partial Class VisitsList
         Me.BtnVisitReport.BackColor = System.Drawing.Color.DodgerBlue
         Me.BtnVisitReport.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnVisitReport.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnVisitReport.Location = New System.Drawing.Point(12, 507)
+        Me.BtnVisitReport.Location = New System.Drawing.Point(12, 557)
         Me.BtnVisitReport.Name = "BtnVisitReport"
         Me.BtnVisitReport.Size = New System.Drawing.Size(179, 37)
         Me.BtnVisitReport.TabIndex = 194
@@ -1179,61 +1236,17 @@ Partial Class VisitsList
         Me.PBoxPatient.TabIndex = 17
         Me.PBoxPatient.TabStop = False
         '
-        'DataGridViewTextBoxColumn6
+        'BtnToken
         '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "Description"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "Description"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        Me.DataGridViewTextBoxColumn6.Width = 160
-        '
-        'DataGridViewTextBoxColumn16
-        '
-        Me.DataGridViewTextBoxColumn16.DataPropertyName = "Amount"
-        Me.DataGridViewTextBoxColumn16.HeaderText = "Amount"
-        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
-        Me.DataGridViewTextBoxColumn16.ReadOnly = True
-        '
-        'Type
-        '
-        Me.Type.DataPropertyName = "Type"
-        Me.Type.HeaderText = "Type"
-        Me.Type.Name = "Type"
-        Me.Type.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn12
-        '
-        Me.DataGridViewTextBoxColumn12.DataPropertyName = "UserID"
-        Me.DataGridViewTextBoxColumn12.HeaderText = "User"
-        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
-        Me.DataGridViewTextBoxColumn12.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Date"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Date"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "ID"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "ID"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Visible = False
-        '
-        'BtnRefresh
-        '
-        Me.BtnRefresh.BackColor = System.Drawing.Color.DodgerBlue
-        Me.BtnRefresh.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRefresh.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnRefresh.Location = New System.Drawing.Point(54, 49)
-        Me.BtnRefresh.Name = "BtnRefresh"
-        Me.BtnRefresh.Size = New System.Drawing.Size(78, 37)
-        Me.BtnRefresh.TabIndex = 194
-        Me.BtnRefresh.Text = "Refresh"
-        Me.BtnRefresh.UseVisualStyleBackColor = False
+        Me.BtnToken.BackColor = System.Drawing.Color.DodgerBlue
+        Me.BtnToken.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnToken.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnToken.Location = New System.Drawing.Point(13, 341)
+        Me.BtnToken.Name = "BtnToken"
+        Me.BtnToken.Size = New System.Drawing.Size(179, 37)
+        Me.BtnToken.TabIndex = 194
+        Me.BtnToken.Text = "Print Token"
+        Me.BtnToken.UseVisualStyleBackColor = False
         '
         'VisitsList
         '
@@ -1248,6 +1261,7 @@ Partial Class VisitsList
         Me.Controls.Add(Me.BtnVisitReport)
         Me.Controls.Add(Me.BtnProcedures)
         Me.Controls.Add(Me.BtnMedication)
+        Me.Controls.Add(Me.BtnToken)
         Me.Controls.Add(Me.btnVitals)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
@@ -1413,4 +1427,5 @@ Partial Class VisitsList
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Private WithEvents BtnRefresh As Button
+    Private WithEvents BtnToken As Button
 End Class

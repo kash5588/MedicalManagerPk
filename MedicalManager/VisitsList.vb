@@ -319,4 +319,8 @@ Public Class VisitsList
     Private Sub BtnRefresh_Click(sender As Object, e As EventArgs) Handles BtnRefresh.Click
         GetFilteredChartVisits(CBPhysician.Text, CBDate.Text)
     End Sub
+
+    Private Sub BtnToken_Click(sender As Object, e As EventArgs) Handles BtnToken.Click
+        RVtokenSlip.ShowReport(txtCaseNo.Text)
+    End Sub
 End Class

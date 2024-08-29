@@ -92,14 +92,14 @@ Partial Class PATIENT
         Dim WorkExtensionLabel As System.Windows.Forms.Label
         Dim PictureImageLabel As System.Windows.Forms.Label
         Dim Label1 As System.Windows.Forms.Label
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PATIENT))
         Dim DateChangedLabel As System.Windows.Forms.Label
         Dim Label2 As System.Windows.Forms.Label
         Dim Label3 As System.Windows.Forms.Label
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PATIENT))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.dgPatient = New System.Windows.Forms.DataGridView()
@@ -117,6 +117,8 @@ Partial Class PATIENT
         Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TBDiscount = New System.Windows.Forms.NumericUpDown()
+        Me.CBVisitType = New System.Windows.Forms.ComboBox()
         Me.LabelFee = New System.Windows.Forms.Label()
         Me.DGFeeList = New System.Windows.Forms.DataGridView()
         Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -251,8 +253,6 @@ Partial Class PATIENT
         Me.MMComboBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MMComboTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMComboTableAdapter()
         Me.MMPRocedureTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMPRocedureTableAdapter()
-        Me.CBVisitType = New System.Windows.Forms.ComboBox()
-        Me.TBDiscount = New System.Windows.Forms.NumericUpDown()
         CopaySpecialistLabel = New System.Windows.Forms.Label()
         CopayOfficeVisitLabel = New System.Windows.Forms.Label()
         PatInsGP2Label = New System.Windows.Forms.Label()
@@ -335,6 +335,7 @@ Partial Class PATIENT
         CType(Me.MMDataDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.TBDiscount, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGFeeList, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMPRocedureBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
@@ -353,7 +354,6 @@ Partial Class PATIENT
         CType(Me.MMDataDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PatientPicturesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMComboBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TBDiscount, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'CopaySpecialistLabel
@@ -1009,6 +1009,33 @@ Partial Class PATIENT
         Label1.TabIndex = 82
         Label1.Text = "Fee:"
         '
+        'DateChangedLabel
+        '
+        DateChangedLabel.AutoSize = True
+        DateChangedLabel.Location = New System.Drawing.Point(372, 519)
+        DateChangedLabel.Name = "DateChangedLabel"
+        DateChangedLabel.Size = New System.Drawing.Size(68, 15)
+        DateChangedLabel.TabIndex = 26
+        DateChangedLabel.Text = "Date Chng:"
+        '
+        'Label2
+        '
+        Label2.AutoSize = True
+        Label2.Location = New System.Drawing.Point(220, 401)
+        Label2.Name = "Label2"
+        Label2.Size = New System.Drawing.Size(61, 15)
+        Label2.TabIndex = 14
+        Label2.Text = "Visit Type:"
+        '
+        'Label3
+        '
+        Label3.AutoSize = True
+        Label3.Location = New System.Drawing.Point(384, 480)
+        Label3.Name = "Label3"
+        Label3.Size = New System.Drawing.Size(58, 15)
+        Label3.TabIndex = 82
+        Label3.Text = "Discount:"
+        '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
@@ -1038,35 +1065,35 @@ Partial Class PATIENT
         Me.dgPatient.AllowUserToDeleteRows = False
         Me.dgPatient.AllowUserToResizeRows = False
         Me.dgPatient.AutoGenerateColumns = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgPatient.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgPatient.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.dgPatient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgPatient.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PatientIDDataGridViewTextBoxColumn, Me.ChartNumberDataGridViewTextBoxColumn, Me.LastNameDataGridViewTextBoxColumn, Me.FirstNameDataGridViewTextBoxColumn, Me.SignatureonFileDataGridViewCheckBoxColumn, Me.PatientTypeDataGridViewTextBoxColumn, Me.SexDataGridViewTextBoxColumn, Me.DateofBirthDataGridViewTextBoxColumn, Me.AssignedProviderDataGridViewTextBoxColumn, Me.DateCreatedDataGridViewTextBoxColumn})
         Me.dgPatient.DataSource = Me.MMPATIENTBindingSource
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgPatient.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgPatient.DefaultCellStyle = DataGridViewCellStyle10
         Me.dgPatient.Location = New System.Drawing.Point(3, 6)
         Me.dgPatient.Name = "dgPatient"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgPatient.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgPatient.RowHeadersDefaultCellStyle = DataGridViewCellStyle11
         Me.dgPatient.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.dgPatient.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgPatient.Size = New System.Drawing.Size(856, 566)
@@ -1213,6 +1240,22 @@ Partial Class PATIENT
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Patient Information"
         '
+        'TBDiscount
+        '
+        Me.TBDiscount.Location = New System.Drawing.Point(440, 478)
+        Me.TBDiscount.Name = "TBDiscount"
+        Me.TBDiscount.Size = New System.Drawing.Size(79, 21)
+        Me.TBDiscount.TabIndex = 16
+        Me.TBDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'CBVisitType
+        '
+        Me.CBVisitType.FormattingEnabled = True
+        Me.CBVisitType.Location = New System.Drawing.Point(283, 397)
+        Me.CBVisitType.Name = "CBVisitType"
+        Me.CBVisitType.Size = New System.Drawing.Size(234, 23)
+        Me.CBVisitType.TabIndex = 13
+        '
         'LabelFee
         '
         Me.LabelFee.AutoSize = True
@@ -1273,9 +1316,9 @@ Partial Class PATIENT
         'Fee
         '
         Me.Fee.DataPropertyName = "AmountA"
-        DataGridViewCellStyle4.Format = "N0"
-        DataGridViewCellStyle4.NullValue = Nothing
-        Me.Fee.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle12.Format = "N0"
+        DataGridViewCellStyle12.NullValue = Nothing
+        Me.Fee.DefaultCellStyle = DataGridViewCellStyle12
         Me.Fee.FillWeight = 76.14214!
         Me.Fee.HeaderText = "Fee"
         Me.Fee.Name = "Fee"
@@ -1323,14 +1366,14 @@ Partial Class PATIENT
         Me.DateChangedTextBox.Location = New System.Drawing.Point(440, 516)
         Me.DateChangedTextBox.Name = "DateChangedTextBox"
         Me.DateChangedTextBox.Size = New System.Drawing.Size(75, 21)
-        Me.DateChangedTextBox.TabIndex = 27
+        Me.DateChangedTextBox.TabIndex = 17
         '
         'btnPhysician
         '
         Me.btnPhysician.Location = New System.Drawing.Point(442, 436)
         Me.btnPhysician.Name = "btnPhysician"
         Me.btnPhysician.Size = New System.Drawing.Size(75, 23)
-        Me.btnPhysician.TabIndex = 14
+        Me.btnPhysician.TabIndex = 15
         Me.btnPhysician.Text = "Physician"
         Me.btnPhysician.UseVisualStyleBackColor = True
         '
@@ -1363,17 +1406,19 @@ Partial Class PATIENT
         Me.PhysicianFeeTextBox.Name = "PhysicianFeeTextBox"
         Me.PhysicianFeeTextBox.ReadOnly = True
         Me.PhysicianFeeTextBox.Size = New System.Drawing.Size(100, 21)
-        Me.PhysicianFeeTextBox.TabIndex = 14
+        Me.PhysicianFeeTextBox.TabIndex = 244
         Me.PhysicianFeeTextBox.TabStop = False
         '
         'AssignedProviderTextBox
         '
+        Me.AssignedProviderTextBox.BackColor = System.Drawing.Color.WhiteSmoke
         Me.AssignedProviderTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPATIENTBindingSource, "AssignedProvider", True))
         Me.AssignedProviderTextBox.Location = New System.Drawing.Point(283, 438)
         Me.AssignedProviderTextBox.MaxLength = 6
         Me.AssignedProviderTextBox.Name = "AssignedProviderTextBox"
+        Me.AssignedProviderTextBox.ReadOnly = True
         Me.AssignedProviderTextBox.Size = New System.Drawing.Size(153, 21)
-        Me.AssignedProviderTextBox.TabIndex = 14
+        Me.AssignedProviderTextBox.TabIndex = 144
         Me.AssignedProviderTextBox.TabStop = False
         '
         'CBSex
@@ -2508,49 +2553,6 @@ Partial Class PATIENT
         '
         Me.MMPRocedureTableAdapter.ClearBeforeFill = True
         '
-        'DateChangedLabel
-        '
-        DateChangedLabel.AutoSize = True
-        DateChangedLabel.Location = New System.Drawing.Point(372, 519)
-        DateChangedLabel.Name = "DateChangedLabel"
-        DateChangedLabel.Size = New System.Drawing.Size(68, 15)
-        DateChangedLabel.TabIndex = 26
-        DateChangedLabel.Text = "Date Chng:"
-        '
-        'CBVisitType
-        '
-        Me.CBVisitType.FormattingEnabled = True
-        Me.CBVisitType.Location = New System.Drawing.Point(283, 397)
-        Me.CBVisitType.Name = "CBVisitType"
-        Me.CBVisitType.Size = New System.Drawing.Size(234, 23)
-        Me.CBVisitType.TabIndex = 277
-        '
-        'Label2
-        '
-        Label2.AutoSize = True
-        Label2.Location = New System.Drawing.Point(220, 401)
-        Label2.Name = "Label2"
-        Label2.Size = New System.Drawing.Size(61, 15)
-        Label2.TabIndex = 14
-        Label2.Text = "Visit Type:"
-        '
-        'Label3
-        '
-        Label3.AutoSize = True
-        Label3.Location = New System.Drawing.Point(384, 480)
-        Label3.Name = "Label3"
-        Label3.Size = New System.Drawing.Size(58, 15)
-        Label3.TabIndex = 82
-        Label3.Text = "Discount:"
-        '
-        'TBDiscount
-        '
-        Me.TBDiscount.Location = New System.Drawing.Point(440, 478)
-        Me.TBDiscount.Name = "TBDiscount"
-        Me.TBDiscount.Size = New System.Drawing.Size(79, 21)
-        Me.TBDiscount.TabIndex = 278
-        Me.TBDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'PATIENT
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2570,6 +2572,7 @@ Partial Class PATIENT
         Me.TabPage2.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.TBDiscount, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DGFeeList, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MMPRocedureBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
@@ -2595,7 +2598,6 @@ Partial Class PATIENT
         CType(Me.MMDataDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PatientPicturesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MMComboBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TBDiscount, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
