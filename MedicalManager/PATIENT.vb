@@ -383,7 +383,7 @@ Public Class PATIENT
             If AssignedProviderTextBox.Text <> "" Then
                 DGFeeList.Visible = True
                 LabelFee.Visible = True
-                Me.MMPRocedureTableAdapter.FillByCode1(Me.MMDataDataSet1.MMPRocedure, aRet(1))
+                Me.MMPRocedureTableAdapter.FillByMyProcedure(Me.MMDataDataSet1.MMPRocedure, aRet(1))
                 If DGFeeList.SelectedRows.Count > 0 Then
                     PhysicianFeeTextBox.Text = CInt(Math.Round(Convert.ToDouble(DGFeeList.SelectedRows(0).Cells("Fee").Value)))
                     TbIdProcedure.Text = DGFeeList.SelectedRows(0).Cells("Id").Value.ToString()

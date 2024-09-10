@@ -22,465 +22,434 @@ Partial Class MMChProcedure
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
-        Dim Code1Label As System.Windows.Forms.Label
-        Dim Code2Label As System.Windows.Forms.Label
-        Dim Code3Label As System.Windows.Forms.Label
-        Dim TypeLabel As System.Windows.Forms.Label
-        Dim DescriptionLabel As System.Windows.Forms.Label
-        Dim TypeofServiceLabel As System.Windows.Forms.Label
-        Dim ScreenLocationLabel As System.Windows.Forms.Label
-        Dim DefaultPlaceService1Label As System.Windows.Forms.Label
-        Dim DefaultPlaceService2Label As System.Windows.Forms.Label
-        Dim DefaultPlaceService3Label As System.Windows.Forms.Label
-        Dim TimeToDoProcedureLabel As System.Windows.Forms.Label
-        Dim InsuranceCategoryLabel As System.Windows.Forms.Label
-        Dim PatientOnlyResponsibleLabel As System.Windows.Forms.Label
-        Dim OnlyPrintonInsuranceLabel As System.Windows.Forms.Label
-        Dim MedicareAllowedAmountLabel As System.Windows.Forms.Label
-        Dim AmountALabel As System.Windows.Forms.Label
-        Dim AmountBLabel As System.Windows.Forms.Label
+        Me.components = New System.ComponentModel.Container()
         Dim AmountCLabel As System.Windows.Forms.Label
-        Dim AccountCodeLabel As System.Windows.Forms.Label
-        Dim TaxableLabel As System.Windows.Forms.Label
-        Dim InactiveLabel As System.Windows.Forms.Label
-        Dim AdjustmentAmountNegativLabel As System.Windows.Forms.Label
-        Dim DefaultModifiersLabel As System.Windows.Forms.Label
-        Dim PrePaymentLabel As System.Windows.Forms.Label
-        Dim DefaultModifier1Label As System.Windows.Forms.Label
-        Dim DefaultModifier2Label As System.Windows.Forms.Label
-        Dim DefaultModifier3Label As System.Windows.Forms.Label
-        Dim DefaultModifier4Label As System.Windows.Forms.Label
-        Dim DontPrintonInsuranceLabel As System.Windows.Forms.Label
-        Dim CostofServiceProductLabel As System.Windows.Forms.Label
-        Dim MyProceduresLabel As System.Windows.Forms.Label
-        Dim TimeStampLabel As System.Windows.Forms.Label
+        Dim AmountBLabel As System.Windows.Forms.Label
+        Dim AmountALabel As System.Windows.Forms.Label
+        Dim DescriptionLabel As System.Windows.Forms.Label
+        Dim TypeLabel As System.Windows.Forms.Label
+        Dim Code1Label As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MMChProcedure))
-        Me.TabControl1 = New System.Windows.Forms.TabControl
-        Me.TabPage1 = New System.Windows.Forms.TabPage
-        Me.MMPRocedureDataGridView = New System.Windows.Forms.DataGridView
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn
-        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewCheckBoxColumn2 = New System.Windows.Forms.DataGridViewCheckBoxColumn
-        Me.DataGridViewCheckBoxColumn3 = New System.Windows.Forms.DataGridViewCheckBoxColumn
-        Me.DataGridViewCheckBoxColumn4 = New System.Windows.Forms.DataGridViewCheckBoxColumn
-        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewCheckBoxColumn5 = New System.Windows.Forms.DataGridViewCheckBoxColumn
-        Me.DataGridViewTextBoxColumn20 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn21 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn23 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn24 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn25 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn28 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn29 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.TypeofServiceLabel = New System.Windows.Forms.Label()
+        Me.ScreenLocationLabel = New System.Windows.Forms.Label()
+        Me.DefaultPlaceService1Label = New System.Windows.Forms.Label()
+        Me.DefaultPlaceService2Label = New System.Windows.Forms.Label()
+        Me.DefaultPlaceService3Label = New System.Windows.Forms.Label()
+        Me.TimeToDoProcedureLabel = New System.Windows.Forms.Label()
+        Me.InsuranceCategoryLabel = New System.Windows.Forms.Label()
+        Me.PatientOnlyResponsibleLabel = New System.Windows.Forms.Label()
+        Me.OnlyPrintonInsuranceLabel = New System.Windows.Forms.Label()
+        Me.MedicareAllowedAmountLabel = New System.Windows.Forms.Label()
+        Me.Code2Label = New System.Windows.Forms.Label()
+        Me.Code3Label = New System.Windows.Forms.Label()
+        Me.AccountCodeLabel = New System.Windows.Forms.Label()
+        Me.TaxableLabel = New System.Windows.Forms.Label()
+        Me.InactiveLabel = New System.Windows.Forms.Label()
+        Me.AdjustmentAmountNegativLabel = New System.Windows.Forms.Label()
+        Me.DefaultModifiersLabel = New System.Windows.Forms.Label()
+        Me.PrePaymentLabel = New System.Windows.Forms.Label()
+        Me.DefaultModifier1Label = New System.Windows.Forms.Label()
+        Me.DefaultModifier2Label = New System.Windows.Forms.Label()
+        Me.DefaultModifier3Label = New System.Windows.Forms.Label()
+        Me.DefaultModifier4Label = New System.Windows.Forms.Label()
+        Me.DontPrintonInsuranceLabel = New System.Windows.Forms.Label()
+        Me.CostofServiceProductLabel = New System.Windows.Forms.Label()
+        Me.TimeStampLabel = New System.Windows.Forms.Label()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.MMPRocedureDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewCheckBoxColumn2 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DataGridViewCheckBoxColumn3 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DataGridViewCheckBoxColumn4 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewCheckBoxColumn5 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DataGridViewTextBoxColumn20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn24 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn28 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn29 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MMPRocedureBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1
-        Me.TabPage2 = New System.Windows.Forms.TabPage
-        Me.Code1TextBox = New System.Windows.Forms.TextBox
-        Me.Code2TextBox = New System.Windows.Forms.TextBox
-        Me.Code3TextBox = New System.Windows.Forms.TextBox
-        Me.TypeTextBox = New System.Windows.Forms.TextBox
-        Me.DescriptionTextBox = New System.Windows.Forms.TextBox
-        Me.TypeofServiceTextBox = New System.Windows.Forms.TextBox
-        Me.ScreenLocationTextBox = New System.Windows.Forms.TextBox
-        Me.DefaultPlaceService1TextBox = New System.Windows.Forms.TextBox
-        Me.DefaultPlaceService2TextBox = New System.Windows.Forms.TextBox
-        Me.DefaultPlaceService3TextBox = New System.Windows.Forms.TextBox
-        Me.TimeToDoProcedureTextBox = New System.Windows.Forms.TextBox
-        Me.InsuranceCategoryTextBox = New System.Windows.Forms.TextBox
-        Me.PatientOnlyResponsibleCheckBox = New System.Windows.Forms.CheckBox
-        Me.OnlyPrintonInsuranceTextBox = New System.Windows.Forms.TextBox
-        Me.MedicareAllowedAmountTextBox = New System.Windows.Forms.TextBox
-        Me.AmountATextBox = New System.Windows.Forms.TextBox
-        Me.AmountBTextBox = New System.Windows.Forms.TextBox
-        Me.AmountCTextBox = New System.Windows.Forms.TextBox
-        Me.AccountCodeTextBox = New System.Windows.Forms.TextBox
-        Me.TaxableCheckBox = New System.Windows.Forms.CheckBox
-        Me.InactiveCheckBox = New System.Windows.Forms.CheckBox
-        Me.AdjustmentAmountNegativCheckBox = New System.Windows.Forms.CheckBox
-        Me.DefaultModifiersTextBox = New System.Windows.Forms.TextBox
-        Me.PrePaymentCheckBox = New System.Windows.Forms.CheckBox
-        Me.DefaultModifier1TextBox = New System.Windows.Forms.TextBox
-        Me.DefaultModifier2TextBox = New System.Windows.Forms.TextBox
-        Me.DefaultModifier3TextBox = New System.Windows.Forms.TextBox
-        Me.DefaultModifier4TextBox = New System.Windows.Forms.TextBox
-        Me.DontPrintonInsuranceTextBox = New System.Windows.Forms.TextBox
-        Me.CostofServiceProductTextBox = New System.Windows.Forms.TextBox
-        Me.MyProceduresTextBox = New System.Windows.Forms.TextBox
-        Me.TimeStampDateTimePicker = New System.Windows.Forms.DateTimePicker
+        Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.MyProceduresTextBox = New System.Windows.Forms.TextBox()
+        Me.MyProceduresLabel = New System.Windows.Forms.Label()
+        Me.Code1TextBox = New System.Windows.Forms.TextBox()
+        Me.TypeTextBox = New System.Windows.Forms.TextBox()
+        Me.DescriptionTextBox = New System.Windows.Forms.TextBox()
+        Me.AmountATextBox = New System.Windows.Forms.TextBox()
+        Me.AmountBTextBox = New System.Windows.Forms.TextBox()
+        Me.AmountCTextBox = New System.Windows.Forms.TextBox()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Code2TextBox = New System.Windows.Forms.TextBox()
+        Me.Code3TextBox = New System.Windows.Forms.TextBox()
+        Me.TypeofServiceTextBox = New System.Windows.Forms.TextBox()
+        Me.ScreenLocationTextBox = New System.Windows.Forms.TextBox()
+        Me.DefaultPlaceService1TextBox = New System.Windows.Forms.TextBox()
+        Me.DefaultPlaceService2TextBox = New System.Windows.Forms.TextBox()
+        Me.DefaultPlaceService3TextBox = New System.Windows.Forms.TextBox()
+        Me.TimeToDoProcedureTextBox = New System.Windows.Forms.TextBox()
+        Me.InsuranceCategoryTextBox = New System.Windows.Forms.TextBox()
+        Me.PatientOnlyResponsibleCheckBox = New System.Windows.Forms.CheckBox()
+        Me.OnlyPrintonInsuranceTextBox = New System.Windows.Forms.TextBox()
+        Me.MedicareAllowedAmountTextBox = New System.Windows.Forms.TextBox()
+        Me.AccountCodeTextBox = New System.Windows.Forms.TextBox()
+        Me.DefaultModifiersTextBox = New System.Windows.Forms.TextBox()
+        Me.DefaultModifier1TextBox = New System.Windows.Forms.TextBox()
+        Me.DefaultModifier2TextBox = New System.Windows.Forms.TextBox()
+        Me.DefaultModifier3TextBox = New System.Windows.Forms.TextBox()
+        Me.DefaultModifier4TextBox = New System.Windows.Forms.TextBox()
+        Me.DontPrintonInsuranceTextBox = New System.Windows.Forms.TextBox()
+        Me.CostofServiceProductTextBox = New System.Windows.Forms.TextBox()
+        Me.TaxableCheckBox = New System.Windows.Forms.CheckBox()
+        Me.InactiveCheckBox = New System.Windows.Forms.CheckBox()
+        Me.AdjustmentAmountNegativCheckBox = New System.Windows.Forms.CheckBox()
+        Me.PrePaymentCheckBox = New System.Windows.Forms.CheckBox()
+        Me.TimeStampDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.MMPRocedureBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel
-        Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel
-        Me.MMPRocedureBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
-        Me.ToolStripLabel5 = New System.Windows.Forms.ToolStripLabel
-        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel
-        Me.txtFind = New System.Windows.Forms.ToolStripTextBox
-        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel
-        Me.cmbFilter = New System.Windows.Forms.ToolStripComboBox
-        Me.MMPRocedureTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMPRocedureTableAdapter
-        Code1Label = New System.Windows.Forms.Label
-        Code2Label = New System.Windows.Forms.Label
-        Code3Label = New System.Windows.Forms.Label
-        TypeLabel = New System.Windows.Forms.Label
-        DescriptionLabel = New System.Windows.Forms.Label
-        TypeofServiceLabel = New System.Windows.Forms.Label
-        ScreenLocationLabel = New System.Windows.Forms.Label
-        DefaultPlaceService1Label = New System.Windows.Forms.Label
-        DefaultPlaceService2Label = New System.Windows.Forms.Label
-        DefaultPlaceService3Label = New System.Windows.Forms.Label
-        TimeToDoProcedureLabel = New System.Windows.Forms.Label
-        InsuranceCategoryLabel = New System.Windows.Forms.Label
-        PatientOnlyResponsibleLabel = New System.Windows.Forms.Label
-        OnlyPrintonInsuranceLabel = New System.Windows.Forms.Label
-        MedicareAllowedAmountLabel = New System.Windows.Forms.Label
-        AmountALabel = New System.Windows.Forms.Label
-        AmountBLabel = New System.Windows.Forms.Label
-        AmountCLabel = New System.Windows.Forms.Label
-        AccountCodeLabel = New System.Windows.Forms.Label
-        TaxableLabel = New System.Windows.Forms.Label
-        InactiveLabel = New System.Windows.Forms.Label
-        AdjustmentAmountNegativLabel = New System.Windows.Forms.Label
-        DefaultModifiersLabel = New System.Windows.Forms.Label
-        PrePaymentLabel = New System.Windows.Forms.Label
-        DefaultModifier1Label = New System.Windows.Forms.Label
-        DefaultModifier2Label = New System.Windows.Forms.Label
-        DefaultModifier3Label = New System.Windows.Forms.Label
-        DefaultModifier4Label = New System.Windows.Forms.Label
-        DontPrintonInsuranceLabel = New System.Windows.Forms.Label
-        CostofServiceProductLabel = New System.Windows.Forms.Label
-        MyProceduresLabel = New System.Windows.Forms.Label
-        TimeStampLabel = New System.Windows.Forms.Label
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel()
+        Me.MMPRocedureBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripLabel5 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
+        Me.txtFind = New System.Windows.Forms.ToolStripTextBox()
+        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
+        Me.cmbFilter = New System.Windows.Forms.ToolStripComboBox()
+        Me.MMPRocedureTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMPRocedureTableAdapter()
+        Me.btnPhysician = New System.Windows.Forms.Button()
+        AmountCLabel = New System.Windows.Forms.Label()
+        AmountBLabel = New System.Windows.Forms.Label()
+        AmountALabel = New System.Windows.Forms.Label()
+        DescriptionLabel = New System.Windows.Forms.Label()
+        TypeLabel = New System.Windows.Forms.Label()
+        Code1Label = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.MMPRocedureDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMPRocedureBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMDataDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
         CType(Me.MMPRocedureBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MMPRocedureBindingNavigator.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Code1Label
-        '
-        Code1Label.AutoSize = True
-        Code1Label.Location = New System.Drawing.Point(124, 33)
-        Code1Label.Name = "Code1Label"
-        Code1Label.Size = New System.Drawing.Size(41, 13)
-        Code1Label.TabIndex = 0
-        Code1Label.Text = "Code1:"
-        '
-        'Code2Label
-        '
-        Code2Label.AutoSize = True
-        Code2Label.Location = New System.Drawing.Point(124, 59)
-        Code2Label.Name = "Code2Label"
-        Code2Label.Size = New System.Drawing.Size(41, 13)
-        Code2Label.TabIndex = 2
-        Code2Label.Text = "Code2:"
-        '
-        'Code3Label
-        '
-        Code3Label.AutoSize = True
-        Code3Label.Location = New System.Drawing.Point(124, 85)
-        Code3Label.Name = "Code3Label"
-        Code3Label.Size = New System.Drawing.Size(41, 13)
-        Code3Label.TabIndex = 4
-        Code3Label.Text = "Code3:"
-        '
-        'TypeLabel
-        '
-        TypeLabel.AutoSize = True
-        TypeLabel.Location = New System.Drawing.Point(131, 111)
-        TypeLabel.Name = "TypeLabel"
-        TypeLabel.Size = New System.Drawing.Size(34, 13)
-        TypeLabel.TabIndex = 6
-        TypeLabel.Text = "Type:"
-        '
-        'DescriptionLabel
-        '
-        DescriptionLabel.AutoSize = True
-        DescriptionLabel.Location = New System.Drawing.Point(102, 137)
-        DescriptionLabel.Name = "DescriptionLabel"
-        DescriptionLabel.Size = New System.Drawing.Size(63, 13)
-        DescriptionLabel.TabIndex = 8
-        DescriptionLabel.Text = "Description:"
-        '
-        'TypeofServiceLabel
-        '
-        TypeofServiceLabel.AutoSize = True
-        TypeofServiceLabel.Location = New System.Drawing.Point(80, 163)
-        TypeofServiceLabel.Name = "TypeofServiceLabel"
-        TypeofServiceLabel.Size = New System.Drawing.Size(85, 13)
-        TypeofServiceLabel.TabIndex = 10
-        TypeofServiceLabel.Text = "Type of Service:"
-        '
-        'ScreenLocationLabel
-        '
-        ScreenLocationLabel.AutoSize = True
-        ScreenLocationLabel.Location = New System.Drawing.Point(77, 189)
-        ScreenLocationLabel.Name = "ScreenLocationLabel"
-        ScreenLocationLabel.Size = New System.Drawing.Size(88, 13)
-        ScreenLocationLabel.TabIndex = 12
-        ScreenLocationLabel.Text = "Screen Location:"
-        '
-        'DefaultPlaceService1Label
-        '
-        DefaultPlaceService1Label.AutoSize = True
-        DefaultPlaceService1Label.Location = New System.Drawing.Point(46, 215)
-        DefaultPlaceService1Label.Name = "DefaultPlaceService1Label"
-        DefaultPlaceService1Label.Size = New System.Drawing.Size(119, 13)
-        DefaultPlaceService1Label.TabIndex = 14
-        DefaultPlaceService1Label.Text = "Default Place Service1:"
-        '
-        'DefaultPlaceService2Label
-        '
-        DefaultPlaceService2Label.AutoSize = True
-        DefaultPlaceService2Label.Location = New System.Drawing.Point(46, 241)
-        DefaultPlaceService2Label.Name = "DefaultPlaceService2Label"
-        DefaultPlaceService2Label.Size = New System.Drawing.Size(119, 13)
-        DefaultPlaceService2Label.TabIndex = 16
-        DefaultPlaceService2Label.Text = "Default Place Service2:"
-        '
-        'DefaultPlaceService3Label
-        '
-        DefaultPlaceService3Label.AutoSize = True
-        DefaultPlaceService3Label.Location = New System.Drawing.Point(46, 267)
-        DefaultPlaceService3Label.Name = "DefaultPlaceService3Label"
-        DefaultPlaceService3Label.Size = New System.Drawing.Size(119, 13)
-        DefaultPlaceService3Label.TabIndex = 18
-        DefaultPlaceService3Label.Text = "Default Place Service3:"
-        '
-        'TimeToDoProcedureLabel
-        '
-        TimeToDoProcedureLabel.AutoSize = True
-        TimeToDoProcedureLabel.Location = New System.Drawing.Point(47, 293)
-        TimeToDoProcedureLabel.Name = "TimeToDoProcedureLabel"
-        TimeToDoProcedureLabel.Size = New System.Drawing.Size(118, 13)
-        TimeToDoProcedureLabel.TabIndex = 20
-        TimeToDoProcedureLabel.Text = "Time To Do Procedure:"
-        '
-        'InsuranceCategoryLabel
-        '
-        InsuranceCategoryLabel.AutoSize = True
-        InsuranceCategoryLabel.Location = New System.Drawing.Point(63, 319)
-        InsuranceCategoryLabel.Name = "InsuranceCategoryLabel"
-        InsuranceCategoryLabel.Size = New System.Drawing.Size(102, 13)
-        InsuranceCategoryLabel.TabIndex = 22
-        InsuranceCategoryLabel.Text = "Insurance Category:"
-        '
-        'PatientOnlyResponsibleLabel
-        '
-        PatientOnlyResponsibleLabel.AutoSize = True
-        PatientOnlyResponsibleLabel.Location = New System.Drawing.Point(37, 347)
-        PatientOnlyResponsibleLabel.Name = "PatientOnlyResponsibleLabel"
-        PatientOnlyResponsibleLabel.Size = New System.Drawing.Size(128, 13)
-        PatientOnlyResponsibleLabel.TabIndex = 24
-        PatientOnlyResponsibleLabel.Text = "Patient Only Responsible:"
-        '
-        'OnlyPrintonInsuranceLabel
-        '
-        OnlyPrintonInsuranceLabel.AutoSize = True
-        OnlyPrintonInsuranceLabel.Location = New System.Drawing.Point(45, 375)
-        OnlyPrintonInsuranceLabel.Name = "OnlyPrintonInsuranceLabel"
-        OnlyPrintonInsuranceLabel.Size = New System.Drawing.Size(120, 13)
-        OnlyPrintonInsuranceLabel.TabIndex = 26
-        OnlyPrintonInsuranceLabel.Text = "Only Print on Insurance:"
-        '
-        'MedicareAllowedAmountLabel
-        '
-        MedicareAllowedAmountLabel.AutoSize = True
-        MedicareAllowedAmountLabel.Location = New System.Drawing.Point(32, 398)
-        MedicareAllowedAmountLabel.Name = "MedicareAllowedAmountLabel"
-        MedicareAllowedAmountLabel.Size = New System.Drawing.Size(133, 13)
-        MedicareAllowedAmountLabel.TabIndex = 28
-        MedicareAllowedAmountLabel.Text = "Medicare Allowed Amount:"
-        '
-        'AmountALabel
-        '
-        AmountALabel.AutoSize = True
-        AmountALabel.Location = New System.Drawing.Point(109, 427)
-        AmountALabel.Name = "AmountALabel"
-        AmountALabel.Size = New System.Drawing.Size(56, 13)
-        AmountALabel.TabIndex = 30
-        AmountALabel.Text = "Amount A:"
-        '
-        'AmountBLabel
-        '
-        AmountBLabel.AutoSize = True
-        AmountBLabel.Location = New System.Drawing.Point(109, 453)
-        AmountBLabel.Name = "AmountBLabel"
-        AmountBLabel.Size = New System.Drawing.Size(56, 13)
-        AmountBLabel.TabIndex = 32
-        AmountBLabel.Text = "Amount B:"
-        '
         'AmountCLabel
         '
         AmountCLabel.AutoSize = True
-        AmountCLabel.Location = New System.Drawing.Point(109, 479)
+        AmountCLabel.Location = New System.Drawing.Point(294, 390)
         AmountCLabel.Name = "AmountCLabel"
         AmountCLabel.Size = New System.Drawing.Size(56, 13)
         AmountCLabel.TabIndex = 34
         AmountCLabel.Text = "Amount C:"
         '
+        'AmountBLabel
+        '
+        AmountBLabel.AutoSize = True
+        AmountBLabel.Location = New System.Drawing.Point(294, 331)
+        AmountBLabel.Name = "AmountBLabel"
+        AmountBLabel.Size = New System.Drawing.Size(56, 13)
+        AmountBLabel.TabIndex = 32
+        AmountBLabel.Text = "Amount B:"
+        '
+        'AmountALabel
+        '
+        AmountALabel.AutoSize = True
+        AmountALabel.Location = New System.Drawing.Point(294, 285)
+        AmountALabel.Name = "AmountALabel"
+        AmountALabel.Size = New System.Drawing.Size(56, 13)
+        AmountALabel.TabIndex = 30
+        AmountALabel.Text = "Amount A:"
+        '
+        'DescriptionLabel
+        '
+        DescriptionLabel.AutoSize = True
+        DescriptionLabel.Location = New System.Drawing.Point(287, 155)
+        DescriptionLabel.Name = "DescriptionLabel"
+        DescriptionLabel.Size = New System.Drawing.Size(63, 13)
+        DescriptionLabel.TabIndex = 8
+        DescriptionLabel.Text = "Description:"
+        '
+        'TypeLabel
+        '
+        TypeLabel.AutoSize = True
+        TypeLabel.Location = New System.Drawing.Point(316, 107)
+        TypeLabel.Name = "TypeLabel"
+        TypeLabel.Size = New System.Drawing.Size(34, 13)
+        TypeLabel.TabIndex = 6
+        TypeLabel.Text = "Type:"
+        '
+        'Code1Label
+        '
+        Code1Label.AutoSize = True
+        Code1Label.Location = New System.Drawing.Point(309, 54)
+        Code1Label.Name = "Code1Label"
+        Code1Label.Size = New System.Drawing.Size(41, 13)
+        Code1Label.TabIndex = 0
+        Code1Label.Text = "Code1:"
+        '
+        'TypeofServiceLabel
+        '
+        Me.TypeofServiceLabel.AutoSize = True
+        Me.TypeofServiceLabel.Location = New System.Drawing.Point(93, 126)
+        Me.TypeofServiceLabel.Name = "TypeofServiceLabel"
+        Me.TypeofServiceLabel.Size = New System.Drawing.Size(85, 13)
+        Me.TypeofServiceLabel.TabIndex = 72
+        Me.TypeofServiceLabel.Text = "Type of Service:"
+        '
+        'ScreenLocationLabel
+        '
+        Me.ScreenLocationLabel.AutoSize = True
+        Me.ScreenLocationLabel.Location = New System.Drawing.Point(90, 152)
+        Me.ScreenLocationLabel.Name = "ScreenLocationLabel"
+        Me.ScreenLocationLabel.Size = New System.Drawing.Size(88, 13)
+        Me.ScreenLocationLabel.TabIndex = 74
+        Me.ScreenLocationLabel.Text = "Screen Location:"
+        '
+        'DefaultPlaceService1Label
+        '
+        Me.DefaultPlaceService1Label.AutoSize = True
+        Me.DefaultPlaceService1Label.Location = New System.Drawing.Point(59, 178)
+        Me.DefaultPlaceService1Label.Name = "DefaultPlaceService1Label"
+        Me.DefaultPlaceService1Label.Size = New System.Drawing.Size(119, 13)
+        Me.DefaultPlaceService1Label.TabIndex = 76
+        Me.DefaultPlaceService1Label.Text = "Default Place Service1:"
+        '
+        'DefaultPlaceService2Label
+        '
+        Me.DefaultPlaceService2Label.AutoSize = True
+        Me.DefaultPlaceService2Label.Location = New System.Drawing.Point(59, 204)
+        Me.DefaultPlaceService2Label.Name = "DefaultPlaceService2Label"
+        Me.DefaultPlaceService2Label.Size = New System.Drawing.Size(119, 13)
+        Me.DefaultPlaceService2Label.TabIndex = 78
+        Me.DefaultPlaceService2Label.Text = "Default Place Service2:"
+        '
+        'DefaultPlaceService3Label
+        '
+        Me.DefaultPlaceService3Label.AutoSize = True
+        Me.DefaultPlaceService3Label.Location = New System.Drawing.Point(59, 230)
+        Me.DefaultPlaceService3Label.Name = "DefaultPlaceService3Label"
+        Me.DefaultPlaceService3Label.Size = New System.Drawing.Size(119, 13)
+        Me.DefaultPlaceService3Label.TabIndex = 80
+        Me.DefaultPlaceService3Label.Text = "Default Place Service3:"
+        '
+        'TimeToDoProcedureLabel
+        '
+        Me.TimeToDoProcedureLabel.AutoSize = True
+        Me.TimeToDoProcedureLabel.Location = New System.Drawing.Point(60, 256)
+        Me.TimeToDoProcedureLabel.Name = "TimeToDoProcedureLabel"
+        Me.TimeToDoProcedureLabel.Size = New System.Drawing.Size(118, 13)
+        Me.TimeToDoProcedureLabel.TabIndex = 82
+        Me.TimeToDoProcedureLabel.Text = "Time To Do Procedure:"
+        '
+        'InsuranceCategoryLabel
+        '
+        Me.InsuranceCategoryLabel.AutoSize = True
+        Me.InsuranceCategoryLabel.Location = New System.Drawing.Point(76, 282)
+        Me.InsuranceCategoryLabel.Name = "InsuranceCategoryLabel"
+        Me.InsuranceCategoryLabel.Size = New System.Drawing.Size(102, 13)
+        Me.InsuranceCategoryLabel.TabIndex = 84
+        Me.InsuranceCategoryLabel.Text = "Insurance Category:"
+        '
+        'PatientOnlyResponsibleLabel
+        '
+        Me.PatientOnlyResponsibleLabel.AutoSize = True
+        Me.PatientOnlyResponsibleLabel.Location = New System.Drawing.Point(50, 310)
+        Me.PatientOnlyResponsibleLabel.Name = "PatientOnlyResponsibleLabel"
+        Me.PatientOnlyResponsibleLabel.Size = New System.Drawing.Size(128, 13)
+        Me.PatientOnlyResponsibleLabel.TabIndex = 86
+        Me.PatientOnlyResponsibleLabel.Text = "Patient Only Responsible:"
+        '
+        'OnlyPrintonInsuranceLabel
+        '
+        Me.OnlyPrintonInsuranceLabel.AutoSize = True
+        Me.OnlyPrintonInsuranceLabel.Location = New System.Drawing.Point(58, 338)
+        Me.OnlyPrintonInsuranceLabel.Name = "OnlyPrintonInsuranceLabel"
+        Me.OnlyPrintonInsuranceLabel.Size = New System.Drawing.Size(120, 13)
+        Me.OnlyPrintonInsuranceLabel.TabIndex = 88
+        Me.OnlyPrintonInsuranceLabel.Text = "Only Print on Insurance:"
+        '
+        'MedicareAllowedAmountLabel
+        '
+        Me.MedicareAllowedAmountLabel.AutoSize = True
+        Me.MedicareAllowedAmountLabel.Location = New System.Drawing.Point(45, 361)
+        Me.MedicareAllowedAmountLabel.Name = "MedicareAllowedAmountLabel"
+        Me.MedicareAllowedAmountLabel.Size = New System.Drawing.Size(133, 13)
+        Me.MedicareAllowedAmountLabel.TabIndex = 90
+        Me.MedicareAllowedAmountLabel.Text = "Medicare Allowed Amount:"
+        '
+        'Code2Label
+        '
+        Me.Code2Label.AutoSize = True
+        Me.Code2Label.Location = New System.Drawing.Point(137, 64)
+        Me.Code2Label.Name = "Code2Label"
+        Me.Code2Label.Size = New System.Drawing.Size(41, 13)
+        Me.Code2Label.TabIndex = 68
+        Me.Code2Label.Text = "Code2:"
+        '
+        'Code3Label
+        '
+        Me.Code3Label.AutoSize = True
+        Me.Code3Label.Location = New System.Drawing.Point(137, 90)
+        Me.Code3Label.Name = "Code3Label"
+        Me.Code3Label.Size = New System.Drawing.Size(41, 13)
+        Me.Code3Label.TabIndex = 70
+        Me.Code3Label.Text = "Code3:"
+        '
         'AccountCodeLabel
         '
-        AccountCodeLabel.AutoSize = True
-        AccountCodeLabel.Location = New System.Drawing.Point(487, 30)
-        AccountCodeLabel.Name = "AccountCodeLabel"
-        AccountCodeLabel.Size = New System.Drawing.Size(78, 13)
-        AccountCodeLabel.TabIndex = 36
-        AccountCodeLabel.Text = "Account Code:"
+        Me.AccountCodeLabel.AutoSize = True
+        Me.AccountCodeLabel.Location = New System.Drawing.Point(500, 64)
+        Me.AccountCodeLabel.Name = "AccountCodeLabel"
+        Me.AccountCodeLabel.Size = New System.Drawing.Size(78, 13)
+        Me.AccountCodeLabel.TabIndex = 92
+        Me.AccountCodeLabel.Text = "Account Code:"
         '
         'TaxableLabel
         '
-        TaxableLabel.AutoSize = True
-        TaxableLabel.Location = New System.Drawing.Point(517, 59)
-        TaxableLabel.Name = "TaxableLabel"
-        TaxableLabel.Size = New System.Drawing.Size(48, 13)
-        TaxableLabel.TabIndex = 38
-        TaxableLabel.Text = "Taxable:"
+        Me.TaxableLabel.AutoSize = True
+        Me.TaxableLabel.Location = New System.Drawing.Point(530, 93)
+        Me.TaxableLabel.Name = "TaxableLabel"
+        Me.TaxableLabel.Size = New System.Drawing.Size(48, 13)
+        Me.TaxableLabel.TabIndex = 94
+        Me.TaxableLabel.Text = "Taxable:"
         '
         'InactiveLabel
         '
-        InactiveLabel.AutoSize = True
-        InactiveLabel.Location = New System.Drawing.Point(517, 89)
-        InactiveLabel.Name = "InactiveLabel"
-        InactiveLabel.Size = New System.Drawing.Size(48, 13)
-        InactiveLabel.TabIndex = 40
-        InactiveLabel.Text = "Inactive:"
+        Me.InactiveLabel.AutoSize = True
+        Me.InactiveLabel.Location = New System.Drawing.Point(530, 123)
+        Me.InactiveLabel.Name = "InactiveLabel"
+        Me.InactiveLabel.Size = New System.Drawing.Size(48, 13)
+        Me.InactiveLabel.TabIndex = 96
+        Me.InactiveLabel.Text = "Inactive:"
         '
         'AdjustmentAmountNegativLabel
         '
-        AdjustmentAmountNegativLabel.AutoSize = True
-        AdjustmentAmountNegativLabel.Location = New System.Drawing.Point(418, 113)
-        AdjustmentAmountNegativLabel.Name = "AdjustmentAmountNegativLabel"
-        AdjustmentAmountNegativLabel.Size = New System.Drawing.Size(147, 13)
-        AdjustmentAmountNegativLabel.TabIndex = 42
-        AdjustmentAmountNegativLabel.Text = "Adjustment Amount Negative:"
+        Me.AdjustmentAmountNegativLabel.AutoSize = True
+        Me.AdjustmentAmountNegativLabel.Location = New System.Drawing.Point(431, 147)
+        Me.AdjustmentAmountNegativLabel.Name = "AdjustmentAmountNegativLabel"
+        Me.AdjustmentAmountNegativLabel.Size = New System.Drawing.Size(147, 13)
+        Me.AdjustmentAmountNegativLabel.TabIndex = 98
+        Me.AdjustmentAmountNegativLabel.Text = "Adjustment Amount Negative:"
         '
         'DefaultModifiersLabel
         '
-        DefaultModifiersLabel.AutoSize = True
-        DefaultModifiersLabel.Location = New System.Drawing.Point(476, 141)
-        DefaultModifiersLabel.Name = "DefaultModifiersLabel"
-        DefaultModifiersLabel.Size = New System.Drawing.Size(89, 13)
-        DefaultModifiersLabel.TabIndex = 44
-        DefaultModifiersLabel.Text = "Default Modifiers:"
+        Me.DefaultModifiersLabel.AutoSize = True
+        Me.DefaultModifiersLabel.Location = New System.Drawing.Point(489, 175)
+        Me.DefaultModifiersLabel.Name = "DefaultModifiersLabel"
+        Me.DefaultModifiersLabel.Size = New System.Drawing.Size(89, 13)
+        Me.DefaultModifiersLabel.TabIndex = 100
+        Me.DefaultModifiersLabel.Text = "Default Modifiers:"
         '
         'PrePaymentLabel
         '
-        PrePaymentLabel.AutoSize = True
-        PrePaymentLabel.Location = New System.Drawing.Point(495, 169)
-        PrePaymentLabel.Name = "PrePaymentLabel"
-        PrePaymentLabel.Size = New System.Drawing.Size(70, 13)
-        PrePaymentLabel.TabIndex = 46
-        PrePaymentLabel.Text = "Pre Payment:"
+        Me.PrePaymentLabel.AutoSize = True
+        Me.PrePaymentLabel.Location = New System.Drawing.Point(508, 203)
+        Me.PrePaymentLabel.Name = "PrePaymentLabel"
+        Me.PrePaymentLabel.Size = New System.Drawing.Size(70, 13)
+        Me.PrePaymentLabel.TabIndex = 102
+        Me.PrePaymentLabel.Text = "Pre Payment:"
         '
         'DefaultModifier1Label
         '
-        DefaultModifier1Label.AutoSize = True
-        DefaultModifier1Label.Location = New System.Drawing.Point(475, 197)
-        DefaultModifier1Label.Name = "DefaultModifier1Label"
-        DefaultModifier1Label.Size = New System.Drawing.Size(90, 13)
-        DefaultModifier1Label.TabIndex = 48
-        DefaultModifier1Label.Text = "Default Modifier1:"
+        Me.DefaultModifier1Label.AutoSize = True
+        Me.DefaultModifier1Label.Location = New System.Drawing.Point(488, 231)
+        Me.DefaultModifier1Label.Name = "DefaultModifier1Label"
+        Me.DefaultModifier1Label.Size = New System.Drawing.Size(90, 13)
+        Me.DefaultModifier1Label.TabIndex = 104
+        Me.DefaultModifier1Label.Text = "Default Modifier1:"
         '
         'DefaultModifier2Label
         '
-        DefaultModifier2Label.AutoSize = True
-        DefaultModifier2Label.Location = New System.Drawing.Point(475, 223)
-        DefaultModifier2Label.Name = "DefaultModifier2Label"
-        DefaultModifier2Label.Size = New System.Drawing.Size(90, 13)
-        DefaultModifier2Label.TabIndex = 50
-        DefaultModifier2Label.Text = "Default Modifier2:"
+        Me.DefaultModifier2Label.AutoSize = True
+        Me.DefaultModifier2Label.Location = New System.Drawing.Point(488, 257)
+        Me.DefaultModifier2Label.Name = "DefaultModifier2Label"
+        Me.DefaultModifier2Label.Size = New System.Drawing.Size(90, 13)
+        Me.DefaultModifier2Label.TabIndex = 106
+        Me.DefaultModifier2Label.Text = "Default Modifier2:"
         '
         'DefaultModifier3Label
         '
-        DefaultModifier3Label.AutoSize = True
-        DefaultModifier3Label.Location = New System.Drawing.Point(475, 249)
-        DefaultModifier3Label.Name = "DefaultModifier3Label"
-        DefaultModifier3Label.Size = New System.Drawing.Size(90, 13)
-        DefaultModifier3Label.TabIndex = 52
-        DefaultModifier3Label.Text = "Default Modifier3:"
+        Me.DefaultModifier3Label.AutoSize = True
+        Me.DefaultModifier3Label.Location = New System.Drawing.Point(488, 283)
+        Me.DefaultModifier3Label.Name = "DefaultModifier3Label"
+        Me.DefaultModifier3Label.Size = New System.Drawing.Size(90, 13)
+        Me.DefaultModifier3Label.TabIndex = 108
+        Me.DefaultModifier3Label.Text = "Default Modifier3:"
         '
         'DefaultModifier4Label
         '
-        DefaultModifier4Label.AutoSize = True
-        DefaultModifier4Label.Location = New System.Drawing.Point(475, 275)
-        DefaultModifier4Label.Name = "DefaultModifier4Label"
-        DefaultModifier4Label.Size = New System.Drawing.Size(90, 13)
-        DefaultModifier4Label.TabIndex = 54
-        DefaultModifier4Label.Text = "Default Modifier4:"
+        Me.DefaultModifier4Label.AutoSize = True
+        Me.DefaultModifier4Label.Location = New System.Drawing.Point(488, 309)
+        Me.DefaultModifier4Label.Name = "DefaultModifier4Label"
+        Me.DefaultModifier4Label.Size = New System.Drawing.Size(90, 13)
+        Me.DefaultModifier4Label.TabIndex = 110
+        Me.DefaultModifier4Label.Text = "Default Modifier4:"
         '
         'DontPrintonInsuranceLabel
         '
-        DontPrintonInsuranceLabel.AutoSize = True
-        DontPrintonInsuranceLabel.Location = New System.Drawing.Point(443, 301)
-        DontPrintonInsuranceLabel.Name = "DontPrintonInsuranceLabel"
-        DontPrintonInsuranceLabel.Size = New System.Drawing.Size(122, 13)
-        DontPrintonInsuranceLabel.TabIndex = 56
-        DontPrintonInsuranceLabel.Text = "Dont Print on Insurance:"
+        Me.DontPrintonInsuranceLabel.AutoSize = True
+        Me.DontPrintonInsuranceLabel.Location = New System.Drawing.Point(456, 335)
+        Me.DontPrintonInsuranceLabel.Name = "DontPrintonInsuranceLabel"
+        Me.DontPrintonInsuranceLabel.Size = New System.Drawing.Size(122, 13)
+        Me.DontPrintonInsuranceLabel.TabIndex = 112
+        Me.DontPrintonInsuranceLabel.Text = "Dont Print on Insurance:"
         '
         'CostofServiceProductLabel
         '
-        CostofServiceProductLabel.AutoSize = True
-        CostofServiceProductLabel.Location = New System.Drawing.Point(443, 327)
-        CostofServiceProductLabel.Name = "CostofServiceProductLabel"
-        CostofServiceProductLabel.Size = New System.Drawing.Size(122, 13)
-        CostofServiceProductLabel.TabIndex = 58
-        CostofServiceProductLabel.Text = "Cost of Service Product:"
-        '
-        'MyProceduresLabel
-        '
-        MyProceduresLabel.AutoSize = True
-        MyProceduresLabel.Location = New System.Drawing.Point(484, 375)
-        MyProceduresLabel.Name = "MyProceduresLabel"
-        MyProceduresLabel.Size = New System.Drawing.Size(81, 13)
-        MyProceduresLabel.TabIndex = 64
-        MyProceduresLabel.Text = "My Procedures:"
+        Me.CostofServiceProductLabel.AutoSize = True
+        Me.CostofServiceProductLabel.Location = New System.Drawing.Point(456, 361)
+        Me.CostofServiceProductLabel.Name = "CostofServiceProductLabel"
+        Me.CostofServiceProductLabel.Size = New System.Drawing.Size(122, 13)
+        Me.CostofServiceProductLabel.TabIndex = 114
+        Me.CostofServiceProductLabel.Text = "Cost of Service Product:"
         '
         'TimeStampLabel
         '
-        TimeStampLabel.AutoSize = True
-        TimeStampLabel.Location = New System.Drawing.Point(499, 402)
-        TimeStampLabel.Name = "TimeStampLabel"
-        TimeStampLabel.Size = New System.Drawing.Size(66, 13)
-        TimeStampLabel.TabIndex = 66
-        TimeStampLabel.Text = "Time Stamp:"
+        Me.TimeStampLabel.AutoSize = True
+        Me.TimeStampLabel.Location = New System.Drawing.Point(512, 388)
+        Me.TimeStampLabel.Name = "TimeStampLabel"
+        Me.TimeStampLabel.Size = New System.Drawing.Size(66, 13)
+        Me.TimeStampLabel.TabIndex = 118
+        Me.TimeStampLabel.Text = "Time Stamp:"
         '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Location = New System.Drawing.Point(3, 28)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -714,70 +683,21 @@ Partial Class MMChProcedure
         'TabPage2
         '
         Me.TabPage2.AutoScroll = True
+        Me.TabPage2.Controls.Add(Me.btnPhysician)
+        Me.TabPage2.Controls.Add(Me.MyProceduresTextBox)
+        Me.TabPage2.Controls.Add(Me.MyProceduresLabel)
         Me.TabPage2.Controls.Add(Code1Label)
         Me.TabPage2.Controls.Add(Me.Code1TextBox)
-        Me.TabPage2.Controls.Add(Code2Label)
-        Me.TabPage2.Controls.Add(Me.Code2TextBox)
-        Me.TabPage2.Controls.Add(Code3Label)
-        Me.TabPage2.Controls.Add(Me.Code3TextBox)
         Me.TabPage2.Controls.Add(TypeLabel)
         Me.TabPage2.Controls.Add(Me.TypeTextBox)
         Me.TabPage2.Controls.Add(DescriptionLabel)
         Me.TabPage2.Controls.Add(Me.DescriptionTextBox)
-        Me.TabPage2.Controls.Add(TypeofServiceLabel)
-        Me.TabPage2.Controls.Add(Me.TypeofServiceTextBox)
-        Me.TabPage2.Controls.Add(ScreenLocationLabel)
-        Me.TabPage2.Controls.Add(Me.ScreenLocationTextBox)
-        Me.TabPage2.Controls.Add(DefaultPlaceService1Label)
-        Me.TabPage2.Controls.Add(Me.DefaultPlaceService1TextBox)
-        Me.TabPage2.Controls.Add(DefaultPlaceService2Label)
-        Me.TabPage2.Controls.Add(Me.DefaultPlaceService2TextBox)
-        Me.TabPage2.Controls.Add(DefaultPlaceService3Label)
-        Me.TabPage2.Controls.Add(Me.DefaultPlaceService3TextBox)
-        Me.TabPage2.Controls.Add(TimeToDoProcedureLabel)
-        Me.TabPage2.Controls.Add(Me.TimeToDoProcedureTextBox)
-        Me.TabPage2.Controls.Add(InsuranceCategoryLabel)
-        Me.TabPage2.Controls.Add(Me.InsuranceCategoryTextBox)
-        Me.TabPage2.Controls.Add(PatientOnlyResponsibleLabel)
-        Me.TabPage2.Controls.Add(Me.PatientOnlyResponsibleCheckBox)
-        Me.TabPage2.Controls.Add(OnlyPrintonInsuranceLabel)
-        Me.TabPage2.Controls.Add(Me.OnlyPrintonInsuranceTextBox)
-        Me.TabPage2.Controls.Add(MedicareAllowedAmountLabel)
-        Me.TabPage2.Controls.Add(Me.MedicareAllowedAmountTextBox)
         Me.TabPage2.Controls.Add(AmountALabel)
         Me.TabPage2.Controls.Add(Me.AmountATextBox)
         Me.TabPage2.Controls.Add(AmountBLabel)
         Me.TabPage2.Controls.Add(Me.AmountBTextBox)
         Me.TabPage2.Controls.Add(AmountCLabel)
         Me.TabPage2.Controls.Add(Me.AmountCTextBox)
-        Me.TabPage2.Controls.Add(AccountCodeLabel)
-        Me.TabPage2.Controls.Add(Me.AccountCodeTextBox)
-        Me.TabPage2.Controls.Add(TaxableLabel)
-        Me.TabPage2.Controls.Add(Me.TaxableCheckBox)
-        Me.TabPage2.Controls.Add(InactiveLabel)
-        Me.TabPage2.Controls.Add(Me.InactiveCheckBox)
-        Me.TabPage2.Controls.Add(AdjustmentAmountNegativLabel)
-        Me.TabPage2.Controls.Add(Me.AdjustmentAmountNegativCheckBox)
-        Me.TabPage2.Controls.Add(DefaultModifiersLabel)
-        Me.TabPage2.Controls.Add(Me.DefaultModifiersTextBox)
-        Me.TabPage2.Controls.Add(PrePaymentLabel)
-        Me.TabPage2.Controls.Add(Me.PrePaymentCheckBox)
-        Me.TabPage2.Controls.Add(DefaultModifier1Label)
-        Me.TabPage2.Controls.Add(Me.DefaultModifier1TextBox)
-        Me.TabPage2.Controls.Add(DefaultModifier2Label)
-        Me.TabPage2.Controls.Add(Me.DefaultModifier2TextBox)
-        Me.TabPage2.Controls.Add(DefaultModifier3Label)
-        Me.TabPage2.Controls.Add(Me.DefaultModifier3TextBox)
-        Me.TabPage2.Controls.Add(DefaultModifier4Label)
-        Me.TabPage2.Controls.Add(Me.DefaultModifier4TextBox)
-        Me.TabPage2.Controls.Add(DontPrintonInsuranceLabel)
-        Me.TabPage2.Controls.Add(Me.DontPrintonInsuranceTextBox)
-        Me.TabPage2.Controls.Add(CostofServiceProductLabel)
-        Me.TabPage2.Controls.Add(Me.CostofServiceProductTextBox)
-        Me.TabPage2.Controls.Add(MyProceduresLabel)
-        Me.TabPage2.Controls.Add(Me.MyProceduresTextBox)
-        Me.TabPage2.Controls.Add(TimeStampLabel)
-        Me.TabPage2.Controls.Add(Me.TimeStampDateTimePicker)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -786,141 +706,57 @@ Partial Class MMChProcedure
         Me.TabPage2.Text = "Add/Edit"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'MyProceduresTextBox
+        '
+        Me.MyProceduresTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "MyProcedures", True))
+        Me.MyProceduresTextBox.Location = New System.Drawing.Point(356, 230)
+        Me.MyProceduresTextBox.MaxLength = 20
+        Me.MyProceduresTextBox.Name = "MyProceduresTextBox"
+        Me.MyProceduresTextBox.Size = New System.Drawing.Size(131, 20)
+        Me.MyProceduresTextBox.TabIndex = 119
+        '
+        'MyProceduresLabel
+        '
+        Me.MyProceduresLabel.AutoSize = True
+        Me.MyProceduresLabel.Location = New System.Drawing.Point(272, 233)
+        Me.MyProceduresLabel.Name = "MyProceduresLabel"
+        Me.MyProceduresLabel.Size = New System.Drawing.Size(81, 13)
+        Me.MyProceduresLabel.TabIndex = 118
+        Me.MyProceduresLabel.Text = "My Procedures:"
+        '
         'Code1TextBox
         '
         Me.Code1TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "Code1", True))
-        Me.Code1TextBox.Location = New System.Drawing.Point(171, 30)
+        Me.Code1TextBox.Location = New System.Drawing.Point(356, 51)
         Me.Code1TextBox.MaxLength = 10
         Me.Code1TextBox.Name = "Code1TextBox"
         Me.Code1TextBox.Size = New System.Drawing.Size(200, 20)
         Me.Code1TextBox.TabIndex = 1
         '
-        'Code2TextBox
-        '
-        Me.Code2TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "Code2", True))
-        Me.Code2TextBox.Location = New System.Drawing.Point(171, 56)
-        Me.Code2TextBox.MaxLength = 10
-        Me.Code2TextBox.Name = "Code2TextBox"
-        Me.Code2TextBox.Size = New System.Drawing.Size(200, 20)
-        Me.Code2TextBox.TabIndex = 3
-        '
-        'Code3TextBox
-        '
-        Me.Code3TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "Code3", True))
-        Me.Code3TextBox.Location = New System.Drawing.Point(171, 82)
-        Me.Code3TextBox.MaxLength = 10
-        Me.Code3TextBox.Name = "Code3TextBox"
-        Me.Code3TextBox.Size = New System.Drawing.Size(200, 20)
-        Me.Code3TextBox.TabIndex = 5
-        '
         'TypeTextBox
         '
         Me.TypeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "Type", True))
-        Me.TypeTextBox.Location = New System.Drawing.Point(171, 108)
+        Me.TypeTextBox.Location = New System.Drawing.Point(356, 104)
         Me.TypeTextBox.MaxLength = 3
         Me.TypeTextBox.Name = "TypeTextBox"
         Me.TypeTextBox.Size = New System.Drawing.Size(200, 20)
         Me.TypeTextBox.TabIndex = 7
+        Me.TypeTextBox.Text = "PR"
         '
         'DescriptionTextBox
         '
         Me.DescriptionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "Description", True))
-        Me.DescriptionTextBox.Location = New System.Drawing.Point(171, 134)
+        Me.DescriptionTextBox.Location = New System.Drawing.Point(356, 152)
         Me.DescriptionTextBox.MaxLength = 40
+        Me.DescriptionTextBox.Multiline = True
         Me.DescriptionTextBox.Name = "DescriptionTextBox"
-        Me.DescriptionTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.DescriptionTextBox.Size = New System.Drawing.Size(200, 46)
         Me.DescriptionTextBox.TabIndex = 9
-        '
-        'TypeofServiceTextBox
-        '
-        Me.TypeofServiceTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "TypeofService", True))
-        Me.TypeofServiceTextBox.Location = New System.Drawing.Point(171, 160)
-        Me.TypeofServiceTextBox.MaxLength = 3
-        Me.TypeofServiceTextBox.Name = "TypeofServiceTextBox"
-        Me.TypeofServiceTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.TypeofServiceTextBox.TabIndex = 11
-        '
-        'ScreenLocationTextBox
-        '
-        Me.ScreenLocationTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "ScreenLocation", True))
-        Me.ScreenLocationTextBox.Location = New System.Drawing.Point(171, 186)
-        Me.ScreenLocationTextBox.Name = "ScreenLocationTextBox"
-        Me.ScreenLocationTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.ScreenLocationTextBox.TabIndex = 13
-        '
-        'DefaultPlaceService1TextBox
-        '
-        Me.DefaultPlaceService1TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "DefaultPlaceService1", True))
-        Me.DefaultPlaceService1TextBox.Location = New System.Drawing.Point(171, 212)
-        Me.DefaultPlaceService1TextBox.MaxLength = 2
-        Me.DefaultPlaceService1TextBox.Name = "DefaultPlaceService1TextBox"
-        Me.DefaultPlaceService1TextBox.Size = New System.Drawing.Size(200, 20)
-        Me.DefaultPlaceService1TextBox.TabIndex = 15
-        '
-        'DefaultPlaceService2TextBox
-        '
-        Me.DefaultPlaceService2TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "DefaultPlaceService2", True))
-        Me.DefaultPlaceService2TextBox.Location = New System.Drawing.Point(171, 238)
-        Me.DefaultPlaceService2TextBox.MaxLength = 2
-        Me.DefaultPlaceService2TextBox.Name = "DefaultPlaceService2TextBox"
-        Me.DefaultPlaceService2TextBox.Size = New System.Drawing.Size(200, 20)
-        Me.DefaultPlaceService2TextBox.TabIndex = 17
-        '
-        'DefaultPlaceService3TextBox
-        '
-        Me.DefaultPlaceService3TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "DefaultPlaceService3", True))
-        Me.DefaultPlaceService3TextBox.Location = New System.Drawing.Point(171, 264)
-        Me.DefaultPlaceService3TextBox.MaxLength = 2
-        Me.DefaultPlaceService3TextBox.Name = "DefaultPlaceService3TextBox"
-        Me.DefaultPlaceService3TextBox.Size = New System.Drawing.Size(200, 20)
-        Me.DefaultPlaceService3TextBox.TabIndex = 19
-        '
-        'TimeToDoProcedureTextBox
-        '
-        Me.TimeToDoProcedureTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "TimeToDoProcedure", True))
-        Me.TimeToDoProcedureTextBox.Location = New System.Drawing.Point(171, 290)
-        Me.TimeToDoProcedureTextBox.Name = "TimeToDoProcedureTextBox"
-        Me.TimeToDoProcedureTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.TimeToDoProcedureTextBox.TabIndex = 21
-        '
-        'InsuranceCategoryTextBox
-        '
-        Me.InsuranceCategoryTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "InsuranceCategory", True))
-        Me.InsuranceCategoryTextBox.Location = New System.Drawing.Point(171, 316)
-        Me.InsuranceCategoryTextBox.MaxLength = 1
-        Me.InsuranceCategoryTextBox.Name = "InsuranceCategoryTextBox"
-        Me.InsuranceCategoryTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.InsuranceCategoryTextBox.TabIndex = 23
-        '
-        'PatientOnlyResponsibleCheckBox
-        '
-        Me.PatientOnlyResponsibleCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.MMPRocedureBindingSource, "PatientOnlyResponsible", True))
-        Me.PatientOnlyResponsibleCheckBox.Location = New System.Drawing.Point(171, 342)
-        Me.PatientOnlyResponsibleCheckBox.Name = "PatientOnlyResponsibleCheckBox"
-        Me.PatientOnlyResponsibleCheckBox.Size = New System.Drawing.Size(200, 24)
-        Me.PatientOnlyResponsibleCheckBox.TabIndex = 25
-        '
-        'OnlyPrintonInsuranceTextBox
-        '
-        Me.OnlyPrintonInsuranceTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "OnlyPrintonInsurance", True))
-        Me.OnlyPrintonInsuranceTextBox.Location = New System.Drawing.Point(171, 372)
-        Me.OnlyPrintonInsuranceTextBox.MaxLength = 20
-        Me.OnlyPrintonInsuranceTextBox.Name = "OnlyPrintonInsuranceTextBox"
-        Me.OnlyPrintonInsuranceTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.OnlyPrintonInsuranceTextBox.TabIndex = 27
-        '
-        'MedicareAllowedAmountTextBox
-        '
-        Me.MedicareAllowedAmountTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "MedicareAllowedAmount", True))
-        Me.MedicareAllowedAmountTextBox.Location = New System.Drawing.Point(171, 398)
-        Me.MedicareAllowedAmountTextBox.Name = "MedicareAllowedAmountTextBox"
-        Me.MedicareAllowedAmountTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.MedicareAllowedAmountTextBox.TabIndex = 29
         '
         'AmountATextBox
         '
         Me.AmountATextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "AmountA", True))
-        Me.AmountATextBox.Location = New System.Drawing.Point(171, 424)
+        Me.AmountATextBox.Location = New System.Drawing.Point(356, 282)
         Me.AmountATextBox.Name = "AmountATextBox"
         Me.AmountATextBox.Size = New System.Drawing.Size(200, 20)
         Me.AmountATextBox.TabIndex = 31
@@ -928,7 +764,7 @@ Partial Class MMChProcedure
         'AmountBTextBox
         '
         Me.AmountBTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "AmountB", True))
-        Me.AmountBTextBox.Location = New System.Drawing.Point(171, 450)
+        Me.AmountBTextBox.Location = New System.Drawing.Point(356, 328)
         Me.AmountBTextBox.Name = "AmountBTextBox"
         Me.AmountBTextBox.Size = New System.Drawing.Size(200, 20)
         Me.AmountBTextBox.TabIndex = 33
@@ -936,130 +772,285 @@ Partial Class MMChProcedure
         'AmountCTextBox
         '
         Me.AmountCTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "AmountC", True))
-        Me.AmountCTextBox.Location = New System.Drawing.Point(171, 476)
+        Me.AmountCTextBox.Location = New System.Drawing.Point(356, 387)
         Me.AmountCTextBox.Name = "AmountCTextBox"
         Me.AmountCTextBox.Size = New System.Drawing.Size(200, 20)
         Me.AmountCTextBox.TabIndex = 35
         '
+        'TabPage3
+        '
+        Me.TabPage3.Controls.Add(Me.Code2TextBox)
+        Me.TabPage3.Controls.Add(Me.Code3TextBox)
+        Me.TabPage3.Controls.Add(Me.TypeofServiceLabel)
+        Me.TabPage3.Controls.Add(Me.TypeofServiceTextBox)
+        Me.TabPage3.Controls.Add(Me.ScreenLocationLabel)
+        Me.TabPage3.Controls.Add(Me.ScreenLocationTextBox)
+        Me.TabPage3.Controls.Add(Me.DefaultPlaceService1Label)
+        Me.TabPage3.Controls.Add(Me.DefaultPlaceService1TextBox)
+        Me.TabPage3.Controls.Add(Me.DefaultPlaceService2Label)
+        Me.TabPage3.Controls.Add(Me.DefaultPlaceService2TextBox)
+        Me.TabPage3.Controls.Add(Me.DefaultPlaceService3Label)
+        Me.TabPage3.Controls.Add(Me.DefaultPlaceService3TextBox)
+        Me.TabPage3.Controls.Add(Me.TimeToDoProcedureLabel)
+        Me.TabPage3.Controls.Add(Me.TimeToDoProcedureTextBox)
+        Me.TabPage3.Controls.Add(Me.InsuranceCategoryLabel)
+        Me.TabPage3.Controls.Add(Me.InsuranceCategoryTextBox)
+        Me.TabPage3.Controls.Add(Me.PatientOnlyResponsibleLabel)
+        Me.TabPage3.Controls.Add(Me.PatientOnlyResponsibleCheckBox)
+        Me.TabPage3.Controls.Add(Me.OnlyPrintonInsuranceLabel)
+        Me.TabPage3.Controls.Add(Me.OnlyPrintonInsuranceTextBox)
+        Me.TabPage3.Controls.Add(Me.MedicareAllowedAmountLabel)
+        Me.TabPage3.Controls.Add(Me.MedicareAllowedAmountTextBox)
+        Me.TabPage3.Controls.Add(Me.AccountCodeTextBox)
+        Me.TabPage3.Controls.Add(Me.DefaultModifiersTextBox)
+        Me.TabPage3.Controls.Add(Me.DefaultModifier1TextBox)
+        Me.TabPage3.Controls.Add(Me.DefaultModifier2TextBox)
+        Me.TabPage3.Controls.Add(Me.DefaultModifier3TextBox)
+        Me.TabPage3.Controls.Add(Me.DefaultModifier4TextBox)
+        Me.TabPage3.Controls.Add(Me.DontPrintonInsuranceTextBox)
+        Me.TabPage3.Controls.Add(Me.CostofServiceProductTextBox)
+        Me.TabPage3.Controls.Add(Me.Code2Label)
+        Me.TabPage3.Controls.Add(Me.Code3Label)
+        Me.TabPage3.Controls.Add(Me.AccountCodeLabel)
+        Me.TabPage3.Controls.Add(Me.TaxableLabel)
+        Me.TabPage3.Controls.Add(Me.TaxableCheckBox)
+        Me.TabPage3.Controls.Add(Me.InactiveLabel)
+        Me.TabPage3.Controls.Add(Me.InactiveCheckBox)
+        Me.TabPage3.Controls.Add(Me.AdjustmentAmountNegativLabel)
+        Me.TabPage3.Controls.Add(Me.AdjustmentAmountNegativCheckBox)
+        Me.TabPage3.Controls.Add(Me.DefaultModifiersLabel)
+        Me.TabPage3.Controls.Add(Me.PrePaymentLabel)
+        Me.TabPage3.Controls.Add(Me.PrePaymentCheckBox)
+        Me.TabPage3.Controls.Add(Me.DefaultModifier1Label)
+        Me.TabPage3.Controls.Add(Me.DefaultModifier2Label)
+        Me.TabPage3.Controls.Add(Me.DefaultModifier3Label)
+        Me.TabPage3.Controls.Add(Me.DefaultModifier4Label)
+        Me.TabPage3.Controls.Add(Me.DontPrintonInsuranceLabel)
+        Me.TabPage3.Controls.Add(Me.CostofServiceProductLabel)
+        Me.TabPage3.Controls.Add(Me.TimeStampLabel)
+        Me.TabPage3.Controls.Add(Me.TimeStampDateTimePicker)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(829, 513)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "Other"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'Code2TextBox
+        '
+        Me.Code2TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "Code2", True))
+        Me.Code2TextBox.Location = New System.Drawing.Point(184, 61)
+        Me.Code2TextBox.MaxLength = 10
+        Me.Code2TextBox.Name = "Code2TextBox"
+        Me.Code2TextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Code2TextBox.TabIndex = 69
+        '
+        'Code3TextBox
+        '
+        Me.Code3TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "Code3", True))
+        Me.Code3TextBox.Location = New System.Drawing.Point(184, 87)
+        Me.Code3TextBox.MaxLength = 10
+        Me.Code3TextBox.Name = "Code3TextBox"
+        Me.Code3TextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Code3TextBox.TabIndex = 71
+        '
+        'TypeofServiceTextBox
+        '
+        Me.TypeofServiceTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "TypeofService", True))
+        Me.TypeofServiceTextBox.Location = New System.Drawing.Point(184, 123)
+        Me.TypeofServiceTextBox.MaxLength = 3
+        Me.TypeofServiceTextBox.Name = "TypeofServiceTextBox"
+        Me.TypeofServiceTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.TypeofServiceTextBox.TabIndex = 73
+        '
+        'ScreenLocationTextBox
+        '
+        Me.ScreenLocationTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "ScreenLocation", True))
+        Me.ScreenLocationTextBox.Location = New System.Drawing.Point(184, 149)
+        Me.ScreenLocationTextBox.Name = "ScreenLocationTextBox"
+        Me.ScreenLocationTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.ScreenLocationTextBox.TabIndex = 75
+        '
+        'DefaultPlaceService1TextBox
+        '
+        Me.DefaultPlaceService1TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "DefaultPlaceService1", True))
+        Me.DefaultPlaceService1TextBox.Location = New System.Drawing.Point(184, 175)
+        Me.DefaultPlaceService1TextBox.MaxLength = 2
+        Me.DefaultPlaceService1TextBox.Name = "DefaultPlaceService1TextBox"
+        Me.DefaultPlaceService1TextBox.Size = New System.Drawing.Size(200, 20)
+        Me.DefaultPlaceService1TextBox.TabIndex = 77
+        '
+        'DefaultPlaceService2TextBox
+        '
+        Me.DefaultPlaceService2TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "DefaultPlaceService2", True))
+        Me.DefaultPlaceService2TextBox.Location = New System.Drawing.Point(184, 201)
+        Me.DefaultPlaceService2TextBox.MaxLength = 2
+        Me.DefaultPlaceService2TextBox.Name = "DefaultPlaceService2TextBox"
+        Me.DefaultPlaceService2TextBox.Size = New System.Drawing.Size(200, 20)
+        Me.DefaultPlaceService2TextBox.TabIndex = 79
+        '
+        'DefaultPlaceService3TextBox
+        '
+        Me.DefaultPlaceService3TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "DefaultPlaceService3", True))
+        Me.DefaultPlaceService3TextBox.Location = New System.Drawing.Point(184, 227)
+        Me.DefaultPlaceService3TextBox.MaxLength = 2
+        Me.DefaultPlaceService3TextBox.Name = "DefaultPlaceService3TextBox"
+        Me.DefaultPlaceService3TextBox.Size = New System.Drawing.Size(200, 20)
+        Me.DefaultPlaceService3TextBox.TabIndex = 81
+        '
+        'TimeToDoProcedureTextBox
+        '
+        Me.TimeToDoProcedureTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "TimeToDoProcedure", True))
+        Me.TimeToDoProcedureTextBox.Location = New System.Drawing.Point(184, 253)
+        Me.TimeToDoProcedureTextBox.Name = "TimeToDoProcedureTextBox"
+        Me.TimeToDoProcedureTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.TimeToDoProcedureTextBox.TabIndex = 83
+        '
+        'InsuranceCategoryTextBox
+        '
+        Me.InsuranceCategoryTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "InsuranceCategory", True))
+        Me.InsuranceCategoryTextBox.Location = New System.Drawing.Point(184, 279)
+        Me.InsuranceCategoryTextBox.MaxLength = 1
+        Me.InsuranceCategoryTextBox.Name = "InsuranceCategoryTextBox"
+        Me.InsuranceCategoryTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.InsuranceCategoryTextBox.TabIndex = 85
+        '
+        'PatientOnlyResponsibleCheckBox
+        '
+        Me.PatientOnlyResponsibleCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.MMPRocedureBindingSource, "PatientOnlyResponsible", True))
+        Me.PatientOnlyResponsibleCheckBox.Location = New System.Drawing.Point(184, 305)
+        Me.PatientOnlyResponsibleCheckBox.Name = "PatientOnlyResponsibleCheckBox"
+        Me.PatientOnlyResponsibleCheckBox.Size = New System.Drawing.Size(200, 24)
+        Me.PatientOnlyResponsibleCheckBox.TabIndex = 87
+        '
+        'OnlyPrintonInsuranceTextBox
+        '
+        Me.OnlyPrintonInsuranceTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "OnlyPrintonInsurance", True))
+        Me.OnlyPrintonInsuranceTextBox.Location = New System.Drawing.Point(184, 335)
+        Me.OnlyPrintonInsuranceTextBox.MaxLength = 20
+        Me.OnlyPrintonInsuranceTextBox.Name = "OnlyPrintonInsuranceTextBox"
+        Me.OnlyPrintonInsuranceTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.OnlyPrintonInsuranceTextBox.TabIndex = 89
+        '
+        'MedicareAllowedAmountTextBox
+        '
+        Me.MedicareAllowedAmountTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "MedicareAllowedAmount", True))
+        Me.MedicareAllowedAmountTextBox.Location = New System.Drawing.Point(184, 361)
+        Me.MedicareAllowedAmountTextBox.Name = "MedicareAllowedAmountTextBox"
+        Me.MedicareAllowedAmountTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.MedicareAllowedAmountTextBox.TabIndex = 91
+        '
         'AccountCodeTextBox
         '
         Me.AccountCodeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "AccountCode", True))
-        Me.AccountCodeTextBox.Location = New System.Drawing.Point(571, 27)
+        Me.AccountCodeTextBox.Location = New System.Drawing.Point(584, 61)
         Me.AccountCodeTextBox.MaxLength = 4
         Me.AccountCodeTextBox.Name = "AccountCodeTextBox"
         Me.AccountCodeTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.AccountCodeTextBox.TabIndex = 37
-        '
-        'TaxableCheckBox
-        '
-        Me.TaxableCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.MMPRocedureBindingSource, "Taxable", True))
-        Me.TaxableCheckBox.Location = New System.Drawing.Point(568, 54)
-        Me.TaxableCheckBox.Name = "TaxableCheckBox"
-        Me.TaxableCheckBox.Size = New System.Drawing.Size(200, 24)
-        Me.TaxableCheckBox.TabIndex = 39
-        '
-        'InactiveCheckBox
-        '
-        Me.InactiveCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.MMPRocedureBindingSource, "Inactive", True))
-        Me.InactiveCheckBox.Location = New System.Drawing.Point(568, 84)
-        Me.InactiveCheckBox.Name = "InactiveCheckBox"
-        Me.InactiveCheckBox.Size = New System.Drawing.Size(24, 24)
-        Me.InactiveCheckBox.TabIndex = 41
-        '
-        'AdjustmentAmountNegativCheckBox
-        '
-        Me.AdjustmentAmountNegativCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.MMPRocedureBindingSource, "AdjustmentAmountNegativ", True))
-        Me.AdjustmentAmountNegativCheckBox.Location = New System.Drawing.Point(568, 108)
-        Me.AdjustmentAmountNegativCheckBox.Name = "AdjustmentAmountNegativCheckBox"
-        Me.AdjustmentAmountNegativCheckBox.Size = New System.Drawing.Size(200, 24)
-        Me.AdjustmentAmountNegativCheckBox.TabIndex = 43
+        Me.AccountCodeTextBox.TabIndex = 93
         '
         'DefaultModifiersTextBox
         '
         Me.DefaultModifiersTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "DefaultModifiers", True))
-        Me.DefaultModifiersTextBox.Location = New System.Drawing.Point(568, 138)
+        Me.DefaultModifiersTextBox.Location = New System.Drawing.Point(581, 172)
         Me.DefaultModifiersTextBox.MaxLength = 16
         Me.DefaultModifiersTextBox.Name = "DefaultModifiersTextBox"
         Me.DefaultModifiersTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.DefaultModifiersTextBox.TabIndex = 45
-        '
-        'PrePaymentCheckBox
-        '
-        Me.PrePaymentCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.MMPRocedureBindingSource, "PrePayment", True))
-        Me.PrePaymentCheckBox.Location = New System.Drawing.Point(568, 164)
-        Me.PrePaymentCheckBox.Name = "PrePaymentCheckBox"
-        Me.PrePaymentCheckBox.Size = New System.Drawing.Size(200, 24)
-        Me.PrePaymentCheckBox.TabIndex = 47
+        Me.DefaultModifiersTextBox.TabIndex = 101
         '
         'DefaultModifier1TextBox
         '
         Me.DefaultModifier1TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "DefaultModifier1", True))
-        Me.DefaultModifier1TextBox.Location = New System.Drawing.Point(568, 194)
+        Me.DefaultModifier1TextBox.Location = New System.Drawing.Point(581, 228)
         Me.DefaultModifier1TextBox.MaxLength = 2
         Me.DefaultModifier1TextBox.Name = "DefaultModifier1TextBox"
         Me.DefaultModifier1TextBox.Size = New System.Drawing.Size(200, 20)
-        Me.DefaultModifier1TextBox.TabIndex = 49
+        Me.DefaultModifier1TextBox.TabIndex = 105
         '
         'DefaultModifier2TextBox
         '
         Me.DefaultModifier2TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "DefaultModifier2", True))
-        Me.DefaultModifier2TextBox.Location = New System.Drawing.Point(568, 220)
+        Me.DefaultModifier2TextBox.Location = New System.Drawing.Point(581, 254)
         Me.DefaultModifier2TextBox.MaxLength = 2
         Me.DefaultModifier2TextBox.Name = "DefaultModifier2TextBox"
         Me.DefaultModifier2TextBox.Size = New System.Drawing.Size(200, 20)
-        Me.DefaultModifier2TextBox.TabIndex = 51
+        Me.DefaultModifier2TextBox.TabIndex = 107
         '
         'DefaultModifier3TextBox
         '
         Me.DefaultModifier3TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "DefaultModifier3", True))
-        Me.DefaultModifier3TextBox.Location = New System.Drawing.Point(568, 246)
+        Me.DefaultModifier3TextBox.Location = New System.Drawing.Point(581, 280)
         Me.DefaultModifier3TextBox.MaxLength = 2
         Me.DefaultModifier3TextBox.Name = "DefaultModifier3TextBox"
         Me.DefaultModifier3TextBox.Size = New System.Drawing.Size(200, 20)
-        Me.DefaultModifier3TextBox.TabIndex = 53
+        Me.DefaultModifier3TextBox.TabIndex = 109
         '
         'DefaultModifier4TextBox
         '
         Me.DefaultModifier4TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "DefaultModifier4", True))
-        Me.DefaultModifier4TextBox.Location = New System.Drawing.Point(568, 272)
+        Me.DefaultModifier4TextBox.Location = New System.Drawing.Point(581, 306)
         Me.DefaultModifier4TextBox.MaxLength = 2
         Me.DefaultModifier4TextBox.Name = "DefaultModifier4TextBox"
         Me.DefaultModifier4TextBox.Size = New System.Drawing.Size(200, 20)
-        Me.DefaultModifier4TextBox.TabIndex = 55
+        Me.DefaultModifier4TextBox.TabIndex = 111
         '
         'DontPrintonInsuranceTextBox
         '
         Me.DontPrintonInsuranceTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "DontPrintonInsurance", True))
-        Me.DontPrintonInsuranceTextBox.Location = New System.Drawing.Point(568, 298)
+        Me.DontPrintonInsuranceTextBox.Location = New System.Drawing.Point(581, 332)
         Me.DontPrintonInsuranceTextBox.MaxLength = 20
         Me.DontPrintonInsuranceTextBox.Name = "DontPrintonInsuranceTextBox"
         Me.DontPrintonInsuranceTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.DontPrintonInsuranceTextBox.TabIndex = 57
+        Me.DontPrintonInsuranceTextBox.TabIndex = 113
         '
         'CostofServiceProductTextBox
         '
         Me.CostofServiceProductTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "CostofServiceProduct", True))
-        Me.CostofServiceProductTextBox.Location = New System.Drawing.Point(568, 324)
+        Me.CostofServiceProductTextBox.Location = New System.Drawing.Point(581, 358)
         Me.CostofServiceProductTextBox.Name = "CostofServiceProductTextBox"
         Me.CostofServiceProductTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.CostofServiceProductTextBox.TabIndex = 59
+        Me.CostofServiceProductTextBox.TabIndex = 115
         '
-        'MyProceduresTextBox
+        'TaxableCheckBox
         '
-        Me.MyProceduresTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPRocedureBindingSource, "MyProcedures", True))
-        Me.MyProceduresTextBox.Location = New System.Drawing.Point(568, 372)
-        Me.MyProceduresTextBox.MaxLength = 20
-        Me.MyProceduresTextBox.Name = "MyProceduresTextBox"
-        Me.MyProceduresTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.MyProceduresTextBox.TabIndex = 65
+        Me.TaxableCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.MMPRocedureBindingSource, "Taxable", True))
+        Me.TaxableCheckBox.Location = New System.Drawing.Point(581, 88)
+        Me.TaxableCheckBox.Name = "TaxableCheckBox"
+        Me.TaxableCheckBox.Size = New System.Drawing.Size(200, 24)
+        Me.TaxableCheckBox.TabIndex = 95
+        '
+        'InactiveCheckBox
+        '
+        Me.InactiveCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.MMPRocedureBindingSource, "Inactive", True))
+        Me.InactiveCheckBox.Location = New System.Drawing.Point(581, 118)
+        Me.InactiveCheckBox.Name = "InactiveCheckBox"
+        Me.InactiveCheckBox.Size = New System.Drawing.Size(24, 24)
+        Me.InactiveCheckBox.TabIndex = 97
+        '
+        'AdjustmentAmountNegativCheckBox
+        '
+        Me.AdjustmentAmountNegativCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.MMPRocedureBindingSource, "AdjustmentAmountNegativ", True))
+        Me.AdjustmentAmountNegativCheckBox.Location = New System.Drawing.Point(581, 142)
+        Me.AdjustmentAmountNegativCheckBox.Name = "AdjustmentAmountNegativCheckBox"
+        Me.AdjustmentAmountNegativCheckBox.Size = New System.Drawing.Size(200, 24)
+        Me.AdjustmentAmountNegativCheckBox.TabIndex = 99
+        '
+        'PrePaymentCheckBox
+        '
+        Me.PrePaymentCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.MMPRocedureBindingSource, "PrePayment", True))
+        Me.PrePaymentCheckBox.Location = New System.Drawing.Point(581, 198)
+        Me.PrePaymentCheckBox.Name = "PrePaymentCheckBox"
+        Me.PrePaymentCheckBox.Size = New System.Drawing.Size(200, 24)
+        Me.PrePaymentCheckBox.TabIndex = 103
         '
         'TimeStampDateTimePicker
         '
         Me.TimeStampDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.MMPRocedureBindingSource, "TimeStamp", True))
-        Me.TimeStampDateTimePicker.Location = New System.Drawing.Point(568, 398)
+        Me.TimeStampDateTimePicker.Location = New System.Drawing.Point(581, 384)
         Me.TimeStampDateTimePicker.Name = "TimeStampDateTimePicker"
         Me.TimeStampDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.TimeStampDateTimePicker.TabIndex = 67
+        Me.TimeStampDateTimePicker.TabIndex = 119
         '
         'MMPRocedureBindingNavigator
         '
@@ -1084,13 +1075,13 @@ Partial Class MMChProcedure
         Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(69, 22)
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(74, 22)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
         '
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -1099,7 +1090,7 @@ Partial Class MMChProcedure
         Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
         Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(58, 22)
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(60, 22)
         Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'BindingNavigatorMoveFirstItem
@@ -1129,6 +1120,7 @@ Partial Class MMChProcedure
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Position"
         Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 21)
         Me.BindingNavigatorPositionItem.Text = "0"
@@ -1178,7 +1170,7 @@ Partial Class MMChProcedure
         '
         Me.MMPRocedureBindingNavigatorSaveItem.Image = CType(resources.GetObject("MMPRocedureBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.MMPRocedureBindingNavigatorSaveItem.Name = "MMPRocedureBindingNavigatorSaveItem"
-        Me.MMPRocedureBindingNavigatorSaveItem.Size = New System.Drawing.Size(77, 22)
+        Me.MMPRocedureBindingNavigatorSaveItem.Size = New System.Drawing.Size(78, 22)
         Me.MMPRocedureBindingNavigatorSaveItem.Text = "Save Data"
         '
         'ToolStripLabel5
@@ -1190,18 +1182,19 @@ Partial Class MMChProcedure
         'ToolStripLabel2
         '
         Me.ToolStripLabel2.Name = "ToolStripLabel2"
-        Me.ToolStripLabel2.Size = New System.Drawing.Size(27, 22)
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(30, 22)
         Me.ToolStripLabel2.Text = "Find"
         '
         'txtFind
         '
+        Me.txtFind.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtFind.Name = "txtFind"
         Me.txtFind.Size = New System.Drawing.Size(100, 25)
         '
         'ToolStripLabel3
         '
         Me.ToolStripLabel3.Name = "ToolStripLabel3"
-        Me.ToolStripLabel3.Size = New System.Drawing.Size(42, 22)
+        Me.ToolStripLabel3.Size = New System.Drawing.Size(45, 22)
         Me.ToolStripLabel3.Text = "Criteria"
         '
         'cmbFilter
@@ -1215,6 +1208,15 @@ Partial Class MMChProcedure
         'MMPRocedureTableAdapter
         '
         Me.MMPRocedureTableAdapter.ClearBeforeFill = True
+        '
+        'btnPhysician
+        '
+        Me.btnPhysician.Location = New System.Drawing.Point(486, 228)
+        Me.btnPhysician.Name = "btnPhysician"
+        Me.btnPhysician.Size = New System.Drawing.Size(70, 23)
+        Me.btnPhysician.TabIndex = 120
+        Me.btnPhysician.Text = "Physician"
+        Me.btnPhysician.UseVisualStyleBackColor = True
         '
         'MMChProcedure
         '
@@ -1233,6 +1235,8 @@ Partial Class MMChProcedure
         CType(Me.MMDataDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        Me.TabPage3.ResumeLayout(False)
+        Me.TabPage3.PerformLayout()
         CType(Me.MMPRocedureBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MMPRocedureBindingNavigator.ResumeLayout(False)
         Me.MMPRocedureBindingNavigator.PerformLayout()
@@ -1242,7 +1246,6 @@ Partial Class MMChProcedure
     End Sub
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
-    Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
     Friend WithEvents MMDataDataSet1 As MedicalManager.MMDataDataSet1
     Friend WithEvents MMPRocedureBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents MMPRocedureTableAdapter As MedicalManager.MMDataDataSet1TableAdapters.MMPRocedureTableAdapter
@@ -1260,38 +1263,6 @@ Partial Class MMChProcedure
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents MMPRocedureBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents MMPRocedureDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents Code1TextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Code2TextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Code3TextBox As System.Windows.Forms.TextBox
-    Friend WithEvents TypeTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents DescriptionTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents TypeofServiceTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents ScreenLocationTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents DefaultPlaceService1TextBox As System.Windows.Forms.TextBox
-    Friend WithEvents DefaultPlaceService2TextBox As System.Windows.Forms.TextBox
-    Friend WithEvents DefaultPlaceService3TextBox As System.Windows.Forms.TextBox
-    Friend WithEvents TimeToDoProcedureTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents InsuranceCategoryTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents PatientOnlyResponsibleCheckBox As System.Windows.Forms.CheckBox
-    Friend WithEvents OnlyPrintonInsuranceTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents MedicareAllowedAmountTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents AmountATextBox As System.Windows.Forms.TextBox
-    Friend WithEvents AmountBTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents AmountCTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents AccountCodeTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents TaxableCheckBox As System.Windows.Forms.CheckBox
-    Friend WithEvents InactiveCheckBox As System.Windows.Forms.CheckBox
-    Friend WithEvents AdjustmentAmountNegativCheckBox As System.Windows.Forms.CheckBox
-    Friend WithEvents DefaultModifiersTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents PrePaymentCheckBox As System.Windows.Forms.CheckBox
-    Friend WithEvents DefaultModifier1TextBox As System.Windows.Forms.TextBox
-    Friend WithEvents DefaultModifier2TextBox As System.Windows.Forms.TextBox
-    Friend WithEvents DefaultModifier3TextBox As System.Windows.Forms.TextBox
-    Friend WithEvents DefaultModifier4TextBox As System.Windows.Forms.TextBox
-    Friend WithEvents DontPrintonInsuranceTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents CostofServiceProductTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents MyProceduresTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents TimeStampDateTimePicker As System.Windows.Forms.DateTimePicker
     Friend WithEvents ToolStripLabel2 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents txtFind As System.Windows.Forms.ToolStripTextBox
     Friend WithEvents ToolStripLabel3 As System.Windows.Forms.ToolStripLabel
@@ -1331,4 +1302,65 @@ Partial Class MMChProcedure
     Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents ToolStripLabel4 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents ToolStripLabel5 As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents Code1TextBox As TextBox
+    Friend WithEvents TypeTextBox As TextBox
+    Friend WithEvents DescriptionTextBox As TextBox
+    Friend WithEvents AmountATextBox As TextBox
+    Friend WithEvents AmountBTextBox As TextBox
+    Friend WithEvents AmountCTextBox As TextBox
+    Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents Code2TextBox As TextBox
+    Friend WithEvents Code3TextBox As TextBox
+    Friend WithEvents TypeofServiceTextBox As TextBox
+    Friend WithEvents ScreenLocationTextBox As TextBox
+    Friend WithEvents DefaultPlaceService1TextBox As TextBox
+    Friend WithEvents DefaultPlaceService2TextBox As TextBox
+    Friend WithEvents DefaultPlaceService3TextBox As TextBox
+    Friend WithEvents TimeToDoProcedureTextBox As TextBox
+    Friend WithEvents InsuranceCategoryTextBox As TextBox
+    Friend WithEvents PatientOnlyResponsibleCheckBox As CheckBox
+    Friend WithEvents OnlyPrintonInsuranceTextBox As TextBox
+    Friend WithEvents MedicareAllowedAmountTextBox As TextBox
+    Friend WithEvents AccountCodeTextBox As TextBox
+    Friend WithEvents DefaultModifiersTextBox As TextBox
+    Friend WithEvents DefaultModifier1TextBox As TextBox
+    Friend WithEvents DefaultModifier2TextBox As TextBox
+    Friend WithEvents DefaultModifier3TextBox As TextBox
+    Friend WithEvents DefaultModifier4TextBox As TextBox
+    Friend WithEvents DontPrintonInsuranceTextBox As TextBox
+    Friend WithEvents CostofServiceProductTextBox As TextBox
+    Friend WithEvents TaxableCheckBox As CheckBox
+    Friend WithEvents InactiveCheckBox As CheckBox
+    Friend WithEvents AdjustmentAmountNegativCheckBox As CheckBox
+    Friend WithEvents PrePaymentCheckBox As CheckBox
+    Friend WithEvents TimeStampDateTimePicker As DateTimePicker
+    Friend WithEvents TypeofServiceLabel As Label
+    Friend WithEvents ScreenLocationLabel As Label
+    Friend WithEvents DefaultPlaceService1Label As Label
+    Friend WithEvents DefaultPlaceService2Label As Label
+    Friend WithEvents DefaultPlaceService3Label As Label
+    Friend WithEvents TimeToDoProcedureLabel As Label
+    Friend WithEvents InsuranceCategoryLabel As Label
+    Friend WithEvents PatientOnlyResponsibleLabel As Label
+    Friend WithEvents OnlyPrintonInsuranceLabel As Label
+    Friend WithEvents MedicareAllowedAmountLabel As Label
+    Friend WithEvents Code2Label As Label
+    Friend WithEvents Code3Label As Label
+    Friend WithEvents AccountCodeLabel As Label
+    Friend WithEvents TaxableLabel As Label
+    Friend WithEvents InactiveLabel As Label
+    Friend WithEvents AdjustmentAmountNegativLabel As Label
+    Friend WithEvents DefaultModifiersLabel As Label
+    Friend WithEvents PrePaymentLabel As Label
+    Friend WithEvents DefaultModifier1Label As Label
+    Friend WithEvents DefaultModifier2Label As Label
+    Friend WithEvents DefaultModifier3Label As Label
+    Friend WithEvents DefaultModifier4Label As Label
+    Friend WithEvents DontPrintonInsuranceLabel As Label
+    Friend WithEvents CostofServiceProductLabel As Label
+    Friend WithEvents TimeStampLabel As Label
+    Friend WithEvents MyProceduresTextBox As TextBox
+    Friend WithEvents MyProceduresLabel As Label
+    Friend WithEvents btnPhysician As Button
 End Class
