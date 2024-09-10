@@ -1,5 +1,6 @@
 Imports System.Data.SqlClient
 Imports System.IO
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Public Class PATIENT
     Dim adding As Boolean
     Public mbPicklistmode As Boolean
@@ -793,8 +794,8 @@ Public Class PATIENT
             End Using
 
             ' Define your SQL command with placeholders for the parameters
-            Dim insertSql As String = "INSERT INTO MMData.dbo.MMChartVisit (ChartNumber, Date, FirstName, LastName, DOB, AssignedProvider, TimeStamp, UserName, Extra1, VisitType) " &
-                                  "VALUES (@ChartNumber, @Date, @FirstName, @LastName, @DOB, @AssignedProvider, @TimeStamp, @UserName, @Extra1 , @VisitType); " &
+            Dim insertSql As String = "INSERT INTO MMData.dbo.MMChartVisit (ChartNumber, Date, FirstName, LastName, DOB, AssignedProvider, TimeStamp, UserName, Extra1, VisitType, Status) " &
+                                  "VALUES (@ChartNumber, @Date, @FirstName, @LastName, @DOB, @AssignedProvider, @TimeStamp, @UserName, @Extra1 , @VisitType , @Status); " &
                                   "SELECT SCOPE_IDENTITY();"
 
             ' Create the SQL command
@@ -817,7 +818,7 @@ Public Class PATIENT
                 command.Parameters.AddWithValue("@TimeStamp", DateTime.Now.Date)
                 command.Parameters.AddWithValue("@UserName", globalUser)
                 command.Parameters.AddWithValue("@VisitType", VisitType)
-
+                command.Parameters.AddWithValue("@Status", "NOT COMPLETED")
                 ' Execute the command and retrieve the auto-incremented CaseNumber
                 caseNumber = Convert.ToInt32(command.ExecuteScalar())
 

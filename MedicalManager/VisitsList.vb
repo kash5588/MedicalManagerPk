@@ -14,7 +14,7 @@ Public Class VisitsList
 
 
         LoadcmbPhysion()
-        GetFilteredChartVisits(CBPhysician.Text, CBDate.Text)
+        GetFilteredChartVisits(CBPhysician.Text, CBDate.Text, CBStatus.Text)
         '  Me.MMChartVisitTableAdapter.Fill(Me.MMDataDataSet1.MMChartVisit)
 
 
@@ -56,32 +56,47 @@ Public Class VisitsList
 
                 LoadPicture()
 
-                Me.MMChartTVitalSignTableAdapter.FillByCaseNumber(Me.MMDataDataSet1.MMChartTVitalSign, aRet(10))
-                If DgVitals.Rows.Count > 0 Then
-                    PanelVitals.Visible = True
-                Else
-                    PanelVitals.Visible = False
-                End If
-                Me.MMChartRxTableAdapter.FillByCaseNumber(Me.MMDataDataSet1.MMChartRx, aRet(10))
-                If DgMedicine.Rows.Count > 0 Then
-                    PanelMadication.Visible = True
-                Else
-                    PanelMadication.Visible = False
-                End If
-                Me.MMCHDxRxLtMtTableAdapter.FillByCaseNumber(Me.MMDataDataSet1.MMCHDxRxLtMt, aRet(10))
-                If DgProcedure.Rows.Count > 0 Then
-                    PanelProcedure.Visible = True
-                Else
-                    PanelProcedure.Visible = False
-                End If
+
             End If
+
             If MMChartVisitDataGridView.SelectedRows.Count = 0 Then
                 clearTextBox()
             End If
 
+            loadLeftSideGrid()
         Catch
         End Try
     End Sub
+
+    Private Sub loadLeftSideGrid()
+        If MMChartVisitDataGridView.SelectedRows.Count > 0 Then
+            Me.MMChartTVitalSignTableAdapter.FillByCaseNumber(Me.MMDataDataSet1.MMChartTVitalSign, aRet(10))
+            If DgVitals.Rows.Count > 0 Then
+                PanelVitals.Visible = True
+            Else
+                PanelVitals.Visible = False
+            End If
+            Me.MMChartRxTableAdapter.FillByCaseNumber(Me.MMDataDataSet1.MMChartRx, aRet(10))
+            If DgMedicine.Rows.Count > 0 Then
+                PanelMadication.Visible = True
+            Else
+                PanelMadication.Visible = False
+            End If
+            Me.MMCHDxRxLtMtTableAdapter.FillByCaseNumber(Me.MMDataDataSet1.MMCHDxRxLtMt, aRet(10))
+            If DgProcedure.Rows.Count > 0 Then
+                PanelProcedure.Visible = True
+            Else
+                PanelProcedure.Visible = False
+            End If
+        Else
+            PanelVitals.Visible = False
+            PanelMadication.Visible = False
+            PanelProcedure.Visible = False
+
+        End If
+
+    End Sub
+
     Private Sub LoadPicture()
         Try
             Dim connString As String = CommonFunction.connString2
@@ -131,6 +146,8 @@ Public Class VisitsList
         TBTokenNo.Text = ""
         TBPhysicianName.Text = ""
         txtCaseNo.Text = ""
+        tbDOB.Text = ""
+        TBDate.Text = ""
     End Sub
 
     Private Sub btnVitals_Click(sender As Object, e As EventArgs) Handles btnVitals.Click
@@ -162,7 +179,7 @@ Public Class VisitsList
 
 
     End Sub
-    Public Function GetFilteredChartVisits(ByVal physicianName As String, ByVal dateFilter As String) As DataTable
+    Public Function GetFilteredChartVisits(ByVal physicianName As String, ByVal dateFilter As String, ByVal Status As String) As DataTable
 
         ' Create a new DataTable to hold the results
         Dim resultTable As New DataTable()
@@ -187,6 +204,8 @@ Public Class VisitsList
 
                     command.Parameters.Add(New SqlParameter("@DateFilter", SqlDbType.NVarChar, 10))
                     command.Parameters("@DateFilter").Value = dateFilter
+                    command.Parameters.Add(New SqlParameter("@Status", SqlDbType.NVarChar, 20))
+                    command.Parameters("@Status").Value = Status
 
                     ' Create a new SqlDataAdapter to fill the DataTable
                     Using adapter As New SqlDataAdapter(command)
@@ -285,12 +304,12 @@ Public Class VisitsList
 
     End Sub
 
-    Private Sub cmbFilterByDate_SelectedValueChanged(sender As Object, e As EventArgs) Handles CBDate.SelectedValueChanged
-        GetFilteredChartVisits(CBPhysician.Text, CBDate.Text)
+    Private Sub cmbFilterByDate_SelectedValueChanged(sender As Object, e As EventArgs) Handles CBDate.SelectedValueChanged, CBStatus.SelectedValueChanged
+        GetFilteredChartVisits(CBPhysician.Text, CBDate.Text, CBStatus.Text)
     End Sub
 
     Private Sub CBPhysician_SelectedValueChanged(sender As Object, e As EventArgs) Handles CBPhysician.SelectedValueChanged
-        GetFilteredChartVisits(CBPhysician.Text, CBDate.Text)
+        GetFilteredChartVisits(CBPhysician.Text, CBDate.Text, CBStatus.Text)
     End Sub
 
     Private Sub txtFind_KeyUp(sender As Object, e As KeyEventArgs) Handles txtFind.KeyUp
@@ -305,7 +324,7 @@ Public Class VisitsList
                         Me.MMChartVisitBindingSource.Sort = "CaseNumber DESC"
                         MMChartVisitDataGridView.DataSource = Me.MMChartVisitBindingSource
                     Else
-                        GetFilteredChartVisits(CBPhysician.Text, CBDate.Text)
+                        GetFilteredChartVisits(CBPhysician.Text, CBDate.Text, CBStatus.Text)
                     End If
 
                 Else
@@ -397,10 +416,41 @@ Public Class VisitsList
     End Sub
 
     Private Sub BtnRefresh_Click(sender As Object, e As EventArgs) Handles BtnRefresh.Click
-        GetFilteredChartVisits(CBPhysician.Text, CBDate.Text)
+        GetFilteredChartVisits(CBPhysician.Text, CBDate.Text, CBStatus.Text)
     End Sub
 
     Private Sub BtnToken_Click(sender As Object, e As EventArgs) Handles BtnToken.Click
         RVtokenSlip.ShowReport(txtCaseNo.Text)
+    End Sub
+
+    Private Sub BtnCompleted_Click(sender As Object, e As EventArgs) Handles BtnCompleted.Click
+
+        ' Define your connection string (update with your server details)
+        Dim connectionString As String = connString2
+
+        ' SQL query to update the status
+        Dim query As String = "UPDATE MMChartVisit SET Status = @Status WHERE ChartNumber = @ChartNumber AND CaseNumber = @CaseNumber"
+
+        ' Create a new SQL connection
+        Using connection As New SqlConnection(connectionString)
+            ' Create a new SQL command
+            Using command As New SqlCommand(query, connection)
+                ' Add parameters to the command
+                command.Parameters.AddWithValue("@Status", "COMPLETED")
+                command.Parameters.AddWithValue("@ChartNumber", ChartNo.Text.Trim())
+                command.Parameters.AddWithValue("@CaseNumber", txtCaseNo.Text.Trim())
+
+                ' Open the connection
+                connection.Open()
+
+                ' Execute the command
+                command.ExecuteNonQuery()
+            End Using
+        End Using
+        GetFilteredChartVisits(CBPhysician.Text, CBDate.Text, CBStatus.Text)
+    End Sub
+
+    Private Sub CBStatus_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBStatus.SelectedIndexChanged
+        GetFilteredChartVisits(CBPhysician.Text, CBDate.Text, CBStatus.Text)
     End Sub
 End Class

@@ -23,7 +23,7 @@ Partial Class VisitsList
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MMChartVisitDataGridView = New System.Windows.Forms.DataGridView()
         Me.CaseNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -152,6 +152,9 @@ Partial Class VisitsList
         Me.Label5 = New System.Windows.Forms.Label()
         Me.PBoxPatient = New System.Windows.Forms.PictureBox()
         Me.BtnToken = New System.Windows.Forms.Button()
+        Me.BtnCompleted = New System.Windows.Forms.Button()
+        Me.CBStatus = New System.Windows.Forms.ComboBox()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.MMChartVisitDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMChartVisitBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -216,9 +219,9 @@ Partial Class VisitsList
         'DOB
         '
         Me.DOB.DataPropertyName = "DOB"
-        DataGridViewCellStyle2.Format = "d"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.DOB.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.Format = "d"
+        DataGridViewCellStyle6.NullValue = Nothing
+        Me.DOB.DefaultCellStyle = DataGridViewCellStyle6
         Me.DOB.HeaderText = "DOB"
         Me.DOB.Name = "DOB"
         Me.DOB.ReadOnly = True
@@ -291,10 +294,12 @@ Partial Class VisitsList
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel2.BackColor = System.Drawing.Color.GhostWhite
         Me.Panel2.Controls.Add(Me.txtFind)
+        Me.Panel2.Controls.Add(Me.Label13)
         Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Controls.Add(Me.Label7)
         Me.Panel2.Controls.Add(Me.Label9)
         Me.Panel2.Controls.Add(Me.C)
+        Me.Panel2.Controls.Add(Me.CBStatus)
         Me.Panel2.Controls.Add(Me.CBDate)
         Me.Panel2.Controls.Add(Me.CBPhysician)
         Me.Panel2.Controls.Add(Me.BtnRefresh)
@@ -368,7 +373,7 @@ Partial Class VisitsList
         '
         'BtnRefresh
         '
-        Me.BtnRefresh.BackColor = System.Drawing.Color.DodgerBlue
+        Me.BtnRefresh.BackColor = System.Drawing.Color.Green
         Me.BtnRefresh.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnRefresh.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BtnRefresh.Location = New System.Drawing.Point(66, 49)
@@ -404,6 +409,7 @@ Partial Class VisitsList
         'Panel3
         '
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Controls.Add(Me.BtnCompleted)
         Me.Panel3.Controls.Add(Me.TBTokenNo)
         Me.Panel3.Controls.Add(Me.Label1)
         Me.Panel3.Controls.Add(Me.TBDate)
@@ -420,7 +426,7 @@ Partial Class VisitsList
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Location = New System.Drawing.Point(1, 97)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(209, 229)
+        Me.Panel3.Size = New System.Drawing.Size(209, 257)
         Me.Panel3.TabIndex = 1
         '
         'TBTokenNo
@@ -493,7 +499,7 @@ Partial Class VisitsList
         Me.ChartNo.Enabled = False
         Me.ChartNo.Location = New System.Drawing.Point(68, 13)
         Me.ChartNo.Name = "ChartNo"
-        Me.ChartNo.Size = New System.Drawing.Size(122, 21)
+        Me.ChartNo.Size = New System.Drawing.Size(121, 21)
         Me.ChartNo.TabIndex = 0
         '
         'txtCaseNo
@@ -503,7 +509,7 @@ Partial Class VisitsList
         Me.txtCaseNo.Enabled = False
         Me.txtCaseNo.Location = New System.Drawing.Point(68, 71)
         Me.txtCaseNo.Name = "txtCaseNo"
-        Me.txtCaseNo.Size = New System.Drawing.Size(122, 21)
+        Me.txtCaseNo.Size = New System.Drawing.Size(121, 21)
         Me.txtCaseNo.TabIndex = 2
         '
         'Label3
@@ -548,7 +554,7 @@ Partial Class VisitsList
         Me.btnVitals.BackColor = System.Drawing.Color.DodgerBlue
         Me.btnVitals.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnVitals.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnVitals.Location = New System.Drawing.Point(12, 395)
+        Me.btnVitals.Location = New System.Drawing.Point(12, 427)
         Me.btnVitals.Name = "btnVitals"
         Me.btnVitals.Size = New System.Drawing.Size(179, 37)
         Me.btnVitals.TabIndex = 194
@@ -560,7 +566,7 @@ Partial Class VisitsList
         Me.BtnMedication.BackColor = System.Drawing.Color.DodgerBlue
         Me.BtnMedication.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnMedication.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnMedication.Location = New System.Drawing.Point(12, 449)
+        Me.BtnMedication.Location = New System.Drawing.Point(12, 481)
         Me.BtnMedication.Name = "BtnMedication"
         Me.BtnMedication.Size = New System.Drawing.Size(179, 37)
         Me.BtnMedication.TabIndex = 194
@@ -1052,7 +1058,7 @@ Partial Class VisitsList
         Me.BtnProcedures.BackColor = System.Drawing.Color.DodgerBlue
         Me.BtnProcedures.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnProcedures.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnProcedures.Location = New System.Drawing.Point(12, 503)
+        Me.BtnProcedures.Location = New System.Drawing.Point(12, 535)
         Me.BtnProcedures.Name = "BtnProcedures"
         Me.BtnProcedures.Size = New System.Drawing.Size(179, 37)
         Me.BtnProcedures.TabIndex = 194
@@ -1064,7 +1070,7 @@ Partial Class VisitsList
         Me.BtnVisitReport.BackColor = System.Drawing.Color.DodgerBlue
         Me.BtnVisitReport.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnVisitReport.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnVisitReport.Location = New System.Drawing.Point(12, 557)
+        Me.BtnVisitReport.Location = New System.Drawing.Point(12, 589)
         Me.BtnVisitReport.Name = "BtnVisitReport"
         Me.BtnVisitReport.Size = New System.Drawing.Size(179, 37)
         Me.BtnVisitReport.TabIndex = 194
@@ -1241,12 +1247,43 @@ Partial Class VisitsList
         Me.BtnToken.BackColor = System.Drawing.Color.DodgerBlue
         Me.BtnToken.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnToken.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnToken.Location = New System.Drawing.Point(13, 341)
+        Me.BtnToken.Location = New System.Drawing.Point(13, 373)
         Me.BtnToken.Name = "BtnToken"
         Me.BtnToken.Size = New System.Drawing.Size(179, 37)
         Me.BtnToken.TabIndex = 194
         Me.BtnToken.Text = "Print Token"
         Me.BtnToken.UseVisualStyleBackColor = False
+        '
+        'BtnCompleted
+        '
+        Me.BtnCompleted.BackColor = System.Drawing.Color.Chocolate
+        Me.BtnCompleted.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCompleted.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnCompleted.Location = New System.Drawing.Point(61, 223)
+        Me.BtnCompleted.Name = "BtnCompleted"
+        Me.BtnCompleted.Size = New System.Drawing.Size(84, 28)
+        Me.BtnCompleted.TabIndex = 195
+        Me.BtnCompleted.Text = "Complete"
+        Me.BtnCompleted.UseVisualStyleBackColor = False
+        '
+        'CBStatus
+        '
+        Me.CBStatus.FormattingEnabled = True
+        Me.CBStatus.Items.AddRange(New Object() {"COMPLETED", "NOT COMPLETED"})
+        Me.CBStatus.Location = New System.Drawing.Point(1030, 59)
+        Me.CBStatus.Name = "CBStatus"
+        Me.CBStatus.Size = New System.Drawing.Size(130, 23)
+        Me.CBStatus.TabIndex = 14
+        Me.CBStatus.Text = "NOT COMPLETED"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(986, 62)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(41, 15)
+        Me.Label13.TabIndex = 15
+        Me.Label13.Text = "Status"
         '
         'VisitsList
         '
@@ -1428,4 +1465,7 @@ Partial Class VisitsList
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Private WithEvents BtnRefresh As Button
     Private WithEvents BtnToken As Button
+    Private WithEvents BtnCompleted As Button
+    Friend WithEvents Label13 As Label
+    Friend WithEvents CBStatus As ComboBox
 End Class
