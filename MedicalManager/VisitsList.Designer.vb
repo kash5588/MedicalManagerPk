@@ -23,7 +23,7 @@ Partial Class VisitsList
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MMChartVisitDataGridView = New System.Windows.Forms.DataGridView()
         Me.CaseNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -39,16 +39,19 @@ Partial Class VisitsList
         Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.txtFind = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.C = New System.Windows.Forms.Label()
+        Me.CBStatus = New System.Windows.Forms.ComboBox()
         Me.CBDate = New System.Windows.Forms.ComboBox()
         Me.CBPhysician = New System.Windows.Forms.ComboBox()
         Me.BtnRefresh = New System.Windows.Forms.Button()
         Me.cmbFilter = New System.Windows.Forms.ComboBox()
         Me.lblPracticeName = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.BtnCompleted = New System.Windows.Forms.Button()
         Me.TBTokenNo = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TBDate = New System.Windows.Forms.TextBox()
@@ -152,9 +155,6 @@ Partial Class VisitsList
         Me.Label5 = New System.Windows.Forms.Label()
         Me.PBoxPatient = New System.Windows.Forms.PictureBox()
         Me.BtnToken = New System.Windows.Forms.Button()
-        Me.BtnCompleted = New System.Windows.Forms.Button()
-        Me.CBStatus = New System.Windows.Forms.ComboBox()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.MMChartVisitDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMChartVisitBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -219,9 +219,9 @@ Partial Class VisitsList
         'DOB
         '
         Me.DOB.DataPropertyName = "DOB"
-        DataGridViewCellStyle6.Format = "d"
-        DataGridViewCellStyle6.NullValue = Nothing
-        Me.DOB.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle1.Format = "d"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.DOB.DefaultCellStyle = DataGridViewCellStyle1
         Me.DOB.HeaderText = "DOB"
         Me.DOB.Name = "DOB"
         Me.DOB.ReadOnly = True
@@ -317,6 +317,15 @@ Partial Class VisitsList
         Me.txtFind.Size = New System.Drawing.Size(100, 21)
         Me.txtFind.TabIndex = 16
         '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(986, 62)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(41, 15)
+        Me.Label13.TabIndex = 15
+        Me.Label13.Text = "Status"
+        '
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -352,6 +361,14 @@ Partial Class VisitsList
         Me.C.Size = New System.Drawing.Size(46, 15)
         Me.C.TabIndex = 15
         Me.C.Text = "Criteria"
+        '
+        'CBStatus
+        '
+        Me.CBStatus.FormattingEnabled = True
+        Me.CBStatus.Location = New System.Drawing.Point(1030, 59)
+        Me.CBStatus.Name = "CBStatus"
+        Me.CBStatus.Size = New System.Drawing.Size(130, 23)
+        Me.CBStatus.TabIndex = 14
         '
         'CBDate
         '
@@ -428,6 +445,18 @@ Partial Class VisitsList
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(209, 257)
         Me.Panel3.TabIndex = 1
+        '
+        'BtnCompleted
+        '
+        Me.BtnCompleted.BackColor = System.Drawing.Color.Chocolate
+        Me.BtnCompleted.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCompleted.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnCompleted.Location = New System.Drawing.Point(61, 223)
+        Me.BtnCompleted.Name = "BtnCompleted"
+        Me.BtnCompleted.Size = New System.Drawing.Size(84, 28)
+        Me.BtnCompleted.TabIndex = 195
+        Me.BtnCompleted.Text = "Complete"
+        Me.BtnCompleted.UseVisualStyleBackColor = False
         '
         'TBTokenNo
         '
@@ -1253,37 +1282,6 @@ Partial Class VisitsList
         Me.BtnToken.TabIndex = 194
         Me.BtnToken.Text = "Print Token"
         Me.BtnToken.UseVisualStyleBackColor = False
-        '
-        'BtnCompleted
-        '
-        Me.BtnCompleted.BackColor = System.Drawing.Color.Chocolate
-        Me.BtnCompleted.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCompleted.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnCompleted.Location = New System.Drawing.Point(61, 223)
-        Me.BtnCompleted.Name = "BtnCompleted"
-        Me.BtnCompleted.Size = New System.Drawing.Size(84, 28)
-        Me.BtnCompleted.TabIndex = 195
-        Me.BtnCompleted.Text = "Complete"
-        Me.BtnCompleted.UseVisualStyleBackColor = False
-        '
-        'CBStatus
-        '
-        Me.CBStatus.FormattingEnabled = True
-        Me.CBStatus.Items.AddRange(New Object() {"COMPLETED", "NOT COMPLETED"})
-        Me.CBStatus.Location = New System.Drawing.Point(1030, 59)
-        Me.CBStatus.Name = "CBStatus"
-        Me.CBStatus.Size = New System.Drawing.Size(130, 23)
-        Me.CBStatus.TabIndex = 14
-        Me.CBStatus.Text = "NOT COMPLETED"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(986, 62)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(41, 15)
-        Me.Label13.TabIndex = 15
-        Me.Label13.Text = "Status"
         '
         'VisitsList
         '

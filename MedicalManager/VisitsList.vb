@@ -14,6 +14,7 @@ Public Class VisitsList
 
 
         LoadcmbPhysion()
+        LoadComboBoxesV2()
         GetFilteredChartVisits(CBPhysician.Text, CBDate.Text, CBStatus.Text)
         '  Me.MMChartVisitTableAdapter.Fill(Me.MMDataDataSet1.MMChartVisit)
 
@@ -96,7 +97,38 @@ Public Class VisitsList
         End If
 
     End Sub
+    Private Function LoadComboBoxesV2()
+        Try
 
+            Dim db As DBAccess = New DBAccess()
+            Dim dt As New DataTable()
+
+            dt.Load(db.ExecuteReader("SELECT * FROM MMComboV2"))
+
+            ' Loop through each row in the DataTable
+
+            For Each dtRow As DataRow In dt.Rows
+                ' Check if the Property value is "Status"
+                If dtRow("Property").ToString() = "Status" Then
+                    ' Add the Text value to the ComboBox
+                    CBStatus.Items.Add(dtRow("Text").ToString())
+                End If
+            Next
+
+            dt.Dispose()
+
+            ' Select the first item in the ComboBox if there are any items
+            If CBStatus.Items.Count > 0 Then
+                CBStatus.SelectedIndex = 0
+            End If
+        Catch ex As Exception
+            ' Show a message box if there is an error
+            MessageBox.Show(ex.ToString(), "Error loading comboboxes.")
+        End Try
+
+
+
+    End Function
     Private Sub LoadPicture()
         Try
             Dim connString As String = CommonFunction.connString2
