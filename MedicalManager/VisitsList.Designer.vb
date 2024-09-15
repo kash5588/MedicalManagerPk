@@ -23,7 +23,7 @@ Partial Class VisitsList
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MMChartVisitDataGridView = New System.Windows.Forms.DataGridView()
         Me.CaseNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -219,9 +219,9 @@ Partial Class VisitsList
         'DOB
         '
         Me.DOB.DataPropertyName = "DOB"
-        DataGridViewCellStyle1.Format = "d"
-        DataGridViewCellStyle1.NullValue = Nothing
-        Me.DOB.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Format = "d"
+        DataGridViewCellStyle3.NullValue = Nothing
+        Me.DOB.DefaultCellStyle = DataGridViewCellStyle3
         Me.DOB.HeaderText = "DOB"
         Me.DOB.Name = "DOB"
         Me.DOB.ReadOnly = True
@@ -583,7 +583,7 @@ Partial Class VisitsList
         Me.btnVitals.BackColor = System.Drawing.Color.DodgerBlue
         Me.btnVitals.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnVitals.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnVitals.Location = New System.Drawing.Point(12, 427)
+        Me.btnVitals.Location = New System.Drawing.Point(12, 414)
         Me.btnVitals.Name = "btnVitals"
         Me.btnVitals.Size = New System.Drawing.Size(179, 37)
         Me.btnVitals.TabIndex = 194
@@ -595,7 +595,7 @@ Partial Class VisitsList
         Me.BtnMedication.BackColor = System.Drawing.Color.DodgerBlue
         Me.BtnMedication.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnMedication.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnMedication.Location = New System.Drawing.Point(12, 481)
+        Me.BtnMedication.Location = New System.Drawing.Point(12, 455)
         Me.BtnMedication.Name = "BtnMedication"
         Me.BtnMedication.Size = New System.Drawing.Size(179, 37)
         Me.BtnMedication.TabIndex = 194
@@ -1087,7 +1087,7 @@ Partial Class VisitsList
         Me.BtnProcedures.BackColor = System.Drawing.Color.DodgerBlue
         Me.BtnProcedures.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnProcedures.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnProcedures.Location = New System.Drawing.Point(12, 535)
+        Me.BtnProcedures.Location = New System.Drawing.Point(12, 496)
         Me.BtnProcedures.Name = "BtnProcedures"
         Me.BtnProcedures.Size = New System.Drawing.Size(179, 37)
         Me.BtnProcedures.TabIndex = 194
@@ -1099,7 +1099,7 @@ Partial Class VisitsList
         Me.BtnVisitReport.BackColor = System.Drawing.Color.DodgerBlue
         Me.BtnVisitReport.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnVisitReport.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnVisitReport.Location = New System.Drawing.Point(12, 589)
+        Me.BtnVisitReport.Location = New System.Drawing.Point(12, 537)
         Me.BtnVisitReport.Name = "BtnVisitReport"
         Me.BtnVisitReport.Size = New System.Drawing.Size(179, 37)
         Me.BtnVisitReport.TabIndex = 194
@@ -1111,6 +1111,7 @@ Partial Class VisitsList
         Me.PanelVitals.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelVitals.Controls.Add(Me.Panel5)
+        Me.PanelVitals.Controls.Add(Me.Label5)
         Me.PanelVitals.Location = New System.Drawing.Point(211, 651)
         Me.PanelVitals.Name = "PanelVitals"
         Me.PanelVitals.Size = New System.Drawing.Size(1076, 90)
@@ -1123,9 +1124,9 @@ Partial Class VisitsList
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel5.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Panel5.Controls.Add(Me.DgVitals)
-        Me.Panel5.Location = New System.Drawing.Point(2, 0)
+        Me.Panel5.Location = New System.Drawing.Point(2, 28)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(1071, 92)
+        Me.Panel5.Size = New System.Drawing.Size(1071, 64)
         Me.Panel5.TabIndex = 15
         '
         'DgVitals
@@ -1144,8 +1145,9 @@ Partial Class VisitsList
         Me.DgVitals.RowHeadersVisible = False
         Me.DgVitals.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.DgVitals.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DgVitals.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.DgVitals.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgVitals.Size = New System.Drawing.Size(1071, 92)
+        Me.DgVitals.Size = New System.Drawing.Size(1071, 64)
         Me.DgVitals.TabIndex = 198
         '
         'TimeStampDataGridViewTextBoxColumn
@@ -1254,9 +1256,9 @@ Partial Class VisitsList
         Me.Label5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.Label5.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(1, 650)
+        Me.Label5.Location = New System.Drawing.Point(3, 3)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(209, 90)
+        Me.Label5.Size = New System.Drawing.Size(209, 22)
         Me.Label5.TabIndex = 14
         Me.Label5.Text = "Vital Signs"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1291,7 +1293,6 @@ Partial Class VisitsList
         Me.ClientSize = New System.Drawing.Size(1285, 741)
         Me.Controls.Add(Me.PBoxPatient)
         Me.Controls.Add(Me.PanelVitals)
-        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.BtnVisitReport)
         Me.Controls.Add(Me.BtnProcedures)
