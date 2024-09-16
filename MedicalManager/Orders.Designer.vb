@@ -23,7 +23,14 @@ Partial Class Orders
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim ChiefComplaintLabel As System.Windows.Forms.Label
+        Dim ChronicConditionsLabel As System.Windows.Forms.Label
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.radOther = New System.Windows.Forms.RadioButton()
+        Me.radFollowUp = New System.Windows.Forms.RadioButton()
+        Me.radDiet = New System.Windows.Forms.RadioButton()
+        Me.radCounseling = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonDx = New System.Windows.Forms.RadioButton()
         Me.TBPhysician = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtCaseNo = New System.Windows.Forms.TextBox()
@@ -47,38 +54,28 @@ Partial Class Orders
         Me.Label6 = New System.Windows.Forms.Label()
         Me.radAll = New System.Windows.Forms.RadioButton()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.MMCHDxRxLtMtDataGridView = New System.Windows.Forms.DataGridView()
+        Me.Code = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Description = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Amount = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Type = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CaseNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DatePro = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ChartNumberPro = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UserID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TimeStamp = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.InHouse = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.InHouseBilling = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.MMCHDxRxLtMtBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1()
         Me.MMCHDxRxLtMtTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMCHDxRxLtMtTableAdapter()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.ProcedureTab = New System.Windows.Forms.TabPage()
         Me.DxTestsTab = New System.Windows.Forms.TabPage()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.InHouseBilling = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.InHouse = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.TimeStamp = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UserID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ChartNumberPro = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DatePro = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CaseNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Type = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Amount = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Description = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Code = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MMCHDxRxLtMtDataGridView = New System.Windows.Forms.DataGridView()
-        Me.LblDX = New System.Windows.Forms.Label()
-        Me.Dx5DescriptionTextBox = New System.Windows.Forms.TextBox()
-        Me.Dx4DescriptionTextBox = New System.Windows.Forms.TextBox()
-        Me.Dx3DescriptionTextBox = New System.Windows.Forms.TextBox()
-        Me.Dx2DescriptionTextBox = New System.Windows.Forms.TextBox()
-        Me.Dx1DescriptionTextBox = New System.Windows.Forms.TextBox()
-        Me.TextBoxDx4 = New System.Windows.Forms.TextBox()
-        Me.TextBoxDx3 = New System.Windows.Forms.TextBox()
-        Me.TextBoxDx2 = New System.Windows.Forms.TextBox()
-        Me.TextBoxDx1 = New System.Windows.Forms.TextBox()
-        Me.Label15 = New System.Windows.Forms.Label()
+        Me.btnDiet = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.NotesTestBox = New System.Windows.Forms.TextBox()
         Me.btnCounseling = New System.Windows.Forms.Button()
@@ -92,13 +89,49 @@ Partial Class Orders
         Me.TextBoxDiet = New System.Windows.Forms.TextBox()
         Me.TextBoxReferedTo = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.RadioButtonDx = New System.Windows.Forms.RadioButton()
-        Me.radOther = New System.Windows.Forms.RadioButton()
-        Me.radFollowUp = New System.Windows.Forms.RadioButton()
-        Me.radDiet = New System.Windows.Forms.RadioButton()
-        Me.radCounseling = New System.Windows.Forms.RadioButton()
-        Me.btnDiet = New System.Windows.Forms.Button()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.LblDX = New System.Windows.Forms.Label()
+        Me.Dx5DescriptionTextBox = New System.Windows.Forms.TextBox()
+        Me.Dx4DescriptionTextBox = New System.Windows.Forms.TextBox()
+        Me.Dx3DescriptionTextBox = New System.Windows.Forms.TextBox()
+        Me.Dx2DescriptionTextBox = New System.Windows.Forms.TextBox()
+        Me.Dx1DescriptionTextBox = New System.Windows.Forms.TextBox()
+        Me.TextBoxDx4 = New System.Windows.Forms.TextBox()
+        Me.TextBoxDx3 = New System.Windows.Forms.TextBox()
+        Me.TextBoxDx2 = New System.Windows.Forms.TextBox()
+        Me.TextBoxDx1 = New System.Windows.Forms.TextBox()
+        Me.CC = New System.Windows.Forms.TabPage()
+        Me.btnPickupCC = New System.Windows.Forms.Button()
+        Me.ChiefComplaintTextBox = New System.Windows.Forms.TextBox()
+        Me.btnPickupChronic = New System.Windows.Forms.Button()
+        Me.ChronicConditionsTextBox = New System.Windows.Forms.TextBox()
+        Me.radChronic = New System.Windows.Forms.RadioButton()
+        Me.radImpressions = New System.Windows.Forms.RadioButton()
+        Me.radProcedureNotes = New System.Windows.Forms.RadioButton()
+        Me.radPlan = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonCC = New System.Windows.Forms.RadioButton()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.HOPI = New System.Windows.Forms.GroupBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.btnPickCC = New System.Windows.Forms.Button()
+        Me.ROSBulletsCount = New System.Windows.Forms.TextBox()
+        Me.PEBulletsCount = New System.Windows.Forms.TextBox()
+        Me.RosCount = New System.Windows.Forms.TextBox()
+        Me.PEcount = New System.Windows.Forms.TextBox()
+        Me.cmdHPI = New System.Windows.Forms.Button()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtHPI = New System.Windows.Forms.TextBox()
+        Me.ReviewOfSystemsTextBox = New System.Windows.Forms.TextBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnProcedureNotes = New System.Windows.Forms.Button()
+        Me.btnOtherTxPanel = New System.Windows.Forms.Button()
         Me.BtnSave = New System.Windows.Forms.Button()
+        ChiefComplaintLabel = New System.Windows.Forms.Label()
+        ChronicConditionsLabel = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -106,18 +139,28 @@ Partial Class Orders
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel7.SuspendLayout()
+        CType(Me.MMCHDxRxLtMtDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMCHDxRxLtMtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMDataDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.ProcedureTab.SuspendLayout()
         Me.DxTestsTab.SuspendLayout()
-        CType(Me.MMCHDxRxLtMtDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CC.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        Me.HOPI.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.Controls.Add(Me.RadioButtonCC)
+        Me.Panel1.Controls.Add(Me.radChronic)
+        Me.Panel1.Controls.Add(Me.BtnSave)
+        Me.Panel1.Controls.Add(Me.radImpressions)
+        Me.Panel1.Controls.Add(Me.radProcedureNotes)
+        Me.Panel1.Controls.Add(Me.radPlan)
         Me.Panel1.Controls.Add(Me.radOther)
         Me.Panel1.Controls.Add(Me.radFollowUp)
         Me.Panel1.Controls.Add(Me.radDiet)
@@ -140,12 +183,71 @@ Partial Class Orders
         Me.Panel1.Size = New System.Drawing.Size(1240, 55)
         Me.Panel1.TabIndex = 0
         '
+        'radOther
+        '
+        Me.radOther.AutoSize = True
+        Me.radOther.BackColor = System.Drawing.SystemColors.InactiveCaptionText
+        Me.radOther.Location = New System.Drawing.Point(1173, 33)
+        Me.radOther.Name = "radOther"
+        Me.radOther.Size = New System.Drawing.Size(55, 19)
+        Me.radOther.TabIndex = 152
+        Me.radOther.Text = "Other"
+        Me.radOther.UseVisualStyleBackColor = False
+        Me.radOther.Visible = False
+        '
+        'radFollowUp
+        '
+        Me.radFollowUp.AutoSize = True
+        Me.radFollowUp.BackColor = System.Drawing.SystemColors.InactiveCaptionText
+        Me.radFollowUp.Location = New System.Drawing.Point(1143, 33)
+        Me.radFollowUp.Name = "radFollowUp"
+        Me.radFollowUp.Size = New System.Drawing.Size(80, 19)
+        Me.radFollowUp.TabIndex = 151
+        Me.radFollowUp.Text = "Follow Up"
+        Me.radFollowUp.UseVisualStyleBackColor = False
+        Me.radFollowUp.Visible = False
+        '
+        'radDiet
+        '
+        Me.radDiet.AutoSize = True
+        Me.radDiet.BackColor = System.Drawing.SystemColors.InactiveCaptionText
+        Me.radDiet.Location = New System.Drawing.Point(1110, 33)
+        Me.radDiet.Name = "radDiet"
+        Me.radDiet.Size = New System.Drawing.Size(47, 19)
+        Me.radDiet.TabIndex = 150
+        Me.radDiet.Text = "Diet"
+        Me.radDiet.UseVisualStyleBackColor = False
+        Me.radDiet.Visible = False
+        '
+        'radCounseling
+        '
+        Me.radCounseling.AutoSize = True
+        Me.radCounseling.BackColor = System.Drawing.SystemColors.InactiveCaptionText
+        Me.radCounseling.Location = New System.Drawing.Point(1084, 33)
+        Me.radCounseling.Name = "radCounseling"
+        Me.radCounseling.Size = New System.Drawing.Size(87, 19)
+        Me.radCounseling.TabIndex = 149
+        Me.radCounseling.Text = "Counseling"
+        Me.radCounseling.UseVisualStyleBackColor = False
+        Me.radCounseling.Visible = False
+        '
+        'RadioButtonDx
+        '
+        Me.RadioButtonDx.AutoSize = True
+        Me.RadioButtonDx.BackColor = System.Drawing.SystemColors.Control
+        Me.RadioButtonDx.Location = New System.Drawing.Point(732, 17)
+        Me.RadioButtonDx.Name = "RadioButtonDx"
+        Me.RadioButtonDx.Size = New System.Drawing.Size(40, 19)
+        Me.RadioButtonDx.TabIndex = 21
+        Me.RadioButtonDx.Text = "Dx"
+        Me.RadioButtonDx.UseVisualStyleBackColor = False
+        '
         'TBPhysician
         '
         Me.TBPhysician.AcceptsReturn = True
         Me.TBPhysician.BackColor = System.Drawing.Color.White
         Me.TBPhysician.Enabled = False
-        Me.TBPhysician.Location = New System.Drawing.Point(534, 18)
+        Me.TBPhysician.Location = New System.Drawing.Point(502, 18)
         Me.TBPhysician.Name = "TBPhysician"
         Me.TBPhysician.Size = New System.Drawing.Size(109, 21)
         Me.TBPhysician.TabIndex = 19
@@ -153,7 +255,7 @@ Partial Class Orders
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(470, 21)
+        Me.Label5.Location = New System.Drawing.Point(438, 21)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(62, 15)
         Me.Label5.TabIndex = 20
@@ -164,15 +266,15 @@ Partial Class Orders
         Me.txtCaseNo.AcceptsReturn = True
         Me.txtCaseNo.BackColor = System.Drawing.Color.White
         Me.txtCaseNo.Enabled = False
-        Me.txtCaseNo.Location = New System.Drawing.Point(382, 18)
+        Me.txtCaseNo.Location = New System.Drawing.Point(368, 18)
         Me.txtCaseNo.Name = "txtCaseNo"
-        Me.txtCaseNo.Size = New System.Drawing.Size(84, 21)
+        Me.txtCaseNo.Size = New System.Drawing.Size(67, 21)
         Me.txtCaseNo.TabIndex = 19
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(327, 21)
+        Me.Label4.Location = New System.Drawing.Point(313, 21)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(54, 15)
         Me.Label4.TabIndex = 20
@@ -181,7 +283,7 @@ Partial Class Orders
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(159, 21)
+        Me.Label3.Location = New System.Drawing.Point(145, 21)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(41, 15)
         Me.Label3.TabIndex = 18
@@ -192,7 +294,7 @@ Partial Class Orders
         Me.txtName.AcceptsReturn = True
         Me.txtName.BackColor = System.Drawing.Color.White
         Me.txtName.Enabled = False
-        Me.txtName.Location = New System.Drawing.Point(201, 18)
+        Me.txtName.Location = New System.Drawing.Point(187, 18)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(122, 21)
         Me.txtName.TabIndex = 17
@@ -203,7 +305,7 @@ Partial Class Orders
         Me.ChartNo.Enabled = False
         Me.ChartNo.Location = New System.Drawing.Point(52, 18)
         Me.ChartNo.Name = "ChartNo"
-        Me.ChartNo.Size = New System.Drawing.Size(103, 21)
+        Me.ChartNo.Size = New System.Drawing.Size(90, 21)
         Me.ChartNo.TabIndex = 15
         '
         'Label2
@@ -398,18 +500,134 @@ Partial Class Orders
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(3, 3)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(593, 619)
+        Me.Panel3.Size = New System.Drawing.Size(613, 599)
         Me.Panel3.TabIndex = 10
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label1.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(-3, 3)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(614, 34)
+        Me.Label1.TabIndex = 14
+        Me.Label1.Text = "Procedures"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel7
         '
         Me.Panel7.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Panel7.Controls.Add(Me.MMCHDxRxLtMtDataGridView)
-        Me.Panel7.Location = New System.Drawing.Point(0, 52)
+        Me.Panel7.Location = New System.Drawing.Point(0, 39)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(625, 564)
+        Me.Panel7.Size = New System.Drawing.Size(625, 557)
         Me.Panel7.TabIndex = 125
+        '
+        'MMCHDxRxLtMtDataGridView
+        '
+        Me.MMCHDxRxLtMtDataGridView.AllowUserToAddRows = False
+        Me.MMCHDxRxLtMtDataGridView.AllowUserToDeleteRows = False
+        Me.MMCHDxRxLtMtDataGridView.AutoGenerateColumns = False
+        Me.MMCHDxRxLtMtDataGridView.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.MMCHDxRxLtMtDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Code, Me.Description, Me.Amount, Me.Type, Me.CaseNo, Me.DatePro, Me.ChartNumberPro, Me.IDDataGridViewTextBoxColumn, Me.UserID, Me.TimeStamp, Me.InHouse, Me.InHouseBilling})
+        Me.MMCHDxRxLtMtDataGridView.DataSource = Me.MMCHDxRxLtMtBindingSource
+        Me.MMCHDxRxLtMtDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.MMCHDxRxLtMtDataGridView.Location = New System.Drawing.Point(0, 0)
+        Me.MMCHDxRxLtMtDataGridView.Name = "MMCHDxRxLtMtDataGridView"
+        Me.MMCHDxRxLtMtDataGridView.ReadOnly = True
+        Me.MMCHDxRxLtMtDataGridView.Size = New System.Drawing.Size(625, 557)
+        Me.MMCHDxRxLtMtDataGridView.TabIndex = 124
+        '
+        'Code
+        '
+        Me.Code.DataPropertyName = "Code"
+        Me.Code.HeaderText = "Code"
+        Me.Code.Name = "Code"
+        Me.Code.ReadOnly = True
+        '
+        'Description
+        '
+        Me.Description.DataPropertyName = "Description"
+        Me.Description.HeaderText = "Description"
+        Me.Description.Name = "Description"
+        Me.Description.ReadOnly = True
+        Me.Description.Width = 180
+        '
+        'Amount
+        '
+        Me.Amount.DataPropertyName = "Amount"
+        Me.Amount.HeaderText = "Amount"
+        Me.Amount.Name = "Amount"
+        Me.Amount.ReadOnly = True
+        Me.Amount.Width = 60
+        '
+        'Type
+        '
+        Me.Type.DataPropertyName = "Type"
+        Me.Type.HeaderText = "Type"
+        Me.Type.Name = "Type"
+        Me.Type.ReadOnly = True
+        '
+        'CaseNo
+        '
+        Me.CaseNo.DataPropertyName = "CaseNumber"
+        Me.CaseNo.HeaderText = "CaseNumber"
+        Me.CaseNo.Name = "CaseNo"
+        Me.CaseNo.ReadOnly = True
+        '
+        'DatePro
+        '
+        Me.DatePro.DataPropertyName = "Date"
+        Me.DatePro.HeaderText = "Date"
+        Me.DatePro.Name = "DatePro"
+        Me.DatePro.ReadOnly = True
+        '
+        'ChartNumberPro
+        '
+        Me.ChartNumberPro.DataPropertyName = "ChartNumber"
+        Me.ChartNumberPro.HeaderText = "ChartNumber"
+        Me.ChartNumberPro.Name = "ChartNumberPro"
+        Me.ChartNumberPro.ReadOnly = True
+        '
+        'IDDataGridViewTextBoxColumn
+        '
+        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
+        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
+        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
+        Me.IDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'UserID
+        '
+        Me.UserID.DataPropertyName = "UserID"
+        Me.UserID.HeaderText = "UserID"
+        Me.UserID.Name = "UserID"
+        Me.UserID.ReadOnly = True
+        '
+        'TimeStamp
+        '
+        Me.TimeStamp.DataPropertyName = "TimeStamp"
+        Me.TimeStamp.HeaderText = "TimeStamp"
+        Me.TimeStamp.Name = "TimeStamp"
+        Me.TimeStamp.ReadOnly = True
+        '
+        'InHouse
+        '
+        Me.InHouse.DataPropertyName = "InHouse"
+        Me.InHouse.HeaderText = "InHouse"
+        Me.InHouse.Name = "InHouse"
+        Me.InHouse.ReadOnly = True
+        '
+        'InHouseBilling
+        '
+        Me.InHouseBilling.DataPropertyName = "InHouseBilling"
+        Me.InHouseBilling.HeaderText = "InHouseBilling"
+        Me.InHouseBilling.Name = "InHouseBilling"
+        Me.InHouseBilling.ReadOnly = True
         '
         'MMCHDxRxLtMtBindingSource
         '
@@ -427,9 +645,9 @@ Partial Class Orders
         '
         'TabControl1
         '
-        Me.TabControl1.Alignment = System.Windows.Forms.TabAlignment.Left
-        Me.TabControl1.Controls.Add(Me.ProcedureTab)
         Me.TabControl1.Controls.Add(Me.DxTestsTab)
+        Me.TabControl1.Controls.Add(Me.ProcedureTab)
+        Me.TabControl1.Controls.Add(Me.CC)
         Me.TabControl1.HotTrack = True
         Me.TabControl1.Location = New System.Drawing.Point(2, 45)
         Me.TabControl1.Multiline = True
@@ -441,17 +659,18 @@ Partial Class Orders
         'ProcedureTab
         '
         Me.ProcedureTab.Controls.Add(Me.Panel3)
-        Me.ProcedureTab.Location = New System.Drawing.Point(24, 4)
+        Me.ProcedureTab.Location = New System.Drawing.Point(4, 24)
         Me.ProcedureTab.Name = "ProcedureTab"
         Me.ProcedureTab.Padding = New System.Windows.Forms.Padding(3)
-        Me.ProcedureTab.Size = New System.Drawing.Size(599, 625)
+        Me.ProcedureTab.Size = New System.Drawing.Size(619, 605)
         Me.ProcedureTab.TabIndex = 0
         Me.ProcedureTab.Text = "Pro"
         Me.ProcedureTab.UseVisualStyleBackColor = True
         '
         'DxTestsTab
         '
-        Me.DxTestsTab.Controls.Add(Me.BtnSave)
+        Me.DxTestsTab.Controls.Add(Me.btnProcedureNotes)
+        Me.DxTestsTab.Controls.Add(Me.btnOtherTxPanel)
         Me.DxTestsTab.Controls.Add(Me.btnDiet)
         Me.DxTestsTab.Controls.Add(Me.Label8)
         Me.DxTestsTab.Controls.Add(Me.NotesTestBox)
@@ -477,129 +696,162 @@ Partial Class Orders
         Me.DxTestsTab.Controls.Add(Me.TextBoxDx3)
         Me.DxTestsTab.Controls.Add(Me.TextBoxDx2)
         Me.DxTestsTab.Controls.Add(Me.TextBoxDx1)
-        Me.DxTestsTab.Location = New System.Drawing.Point(24, 4)
+        Me.DxTestsTab.Location = New System.Drawing.Point(4, 24)
         Me.DxTestsTab.Name = "DxTestsTab"
         Me.DxTestsTab.Padding = New System.Windows.Forms.Padding(3)
-        Me.DxTestsTab.Size = New System.Drawing.Size(599, 625)
+        Me.DxTestsTab.Size = New System.Drawing.Size(619, 605)
         Me.DxTestsTab.TabIndex = 1
         Me.DxTestsTab.Text = "Dx"
         Me.DxTestsTab.UseVisualStyleBackColor = True
         '
-        'Label1
+        'btnDiet
         '
-        Me.Label1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label1.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.Label1.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(-3, 3)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(603, 46)
-        Me.Label1.TabIndex = 14
-        Me.Label1.Text = "Procedures"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnDiet.Location = New System.Drawing.Point(482, 514)
+        Me.btnDiet.Name = "btnDiet"
+        Me.btnDiet.Size = New System.Drawing.Size(109, 23)
+        Me.btnDiet.TabIndex = 156
+        Me.btnDiet.Text = "Pick Diet"
+        Me.btnDiet.UseVisualStyleBackColor = True
         '
-        'InHouseBilling
+        'Label8
         '
-        Me.InHouseBilling.DataPropertyName = "InHouseBilling"
-        Me.InHouseBilling.HeaderText = "InHouseBilling"
-        Me.InHouseBilling.Name = "InHouseBilling"
-        Me.InHouseBilling.ReadOnly = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Bold)
+        Me.Label8.ForeColor = System.Drawing.Color.DarkMagenta
+        Me.Label8.Location = New System.Drawing.Point(3, 163)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(106, 15)
+        Me.Label8.TabIndex = 155
+        Me.Label8.Text = "Other Notes:"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'InHouse
+        'NotesTestBox
         '
-        Me.InHouse.DataPropertyName = "InHouse"
-        Me.InHouse.HeaderText = "InHouse"
-        Me.InHouse.Name = "InHouse"
-        Me.InHouse.ReadOnly = True
+        Me.NotesTestBox.Location = New System.Drawing.Point(7, 181)
+        Me.NotesTestBox.Multiline = True
+        Me.NotesTestBox.Name = "NotesTestBox"
+        Me.NotesTestBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.NotesTestBox.Size = New System.Drawing.Size(584, 226)
+        Me.NotesTestBox.TabIndex = 143
         '
-        'TimeStamp
+        'btnCounseling
         '
-        Me.TimeStamp.DataPropertyName = "TimeStamp"
-        Me.TimeStamp.HeaderText = "TimeStamp"
-        Me.TimeStamp.Name = "TimeStamp"
-        Me.TimeStamp.ReadOnly = True
+        Me.btnCounseling.Location = New System.Drawing.Point(482, 537)
+        Me.btnCounseling.Name = "btnCounseling"
+        Me.btnCounseling.Size = New System.Drawing.Size(109, 23)
+        Me.btnCounseling.TabIndex = 146
+        Me.btnCounseling.Text = "Pick Counseling"
+        Me.btnCounseling.UseVisualStyleBackColor = True
         '
-        'UserID
+        'btnRefTo
         '
-        Me.UserID.DataPropertyName = "UserID"
-        Me.UserID.HeaderText = "UserID"
-        Me.UserID.Name = "UserID"
-        Me.UserID.ReadOnly = True
+        Me.btnRefTo.Location = New System.Drawing.Point(482, 491)
+        Me.btnRefTo.Name = "btnRefTo"
+        Me.btnRefTo.Size = New System.Drawing.Size(109, 23)
+        Me.btnRefTo.TabIndex = 154
+        Me.btnRefTo.Text = "Pick Ref To"
+        Me.btnRefTo.UseVisualStyleBackColor = True
         '
-        'IDDataGridViewTextBoxColumn
+        'btnFollowUp
         '
-        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
-        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
-        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
-        Me.IDDataGridViewTextBoxColumn.ReadOnly = True
+        Me.btnFollowUp.Location = New System.Drawing.Point(482, 468)
+        Me.btnFollowUp.Name = "btnFollowUp"
+        Me.btnFollowUp.Size = New System.Drawing.Size(109, 23)
+        Me.btnFollowUp.TabIndex = 153
+        Me.btnFollowUp.Text = "Pick F/U"
+        Me.btnFollowUp.UseVisualStyleBackColor = True
         '
-        'ChartNumberPro
+        'Label7
         '
-        Me.ChartNumberPro.DataPropertyName = "ChartNumber"
-        Me.ChartNumberPro.HeaderText = "ChartNumber"
-        Me.ChartNumberPro.Name = "ChartNumberPro"
-        Me.ChartNumberPro.ReadOnly = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Bold)
+        Me.Label7.ForeColor = System.Drawing.Color.DarkMagenta
+        Me.Label7.Location = New System.Drawing.Point(4, 537)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(83, 13)
+        Me.Label7.TabIndex = 151
+        Me.Label7.Text = "Counseling:"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'DatePro
+        'TextBoxCounselingEducation
         '
-        Me.DatePro.DataPropertyName = "Date"
-        Me.DatePro.HeaderText = "Date"
-        Me.DatePro.Name = "DatePro"
-        Me.DatePro.ReadOnly = True
+        Me.TextBoxCounselingEducation.Location = New System.Drawing.Point(93, 537)
+        Me.TextBoxCounselingEducation.MaxLength = 300
+        Me.TextBoxCounselingEducation.Multiline = True
+        Me.TextBoxCounselingEducation.Name = "TextBoxCounselingEducation"
+        Me.TextBoxCounselingEducation.Size = New System.Drawing.Size(383, 60)
+        Me.TextBoxCounselingEducation.TabIndex = 152
         '
-        'CaseNo
+        'TextBoxfollowUp
         '
-        Me.CaseNo.DataPropertyName = "CaseNumber"
-        Me.CaseNo.HeaderText = "CaseNumber"
-        Me.CaseNo.Name = "CaseNo"
-        Me.CaseNo.ReadOnly = True
+        Me.TextBoxfollowUp.Location = New System.Drawing.Point(93, 468)
+        Me.TextBoxfollowUp.MaxLength = 50
+        Me.TextBoxfollowUp.Name = "TextBoxfollowUp"
+        Me.TextBoxfollowUp.Size = New System.Drawing.Size(383, 21)
+        Me.TextBoxfollowUp.TabIndex = 148
         '
-        'Type
+        'Label9
         '
-        Me.Type.DataPropertyName = "Type"
-        Me.Type.HeaderText = "Type"
-        Me.Type.Name = "Type"
-        Me.Type.ReadOnly = True
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Bold)
+        Me.Label9.ForeColor = System.Drawing.Color.DarkMagenta
+        Me.Label9.Location = New System.Drawing.Point(4, 468)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(75, 15)
+        Me.Label9.TabIndex = 144
+        Me.Label9.Text = "Follow Up:"
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Amount
+        'Label10
         '
-        Me.Amount.DataPropertyName = "Amount"
-        Me.Amount.HeaderText = "Amount"
-        Me.Amount.Name = "Amount"
-        Me.Amount.ReadOnly = True
-        Me.Amount.Width = 60
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Bold)
+        Me.Label10.ForeColor = System.Drawing.Color.DarkMagenta
+        Me.Label10.Location = New System.Drawing.Point(4, 514)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(88, 15)
+        Me.Label10.TabIndex = 145
+        Me.Label10.Text = "Diet Instruct:"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Description
+        'TextBoxDiet
         '
-        Me.Description.DataPropertyName = "Description"
-        Me.Description.HeaderText = "Description"
-        Me.Description.Name = "Description"
-        Me.Description.ReadOnly = True
-        Me.Description.Width = 180
+        Me.TextBoxDiet.Location = New System.Drawing.Point(93, 514)
+        Me.TextBoxDiet.MaxLength = 300
+        Me.TextBoxDiet.Multiline = True
+        Me.TextBoxDiet.Name = "TextBoxDiet"
+        Me.TextBoxDiet.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBoxDiet.Size = New System.Drawing.Size(383, 20)
+        Me.TextBoxDiet.TabIndex = 150
         '
-        'Code
+        'TextBoxReferedTo
         '
-        Me.Code.DataPropertyName = "Code"
-        Me.Code.HeaderText = "Code"
-        Me.Code.Name = "Code"
-        Me.Code.ReadOnly = True
+        Me.TextBoxReferedTo.Location = New System.Drawing.Point(93, 491)
+        Me.TextBoxReferedTo.MaxLength = 50
+        Me.TextBoxReferedTo.Name = "TextBoxReferedTo"
+        Me.TextBoxReferedTo.Size = New System.Drawing.Size(383, 21)
+        Me.TextBoxReferedTo.TabIndex = 149
         '
-        'MMCHDxRxLtMtDataGridView
+        'Label11
         '
-        Me.MMCHDxRxLtMtDataGridView.AllowUserToAddRows = False
-        Me.MMCHDxRxLtMtDataGridView.AllowUserToDeleteRows = False
-        Me.MMCHDxRxLtMtDataGridView.AutoGenerateColumns = False
-        Me.MMCHDxRxLtMtDataGridView.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.MMCHDxRxLtMtDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Code, Me.Description, Me.Amount, Me.Type, Me.CaseNo, Me.DatePro, Me.ChartNumberPro, Me.IDDataGridViewTextBoxColumn, Me.UserID, Me.TimeStamp, Me.InHouse, Me.InHouseBilling})
-        Me.MMCHDxRxLtMtDataGridView.DataSource = Me.MMCHDxRxLtMtBindingSource
-        Me.MMCHDxRxLtMtDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MMCHDxRxLtMtDataGridView.Location = New System.Drawing.Point(0, 0)
-        Me.MMCHDxRxLtMtDataGridView.Name = "MMCHDxRxLtMtDataGridView"
-        Me.MMCHDxRxLtMtDataGridView.ReadOnly = True
-        Me.MMCHDxRxLtMtDataGridView.Size = New System.Drawing.Size(625, 564)
-        Me.MMCHDxRxLtMtDataGridView.TabIndex = 124
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Bold)
+        Me.Label11.ForeColor = System.Drawing.Color.DarkMagenta
+        Me.Label11.Location = New System.Drawing.Point(4, 491)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(87, 15)
+        Me.Label11.TabIndex = 147
+        Me.Label11.Text = "Referred To:"
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.Indigo
+        Me.Label15.Location = New System.Drawing.Point(332, 6)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(128, 16)
+        Me.Label15.TabIndex = 142
+        Me.Label15.Text = "Free Text Diagnosis"
         '
         'LblDX
         '
@@ -707,222 +959,359 @@ Partial Class Orders
         Me.TextBoxDx1.Size = New System.Drawing.Size(54, 28)
         Me.TextBoxDx1.TabIndex = 133
         '
-        'Label15
+        'CC
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.Color.Indigo
-        Me.Label15.Location = New System.Drawing.Point(332, 6)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(128, 16)
-        Me.Label15.TabIndex = 142
-        Me.Label15.Text = "Free Text Diagnosis"
+        Me.CC.Controls.Add(Me.GroupBox1)
+        Me.CC.Controls.Add(Me.HOPI)
+        Me.CC.Controls.Add(Me.GroupBox2)
+        Me.CC.Location = New System.Drawing.Point(4, 24)
+        Me.CC.Name = "CC"
+        Me.CC.Padding = New System.Windows.Forms.Padding(3)
+        Me.CC.Size = New System.Drawing.Size(619, 605)
+        Me.CC.TabIndex = 2
+        Me.CC.Text = "CC HPI ROS"
+        Me.CC.UseVisualStyleBackColor = True
         '
-        'Label8
+        'btnPickupCC
         '
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Bold)
-        Me.Label8.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.Label8.Location = New System.Drawing.Point(3, 163)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(106, 15)
-        Me.Label8.TabIndex = 155
-        Me.Label8.Text = "Other Notes:"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnPickupCC.BackColor = System.Drawing.Color.LightBlue
+        Me.btnPickupCC.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPickupCC.Location = New System.Drawing.Point(298, 37)
+        Me.btnPickupCC.Name = "btnPickupCC"
+        Me.btnPickupCC.Size = New System.Drawing.Size(12, 57)
+        Me.btnPickupCC.TabIndex = 104
+        Me.btnPickupCC.Text = "PICK"
+        Me.btnPickupCC.UseVisualStyleBackColor = False
         '
-        'NotesTestBox
+        'ChiefComplaintLabel
         '
-        Me.NotesTestBox.Location = New System.Drawing.Point(7, 181)
-        Me.NotesTestBox.Multiline = True
-        Me.NotesTestBox.Name = "NotesTestBox"
-        Me.NotesTestBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.NotesTestBox.Size = New System.Drawing.Size(584, 173)
-        Me.NotesTestBox.TabIndex = 143
+        ChiefComplaintLabel.AutoSize = True
+        ChiefComplaintLabel.Location = New System.Drawing.Point(16, 20)
+        ChiefComplaintLabel.Name = "ChiefComplaintLabel"
+        ChiefComplaintLabel.Size = New System.Drawing.Size(99, 13)
+        ChiefComplaintLabel.TabIndex = 103
+        ChiefComplaintLabel.Text = "Chief Complaint:"
         '
-        'btnCounseling
+        'ChiefComplaintTextBox
         '
-        Me.btnCounseling.Location = New System.Drawing.Point(482, 553)
-        Me.btnCounseling.Name = "btnCounseling"
-        Me.btnCounseling.Size = New System.Drawing.Size(109, 23)
-        Me.btnCounseling.TabIndex = 146
-        Me.btnCounseling.Text = "Pick Counseling"
-        Me.btnCounseling.UseVisualStyleBackColor = True
+        Me.ChiefComplaintTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.25!, System.Drawing.FontStyle.Bold)
+        Me.ChiefComplaintTextBox.Location = New System.Drawing.Point(16, 36)
+        Me.ChiefComplaintTextBox.MaxLength = 500
+        Me.ChiefComplaintTextBox.Multiline = True
+        Me.ChiefComplaintTextBox.Name = "ChiefComplaintTextBox"
+        Me.ChiefComplaintTextBox.Size = New System.Drawing.Size(279, 58)
+        Me.ChiefComplaintTextBox.TabIndex = 102
         '
-        'btnRefTo
+        'btnPickupChronic
         '
-        Me.btnRefTo.Location = New System.Drawing.Point(482, 507)
-        Me.btnRefTo.Name = "btnRefTo"
-        Me.btnRefTo.Size = New System.Drawing.Size(109, 23)
-        Me.btnRefTo.TabIndex = 154
-        Me.btnRefTo.Text = "Pick Ref To"
-        Me.btnRefTo.UseVisualStyleBackColor = True
+        Me.btnPickupChronic.BackColor = System.Drawing.Color.LightBlue
+        Me.btnPickupChronic.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPickupChronic.Location = New System.Drawing.Point(567, 39)
+        Me.btnPickupChronic.Name = "btnPickupChronic"
+        Me.btnPickupChronic.Size = New System.Drawing.Size(12, 57)
+        Me.btnPickupChronic.TabIndex = 107
+        Me.btnPickupChronic.Text = "PICK"
+        Me.btnPickupChronic.UseVisualStyleBackColor = False
         '
-        'btnFollowUp
+        'ChronicConditionsTextBox
         '
-        Me.btnFollowUp.Location = New System.Drawing.Point(482, 484)
-        Me.btnFollowUp.Name = "btnFollowUp"
-        Me.btnFollowUp.Size = New System.Drawing.Size(109, 23)
-        Me.btnFollowUp.TabIndex = 153
-        Me.btnFollowUp.Text = "Pick F/U"
-        Me.btnFollowUp.UseVisualStyleBackColor = True
+        Me.ChronicConditionsTextBox.Location = New System.Drawing.Point(351, 38)
+        Me.ChronicConditionsTextBox.MaxLength = 100
+        Me.ChronicConditionsTextBox.Multiline = True
+        Me.ChronicConditionsTextBox.Name = "ChronicConditionsTextBox"
+        Me.ChronicConditionsTextBox.Size = New System.Drawing.Size(212, 58)
+        Me.ChronicConditionsTextBox.TabIndex = 106
         '
-        'Label7
+        'ChronicConditionsLabel
         '
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Bold)
-        Me.Label7.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.Label7.Location = New System.Drawing.Point(4, 553)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(83, 13)
-        Me.Label7.TabIndex = 151
-        Me.Label7.Text = "Counseling:"
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        ChronicConditionsLabel.AutoSize = True
+        ChronicConditionsLabel.Location = New System.Drawing.Point(355, 22)
+        ChronicConditionsLabel.Name = "ChronicConditionsLabel"
+        ChronicConditionsLabel.Size = New System.Drawing.Size(117, 13)
+        ChronicConditionsLabel.TabIndex = 105
+        ChronicConditionsLabel.Text = "Chronic Conditions:"
         '
-        'TextBoxCounselingEducation
+        'radChronic
         '
-        Me.TextBoxCounselingEducation.Location = New System.Drawing.Point(93, 553)
-        Me.TextBoxCounselingEducation.MaxLength = 300
-        Me.TextBoxCounselingEducation.Multiline = True
-        Me.TextBoxCounselingEducation.Name = "TextBoxCounselingEducation"
-        Me.TextBoxCounselingEducation.Size = New System.Drawing.Size(383, 60)
-        Me.TextBoxCounselingEducation.TabIndex = 152
+        Me.radChronic.AutoSize = True
+        Me.radChronic.Location = New System.Drawing.Point(1011, 36)
+        Me.radChronic.Name = "radChronic"
+        Me.radChronic.Size = New System.Drawing.Size(67, 19)
+        Me.radChronic.TabIndex = 168
+        Me.radChronic.Text = "Chronic"
+        Me.radChronic.UseVisualStyleBackColor = True
+        Me.radChronic.Visible = False
         '
-        'TextBoxfollowUp
+        'radImpressions
         '
-        Me.TextBoxfollowUp.Location = New System.Drawing.Point(93, 484)
-        Me.TextBoxfollowUp.MaxLength = 50
-        Me.TextBoxfollowUp.Name = "TextBoxfollowUp"
-        Me.TextBoxfollowUp.Size = New System.Drawing.Size(383, 21)
-        Me.TextBoxfollowUp.TabIndex = 148
+        Me.radImpressions.AutoSize = True
+        Me.radImpressions.Location = New System.Drawing.Point(946, 36)
+        Me.radImpressions.Name = "radImpressions"
+        Me.radImpressions.Size = New System.Drawing.Size(92, 19)
+        Me.radImpressions.TabIndex = 167
+        Me.radImpressions.Text = "Impressions"
+        Me.radImpressions.UseVisualStyleBackColor = True
+        Me.radImpressions.Visible = False
         '
-        'Label9
+        'radProcedureNotes
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Bold)
-        Me.Label9.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.Label9.Location = New System.Drawing.Point(4, 484)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(75, 15)
-        Me.Label9.TabIndex = 144
-        Me.Label9.Text = "Follow Up:"
-        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.radProcedureNotes.AutoSize = True
+        Me.radProcedureNotes.Checked = True
+        Me.radProcedureNotes.Location = New System.Drawing.Point(879, 36)
+        Me.radProcedureNotes.Name = "radProcedureNotes"
+        Me.radProcedureNotes.Size = New System.Drawing.Size(69, 19)
+        Me.radProcedureNotes.TabIndex = 166
+        Me.radProcedureNotes.TabStop = True
+        Me.radProcedureNotes.Text = "PrNotes"
+        Me.radProcedureNotes.UseVisualStyleBackColor = True
+        Me.radProcedureNotes.Visible = False
         '
-        'Label10
+        'radPlan
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Bold)
-        Me.Label10.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.Label10.Location = New System.Drawing.Point(4, 530)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(88, 15)
-        Me.Label10.TabIndex = 145
-        Me.Label10.Text = "Diet Instruct:"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.radPlan.AutoSize = True
+        Me.radPlan.Checked = True
+        Me.radPlan.Location = New System.Drawing.Point(830, 36)
+        Me.radPlan.Name = "radPlan"
+        Me.radPlan.Size = New System.Drawing.Size(50, 19)
+        Me.radPlan.TabIndex = 165
+        Me.radPlan.TabStop = True
+        Me.radPlan.Text = "Plan"
+        Me.radPlan.UseVisualStyleBackColor = True
+        Me.radPlan.Visible = False
         '
-        'TextBoxDiet
+        'RadioButtonCC
         '
-        Me.TextBoxDiet.Location = New System.Drawing.Point(93, 530)
-        Me.TextBoxDiet.MaxLength = 300
-        Me.TextBoxDiet.Multiline = True
-        Me.TextBoxDiet.Name = "TextBoxDiet"
-        Me.TextBoxDiet.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBoxDiet.Size = New System.Drawing.Size(383, 20)
-        Me.TextBoxDiet.TabIndex = 150
+        Me.RadioButtonCC.AutoSize = True
+        Me.RadioButtonCC.Checked = True
+        Me.RadioButtonCC.Location = New System.Drawing.Point(783, 36)
+        Me.RadioButtonCC.Name = "RadioButtonCC"
+        Me.RadioButtonCC.Size = New System.Drawing.Size(41, 19)
+        Me.RadioButtonCC.TabIndex = 169
+        Me.RadioButtonCC.TabStop = True
+        Me.RadioButtonCC.Text = "CC"
+        Me.RadioButtonCC.UseVisualStyleBackColor = True
+        Me.RadioButtonCC.Visible = False
         '
-        'TextBoxReferedTo
+        'GroupBox2
         '
-        Me.TextBoxReferedTo.Location = New System.Drawing.Point(93, 507)
-        Me.TextBoxReferedTo.MaxLength = 50
-        Me.TextBoxReferedTo.Name = "TextBoxReferedTo"
-        Me.TextBoxReferedTo.Size = New System.Drawing.Size(383, 21)
-        Me.TextBoxReferedTo.TabIndex = 149
+        Me.GroupBox2.BackColor = System.Drawing.SystemColors.Control
+        Me.GroupBox2.Controls.Add(Me.ChronicConditionsTextBox)
+        Me.GroupBox2.Controls.Add(Me.btnPickupChronic)
+        Me.GroupBox2.Controls.Add(Me.ChiefComplaintTextBox)
+        Me.GroupBox2.Controls.Add(ChiefComplaintLabel)
+        Me.GroupBox2.Controls.Add(ChronicConditionsLabel)
+        Me.GroupBox2.Controls.Add(Me.btnPickupCC)
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox2.Location = New System.Drawing.Point(4, 3)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(615, 113)
+        Me.GroupBox2.TabIndex = 122
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Health Monitor"
         '
-        'Label11
+        'HOPI
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Bold)
-        Me.Label11.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.Label11.Location = New System.Drawing.Point(4, 507)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(87, 15)
-        Me.Label11.TabIndex = 147
-        Me.Label11.Text = "Referred To:"
-        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.HOPI.BackColor = System.Drawing.SystemColors.Control
+        Me.HOPI.Controls.Add(Me.Button3)
+        Me.HOPI.Controls.Add(Me.Label14)
+        Me.HOPI.Controls.Add(Me.Label13)
+        Me.HOPI.Controls.Add(Me.Label12)
+        Me.HOPI.Controls.Add(Me.Label16)
+        Me.HOPI.Controls.Add(Me.btnPickCC)
+        Me.HOPI.Controls.Add(Me.ROSBulletsCount)
+        Me.HOPI.Controls.Add(Me.PEBulletsCount)
+        Me.HOPI.Controls.Add(Me.RosCount)
+        Me.HOPI.Controls.Add(Me.PEcount)
+        Me.HOPI.Controls.Add(Me.cmdHPI)
+        Me.HOPI.Controls.Add(Me.TextBox2)
+        Me.HOPI.Controls.Add(Me.txtHPI)
+        Me.HOPI.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HOPI.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.HOPI.Location = New System.Drawing.Point(-4, 118)
+        Me.HOPI.Name = "HOPI"
+        Me.HOPI.Size = New System.Drawing.Size(623, 125)
+        Me.HOPI.TabIndex = 123
+        Me.HOPI.TabStop = False
+        Me.HOPI.Text = "HISTORY OF PRESENT ILLNESS "
         '
-        'RadioButtonDx
+        'Button3
         '
-        Me.RadioButtonDx.AutoSize = True
-        Me.RadioButtonDx.BackColor = System.Drawing.SystemColors.Control
-        Me.RadioButtonDx.Location = New System.Drawing.Point(732, 17)
-        Me.RadioButtonDx.Name = "RadioButtonDx"
-        Me.RadioButtonDx.Size = New System.Drawing.Size(40, 19)
-        Me.RadioButtonDx.TabIndex = 21
-        Me.RadioButtonDx.Text = "Dx"
-        Me.RadioButtonDx.UseVisualStyleBackColor = False
+        Me.Button3.Location = New System.Drawing.Point(581, 566)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(19, 21)
+        Me.Button3.TabIndex = 167
+        Me.Button3.Text = "Button3"
+        Me.Button3.UseVisualStyleBackColor = True
         '
-        'radOther
+        'Label14
         '
-        Me.radOther.AutoSize = True
-        Me.radOther.BackColor = System.Drawing.SystemColors.InactiveCaptionText
-        Me.radOther.Location = New System.Drawing.Point(1173, 33)
-        Me.radOther.Name = "radOther"
-        Me.radOther.Size = New System.Drawing.Size(55, 19)
-        Me.radOther.TabIndex = 152
-        Me.radOther.Text = "Other"
-        Me.radOther.UseVisualStyleBackColor = False
-        Me.radOther.Visible = False
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(172, 576)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(69, 13)
+        Me.Label14.TabIndex = 166
+        Me.Label14.Text = "ROS Bullet"
+        Me.Label14.Visible = False
         '
-        'radFollowUp
+        'Label13
         '
-        Me.radFollowUp.AutoSize = True
-        Me.radFollowUp.BackColor = System.Drawing.SystemColors.InactiveCaptionText
-        Me.radFollowUp.Location = New System.Drawing.Point(1143, 33)
-        Me.radFollowUp.Name = "radFollowUp"
-        Me.radFollowUp.Size = New System.Drawing.Size(80, 19)
-        Me.radFollowUp.TabIndex = 151
-        Me.radFollowUp.Text = "Follow Up"
-        Me.radFollowUp.UseVisualStyleBackColor = False
-        Me.radFollowUp.Visible = False
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(182, 555)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(59, 13)
+        Me.Label13.TabIndex = 165
+        Me.Label13.Text = "PE Bullet"
+        Me.Label13.Visible = False
         '
-        'radDiet
+        'Label12
         '
-        Me.radDiet.AutoSize = True
-        Me.radDiet.BackColor = System.Drawing.SystemColors.InactiveCaptionText
-        Me.radDiet.Location = New System.Drawing.Point(1110, 33)
-        Me.radDiet.Name = "radDiet"
-        Me.radDiet.Size = New System.Drawing.Size(47, 19)
-        Me.radDiet.TabIndex = 150
-        Me.radDiet.Text = "Diet"
-        Me.radDiet.UseVisualStyleBackColor = False
-        Me.radDiet.Visible = False
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(54, 576)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(77, 13)
+        Me.Label12.TabIndex = 164
+        Me.Label12.Text = "ROS System"
+        Me.Label12.Visible = False
         '
-        'radCounseling
+        'Label16
         '
-        Me.radCounseling.AutoSize = True
-        Me.radCounseling.BackColor = System.Drawing.SystemColors.InactiveCaptionText
-        Me.radCounseling.Location = New System.Drawing.Point(1084, 33)
-        Me.radCounseling.Name = "radCounseling"
-        Me.radCounseling.Size = New System.Drawing.Size(87, 19)
-        Me.radCounseling.TabIndex = 149
-        Me.radCounseling.Text = "Counseling"
-        Me.radCounseling.UseVisualStyleBackColor = False
-        Me.radCounseling.Visible = False
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(64, 555)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(67, 13)
+        Me.Label16.TabIndex = 163
+        Me.Label16.Text = "PE System"
+        Me.Label16.Visible = False
         '
-        'btnDiet
+        'btnPickCC
         '
-        Me.btnDiet.Location = New System.Drawing.Point(482, 530)
-        Me.btnDiet.Name = "btnDiet"
-        Me.btnDiet.Size = New System.Drawing.Size(109, 23)
-        Me.btnDiet.TabIndex = 156
-        Me.btnDiet.Text = "Pick Diet"
-        Me.btnDiet.UseVisualStyleBackColor = True
+        Me.btnPickCC.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.btnPickCC.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnPickCC.Location = New System.Drawing.Point(339, 17)
+        Me.btnPickCC.Name = "btnPickCC"
+        Me.btnPickCC.Size = New System.Drawing.Size(58, 22)
+        Me.btnPickCC.TabIndex = 162
+        Me.btnPickCC.Text = "Pick CC"
+        Me.btnPickCC.UseVisualStyleBackColor = True
+        '
+        'ROSBulletsCount
+        '
+        Me.ROSBulletsCount.Location = New System.Drawing.Point(242, 572)
+        Me.ROSBulletsCount.Name = "ROSBulletsCount"
+        Me.ROSBulletsCount.Size = New System.Drawing.Size(33, 20)
+        Me.ROSBulletsCount.TabIndex = 161
+        Me.ROSBulletsCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ROSBulletsCount.Visible = False
+        '
+        'PEBulletsCount
+        '
+        Me.PEBulletsCount.Location = New System.Drawing.Point(242, 551)
+        Me.PEBulletsCount.Name = "PEBulletsCount"
+        Me.PEBulletsCount.Size = New System.Drawing.Size(33, 20)
+        Me.PEBulletsCount.TabIndex = 160
+        Me.PEBulletsCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.PEBulletsCount.Visible = False
+        '
+        'RosCount
+        '
+        Me.RosCount.Location = New System.Drawing.Point(134, 572)
+        Me.RosCount.Name = "RosCount"
+        Me.RosCount.Size = New System.Drawing.Size(33, 20)
+        Me.RosCount.TabIndex = 159
+        Me.RosCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.RosCount.Visible = False
+        '
+        'PEcount
+        '
+        Me.PEcount.Location = New System.Drawing.Point(134, 551)
+        Me.PEcount.Name = "PEcount"
+        Me.PEcount.Size = New System.Drawing.Size(33, 20)
+        Me.PEcount.TabIndex = 158
+        Me.PEcount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.PEcount.Visible = False
+        '
+        'cmdHPI
+        '
+        Me.cmdHPI.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdHPI.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.cmdHPI.Location = New System.Drawing.Point(252, 17)
+        Me.cmdHPI.Name = "cmdHPI"
+        Me.cmdHPI.Size = New System.Drawing.Size(81, 22)
+        Me.cmdHPI.TabIndex = 11
+        Me.cmdHPI.Text = "HPI Template"
+        Me.cmdHPI.UseVisualStyleBackColor = True
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.TextBox2.Location = New System.Drawing.Point(6, 18)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(245, 20)
+        Me.TextBox2.TabIndex = 10
+        '
+        'txtHPI
+        '
+        Me.txtHPI.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtHPI.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.txtHPI.Location = New System.Drawing.Point(6, 39)
+        Me.txtHPI.Multiline = True
+        Me.txtHPI.Name = "txtHPI"
+        Me.txtHPI.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txtHPI.Size = New System.Drawing.Size(597, 79)
+        Me.txtHPI.TabIndex = 9
+        '
+        'ReviewOfSystemsTextBox
+        '
+        Me.ReviewOfSystemsTextBox.BackColor = System.Drawing.SystemColors.Info
+        Me.ReviewOfSystemsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ReviewOfSystemsTextBox.Font = New System.Drawing.Font("Courier New", 9.0!)
+        Me.ReviewOfSystemsTextBox.ForeColor = System.Drawing.Color.Black
+        Me.ReviewOfSystemsTextBox.Location = New System.Drawing.Point(6, 19)
+        Me.ReviewOfSystemsTextBox.Multiline = True
+        Me.ReviewOfSystemsTextBox.Name = "ReviewOfSystemsTextBox"
+        Me.ReviewOfSystemsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.ReviewOfSystemsTextBox.Size = New System.Drawing.Size(607, 333)
+        Me.ReviewOfSystemsTextBox.TabIndex = 124
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.SystemColors.Control
+        Me.GroupBox1.Controls.Add(Me.ReviewOfSystemsTextBox)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox1.Location = New System.Drawing.Point(2, 246)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(615, 359)
+        Me.GroupBox1.TabIndex = 125
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "REVIEW OF SYSTEMS"
+        '
+        'btnProcedureNotes
+        '
+        Me.btnProcedureNotes.Location = New System.Drawing.Point(417, 407)
+        Me.btnProcedureNotes.Name = "btnProcedureNotes"
+        Me.btnProcedureNotes.Size = New System.Drawing.Size(95, 25)
+        Me.btnProcedureNotes.TabIndex = 196
+        Me.btnProcedureNotes.Text = "Procedure Notes"
+        Me.btnProcedureNotes.UseVisualStyleBackColor = True
+        '
+        'btnOtherTxPanel
+        '
+        Me.btnOtherTxPanel.Location = New System.Drawing.Point(514, 407)
+        Me.btnOtherTxPanel.Name = "btnOtherTxPanel"
+        Me.btnOtherTxPanel.Size = New System.Drawing.Size(77, 25)
+        Me.btnOtherTxPanel.TabIndex = 197
+        Me.btnOtherTxPanel.Text = "Other Notes"
+        Me.btnOtherTxPanel.UseVisualStyleBackColor = True
         '
         'BtnSave
         '
         Me.BtnSave.BackColor = System.Drawing.Color.DodgerBlue
-        Me.BtnSave.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSave.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnSave.Location = New System.Drawing.Point(482, 579)
+        Me.BtnSave.Location = New System.Drawing.Point(626, 17)
         Me.BtnSave.Name = "BtnSave"
-        Me.BtnSave.Size = New System.Drawing.Size(109, 34)
+        Me.BtnSave.Size = New System.Drawing.Size(73, 27)
         Me.BtnSave.TabIndex = 195
         Me.BtnSave.Text = "Save"
         Me.BtnSave.UseVisualStyleBackColor = False
@@ -948,13 +1337,20 @@ Partial Class Orders
         Me.Panel4.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel7.ResumeLayout(False)
+        CType(Me.MMCHDxRxLtMtDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MMCHDxRxLtMtBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MMDataDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.ProcedureTab.ResumeLayout(False)
         Me.DxTestsTab.ResumeLayout(False)
         Me.DxTestsTab.PerformLayout()
-        CType(Me.MMCHDxRxLtMtDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CC.ResumeLayout(False)
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        Me.HOPI.ResumeLayout(False)
+        Me.HOPI.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1034,5 +1430,34 @@ Partial Class Orders
     Friend WithEvents radDiet As RadioButton
     Friend WithEvents radCounseling As RadioButton
     Friend WithEvents btnDiet As Button
+    Friend WithEvents CC As TabPage
+    Friend WithEvents btnPickupCC As Button
+    Friend WithEvents ChiefComplaintTextBox As TextBox
+    Friend WithEvents btnPickupChronic As Button
+    Friend WithEvents ChronicConditionsTextBox As TextBox
+    Friend WithEvents radChronic As RadioButton
+    Friend WithEvents radImpressions As RadioButton
+    Friend WithEvents radProcedureNotes As RadioButton
+    Friend WithEvents radPlan As RadioButton
+    Friend WithEvents RadioButtonCC As RadioButton
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents HOPI As GroupBox
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents btnPickCC As Button
+    Friend WithEvents ROSBulletsCount As TextBox
+    Friend WithEvents PEBulletsCount As TextBox
+    Friend WithEvents RosCount As TextBox
+    Friend WithEvents PEcount As TextBox
+    Friend WithEvents cmdHPI As Button
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtHPI As TextBox
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents ReviewOfSystemsTextBox As TextBox
+    Friend WithEvents btnProcedureNotes As Button
+    Friend WithEvents btnOtherTxPanel As Button
     Private WithEvents BtnSave As Button
 End Class

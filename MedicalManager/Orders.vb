@@ -1,5 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Globalization
+Imports System.Web.UI.WebControls
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class Orders
     Dim ChartNumber As String
@@ -10,11 +12,14 @@ Public Class Orders
     Dim AssignedProviderCode As String
     Dim myBindingSource As New BindingSource()
     Dim CounterTests As Integer
+    Dim aPickCC(2) As String
+    Dim isDataChanged As Boolean = False
+    Dim isLoading As Boolean = False
 
     Private Sub Orders_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        TabControl1.Appearance = TabAppearance.Buttons
-        TabControl1.ItemSize = New Size(0, 1)
-        TabControl1.SizeMode = TabSizeMode.Fixed
+        'TabControl1.Appearance = TabAppearance.Buttons
+        'TabControl1.ItemSize = New Size(0, 1)
+        'TabControl1.SizeMode = TabSizeMode.Fixed
 
         ChartNo.Text = aRet(1)
         txtName.Text = (aRet(3) + " " + aRet(2)).Trim()
@@ -22,6 +27,7 @@ Public Class Orders
         TBPhysician.Text = AssignedProvider
 
         ShowProceduresGViewData(txtCaseNo.Text)
+        LoadData(txtCaseNo.Text)
 
     End Sub
 
@@ -143,8 +149,11 @@ Public Class Orders
 
                 ds.Dispose()
                 cn.Close()
-                'Me.DataGridViewPr.Columns(0).Width = 70
-                'Me.DataGridViewPr.Columns(1).Width = 347
+                If DataGridViewPr.Rows.Count > 0 Then
+                    Me.DataGridViewPr.Columns(0).Width = 70
+                    Me.DataGridViewPr.Columns(1).Width = 500
+                End If
+
 
             Catch ex As System.Exception
                 System.Windows.Forms.MessageBox.Show(ex.Message)
@@ -326,7 +335,7 @@ Public Class Orders
 
                     ElseIf RadioButtonPr.Checked Then
 
-                    Dim strQID As String
+                        Dim strQID As String
                         '******************************************
                         Dim connString As String = connString2
                         Dim cn As New SqlConnection(connString)
@@ -558,25 +567,25 @@ Public Class Orders
                     Dx5DescriptionTextBox.ScrollToCaret()
                 End If
 
-                'ElseIf radOther.Checked = True Then
+            ElseIf radOther.Checked = True Then
 
-                '    Dim strOther As String
-                '    strOther = NotesTestBox.Text
-                '    If NotesTestBox.Text = "" Then
-                '        NotesTestBox.Text = DataGridViewPr.SelectedRows(0).Cells("Description").Value.ToString()
-                '    Else
-                '        NotesTestBox.Text = strOther + Environment.NewLine + DataGridViewPr.SelectedRows(0).Cells("Description").Value.ToString
-                '    End If
+                Dim strOther As String
+                strOther = NotesTestBox.Text
+                If NotesTestBox.Text = "" Then
+                    NotesTestBox.Text = DataGridViewPr.SelectedRows(0).Cells("Description").Value.ToString()
+                Else
+                    NotesTestBox.Text = strOther + Environment.NewLine + DataGridViewPr.SelectedRows(0).Cells("Description").Value.ToString
+                End If
 
-                'ElseIf radProcedureNotes.Checked = True Then
+            ElseIf radProcedureNotes.Checked = True Then
 
-                '    Dim strOther As String
-                '    strOther = NotesTestBox.Text
-                '    If NotesTestBox.Text = "" Then
-                '        NotesTestBox.Text = DataGridViewPr.SelectedRows(0).Cells("Description").Value.ToString()
-                '    Else
-                '        NotesTestBox.Text = strOther + Environment.NewLine + DataGridViewPr.SelectedRows(0).Cells("Description").Value.ToString
-                '    End If
+                Dim strOther As String
+                strOther = NotesTestBox.Text
+                If NotesTestBox.Text = "" Then
+                    NotesTestBox.Text = DataGridViewPr.SelectedRows(0).Cells("Description").Value.ToString()
+                Else
+                    NotesTestBox.Text = strOther + Environment.NewLine + DataGridViewPr.SelectedRows(0).Cells("Description").Value.ToString
+                End If
 
             ElseIf radFollowUp.Checked = True Then
                 Dim strFollowup As String
@@ -624,28 +633,28 @@ Public Class Orders
                 '        ImpressionTextBox.Text = strImpressions + ", " + DataGridViewPr.SelectedRows(0).Cells("Description").Value.ToString
                 '    End If
 
-                'ElseIf RadioButtonCC.Checked = True Then
-                '    Dim strCC As String
-                '    strCC = ChiefComplaintTextBox.Text
-                '    If ChiefComplaintTextBox.Text = "" Then
-                '        ChiefComplaintTextBox.Text = DataGridViewPr.SelectedRows(0).Cells("ChiefComplaint").Value.ToString()
-                '    Else
-                '        ChiefComplaintTextBox.Text = strCC + ", " + DataGridViewPr.SelectedRows(0).Cells("ChiefComplaint").Value.ToString
-                '    End If
-                '    ChiefComplaintTextBox.SelectionStart = ChiefComplaintTextBox.TextLength
-                '    ChiefComplaintTextBox.ScrollToCaret()
-                '    'TextBox1.Focus()
+            ElseIf RadioButtonCC.Checked = True Then
+                Dim strCC As String
+                strCC = ChiefComplaintTextBox.Text
+                If ChiefComplaintTextBox.Text = "" Then
+                    ChiefComplaintTextBox.Text = DataGridViewPr.SelectedRows(0).Cells("ChiefComplaint").Value.ToString()
+                Else
+                    ChiefComplaintTextBox.Text = strCC + ", " + DataGridViewPr.SelectedRows(0).Cells("ChiefComplaint").Value.ToString
+                End If
+                ChiefComplaintTextBox.SelectionStart = ChiefComplaintTextBox.TextLength
+                ChiefComplaintTextBox.ScrollToCaret()
+                'TextBox1.Focus()
 
-                'ElseIf radChronic.Checked = True Then
-                '    Dim strChronic As String
-                '    strChronic = ChronicConditionsTextBox.Text
-                '    If ChronicConditionsTextBox.Text = "" Then
-                '        ChronicConditionsTextBox.Text = DataGridViewPr.SelectedRows(0).Cells("ChiefComplaint").Value.ToString()
-                '    Else
-                '        ChronicConditionsTextBox.Text = strChronic + ", " + DataGridViewPr.SelectedRows(0).Cells("ChiefComplaint").Value.ToString
-                '    End If
-                '    ChronicConditionsTextBox.SelectionStart = ChronicConditionsTextBox.TextLength
-                '    ChronicConditionsTextBox.ScrollToCaret()
+            ElseIf radChronic.Checked = True Then
+                Dim strChronic As String
+                strChronic = ChronicConditionsTextBox.Text
+                If ChronicConditionsTextBox.Text = "" Then
+                    ChronicConditionsTextBox.Text = DataGridViewPr.SelectedRows(0).Cells("ChiefComplaint").Value.ToString()
+                Else
+                    ChronicConditionsTextBox.Text = strChronic + ", " + DataGridViewPr.SelectedRows(0).Cells("ChiefComplaint").Value.ToString
+                End If
+                ChronicConditionsTextBox.SelectionStart = ChronicConditionsTextBox.TextLength
+                ChronicConditionsTextBox.ScrollToCaret()
 
             Else 'RadioButtonDx.Checked = False Then
 
@@ -843,8 +852,11 @@ Public Class Orders
                 '***CHANGED***
                 'TabControl3.SelectedTab = DxPrTestsPickTab
                 TabControl1.SelectedTab = DxTestsTab
-                Me.DataGridViewPr.Columns(0).Width = 70
-                Me.DataGridViewPr.Columns(1).Width = 500
+                If DataGridViewPr.Rows.Count > 0 Then
+                    Me.DataGridViewPr.Columns(0).Width = 70
+                    Me.DataGridViewPr.Columns(1).Width = 500
+                End If
+
             End If
         Catch ex As System.Exception
             System.Windows.Forms.MessageBox.Show(ex.Message)
@@ -959,5 +971,410 @@ Public Class Orders
         Catch ex As System.Exception
             System.Windows.Forms.MessageBox.Show(ex.Message)
         End Try
+    End Sub
+
+    Private Sub btnPickupCC_Click(sender As Object, e As EventArgs) Handles btnPickupCC.Click
+        Try
+
+            RadioButtonDx.Checked = False
+            radProcedureNotes.Checked = False
+            radPlan.Checked = False
+            RadioButtonCC.Checked = True
+
+            'TabControl3.SelectedTab = DxPrTestsPickTab
+            'Dim connString As String = ConfigurationManager.ConnectionStrings("MedicalManager.My.MySettings.MMDataConnectionString1").ConnectionString
+            Dim connString As String = connString2
+
+            Dim cn As New SqlConnection(connString)
+            cn.Open()
+            ' read the number of rows
+            Dim cmd As New SqlCommand("SELECT ChiefComplaint, Category from  MMChartCC  ORDER BY CategorySortOrder, ItemSortOrder ", cn)
+            Dim da As New SqlDataAdapter
+            Dim tbl As New DataTable
+            Dim ds As New DataSet
+            da.SelectCommand = cmd
+            da.Fill(ds, "MMCHRosAndGen")
+
+            DataGridViewPr.DataSource = ds.Tables("MMCHRosAndGen")
+            ds.Dispose()
+            cn.Close()
+
+
+
+            Me.DataGridViewPr.Columns(0).Width = 250
+
+
+            If globalTemplate <> "" Then
+                radTemplateDX.Checked = True
+                LoadTemplateSpecificDxPrTests()
+            Else
+                radMyDx.Checked = True
+            End If
+
+
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub btnPickupChronic_Click(sender As Object, e As EventArgs) Handles btnPickupChronic.Click
+        Try
+
+            RadioButtonDx.Checked = False
+            radProcedureNotes.Checked = False
+            radPlan.Checked = False
+            RadioButtonCC.Checked = False
+            radChronic.Checked = True
+
+            'TabControl3.SelectedTab = DxPrTestsPickTab
+            'Dim connString As String = ConfigurationManager.ConnectionStrings("MedicalManager.My.MySettings.MMDataConnectionString1").ConnectionString
+            Dim connString As String = connString2
+
+            Dim cn As New SqlConnection(connString)
+            cn.Open()
+            ' read the number of rows
+            Dim cmd As New SqlCommand("SELECT ChiefComplaint, Category from  MMChartCC  ORDER BY CategorySortOrder, ItemSortOrder ", cn)
+            Dim da As New SqlDataAdapter
+            Dim tbl As New DataTable
+            Dim ds As New DataSet
+            da.SelectCommand = cmd
+            da.Fill(ds, "MMCHRosAndGen")
+
+            DataGridViewPr.DataSource = ds.Tables("MMCHRosAndGen")
+            ds.Dispose()
+            cn.Close()
+
+
+
+            Me.DataGridViewPr.Columns(0).Width = 250
+
+
+            If globalTemplate <> "" Then
+                radTemplateDX.Checked = True
+                LoadTemplateSpecificDxPrTests()
+            Else
+                radMyDx.Checked = True
+            End If
+
+
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
+
+
+
+        If TabControl1.SelectedTab.Text = "Dx" Then
+            'TabControl3.SelectedTab = DxPrTestsPickTab
+            RadioButtonPr.Checked = False
+            RadioButtonLT.Checked = False
+            RadioButtonMT.Checked = False
+            RadioButtonTestImaging.Checked = False
+            RadioButtonDx.Checked = True
+
+            DataGridViewPr.DataSource = Nothing
+            'If globalTemplate <> "" Then
+            '    radTemplateDX.Checked = True
+            '    LoadTemplateSpecificDxPrTests()
+            'Else
+            '    LoadMyList()
+            'End If
+        End If
+
+        If TabControl1.SelectedTab.Text = "Pro" Then
+            'TabControl3.SelectedTab = DxPrTestsPickTab
+            RadioButtonDx.Checked = False
+            RadioButtonPr.Checked = True
+            DataGridViewPr.DataSource = Nothing
+        End If
+
+        If TabControl1.SelectedTab.Text = "CC HPI ROS" Then
+            'TabControl3.SelectedTab = DxPrTestsPickTab
+            DataGridViewPr.DataSource = Nothing
+        End If
+    End Sub
+    Private Function LoadMyList()
+        If radMyDx.Checked = True Then
+            Dim connString As String = connString2
+            Dim cn As New SqlConnection(connString)
+            cn.Open()
+            Dim cmd As New SqlCommand
+
+            Try
+                If RadioButtonDx.Checked Then
+                    cmd = New SqlCommand("SELECT MMDX.Code1 AS Code, MMDX.Description FROM  MMDX LEFT JOIN  PhysicianProfile ON MMDX.Code1 = PhysicianProfile.Code WHERE  physiciancode = '" & AssignedProviderCode & "' ORDER BY MMDX.Description", cn)
+                ElseIf RadioButtonPr.Checked Then
+                    cmd = New SqlCommand("SELECT Code1 As Code, MMPRocedure.Description, AmountA, MyProcedures, ScreenLocation, MMPRocedure.Type, InHouse, InHouseBilling  FROM   MMPRocedure LEFT JOIN PhysicianProfile ON MMPRocedure.Code1 = PhysicianProfile.Code where  physiciancode = '" & AssignedProviderCode & "' order by Description", cn)
+                ElseIf RadioButtonLT.Checked Then
+                    cmd = New SqlCommand("SELECT TestNo, Description, Amount, MyTest, Type, InHouse, InHouseBilling FROM MMChartTestLab  order by Description", cn)
+                ElseIf RadioButtonMT.Checked Then
+                    cmd = New SqlCommand("SELECT ID, Description, Amount, MyTest, Type, InHouse, InHouseBilling FROM MMCHARTTESTMEDICAL  order by Description", cn)
+                ElseIf RadioButtonTestImaging.Checked Then
+                    cmd = New SqlCommand("SELECT ID, Description, Amount, MyTest, Type, InHouse, InHouseBilling FROM MMChartTestImaging  order by Description", cn)
+                Else
+                    Exit Function
+                End If
+
+                Dim da As New SqlDataAdapter
+                Dim tbl As New DataTable
+                Dim ds As New DataSet
+                da.SelectCommand = cmd
+                da.Fill(ds, "MMDX")
+
+                myBindingSource = New BindingSource()
+                myBindingSource.DataSource = ds
+                myBindingSource.DataMember = ds.Tables(0).TableName
+                DataGridViewPr.DataSource = myBindingSource
+
+                ds.Dispose()
+                cn.Close()
+
+                Me.DataGridViewPr.Columns(0).Width = 70
+                Me.DataGridViewPr.Columns(1).Width = 347
+
+            Catch ex As System.Exception
+                System.Windows.Forms.MessageBox.Show(ex.Message)
+            End Try
+        End If
+    End Function
+
+    Private Sub btnPickCC_Click(sender As Object, e As EventArgs) Handles btnPickCC.Click
+        Try
+            Dim frmTemplatePicklist As New TemplatePicklist
+            aPickCC = frmTemplatePicklist.ShowPicklist
+            If aPickCC(0) = "Y" Then
+                globalTemplate = aPickCC(1)
+                globalChiefComplaint = aPickCC(2)
+                Me.Text = "Visit Template Specific" + "                                                                               " + globalTemplate + "- " + globalChiefComplaint
+                'If globalTemplate <> "" Then
+                '    '***CHANGED***
+                '    TabControl1.SelectedTab = DxPrTestsTab
+                '    TabControl1.SelectedTab = HPITab
+                '    radTemplateDX.PerformClick()
+                'End If
+            End If
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub cmdHPI_Click(sender As Object, e As EventArgs) Handles cmdHPI.Click
+        Try
+            Dim FrmProcedure As New Procedure
+
+            aRet = HPI.ShowPicklist
+            If aRet(0) = "Y" Then
+                txtHPI.Text = aRet(1)
+                TextBox2.Text = aRet(2)
+                If ChiefComplaintTextBox.Text = "" Then
+                    ChiefComplaintTextBox.Text = aRet(2)
+                Else
+                    ChiefComplaintTextBox.Text = ChiefComplaintTextBox.Text & ", " & aRet(2)
+                End If
+            End If
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+    Private Sub LoadData(caseNumber As String)
+        Try
+
+            Dim connection As New SqlConnection(connString2)
+            connection.Open()
+            Dim query As String = "SELECT * FROM MMChartVisit WHERE CaseNumber = @CaseNumber"
+            Dim command As New SqlCommand(query, connection)
+            command.Parameters.AddWithValue("@CaseNumber", caseNumber)
+
+            Dim reader As SqlDataReader = command.ExecuteReader()
+            If reader.Read() Then
+                TextBoxDx1.Text = reader("Dx1").ToString()
+                Dx1DescriptionTextBox.Text = reader("Dx1Description").ToString()
+                TextBoxDx2.Text = reader("Dx2").ToString()
+                Dx2DescriptionTextBox.Text = reader("Dx2Description").ToString()
+                TextBoxDx3.Text = reader("Dx3").ToString()
+                Dx3DescriptionTextBox.Text = reader("Dx3Description").ToString()
+                TextBoxDx4.Text = reader("Dx4").ToString()
+                Dx4DescriptionTextBox.Text = reader("Dx4Description").ToString()
+                Dx5DescriptionTextBox.Text = reader("Dx5Description").ToString()
+
+                NotesTestBox.Text = reader("Notes").ToString()
+                TextBoxfollowUp.Text = reader("FollowUp").ToString()
+                TextBoxReferedTo.Text = reader("RefferedTo").ToString()
+                TextBoxDiet.Text = reader("Diet").ToString()
+                TextBoxCounselingEducation.Text = reader("Counselling").ToString()
+                ChiefComplaintTextBox.Text = reader("ChiefComplaint").ToString()
+
+                ChronicConditionsTextBox.Text = reader("ChronicConditions").ToString()
+                txtHPI.Text = reader("HPI").ToString()
+                ReviewOfSystemsTextBox.Text = reader("ReviewOfSystems").ToString()
+
+            End If
+            reader.Close()
+            connection.Close()
+
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        Finally
+
+            isLoading = False ' Re-enable TextChanged event tracking after data is loaded
+            isDataChanged = False ' Reset data changed flag since it's just loading data
+        End Try
+
+    End Sub
+
+    ' Function to update data back to the database
+    Private Sub UpdateData(caseNumber As String)
+        Try
+            Dim connection As New SqlConnection(connString2)
+            connection.Open()
+            Dim query As String = "UPDATE MMChartVisit 
+                                   SET Dx1 = @Dx1, Dx1Description = @Dx1Description ,Dx2 = @Dx2, Dx2Description = @Dx2Description,Dx3 = @Dx3,
+                                    Dx3Description = @Dx3Description,Dx4 = @Dx4, Dx4Description = @Dx4Description,Dx5Description = @Dx5Description,
+                                   Notes =@Notes, FollowUp = @FollowUp, RefferedTo = @RefferedTo, Diet = @Diet, Counselling = @Counselling,
+                                    ChiefComplaint = @ChiefComplaint,ChronicConditions =@ChronicConditions, HPI = @HPI, ReviewOfSystems = @ReviewOfSystems 
+                                   WHERE CaseNumber = @CaseNumber"
+            Dim command As New SqlCommand(query, connection)
+
+            ' Set the parameters for updating
+            command.Parameters.AddWithValue("@Dx1", TextBoxDx1.Text)
+            command.Parameters.AddWithValue("@Dx1Description", Dx1DescriptionTextBox.Text)
+            command.Parameters.AddWithValue("@Dx2", TextBoxDx2.Text)
+            command.Parameters.AddWithValue("@Dx2Description", Dx2DescriptionTextBox.Text)
+            command.Parameters.AddWithValue("@Dx3", TextBoxDx3.Text)
+            command.Parameters.AddWithValue("@Dx3Description", Dx3DescriptionTextBox.Text)
+            command.Parameters.AddWithValue("@Dx4", TextBoxDx4.Text)
+            command.Parameters.AddWithValue("@Dx4Description", Dx4DescriptionTextBox.Text)
+            command.Parameters.AddWithValue("@Dx5Description", Dx5DescriptionTextBox.Text)
+            command.Parameters.AddWithValue("@Notes", NotesTestBox.Text)
+            command.Parameters.AddWithValue("@FollowUp", TextBoxfollowUp.Text)
+
+            command.Parameters.AddWithValue("@RefferedTo", TextBoxReferedTo.Text)
+            command.Parameters.AddWithValue("@Diet", TextBoxDiet.Text)
+            command.Parameters.AddWithValue("@Counselling", TextBoxCounselingEducation.Text)
+
+            command.Parameters.AddWithValue("@ChiefComplaint", ChiefComplaintTextBox.Text)
+
+            command.Parameters.AddWithValue("@ChronicConditions", ChronicConditionsTextBox.Text)
+            command.Parameters.AddWithValue("@HPI", txtHPI.Text)
+            command.Parameters.AddWithValue("@ReviewOfSystems", ReviewOfSystemsTextBox.Text)
+
+            command.Parameters.AddWithValue("@CaseNumber", caseNumber)
+
+            ' Execute the query
+            command.ExecuteNonQuery()
+            connection.Close()
+
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        Finally
+            isDataChanged = False
+        End Try
+    End Sub
+
+    Private Sub btnProcedureNotes_Click(sender As Object, e As EventArgs) Handles btnProcedureNotes.Click
+        Try
+            'TabControl3.SelectedIndex = 3
+            'TabControl1.SelectedIndex = 5
+            RadioButtonDx.Checked = False
+            radPlan.Checked = False
+            radProcedureNotes.Checked = True
+            'Dim connString As String = ConfigurationManager.ConnectionStrings("MedicalManager.My.MySettings.MMDataConnectionString1").ConnectionString
+            Dim connString As String = connString2
+
+            Dim cn As New SqlConnection(connString)
+            cn.Open()
+            ' read the number of rows
+            Dim cmd As New SqlCommand("SELECT Category,SubCategory, Discription as Description,ScreenLocation  from  MMCHRosAndGen where category= 'Procedure Notes' ORDER BY ScreenLocation ", cn)
+            Dim da As New SqlDataAdapter
+            Dim tbl As New DataTable
+            Dim ds As New DataSet
+            da.SelectCommand = cmd
+            da.Fill(ds, "MMCHRosAndGen")
+
+            DataGridViewPr.DataSource = ds.Tables("MMCHRosAndGen")
+            ds.Dispose()
+            cn.Close()
+            Me.DataGridViewPr.Columns(0).Visible = False
+            Me.DataGridViewPr.Columns(1).Visible = True
+            Me.DataGridViewPr.Columns(2).Width = 347
+            Me.DataGridViewPr.Columns(3).Visible = False
+
+            If globalTemplate <> "" Then
+                radTemplateDX.Checked = True
+                LoadTemplateSpecificDxPrTests()
+            Else
+                radMyDx.Checked = True
+            End If
+
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub btnOtherTxPanel_Click(sender As Object, e As EventArgs) Handles btnOtherTxPanel.Click
+        Try
+            'TabControl3.SelectedIndex = 3
+            'TabControl1.SelectedIndex = 5
+            radOther.Checked = True
+            'Dim connString As String = ConfigurationManager.ConnectionStrings("MedicalManager.My.MySettings.MMDataConnectionString1").ConnectionString
+            Dim connString As String = connString2
+
+            Dim cn As New SqlConnection(connString)
+            cn.Open()
+            ' read the number of rows
+            Dim cmd As New SqlCommand("SELECT Category,SubCategory, Discription as Description,ScreenLocation  from  MMCHRosAndGen where category= 'OtherTx Panel' ORDER BY ScreenLocation ", cn)
+            Dim da As New SqlDataAdapter
+            Dim tbl As New DataTable
+            Dim ds As New DataSet
+            da.SelectCommand = cmd
+            da.Fill(ds, "MMCHRosAndGen")
+
+            DataGridViewPr.DataSource = ds.Tables("MMCHRosAndGen")
+            ds.Dispose()
+            cn.Close()
+
+            Me.DataGridViewPr.Columns(0).Visible = False
+            Me.DataGridViewPr.Columns(1).Visible = True
+            Me.DataGridViewPr.Columns(2).Width = 347
+            Me.DataGridViewPr.Columns(3).Visible = False
+
+            If globalTemplate <> "" Then
+                radTemplateDX.Checked = True
+                LoadTemplateSpecificDxPrTests()
+            Else
+                radMyDx.Checked = True
+            End If
+
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles BtnSave.Click
+        UpdateData(txtCaseNo.Text)
+    End Sub
+
+    Private Sub Orders_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        If isDataChanged Then
+            Dim result As DialogResult = MessageBox.Show("You have unsaved changes. Do you want to save before exiting?", "Unsaved Changes", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning)
+            If result = DialogResult.Yes Then
+                UpdateData(txtCaseNo.Text) ' Save changes
+            ElseIf result = DialogResult.Cancel Then
+                e.Cancel = True ' Cancel form closing
+            End If
+        End If
+    End Sub
+    Private Sub TextBox_TextChanged(sender As Object, e As EventArgs) Handles TextBoxDx1.TextChanged, Dx1DescriptionTextBox.TextChanged,
+        TextBoxDx2.TextChanged, Dx2DescriptionTextBox.TextChanged, TextBoxDx3.TextChanged, Dx3DescriptionTextBox.TextChanged, TextBoxDx4.TextChanged,
+        Dx4DescriptionTextBox.TextChanged, Dx5DescriptionTextBox.TextChanged, NotesTestBox.TextChanged, TextBoxfollowUp.TextChanged,
+        TextBoxReferedTo.TextChanged, TextBoxDiet.TextChanged, TextBoxCounselingEducation.TextChanged, ChiefComplaintTextBox.TextChanged,
+        ChronicConditionsTextBox.TextChanged, txtHPI.TextChanged, ReviewOfSystemsTextBox.TextChanged
+
+        If Not isLoading Then
+            isDataChanged = True
+        End If
     End Sub
 End Class
