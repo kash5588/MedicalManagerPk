@@ -2227,7 +2227,7 @@ Public Class MDIParent
         LoadPicture()
     End Sub
 
-    Private Sub BtnVisitList_Click(sender As Object, e As EventArgs) Handles BtnVisitList.Click, Button2.Click
+    Private Sub BtnVisitList_Click(sender As Object, e As EventArgs) Handles BtnVisitList.Click
         Dim pieces() As String
         Dim IndexOf As Integer
         Dim sAction As String

@@ -171,7 +171,6 @@ Partial Class MDIParent
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.BtnExpenses = New System.Windows.Forms.Button()
         Me.BtnVisitList = New System.Windows.Forms.Button()
         Me.GradientNavigationButton7 = New Ascend.Windows.Forms.GradientNavigationButton()
@@ -1238,7 +1237,6 @@ Partial Class MDIParent
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button2)
         Me.SplitContainer1.Panel1.Controls.Add(Me.BtnExpenses)
         Me.SplitContainer1.Panel1.Controls.Add(Me.BtnVisitList)
         Me.SplitContainer1.Panel1.Controls.Add(Me.GradientNavigationButton7)
@@ -1263,19 +1261,6 @@ Partial Class MDIParent
         Me.SplitContainer1.Size = New System.Drawing.Size(1198, 670)
         Me.SplitContainer1.SplitterDistance = 186
         Me.SplitContainer1.TabIndex = 14
-        '
-        'Button2
-        '
-        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Button2.BackColor = System.Drawing.Color.DodgerBlue
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button2.Location = New System.Drawing.Point(14, 622)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(157, 31)
-        Me.Button2.TabIndex = 17
-        Me.Button2.Text = "Visit List"
-        Me.Button2.UseVisualStyleBackColor = False
         '
         'BtnExpenses
         '
@@ -2554,6 +2539,5 @@ Partial Class MDIParent
     Friend WithEvents ToolStripLabel6 As ToolStripLabel
     Private WithEvents PBoxPatient As PictureBox
     Friend WithEvents BtnVisitList As Button
-    Friend WithEvents Button2 As Button
     Friend WithEvents BtnExpenses As Button
 End Class
