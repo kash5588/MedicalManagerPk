@@ -485,4 +485,41 @@ Public Class VisitsList
     Private Sub CBStatus_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBStatus.SelectedIndexChanged
         GetFilteredChartVisits(CBPhysician.Text, CBDate.Text, CBStatus.Text)
     End Sub
+
+    Private Sub BtnHistory_Click(sender As Object, e As EventArgs) Handles BtnHistory.Click
+        If txtName.Text <> "" Then
+
+
+
+            Me.Cursor = Cursors.WaitCursor
+
+            Try
+
+
+                Dim pieces() As String
+                Dim IndexOf As Integer
+                Dim sAction As String
+
+                sAction = "FormHealthHistory"
+                pieces = Permissions.Split(",")
+                IndexOf = Array.IndexOf(pieces, sAction)
+
+                If IndexOf <> -1 Then
+                Else
+                    MessageBox.Show("User is not authorized for this procedure.", "Authorization Denied", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Exit Sub
+                End If
+                Dim arrayAssignedProvider(2) As String
+                arrayAssignedProvider(0) = TBPhysicianName.Text
+
+                Me.Hide()
+                HealthHistory.ShowHistory(aRet, arrayAssignedProvider)
+                Me.Close() ' Close after history is shown if needed
+
+            Catch ex As System.Exception
+                System.Windows.Forms.MessageBox.Show(ex.Message)
+            End Try
+
+        End If
+    End Sub
 End Class

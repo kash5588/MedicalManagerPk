@@ -2227,7 +2227,7 @@ Public Class MDIParent
         LoadPicture()
     End Sub
 
-    Private Sub BtnVisitList_Click(sender As Object, e As EventArgs) Handles BtnVisitList.Click
+    Private Sub BtnVisitList_Click(sender As Object, e As EventArgs) Handles BtnVisitList.Click, Button2.Click
         Dim pieces() As String
         Dim IndexOf As Integer
         Dim sAction As String
@@ -2247,5 +2247,26 @@ Public Class MDIParent
             System.Windows.Forms.MessageBox.Show(ex.Message)
         End Try
 
+    End Sub
+
+    Private Sub BtnExpenses_Click(sender As Object, e As EventArgs) Handles BtnExpenses.Click
+        Dim pieces() As String
+        Dim IndexOf As Integer
+        Dim sAction As String
+        Try
+            sAction = "AddExpenses"
+            pieces = Permissions.Split(",")
+            IndexOf = Array.IndexOf(pieces, sAction)
+            If IndexOf <> -1 Then
+            Else
+                MessageBox.Show("User not authorized to Add Expenses", "Authorization Denied", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Exit Sub
+            End If
+
+            AddExpenses.Show()
+
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
     End Sub
 End Class

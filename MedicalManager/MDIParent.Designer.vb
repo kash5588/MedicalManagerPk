@@ -171,6 +171,8 @@ Partial Class MDIParent
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.BtnExpenses = New System.Windows.Forms.Button()
         Me.BtnVisitList = New System.Windows.Forms.Button()
         Me.GradientNavigationButton7 = New Ascend.Windows.Forms.GradientNavigationButton()
         Me.GradientNavigationButton4 = New Ascend.Windows.Forms.GradientNavigationButton()
@@ -1236,6 +1238,8 @@ Partial Class MDIParent
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Button2)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.BtnExpenses)
         Me.SplitContainer1.Panel1.Controls.Add(Me.BtnVisitList)
         Me.SplitContainer1.Panel1.Controls.Add(Me.GradientNavigationButton7)
         Me.SplitContainer1.Panel1.Controls.Add(Me.GradientNavigationButton4)
@@ -1260,15 +1264,41 @@ Partial Class MDIParent
         Me.SplitContainer1.SplitterDistance = 186
         Me.SplitContainer1.TabIndex = 14
         '
+        'Button2
+        '
+        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Button2.BackColor = System.Drawing.Color.DodgerBlue
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button2.Location = New System.Drawing.Point(14, 622)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(157, 31)
+        Me.Button2.TabIndex = 17
+        Me.Button2.Text = "Visit List"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'BtnExpenses
+        '
+        Me.BtnExpenses.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.BtnExpenses.BackColor = System.Drawing.Color.DodgerBlue
+        Me.BtnExpenses.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnExpenses.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnExpenses.Location = New System.Drawing.Point(14, 585)
+        Me.BtnExpenses.Name = "BtnExpenses"
+        Me.BtnExpenses.Size = New System.Drawing.Size(157, 31)
+        Me.BtnExpenses.TabIndex = 17
+        Me.BtnExpenses.Text = "Add Expenses"
+        Me.BtnExpenses.UseVisualStyleBackColor = False
+        '
         'BtnVisitList
         '
         Me.BtnVisitList.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.BtnVisitList.BackColor = System.Drawing.Color.DodgerBlue
-        Me.BtnVisitList.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnVisitList.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnVisitList.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnVisitList.Location = New System.Drawing.Point(14, 564)
+        Me.BtnVisitList.Location = New System.Drawing.Point(14, 548)
         Me.BtnVisitList.Name = "BtnVisitList"
-        Me.BtnVisitList.Size = New System.Drawing.Size(157, 41)
+        Me.BtnVisitList.Size = New System.Drawing.Size(157, 31)
         Me.BtnVisitList.TabIndex = 17
         Me.BtnVisitList.Text = "Visit List"
         Me.BtnVisitList.UseVisualStyleBackColor = False
@@ -2524,4 +2554,6 @@ Partial Class MDIParent
     Friend WithEvents ToolStripLabel6 As ToolStripLabel
     Private WithEvents PBoxPatient As PictureBox
     Friend WithEvents BtnVisitList As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents BtnExpenses As Button
 End Class

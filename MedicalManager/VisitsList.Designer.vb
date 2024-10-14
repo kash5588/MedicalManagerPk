@@ -23,14 +23,14 @@ Partial Class VisitsList
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MMChartVisitDataGridView = New System.Windows.Forms.DataGridView()
         Me.CaseNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DOB = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FirstName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LastName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ChartNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DOB = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateVisit = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.VisitType = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PhysicianName = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -155,6 +155,7 @@ Partial Class VisitsList
         Me.Label5 = New System.Windows.Forms.Label()
         Me.PBoxPatient = New System.Windows.Forms.PictureBox()
         Me.BtnToken = New System.Windows.Forms.Button()
+        Me.BtnHistory = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.MMChartVisitDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMChartVisitBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -198,7 +199,7 @@ Partial Class VisitsList
         Me.MMChartVisitDataGridView.AutoGenerateColumns = False
         Me.MMChartVisitDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.MMChartVisitDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.MMChartVisitDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CaseNumber, Me.DOB, Me.FirstName, Me.LastName, Me.ChartNumber, Me.DateVisit, Me.VisitType, Me.PhysicianName, Me.TokenNo})
+        Me.MMChartVisitDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CaseNumber, Me.FirstName, Me.LastName, Me.ChartNumber, Me.DOB, Me.DateVisit, Me.VisitType, Me.PhysicianName, Me.TokenNo})
         Me.MMChartVisitDataGridView.DataSource = Me.MMChartVisitBindingSource
         Me.MMChartVisitDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MMChartVisitDataGridView.Location = New System.Drawing.Point(0, 0)
@@ -215,16 +216,6 @@ Partial Class VisitsList
         Me.CaseNumber.Name = "CaseNumber"
         Me.CaseNumber.ReadOnly = True
         Me.CaseNumber.Width = 70
-        '
-        'DOB
-        '
-        Me.DOB.DataPropertyName = "DOB"
-        DataGridViewCellStyle3.Format = "d"
-        DataGridViewCellStyle3.NullValue = Nothing
-        Me.DOB.DefaultCellStyle = DataGridViewCellStyle3
-        Me.DOB.HeaderText = "DOB"
-        Me.DOB.Name = "DOB"
-        Me.DOB.ReadOnly = True
         '
         'FirstName
         '
@@ -248,6 +239,16 @@ Partial Class VisitsList
         Me.ChartNumber.HeaderText = "ChartNumber"
         Me.ChartNumber.Name = "ChartNumber"
         Me.ChartNumber.ReadOnly = True
+        '
+        'DOB
+        '
+        Me.DOB.DataPropertyName = "DOB"
+        DataGridViewCellStyle2.Format = "d"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.DOB.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DOB.HeaderText = "DOB"
+        Me.DOB.Name = "DOB"
+        Me.DOB.ReadOnly = True
         '
         'DateVisit
         '
@@ -1285,6 +1286,18 @@ Partial Class VisitsList
         Me.BtnToken.Text = "Print Token"
         Me.BtnToken.UseVisualStyleBackColor = False
         '
+        'BtnHistory
+        '
+        Me.BtnHistory.BackColor = System.Drawing.Color.DodgerBlue
+        Me.BtnHistory.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnHistory.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnHistory.Location = New System.Drawing.Point(13, 580)
+        Me.BtnHistory.Name = "BtnHistory"
+        Me.BtnHistory.Size = New System.Drawing.Size(179, 37)
+        Me.BtnHistory.TabIndex = 194
+        Me.BtnHistory.Text = "Patient History"
+        Me.BtnHistory.UseVisualStyleBackColor = False
+        '
         'VisitsList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -1294,6 +1307,7 @@ Partial Class VisitsList
         Me.Controls.Add(Me.PBoxPatient)
         Me.Controls.Add(Me.PanelVitals)
         Me.Controls.Add(Me.Panel4)
+        Me.Controls.Add(Me.BtnHistory)
         Me.Controls.Add(Me.BtnVisitReport)
         Me.Controls.Add(Me.BtnProcedures)
         Me.Controls.Add(Me.BtnMedication)
@@ -1446,15 +1460,6 @@ Partial Class VisitsList
     Friend WithEvents tbDOB As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents MMChartVisitDataGridView As DataGridView
-    Friend WithEvents CaseNumber As DataGridViewTextBoxColumn
-    Friend WithEvents DOB As DataGridViewTextBoxColumn
-    Friend WithEvents FirstName As DataGridViewTextBoxColumn
-    Friend WithEvents LastName As DataGridViewTextBoxColumn
-    Friend WithEvents ChartNumber As DataGridViewTextBoxColumn
-    Friend WithEvents DateVisit As DataGridViewTextBoxColumn
-    Friend WithEvents VisitType As DataGridViewTextBoxColumn
-    Friend WithEvents PhysicianName As DataGridViewTextBoxColumn
-    Friend WithEvents TokenNo As DataGridViewTextBoxColumn
     Private WithEvents PBoxPatient As PictureBox
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn16 As DataGridViewTextBoxColumn
@@ -1467,4 +1472,14 @@ Partial Class VisitsList
     Private WithEvents BtnCompleted As Button
     Friend WithEvents Label13 As Label
     Friend WithEvents CBStatus As ComboBox
+    Friend WithEvents CaseNumber As DataGridViewTextBoxColumn
+    Friend WithEvents FirstName As DataGridViewTextBoxColumn
+    Friend WithEvents LastName As DataGridViewTextBoxColumn
+    Friend WithEvents ChartNumber As DataGridViewTextBoxColumn
+    Friend WithEvents DOB As DataGridViewTextBoxColumn
+    Friend WithEvents DateVisit As DataGridViewTextBoxColumn
+    Friend WithEvents VisitType As DataGridViewTextBoxColumn
+    Friend WithEvents PhysicianName As DataGridViewTextBoxColumn
+    Friend WithEvents TokenNo As DataGridViewTextBoxColumn
+    Private WithEvents BtnHistory As Button
 End Class

@@ -834,8 +834,6 @@ Public Class PATIENT
     Private Sub BtnSaveAndHistory_Click(sender As Object, e As EventArgs) Handles BtnSaveAndHistory.Click
         If FirstNameTextBox.Text <> "" Then
 
-
-
             Me.Cursor = Cursors.WaitCursor
             DateChangedTextBox.Text = System.DateTime.Now()
 

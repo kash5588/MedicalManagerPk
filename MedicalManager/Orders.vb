@@ -63,11 +63,11 @@ Public Class Orders
     Public Function ShowProcedures(ByVal dRet() As String, ByVal AssignedProviderName As String) As String()
         AssignedProvider = AssignedProviderName
         AssignedProviderCode = GetPhysicianCode(AssignedProviderName)
-        RadioButtonDx.Checked = True
+        'RadioButtonDx.Checked = True
         aRet = dRet
         ChartNumber = dRet(1)
         Me.Show()
-        'Me.TabControl1.SelectedIndex = 1
+        Me.TabControl1.SelectedIndex = 0
     End Function
 
     Public Function GetPhysicianCode(Name As String) As String
@@ -265,7 +265,7 @@ Public Class Orders
                 Else
                     radMyDx.Checked = True
                 End If
-                TabControl1.SelectedTab = ProcedureTab
+                TabControl1.SelectedTab = DxTestsTab
 
             End If
         Catch ex As System.Exception
@@ -550,12 +550,12 @@ Public Class Orders
                 ElseIf TextBoxDx2.Text = "" Then
                     TextBoxDx2.Text = DataGridViewPr.SelectedRows(0).Cells(0).Value & ""
                     Dx2DescriptionTextBox.Text = DataGridViewPr.SelectedRows(0).Cells("Description").Value & ""
-                ElseIf TextBoxDx3.Text = "" Then
-                    TextBoxDx3.Text = DataGridViewPr.SelectedRows(0).Cells(0).Value & ""
-                    Dx3DescriptionTextBox.Text = DataGridViewPr.SelectedRows(0).Cells("Description").Value & ""
-                ElseIf TextBoxDx4.Text = "" Then
-                    TextBoxDx4.Text = DataGridViewPr.SelectedRows(0).Cells(0).Value & ""
-                    Dx4DescriptionTextBox.Text = DataGridViewPr.SelectedRows(0).Cells("Description").Value & ""
+                    'ElseIf TextBoxDx3.Text = "" Then
+                    '    TextBoxDx3.Text = DataGridViewPr.SelectedRows(0).Cells(0).Value & ""
+                    '    Dx3DescriptionTextBox.Text = DataGridViewPr.SelectedRows(0).Cells("Description").Value & ""
+                    'ElseIf TextBoxDx4.Text = "" Then
+                    '    TextBoxDx4.Text = DataGridViewPr.SelectedRows(0).Cells(0).Value & ""
+                    '    Dx4DescriptionTextBox.Text = DataGridViewPr.SelectedRows(0).Cells("Description").Value & ""
                 Else
                     If Dx5DescriptionTextBox.Text = "" Then
                         Dx5DescriptionTextBox.Text = Trim(DataGridViewPr.SelectedRows(0).Cells(0).Value) & ControlChars.Tab & DataGridViewPr.SelectedRows(0).Cells("Description").Value
@@ -725,7 +725,7 @@ Public Class Orders
                     radMyDx.Checked = True
                 End If
 
-                TabControl1.SelectedTab = ProcedureTab
+                TabControl1.SelectedTab = DxTestsTab
 
             End If
         Catch ex As System.Exception
@@ -769,7 +769,7 @@ Public Class Orders
                     radMyDx.Checked = True
                 End If
 
-                TabControl1.SelectedTab = ProcedureTab
+                TabControl1.SelectedTab = DxTestsTab
             End If
         Catch ex As System.Exception
             System.Windows.Forms.MessageBox.Show(ex.Message)
@@ -805,7 +805,7 @@ Public Class Orders
                 Else
                     radMyDx.Checked = True
                 End If
-                TabControl1.SelectedTab = ProcedureTab
+                TabControl1.SelectedTab = DxTestsTab
 
             End If
         Catch ex As System.Exception
@@ -1066,7 +1066,7 @@ Public Class Orders
 
 
 
-        If TabControl1.SelectedTab.Text = "Dx" Then
+        If TabControl1.SelectedTab.Text = "Dx / Pro / Notes" Then
             'TabControl3.SelectedTab = DxPrTestsPickTab
             RadioButtonPr.Checked = False
             RadioButtonLT.Checked = False
@@ -1074,23 +1074,17 @@ Public Class Orders
             RadioButtonTestImaging.Checked = False
             RadioButtonDx.Checked = True
 
-            DataGridViewPr.DataSource = Nothing
-            'If globalTemplate <> "" Then
-            '    radTemplateDX.Checked = True
-            '    LoadTemplateSpecificDxPrTests()
-            'Else
-            '    LoadMyList()
-            'End If
+            'DataGridViewPr.DataSource = Nothing
+            If globalTemplate <> "" Then
+                radTemplateDX.Checked = True
+                LoadTemplateSpecificDxPrTests()
+            Else
+                LoadMyList()
+            End If
         End If
 
-        If TabControl1.SelectedTab.Text = "Pro" Then
-            'TabControl3.SelectedTab = DxPrTestsPickTab
-            RadioButtonDx.Checked = False
-            RadioButtonPr.Checked = True
-            DataGridViewPr.DataSource = Nothing
-        End If
 
-        If TabControl1.SelectedTab.Text = "CC HPI ROS" Then
+        If TabControl1.SelectedTab.Text = "CC / HPI / ROS / PE" Then
             'TabControl3.SelectedTab = DxPrTestsPickTab
             DataGridViewPr.DataSource = Nothing
         End If
@@ -1193,10 +1187,10 @@ Public Class Orders
                 Dx1DescriptionTextBox.Text = reader("Dx1Description").ToString()
                 TextBoxDx2.Text = reader("Dx2").ToString()
                 Dx2DescriptionTextBox.Text = reader("Dx2Description").ToString()
-                TextBoxDx3.Text = reader("Dx3").ToString()
-                Dx3DescriptionTextBox.Text = reader("Dx3Description").ToString()
-                TextBoxDx4.Text = reader("Dx4").ToString()
-                Dx4DescriptionTextBox.Text = reader("Dx4Description").ToString()
+                'TextBoxDx3.Text = reader("Dx3").ToString()
+                'Dx3DescriptionTextBox.Text = reader("Dx3Description").ToString()
+                'TextBoxDx4.Text = reader("Dx4").ToString()
+                'Dx4DescriptionTextBox.Text = reader("Dx4Description").ToString()
                 Dx5DescriptionTextBox.Text = reader("Dx5Description").ToString()
 
                 NotesTestBox.Text = reader("Notes").ToString()
@@ -1209,6 +1203,7 @@ Public Class Orders
                 ChronicConditionsTextBox.Text = reader("ChronicConditions").ToString()
                 txtHPI.Text = reader("HPI").ToString()
                 ReviewOfSystemsTextBox.Text = reader("ReviewOfSystems").ToString()
+                PhysicalExamTextBox.Text = reader("PhysicalExam").ToString()
 
             End If
             reader.Close()
@@ -1234,6 +1229,7 @@ Public Class Orders
                                     Dx3Description = @Dx3Description,Dx4 = @Dx4, Dx4Description = @Dx4Description,Dx5Description = @Dx5Description,
                                    Notes =@Notes, FollowUp = @FollowUp, RefferedTo = @RefferedTo, Diet = @Diet, Counselling = @Counselling,
                                     ChiefComplaint = @ChiefComplaint,ChronicConditions =@ChronicConditions, HPI = @HPI, ReviewOfSystems = @ReviewOfSystems 
+                                    , PhysicalExam = @PhysicalExam
                                    WHERE CaseNumber = @CaseNumber"
             Dim command As New SqlCommand(query, connection)
 
@@ -1242,11 +1238,11 @@ Public Class Orders
             command.Parameters.AddWithValue("@Dx1Description", Dx1DescriptionTextBox.Text)
             command.Parameters.AddWithValue("@Dx2", TextBoxDx2.Text)
             command.Parameters.AddWithValue("@Dx2Description", Dx2DescriptionTextBox.Text)
-            command.Parameters.AddWithValue("@Dx3", TextBoxDx3.Text)
-            command.Parameters.AddWithValue("@Dx3Description", Dx3DescriptionTextBox.Text)
-            command.Parameters.AddWithValue("@Dx4", TextBoxDx4.Text)
-            command.Parameters.AddWithValue("@Dx4Description", Dx4DescriptionTextBox.Text)
-            command.Parameters.AddWithValue("@Dx5Description", Dx5DescriptionTextBox.Text)
+            command.Parameters.AddWithValue("@Dx3", "")
+            command.Parameters.AddWithValue("@Dx3Description", "")
+            command.Parameters.AddWithValue("@Dx4", "")
+            command.Parameters.AddWithValue("@Dx4Description", "")
+            command.Parameters.AddWithValue("@Dx5Description", "")
             command.Parameters.AddWithValue("@Notes", NotesTestBox.Text)
             command.Parameters.AddWithValue("@FollowUp", TextBoxfollowUp.Text)
 
@@ -1259,6 +1255,7 @@ Public Class Orders
             command.Parameters.AddWithValue("@ChronicConditions", ChronicConditionsTextBox.Text)
             command.Parameters.AddWithValue("@HPI", txtHPI.Text)
             command.Parameters.AddWithValue("@ReviewOfSystems", ReviewOfSystemsTextBox.Text)
+            command.Parameters.AddWithValue("@PhysicalExam", PhysicalExamTextBox.Text)
 
             command.Parameters.AddWithValue("@CaseNumber", caseNumber)
 
@@ -1368,10 +1365,8 @@ Public Class Orders
         End If
     End Sub
     Private Sub TextBox_TextChanged(sender As Object, e As EventArgs) Handles TextBoxDx1.TextChanged, Dx1DescriptionTextBox.TextChanged,
-        TextBoxDx2.TextChanged, Dx2DescriptionTextBox.TextChanged, TextBoxDx3.TextChanged, Dx3DescriptionTextBox.TextChanged, TextBoxDx4.TextChanged,
-        Dx4DescriptionTextBox.TextChanged, Dx5DescriptionTextBox.TextChanged, NotesTestBox.TextChanged, TextBoxfollowUp.TextChanged,
-        TextBoxReferedTo.TextChanged, TextBoxDiet.TextChanged, TextBoxCounselingEducation.TextChanged, ChiefComplaintTextBox.TextChanged,
-        ChronicConditionsTextBox.TextChanged, txtHPI.TextChanged, ReviewOfSystemsTextBox.TextChanged
+        TextBoxDx2.TextChanged, Dx2DescriptionTextBox.TextChanged, Dx5DescriptionTextBox.TextChanged, ChiefComplaintTextBox.TextChanged,
+        ChronicConditionsTextBox.TextChanged, txtHPI.TextChanged, ReviewOfSystemsTextBox.TextChanged, PhysicalExamTextBox.TextChanged
 
         If Not isLoading Then
             isDataChanged = True
