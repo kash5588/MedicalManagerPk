@@ -253,6 +253,12 @@
     <Compile Include="ImmunizationMaintenance.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="IncomeStatement.Designer.vb">
+      <DependentUpon>IncomeStatement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IncomeStatement.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MMDRUGMaintenance.Designer.vb">
       <DependentUpon>MMDRUGMaintenance.vb</DependentUpon>
     </Compile>
@@ -758,6 +764,9 @@
       <SubType>Designer</SubType>
       <DependentUpon>ImmunizationMaintenance.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IncomeStatement.resx">
+      <DependentUpon>IncomeStatement.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MMDRUGMaintenance.resx">
       <SubType>Designer</SubType>
       <DependentUpon>MMDRUGMaintenance.vb</DependentUpon>
@@ -962,6 +971,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\IncomeStatement.rdlc" />
     <EmbeddedResource Include="Reports\SuperBill.rdlc" />
     <EmbeddedResource Include="Reports\TokenSlip.rdlc" />
     <EmbeddedResource Include="Reports\VisitReport2.rdlc" />

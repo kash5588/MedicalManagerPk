@@ -33,9 +33,9 @@ Partial Class AddExpenses
         Dim PaidToLabel As System.Windows.Forms.Label
         Dim RecieptNoLabel As System.Windows.Forms.Label
         Dim label4 As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AddExpenses))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AddExpenses))
         Me.panel3 = New System.Windows.Forms.Panel()
         Me.TBFind = New System.Windows.Forms.TextBox()
         Me.dateTo = New System.Windows.Forms.DateTimePicker()
@@ -43,6 +43,15 @@ Partial Class AddExpenses
         Me.buttonSearch = New System.Windows.Forms.Button()
         Me.panel2 = New System.Windows.Forms.Panel()
         Me.ExpensesDetailDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Amount = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ExpensesDetailBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1()
         Me.panel1 = New System.Windows.Forms.Panel()
@@ -71,15 +80,6 @@ Partial Class AddExpenses
         Me.LBTotalAmount = New System.Windows.Forms.Label()
         Me.labelUser = New System.Windows.Forms.Label()
         Me.labelCompany = New System.Windows.Forms.Label()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Amount = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         label5 = New System.Windows.Forms.Label()
         label3 = New System.Windows.Forms.Label()
         label2 = New System.Windows.Forms.Label()
@@ -220,10 +220,10 @@ Partial Class AddExpenses
         Me.panel3.Controls.Add(Me.buttonSearch)
         Me.panel3.Controls.Add(label3)
         Me.panel3.Controls.Add(label2)
-        Me.panel3.Location = New System.Drawing.Point(329, 36)
+        Me.panel3.Location = New System.Drawing.Point(303, 36)
         Me.panel3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.panel3.Name = "panel3"
-        Me.panel3.Size = New System.Drawing.Size(903, 46)
+        Me.panel3.Size = New System.Drawing.Size(929, 46)
         Me.panel3.TabIndex = 6
         '
         'TBFind
@@ -271,10 +271,10 @@ Partial Class AddExpenses
         'panel2
         '
         Me.panel2.Controls.Add(Me.ExpensesDetailDataGridView)
-        Me.panel2.Location = New System.Drawing.Point(329, 84)
+        Me.panel2.Location = New System.Drawing.Point(303, 84)
         Me.panel2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.panel2.Name = "panel2"
-        Me.panel2.Size = New System.Drawing.Size(903, 600)
+        Me.panel2.Size = New System.Drawing.Size(929, 600)
         Me.panel2.TabIndex = 5
         '
         'ExpensesDetailDataGridView
@@ -291,8 +291,79 @@ Partial Class AddExpenses
         Me.ExpensesDetailDataGridView.Name = "ExpensesDetailDataGridView"
         Me.ExpensesDetailDataGridView.ReadOnly = True
         Me.ExpensesDetailDataGridView.RowHeadersVisible = False
-        Me.ExpensesDetailDataGridView.Size = New System.Drawing.Size(903, 600)
+        Me.ExpensesDetailDataGridView.Size = New System.Drawing.Size(929, 600)
         Me.ExpensesDetailDataGridView.TabIndex = 0
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Id"
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Id"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Width = 60
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "ExpanseType"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "ExpanseType"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "PaidTo"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "PaidTo"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
+        'Amount
+        '
+        Me.Amount.DataPropertyName = "Amount"
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Amount.DefaultCellStyle = DataGridViewCellStyle2
+        Me.Amount.HeaderText = "Amount"
+        Me.Amount.Name = "Amount"
+        Me.Amount.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "Description"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Description"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        Me.DataGridViewTextBoxColumn7.Width = 150
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "RecieptNo"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "RecieptNo"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "ExpanseDate"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Date"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        Me.DataGridViewTextBoxColumn4.Width = 80
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "PracticeName"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "PracticeName"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        Me.DataGridViewTextBoxColumn8.Width = 120
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "UserName"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "UserName"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
         '
         'ExpensesDetailBindingSource
         '
@@ -576,77 +647,6 @@ Partial Class AddExpenses
         Me.labelCompany.Size = New System.Drawing.Size(60, 15)
         Me.labelCompany.TabIndex = 11
         Me.labelCompany.Text = "labelUser"
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Id"
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Id"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Width = 60
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "ExpanseType"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "ExpanseType"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "PaidTo"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "PaidTo"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        '
-        'Amount
-        '
-        Me.Amount.DataPropertyName = "Amount"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Amount.DefaultCellStyle = DataGridViewCellStyle2
-        Me.Amount.HeaderText = "Amount"
-        Me.Amount.Name = "Amount"
-        Me.Amount.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "Description"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "Description"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        Me.DataGridViewTextBoxColumn7.Width = 150
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "RecieptNo"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "RecieptNo"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "ExpanseDate"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Date"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        Me.DataGridViewTextBoxColumn4.Width = 80
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "PracticeName"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "PracticeName"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.ReadOnly = True
-        Me.DataGridViewTextBoxColumn8.Width = 120
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.DataPropertyName = "UserName"
-        Me.DataGridViewTextBoxColumn9.HeaderText = "UserName"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.ReadOnly = True
         '
         'AddExpenses
         '

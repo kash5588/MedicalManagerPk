@@ -268,6 +268,7 @@ Partial Class MDIParent
         Me.MMComboTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMComboTableAdapter()
         Me.MMComboBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.IncomeStatementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.MultiAppointmentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMDataDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ACalendardayBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -861,7 +862,7 @@ Partial Class MDIParent
         '
         'BillingToolStripMenuItem
         '
-        Me.BillingToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExportToolStripMenuItem, Me.ExportToHL7ToolStripMenuItem, Me.TransactionsToolStripMenuItem, Me.BillingReportToolStripMenuItem1, Me.ARCommentsToolStripMenuItem, Me.MultiBillingReportToolStripMenuItem, Me.SuperBillToolStripMenuItem, Me.TransactionsDetailToolStripMenuItem})
+        Me.BillingToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IncomeStatementToolStripMenuItem, Me.ExportToolStripMenuItem, Me.ExportToHL7ToolStripMenuItem, Me.TransactionsToolStripMenuItem, Me.BillingReportToolStripMenuItem1, Me.ARCommentsToolStripMenuItem, Me.MultiBillingReportToolStripMenuItem, Me.SuperBillToolStripMenuItem, Me.TransactionsDetailToolStripMenuItem})
         Me.BillingToolStripMenuItem.Name = "BillingToolStripMenuItem"
         Me.BillingToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
         Me.BillingToolStripMenuItem.Text = "Billing"
@@ -869,51 +870,51 @@ Partial Class MDIParent
         'ExportToolStripMenuItem
         '
         Me.ExportToolStripMenuItem.Name = "ExportToolStripMenuItem"
-        Me.ExportToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.ExportToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ExportToolStripMenuItem.Text = "Export"
         '
         'ExportToHL7ToolStripMenuItem
         '
         Me.ExportToHL7ToolStripMenuItem.Name = "ExportToHL7ToolStripMenuItem"
-        Me.ExportToHL7ToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.ExportToHL7ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ExportToHL7ToolStripMenuItem.Text = "Export to HL7"
         Me.ExportToHL7ToolStripMenuItem.Visible = False
         '
         'TransactionsToolStripMenuItem
         '
         Me.TransactionsToolStripMenuItem.Name = "TransactionsToolStripMenuItem"
-        Me.TransactionsToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.TransactionsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.TransactionsToolStripMenuItem.Text = "Transactions"
         Me.TransactionsToolStripMenuItem.Visible = False
         '
         'BillingReportToolStripMenuItem1
         '
         Me.BillingReportToolStripMenuItem1.Name = "BillingReportToolStripMenuItem1"
-        Me.BillingReportToolStripMenuItem1.Size = New System.Drawing.Size(176, 22)
+        Me.BillingReportToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.BillingReportToolStripMenuItem1.Text = "Billing Report"
         '
         'ARCommentsToolStripMenuItem
         '
         Me.ARCommentsToolStripMenuItem.Name = "ARCommentsToolStripMenuItem"
-        Me.ARCommentsToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.ARCommentsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ARCommentsToolStripMenuItem.Text = "AR Comments"
         '
         'MultiBillingReportToolStripMenuItem
         '
         Me.MultiBillingReportToolStripMenuItem.Name = "MultiBillingReportToolStripMenuItem"
-        Me.MultiBillingReportToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.MultiBillingReportToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.MultiBillingReportToolStripMenuItem.Text = "Multi Billing Report"
         '
         'SuperBillToolStripMenuItem
         '
         Me.SuperBillToolStripMenuItem.Name = "SuperBillToolStripMenuItem"
-        Me.SuperBillToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.SuperBillToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SuperBillToolStripMenuItem.Text = "SuperBill"
         '
         'TransactionsDetailToolStripMenuItem
         '
         Me.TransactionsDetailToolStripMenuItem.Name = "TransactionsDetailToolStripMenuItem"
-        Me.TransactionsDetailToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.TransactionsDetailToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.TransactionsDetailToolStripMenuItem.Text = "Transactions Detail"
         '
         'WindowsMenu
@@ -2248,6 +2249,12 @@ Partial Class MDIParent
         'Timer1
         '
         '
+        'IncomeStatementToolStripMenuItem
+        '
+        Me.IncomeStatementToolStripMenuItem.Name = "IncomeStatementToolStripMenuItem"
+        Me.IncomeStatementToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.IncomeStatementToolStripMenuItem.Text = "IncomeStatement"
+        '
         'MDIParent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2540,4 +2547,5 @@ Partial Class MDIParent
     Private WithEvents PBoxPatient As PictureBox
     Friend WithEvents BtnVisitList As Button
     Friend WithEvents BtnExpenses As Button
+    Friend WithEvents IncomeStatementToolStripMenuItem As ToolStripMenuItem
 End Class

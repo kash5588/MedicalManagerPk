@@ -2269,4 +2269,25 @@ Public Class MDIParent
             System.Windows.Forms.MessageBox.Show(ex.Message)
         End Try
     End Sub
+
+    Private Sub IncomeStatementToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IncomeStatementToolStripMenuItem.Click
+        Dim pieces() As String
+        Dim IndexOf As Integer
+        Dim sAction As String
+        Try
+            sAction = "IncomeStatement"
+            pieces = Permissions.Split(",")
+            IndexOf = Array.IndexOf(pieces, sAction)
+            If IndexOf <> -1 Then
+            Else
+                MessageBox.Show("User not authorized to Income Statement", "Authorization Denied", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Exit Sub
+            End If
+
+            IncomeStatement.Show()
+
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+    End Sub
 End Class
