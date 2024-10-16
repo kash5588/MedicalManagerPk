@@ -11,7 +11,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSetIncome">
+    <DataSet Name="DataSetIncomeDetail">
       <Query>
         <DataSourceName>MMDataDataSet1</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -95,7 +95,7 @@
         <rd:TableAdapterName>MMCHDxRxLtMtTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
-    <DataSet Name="DataSetExpenses">
+    <DataSet Name="DataSetExpensesDetail">
       <Query>
         <DataSourceName>MMDataDataSet1</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -147,78 +147,6 @@
         <rd:TableAdapterName>ExpensesDetailTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
-    <DataSet Name="DataSetSystem">
-      <Query>
-        <DataSourceName>MMDataDataSet1</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="PracticeName">
-          <DataField>PracticeName</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Street1">
-          <DataField>Street1</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Street2">
-          <DataField>Street2</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="City">
-          <DataField>City</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="State">
-          <DataField>State</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="ZipCode">
-          <DataField>ZipCode</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Phone">
-          <DataField>Phone</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Extension">
-          <DataField>Extension</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Fax">
-          <DataField>Fax</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PracticeType">
-          <DataField>PracticeType</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="FederalTaxID">
-          <DataField>FederalTaxID</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Extra1">
-          <DataField>Extra1</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Extra2">
-          <DataField>Extra2</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="ID">
-          <DataField>ID</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>MMDataDataSet1</rd:DataSetName>
-        <rd:SchemaPath>G:\KashifProject\MadicalManager\MedicalManagerPk\MedicalManager2019\MedicalManager\DAL\MMDataDataSet1.xsd</rd:SchemaPath>
-        <rd:TableName>MMPrectice</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>MMPrecticeTableAdapter</rd:TableAdapterName>
-      </rd:DataSetInfo>
-    </DataSet>
   </DataSets>
   <ReportSections>
     <ReportSection>
@@ -228,7 +156,7 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>1.75in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.29489in</Width>
@@ -243,7 +171,7 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox2">
+                        <Textbox Name="Textbox10">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -259,7 +187,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox2</rd:DefaultName>
+                          <rd:DefaultName>Textbox10</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -419,8 +347,10 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Amount.Value</Value>
-                                  <Style />
+                                  <Value>=CInt(Fields!Amount.Value)</Value>
+                                  <Style>
+                                    <Format>f0</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -449,7 +379,7 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox11">
+                        <Textbox Name="Textbox21">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -467,7 +397,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox11</rd:DefaultName>
+                          <rd:DefaultName>Textbox21</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -517,14 +447,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox45">
+                        <Textbox Name="Textbox3">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Amount.Value)</Value>
+                                  <Value>=Sum(CInt(Fields!Amount.Value))</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -535,7 +465,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox45</rd:DefaultName>
+                          <rd:DefaultName>Textbox3</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -635,11 +565,9 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Amount.Value, "DataSetIncome")</Value>
+                                  <Value>=Sum(CInt(Fields!Amount.Value), "DataSetIncomeDetail")</Value>
                                   <Style>
-                                    <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>Red</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -654,13 +582,13 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>LightGrey</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -678,7 +606,7 @@
               <TablixMembers>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>1.91345in</Size>
+                    <Size>1.16345in</Size>
                     <CellContents>
                       <Textbox Name="Textbox22">
                         <CanGrow>true</CanGrow>
@@ -730,7 +658,7 @@
                   <TablixMembers>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>1.91345in</Size>
+                        <Size>1.16345in</Size>
                         <CellContents>
                           <Textbox Name="Type">
                             <CanGrow>true</CanGrow>
@@ -777,7 +705,7 @@
                 </TablixMember>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>1.91345in</Size>
+                    <Size>1.16345in</Size>
                     <CellContents>
                       <Textbox Name="Textbox48">
                         <CanGrow>true</CanGrow>
@@ -817,7 +745,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <RepeatColumnHeaders>true</RepeatColumnHeaders>
-            <DataSetName>DataSetIncome</DataSetName>
+            <DataSetName>DataSetIncomeDetail</DataSetName>
             <SortExpressions>
               <SortExpression>
                 <Value>=Fields!Type.Value</Value>
@@ -949,7 +877,7 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox1">
+                        <Textbox Name="Textbox9">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -965,7 +893,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <rd:DefaultName>Textbox9</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1300,18 +1228,16 @@
                     <TablixCell />
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox51">
+                        <Textbox Name="Textbox4">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Constant" />
+                                  <Value>=Sum(CInt(Fields!Amount.Value), "DataSetExpensesDetail")</Value>
                                   <Style>
-                                    <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>Red</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1320,13 +1246,12 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox49</rd:DefaultName>
+                          <rd:DefaultName>Textbox4</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>LightGrey</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1387,11 +1312,11 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Constant" />
+                                  <Value>=Sum(CInt(Fields!Amount.Value), "DataSetIncomeDetail") - Sum(Fields!Amount.Value, "DataSetExpensesDetail")</Value>
                                   <Style>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>DarkGreen</Color>
+                                    <Color>=IIf(Sum(CInt(Fields!Amount.Value), "DataSetIncomeDetail") - Sum(Fields!Amount.Value, "DataSetExpensesDetail") &lt; 0, "Red", "Green")</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1505,7 +1430,7 @@
                   </TablixMembers>
                 </TablixMember>
                 <TablixMember>
-                  <Group Name="ExpanseType1">
+                  <Group Name="ExpanseType">
                     <GroupExpressions>
                       <GroupExpression>=Fields!ExpanseType.Value</GroupExpression>
                     </GroupExpressions>
@@ -1642,7 +1567,7 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>DataSetExpenses</DataSetName>
+            <DataSetName>DataSetExpensesDetail</DataSetName>
             <Top>2.63834in</Top>
             <Left>0.84424in</Left>
             <Height>1.45835in</Height>
@@ -1661,7 +1586,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!ProjectName.Value</Value>
+                    <Value>=Parameters!PracticeName.Value</Value>
                     <Style>
                       <FontSize>16pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -1696,11 +1621,11 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value EvaluationMode="Constant" />
+                    <Value>=Sum(CInt(Fields!Amount.Value), "DataSetIncomeDetail") - Sum(Fields!Amount.Value, "DataSetExpensesDetail")</Value>
                     <Style>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
-                      <Color>Red</Color>
+                      <Color>=IIf(Sum(CInt(Fields!Amount.Value), "DataSetIncomeDetail") - Sum(Fields!Amount.Value, "DataSetExpensesDetail") &lt; 0, "Red", "Green")</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1891,7 +1816,7 @@
       <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="ProjectName">
+    <ReportParameter Name="PracticeName">
       <DataType>String</DataType>
       <Nullable>true</Nullable>
       <AllowBlank>true</AllowBlank>
@@ -1916,7 +1841,7 @@
         <CellDefinition>
           <ColumnIndex>3</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>ProjectName</ParameterName>
+          <ParameterName>PracticeName</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

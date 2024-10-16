@@ -1,5 +1,6 @@
 ﻿Imports Microsoft.Reporting.WinForms
 
+
 Public Class IncomeStatement
     Private Sub IncomeStatement_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'MMDataDataSet1.MMPrectice' table. You can move, or remove it, as needed.
@@ -14,32 +15,44 @@ Public Class IncomeStatement
         Try
             Cursor.Current = Cursors.WaitCursor
             Me.MMPrecticeTableAdapter.Fill(Me.MMDataDataSet1.MMPrectice)
-            Dim Charity As String = ""
-
-
             Me.ExpensesDetailTableAdapter.FillByExpenseDate(Me.MMDataDataSet1.ExpensesDetail, CCdateFrom.Value.ToString(), CCdateTo.Value.ToString())
             Me.MMCHDxRxLtMtTableAdapter.FillByIncomeStAndDateFilter(Me.MMDataDataSet1.MMCHDxRxLtMt, CCdateFrom.Value.ToString(), CCdateTo.Value.ToString())
 
-
+            ' Set report parameters
             Dim myDateTimeObject As DateTime = Convert.ToDateTime(CCdateFrom.Text)
             Dim DateFrom As String = myDateTimeObject.ToString("dd-MMM-yyyy")
             Dim myDateTimeObject1 As DateTime = Convert.ToDateTime(CCdateTo.Text)
             Dim DateTo As String = myDateTimeObject1.ToString("dd-MMM-yyyy")
-
-            Dim parms As ReportParameter() = New ReportParameter(3) {}
+            Dim parms As ReportParameter() = New ReportParameter(2) {}
             parms(0) = New ReportParameter("DateFrom", DateFrom)
-            Me.reportViewer1.LocalReport.SetParameters(parms(0))
             parms(1) = New ReportParameter("DateTo", DateTo)
-            Me.reportViewer1.LocalReport.SetParameters(parms(1))
+            parms(2) = New ReportParameter("PracticeName", CommonFunction.GetGeneralInfo("PracticeName"))
 
-            parms(2) = New ReportParameter(CommonFunction.GetGeneralInfo("PracticeName"))
-            Me.reportViewer1.LocalReport.SetParameters(parms(2))
+            reportViewer1.LocalReport.SetParameters(parms)
 
-            Me.reportViewer1.RefreshReport()
+            ' Set data sources
+            reportViewer1.LocalReport.DataSources.Clear()
+            Dim incomeDetailDataSource As New ReportDataSource
+            Dim expensesDetailDataSource As New ReportDataSource
+
+            incomeDetailDataSource.Name = "DataSetIncomeDetail"
+            incomeDetailDataSource.Value = Me.MMCHDxRxLtMtBindingSource
+            expensesDetailDataSource.Name = "DataSetExpensesDetail"
+            expensesDetailDataSource.Value = Me.ExpensesDetailBindingSource
+
+
+            reportViewer1.LocalReport.DataSources.Add(incomeDetailDataSource)
+            reportViewer1.LocalReport.DataSources.Add(expensesDetailDataSource)
+
+            ' Refresh the report
+            reportViewer1.RefreshReport()
 
         Catch ex As Exception
             MessageBox.Show(ex.ToString(), "Error")
         End Try
+
+
+
     End Sub
 
 

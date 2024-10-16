@@ -1629,7 +1629,7 @@ WHERE        (CaseNumber = @Param1)</CommandText>
               <DbSource ConnectionRef="MMDataConnectionString2 (MySettings)" DbObjectName="MMData.dbo.MMCHDxRxLtMt" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByIncomeStAndDateFilter" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy2" GeneratorSourceName="FillByIncomeStAndDateFilter" GetMethodModifier="Public" GetMethodName="GetDataBy2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillByIncomeStAndDateFilter">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT     ID, ChartNumber, Date, Type, Code, Description, PrDx, UserCode, UserID, TimeStamp, PostedToBilling, CaseNumber, InHouse, InHouseBilling, ChartEntry, Amount, 
+                    <CommandText>SELECT     ID, ChartNumber, Date, Type, Code, Description, PrDx,  UserID, TimeStamp, PostedToBilling, CaseNumber, InHouse, InHouseBilling, ChartEntry, Amount, 
                       Units
 FROM         MMCHDxRxLtMt
 WHERE        (Type = N'PR') AND (Date BETWEEN @DateFrom AND @DateTo)</CommandText>
@@ -12171,48 +12171,48 @@ SELECT Id, ExpanseType, PaidTo, ExpanseDate, RecieptNo, Amount, Description, Pra
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ExpensesDetail" msprop:Generator_RowClassName="ExpensesDetailRow" msprop:Generator_RowEvHandlerName="ExpensesDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="ExpensesDetailRowDeleted" msprop:Generator_RowDeletingName="ExpensesDetailRowDeleting" msprop:Generator_RowEvArgName="ExpensesDetailRowChangeEvent" msprop:Generator_TablePropName="ExpensesDetail" msprop:Generator_RowChangedName="ExpensesDetailRowChanged" msprop:Generator_UserTableName="ExpensesDetail" msprop:Generator_RowChangingName="ExpensesDetailRowChanging" msprop:Generator_TableClassName="ExpensesDetailDataTable" msprop:Generator_TableVarName="tableExpensesDetail">
+        <xs:element name="ExpensesDetail" msprop:Generator_RowEvHandlerName="ExpensesDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="ExpensesDetailRowDeleted" msprop:Generator_RowDeletingName="ExpensesDetailRowDeleting" msprop:Generator_RowEvArgName="ExpensesDetailRowChangeEvent" msprop:Generator_TablePropName="ExpensesDetail" msprop:Generator_RowChangedName="ExpensesDetailRowChanged" msprop:Generator_UserTableName="ExpensesDetail" msprop:Generator_RowChangingName="ExpensesDetailRowChanging" msprop:Generator_RowClassName="ExpensesDetailRow" msprop:Generator_TableClassName="ExpensesDetailDataTable" msprop:Generator_TableVarName="tableExpensesDetail">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" type="xs:int" />
-              <xs:element name="ExpanseType" msprop:Generator_UserColumnName="ExpanseType" msprop:Generator_ColumnPropNameInTable="ExpanseTypeColumn" msprop:Generator_ColumnPropNameInRow="ExpanseType" msprop:Generator_ColumnVarNameInTable="columnExpanseType" minOccurs="0">
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" type="xs:int" />
+              <xs:element name="ExpanseType" msprop:Generator_ColumnPropNameInTable="ExpanseTypeColumn" msprop:Generator_ColumnPropNameInRow="ExpanseType" msprop:Generator_UserColumnName="ExpanseType" msprop:Generator_ColumnVarNameInTable="columnExpanseType" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="PaidTo" msprop:Generator_UserColumnName="PaidTo" msprop:Generator_ColumnPropNameInTable="PaidToColumn" msprop:Generator_ColumnPropNameInRow="PaidTo" msprop:Generator_ColumnVarNameInTable="columnPaidTo" minOccurs="0">
+              <xs:element name="PaidTo" msprop:Generator_ColumnPropNameInTable="PaidToColumn" msprop:Generator_ColumnPropNameInRow="PaidTo" msprop:Generator_UserColumnName="PaidTo" msprop:Generator_ColumnVarNameInTable="columnPaidTo" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ExpanseDate" msprop:Generator_UserColumnName="ExpanseDate" msprop:Generator_ColumnPropNameInTable="ExpanseDateColumn" msprop:Generator_ColumnPropNameInRow="ExpanseDate" msprop:Generator_ColumnVarNameInTable="columnExpanseDate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="RecieptNo" msprop:Generator_UserColumnName="RecieptNo" msprop:Generator_ColumnPropNameInTable="RecieptNoColumn" msprop:Generator_ColumnPropNameInRow="RecieptNo" msprop:Generator_ColumnVarNameInTable="columnRecieptNo" minOccurs="0">
+              <xs:element name="ExpanseDate" msprop:Generator_ColumnPropNameInTable="ExpanseDateColumn" msprop:Generator_ColumnPropNameInRow="ExpanseDate" msprop:Generator_UserColumnName="ExpanseDate" msprop:Generator_ColumnVarNameInTable="columnExpanseDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RecieptNo" msprop:Generator_ColumnPropNameInTable="RecieptNoColumn" msprop:Generator_ColumnPropNameInRow="RecieptNo" msprop:Generator_UserColumnName="RecieptNo" msprop:Generator_ColumnVarNameInTable="columnRecieptNo" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Amount" msprop:Generator_UserColumnName="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" type="xs:double" minOccurs="0" />
-              <xs:element name="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" minOccurs="0">
+              <xs:element name="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_UserColumnName="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" type="xs:double" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="PracticeName" msprop:Generator_UserColumnName="PracticeName" msprop:Generator_ColumnPropNameInTable="PracticeNameColumn" msprop:Generator_ColumnPropNameInRow="PracticeName" msprop:Generator_ColumnVarNameInTable="columnPracticeName" minOccurs="0">
+              <xs:element name="PracticeName" msprop:Generator_ColumnPropNameInTable="PracticeNameColumn" msprop:Generator_ColumnPropNameInRow="PracticeName" msprop:Generator_UserColumnName="PracticeName" msprop:Generator_ColumnVarNameInTable="columnPracticeName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="80" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="UserName" msprop:Generator_UserColumnName="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" minOccurs="0">
+              <xs:element name="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_UserColumnName="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />

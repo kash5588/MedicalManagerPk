@@ -26,11 +26,11 @@ Partial Class IncomeStatement
         Dim label2 As System.Windows.Forms.Label
         Dim label3 As System.Windows.Forms.Label
         Me.panel1 = New System.Windows.Forms.Panel()
-        Me.ExpensesDetailBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1()
         Me.CCdateTo = New System.Windows.Forms.DateTimePicker()
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.CCdateFrom = New System.Windows.Forms.DateTimePicker()
+        Me.ExpensesDetailBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1()
         Me.reportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.MMPrecticeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MMPrecticeTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMPrecticeTableAdapter()
@@ -81,16 +81,6 @@ Partial Class IncomeStatement
         Me.panel1.Size = New System.Drawing.Size(234, 606)
         Me.panel1.TabIndex = 5
         '
-        'ExpensesDetailBindingSource
-        '
-        Me.ExpensesDetailBindingSource.DataMember = "ExpensesDetail"
-        Me.ExpensesDetailBindingSource.DataSource = Me.MMDataDataSet1
-        '
-        'MMDataDataSet1
-        '
-        Me.MMDataDataSet1.DataSetName = "MMDataDataSet1"
-        Me.MMDataDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'CCdateTo
         '
         Me.CCdateTo.CustomFormat = "dd/MM/yyyy"
@@ -120,6 +110,16 @@ Partial Class IncomeStatement
         Me.CCdateFrom.Name = "CCdateFrom"
         Me.CCdateFrom.Size = New System.Drawing.Size(98, 22)
         Me.CCdateFrom.TabIndex = 14
+        '
+        'ExpensesDetailBindingSource
+        '
+        Me.ExpensesDetailBindingSource.DataMember = "ExpensesDetail"
+        Me.ExpensesDetailBindingSource.DataSource = Me.MMDataDataSet1
+        '
+        'MMDataDataSet1
+        '
+        Me.MMDataDataSet1.DataSetName = "MMDataDataSet1"
+        Me.MMDataDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'reportViewer1
         '
@@ -165,6 +165,7 @@ Partial Class IncomeStatement
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(5, 3, 5, 3)
         Me.Name = "IncomeStatement"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "IncomeStatement"
         Me.panel1.ResumeLayout(False)
         Me.panel1.PerformLayout()
