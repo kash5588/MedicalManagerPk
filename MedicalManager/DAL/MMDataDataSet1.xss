@@ -17,7 +17,7 @@
     <Shape ID="DesignTable:MMChartTestImaging" ZOrder="53" X="1885" Y="402" Height="258" Width="265" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="211" />
     <Shape ID="DesignTable:MMChartTestMedical" ZOrder="34" X="2368" Y="85" Height="258" Width="261" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="211" />
     <Shape ID="DesignTable:MMChartVisit" ZOrder="4" X="91" Y="1032" Height="343" Width="279" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
-    <Shape ID="DesignTable:MMCHDxRxLtMt" ZOrder="1" X="2721" Y="82" Height="362" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
+    <Shape ID="DesignTable:MMCHDxRxLtMt" ZOrder="1" X="2721" Y="82" Height="381" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
     <Shape ID="DesignTable:MMCHHealthHistoryShort" ZOrder="25" X="2552" Y="403" Height="292" Width="287" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="228" />
     <Shape ID="DesignTable:MMCHProcedure" ZOrder="52" X="2978" Y="410" Height="266" Width="236" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="198" />
     <Shape ID="DesignTable:MMCHRosAndGen" ZOrder="40" X="3031" Y="35" Height="343" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="228" />

@@ -802,7 +802,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Reports\Chart.rdlc" />
-    <EmbeddedResource Include="Reports\IStatementDoctor.rdlc" />
+    <EmbeddedResource Include="Reports\IStatDoctorWise.rdlc" />
     <EmbeddedResource Include="Reports\Letter.rdlc" />
     <EmbeddedResource Include="BillingReport.resx">
       <SubType>Designer</SubType>

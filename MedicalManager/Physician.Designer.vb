@@ -1,9 +1,9 @@
-<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Physician
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Physician
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim LastNameLabel As System.Windows.Forms.Label
@@ -58,9 +58,8 @@ Partial Class Physician
         Dim ChampusPINLabel As System.Windows.Forms.Label
         Dim StateLabel As System.Windows.Forms.Label
         Dim ZipCodeLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Physician))
         Dim CodeLabel As System.Windows.Forms.Label
-        Dim Label1 As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Physician))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.dgPhysician = New System.Windows.Forms.DataGridView()
@@ -105,6 +104,7 @@ Partial Class Physician
         Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.MaskedTextBox2 = New System.Windows.Forms.MaskedTextBox()
+        Me.CodeTextBox = New System.Windows.Forms.TextBox()
         Me.LastNameTextBox = New System.Windows.Forms.TextBox()
         Me.FirstNameTextBox = New System.Windows.Forms.TextBox()
         Me.MiddleInitialTextBox = New System.Windows.Forms.TextBox()
@@ -156,11 +156,6 @@ Partial Class Physician
         Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.MMPhysionBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.CodeTextBox = New System.Windows.Forms.TextBox()
-        Me.RBDoctor = New System.Windows.Forms.RadioButton()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.CBPhysicain = New System.Windows.Forms.ComboBox()
-        Me.RBHospital = New System.Windows.Forms.RadioButton()
         LastNameLabel = New System.Windows.Forms.Label()
         FirstNameLabel = New System.Windows.Forms.Label()
         MiddleInitialLabel = New System.Windows.Forms.Label()
@@ -197,7 +192,6 @@ Partial Class Physician
         StateLabel = New System.Windows.Forms.Label()
         ZipCodeLabel = New System.Windows.Forms.Label()
         CodeLabel = New System.Windows.Forms.Label()
-        Label1 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.dgPhysician, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -207,7 +201,6 @@ Partial Class Physician
         Me.TabPage3.SuspendLayout()
         CType(Me.MMPhysionBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MMPhysionBindingNavigator.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'LastNameLabel
@@ -535,6 +528,16 @@ Partial Class Physician
         ZipCodeLabel.TabIndex = 195
         ZipCodeLabel.Text = "Zip Code:"
         '
+        'CodeLabel
+        '
+        CodeLabel.AutoSize = True
+        CodeLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        CodeLabel.Location = New System.Drawing.Point(269, 55)
+        CodeLabel.Name = "CodeLabel"
+        CodeLabel.Size = New System.Drawing.Size(39, 15)
+        CodeLabel.TabIndex = 73
+        CodeLabel.Text = "Code:"
+        '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
@@ -848,9 +851,6 @@ Partial Class Physician
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.RBDoctor)
-        Me.TabPage2.Controls.Add(Me.GroupBox1)
-        Me.TabPage2.Controls.Add(Me.RBHospital)
         Me.TabPage2.Controls.Add(Me.MaskedTextBox2)
         Me.TabPage2.Controls.Add(CodeLabel)
         Me.TabPage2.Controls.Add(Me.CodeTextBox)
@@ -887,6 +887,16 @@ Partial Class Physician
         Me.MaskedTextBox2.Name = "MaskedTextBox2"
         Me.MaskedTextBox2.Size = New System.Drawing.Size(114, 21)
         Me.MaskedTextBox2.TabIndex = 146
+        '
+        'CodeTextBox
+        '
+        Me.CodeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "Code", True))
+        Me.CodeTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CodeTextBox.Location = New System.Drawing.Point(312, 53)
+        Me.CodeTextBox.MaxLength = 7
+        Me.CodeTextBox.Name = "CodeTextBox"
+        Me.CodeTextBox.Size = New System.Drawing.Size(97, 21)
+        Me.CodeTextBox.TabIndex = 74
         '
         'LastNameTextBox
         '
@@ -1383,79 +1393,6 @@ Partial Class Physician
         Me.MMPhysionBindingNavigatorSaveItem.Size = New System.Drawing.Size(78, 22)
         Me.MMPhysionBindingNavigatorSaveItem.Text = "Save Data"
         '
-        'CodeTextBox
-        '
-        Me.CodeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "Code", True))
-        Me.CodeTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CodeTextBox.Location = New System.Drawing.Point(312, 53)
-        Me.CodeTextBox.MaxLength = 7
-        Me.CodeTextBox.Name = "CodeTextBox"
-        Me.CodeTextBox.Size = New System.Drawing.Size(97, 21)
-        Me.CodeTextBox.TabIndex = 74
-        '
-        'CodeLabel
-        '
-        CodeLabel.AutoSize = True
-        CodeLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        CodeLabel.Location = New System.Drawing.Point(269, 55)
-        CodeLabel.Name = "CodeLabel"
-        CodeLabel.Size = New System.Drawing.Size(39, 15)
-        CodeLabel.TabIndex = 73
-        CodeLabel.Text = "Code:"
-        '
-        'RBDoctor
-        '
-        Me.RBDoctor.AutoSize = True
-        Me.RBDoctor.Location = New System.Drawing.Point(128, 183)
-        Me.RBDoctor.Name = "RBDoctor"
-        Me.RBDoctor.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.RBDoctor.Size = New System.Drawing.Size(57, 17)
-        Me.RBDoctor.TabIndex = 147
-        Me.RBDoctor.Text = "Doctor"
-        Me.RBDoctor.UseVisualStyleBackColor = True
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.CBPhysicain)
-        Me.GroupBox1.Controls.Add(Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(24, 221)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(231, 107)
-        Me.GroupBox1.TabIndex = 149
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Filter By"
-        '
-        'CBPhysicain
-        '
-        Me.CBPhysicain.FormattingEnabled = True
-        Me.CBPhysicain.Location = New System.Drawing.Point(70, 71)
-        Me.CBPhysicain.Name = "CBPhysicain"
-        Me.CBPhysicain.Size = New System.Drawing.Size(145, 21)
-        Me.CBPhysicain.TabIndex = 15
-        '
-        'Label1
-        '
-        Label1.AutoSize = True
-        Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label1.Location = New System.Drawing.Point(5, 74)
-        Label1.Name = "Label1"
-        Label1.Size = New System.Drawing.Size(59, 15)
-        Label1.TabIndex = 12
-        Label1.Text = "Physicain"
-        '
-        'RBHospital
-        '
-        Me.RBHospital.AutoSize = True
-        Me.RBHospital.Checked = True
-        Me.RBHospital.Location = New System.Drawing.Point(32, 183)
-        Me.RBHospital.Name = "RBHospital"
-        Me.RBHospital.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.RBHospital.Size = New System.Drawing.Size(63, 17)
-        Me.RBHospital.TabIndex = 148
-        Me.RBHospital.TabStop = True
-        Me.RBHospital.Text = "Hospital"
-        Me.RBHospital.UseVisualStyleBackColor = True
-        '
         'Physician
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1479,8 +1416,6 @@ Partial Class Physician
         CType(Me.MMPhysionBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MMPhysionBindingNavigator.ResumeLayout(False)
         Me.MMPhysionBindingNavigator.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1581,8 +1516,4 @@ Partial Class Physician
     Friend WithEvents ChampusPINTextBox As TextBox
     Friend WithEvents TBPhone As TextBox
     Friend WithEvents CodeTextBox As TextBox
-    Friend WithEvents RBDoctor As RadioButton
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents CBPhysicain As ComboBox
-    Friend WithEvents RBHospital As RadioButton
 End Class
