@@ -522,4 +522,24 @@ Public Class VisitsList
 
         End If
     End Sub
+
+    Private Sub DgProcedure_DoubleClick(sender As Object, e As EventArgs) Handles DgProcedure.DoubleClick
+        If DgProcedure.SelectedRows.Count > 0 Then
+
+
+            Dim ProcedureID As String = DgProcedure.SelectedRows(0).Cells("ID").Value & "" 'ID
+
+
+            Dim ProcedureEditPage As New ProcedureEdit
+
+            AddHandler ProcedureEditPage.DataUpdated, AddressOf ReloadMainFormData
+            ProcedureID = ProcedureEditPage.ShowProcedureEdit(ProcedureID)
+
+
+        End If
+    End Sub
+
+    Private Sub ReloadMainFormData()
+        loadLeftSideGrid()
+    End Sub
 End Class

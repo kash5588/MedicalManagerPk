@@ -23,7 +23,6 @@ Partial Class Physician
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim CodeLabel As System.Windows.Forms.Label
         Dim LastNameLabel As System.Windows.Forms.Label
         Dim FirstNameLabel As System.Windows.Forms.Label
         Dim MiddleInitialLabel As System.Windows.Forms.Label
@@ -60,6 +59,8 @@ Partial Class Physician
         Dim StateLabel As System.Windows.Forms.Label
         Dim ZipCodeLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Physician))
+        Dim CodeLabel As System.Windows.Forms.Label
+        Dim Label1 As System.Windows.Forms.Label
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.dgPhysician = New System.Windows.Forms.DataGridView()
@@ -104,7 +105,6 @@ Partial Class Physician
         Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.MaskedTextBox2 = New System.Windows.Forms.MaskedTextBox()
-        Me.CodeTextBox = New System.Windows.Forms.TextBox()
         Me.LastNameTextBox = New System.Windows.Forms.TextBox()
         Me.FirstNameTextBox = New System.Windows.Forms.TextBox()
         Me.MiddleInitialTextBox = New System.Windows.Forms.TextBox()
@@ -156,7 +156,11 @@ Partial Class Physician
         Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.MMPhysionBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        CodeLabel = New System.Windows.Forms.Label()
+        Me.CodeTextBox = New System.Windows.Forms.TextBox()
+        Me.RBDoctor = New System.Windows.Forms.RadioButton()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.CBPhysicain = New System.Windows.Forms.ComboBox()
+        Me.RBHospital = New System.Windows.Forms.RadioButton()
         LastNameLabel = New System.Windows.Forms.Label()
         FirstNameLabel = New System.Windows.Forms.Label()
         MiddleInitialLabel = New System.Windows.Forms.Label()
@@ -192,6 +196,8 @@ Partial Class Physician
         ChampusPINLabel = New System.Windows.Forms.Label()
         StateLabel = New System.Windows.Forms.Label()
         ZipCodeLabel = New System.Windows.Forms.Label()
+        CodeLabel = New System.Windows.Forms.Label()
+        Label1 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.dgPhysician, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -201,17 +207,8 @@ Partial Class Physician
         Me.TabPage3.SuspendLayout()
         CType(Me.MMPhysionBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MMPhysionBindingNavigator.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'CodeLabel
-        '
-        CodeLabel.AutoSize = True
-        CodeLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        CodeLabel.Location = New System.Drawing.Point(269, 55)
-        CodeLabel.Name = "CodeLabel"
-        CodeLabel.Size = New System.Drawing.Size(39, 15)
-        CodeLabel.TabIndex = 73
-        CodeLabel.Text = "Code:"
         '
         'LastNameLabel
         '
@@ -568,11 +565,13 @@ Partial Class Physician
         Me.dgPhysician.AllowUserToResizeColumns = False
         Me.dgPhysician.AllowUserToResizeRows = False
         Me.dgPhysician.AutoGenerateColumns = False
+        Me.dgPhysician.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgPhysician.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13, Me.DataGridViewCheckBoxColumn1, Me.DataGridViewTextBoxColumn14, Me.DataGridViewCheckBoxColumn2, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.DataGridViewTextBoxColumn24, Me.DataGridViewTextBoxColumn25, Me.DataGridViewTextBoxColumn26, Me.DataGridViewTextBoxColumn27, Me.DataGridViewCheckBoxColumn3, Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn30, Me.DataGridViewTextBoxColumn31, Me.DataGridViewTextBoxColumn32, Me.DataGridViewTextBoxColumn33, Me.DataGridViewTextBoxColumn34})
         Me.dgPhysician.DataSource = Me.MMPhysionBindingSource
         Me.dgPhysician.Location = New System.Drawing.Point(5, 7)
         Me.dgPhysician.Name = "dgPhysician"
         Me.dgPhysician.ReadOnly = True
+        Me.dgPhysician.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.dgPhysician.Size = New System.Drawing.Size(746, 529)
         Me.dgPhysician.TabIndex = 0
         '
@@ -581,12 +580,14 @@ Partial Class Physician
         Me.DataGridViewTextBoxColumn1.DataPropertyName = "Code"
         Me.DataGridViewTextBoxColumn1.HeaderText = "Code"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
         '
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "LastName"
         Me.DataGridViewTextBoxColumn2.HeaderText = "Last Name"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
         Me.DataGridViewTextBoxColumn2.Width = 150
         '
         'DataGridViewTextBoxColumn3
@@ -594,12 +595,14 @@ Partial Class Physician
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "FirstName"
         Me.DataGridViewTextBoxColumn3.HeaderText = "First Name"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
         'DataGridViewTextBoxColumn4
         '
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "MiddleInitial"
         Me.DataGridViewTextBoxColumn4.HeaderText = "M I"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
         Me.DataGridViewTextBoxColumn4.Width = 30
         '
         'DataGridViewTextBoxColumn5
@@ -607,198 +610,231 @@ Partial Class Physician
         Me.DataGridViewTextBoxColumn5.DataPropertyName = "Credentials"
         Me.DataGridViewTextBoxColumn5.HeaderText = "Credentials"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
         '
         'DataGridViewTextBoxColumn6
         '
         Me.DataGridViewTextBoxColumn6.DataPropertyName = "Street1"
         Me.DataGridViewTextBoxColumn6.HeaderText = "Address 1"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
         '
         'DataGridViewTextBoxColumn7
         '
         Me.DataGridViewTextBoxColumn7.DataPropertyName = "Street2"
         Me.DataGridViewTextBoxColumn7.HeaderText = "Address 2"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
         '
         'DataGridViewTextBoxColumn8
         '
         Me.DataGridViewTextBoxColumn8.DataPropertyName = "City"
         Me.DataGridViewTextBoxColumn8.HeaderText = "City"
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
         '
         'DataGridViewTextBoxColumn9
         '
         Me.DataGridViewTextBoxColumn9.DataPropertyName = "State"
         Me.DataGridViewTextBoxColumn9.HeaderText = "State"
         Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
         '
         'DataGridViewTextBoxColumn10
         '
         Me.DataGridViewTextBoxColumn10.DataPropertyName = "ZipCode"
         Me.DataGridViewTextBoxColumn10.HeaderText = "Zip"
         Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.ReadOnly = True
         '
         'DataGridViewTextBoxColumn11
         '
         Me.DataGridViewTextBoxColumn11.DataPropertyName = "Phone"
         Me.DataGridViewTextBoxColumn11.HeaderText = "Phone"
         Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.DataGridViewTextBoxColumn11.ReadOnly = True
         '
         'DataGridViewTextBoxColumn12
         '
         Me.DataGridViewTextBoxColumn12.DataPropertyName = "Fax"
         Me.DataGridViewTextBoxColumn12.HeaderText = "Fax"
         Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        Me.DataGridViewTextBoxColumn12.ReadOnly = True
         '
         'DataGridViewTextBoxColumn13
         '
         Me.DataGridViewTextBoxColumn13.DataPropertyName = "SSNorFedTaxID"
         Me.DataGridViewTextBoxColumn13.HeaderText = "SSN or Fed Tax ID"
         Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        Me.DataGridViewTextBoxColumn13.ReadOnly = True
         '
         'DataGridViewCheckBoxColumn1
         '
         Me.DataGridViewCheckBoxColumn1.DataPropertyName = "FTID"
         Me.DataGridViewCheckBoxColumn1.HeaderText = "FT ID"
         Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
+        Me.DataGridViewCheckBoxColumn1.ReadOnly = True
         '
         'DataGridViewTextBoxColumn14
         '
         Me.DataGridViewTextBoxColumn14.DataPropertyName = "LicenseNumber"
         Me.DataGridViewTextBoxColumn14.HeaderText = "License Number"
         Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
+        Me.DataGridViewTextBoxColumn14.ReadOnly = True
         '
         'DataGridViewCheckBoxColumn2
         '
         Me.DataGridViewCheckBoxColumn2.DataPropertyName = "SignatureonFile"
         Me.DataGridViewCheckBoxColumn2.HeaderText = "Signature on File"
         Me.DataGridViewCheckBoxColumn2.Name = "DataGridViewCheckBoxColumn2"
+        Me.DataGridViewCheckBoxColumn2.ReadOnly = True
         '
         'DataGridViewTextBoxColumn15
         '
         Me.DataGridViewTextBoxColumn15.DataPropertyName = "MedicarePIN"
         Me.DataGridViewTextBoxColumn15.HeaderText = "Medicare PIN"
         Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
+        Me.DataGridViewTextBoxColumn15.ReadOnly = True
         '
         'DataGridViewTextBoxColumn16
         '
         Me.DataGridViewTextBoxColumn16.DataPropertyName = "MedicaidPIN"
         Me.DataGridViewTextBoxColumn16.HeaderText = "Medicaid PIN"
         Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
+        Me.DataGridViewTextBoxColumn16.ReadOnly = True
         '
         'DataGridViewTextBoxColumn17
         '
         Me.DataGridViewTextBoxColumn17.DataPropertyName = "ChampusPIN"
         Me.DataGridViewTextBoxColumn17.HeaderText = "Champus PIN"
         Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
+        Me.DataGridViewTextBoxColumn17.ReadOnly = True
         '
         'DataGridViewTextBoxColumn18
         '
         Me.DataGridViewTextBoxColumn18.DataPropertyName = "BlueCross/ShieldPIN"
         Me.DataGridViewTextBoxColumn18.HeaderText = "BlueCross/Shield PIN"
         Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
+        Me.DataGridViewTextBoxColumn18.ReadOnly = True
         '
         'DataGridViewTextBoxColumn19
         '
         Me.DataGridViewTextBoxColumn19.DataPropertyName = "CommercialPIN"
         Me.DataGridViewTextBoxColumn19.HeaderText = "Commercial PIN"
         Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
+        Me.DataGridViewTextBoxColumn19.ReadOnly = True
         '
         'DataGridViewTextBoxColumn20
         '
         Me.DataGridViewTextBoxColumn20.DataPropertyName = "GroupPIN"
         Me.DataGridViewTextBoxColumn20.HeaderText = "Group PIN"
         Me.DataGridViewTextBoxColumn20.Name = "DataGridViewTextBoxColumn20"
+        Me.DataGridViewTextBoxColumn20.ReadOnly = True
         '
         'DataGridViewTextBoxColumn21
         '
         Me.DataGridViewTextBoxColumn21.DataPropertyName = "HMOPIN"
         Me.DataGridViewTextBoxColumn21.HeaderText = "HMO PIN"
         Me.DataGridViewTextBoxColumn21.Name = "DataGridViewTextBoxColumn21"
+        Me.DataGridViewTextBoxColumn21.ReadOnly = True
         '
         'DataGridViewTextBoxColumn22
         '
         Me.DataGridViewTextBoxColumn22.DataPropertyName = "PPOPIN"
         Me.DataGridViewTextBoxColumn22.HeaderText = "PPO PIN"
         Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
+        Me.DataGridViewTextBoxColumn22.ReadOnly = True
         '
         'DataGridViewTextBoxColumn23
         '
         Me.DataGridViewTextBoxColumn23.DataPropertyName = "MedicareGroupID"
         Me.DataGridViewTextBoxColumn23.HeaderText = "Medicare Group ID"
         Me.DataGridViewTextBoxColumn23.Name = "DataGridViewTextBoxColumn23"
+        Me.DataGridViewTextBoxColumn23.ReadOnly = True
         '
         'DataGridViewTextBoxColumn24
         '
         Me.DataGridViewTextBoxColumn24.DataPropertyName = "MedicaidGroupID"
         Me.DataGridViewTextBoxColumn24.HeaderText = "Medicaid Group ID"
         Me.DataGridViewTextBoxColumn24.Name = "DataGridViewTextBoxColumn24"
+        Me.DataGridViewTextBoxColumn24.ReadOnly = True
         '
         'DataGridViewTextBoxColumn25
         '
         Me.DataGridViewTextBoxColumn25.DataPropertyName = "BC/BSGroupID"
         Me.DataGridViewTextBoxColumn25.HeaderText = "BC/BS Group ID"
         Me.DataGridViewTextBoxColumn25.Name = "DataGridViewTextBoxColumn25"
+        Me.DataGridViewTextBoxColumn25.ReadOnly = True
         '
         'DataGridViewTextBoxColumn26
         '
         Me.DataGridViewTextBoxColumn26.DataPropertyName = "OtherGroupID"
         Me.DataGridViewTextBoxColumn26.HeaderText = "Other Group ID"
         Me.DataGridViewTextBoxColumn26.Name = "DataGridViewTextBoxColumn26"
+        Me.DataGridViewTextBoxColumn26.ReadOnly = True
         '
         'DataGridViewTextBoxColumn27
         '
         Me.DataGridViewTextBoxColumn27.DataPropertyName = "EMCID"
         Me.DataGridViewTextBoxColumn27.HeaderText = "EMC ID"
         Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
+        Me.DataGridViewTextBoxColumn27.ReadOnly = True
         '
         'DataGridViewCheckBoxColumn3
         '
         Me.DataGridViewCheckBoxColumn3.DataPropertyName = "MedicareParticpProvider"
         Me.DataGridViewCheckBoxColumn3.HeaderText = "Medicare Particp Provider"
         Me.DataGridViewCheckBoxColumn3.Name = "DataGridViewCheckBoxColumn3"
+        Me.DataGridViewCheckBoxColumn3.ReadOnly = True
         '
         'DataGridViewTextBoxColumn28
         '
         Me.DataGridViewTextBoxColumn28.DataPropertyName = "UPIN"
         Me.DataGridViewTextBoxColumn28.HeaderText = "UPIN"
         Me.DataGridViewTextBoxColumn28.Name = "DataGridViewTextBoxColumn28"
+        Me.DataGridViewTextBoxColumn28.ReadOnly = True
         '
         'DataGridViewTextBoxColumn29
         '
         Me.DataGridViewTextBoxColumn29.DataPropertyName = "Extra1"
         Me.DataGridViewTextBoxColumn29.HeaderText = "Extra 1"
         Me.DataGridViewTextBoxColumn29.Name = "DataGridViewTextBoxColumn29"
+        Me.DataGridViewTextBoxColumn29.ReadOnly = True
         '
         'DataGridViewTextBoxColumn30
         '
         Me.DataGridViewTextBoxColumn30.DataPropertyName = "Extra2"
         Me.DataGridViewTextBoxColumn30.HeaderText = "Extra 2"
         Me.DataGridViewTextBoxColumn30.Name = "DataGridViewTextBoxColumn30"
+        Me.DataGridViewTextBoxColumn30.ReadOnly = True
         '
         'DataGridViewTextBoxColumn31
         '
         Me.DataGridViewTextBoxColumn31.DataPropertyName = "Specialty"
         Me.DataGridViewTextBoxColumn31.HeaderText = "Specialty"
         Me.DataGridViewTextBoxColumn31.Name = "DataGridViewTextBoxColumn31"
+        Me.DataGridViewTextBoxColumn31.ReadOnly = True
         '
         'DataGridViewTextBoxColumn32
         '
         Me.DataGridViewTextBoxColumn32.DataPropertyName = "SecurityLevel"
         Me.DataGridViewTextBoxColumn32.HeaderText = "Security Level"
         Me.DataGridViewTextBoxColumn32.Name = "DataGridViewTextBoxColumn32"
+        Me.DataGridViewTextBoxColumn32.ReadOnly = True
         '
         'DataGridViewTextBoxColumn33
         '
         Me.DataGridViewTextBoxColumn33.DataPropertyName = "SBNumber"
         Me.DataGridViewTextBoxColumn33.HeaderText = "SB Number"
         Me.DataGridViewTextBoxColumn33.Name = "DataGridViewTextBoxColumn33"
+        Me.DataGridViewTextBoxColumn33.ReadOnly = True
         '
         'DataGridViewTextBoxColumn34
         '
         Me.DataGridViewTextBoxColumn34.DataPropertyName = "SOFDate"
         Me.DataGridViewTextBoxColumn34.HeaderText = "SOF Date"
         Me.DataGridViewTextBoxColumn34.Name = "DataGridViewTextBoxColumn34"
+        Me.DataGridViewTextBoxColumn34.ReadOnly = True
         '
         'MMPhysionBindingSource
         '
@@ -812,6 +848,9 @@ Partial Class Physician
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.RBDoctor)
+        Me.TabPage2.Controls.Add(Me.GroupBox1)
+        Me.TabPage2.Controls.Add(Me.RBHospital)
         Me.TabPage2.Controls.Add(Me.MaskedTextBox2)
         Me.TabPage2.Controls.Add(CodeLabel)
         Me.TabPage2.Controls.Add(Me.CodeTextBox)
@@ -848,16 +887,6 @@ Partial Class Physician
         Me.MaskedTextBox2.Name = "MaskedTextBox2"
         Me.MaskedTextBox2.Size = New System.Drawing.Size(114, 21)
         Me.MaskedTextBox2.TabIndex = 146
-        '
-        'CodeTextBox
-        '
-        Me.CodeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "Code", True))
-        Me.CodeTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CodeTextBox.Location = New System.Drawing.Point(312, 53)
-        Me.CodeTextBox.MaxLength = 7
-        Me.CodeTextBox.Name = "CodeTextBox"
-        Me.CodeTextBox.Size = New System.Drawing.Size(97, 21)
-        Me.CodeTextBox.TabIndex = 74
         '
         'LastNameTextBox
         '
@@ -1354,6 +1383,79 @@ Partial Class Physician
         Me.MMPhysionBindingNavigatorSaveItem.Size = New System.Drawing.Size(78, 22)
         Me.MMPhysionBindingNavigatorSaveItem.Text = "Save Data"
         '
+        'CodeTextBox
+        '
+        Me.CodeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MMPhysionBindingSource, "Code", True))
+        Me.CodeTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CodeTextBox.Location = New System.Drawing.Point(312, 53)
+        Me.CodeTextBox.MaxLength = 7
+        Me.CodeTextBox.Name = "CodeTextBox"
+        Me.CodeTextBox.Size = New System.Drawing.Size(97, 21)
+        Me.CodeTextBox.TabIndex = 74
+        '
+        'CodeLabel
+        '
+        CodeLabel.AutoSize = True
+        CodeLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        CodeLabel.Location = New System.Drawing.Point(269, 55)
+        CodeLabel.Name = "CodeLabel"
+        CodeLabel.Size = New System.Drawing.Size(39, 15)
+        CodeLabel.TabIndex = 73
+        CodeLabel.Text = "Code:"
+        '
+        'RBDoctor
+        '
+        Me.RBDoctor.AutoSize = True
+        Me.RBDoctor.Location = New System.Drawing.Point(128, 183)
+        Me.RBDoctor.Name = "RBDoctor"
+        Me.RBDoctor.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.RBDoctor.Size = New System.Drawing.Size(57, 17)
+        Me.RBDoctor.TabIndex = 147
+        Me.RBDoctor.Text = "Doctor"
+        Me.RBDoctor.UseVisualStyleBackColor = True
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.CBPhysicain)
+        Me.GroupBox1.Controls.Add(Label1)
+        Me.GroupBox1.Location = New System.Drawing.Point(24, 221)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(231, 107)
+        Me.GroupBox1.TabIndex = 149
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Filter By"
+        '
+        'CBPhysicain
+        '
+        Me.CBPhysicain.FormattingEnabled = True
+        Me.CBPhysicain.Location = New System.Drawing.Point(70, 71)
+        Me.CBPhysicain.Name = "CBPhysicain"
+        Me.CBPhysicain.Size = New System.Drawing.Size(145, 21)
+        Me.CBPhysicain.TabIndex = 15
+        '
+        'Label1
+        '
+        Label1.AutoSize = True
+        Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label1.Location = New System.Drawing.Point(5, 74)
+        Label1.Name = "Label1"
+        Label1.Size = New System.Drawing.Size(59, 15)
+        Label1.TabIndex = 12
+        Label1.Text = "Physicain"
+        '
+        'RBHospital
+        '
+        Me.RBHospital.AutoSize = True
+        Me.RBHospital.Checked = True
+        Me.RBHospital.Location = New System.Drawing.Point(32, 183)
+        Me.RBHospital.Name = "RBHospital"
+        Me.RBHospital.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.RBHospital.Size = New System.Drawing.Size(63, 17)
+        Me.RBHospital.TabIndex = 148
+        Me.RBHospital.TabStop = True
+        Me.RBHospital.Text = "Hospital"
+        Me.RBHospital.UseVisualStyleBackColor = True
+        '
         'Physician
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1377,6 +1479,8 @@ Partial Class Physician
         CType(Me.MMPhysionBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MMPhysionBindingNavigator.ResumeLayout(False)
         Me.MMPhysionBindingNavigator.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1384,7 +1488,6 @@ Partial Class Physician
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
-    Friend WithEvents CodeTextBox As System.Windows.Forms.TextBox
     Friend WithEvents LastNameTextBox As System.Windows.Forms.TextBox
     Friend WithEvents FirstNameTextBox As System.Windows.Forms.TextBox
     Friend WithEvents MiddleInitialTextBox As System.Windows.Forms.TextBox
@@ -1477,4 +1580,9 @@ Partial Class Physician
     Friend WithEvents MedicaidPINTextBox As TextBox
     Friend WithEvents ChampusPINTextBox As TextBox
     Friend WithEvents TBPhone As TextBox
+    Friend WithEvents CodeTextBox As TextBox
+    Friend WithEvents RBDoctor As RadioButton
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents CBPhysicain As ComboBox
+    Friend WithEvents RBHospital As RadioButton
 End Class

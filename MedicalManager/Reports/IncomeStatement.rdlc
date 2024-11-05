@@ -156,7 +156,7 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.75in</Width>
+                  <Width>0.61458in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.29489in</Width>
@@ -171,7 +171,7 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox10">
+                        <Textbox Name="Textbox1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -187,7 +187,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox10</rd:DefaultName>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -274,14 +274,14 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Description">
+                        <Textbox Name="Type">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Description.Value</Value>
+                                  <Value>=Fields!Type.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -290,7 +290,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Description</rd:DefaultName>
+                          <rd:DefaultName>Type</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -588,7 +588,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -606,7 +605,7 @@
               <TablixMembers>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>1.16345in</Size>
+                    <Size>2.29887in</Size>
                     <CellContents>
                       <Textbox Name="Textbox22">
                         <CanGrow>true</CanGrow>
@@ -647,34 +646,34 @@
                 <TablixMember>
                   <Group Name="IncomeType">
                     <GroupExpressions>
-                      <GroupExpression>=Fields!Type.Value</GroupExpression>
+                      <GroupExpression>=Fields!Description.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!Type.Value</Value>
+                      <Value>=Fields!Description.Value</Value>
                     </SortExpression>
                   </SortExpressions>
                   <TablixMembers>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>1.16345in</Size>
+                        <Size>2.29887in</Size>
                         <CellContents>
-                          <Textbox Name="Type">
+                          <Textbox Name="Description1">
                             <CanGrow>true</CanGrow>
                             <KeepTogether>true</KeepTogether>
                             <Paragraphs>
                               <Paragraph>
                                 <TextRuns>
                                   <TextRun>
-                                    <Value>=Fields!Type.Value</Value>
+                                    <Value>=Fields!Description.Value</Value>
                                     <Style />
                                   </TextRun>
                                 </TextRuns>
                                 <Style />
                               </Paragraph>
                             </Paragraphs>
-                            <rd:DefaultName>Type</rd:DefaultName>
+                            <rd:DefaultName>Description1</rd:DefaultName>
                             <Style>
                               <Border>
                                 <Color>LightGrey</Color>
@@ -693,7 +692,7 @@
                           <Group Name="Details" />
                           <Visibility>
                             <Hidden>true</Hidden>
-                            <ToggleItem>Type</ToggleItem>
+                            <ToggleItem>Description1</ToggleItem>
                           </Visibility>
                         </TablixMember>
                         <TablixMember>
@@ -705,7 +704,7 @@
                 </TablixMember>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>1.16345in</Size>
+                    <Size>2.29887in</Size>
                     <CellContents>
                       <Textbox Name="Textbox48">
                         <CanGrow>true</CanGrow>
@@ -748,7 +747,7 @@
             <DataSetName>DataSetIncomeDetail</DataSetName>
             <SortExpressions>
               <SortExpression>
-                <Value>=Fields!Type.Value</Value>
+                <Value>=Fields!Description.Value</Value>
               </SortExpression>
             </SortExpressions>
             <Top>1.642in</Top>

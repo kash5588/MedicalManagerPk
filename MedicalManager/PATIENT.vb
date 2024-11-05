@@ -388,13 +388,14 @@ Public Class PATIENT
                 If DGFeeList.SelectedRows.Count > 0 Then
                     PhysicianFeeTextBox.Text = CInt(Math.Round(Convert.ToDouble(DGFeeList.SelectedRows(0).Cells("Fee").Value)))
                     TbIdProcedure.Text = DGFeeList.SelectedRows(0).Cells("Id").Value.ToString()
-
+                    BtnAddProc.Visible = True
 
                 Else
                     PhysicianFeeTextBox.Text = ""
                     DGFeeList.Visible = False
                     LabelFee.Visible = True
                     LabelFee.Text = "No available FEE for '" + AssignedProviderTextBox.Text + "'"
+                    BtnAddProc.Visible = True
                 End If
             End If
 
@@ -917,6 +918,10 @@ Public Class PATIENT
 
         Return totalResults
     End Function
+
+    Private Sub BtnAddProc_Click(sender As Object, e As EventArgs) Handles BtnAddProc.Click
+        MMChProcedure.ShowDialog()
+    End Sub
 End Class
 
 

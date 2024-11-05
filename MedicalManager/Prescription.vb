@@ -247,9 +247,9 @@ Public Class Prescription
 
 
                 For i = 0 To DataGridView1.RowCount - 1
-                    If DataGridView1.Rows(i).Cells("Tag").Value = True Then
-                        strRxIdList = strRxIdList + DataGridView1.Rows(i).Cells("RXIDDataGridViewTextBoxColumn").Value.ToString() & ","
-                    End If
+                    'If DataGridView1.Rows(i).Cells("Tag").Value = True Then
+                    strRxIdList = strRxIdList + DataGridView1.Rows(i).Cells("RXIDDataGridViewTextBoxColumn").Value.ToString() & ","
+                    'End If
                 Next
 
                 RVforMultiplePrescriptions.ShowMultiplePrescriptions(strRxIdList.TrimEnd(","))

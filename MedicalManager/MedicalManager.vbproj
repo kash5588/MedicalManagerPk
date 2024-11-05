@@ -289,6 +289,12 @@
     <Compile Include="Pharmacy.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ProcedureEdit.Designer.vb">
+      <DependentUpon>ProcedureEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProcedureEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ProfileDetailData.Designer.vb">
       <DependentUpon>ProfileDetailData.vb</DependentUpon>
     </Compile>
@@ -787,12 +793,16 @@
       <SubType>Designer</SubType>
       <DependentUpon>Pharmacy.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProcedureEdit.resx">
+      <DependentUpon>ProcedureEdit.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProfileDetailData.resx">
       <SubType>Designer</SubType>
       <DependentUpon>ProfileDetailData.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Reports\Chart.rdlc" />
+    <EmbeddedResource Include="Reports\IStatementDoctor.rdlc" />
     <EmbeddedResource Include="Reports\Letter.rdlc" />
     <EmbeddedResource Include="BillingReport.resx">
       <SubType>Designer</SubType>

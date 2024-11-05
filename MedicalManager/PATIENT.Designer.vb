@@ -95,10 +95,10 @@ Partial Class PATIENT
         Dim DateChangedLabel As System.Windows.Forms.Label
         Dim Label2 As System.Windows.Forms.Label
         Dim Label3 As System.Windows.Forms.Label
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PATIENT))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -253,6 +253,7 @@ Partial Class PATIENT
         Me.MMComboBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MMComboTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMComboTableAdapter()
         Me.MMPRocedureTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMPRocedureTableAdapter()
+        Me.BtnAddProc = New System.Windows.Forms.Button()
         CopaySpecialistLabel = New System.Windows.Forms.Label()
         CopayOfficeVisitLabel = New System.Windows.Forms.Label()
         PatInsGP2Label = New System.Windows.Forms.Label()
@@ -1065,35 +1066,35 @@ Partial Class PATIENT
         Me.dgPatient.AllowUserToDeleteRows = False
         Me.dgPatient.AllowUserToResizeRows = False
         Me.dgPatient.AutoGenerateColumns = False
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgPatient.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgPatient.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.dgPatient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgPatient.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PatientIDDataGridViewTextBoxColumn, Me.ChartNumberDataGridViewTextBoxColumn, Me.LastNameDataGridViewTextBoxColumn, Me.FirstNameDataGridViewTextBoxColumn, Me.SignatureonFileDataGridViewCheckBoxColumn, Me.PatientTypeDataGridViewTextBoxColumn, Me.SexDataGridViewTextBoxColumn, Me.DateofBirthDataGridViewTextBoxColumn, Me.AssignedProviderDataGridViewTextBoxColumn, Me.DateCreatedDataGridViewTextBoxColumn})
         Me.dgPatient.DataSource = Me.MMPATIENTBindingSource
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgPatient.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgPatient.DefaultCellStyle = DataGridViewCellStyle6
         Me.dgPatient.Location = New System.Drawing.Point(3, 6)
         Me.dgPatient.Name = "dgPatient"
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgPatient.RowHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgPatient.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.dgPatient.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.dgPatient.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgPatient.Size = New System.Drawing.Size(856, 566)
@@ -1200,6 +1201,7 @@ Partial Class PATIENT
         Me.GroupBox1.Controls.Add(Me.DateCreatedDateTimePicker)
         Me.GroupBox1.Controls.Add(Me.DateChangedTextBox)
         Me.GroupBox1.Controls.Add(DateCreatedLabel)
+        Me.GroupBox1.Controls.Add(Me.BtnAddProc)
         Me.GroupBox1.Controls.Add(Me.btnPhysician)
         Me.GroupBox1.Controls.Add(Me.MaskedTextBoxDob)
         Me.GroupBox1.Controls.Add(Label3)
@@ -1316,9 +1318,9 @@ Partial Class PATIENT
         'Fee
         '
         Me.Fee.DataPropertyName = "AmountA"
-        DataGridViewCellStyle12.Format = "N0"
-        DataGridViewCellStyle12.NullValue = Nothing
-        Me.Fee.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle8.Format = "N0"
+        DataGridViewCellStyle8.NullValue = Nothing
+        Me.Fee.DefaultCellStyle = DataGridViewCellStyle8
         Me.Fee.FillWeight = 76.14214!
         Me.Fee.HeaderText = "Fee"
         Me.Fee.Name = "Fee"
@@ -2553,6 +2555,16 @@ Partial Class PATIENT
         '
         Me.MMPRocedureTableAdapter.ClearBeforeFill = True
         '
+        'BtnAddProc
+        '
+        Me.BtnAddProc.Location = New System.Drawing.Point(788, 514)
+        Me.BtnAddProc.Name = "BtnAddProc"
+        Me.BtnAddProc.Size = New System.Drawing.Size(38, 23)
+        Me.BtnAddProc.TabIndex = 15
+        Me.BtnAddProc.Text = "Add"
+        Me.BtnAddProc.UseVisualStyleBackColor = True
+        Me.BtnAddProc.Visible = False
+        '
         'PATIENT
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2786,4 +2798,5 @@ Partial Class PATIENT
     Friend WithEvents Fee As DataGridViewTextBoxColumn
     Friend WithEvents CBVisitType As ComboBox
     Friend WithEvents TBDiscount As NumericUpDown
+    Friend WithEvents BtnAddProc As Button
 End Class

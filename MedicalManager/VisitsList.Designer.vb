@@ -23,7 +23,7 @@ Partial Class VisitsList
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MMChartVisitDataGridView = New System.Windows.Forms.DataGridView()
         Me.CaseNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -83,12 +83,6 @@ Partial Class VisitsList
         Me.PanelProcedure = New System.Windows.Forms.Panel()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.DgProcedure = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Type = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MMCHDxRxLtMtBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MMPRocedureDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -156,6 +150,12 @@ Partial Class VisitsList
         Me.PBoxPatient = New System.Windows.Forms.PictureBox()
         Me.BtnToken = New System.Windows.Forms.Button()
         Me.BtnHistory = New System.Windows.Forms.Button()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Type = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.MMChartVisitDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MMChartVisitBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -243,9 +243,9 @@ Partial Class VisitsList
         'DOB
         '
         Me.DOB.DataPropertyName = "DOB"
-        DataGridViewCellStyle2.Format = "d"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.DOB.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle3.Format = "d"
+        DataGridViewCellStyle3.NullValue = Nothing
+        Me.DOB.DefaultCellStyle = DataGridViewCellStyle3
         Me.DOB.HeaderText = "DOB"
         Me.DOB.Name = "DOB"
         Me.DOB.ReadOnly = True
@@ -746,59 +746,16 @@ Partial Class VisitsList
         Me.DgProcedure.AutoGenerateColumns = False
         Me.DgProcedure.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DgProcedure.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgProcedure.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn16, Me.Type, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn1})
+        Me.DgProcedure.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn16, Me.Type, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn3, Me.ID})
         Me.DgProcedure.DataSource = Me.MMCHDxRxLtMtBindingSource
         Me.DgProcedure.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DgProcedure.Location = New System.Drawing.Point(0, 0)
         Me.DgProcedure.Name = "DgProcedure"
         Me.DgProcedure.ReadOnly = True
         Me.DgProcedure.RowHeadersVisible = False
+        Me.DgProcedure.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgProcedure.Size = New System.Drawing.Size(359, 166)
         Me.DgProcedure.TabIndex = 197
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "Description"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "Description"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        Me.DataGridViewTextBoxColumn6.Width = 160
-        '
-        'DataGridViewTextBoxColumn16
-        '
-        Me.DataGridViewTextBoxColumn16.DataPropertyName = "Amount"
-        Me.DataGridViewTextBoxColumn16.HeaderText = "Amount"
-        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
-        Me.DataGridViewTextBoxColumn16.ReadOnly = True
-        '
-        'Type
-        '
-        Me.Type.DataPropertyName = "Type"
-        Me.Type.HeaderText = "Type"
-        Me.Type.Name = "Type"
-        Me.Type.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn12
-        '
-        Me.DataGridViewTextBoxColumn12.DataPropertyName = "UserID"
-        Me.DataGridViewTextBoxColumn12.HeaderText = "User"
-        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
-        Me.DataGridViewTextBoxColumn12.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Date"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Date"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "ID"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "ID"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Visible = False
         '
         'MMCHDxRxLtMtBindingSource
         '
@@ -1298,6 +1255,50 @@ Partial Class VisitsList
         Me.BtnHistory.Text = "Patient History"
         Me.BtnHistory.UseVisualStyleBackColor = False
         '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "Description"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Description"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        Me.DataGridViewTextBoxColumn6.Width = 160
+        '
+        'DataGridViewTextBoxColumn16
+        '
+        Me.DataGridViewTextBoxColumn16.DataPropertyName = "Amount"
+        Me.DataGridViewTextBoxColumn16.HeaderText = "Amount"
+        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
+        Me.DataGridViewTextBoxColumn16.ReadOnly = True
+        '
+        'Type
+        '
+        Me.Type.DataPropertyName = "Type"
+        Me.Type.HeaderText = "Type"
+        Me.Type.Name = "Type"
+        Me.Type.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn12
+        '
+        Me.DataGridViewTextBoxColumn12.DataPropertyName = "UserID"
+        Me.DataGridViewTextBoxColumn12.HeaderText = "User"
+        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        Me.DataGridViewTextBoxColumn12.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Date"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Date"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
+        'ID
+        '
+        Me.ID.DataPropertyName = "ID"
+        Me.ID.HeaderText = "ID"
+        Me.ID.Name = "ID"
+        Me.ID.ReadOnly = True
+        Me.ID.Visible = False
+        '
         'VisitsList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -1461,12 +1462,6 @@ Partial Class VisitsList
     Friend WithEvents Label12 As Label
     Friend WithEvents MMChartVisitDataGridView As DataGridView
     Private WithEvents PBoxPatient As PictureBox
-    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn16 As DataGridViewTextBoxColumn
-    Friend WithEvents Type As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Private WithEvents BtnRefresh As Button
     Private WithEvents BtnToken As Button
     Private WithEvents BtnCompleted As Button
@@ -1482,4 +1477,10 @@ Partial Class VisitsList
     Friend WithEvents PhysicianName As DataGridViewTextBoxColumn
     Friend WithEvents TokenNo As DataGridViewTextBoxColumn
     Private WithEvents BtnHistory As Button
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn16 As DataGridViewTextBoxColumn
+    Friend WithEvents Type As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents ID As DataGridViewTextBoxColumn
 End Class

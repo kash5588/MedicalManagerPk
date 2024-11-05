@@ -31,12 +31,12 @@ Partial Class IncomeStatement
         Me.CCdateFrom = New System.Windows.Forms.DateTimePicker()
         Me.ExpensesDetailBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MMDataDataSet1 = New MedicalManager.MMDataDataSet1()
-        Me.reportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.MMPrecticeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MMPrecticeTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMPrecticeTableAdapter()
         Me.ExpensesDetailTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.ExpensesDetailTableAdapter()
         Me.MMCHDxRxLtMtBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MMCHDxRxLtMtTableAdapter = New MedicalManager.MMDataDataSet1TableAdapters.MMCHDxRxLtMtTableAdapter()
+        Me.reportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         label2 = New System.Windows.Forms.Label()
         label3 = New System.Windows.Forms.Label()
         Me.panel1.SuspendLayout()
@@ -121,18 +121,6 @@ Partial Class IncomeStatement
         Me.MMDataDataSet1.DataSetName = "MMDataDataSet1"
         Me.MMDataDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'reportViewer1
-        '
-        Me.reportViewer1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.reportViewer1.LocalReport.ReportEmbeddedResource = "MedicalManager.IncomeStatement.rdlc"
-        Me.reportViewer1.Location = New System.Drawing.Point(232, 2)
-        Me.reportViewer1.Name = "reportViewer1"
-        Me.reportViewer1.ServerReport.BearerToken = Nothing
-        Me.reportViewer1.Size = New System.Drawing.Size(780, 606)
-        Me.reportViewer1.TabIndex = 4
-        '
         'MMPrecticeBindingSource
         '
         Me.MMPrecticeBindingSource.DataMember = "MMPrectice"
@@ -154,6 +142,18 @@ Partial Class IncomeStatement
         'MMCHDxRxLtMtTableAdapter
         '
         Me.MMCHDxRxLtMtTableAdapter.ClearBeforeFill = True
+        '
+        'reportViewer1
+        '
+        Me.reportViewer1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.reportViewer1.LocalReport.ReportEmbeddedResource = "MedicalManager.IncomeStatement.rdlc"
+        Me.reportViewer1.Location = New System.Drawing.Point(232, 2)
+        Me.reportViewer1.Name = "reportViewer1"
+        Me.reportViewer1.ServerReport.BearerToken = Nothing
+        Me.reportViewer1.Size = New System.Drawing.Size(780, 606)
+        Me.reportViewer1.TabIndex = 4
         '
         'IncomeStatement
         '
@@ -181,7 +181,6 @@ Partial Class IncomeStatement
     Private WithEvents CCdateTo As DateTimePicker
     Private WithEvents btnSearch As Button
     Private WithEvents CCdateFrom As DateTimePicker
-    Private WithEvents reportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents MMDataDataSet1 As MMDataDataSet1
     Friend WithEvents MMPrecticeBindingSource As BindingSource
     Friend WithEvents MMPrecticeTableAdapter As MMDataDataSet1TableAdapters.MMPrecticeTableAdapter
@@ -189,4 +188,5 @@ Partial Class IncomeStatement
     Friend WithEvents ExpensesDetailBindingSource As BindingSource
     Friend WithEvents MMCHDxRxLtMtBindingSource As BindingSource
     Friend WithEvents MMCHDxRxLtMtTableAdapter As MMDataDataSet1TableAdapters.MMCHDxRxLtMtTableAdapter
+    Private WithEvents reportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
 End Class
